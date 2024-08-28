@@ -1,0 +1,45 @@
+import 'package:json_annotation/json_annotation.dart';
+
+enum KodiListFilterFieldsSongs {
+  genre,
+  source,
+  album,
+  @JsonValue('disctitle')
+  discTitle,
+  artist,
+  @JsonValue('albumartist')
+  albumArtist,
+  title,
+  year,
+  @JsonValue('originalyear')
+  originalYear,
+  time,
+  @JsonValue('tracknumber')
+  trackNumber,
+  @JsonValue('filename')
+  fileName,
+  path,
+  @JsonValue('playcount')
+  playCount,
+  @JsonValue('lastplayed')
+  lastPlayed,
+  rating,
+  @JsonValue('userrating')
+  userRating,
+  comment,
+  moods,
+  bpm,
+  @JsonValue('samplerate')
+  sampleRate,
+  bitrate,
+  channels,
+  @JsonValue('dateadded')
+  dateAdded,
+  @JsonValue('datemodified')
+  dateModified,
+  @JsonValue('datenew')
+  dateNew,
+  playlist,
+  @JsonValue('virtualfolder')
+  virtualFolder,
+}

@@ -1,0 +1,47 @@
+import 'package:json_annotation/json_annotation.dart';
+
+enum KodiPlayerPropertyName {
+  type,
+  @JsonValue('partymode')
+  partyMode,
+  speed,
+  time,
+  percentage,
+  @JsonValue('totaltime')
+  totalTime,
+  @JsonValue('playlistid')
+  playlistId,
+  position,
+  repeat,
+  shuffled,
+  @JsonValue('canseek')
+  canSeek,
+  @JsonValue('canchangespeed')
+  canChangeSpeed,
+  @JsonValue('canmove')
+  canMove,
+  @JsonValue('canzoom')
+  canZoom,
+  @JsonValue('canrotate')
+  canRotate,
+  @JsonValue('canshuffle')
+  canShuffle,
+  @JsonValue('canrepeat')
+  canRepeat,
+  @JsonValue('currentaudiostream')
+  currentAudioStream,
+  @JsonValue('audiostreams')
+  audioStreams,
+  @JsonValue('subtitleenabled')
+  subtitleEnabled,
+  @JsonValue('currentsubtitle')
+  currentSubtitle,
+  subtitles,
+  live,
+  @JsonValue('currentvideostream')
+  currentVideoStream,
+  @JsonValue('videostreams')
+  videoStreams,
+  @JsonValue('cachepercentage')
+  cachePercentage,
+}
