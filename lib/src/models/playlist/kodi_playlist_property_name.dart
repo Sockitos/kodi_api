@@ -1,0 +1,4 @@
+enum KodiPlaylistPropertyName {
+  type,
+  size,
+}

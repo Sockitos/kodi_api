@@ -1,0 +1,17 @@
+export 'addons/addons_requests.dart';
+export 'application/application_requests.dart';
+export 'audio_library/audio_library_requests.dart';
+export 'favourites/favourites_requests.dart';
+export 'files/files_requests.dart';
+export 'gui/gui_requests.dart';
+export 'input/input_requests.dart';
+export 'jsonrpc/jsonrpc_requests.dart';
+export 'player/player_requests.dart';
+export 'playlist/playlist_requests.dart';
+export 'profiles/profiles_requests.dart';
+export 'pvr/pvr_requests.dart';
+export 'settings/settings_requests.dart';
+export 'system/system_requests.dart';
+export 'textures/textures_requests.dart';
+export 'video_library/video_library_requests.dart';
+export 'xbmc/xbmc_requests.dart';

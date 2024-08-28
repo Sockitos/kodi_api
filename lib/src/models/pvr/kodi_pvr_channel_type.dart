@@ -1,0 +1,4 @@
+enum KodiPVRChannelType {
+  tv,
+  radio,
+}
