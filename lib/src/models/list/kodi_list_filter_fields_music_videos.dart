@@ -1,0 +1,46 @@
+import 'package:json_annotation/json_annotation.dart';
+
+enum KodiListFilterFieldsMusicVideos {
+  title,
+  genre,
+  album,
+  year,
+  artist,
+  filename,
+  path,
+  @JsonValue('playcount')
+  playCount,
+  @JsonValue('lastplayed')
+  lastPlayed,
+  rating,
+  @JsonValue('userrating')
+  userrating,
+  time,
+  director,
+  studio,
+  plot,
+  tag,
+  @JsonValue('dateadded')
+  dateAdded,
+  @JsonValue('videoresolution')
+  videoResolution,
+  @JsonValue('audiochannels')
+  audioChannels,
+  @JsonValue('audiocount')
+  audioCount,
+  @JsonValue('subtitlecount')
+  subtitleCount,
+  @JsonValue('videocodec')
+  videoCodec,
+  @JsonValue('audiocodec')
+  audioCodec,
+  @JsonValue('audiolanguage')
+  audioLanguage,
+  @JsonValue('subtitlelanguage')
+  subtitleLanguage,
+  @JsonValue('videoaspect')
+  videoAspect,
+  playlist,
+  @JsonValue('virtualfolder')
+  virtualFolder,
+}

@@ -1,0 +1,4 @@
+enum KodiLibraryFieldsSource {
+  file,
+  paths,
+}

@@ -1,0 +1,4 @@
+enum KodiGlobalIncrementDecrement {
+  increment,
+  decrement,
+}

@@ -1,0 +1,4 @@
+enum KodiAudioAlbumReleaseType {
+  album,
+  single,
+}
