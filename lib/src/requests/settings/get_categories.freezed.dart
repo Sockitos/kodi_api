@@ -12,7 +12,7 @@ part of 'get_categories.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetCategories _$GetCategoriesFromJson(Map<String, dynamic> json) {
   return _GetCategories.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetCategories {
   Set<KodiSettingsGetCategoriesProperties>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetCategories to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetCategoriesCopyWith<GetCategories> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$GetCategoriesCopyWithImpl<$Res, $Val extends GetCategories>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetCategories
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,11 +84,11 @@ class _$GetCategoriesCopyWithImpl<$Res, $Val extends GetCategories>
 }
 
 /// @nodoc
-abstract class _$$_GetCategoriesCopyWith<$Res>
+abstract class _$$GetCategoriesImplCopyWith<$Res>
     implements $GetCategoriesCopyWith<$Res> {
-  factory _$$_GetCategoriesCopyWith(
-          _$_GetCategories value, $Res Function(_$_GetCategories) then) =
-      __$$_GetCategoriesCopyWithImpl<$Res>;
+  factory _$$GetCategoriesImplCopyWith(
+          _$GetCategoriesImpl value, $Res Function(_$GetCategoriesImpl) then) =
+      __$$GetCategoriesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -92,13 +98,15 @@ abstract class _$$_GetCategoriesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetCategoriesCopyWithImpl<$Res>
-    extends _$GetCategoriesCopyWithImpl<$Res, _$_GetCategories>
-    implements _$$_GetCategoriesCopyWith<$Res> {
-  __$$_GetCategoriesCopyWithImpl(
-      _$_GetCategories _value, $Res Function(_$_GetCategories) _then)
+class __$$GetCategoriesImplCopyWithImpl<$Res>
+    extends _$GetCategoriesCopyWithImpl<$Res, _$GetCategoriesImpl>
+    implements _$$GetCategoriesImplCopyWith<$Res> {
+  __$$GetCategoriesImplCopyWithImpl(
+      _$GetCategoriesImpl _value, $Res Function(_$GetCategoriesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetCategories
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,7 +114,7 @@ class __$$_GetCategoriesCopyWithImpl<$Res>
     Object? section = freezed,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetCategories(
+    return _then(_$GetCategoriesImpl(
       level: null == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
@@ -125,16 +133,16 @@ class __$$_GetCategoriesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetCategories extends _GetCategories {
-  const _$_GetCategories(
+class _$GetCategoriesImpl extends _GetCategories {
+  const _$GetCategoriesImpl(
       {this.level = KodiSettingLevel.standard,
       this.section,
       final Set<KodiSettingsGetCategoriesProperties>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetCategories.fromJson(Map<String, dynamic> json) =>
-      _$$_GetCategoriesFromJson(json);
+  factory _$GetCategoriesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetCategoriesImplFromJson(json);
 
   @override
   @JsonKey()
@@ -157,30 +165,32 @@ class _$_GetCategories extends _GetCategories {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetCategories &&
+            other is _$GetCategoriesImpl &&
             (identical(other.level, level) || other.level == level) &&
             (identical(other.section, section) || other.section == section) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, level, section,
       const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetCategories
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetCategoriesCopyWith<_$_GetCategories> get copyWith =>
-      __$$_GetCategoriesCopyWithImpl<_$_GetCategories>(this, _$identity);
+  _$$GetCategoriesImplCopyWith<_$GetCategoriesImpl> get copyWith =>
+      __$$GetCategoriesImplCopyWithImpl<_$GetCategoriesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetCategoriesToJson(
+    return _$$GetCategoriesImplToJson(
       this,
     );
   }
@@ -191,11 +201,11 @@ abstract class _GetCategories extends GetCategories {
           {final KodiSettingLevel level,
           final String? section,
           final Set<KodiSettingsGetCategoriesProperties>? properties}) =
-      _$_GetCategories;
+      _$GetCategoriesImpl;
   const _GetCategories._() : super._();
 
   factory _GetCategories.fromJson(Map<String, dynamic> json) =
-      _$_GetCategories.fromJson;
+      _$GetCategoriesImpl.fromJson;
 
   @override
   KodiSettingLevel get level;
@@ -203,9 +213,12 @@ abstract class _GetCategories extends GetCategories {
   String? get section;
   @override
   Set<KodiSettingsGetCategoriesProperties>? get properties;
+
+  /// Create a copy of GetCategories
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetCategoriesCopyWith<_$_GetCategories> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetCategoriesImplCopyWith<_$GetCategoriesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -219,8 +232,12 @@ mixin _$KodiSettingsGetCategoriesResponse {
   List<KodiSettingDetailsCategory> get categories =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiSettingsGetCategoriesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSettingsGetCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSettingsGetCategoriesResponseCopyWith<KodiSettingsGetCategoriesResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -247,6 +264,8 @@ class _$KodiSettingsGetCategoriesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSettingsGetCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -262,33 +281,35 @@ class _$KodiSettingsGetCategoriesResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingsGetCategoriesResponseCopyWith<$Res>
+abstract class _$$KodiSettingsGetCategoriesResponseImplCopyWith<$Res>
     implements $KodiSettingsGetCategoriesResponseCopyWith<$Res> {
-  factory _$$_KodiSettingsGetCategoriesResponseCopyWith(
-          _$_KodiSettingsGetCategoriesResponse value,
-          $Res Function(_$_KodiSettingsGetCategoriesResponse) then) =
-      __$$_KodiSettingsGetCategoriesResponseCopyWithImpl<$Res>;
+  factory _$$KodiSettingsGetCategoriesResponseImplCopyWith(
+          _$KodiSettingsGetCategoriesResponseImpl value,
+          $Res Function(_$KodiSettingsGetCategoriesResponseImpl) then) =
+      __$$KodiSettingsGetCategoriesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiSettingDetailsCategory> categories});
 }
 
 /// @nodoc
-class __$$_KodiSettingsGetCategoriesResponseCopyWithImpl<$Res>
+class __$$KodiSettingsGetCategoriesResponseImplCopyWithImpl<$Res>
     extends _$KodiSettingsGetCategoriesResponseCopyWithImpl<$Res,
-        _$_KodiSettingsGetCategoriesResponse>
-    implements _$$_KodiSettingsGetCategoriesResponseCopyWith<$Res> {
-  __$$_KodiSettingsGetCategoriesResponseCopyWithImpl(
-      _$_KodiSettingsGetCategoriesResponse _value,
-      $Res Function(_$_KodiSettingsGetCategoriesResponse) _then)
+        _$KodiSettingsGetCategoriesResponseImpl>
+    implements _$$KodiSettingsGetCategoriesResponseImplCopyWith<$Res> {
+  __$$KodiSettingsGetCategoriesResponseImplCopyWithImpl(
+      _$KodiSettingsGetCategoriesResponseImpl _value,
+      $Res Function(_$KodiSettingsGetCategoriesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingsGetCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? categories = null,
   }) {
-    return _then(_$_KodiSettingsGetCategoriesResponse(
+    return _then(_$KodiSettingsGetCategoriesResponseImpl(
       categories: null == categories
           ? _value._categories
           : categories // ignore: cast_nullable_to_non_nullable
@@ -299,15 +320,15 @@ class __$$_KodiSettingsGetCategoriesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingsGetCategoriesResponse
+class _$KodiSettingsGetCategoriesResponseImpl
     implements _KodiSettingsGetCategoriesResponse {
-  const _$_KodiSettingsGetCategoriesResponse(
+  const _$KodiSettingsGetCategoriesResponseImpl(
       {required final List<KodiSettingDetailsCategory> categories})
       : _categories = categories;
 
-  factory _$_KodiSettingsGetCategoriesResponse.fromJson(
+  factory _$KodiSettingsGetCategoriesResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingsGetCategoriesResponseFromJson(json);
+      _$$KodiSettingsGetCategoriesResponseImplFromJson(json);
 
   final List<KodiSettingDetailsCategory> _categories;
   @override
@@ -323,30 +344,32 @@ class _$_KodiSettingsGetCategoriesResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingsGetCategoriesResponse &&
+            other is _$KodiSettingsGetCategoriesResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._categories, _categories));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_categories));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingsGetCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingsGetCategoriesResponseCopyWith<
-          _$_KodiSettingsGetCategoriesResponse>
-      get copyWith => __$$_KodiSettingsGetCategoriesResponseCopyWithImpl<
-          _$_KodiSettingsGetCategoriesResponse>(this, _$identity);
+  _$$KodiSettingsGetCategoriesResponseImplCopyWith<
+          _$KodiSettingsGetCategoriesResponseImpl>
+      get copyWith => __$$KodiSettingsGetCategoriesResponseImplCopyWithImpl<
+          _$KodiSettingsGetCategoriesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingsGetCategoriesResponseToJson(
+    return _$$KodiSettingsGetCategoriesResponseImplToJson(
       this,
     );
   }
@@ -356,17 +379,20 @@ abstract class _KodiSettingsGetCategoriesResponse
     implements KodiSettingsGetCategoriesResponse {
   const factory _KodiSettingsGetCategoriesResponse(
           {required final List<KodiSettingDetailsCategory> categories}) =
-      _$_KodiSettingsGetCategoriesResponse;
+      _$KodiSettingsGetCategoriesResponseImpl;
 
   factory _KodiSettingsGetCategoriesResponse.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiSettingsGetCategoriesResponse.fromJson;
+      _$KodiSettingsGetCategoriesResponseImpl.fromJson;
 
   @override
   List<KodiSettingDetailsCategory> get categories;
+
+  /// Create a copy of KodiSettingsGetCategoriesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingsGetCategoriesResponseCopyWith<
-          _$_KodiSettingsGetCategoriesResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingsGetCategoriesResponseImplCopyWith<
+          _$KodiSettingsGetCategoriesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

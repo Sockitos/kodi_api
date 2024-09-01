@@ -12,7 +12,7 @@ part of 'version.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Version _$VersionFromJson(Map<String, dynamic> json) {
   return _Version.fromJson(json);
@@ -20,6 +20,7 @@ Version _$VersionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Version {
+  /// Serializes this Version to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,30 +39,37 @@ class _$VersionCopyWithImpl<$Res, $Val extends Version>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Version
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_VersionCopyWith<$Res> {
-  factory _$$_VersionCopyWith(
-          _$_Version value, $Res Function(_$_Version) then) =
-      __$$_VersionCopyWithImpl<$Res>;
+abstract class _$$VersionImplCopyWith<$Res> {
+  factory _$$VersionImplCopyWith(
+          _$VersionImpl value, $Res Function(_$VersionImpl) then) =
+      __$$VersionImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_VersionCopyWithImpl<$Res>
-    extends _$VersionCopyWithImpl<$Res, _$_Version>
-    implements _$$_VersionCopyWith<$Res> {
-  __$$_VersionCopyWithImpl(_$_Version _value, $Res Function(_$_Version) _then)
+class __$$VersionImplCopyWithImpl<$Res>
+    extends _$VersionCopyWithImpl<$Res, _$VersionImpl>
+    implements _$$VersionImplCopyWith<$Res> {
+  __$$VersionImplCopyWithImpl(
+      _$VersionImpl _value, $Res Function(_$VersionImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Version
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Version extends _Version {
-  const _$_Version() : super._();
+class _$VersionImpl extends _Version {
+  const _$VersionImpl() : super._();
 
-  factory _$_Version.fromJson(Map<String, dynamic> json) =>
-      _$$_VersionFromJson(json);
+  factory _$VersionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VersionImplFromJson(json);
 
   @override
   String toString() {
@@ -69,28 +77,28 @@ class _$_Version extends _Version {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Version);
+        (other.runtimeType == runtimeType && other is _$VersionImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VersionToJson(
+    return _$$VersionImplToJson(
       this,
     );
   }
 }
 
 abstract class _Version extends Version {
-  const factory _Version() = _$_Version;
+  const factory _Version() = _$VersionImpl;
   const _Version._() : super._();
 
-  factory _Version.fromJson(Map<String, dynamic> json) = _$_Version.fromJson;
+  factory _Version.fromJson(Map<String, dynamic> json) = _$VersionImpl.fromJson;
 }
 
 VersionResponse _$VersionResponseFromJson(Map<String, dynamic> json) {
@@ -103,8 +111,12 @@ mixin _$VersionResponse {
   int get minor => throw _privateConstructorUsedError;
   int get patch => throw _privateConstructorUsedError;
 
+  /// Serializes this VersionResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VersionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VersionResponseCopyWith<VersionResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -128,6 +140,8 @@ class _$VersionResponseCopyWithImpl<$Res, $Val extends VersionResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VersionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -153,24 +167,26 @@ class _$VersionResponseCopyWithImpl<$Res, $Val extends VersionResponse>
 }
 
 /// @nodoc
-abstract class _$$_VersionResponseCopyWith<$Res>
+abstract class _$$VersionResponseImplCopyWith<$Res>
     implements $VersionResponseCopyWith<$Res> {
-  factory _$$_VersionResponseCopyWith(
-          _$_VersionResponse value, $Res Function(_$_VersionResponse) then) =
-      __$$_VersionResponseCopyWithImpl<$Res>;
+  factory _$$VersionResponseImplCopyWith(_$VersionResponseImpl value,
+          $Res Function(_$VersionResponseImpl) then) =
+      __$$VersionResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int major, int minor, int patch});
 }
 
 /// @nodoc
-class __$$_VersionResponseCopyWithImpl<$Res>
-    extends _$VersionResponseCopyWithImpl<$Res, _$_VersionResponse>
-    implements _$$_VersionResponseCopyWith<$Res> {
-  __$$_VersionResponseCopyWithImpl(
-      _$_VersionResponse _value, $Res Function(_$_VersionResponse) _then)
+class __$$VersionResponseImplCopyWithImpl<$Res>
+    extends _$VersionResponseCopyWithImpl<$Res, _$VersionResponseImpl>
+    implements _$$VersionResponseImplCopyWith<$Res> {
+  __$$VersionResponseImplCopyWithImpl(
+      _$VersionResponseImpl _value, $Res Function(_$VersionResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VersionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -178,7 +194,7 @@ class __$$_VersionResponseCopyWithImpl<$Res>
     Object? minor = null,
     Object? patch = null,
   }) {
-    return _then(_$_VersionResponse(
+    return _then(_$VersionResponseImpl(
       major: null == major
           ? _value.major
           : major // ignore: cast_nullable_to_non_nullable
@@ -197,12 +213,12 @@ class __$$_VersionResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VersionResponse implements _VersionResponse {
-  const _$_VersionResponse(
+class _$VersionResponseImpl implements _VersionResponse {
+  const _$VersionResponseImpl(
       {required this.major, required this.minor, required this.patch});
 
-  factory _$_VersionResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_VersionResponseFromJson(json);
+  factory _$VersionResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VersionResponseImplFromJson(json);
 
   @override
   final int major;
@@ -217,28 +233,31 @@ class _$_VersionResponse implements _VersionResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VersionResponse &&
+            other is _$VersionResponseImpl &&
             (identical(other.major, major) || other.major == major) &&
             (identical(other.minor, minor) || other.minor == minor) &&
             (identical(other.patch, patch) || other.patch == patch));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, major, minor, patch);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VersionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VersionResponseCopyWith<_$_VersionResponse> get copyWith =>
-      __$$_VersionResponseCopyWithImpl<_$_VersionResponse>(this, _$identity);
+  _$$VersionResponseImplCopyWith<_$VersionResponseImpl> get copyWith =>
+      __$$VersionResponseImplCopyWithImpl<_$VersionResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VersionResponseToJson(
+    return _$$VersionResponseImplToJson(
       this,
     );
   }
@@ -248,10 +267,10 @@ abstract class _VersionResponse implements VersionResponse {
   const factory _VersionResponse(
       {required final int major,
       required final int minor,
-      required final int patch}) = _$_VersionResponse;
+      required final int patch}) = _$VersionResponseImpl;
 
   factory _VersionResponse.fromJson(Map<String, dynamic> json) =
-      _$_VersionResponse.fromJson;
+      _$VersionResponseImpl.fromJson;
 
   @override
   int get major;
@@ -259,8 +278,11 @@ abstract class _VersionResponse implements VersionResponse {
   int get minor;
   @override
   int get patch;
+
+  /// Create a copy of VersionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_VersionResponseCopyWith<_$_VersionResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$VersionResponseImplCopyWith<_$VersionResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

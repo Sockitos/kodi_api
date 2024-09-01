@@ -12,7 +12,7 @@ part of 'kodi_library_details_genre.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiLibraryDetailsGenre _$KodiLibraryDetailsGenreFromJson(
     Map<String, dynamic> json) {
@@ -29,8 +29,12 @@ mixin _$KodiLibraryDetailsGenre {
   String? get title => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiLibraryDetailsGenre to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiLibraryDetailsGenre
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiLibraryDetailsGenreCopyWith<KodiLibraryDetailsGenre> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$KodiLibraryDetailsGenreCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiLibraryDetailsGenre
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,11 +101,12 @@ class _$KodiLibraryDetailsGenreCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiLibraryDetailsGenreCopyWith<$Res>
+abstract class _$$KodiLibraryDetailsGenreImplCopyWith<$Res>
     implements $KodiLibraryDetailsGenreCopyWith<$Res> {
-  factory _$$_KodiLibraryDetailsGenreCopyWith(_$_KodiLibraryDetailsGenre value,
-          $Res Function(_$_KodiLibraryDetailsGenre) then) =
-      __$$_KodiLibraryDetailsGenreCopyWithImpl<$Res>;
+  factory _$$KodiLibraryDetailsGenreImplCopyWith(
+          _$KodiLibraryDetailsGenreImpl value,
+          $Res Function(_$KodiLibraryDetailsGenreImpl) then) =
+      __$$KodiLibraryDetailsGenreImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -111,14 +118,17 @@ abstract class _$$_KodiLibraryDetailsGenreCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiLibraryDetailsGenreCopyWithImpl<$Res>
+class __$$KodiLibraryDetailsGenreImplCopyWithImpl<$Res>
     extends _$KodiLibraryDetailsGenreCopyWithImpl<$Res,
-        _$_KodiLibraryDetailsGenre>
-    implements _$$_KodiLibraryDetailsGenreCopyWith<$Res> {
-  __$$_KodiLibraryDetailsGenreCopyWithImpl(_$_KodiLibraryDetailsGenre _value,
-      $Res Function(_$_KodiLibraryDetailsGenre) _then)
+        _$KodiLibraryDetailsGenreImpl>
+    implements _$$KodiLibraryDetailsGenreImplCopyWith<$Res> {
+  __$$KodiLibraryDetailsGenreImplCopyWithImpl(
+      _$KodiLibraryDetailsGenreImpl _value,
+      $Res Function(_$KodiLibraryDetailsGenreImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiLibraryDetailsGenre
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -128,7 +138,7 @@ class __$$_KodiLibraryDetailsGenreCopyWithImpl<$Res>
     Object? title = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiLibraryDetailsGenre(
+    return _then(_$KodiLibraryDetailsGenreImpl(
       genreId: null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
@@ -155,8 +165,8 @@ class __$$_KodiLibraryDetailsGenreCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiLibraryDetailsGenre implements _KodiLibraryDetailsGenre {
-  const _$_KodiLibraryDetailsGenre(
+class _$KodiLibraryDetailsGenreImpl implements _KodiLibraryDetailsGenre {
+  const _$KodiLibraryDetailsGenreImpl(
       {@JsonKey(name: 'genreid') required this.genreId,
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
       this.thumbnail,
@@ -164,8 +174,8 @@ class _$_KodiLibraryDetailsGenre implements _KodiLibraryDetailsGenre {
       required this.label})
       : _sourceId = sourceId;
 
-  factory _$_KodiLibraryDetailsGenre.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiLibraryDetailsGenreFromJson(json);
+  factory _$KodiLibraryDetailsGenreImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiLibraryDetailsGenreImplFromJson(json);
 
   @override
   @JsonKey(name: 'genreid')
@@ -194,10 +204,10 @@ class _$_KodiLibraryDetailsGenre implements _KodiLibraryDetailsGenre {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiLibraryDetailsGenre &&
+            other is _$KodiLibraryDetailsGenreImpl &&
             (identical(other.genreId, genreId) || other.genreId == genreId) &&
             const DeepCollectionEquality().equals(other._sourceId, _sourceId) &&
             (identical(other.thumbnail, thumbnail) ||
@@ -206,22 +216,23 @@ class _$_KodiLibraryDetailsGenre implements _KodiLibraryDetailsGenre {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genreId,
       const DeepCollectionEquality().hash(_sourceId), thumbnail, title, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiLibraryDetailsGenre
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiLibraryDetailsGenreCopyWith<_$_KodiLibraryDetailsGenre>
-      get copyWith =>
-          __$$_KodiLibraryDetailsGenreCopyWithImpl<_$_KodiLibraryDetailsGenre>(
-              this, _$identity);
+  _$$KodiLibraryDetailsGenreImplCopyWith<_$KodiLibraryDetailsGenreImpl>
+      get copyWith => __$$KodiLibraryDetailsGenreImplCopyWithImpl<
+          _$KodiLibraryDetailsGenreImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiLibraryDetailsGenreToJson(
+    return _$$KodiLibraryDetailsGenreImplToJson(
       this,
     );
   }
@@ -233,10 +244,10 @@ abstract class _KodiLibraryDetailsGenre implements KodiLibraryDetailsGenre {
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
       final String? thumbnail,
       final String? title,
-      required final String label}) = _$_KodiLibraryDetailsGenre;
+      required final String label}) = _$KodiLibraryDetailsGenreImpl;
 
   factory _KodiLibraryDetailsGenre.fromJson(Map<String, dynamic> json) =
-      _$_KodiLibraryDetailsGenre.fromJson;
+      _$KodiLibraryDetailsGenreImpl.fromJson;
 
   @override
   @JsonKey(name: 'genreid')
@@ -250,8 +261,11 @@ abstract class _KodiLibraryDetailsGenre implements KodiLibraryDetailsGenre {
   String? get title;
   @override
   String get label;
+
+  /// Create a copy of KodiLibraryDetailsGenre
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiLibraryDetailsGenreCopyWith<_$_KodiLibraryDetailsGenre>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiLibraryDetailsGenreImplCopyWith<_$KodiLibraryDetailsGenreImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,8 +6,8 @@ part of 'get_sections.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSections _$$_GetSectionsFromJson(Map<String, dynamic> json) =>
-    _$_GetSections(
+_$GetSectionsImpl _$$GetSectionsImplFromJson(Map<String, dynamic> json) =>
+    _$GetSectionsImpl(
       level: $enumDecodeNullable(_$KodiSettingLevelEnumMap, json['level']) ??
           KodiSettingLevel.standard,
       properties: (json['properties'] as List<dynamic>?)
@@ -16,7 +16,7 @@ _$_GetSections _$$_GetSectionsFromJson(Map<String, dynamic> json) =>
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetSectionsToJson(_$_GetSections instance) {
+Map<String, dynamic> _$$GetSectionsImplToJson(_$GetSectionsImpl instance) {
   final val = <String, dynamic>{
     'level': _$KodiSettingLevelEnumMap[instance.level]!,
   };
@@ -46,17 +46,17 @@ const _$KodiSettingsGetSectionsPropertiesEnumMap = {
   KodiSettingsGetSectionsProperties.categories: 'categories',
 };
 
-_$_KodiSettingsGetSectionsResponse _$$_KodiSettingsGetSectionsResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiSettingsGetSectionsResponse(
-      sections: (json['sections'] as List<dynamic>)
-          .map((e) =>
-              KodiSettingDetailsSection.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$KodiSettingsGetSectionsResponseImpl
+    _$$KodiSettingsGetSectionsResponseImplFromJson(Map<String, dynamic> json) =>
+        _$KodiSettingsGetSectionsResponseImpl(
+          sections: (json['sections'] as List<dynamic>)
+              .map((e) =>
+                  KodiSettingDetailsSection.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_KodiSettingsGetSectionsResponseToJson(
-        _$_KodiSettingsGetSectionsResponse instance) =>
+Map<String, dynamic> _$$KodiSettingsGetSectionsResponseImplToJson(
+        _$KodiSettingsGetSectionsResponseImpl instance) =>
     <String, dynamic>{
       'sections': instance.sections.map((e) => e.toJson()).toList(),
     };

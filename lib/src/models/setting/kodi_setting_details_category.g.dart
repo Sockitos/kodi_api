@@ -6,9 +6,9 @@ part of 'kodi_setting_details_category.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiSettingDetailsCategory _$$_KodiSettingDetailsCategoryFromJson(
+_$KodiSettingDetailsCategoryImpl _$$KodiSettingDetailsCategoryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingDetailsCategory(
+    _$KodiSettingDetailsCategoryImpl(
       groups: (json['groups'] as List<dynamic>?)
           ?.map((e) =>
               KodiSettingDetailsGroup.fromJson(e as Map<String, dynamic>))
@@ -18,8 +18,8 @@ _$_KodiSettingDetailsCategory _$$_KodiSettingDetailsCategoryFromJson(
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiSettingDetailsCategoryToJson(
-    _$_KodiSettingDetailsCategory instance) {
+Map<String, dynamic> _$$KodiSettingDetailsCategoryImplToJson(
+    _$KodiSettingDetailsCategoryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

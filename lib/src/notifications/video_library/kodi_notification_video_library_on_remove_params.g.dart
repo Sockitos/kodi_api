@@ -6,34 +6,35 @@ part of 'kodi_notification_video_library_on_remove_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationVideoLibraryOnRemoveParams
-    _$$_KodiNotificationVideoLibraryOnRemoveParamsFromJson(
+_$KodiNotificationVideoLibraryOnRemoveParamsImpl
+    _$$KodiNotificationVideoLibraryOnRemoveParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnRemoveParams(
+        _$KodiNotificationVideoLibraryOnRemoveParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationVideoLibraryOnRemoveParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnRemoveParamsToJson(
-        _$_KodiNotificationVideoLibraryOnRemoveParams instance) =>
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnRemoveParamsImplToJson(
+        _$KodiNotificationVideoLibraryOnRemoveParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnRemoveParamsData
-    _$$_KodiNotificationVideoLibraryOnRemoveParamsDataFromJson(
+_$KodiNotificationVideoLibraryOnRemoveParamsDataImpl
+    _$$KodiNotificationVideoLibraryOnRemoveParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnRemoveParamsData(
-          id: json['id'] as int,
+        _$KodiNotificationVideoLibraryOnRemoveParamsDataImpl(
+          id: (json['id'] as num).toInt(),
           transaction: json['transaction'] as bool?,
           type: $enumDecode(
               _$KodiNotificationsLibraryVideoTypeEnumMap, json['type']),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnRemoveParamsDataToJson(
-    _$_KodiNotificationVideoLibraryOnRemoveParamsData instance) {
+Map<String, dynamic>
+    _$$KodiNotificationVideoLibraryOnRemoveParamsDataImplToJson(
+        _$KodiNotificationVideoLibraryOnRemoveParamsDataImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };

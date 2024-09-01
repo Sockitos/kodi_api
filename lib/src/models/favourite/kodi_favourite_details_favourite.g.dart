@@ -6,19 +6,19 @@ part of 'kodi_favourite_details_favourite.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiFavouriteDetailsFavourite _$$_KodiFavouriteDetailsFavouriteFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiFavouriteDetailsFavourite(
-      path: json['path'] as String?,
-      thumbnail: json['thumbnail'] as String?,
-      title: json['title'] as String,
-      type: $enumDecode(_$KodiFavouriteTypeEnumMap, json['type']),
-      window: json['window'] as String?,
-      windowParameter: json['windowparameter'] as String?,
-    );
+_$KodiFavouriteDetailsFavouriteImpl
+    _$$KodiFavouriteDetailsFavouriteImplFromJson(Map<String, dynamic> json) =>
+        _$KodiFavouriteDetailsFavouriteImpl(
+          path: json['path'] as String?,
+          thumbnail: json['thumbnail'] as String?,
+          title: json['title'] as String,
+          type: $enumDecode(_$KodiFavouriteTypeEnumMap, json['type']),
+          window: json['window'] as String?,
+          windowParameter: json['windowparameter'] as String?,
+        );
 
-Map<String, dynamic> _$$_KodiFavouriteDetailsFavouriteToJson(
-    _$_KodiFavouriteDetailsFavourite instance) {
+Map<String, dynamic> _$$KodiFavouriteDetailsFavouriteImplToJson(
+    _$KodiFavouriteDetailsFavouriteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -12,7 +12,7 @@ part of 'get_textures.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetTextures _$GetTexturesFromJson(Map<String, dynamic> json) {
   return _GetTextures.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetTextures {
   @KodiListFilterTexturesConverter()
   KodiListFilterTextures? get filter => throw _privateConstructorUsedError;
 
+  /// Serializes this GetTextures to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetTextures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetTexturesCopyWith<GetTextures> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$GetTexturesCopyWithImpl<$Res, $Val extends GetTextures>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetTextures
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$GetTexturesCopyWithImpl<$Res, $Val extends GetTextures>
     ) as $Val);
   }
 
+  /// Create a copy of GetTextures
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterTexturesCopyWith<$Res>? get filter {
@@ -86,11 +94,11 @@ class _$GetTexturesCopyWithImpl<$Res, $Val extends GetTextures>
 }
 
 /// @nodoc
-abstract class _$$_GetTexturesCopyWith<$Res>
+abstract class _$$GetTexturesImplCopyWith<$Res>
     implements $GetTexturesCopyWith<$Res> {
-  factory _$$_GetTexturesCopyWith(
-          _$_GetTextures value, $Res Function(_$_GetTextures) then) =
-      __$$_GetTexturesCopyWithImpl<$Res>;
+  factory _$$GetTexturesImplCopyWith(
+          _$GetTexturesImpl value, $Res Function(_$GetTexturesImpl) then) =
+      __$$GetTexturesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -102,20 +110,22 @@ abstract class _$$_GetTexturesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTexturesCopyWithImpl<$Res>
-    extends _$GetTexturesCopyWithImpl<$Res, _$_GetTextures>
-    implements _$$_GetTexturesCopyWith<$Res> {
-  __$$_GetTexturesCopyWithImpl(
-      _$_GetTextures _value, $Res Function(_$_GetTextures) _then)
+class __$$GetTexturesImplCopyWithImpl<$Res>
+    extends _$GetTexturesCopyWithImpl<$Res, _$GetTexturesImpl>
+    implements _$$GetTexturesImplCopyWith<$Res> {
+  __$$GetTexturesImplCopyWithImpl(
+      _$GetTexturesImpl _value, $Res Function(_$GetTexturesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetTextures
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? properties = freezed,
     Object? filter = freezed,
   }) {
-    return _then(_$_GetTextures(
+    return _then(_$GetTexturesImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -130,15 +140,15 @@ class __$$_GetTexturesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTextures extends _GetTextures {
-  const _$_GetTextures(
+class _$GetTexturesImpl extends _GetTextures {
+  const _$GetTexturesImpl(
       {final Set<KodiTexturesFieldsTexture>? properties,
       @KodiListFilterTexturesConverter() this.filter})
       : _properties = properties,
         super._();
 
-  factory _$_GetTextures.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTexturesFromJson(json);
+  factory _$GetTexturesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTexturesImplFromJson(json);
 
   final Set<KodiTexturesFieldsTexture>? _properties;
   @override
@@ -160,29 +170,31 @@ class _$_GetTextures extends _GetTextures {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTextures &&
+            other is _$GetTexturesImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_properties), filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetTextures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTexturesCopyWith<_$_GetTextures> get copyWith =>
-      __$$_GetTexturesCopyWithImpl<_$_GetTextures>(this, _$identity);
+  _$$GetTexturesImplCopyWith<_$GetTexturesImpl> get copyWith =>
+      __$$GetTexturesImplCopyWithImpl<_$GetTexturesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTexturesToJson(
+    return _$$GetTexturesImplToJson(
       this,
     );
   }
@@ -192,19 +204,22 @@ abstract class _GetTextures extends GetTextures {
   const factory _GetTextures(
       {final Set<KodiTexturesFieldsTexture>? properties,
       @KodiListFilterTexturesConverter()
-      final KodiListFilterTextures? filter}) = _$_GetTextures;
+      final KodiListFilterTextures? filter}) = _$GetTexturesImpl;
   const _GetTextures._() : super._();
 
   factory _GetTextures.fromJson(Map<String, dynamic> json) =
-      _$_GetTextures.fromJson;
+      _$GetTexturesImpl.fromJson;
 
   @override
   Set<KodiTexturesFieldsTexture>? get properties;
   @override
   @KodiListFilterTexturesConverter()
   KodiListFilterTextures? get filter;
+
+  /// Create a copy of GetTextures
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetTexturesCopyWith<_$_GetTextures> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTexturesImplCopyWith<_$GetTexturesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

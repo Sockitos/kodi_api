@@ -6,9 +6,9 @@ part of 'get_recently_added_episodes.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRecentlyAddedEpisodes _$$_GetRecentlyAddedEpisodesFromJson(
+_$GetRecentlyAddedEpisodesImpl _$$GetRecentlyAddedEpisodesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRecentlyAddedEpisodes(
+    _$GetRecentlyAddedEpisodesImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsEpisodeEnumMap, e))
           .toSet(),
@@ -20,8 +20,8 @@ _$_GetRecentlyAddedEpisodes _$$_GetRecentlyAddedEpisodesFromJson(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetRecentlyAddedEpisodesToJson(
-    _$_GetRecentlyAddedEpisodes instance) {
+Map<String, dynamic> _$$GetRecentlyAddedEpisodesImplToJson(
+    _$GetRecentlyAddedEpisodesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -73,9 +73,10 @@ const _$KodiVideoFieldsEpisodeEnumMap = {
   KodiVideoFieldsEpisode.ratings: 'ratings',
 };
 
-_$_GetRecentlyAddedEpisodesResponse
-    _$$_GetRecentlyAddedEpisodesResponseFromJson(Map<String, dynamic> json) =>
-        _$_GetRecentlyAddedEpisodesResponse(
+_$GetRecentlyAddedEpisodesResponseImpl
+    _$$GetRecentlyAddedEpisodesResponseImplFromJson(
+            Map<String, dynamic> json) =>
+        _$GetRecentlyAddedEpisodesResponseImpl(
           episodes: (json['episodes'] as List<dynamic>)
               .map((e) =>
                   KodiVideoDetailsEpisode.fromJson(e as Map<String, dynamic>))
@@ -84,8 +85,8 @@ _$_GetRecentlyAddedEpisodesResponse
               json['limits'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_GetRecentlyAddedEpisodesResponseToJson(
-        _$_GetRecentlyAddedEpisodesResponse instance) =>
+Map<String, dynamic> _$$GetRecentlyAddedEpisodesResponseImplToJson(
+        _$GetRecentlyAddedEpisodesResponseImpl instance) =>
     <String, dynamic>{
       'episodes': instance.episodes.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

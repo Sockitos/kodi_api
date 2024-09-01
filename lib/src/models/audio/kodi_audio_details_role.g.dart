@@ -6,16 +6,16 @@ part of 'kodi_audio_details_role.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiAudioDetailsRole _$$_KodiAudioDetailsRoleFromJson(
+_$KodiAudioDetailsRoleImpl _$$KodiAudioDetailsRoleImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAudioDetailsRole(
-      roleid: json['roleid'] as int,
+    _$KodiAudioDetailsRoleImpl(
+      roleid: (json['roleid'] as num).toInt(),
       title: json['title'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAudioDetailsRoleToJson(
-    _$_KodiAudioDetailsRole instance) {
+Map<String, dynamic> _$$KodiAudioDetailsRoleImplToJson(
+    _$KodiAudioDetailsRoleImpl instance) {
   final val = <String, dynamic>{
     'roleid': instance.roleid,
   };

@@ -6,9 +6,9 @@ part of 'kodi_player_property_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerPropertyValue _$$_KodiPlayerPropertyValueFromJson(
+_$KodiPlayerPropertyValueImpl _$$KodiPlayerPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerPropertyValue(
+    _$KodiPlayerPropertyValueImpl(
       audioStreams: (json['audiostreams'] as List<dynamic>?)
           ?.map(
               (e) => KodiPlayerAudioStream.fromJson(e as Map<String, dynamic>))
@@ -36,11 +36,11 @@ _$_KodiPlayerPropertyValue _$$_KodiPlayerPropertyValueFromJson(
       live: json['live'] as bool?,
       partymode: json['partymode'] as bool?,
       percentage: (json['percentage'] as num?)?.toDouble(),
-      playlistId: json['playlistid'] as int?,
-      position: json['position'] as int?,
+      playlistId: (json['playlistid'] as num?)?.toInt(),
+      position: (json['position'] as num?)?.toInt(),
       repeat: $enumDecodeNullable(_$KodiPlayerRepeatEnumMap, json['repeat']),
       shuffled: json['shuffled'] as bool?,
-      speed: json['speed'] as int?,
+      speed: (json['speed'] as num?)?.toInt(),
       subtitleEnabled: json['subtitleenabled'] as bool?,
       subtitles: (json['subtitles'] as List<dynamic>?)
           ?.map((e) => KodiPlayerSubtitle.fromJson(e as Map<String, dynamic>))
@@ -58,8 +58,8 @@ _$_KodiPlayerPropertyValue _$$_KodiPlayerPropertyValueFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_KodiPlayerPropertyValueToJson(
-    _$_KodiPlayerPropertyValue instance) {
+Map<String, dynamic> _$$KodiPlayerPropertyValueImplToJson(
+    _$KodiPlayerPropertyValueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

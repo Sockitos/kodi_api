@@ -12,7 +12,7 @@ part of 'kodi_setting_details_setting.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiSettingDetailsSetting _$KodiSettingDetailsSettingFromJson(
     Map<String, dynamic> json) {
@@ -548,8 +548,13 @@ mixin _$KodiSettingDetailsSetting {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingDetailsSetting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSettingDetailsSettingCopyWith<KodiSettingDetailsSetting> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -584,6 +589,8 @@ class _$KodiSettingDetailsSettingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -632,6 +639,8 @@ class _$KodiSettingDetailsSettingCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiSettingDetailsControlCopyWith<$Res>? get control {
@@ -646,12 +655,12 @@ class _$KodiSettingDetailsSettingCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingBoolCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingBoolImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingBoolCopyWith(
-          _$_KodiSettingDetailsSettingBool value,
-          $Res Function(_$_KodiSettingDetailsSettingBool) then) =
-      __$$_KodiSettingDetailsSettingBoolCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingBoolImplCopyWith(
+          _$KodiSettingDetailsSettingBoolImpl value,
+          $Res Function(_$KodiSettingDetailsSettingBoolImpl) then) =
+      __$$KodiSettingDetailsSettingBoolImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -671,15 +680,17 @@ abstract class _$$_KodiSettingDetailsSettingBoolCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingBoolCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingBoolImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingBool>
-    implements _$$_KodiSettingDetailsSettingBoolCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingBoolCopyWithImpl(
-      _$_KodiSettingDetailsSettingBool _value,
-      $Res Function(_$_KodiSettingDetailsSettingBool) _then)
+        _$KodiSettingDetailsSettingBoolImpl>
+    implements _$$KodiSettingDetailsSettingBoolImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingBoolImplCopyWithImpl(
+      _$KodiSettingDetailsSettingBoolImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingBoolImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -694,7 +705,7 @@ class __$$_KodiSettingDetailsSettingBoolCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingBool(
+    return _then(_$KodiSettingDetailsSettingBoolImpl(
       defaultt: null == defaultt
           ? _value.defaultt
           : defaultt // ignore: cast_nullable_to_non_nullable
@@ -741,9 +752,9 @@ class __$$_KodiSettingDetailsSettingBoolCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingBool
+class _$KodiSettingDetailsSettingBoolImpl
     implements _KodiSettingDetailsSettingBool {
-  const _$_KodiSettingDetailsSettingBool(
+  const _$KodiSettingDetailsSettingBoolImpl(
       {@JsonKey(name: 'default') required this.defaultt,
       required this.value,
       this.control,
@@ -755,9 +766,9 @@ class _$_KodiSettingDetailsSettingBool
       required this.id,
       required this.label});
 
-  factory _$_KodiSettingDetailsSettingBool.fromJson(
+  factory _$KodiSettingDetailsSettingBoolImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingBoolFromJson(json);
+      _$$KodiSettingDetailsSettingBoolImplFromJson(json);
 
   @override
   @JsonKey(name: 'default')
@@ -787,10 +798,10 @@ class _$_KodiSettingDetailsSettingBool
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingBool &&
+            other is _$KodiSettingDetailsSettingBoolImpl &&
             (identical(other.defaultt, defaultt) ||
                 other.defaultt == defaultt) &&
             (identical(other.value, value) || other.value == value) &&
@@ -804,17 +815,20 @@ class _$_KodiSettingDetailsSettingBool
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, defaultt, value, control,
       enabled, level, parent, type, help, id, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingBoolCopyWith<_$_KodiSettingDetailsSettingBool>
-      get copyWith => __$$_KodiSettingDetailsSettingBoolCopyWithImpl<
-          _$_KodiSettingDetailsSettingBool>(this, _$identity);
+  _$$KodiSettingDetailsSettingBoolImplCopyWith<
+          _$KodiSettingDetailsSettingBoolImpl>
+      get copyWith => __$$KodiSettingDetailsSettingBoolImplCopyWithImpl<
+          _$KodiSettingDetailsSettingBoolImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1339,7 +1353,7 @@ class _$_KodiSettingDetailsSettingBool
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingBoolToJson(
+    return _$$KodiSettingDetailsSettingBoolImplToJson(
       this,
     );
   }
@@ -1357,10 +1371,10 @@ abstract class _KodiSettingDetailsSettingBool
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingBool;
+      required final String label}) = _$KodiSettingDetailsSettingBoolImpl;
 
   factory _KodiSettingDetailsSettingBool.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingBool.fromJson;
+      _$KodiSettingDetailsSettingBoolImpl.fromJson;
 
   @JsonKey(name: 'default')
   bool get defaultt;
@@ -1381,19 +1395,23 @@ abstract class _KodiSettingDetailsSettingBool
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingBoolCopyWith<_$_KodiSettingDetailsSettingBool>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingBoolImplCopyWith<
+          _$KodiSettingDetailsSettingBoolImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingIntCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingIntImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingIntCopyWith(
-          _$_KodiSettingDetailsSettingInt value,
-          $Res Function(_$_KodiSettingDetailsSettingInt) then) =
-      __$$_KodiSettingDetailsSettingIntCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingIntImplCopyWith(
+          _$KodiSettingDetailsSettingIntImpl value,
+          $Res Function(_$KodiSettingDetailsSettingIntImpl) then) =
+      __$$KodiSettingDetailsSettingIntImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1417,15 +1435,17 @@ abstract class _$$_KodiSettingDetailsSettingIntCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingIntCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingIntImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingInt>
-    implements _$$_KodiSettingDetailsSettingIntCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingIntCopyWithImpl(
-      _$_KodiSettingDetailsSettingInt _value,
-      $Res Function(_$_KodiSettingDetailsSettingInt) _then)
+        _$KodiSettingDetailsSettingIntImpl>
+    implements _$$KodiSettingDetailsSettingIntImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingIntImplCopyWithImpl(
+      _$KodiSettingDetailsSettingIntImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingIntImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1444,7 +1464,7 @@ class __$$_KodiSettingDetailsSettingIntCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingInt(
+    return _then(_$KodiSettingDetailsSettingIntImpl(
       defaultt: null == defaultt
           ? _value.defaultt
           : defaultt // ignore: cast_nullable_to_non_nullable
@@ -1507,8 +1527,9 @@ class __$$_KodiSettingDetailsSettingIntCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingInt implements _KodiSettingDetailsSettingInt {
-  const _$_KodiSettingDetailsSettingInt(
+class _$KodiSettingDetailsSettingIntImpl
+    implements _KodiSettingDetailsSettingInt {
+  const _$KodiSettingDetailsSettingIntImpl(
       {@JsonKey(name: 'default') required this.defaultt,
       this.maximum,
       this.minimum,
@@ -1525,8 +1546,9 @@ class _$_KodiSettingDetailsSettingInt implements _KodiSettingDetailsSettingInt {
       required this.label})
       : _options = options;
 
-  factory _$_KodiSettingDetailsSettingInt.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingIntFromJson(json);
+  factory _$KodiSettingDetailsSettingIntImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsSettingIntImplFromJson(json);
 
   @override
   @JsonKey(name: 'default')
@@ -1572,10 +1594,10 @@ class _$_KodiSettingDetailsSettingInt implements _KodiSettingDetailsSettingInt {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingInt &&
+            other is _$KodiSettingDetailsSettingIntImpl &&
             (identical(other.defaultt, defaultt) ||
                 other.defaultt == defaultt) &&
             (identical(other.maximum, maximum) || other.maximum == maximum) &&
@@ -1593,7 +1615,7 @@ class _$_KodiSettingDetailsSettingInt implements _KodiSettingDetailsSettingInt {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1612,12 +1634,15 @@ class _$_KodiSettingDetailsSettingInt implements _KodiSettingDetailsSettingInt {
       id,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingIntCopyWith<_$_KodiSettingDetailsSettingInt>
-      get copyWith => __$$_KodiSettingDetailsSettingIntCopyWithImpl<
-          _$_KodiSettingDetailsSettingInt>(this, _$identity);
+  _$$KodiSettingDetailsSettingIntImplCopyWith<
+          _$KodiSettingDetailsSettingIntImpl>
+      get copyWith => __$$KodiSettingDetailsSettingIntImplCopyWithImpl<
+          _$KodiSettingDetailsSettingIntImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2142,7 +2167,7 @@ class _$_KodiSettingDetailsSettingInt implements _KodiSettingDetailsSettingInt {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingIntToJson(
+    return _$$KodiSettingDetailsSettingIntImplToJson(
       this,
     );
   }
@@ -2164,10 +2189,10 @@ abstract class _KodiSettingDetailsSettingInt
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingInt;
+      required final String label}) = _$KodiSettingDetailsSettingIntImpl;
 
   factory _KodiSettingDetailsSettingInt.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingInt.fromJson;
+      _$KodiSettingDetailsSettingIntImpl.fromJson;
 
   @JsonKey(name: 'default')
   int get defaultt;
@@ -2192,19 +2217,23 @@ abstract class _KodiSettingDetailsSettingInt
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingIntCopyWith<_$_KodiSettingDetailsSettingInt>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingIntImplCopyWith<
+          _$KodiSettingDetailsSettingIntImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingNumberCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingNumberImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingNumberCopyWith(
-          _$_KodiSettingDetailsSettingNumber value,
-          $Res Function(_$_KodiSettingDetailsSettingNumber) then) =
-      __$$_KodiSettingDetailsSettingNumberCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingNumberImplCopyWith(
+          _$KodiSettingDetailsSettingNumberImpl value,
+          $Res Function(_$KodiSettingDetailsSettingNumberImpl) then) =
+      __$$KodiSettingDetailsSettingNumberImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2227,15 +2256,17 @@ abstract class _$$_KodiSettingDetailsSettingNumberCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingNumberCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingNumberImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingNumber>
-    implements _$$_KodiSettingDetailsSettingNumberCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingNumberCopyWithImpl(
-      _$_KodiSettingDetailsSettingNumber _value,
-      $Res Function(_$_KodiSettingDetailsSettingNumber) _then)
+        _$KodiSettingDetailsSettingNumberImpl>
+    implements _$$KodiSettingDetailsSettingNumberImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingNumberImplCopyWithImpl(
+      _$KodiSettingDetailsSettingNumberImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingNumberImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2253,7 +2284,7 @@ class __$$_KodiSettingDetailsSettingNumberCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingNumber(
+    return _then(_$KodiSettingDetailsSettingNumberImpl(
       defaultt: null == defaultt
           ? _value.defaultt
           : defaultt // ignore: cast_nullable_to_non_nullable
@@ -2312,9 +2343,9 @@ class __$$_KodiSettingDetailsSettingNumberCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingNumber
+class _$KodiSettingDetailsSettingNumberImpl
     implements _KodiSettingDetailsSettingNumber {
-  const _$_KodiSettingDetailsSettingNumber(
+  const _$KodiSettingDetailsSettingNumberImpl(
       {@JsonKey(name: 'default') required this.defaultt,
       required this.maximum,
       required this.minimum,
@@ -2329,9 +2360,9 @@ class _$_KodiSettingDetailsSettingNumber
       required this.id,
       required this.label});
 
-  factory _$_KodiSettingDetailsSettingNumber.fromJson(
+  factory _$KodiSettingDetailsSettingNumberImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingNumberFromJson(json);
+      _$$KodiSettingDetailsSettingNumberImplFromJson(json);
 
   @override
   @JsonKey(name: 'default')
@@ -2367,10 +2398,10 @@ class _$_KodiSettingDetailsSettingNumber
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingNumber &&
+            other is _$KodiSettingDetailsSettingNumberImpl &&
             (identical(other.defaultt, defaultt) ||
                 other.defaultt == defaultt) &&
             (identical(other.maximum, maximum) || other.maximum == maximum) &&
@@ -2387,18 +2418,20 @@ class _$_KodiSettingDetailsSettingNumber
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, defaultt, maximum, minimum, step,
       value, control, enabled, level, parent, type, help, id, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingNumberCopyWith<
-          _$_KodiSettingDetailsSettingNumber>
-      get copyWith => __$$_KodiSettingDetailsSettingNumberCopyWithImpl<
-          _$_KodiSettingDetailsSettingNumber>(this, _$identity);
+  _$$KodiSettingDetailsSettingNumberImplCopyWith<
+          _$KodiSettingDetailsSettingNumberImpl>
+      get copyWith => __$$KodiSettingDetailsSettingNumberImplCopyWithImpl<
+          _$KodiSettingDetailsSettingNumberImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2923,7 +2956,7 @@ class _$_KodiSettingDetailsSettingNumber
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingNumberToJson(
+    return _$$KodiSettingDetailsSettingNumberImplToJson(
       this,
     );
   }
@@ -2944,10 +2977,10 @@ abstract class _KodiSettingDetailsSettingNumber
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingNumber;
+      required final String label}) = _$KodiSettingDetailsSettingNumberImpl;
 
   factory _KodiSettingDetailsSettingNumber.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingNumber.fromJson;
+      _$KodiSettingDetailsSettingNumberImpl.fromJson;
 
   @JsonKey(name: 'default')
   String get defaultt;
@@ -2971,20 +3004,23 @@ abstract class _KodiSettingDetailsSettingNumber
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingNumberCopyWith<
-          _$_KodiSettingDetailsSettingNumber>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingNumberImplCopyWith<
+          _$KodiSettingDetailsSettingNumberImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingStringCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingStringImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingStringCopyWith(
-          _$_KodiSettingDetailsSettingString value,
-          $Res Function(_$_KodiSettingDetailsSettingString) then) =
-      __$$_KodiSettingDetailsSettingStringCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingStringImplCopyWith(
+          _$KodiSettingDetailsSettingStringImpl value,
+          $Res Function(_$KodiSettingDetailsSettingStringImpl) then) =
+      __$$KodiSettingDetailsSettingStringImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3006,15 +3042,17 @@ abstract class _$$_KodiSettingDetailsSettingStringCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingStringCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingStringImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingString>
-    implements _$$_KodiSettingDetailsSettingStringCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingStringCopyWithImpl(
-      _$_KodiSettingDetailsSettingString _value,
-      $Res Function(_$_KodiSettingDetailsSettingString) _then)
+        _$KodiSettingDetailsSettingStringImpl>
+    implements _$$KodiSettingDetailsSettingStringImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingStringImplCopyWithImpl(
+      _$KodiSettingDetailsSettingStringImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingStringImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3031,7 +3069,7 @@ class __$$_KodiSettingDetailsSettingStringCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingString(
+    return _then(_$KodiSettingDetailsSettingStringImpl(
       allowEmpty: null == allowEmpty
           ? _value.allowEmpty
           : allowEmpty // ignore: cast_nullable_to_non_nullable
@@ -3086,9 +3124,9 @@ class __$$_KodiSettingDetailsSettingStringCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingString
+class _$KodiSettingDetailsSettingStringImpl
     implements _KodiSettingDetailsSettingString {
-  const _$_KodiSettingDetailsSettingString(
+  const _$KodiSettingDetailsSettingStringImpl(
       {@JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
       final List<KodiSettingDetailsSettingIntOption>? options,
@@ -3103,9 +3141,9 @@ class _$_KodiSettingDetailsSettingString
       required this.label})
       : _options = options;
 
-  factory _$_KodiSettingDetailsSettingString.fromJson(
+  factory _$KodiSettingDetailsSettingStringImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingStringFromJson(json);
+      _$$KodiSettingDetailsSettingStringImplFromJson(json);
 
   @override
   @JsonKey(name: 'allowempty')
@@ -3148,10 +3186,10 @@ class _$_KodiSettingDetailsSettingString
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingString &&
+            other is _$KodiSettingDetailsSettingStringImpl &&
             (identical(other.allowEmpty, allowEmpty) ||
                 other.allowEmpty == allowEmpty) &&
             (identical(other.defaultt, defaultt) ||
@@ -3168,7 +3206,7 @@ class _$_KodiSettingDetailsSettingString
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3185,13 +3223,15 @@ class _$_KodiSettingDetailsSettingString
       id,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingStringCopyWith<
-          _$_KodiSettingDetailsSettingString>
-      get copyWith => __$$_KodiSettingDetailsSettingStringCopyWithImpl<
-          _$_KodiSettingDetailsSettingString>(this, _$identity);
+  _$$KodiSettingDetailsSettingStringImplCopyWith<
+          _$KodiSettingDetailsSettingStringImpl>
+      get copyWith => __$$KodiSettingDetailsSettingStringImplCopyWithImpl<
+          _$KodiSettingDetailsSettingStringImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3716,7 +3756,7 @@ class _$_KodiSettingDetailsSettingString
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingStringToJson(
+    return _$$KodiSettingDetailsSettingStringImplToJson(
       this,
     );
   }
@@ -3736,10 +3776,10 @@ abstract class _KodiSettingDetailsSettingString
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingString;
+      required final String label}) = _$KodiSettingDetailsSettingStringImpl;
 
   factory _KodiSettingDetailsSettingString.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingString.fromJson;
+      _$KodiSettingDetailsSettingStringImpl.fromJson;
 
   @JsonKey(name: 'allowempty')
   bool get allowEmpty;
@@ -3763,20 +3803,23 @@ abstract class _KodiSettingDetailsSettingString
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingStringCopyWith<
-          _$_KodiSettingDetailsSettingString>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingStringImplCopyWith<
+          _$KodiSettingDetailsSettingStringImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingActionCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingActionImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingActionCopyWith(
-          _$_KodiSettingDetailsSettingAction value,
-          $Res Function(_$_KodiSettingDetailsSettingAction) then) =
-      __$$_KodiSettingDetailsSettingActionCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingActionImplCopyWith(
+          _$KodiSettingDetailsSettingActionImpl value,
+          $Res Function(_$KodiSettingDetailsSettingActionImpl) then) =
+      __$$KodiSettingDetailsSettingActionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3795,15 +3838,17 @@ abstract class _$$_KodiSettingDetailsSettingActionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingActionCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingActionImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingAction>
-    implements _$$_KodiSettingDetailsSettingActionCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingActionCopyWithImpl(
-      _$_KodiSettingDetailsSettingAction _value,
-      $Res Function(_$_KodiSettingDetailsSettingAction) _then)
+        _$KodiSettingDetailsSettingActionImpl>
+    implements _$$KodiSettingDetailsSettingActionImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingActionImplCopyWithImpl(
+      _$KodiSettingDetailsSettingActionImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingActionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3817,7 +3862,7 @@ class __$$_KodiSettingDetailsSettingActionCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingAction(
+    return _then(_$KodiSettingDetailsSettingActionImpl(
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -3860,9 +3905,9 @@ class __$$_KodiSettingDetailsSettingActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingAction
+class _$KodiSettingDetailsSettingActionImpl
     implements _KodiSettingDetailsSettingAction {
-  const _$_KodiSettingDetailsSettingAction(
+  const _$KodiSettingDetailsSettingActionImpl(
       {required this.data,
       this.control,
       required this.enabled,
@@ -3873,9 +3918,9 @@ class _$_KodiSettingDetailsSettingAction
       required this.id,
       required this.label});
 
-  factory _$_KodiSettingDetailsSettingAction.fromJson(
+  factory _$KodiSettingDetailsSettingActionImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingActionFromJson(json);
+      _$$KodiSettingDetailsSettingActionImplFromJson(json);
 
   @override
   final String data;
@@ -3902,10 +3947,10 @@ class _$_KodiSettingDetailsSettingAction
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingAction &&
+            other is _$KodiSettingDetailsSettingActionImpl &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.control, control) || other.control == control) &&
             (identical(other.enabled, enabled) || other.enabled == enabled) &&
@@ -3917,18 +3962,20 @@ class _$_KodiSettingDetailsSettingAction
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, data, control, enabled, level,
       parent, type, help, id, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingActionCopyWith<
-          _$_KodiSettingDetailsSettingAction>
-      get copyWith => __$$_KodiSettingDetailsSettingActionCopyWithImpl<
-          _$_KodiSettingDetailsSettingAction>(this, _$identity);
+  _$$KodiSettingDetailsSettingActionImplCopyWith<
+          _$KodiSettingDetailsSettingActionImpl>
+      get copyWith => __$$KodiSettingDetailsSettingActionImplCopyWithImpl<
+          _$KodiSettingDetailsSettingActionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4452,7 +4499,7 @@ class _$_KodiSettingDetailsSettingAction
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingActionToJson(
+    return _$$KodiSettingDetailsSettingActionImplToJson(
       this,
     );
   }
@@ -4469,10 +4516,10 @@ abstract class _KodiSettingDetailsSettingAction
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingAction;
+      required final String label}) = _$KodiSettingDetailsSettingActionImpl;
 
   factory _KodiSettingDetailsSettingAction.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingAction.fromJson;
+      _$KodiSettingDetailsSettingActionImpl.fromJson;
 
   String get data;
   @override
@@ -4491,20 +4538,23 @@ abstract class _KodiSettingDetailsSettingAction
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingActionCopyWith<
-          _$_KodiSettingDetailsSettingAction>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingActionImplCopyWith<
+          _$KodiSettingDetailsSettingActionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingListCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingListImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingListCopyWith(
-          _$_KodiSettingDetailsSettingList value,
-          $Res Function(_$_KodiSettingDetailsSettingList) then) =
-      __$$_KodiSettingDetailsSettingListCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingListImplCopyWith(
+          _$KodiSettingDetailsSettingListImpl value,
+          $Res Function(_$KodiSettingDetailsSettingListImpl) then) =
+      __$$KodiSettingDetailsSettingListImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4532,15 +4582,17 @@ abstract class _$$_KodiSettingDetailsSettingListCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingListCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingListImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingList>
-    implements _$$_KodiSettingDetailsSettingListCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingListCopyWithImpl(
-      _$_KodiSettingDetailsSettingList _value,
-      $Res Function(_$_KodiSettingDetailsSettingList) _then)
+        _$KodiSettingDetailsSettingListImpl>
+    implements _$$KodiSettingDetailsSettingListImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingListImplCopyWithImpl(
+      _$KodiSettingDetailsSettingListImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4560,7 +4612,7 @@ class __$$_KodiSettingDetailsSettingListCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingList(
+    return _then(_$KodiSettingDetailsSettingListImpl(
       defaultt: null == defaultt
           ? _value._defaultt
           : defaultt // ignore: cast_nullable_to_non_nullable
@@ -4624,6 +4676,8 @@ class __$$_KodiSettingDetailsSettingListCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiSettingDetailsSettingCopyWith<$Res> get definition {
@@ -4635,9 +4689,9 @@ class __$$_KodiSettingDetailsSettingListCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingList
+class _$KodiSettingDetailsSettingListImpl
     implements _KodiSettingDetailsSettingList {
-  const _$_KodiSettingDetailsSettingList(
+  const _$KodiSettingDetailsSettingListImpl(
       {@JsonKey(name: 'default')
       @KodiSettingValueConverter()
       required final List<KodiSettingValue> defaultt,
@@ -4658,9 +4712,9 @@ class _$_KodiSettingDetailsSettingList
       : _defaultt = defaultt,
         _value = value;
 
-  factory _$_KodiSettingDetailsSettingList.fromJson(
+  factory _$KodiSettingDetailsSettingListImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingListFromJson(json);
+      _$$KodiSettingDetailsSettingListImplFromJson(json);
 
   final List<KodiSettingValue> _defaultt;
   @override
@@ -4717,10 +4771,10 @@ class _$_KodiSettingDetailsSettingList
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingList &&
+            other is _$KodiSettingDetailsSettingListImpl &&
             const DeepCollectionEquality().equals(other._defaultt, _defaultt) &&
             (identical(other.definition, definition) ||
                 other.definition == definition) &&
@@ -4743,7 +4797,7 @@ class _$_KodiSettingDetailsSettingList
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4763,12 +4817,15 @@ class _$_KodiSettingDetailsSettingList
       id,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingListCopyWith<_$_KodiSettingDetailsSettingList>
-      get copyWith => __$$_KodiSettingDetailsSettingListCopyWithImpl<
-          _$_KodiSettingDetailsSettingList>(this, _$identity);
+  _$$KodiSettingDetailsSettingListImplCopyWith<
+          _$KodiSettingDetailsSettingListImpl>
+      get copyWith => __$$KodiSettingDetailsSettingListImplCopyWithImpl<
+          _$KodiSettingDetailsSettingListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5335,7 +5392,7 @@ class _$_KodiSettingDetailsSettingList
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingListToJson(
+    return _$$KodiSettingDetailsSettingListImplToJson(
       this,
     );
   }
@@ -5360,10 +5417,10 @@ abstract class _KodiSettingDetailsSettingList
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingList;
+      required final String label}) = _$KodiSettingDetailsSettingListImpl;
 
   factory _KodiSettingDetailsSettingList.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingList.fromJson;
+      _$KodiSettingDetailsSettingListImpl.fromJson;
 
   @JsonKey(name: 'default')
   @KodiSettingValueConverter()
@@ -5394,19 +5451,23 @@ abstract class _KodiSettingDetailsSettingList
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingListCopyWith<_$_KodiSettingDetailsSettingList>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingListImplCopyWith<
+          _$KodiSettingDetailsSettingListImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingPathCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingPathImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingPathCopyWith(
-          _$_KodiSettingDetailsSettingPath value,
-          $Res Function(_$_KodiSettingDetailsSettingPath) then) =
-      __$$_KodiSettingDetailsSettingPathCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingPathImplCopyWith(
+          _$KodiSettingDetailsSettingPathImpl value,
+          $Res Function(_$KodiSettingDetailsSettingPathImpl) then) =
+      __$$KodiSettingDetailsSettingPathImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5430,15 +5491,17 @@ abstract class _$$_KodiSettingDetailsSettingPathCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingPathCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingPathImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingPath>
-    implements _$$_KodiSettingDetailsSettingPathCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingPathCopyWithImpl(
-      _$_KodiSettingDetailsSettingPath _value,
-      $Res Function(_$_KodiSettingDetailsSettingPath) _then)
+        _$KodiSettingDetailsSettingPathImpl>
+    implements _$$KodiSettingDetailsSettingPathImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingPathImplCopyWithImpl(
+      _$KodiSettingDetailsSettingPathImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingPathImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5457,7 +5520,7 @@ class __$$_KodiSettingDetailsSettingPathCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingPath(
+    return _then(_$KodiSettingDetailsSettingPathImpl(
       sources: freezed == sources
           ? _value._sources
           : sources // ignore: cast_nullable_to_non_nullable
@@ -5520,9 +5583,9 @@ class __$$_KodiSettingDetailsSettingPathCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingPath
+class _$KodiSettingDetailsSettingPathImpl
     implements _KodiSettingDetailsSettingPath {
-  const _$_KodiSettingDetailsSettingPath(
+  const _$KodiSettingDetailsSettingPathImpl(
       {final List<String>? sources,
       this.writeable,
       @JsonKey(name: 'allowempty') required this.allowEmpty,
@@ -5540,9 +5603,9 @@ class _$_KodiSettingDetailsSettingPath
       : _sources = sources,
         _options = options;
 
-  factory _$_KodiSettingDetailsSettingPath.fromJson(
+  factory _$KodiSettingDetailsSettingPathImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingPathFromJson(json);
+      _$$KodiSettingDetailsSettingPathImplFromJson(json);
 
   final List<String>? _sources;
   @override
@@ -5597,10 +5660,10 @@ class _$_KodiSettingDetailsSettingPath
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingPath &&
+            other is _$KodiSettingDetailsSettingPathImpl &&
             const DeepCollectionEquality().equals(other._sources, _sources) &&
             (identical(other.writeable, writeable) ||
                 other.writeable == writeable) &&
@@ -5620,7 +5683,7 @@ class _$_KodiSettingDetailsSettingPath
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5639,12 +5702,15 @@ class _$_KodiSettingDetailsSettingPath
       id,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingPathCopyWith<_$_KodiSettingDetailsSettingPath>
-      get copyWith => __$$_KodiSettingDetailsSettingPathCopyWithImpl<
-          _$_KodiSettingDetailsSettingPath>(this, _$identity);
+  _$$KodiSettingDetailsSettingPathImplCopyWith<
+          _$KodiSettingDetailsSettingPathImpl>
+      get copyWith => __$$KodiSettingDetailsSettingPathImplCopyWithImpl<
+          _$KodiSettingDetailsSettingPathImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6169,7 +6235,7 @@ class _$_KodiSettingDetailsSettingPath
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingPathToJson(
+    return _$$KodiSettingDetailsSettingPathImplToJson(
       this,
     );
   }
@@ -6191,10 +6257,10 @@ abstract class _KodiSettingDetailsSettingPath
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingPath;
+      required final String label}) = _$KodiSettingDetailsSettingPathImpl;
 
   factory _KodiSettingDetailsSettingPath.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingPath.fromJson;
+      _$KodiSettingDetailsSettingPathImpl.fromJson;
 
   List<String>? get sources;
   bool? get writeable;
@@ -6220,19 +6286,23 @@ abstract class _KodiSettingDetailsSettingPath
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingPathCopyWith<_$_KodiSettingDetailsSettingPath>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingPathImplCopyWith<
+          _$KodiSettingDetailsSettingPathImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingAddonCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingAddonImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingAddonCopyWith(
-          _$_KodiSettingDetailsSettingAddon value,
-          $Res Function(_$_KodiSettingDetailsSettingAddon) then) =
-      __$$_KodiSettingDetailsSettingAddonCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingAddonImplCopyWith(
+          _$KodiSettingDetailsSettingAddonImpl value,
+          $Res Function(_$KodiSettingDetailsSettingAddonImpl) then) =
+      __$$KodiSettingDetailsSettingAddonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6255,15 +6325,17 @@ abstract class _$$_KodiSettingDetailsSettingAddonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingAddonCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingAddonImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingAddon>
-    implements _$$_KodiSettingDetailsSettingAddonCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingAddonCopyWithImpl(
-      _$_KodiSettingDetailsSettingAddon _value,
-      $Res Function(_$_KodiSettingDetailsSettingAddon) _then)
+        _$KodiSettingDetailsSettingAddonImpl>
+    implements _$$KodiSettingDetailsSettingAddonImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingAddonImplCopyWithImpl(
+      _$KodiSettingDetailsSettingAddonImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingAddonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6281,7 +6353,7 @@ class __$$_KodiSettingDetailsSettingAddonCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingAddon(
+    return _then(_$KodiSettingDetailsSettingAddonImpl(
       addonType: null == addonType
           ? _value.addonType
           : addonType // ignore: cast_nullable_to_non_nullable
@@ -6340,9 +6412,9 @@ class __$$_KodiSettingDetailsSettingAddonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingAddon
+class _$KodiSettingDetailsSettingAddonImpl
     implements _KodiSettingDetailsSettingAddon {
-  const _$_KodiSettingDetailsSettingAddon(
+  const _$KodiSettingDetailsSettingAddonImpl(
       {@JsonKey(name: 'addontype') required this.addonType,
       @JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
@@ -6358,9 +6430,9 @@ class _$_KodiSettingDetailsSettingAddon
       required this.label})
       : _options = options;
 
-  factory _$_KodiSettingDetailsSettingAddon.fromJson(
+  factory _$KodiSettingDetailsSettingAddonImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingAddonFromJson(json);
+      _$$KodiSettingDetailsSettingAddonImplFromJson(json);
 
   @override
   @JsonKey(name: 'addontype')
@@ -6406,10 +6478,10 @@ class _$_KodiSettingDetailsSettingAddon
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingAddon &&
+            other is _$KodiSettingDetailsSettingAddonImpl &&
             (identical(other.addonType, addonType) ||
                 other.addonType == addonType) &&
             (identical(other.allowEmpty, allowEmpty) ||
@@ -6428,7 +6500,7 @@ class _$_KodiSettingDetailsSettingAddon
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6446,12 +6518,15 @@ class _$_KodiSettingDetailsSettingAddon
       id,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingAddonCopyWith<_$_KodiSettingDetailsSettingAddon>
-      get copyWith => __$$_KodiSettingDetailsSettingAddonCopyWithImpl<
-          _$_KodiSettingDetailsSettingAddon>(this, _$identity);
+  _$$KodiSettingDetailsSettingAddonImplCopyWith<
+          _$KodiSettingDetailsSettingAddonImpl>
+      get copyWith => __$$KodiSettingDetailsSettingAddonImplCopyWithImpl<
+          _$KodiSettingDetailsSettingAddonImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6976,7 +7051,7 @@ class _$_KodiSettingDetailsSettingAddon
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingAddonToJson(
+    return _$$KodiSettingDetailsSettingAddonImplToJson(
       this,
     );
   }
@@ -6997,10 +7072,10 @@ abstract class _KodiSettingDetailsSettingAddon
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingAddon;
+      required final String label}) = _$KodiSettingDetailsSettingAddonImpl;
 
   factory _KodiSettingDetailsSettingAddon.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingAddon.fromJson;
+      _$KodiSettingDetailsSettingAddonImpl.fromJson;
 
   @JsonKey(name: 'addontype')
   KodiAddonType get addonType;
@@ -7026,19 +7101,23 @@ abstract class _KodiSettingDetailsSettingAddon
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingAddonCopyWith<_$_KodiSettingDetailsSettingAddon>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingAddonImplCopyWith<
+          _$KodiSettingDetailsSettingAddonImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingDateCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingDateImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingDateCopyWith(
-          _$_KodiSettingDetailsSettingDate value,
-          $Res Function(_$_KodiSettingDetailsSettingDate) then) =
-      __$$_KodiSettingDetailsSettingDateCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingDateImplCopyWith(
+          _$KodiSettingDetailsSettingDateImpl value,
+          $Res Function(_$KodiSettingDetailsSettingDateImpl) then) =
+      __$$KodiSettingDetailsSettingDateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7060,15 +7139,17 @@ abstract class _$$_KodiSettingDetailsSettingDateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingDateCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingDateImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingDate>
-    implements _$$_KodiSettingDetailsSettingDateCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingDateCopyWithImpl(
-      _$_KodiSettingDetailsSettingDate _value,
-      $Res Function(_$_KodiSettingDetailsSettingDate) _then)
+        _$KodiSettingDetailsSettingDateImpl>
+    implements _$$KodiSettingDetailsSettingDateImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingDateImplCopyWithImpl(
+      _$KodiSettingDetailsSettingDateImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingDateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7085,7 +7166,7 @@ class __$$_KodiSettingDetailsSettingDateCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingDate(
+    return _then(_$KodiSettingDetailsSettingDateImpl(
       allowEmpty: null == allowEmpty
           ? _value.allowEmpty
           : allowEmpty // ignore: cast_nullable_to_non_nullable
@@ -7140,9 +7221,9 @@ class __$$_KodiSettingDetailsSettingDateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingDate
+class _$KodiSettingDetailsSettingDateImpl
     implements _KodiSettingDetailsSettingDate {
-  const _$_KodiSettingDetailsSettingDate(
+  const _$KodiSettingDetailsSettingDateImpl(
       {@JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
       final List<KodiSettingDetailsSettingIntOption>? options,
@@ -7157,9 +7238,9 @@ class _$_KodiSettingDetailsSettingDate
       required this.label})
       : _options = options;
 
-  factory _$_KodiSettingDetailsSettingDate.fromJson(
+  factory _$KodiSettingDetailsSettingDateImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingDateFromJson(json);
+      _$$KodiSettingDetailsSettingDateImplFromJson(json);
 
   @override
   @JsonKey(name: 'allowempty')
@@ -7202,10 +7283,10 @@ class _$_KodiSettingDetailsSettingDate
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingDate &&
+            other is _$KodiSettingDetailsSettingDateImpl &&
             (identical(other.allowEmpty, allowEmpty) ||
                 other.allowEmpty == allowEmpty) &&
             (identical(other.defaultt, defaultt) ||
@@ -7222,7 +7303,7 @@ class _$_KodiSettingDetailsSettingDate
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7239,12 +7320,15 @@ class _$_KodiSettingDetailsSettingDate
       id,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingDateCopyWith<_$_KodiSettingDetailsSettingDate>
-      get copyWith => __$$_KodiSettingDetailsSettingDateCopyWithImpl<
-          _$_KodiSettingDetailsSettingDate>(this, _$identity);
+  _$$KodiSettingDetailsSettingDateImplCopyWith<
+          _$KodiSettingDetailsSettingDateImpl>
+      get copyWith => __$$KodiSettingDetailsSettingDateImplCopyWithImpl<
+          _$KodiSettingDetailsSettingDateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7769,7 +7853,7 @@ class _$_KodiSettingDetailsSettingDate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingDateToJson(
+    return _$$KodiSettingDetailsSettingDateImplToJson(
       this,
     );
   }
@@ -7789,10 +7873,10 @@ abstract class _KodiSettingDetailsSettingDate
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingDate;
+      required final String label}) = _$KodiSettingDetailsSettingDateImpl;
 
   factory _KodiSettingDetailsSettingDate.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingDate.fromJson;
+      _$KodiSettingDetailsSettingDateImpl.fromJson;
 
   @JsonKey(name: 'allowempty')
   bool get allowEmpty;
@@ -7816,19 +7900,23 @@ abstract class _KodiSettingDetailsSettingDate
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingDateCopyWith<_$_KodiSettingDetailsSettingDate>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingDateImplCopyWith<
+          _$KodiSettingDetailsSettingDateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingTimeCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingTimeImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingTimeCopyWith(
-          _$_KodiSettingDetailsSettingTime value,
-          $Res Function(_$_KodiSettingDetailsSettingTime) then) =
-      __$$_KodiSettingDetailsSettingTimeCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingTimeImplCopyWith(
+          _$KodiSettingDetailsSettingTimeImpl value,
+          $Res Function(_$KodiSettingDetailsSettingTimeImpl) then) =
+      __$$KodiSettingDetailsSettingTimeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7850,15 +7938,17 @@ abstract class _$$_KodiSettingDetailsSettingTimeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingTimeCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingTimeImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingTime>
-    implements _$$_KodiSettingDetailsSettingTimeCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingTimeCopyWithImpl(
-      _$_KodiSettingDetailsSettingTime _value,
-      $Res Function(_$_KodiSettingDetailsSettingTime) _then)
+        _$KodiSettingDetailsSettingTimeImpl>
+    implements _$$KodiSettingDetailsSettingTimeImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingTimeImplCopyWithImpl(
+      _$KodiSettingDetailsSettingTimeImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingTimeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7875,7 +7965,7 @@ class __$$_KodiSettingDetailsSettingTimeCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingTime(
+    return _then(_$KodiSettingDetailsSettingTimeImpl(
       allowEmpty: null == allowEmpty
           ? _value.allowEmpty
           : allowEmpty // ignore: cast_nullable_to_non_nullable
@@ -7930,9 +8020,9 @@ class __$$_KodiSettingDetailsSettingTimeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingTime
+class _$KodiSettingDetailsSettingTimeImpl
     implements _KodiSettingDetailsSettingTime {
-  const _$_KodiSettingDetailsSettingTime(
+  const _$KodiSettingDetailsSettingTimeImpl(
       {@JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
       final List<KodiSettingDetailsSettingIntOption>? options,
@@ -7947,9 +8037,9 @@ class _$_KodiSettingDetailsSettingTime
       required this.label})
       : _options = options;
 
-  factory _$_KodiSettingDetailsSettingTime.fromJson(
+  factory _$KodiSettingDetailsSettingTimeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingTimeFromJson(json);
+      _$$KodiSettingDetailsSettingTimeImplFromJson(json);
 
   @override
   @JsonKey(name: 'allowempty')
@@ -7992,10 +8082,10 @@ class _$_KodiSettingDetailsSettingTime
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingTime &&
+            other is _$KodiSettingDetailsSettingTimeImpl &&
             (identical(other.allowEmpty, allowEmpty) ||
                 other.allowEmpty == allowEmpty) &&
             (identical(other.defaultt, defaultt) ||
@@ -8012,7 +8102,7 @@ class _$_KodiSettingDetailsSettingTime
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8029,12 +8119,15 @@ class _$_KodiSettingDetailsSettingTime
       id,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingTimeCopyWith<_$_KodiSettingDetailsSettingTime>
-      get copyWith => __$$_KodiSettingDetailsSettingTimeCopyWithImpl<
-          _$_KodiSettingDetailsSettingTime>(this, _$identity);
+  _$$KodiSettingDetailsSettingTimeImplCopyWith<
+          _$KodiSettingDetailsSettingTimeImpl>
+      get copyWith => __$$KodiSettingDetailsSettingTimeImplCopyWithImpl<
+          _$KodiSettingDetailsSettingTimeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8559,7 +8652,7 @@ class _$_KodiSettingDetailsSettingTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingTimeToJson(
+    return _$$KodiSettingDetailsSettingTimeImplToJson(
       this,
     );
   }
@@ -8579,10 +8672,10 @@ abstract class _KodiSettingDetailsSettingTime
       required final KodiSettingType type,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsSettingTime;
+      required final String label}) = _$KodiSettingDetailsSettingTimeImpl;
 
   factory _KodiSettingDetailsSettingTime.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingTime.fromJson;
+      _$KodiSettingDetailsSettingTimeImpl.fromJson;
 
   @JsonKey(name: 'allowempty')
   bool get allowEmpty;
@@ -8606,9 +8699,13 @@ abstract class _KodiSettingDetailsSettingTime
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsSetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingTimeCopyWith<_$_KodiSettingDetailsSettingTime>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingTimeImplCopyWith<
+          _$KodiSettingDetailsSettingTimeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8623,8 +8720,12 @@ mixin _$KodiSettingDetailsSettingIntOption {
   @JsonKey(fromJson: parseValue)
   String get value => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiSettingDetailsSettingIntOption to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSettingDetailsSettingIntOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSettingDetailsSettingIntOptionCopyWith<
           KodiSettingDetailsSettingIntOption>
       get copyWith => throw _privateConstructorUsedError;
@@ -8652,6 +8753,8 @@ class _$KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSettingDetailsSettingIntOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8672,34 +8775,36 @@ class _$KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsSettingIntOptionCopyWith<$Res>
+abstract class _$$KodiSettingDetailsSettingIntOptionImplCopyWith<$Res>
     implements $KodiSettingDetailsSettingIntOptionCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsSettingIntOptionCopyWith(
-          _$_KodiSettingDetailsSettingIntOption value,
-          $Res Function(_$_KodiSettingDetailsSettingIntOption) then) =
-      __$$_KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsSettingIntOptionImplCopyWith(
+          _$KodiSettingDetailsSettingIntOptionImpl value,
+          $Res Function(_$KodiSettingDetailsSettingIntOptionImpl) then) =
+      __$$KodiSettingDetailsSettingIntOptionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String label, @JsonKey(fromJson: parseValue) String value});
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res>
+class __$$KodiSettingDetailsSettingIntOptionImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res,
-        _$_KodiSettingDetailsSettingIntOption>
-    implements _$$_KodiSettingDetailsSettingIntOptionCopyWith<$Res> {
-  __$$_KodiSettingDetailsSettingIntOptionCopyWithImpl(
-      _$_KodiSettingDetailsSettingIntOption _value,
-      $Res Function(_$_KodiSettingDetailsSettingIntOption) _then)
+        _$KodiSettingDetailsSettingIntOptionImpl>
+    implements _$$KodiSettingDetailsSettingIntOptionImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingIntOptionImplCopyWithImpl(
+      _$KodiSettingDetailsSettingIntOptionImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingIntOptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsSettingIntOption
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? label = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiSettingDetailsSettingIntOption(
+    return _then(_$KodiSettingDetailsSettingIntOptionImpl(
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -8714,15 +8819,15 @@ class __$$_KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsSettingIntOption
+class _$KodiSettingDetailsSettingIntOptionImpl
     implements _KodiSettingDetailsSettingIntOption {
-  const _$_KodiSettingDetailsSettingIntOption(
+  const _$KodiSettingDetailsSettingIntOptionImpl(
       {required this.label,
       @JsonKey(fromJson: parseValue) required this.value});
 
-  factory _$_KodiSettingDetailsSettingIntOption.fromJson(
+  factory _$KodiSettingDetailsSettingIntOptionImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsSettingIntOptionFromJson(json);
+      _$$KodiSettingDetailsSettingIntOptionImplFromJson(json);
 
   @override
   final String label;
@@ -8736,29 +8841,31 @@ class _$_KodiSettingDetailsSettingIntOption
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsSettingIntOption &&
+            other is _$KodiSettingDetailsSettingIntOptionImpl &&
             (identical(other.label, label) || other.label == label) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, label, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsSettingIntOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsSettingIntOptionCopyWith<
-          _$_KodiSettingDetailsSettingIntOption>
-      get copyWith => __$$_KodiSettingDetailsSettingIntOptionCopyWithImpl<
-          _$_KodiSettingDetailsSettingIntOption>(this, _$identity);
+  _$$KodiSettingDetailsSettingIntOptionImplCopyWith<
+          _$KodiSettingDetailsSettingIntOptionImpl>
+      get copyWith => __$$KodiSettingDetailsSettingIntOptionImplCopyWithImpl<
+          _$KodiSettingDetailsSettingIntOptionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsSettingIntOptionToJson(
+    return _$$KodiSettingDetailsSettingIntOptionImplToJson(
       this,
     );
   }
@@ -8769,20 +8876,23 @@ abstract class _KodiSettingDetailsSettingIntOption
   const factory _KodiSettingDetailsSettingIntOption(
           {required final String label,
           @JsonKey(fromJson: parseValue) required final String value}) =
-      _$_KodiSettingDetailsSettingIntOption;
+      _$KodiSettingDetailsSettingIntOptionImpl;
 
   factory _KodiSettingDetailsSettingIntOption.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiSettingDetailsSettingIntOption.fromJson;
+      _$KodiSettingDetailsSettingIntOptionImpl.fromJson;
 
   @override
   String get label;
   @override
   @JsonKey(fromJson: parseValue)
   String get value;
+
+  /// Create a copy of KodiSettingDetailsSettingIntOption
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsSettingIntOptionCopyWith<
-          _$_KodiSettingDetailsSettingIntOption>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingIntOptionImplCopyWith<
+          _$KodiSettingDetailsSettingIntOptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

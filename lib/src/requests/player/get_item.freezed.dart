@@ -12,7 +12,7 @@ part of 'get_item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetItem _$GetItemFromJson(Map<String, dynamic> json) {
   return _GetItem.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$GetItem {
   int get id => throw _privateConstructorUsedError;
   Set<KodiListFieldsAll>? get properties => throw _privateConstructorUsedError;
 
+  /// Serializes this GetItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetItemCopyWith<GetItem> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -48,6 +52,8 @@ class _$GetItemCopyWithImpl<$Res, $Val extends GetItem>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,10 +74,10 @@ class _$GetItemCopyWithImpl<$Res, $Val extends GetItem>
 }
 
 /// @nodoc
-abstract class _$$_GetItemCopyWith<$Res> implements $GetItemCopyWith<$Res> {
-  factory _$$_GetItemCopyWith(
-          _$_GetItem value, $Res Function(_$_GetItem) then) =
-      __$$_GetItemCopyWithImpl<$Res>;
+abstract class _$$GetItemImplCopyWith<$Res> implements $GetItemCopyWith<$Res> {
+  factory _$$GetItemImplCopyWith(
+          _$GetItemImpl value, $Res Function(_$GetItemImpl) then) =
+      __$$GetItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -79,19 +85,22 @@ abstract class _$$_GetItemCopyWith<$Res> implements $GetItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetItemCopyWithImpl<$Res>
-    extends _$GetItemCopyWithImpl<$Res, _$_GetItem>
-    implements _$$_GetItemCopyWith<$Res> {
-  __$$_GetItemCopyWithImpl(_$_GetItem _value, $Res Function(_$_GetItem) _then)
+class __$$GetItemImplCopyWithImpl<$Res>
+    extends _$GetItemCopyWithImpl<$Res, _$GetItemImpl>
+    implements _$$GetItemImplCopyWith<$Res> {
+  __$$GetItemImplCopyWithImpl(
+      _$GetItemImpl _value, $Res Function(_$GetItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetItem(
+    return _then(_$GetItemImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -106,14 +115,14 @@ class __$$_GetItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetItem extends _GetItem {
-  const _$_GetItem(@JsonKey(name: 'playerid') this.id,
+class _$GetItemImpl extends _GetItem {
+  const _$GetItemImpl(@JsonKey(name: 'playerid') this.id,
       {final Set<KodiListFieldsAll>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetItem.fromJson(Map<String, dynamic> json) =>
-      _$$_GetItemFromJson(json);
+  factory _$GetItemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetItemImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -134,29 +143,31 @@ class _$_GetItem extends _GetItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetItem &&
+            other is _$GetItemImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetItemCopyWith<_$_GetItem> get copyWith =>
-      __$$_GetItemCopyWithImpl<_$_GetItem>(this, _$identity);
+  _$$GetItemImplCopyWith<_$GetItemImpl> get copyWith =>
+      __$$GetItemImplCopyWithImpl<_$GetItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetItemToJson(
+    return _$$GetItemImplToJson(
       this,
     );
   }
@@ -164,18 +175,21 @@ class _$_GetItem extends _GetItem {
 
 abstract class _GetItem extends GetItem {
   const factory _GetItem(@JsonKey(name: 'playerid') final int id,
-      {final Set<KodiListFieldsAll>? properties}) = _$_GetItem;
+      {final Set<KodiListFieldsAll>? properties}) = _$GetItemImpl;
   const _GetItem._() : super._();
 
-  factory _GetItem.fromJson(Map<String, dynamic> json) = _$_GetItem.fromJson;
+  factory _GetItem.fromJson(Map<String, dynamic> json) = _$GetItemImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
   int get id;
   @override
   Set<KodiListFieldsAll>? get properties;
+
+  /// Create a copy of GetItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetItemCopyWith<_$_GetItem> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetItemImplCopyWith<_$GetItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

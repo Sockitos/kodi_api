@@ -6,73 +6,73 @@ part of 'kodi_setting_value_extended.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiSettingValueExtendedBool _$$_KodiSettingValueExtendedBoolFromJson(
+_$KodiSettingValueExtendedBoolImpl _$$KodiSettingValueExtendedBoolImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingValueExtendedBool(
+    _$KodiSettingValueExtendedBoolImpl(
       json['value'] as bool,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiSettingValueExtendedBoolToJson(
-        _$_KodiSettingValueExtendedBool instance) =>
+Map<String, dynamic> _$$KodiSettingValueExtendedBoolImplToJson(
+        _$KodiSettingValueExtendedBoolImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiSettingValueExtendedInt _$$_KodiSettingValueExtendedIntFromJson(
+_$KodiSettingValueExtendedIntImpl _$$KodiSettingValueExtendedIntImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingValueExtendedInt(
-      json['value'] as int,
+    _$KodiSettingValueExtendedIntImpl(
+      (json['value'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiSettingValueExtendedIntToJson(
-        _$_KodiSettingValueExtendedInt instance) =>
+Map<String, dynamic> _$$KodiSettingValueExtendedIntImplToJson(
+        _$KodiSettingValueExtendedIntImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiSettingValueExtendedNumber _$$_KodiSettingValueExtendedNumberFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiSettingValueExtendedNumber(
-      (json['value'] as num).toDouble(),
-      $type: json['runtimeType'] as String?,
-    );
+_$KodiSettingValueExtendedNumberImpl
+    _$$KodiSettingValueExtendedNumberImplFromJson(Map<String, dynamic> json) =>
+        _$KodiSettingValueExtendedNumberImpl(
+          (json['value'] as num).toDouble(),
+          $type: json['runtimeType'] as String?,
+        );
 
-Map<String, dynamic> _$$_KodiSettingValueExtendedNumberToJson(
-        _$_KodiSettingValueExtendedNumber instance) =>
+Map<String, dynamic> _$$KodiSettingValueExtendedNumberImplToJson(
+        _$KodiSettingValueExtendedNumberImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiSettingValueExtendedString _$$_KodiSettingValueExtendedStringFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiSettingValueExtendedString(
-      json['value'] as String,
-      $type: json['runtimeType'] as String?,
-    );
+_$KodiSettingValueExtendedStringImpl
+    _$$KodiSettingValueExtendedStringImplFromJson(Map<String, dynamic> json) =>
+        _$KodiSettingValueExtendedStringImpl(
+          json['value'] as String,
+          $type: json['runtimeType'] as String?,
+        );
 
-Map<String, dynamic> _$$_KodiSettingValueExtendedStringToJson(
-        _$_KodiSettingValueExtendedString instance) =>
+Map<String, dynamic> _$$KodiSettingValueExtendedStringImplToJson(
+        _$KodiSettingValueExtendedStringImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiSettingValueExtendedList _$$_KodiSettingValueExtendedListFromJson(
+_$KodiSettingValueExtendedListImpl _$$KodiSettingValueExtendedListImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingValueExtendedList(
+    _$KodiSettingValueExtendedListImpl(
       (json['value'] as List<dynamic>)
           .map((e) => KodiSettingValue.fromJson(e as Map<String, dynamic>))
           .toList(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiSettingValueExtendedListToJson(
-        _$_KodiSettingValueExtendedList instance) =>
+Map<String, dynamic> _$$KodiSettingValueExtendedListImplToJson(
+        _$KodiSettingValueExtendedListImpl instance) =>
     <String, dynamic>{
       'value': instance.value.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,

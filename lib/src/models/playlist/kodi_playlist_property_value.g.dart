@@ -6,15 +6,15 @@ part of 'kodi_playlist_property_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlaylistPropertyValue _$$_KodiPlaylistPropertyValueFromJson(
+_$KodiPlaylistPropertyValueImpl _$$KodiPlaylistPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlaylistPropertyValue(
-      size: json['size'] as int?,
+    _$KodiPlaylistPropertyValueImpl(
+      size: (json['size'] as num?)?.toInt(),
       type: $enumDecodeNullable(_$KodiPlaylistTypeEnumMap, json['type']),
     );
 
-Map<String, dynamic> _$$_KodiPlaylistPropertyValueToJson(
-    _$_KodiPlaylistPropertyValue instance) {
+Map<String, dynamic> _$$KodiPlaylistPropertyValueImplToJson(
+    _$KodiPlaylistPropertyValueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

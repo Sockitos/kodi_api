@@ -6,32 +6,32 @@ part of 'kodi_pvr_details_channel.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsChannel _$$_KodiPVRDetailsChannelFromJson(
+_$KodiPVRDetailsChannelImpl _$$KodiPVRDetailsChannelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsChannel(
+    _$KodiPVRDetailsChannelImpl(
       broadcastNext: KodiPVRDetailsBroadcast.fromJson(
           json['broadcastnext'] as Map<String, dynamic>),
       broadcastNow: KodiPVRDetailsBroadcast.fromJson(
           json['broadcastnow'] as Map<String, dynamic>),
       channel: json['channel'] as String,
-      channelId: json['channelid'] as int,
-      channelNumber: json['channelnumber'] as int,
+      channelId: (json['channelid'] as num).toInt(),
+      channelNumber: (json['channelnumber'] as num).toInt(),
       channelType:
           $enumDecode(_$KodiPVRChannelTypeEnumMap, json['channeltype']),
-      clientId: json['clientid'] as int,
+      clientId: (json['clientid'] as num).toInt(),
       hasArchive: json['hasarchive'] as bool,
       hidden: json['hidden'] as bool,
       icon: json['icon'] as String,
       isRecording: json['isrecording'] as bool,
       lastPlayed: json['lastplayed'] as String,
       locked: json['locked'] as bool,
-      subChannelNumber: json['subchannelnumber'] as int,
+      subChannelNumber: (json['subchannelnumber'] as num).toInt(),
       thumbnail: json['thumbnail'] as String,
-      uniqueId: json['uniqueid'] as int,
+      uniqueId: (json['uniqueid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsChannelToJson(
-        _$_KodiPVRDetailsChannel instance) =>
+Map<String, dynamic> _$$KodiPVRDetailsChannelImplToJson(
+        _$KodiPVRDetailsChannelImpl instance) =>
     <String, dynamic>{
       'broadcastnext': instance.broadcastNext.toJson(),
       'broadcastnow': instance.broadcastNow.toJson(),

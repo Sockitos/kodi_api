@@ -12,7 +12,7 @@ part of 'kodi_system_property_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiSystemPropertyValue _$KodiSystemPropertyValueFromJson(
     Map<String, dynamic> json) {
@@ -30,8 +30,12 @@ mixin _$KodiSystemPropertyValue {
   @JsonKey(name: 'cansuspend')
   bool? get canSuspend => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiSystemPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSystemPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSystemPropertyValueCopyWith<KodiSystemPropertyValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$KodiSystemPropertyValueCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSystemPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,11 +96,12 @@ class _$KodiSystemPropertyValueCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiSystemPropertyValueCopyWith<$Res>
+abstract class _$$KodiSystemPropertyValueImplCopyWith<$Res>
     implements $KodiSystemPropertyValueCopyWith<$Res> {
-  factory _$$_KodiSystemPropertyValueCopyWith(_$_KodiSystemPropertyValue value,
-          $Res Function(_$_KodiSystemPropertyValue) then) =
-      __$$_KodiSystemPropertyValueCopyWithImpl<$Res>;
+  factory _$$KodiSystemPropertyValueImplCopyWith(
+          _$KodiSystemPropertyValueImpl value,
+          $Res Function(_$KodiSystemPropertyValueImpl) then) =
+      __$$KodiSystemPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -105,14 +112,17 @@ abstract class _$$_KodiSystemPropertyValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSystemPropertyValueCopyWithImpl<$Res>
+class __$$KodiSystemPropertyValueImplCopyWithImpl<$Res>
     extends _$KodiSystemPropertyValueCopyWithImpl<$Res,
-        _$_KodiSystemPropertyValue>
-    implements _$$_KodiSystemPropertyValueCopyWith<$Res> {
-  __$$_KodiSystemPropertyValueCopyWithImpl(_$_KodiSystemPropertyValue _value,
-      $Res Function(_$_KodiSystemPropertyValue) _then)
+        _$KodiSystemPropertyValueImpl>
+    implements _$$KodiSystemPropertyValueImplCopyWith<$Res> {
+  __$$KodiSystemPropertyValueImplCopyWithImpl(
+      _$KodiSystemPropertyValueImpl _value,
+      $Res Function(_$KodiSystemPropertyValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSystemPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,7 +131,7 @@ class __$$_KodiSystemPropertyValueCopyWithImpl<$Res>
     Object? canShutdown = freezed,
     Object? canSuspend = freezed,
   }) {
-    return _then(_$_KodiSystemPropertyValue(
+    return _then(_$KodiSystemPropertyValueImpl(
       canHibernate: freezed == canHibernate
           ? _value.canHibernate
           : canHibernate // ignore: cast_nullable_to_non_nullable
@@ -144,15 +154,15 @@ class __$$_KodiSystemPropertyValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSystemPropertyValue implements _KodiSystemPropertyValue {
-  const _$_KodiSystemPropertyValue(
+class _$KodiSystemPropertyValueImpl implements _KodiSystemPropertyValue {
+  const _$KodiSystemPropertyValueImpl(
       {@JsonKey(name: 'canhibernate') this.canHibernate,
       @JsonKey(name: 'canreboot') this.canReboot,
       @JsonKey(name: 'canshutdown') this.canShutdown,
       @JsonKey(name: 'cansuspend') this.canSuspend});
 
-  factory _$_KodiSystemPropertyValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiSystemPropertyValueFromJson(json);
+  factory _$KodiSystemPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiSystemPropertyValueImplFromJson(json);
 
   @override
   @JsonKey(name: 'canhibernate')
@@ -173,10 +183,10 @@ class _$_KodiSystemPropertyValue implements _KodiSystemPropertyValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSystemPropertyValue &&
+            other is _$KodiSystemPropertyValueImpl &&
             (identical(other.canHibernate, canHibernate) ||
                 other.canHibernate == canHibernate) &&
             (identical(other.canReboot, canReboot) ||
@@ -187,22 +197,23 @@ class _$_KodiSystemPropertyValue implements _KodiSystemPropertyValue {
                 other.canSuspend == canSuspend));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, canHibernate, canReboot, canShutdown, canSuspend);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSystemPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSystemPropertyValueCopyWith<_$_KodiSystemPropertyValue>
-      get copyWith =>
-          __$$_KodiSystemPropertyValueCopyWithImpl<_$_KodiSystemPropertyValue>(
-              this, _$identity);
+  _$$KodiSystemPropertyValueImplCopyWith<_$KodiSystemPropertyValueImpl>
+      get copyWith => __$$KodiSystemPropertyValueImplCopyWithImpl<
+          _$KodiSystemPropertyValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSystemPropertyValueToJson(
+    return _$$KodiSystemPropertyValueImplToJson(
       this,
     );
   }
@@ -214,10 +225,10 @@ abstract class _KodiSystemPropertyValue implements KodiSystemPropertyValue {
           @JsonKey(name: 'canreboot') final bool? canReboot,
           @JsonKey(name: 'canshutdown') final bool? canShutdown,
           @JsonKey(name: 'cansuspend') final bool? canSuspend}) =
-      _$_KodiSystemPropertyValue;
+      _$KodiSystemPropertyValueImpl;
 
   factory _KodiSystemPropertyValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiSystemPropertyValue.fromJson;
+      _$KodiSystemPropertyValueImpl.fromJson;
 
   @override
   @JsonKey(name: 'canhibernate')
@@ -231,8 +242,11 @@ abstract class _KodiSystemPropertyValue implements KodiSystemPropertyValue {
   @override
   @JsonKey(name: 'cansuspend')
   bool? get canSuspend;
+
+  /// Create a copy of KodiSystemPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSystemPropertyValueCopyWith<_$_KodiSystemPropertyValue>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSystemPropertyValueImplCopyWith<_$KodiSystemPropertyValueImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

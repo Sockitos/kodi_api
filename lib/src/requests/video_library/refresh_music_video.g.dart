@@ -6,15 +6,16 @@ part of 'refresh_music_video.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RefreshMusicVideo _$$_RefreshMusicVideoFromJson(Map<String, dynamic> json) =>
-    _$_RefreshMusicVideo(
-      json['musicvideoid'] as int,
+_$RefreshMusicVideoImpl _$$RefreshMusicVideoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RefreshMusicVideoImpl(
+      (json['musicvideoid'] as num).toInt(),
       ignoreNFO: json['ignorenfo'] as bool? ?? false,
       title: json['title'] as String?,
     );
 
-Map<String, dynamic> _$$_RefreshMusicVideoToJson(
-    _$_RefreshMusicVideo instance) {
+Map<String, dynamic> _$$RefreshMusicVideoImplToJson(
+    _$RefreshMusicVideoImpl instance) {
   final val = <String, dynamic>{
     'musicvideoid': instance.id,
     'ignorenfo': instance.ignoreNFO,

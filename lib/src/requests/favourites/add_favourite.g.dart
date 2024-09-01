@@ -6,8 +6,8 @@ part of 'add_favourite.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AddFavourite _$$_AddFavouriteFromJson(Map<String, dynamic> json) =>
-    _$_AddFavourite(
+_$AddFavouriteImpl _$$AddFavouriteImplFromJson(Map<String, dynamic> json) =>
+    _$AddFavouriteImpl(
       json['title'] as String,
       $enumDecode(_$KodiFavouriteTypeEnumMap, json['type']),
       path: json['path'] as String?,
@@ -16,7 +16,7 @@ _$_AddFavourite _$$_AddFavouriteFromJson(Map<String, dynamic> json) =>
       thumbnail: json['thumbnail'] as String?,
     );
 
-Map<String, dynamic> _$$_AddFavouriteToJson(_$_AddFavourite instance) {
+Map<String, dynamic> _$$AddFavouriteImplToJson(_$AddFavouriteImpl instance) {
   final val = <String, dynamic>{
     'title': instance.title,
     'type': _$KodiFavouriteTypeEnumMap[instance.type]!,

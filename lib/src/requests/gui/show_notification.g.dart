@@ -6,16 +6,18 @@ part of 'show_notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ShowNotification _$$_ShowNotificationFromJson(Map<String, dynamic> json) =>
-    _$_ShowNotification(
+_$ShowNotificationImpl _$$ShowNotificationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ShowNotificationImpl(
       json['title'] as String,
       json['message'] as String,
       image: _$JsonConverterFromJson<String, ShowNotificationImage>(
           json['image'], const ShowNotificationImageConverter().fromJson),
-      displayTime: json['displaytime'] as int? ?? 5000,
+      displayTime: (json['displaytime'] as num?)?.toInt() ?? 5000,
     );
 
-Map<String, dynamic> _$$_ShowNotificationToJson(_$_ShowNotification instance) {
+Map<String, dynamic> _$$ShowNotificationImplToJson(
+    _$ShowNotificationImpl instance) {
   final val = <String, dynamic>{
     'title': instance.title,
     'message': instance.message,
@@ -47,29 +49,29 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_ShowNotificationImageString _$$_ShowNotificationImageStringFromJson(
+_$ShowNotificationImageStringImpl _$$ShowNotificationImageStringImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ShowNotificationImageString(
+    _$ShowNotificationImageStringImpl(
       json['image'] as String,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_ShowNotificationImageStringToJson(
-        _$_ShowNotificationImageString instance) =>
+Map<String, dynamic> _$$ShowNotificationImageStringImplToJson(
+        _$ShowNotificationImageStringImpl instance) =>
     <String, dynamic>{
       'image': instance.image,
       'runtimeType': instance.$type,
     };
 
-_$_ShowNotificationImageEnumerator _$$_ShowNotificationImageEnumeratorFromJson(
-        Map<String, dynamic> json) =>
-    _$_ShowNotificationImageEnumerator(
-      $enumDecode(_$KodiGUINotificationImageTypeEnumMap, json['image']),
-      $type: json['runtimeType'] as String?,
-    );
+_$ShowNotificationImageEnumeratorImpl
+    _$$ShowNotificationImageEnumeratorImplFromJson(Map<String, dynamic> json) =>
+        _$ShowNotificationImageEnumeratorImpl(
+          $enumDecode(_$KodiGUINotificationImageTypeEnumMap, json['image']),
+          $type: json['runtimeType'] as String?,
+        );
 
-Map<String, dynamic> _$$_ShowNotificationImageEnumeratorToJson(
-        _$_ShowNotificationImageEnumerator instance) =>
+Map<String, dynamic> _$$ShowNotificationImageEnumeratorImplToJson(
+        _$ShowNotificationImageEnumeratorImpl instance) =>
     <String, dynamic>{
       'image': _$KodiGUINotificationImageTypeEnumMap[instance.image]!,
       'runtimeType': instance.$type,

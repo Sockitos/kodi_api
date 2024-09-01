@@ -6,14 +6,14 @@ part of 'set_stereoscopic_mode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetStereoscopicMode _$$_SetStereoscopicModeFromJson(
+_$SetStereoscopicModeImpl _$$SetStereoscopicModeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetStereoscopicMode(
+    _$SetStereoscopicModeImpl(
       $enumDecode(_$KodiGUIStereoscopicSetModeEnumMap, json['mode']),
     );
 
-Map<String, dynamic> _$$_SetStereoscopicModeToJson(
-        _$_SetStereoscopicMode instance) =>
+Map<String, dynamic> _$$SetStereoscopicModeImplToJson(
+        _$SetStereoscopicModeImpl instance) =>
     <String, dynamic>{
       'mode': _$KodiGUIStereoscopicSetModeEnumMap[instance.mode]!,
     };

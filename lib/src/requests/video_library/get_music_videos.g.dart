@@ -6,8 +6,8 @@ part of 'get_music_videos.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetMusicVideos _$$_GetMusicVideosFromJson(Map<String, dynamic> json) =>
-    _$_GetMusicVideos(
+_$GetMusicVideosImpl _$$GetMusicVideosImplFromJson(Map<String, dynamic> json) =>
+    _$GetMusicVideosImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsMusicVideoEnumMap, e))
           .toSet(),
@@ -23,7 +23,8 @@ _$_GetMusicVideos _$$_GetMusicVideosFromJson(Map<String, dynamic> json) =>
               json['filter'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetMusicVideosToJson(_$_GetMusicVideos instance) {
+Map<String, dynamic> _$$GetMusicVideosImplToJson(
+    _$GetMusicVideosImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -69,9 +70,9 @@ const _$KodiVideoFieldsMusicVideoEnumMap = {
   KodiVideoFieldsMusicVideo.premiered: 'premiered',
 };
 
-_$_GetMusicVideosResponse _$$_GetMusicVideosResponseFromJson(
+_$GetMusicVideosResponseImpl _$$GetMusicVideosResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetMusicVideosResponse(
+    _$GetMusicVideosResponseImpl(
       musicVideos: (json['musicvideos'] as List<dynamic>)
           .map((e) =>
               KodiVideoDetailsMusicVideo.fromJson(e as Map<String, dynamic>))
@@ -80,128 +81,128 @@ _$_GetMusicVideosResponse _$$_GetMusicVideosResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetMusicVideosResponseToJson(
-        _$_GetMusicVideosResponse instance) =>
+Map<String, dynamic> _$$GetMusicVideosResponseImplToJson(
+        _$GetMusicVideosResponseImpl instance) =>
     <String, dynamic>{
       'musicvideos': instance.musicVideos.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterArtist
-    _$$_KodiVideoLibraryGetMusicVideosFilterArtistFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterArtistImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterArtistImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterArtist(
+        _$KodiVideoLibraryGetMusicVideosFilterArtistImpl(
           artist: json['artist'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterArtistToJson(
-        _$_KodiVideoLibraryGetMusicVideosFilterArtist instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterArtistImplToJson(
+        _$KodiVideoLibraryGetMusicVideosFilterArtistImpl instance) =>
     <String, dynamic>{
       'artist': instance.artist,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterGenreId
-    _$$_KodiVideoLibraryGetMusicVideosFilterGenreIdFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterGenreIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterGenreId(
-          genreId: json['genreid'] as int,
+        _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl(
+          genreId: (json['genreid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterGenreIdToJson(
-        _$_KodiVideoLibraryGetMusicVideosFilterGenreId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterGenreIdImplToJson(
+        _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl instance) =>
     <String, dynamic>{
       'genreid': instance.genreId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterGenre
-    _$$_KodiVideoLibraryGetMusicVideosFilterGenreFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterGenreImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterGenreImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterGenre(
+        _$KodiVideoLibraryGetMusicVideosFilterGenreImpl(
           genre: json['genre'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterGenreToJson(
-        _$_KodiVideoLibraryGetMusicVideosFilterGenre instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterGenreImplToJson(
+        _$KodiVideoLibraryGetMusicVideosFilterGenreImpl instance) =>
     <String, dynamic>{
       'genre': instance.genre,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterYear
-    _$$_KodiVideoLibraryGetMusicVideosFilterYearFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterYearImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterYearImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterYear(
-          year: json['year'] as int,
+        _$KodiVideoLibraryGetMusicVideosFilterYearImpl(
+          year: (json['year'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterYearToJson(
-        _$_KodiVideoLibraryGetMusicVideosFilterYear instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterYearImplToJson(
+        _$KodiVideoLibraryGetMusicVideosFilterYearImpl instance) =>
     <String, dynamic>{
       'year': instance.year,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterDirector
-    _$$_KodiVideoLibraryGetMusicVideosFilterDirectorFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterDirectorImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterDirectorImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterDirector(
+        _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl(
           director: json['director'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterDirectorToJson(
-        _$_KodiVideoLibraryGetMusicVideosFilterDirector instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterDirectorImplToJson(
+        _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl instance) =>
     <String, dynamic>{
       'director': instance.director,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterStudio
-    _$$_KodiVideoLibraryGetMusicVideosFilterStudioFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterStudioImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterStudioImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterStudio(
+        _$KodiVideoLibraryGetMusicVideosFilterStudioImpl(
           studio: json['studio'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterStudioToJson(
-        _$_KodiVideoLibraryGetMusicVideosFilterStudio instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterStudioImplToJson(
+        _$KodiVideoLibraryGetMusicVideosFilterStudioImpl instance) =>
     <String, dynamic>{
       'studio': instance.studio,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterTag
-    _$$_KodiVideoLibraryGetMusicVideosFilterTagFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterTagImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterTagImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterTag(
+        _$KodiVideoLibraryGetMusicVideosFilterTagImpl(
           tag: json['tag'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterTagToJson(
-        _$_KodiVideoLibraryGetMusicVideosFilterTag instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterTagImplToJson(
+        _$KodiVideoLibraryGetMusicVideosFilterTagImpl instance) =>
     <String, dynamic>{
       'tag': instance.tag,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetMusicVideosFilterFilter
-    _$$_KodiVideoLibraryGetMusicVideosFilterFilterFromJson(
+_$KodiVideoLibraryGetMusicVideosFilterFilterImpl
+    _$$KodiVideoLibraryGetMusicVideosFilterFilterImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetMusicVideosFilterFilter(
+        _$KodiVideoLibraryGetMusicVideosFilterFilterImpl(
           const KodiListFilterMusicVideosConverter().fromJson(json['filter']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetMusicVideosFilterFilterToJson(
-    _$_KodiVideoLibraryGetMusicVideosFilterFilter instance) {
+Map<String, dynamic> _$$KodiVideoLibraryGetMusicVideosFilterFilterImplToJson(
+    _$KodiVideoLibraryGetMusicVideosFilterFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

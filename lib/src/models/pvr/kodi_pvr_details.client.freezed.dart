@@ -12,7 +12,7 @@ part of 'kodi_pvr_details.client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsClient _$KodiPVRDetailsClientFromJson(Map<String, dynamic> json) {
   return _KodiPVRDetailsClient.fromJson(json);
@@ -40,8 +40,12 @@ mixin _$KodiPVRDetailsClient {
   bool get supportsTv => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsClient to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsClient
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsClientCopyWith<KodiPVRDetailsClient> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -76,6 +80,8 @@ class _$KodiPVRDetailsClientCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsClient
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,11 +142,11 @@ class _$KodiPVRDetailsClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsClientCopyWith<$Res>
+abstract class _$$KodiPVRDetailsClientImplCopyWith<$Res>
     implements $KodiPVRDetailsClientCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsClientCopyWith(_$_KodiPVRDetailsClient value,
-          $Res Function(_$_KodiPVRDetailsClient) then) =
-      __$$_KodiPVRDetailsClientCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsClientImplCopyWith(_$KodiPVRDetailsClientImpl value,
+          $Res Function(_$KodiPVRDetailsClientImpl) then) =
+      __$$KodiPVRDetailsClientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -157,13 +163,15 @@ abstract class _$$_KodiPVRDetailsClientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsClientCopyWithImpl<$Res>
-    extends _$KodiPVRDetailsClientCopyWithImpl<$Res, _$_KodiPVRDetailsClient>
-    implements _$$_KodiPVRDetailsClientCopyWith<$Res> {
-  __$$_KodiPVRDetailsClientCopyWithImpl(_$_KodiPVRDetailsClient _value,
-      $Res Function(_$_KodiPVRDetailsClient) _then)
+class __$$KodiPVRDetailsClientImplCopyWithImpl<$Res>
+    extends _$KodiPVRDetailsClientCopyWithImpl<$Res, _$KodiPVRDetailsClientImpl>
+    implements _$$KodiPVRDetailsClientImplCopyWith<$Res> {
+  __$$KodiPVRDetailsClientImplCopyWithImpl(_$KodiPVRDetailsClientImpl _value,
+      $Res Function(_$KodiPVRDetailsClientImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsClient
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -178,7 +186,7 @@ class __$$_KodiPVRDetailsClientCopyWithImpl<$Res>
     Object? supportsTv = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsClient(
+    return _then(_$KodiPVRDetailsClientImpl(
       addonId: null == addonId
           ? _value.addonId
           : addonId // ignore: cast_nullable_to_non_nullable
@@ -225,8 +233,8 @@ class __$$_KodiPVRDetailsClientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRDetailsClient implements _KodiPVRDetailsClient {
-  const _$_KodiPVRDetailsClient(
+class _$KodiPVRDetailsClientImpl implements _KodiPVRDetailsClient {
+  const _$KodiPVRDetailsClientImpl(
       {@JsonKey(name: 'addonid') required this.addonId,
       @JsonKey(name: 'clientid') required this.clientId,
       @JsonKey(name: 'supportschannelgroups')
@@ -239,8 +247,8 @@ class _$_KodiPVRDetailsClient implements _KodiPVRDetailsClient {
       @JsonKey(name: 'supportstv') required this.supportsTv,
       required this.label});
 
-  factory _$_KodiPVRDetailsClient.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsClientFromJson(json);
+  factory _$KodiPVRDetailsClientImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRDetailsClientImplFromJson(json);
 
   @override
   @JsonKey(name: 'addonid')
@@ -278,10 +286,10 @@ class _$_KodiPVRDetailsClient implements _KodiPVRDetailsClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsClient &&
+            other is _$KodiPVRDetailsClientImpl &&
             (identical(other.addonId, addonId) || other.addonId == addonId) &&
             (identical(other.clientId, clientId) ||
                 other.clientId == clientId) &&
@@ -302,7 +310,7 @@ class _$_KodiPVRDetailsClient implements _KodiPVRDetailsClient {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -317,16 +325,19 @@ class _$_KodiPVRDetailsClient implements _KodiPVRDetailsClient {
       supportsTv,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsClient
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsClientCopyWith<_$_KodiPVRDetailsClient> get copyWith =>
-      __$$_KodiPVRDetailsClientCopyWithImpl<_$_KodiPVRDetailsClient>(
-          this, _$identity);
+  _$$KodiPVRDetailsClientImplCopyWith<_$KodiPVRDetailsClientImpl>
+      get copyWith =>
+          __$$KodiPVRDetailsClientImplCopyWithImpl<_$KodiPVRDetailsClientImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsClientToJson(
+    return _$$KodiPVRDetailsClientImplToJson(
       this,
     );
   }
@@ -346,10 +357,10 @@ abstract class _KodiPVRDetailsClient implements KodiPVRDetailsClient {
       required final bool supportsRecordings,
       @JsonKey(name: 'supportstimers') required final bool supportsTimers,
       @JsonKey(name: 'supportstv') required final bool supportsTv,
-      required final String label}) = _$_KodiPVRDetailsClient;
+      required final String label}) = _$KodiPVRDetailsClientImpl;
 
   factory _KodiPVRDetailsClient.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRDetailsClient.fromJson;
+      _$KodiPVRDetailsClientImpl.fromJson;
 
   @override
   @JsonKey(name: 'addonid')
@@ -380,8 +391,11 @@ abstract class _KodiPVRDetailsClient implements KodiPVRDetailsClient {
   bool get supportsTv;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsClient
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsClientCopyWith<_$_KodiPVRDetailsClient> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsClientImplCopyWith<_$KodiPVRDetailsClientImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

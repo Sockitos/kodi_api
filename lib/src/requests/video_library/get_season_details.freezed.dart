@@ -12,7 +12,7 @@ part of 'get_season_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSeasonDetails _$GetSeasonDetailsFromJson(Map<String, dynamic> json) {
   return _GetSeasonDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetSeasonDetails {
   Set<KodiVideoFieldsSeason>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetSeasonDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSeasonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSeasonDetailsCopyWith<GetSeasonDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$GetSeasonDetailsCopyWithImpl<$Res, $Val extends GetSeasonDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSeasonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,11 +78,11 @@ class _$GetSeasonDetailsCopyWithImpl<$Res, $Val extends GetSeasonDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetSeasonDetailsCopyWith<$Res>
+abstract class _$$GetSeasonDetailsImplCopyWith<$Res>
     implements $GetSeasonDetailsCopyWith<$Res> {
-  factory _$$_GetSeasonDetailsCopyWith(
-          _$_GetSeasonDetails value, $Res Function(_$_GetSeasonDetails) then) =
-      __$$_GetSeasonDetailsCopyWithImpl<$Res>;
+  factory _$$GetSeasonDetailsImplCopyWith(_$GetSeasonDetailsImpl value,
+          $Res Function(_$GetSeasonDetailsImpl) then) =
+      __$$GetSeasonDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,20 +91,22 @@ abstract class _$$_GetSeasonDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSeasonDetailsCopyWithImpl<$Res>
-    extends _$GetSeasonDetailsCopyWithImpl<$Res, _$_GetSeasonDetails>
-    implements _$$_GetSeasonDetailsCopyWith<$Res> {
-  __$$_GetSeasonDetailsCopyWithImpl(
-      _$_GetSeasonDetails _value, $Res Function(_$_GetSeasonDetails) _then)
+class __$$GetSeasonDetailsImplCopyWithImpl<$Res>
+    extends _$GetSeasonDetailsCopyWithImpl<$Res, _$GetSeasonDetailsImpl>
+    implements _$$GetSeasonDetailsImplCopyWith<$Res> {
+  __$$GetSeasonDetailsImplCopyWithImpl(_$GetSeasonDetailsImpl _value,
+      $Res Function(_$GetSeasonDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSeasonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetSeasonDetails(
+    return _then(_$GetSeasonDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -113,14 +121,14 @@ class __$$_GetSeasonDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSeasonDetails extends _GetSeasonDetails {
-  const _$_GetSeasonDetails(@JsonKey(name: 'seasonid') this.id,
+class _$GetSeasonDetailsImpl extends _GetSeasonDetails {
+  const _$GetSeasonDetailsImpl(@JsonKey(name: 'seasonid') this.id,
       {final Set<KodiVideoFieldsSeason>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetSeasonDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSeasonDetailsFromJson(json);
+  factory _$GetSeasonDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSeasonDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'seasonid')
@@ -141,29 +149,32 @@ class _$_GetSeasonDetails extends _GetSeasonDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSeasonDetails &&
+            other is _$GetSeasonDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSeasonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSeasonDetailsCopyWith<_$_GetSeasonDetails> get copyWith =>
-      __$$_GetSeasonDetailsCopyWithImpl<_$_GetSeasonDetails>(this, _$identity);
+  _$$GetSeasonDetailsImplCopyWith<_$GetSeasonDetailsImpl> get copyWith =>
+      __$$GetSeasonDetailsImplCopyWithImpl<_$GetSeasonDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSeasonDetailsToJson(
+    return _$$GetSeasonDetailsImplToJson(
       this,
     );
   }
@@ -171,19 +182,22 @@ class _$_GetSeasonDetails extends _GetSeasonDetails {
 
 abstract class _GetSeasonDetails extends GetSeasonDetails {
   const factory _GetSeasonDetails(@JsonKey(name: 'seasonid') final int id,
-      {final Set<KodiVideoFieldsSeason>? properties}) = _$_GetSeasonDetails;
+      {final Set<KodiVideoFieldsSeason>? properties}) = _$GetSeasonDetailsImpl;
   const _GetSeasonDetails._() : super._();
 
   factory _GetSeasonDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetSeasonDetails.fromJson;
+      _$GetSeasonDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'seasonid')
   int get id;
   @override
   Set<KodiVideoFieldsSeason>? get properties;
+
+  /// Create a copy of GetSeasonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSeasonDetailsCopyWith<_$_GetSeasonDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSeasonDetailsImplCopyWith<_$GetSeasonDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

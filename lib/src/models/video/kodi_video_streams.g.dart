@@ -6,8 +6,9 @@ part of 'kodi_video_streams.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoStreams _$$_KodiVideoStreamsFromJson(Map<String, dynamic> json) =>
-    _$_KodiVideoStreams(
+_$KodiVideoStreamsImpl _$$KodiVideoStreamsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiVideoStreamsImpl(
       audio: (json['audio'] as List<dynamic>?)
           ?.map(
               (e) => KodiVideoStreamsAudio.fromJson(e as Map<String, dynamic>))
@@ -22,7 +23,8 @@ _$_KodiVideoStreams _$$_KodiVideoStreamsFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_KodiVideoStreamsToJson(_$_KodiVideoStreams instance) {
+Map<String, dynamic> _$$KodiVideoStreamsImplToJson(
+    _$KodiVideoStreamsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -37,16 +39,16 @@ Map<String, dynamic> _$$_KodiVideoStreamsToJson(_$_KodiVideoStreams instance) {
   return val;
 }
 
-_$_KodiVideoStreamsAudio _$$_KodiVideoStreamsAudioFromJson(
+_$KodiVideoStreamsAudioImpl _$$KodiVideoStreamsAudioImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiVideoStreamsAudio(
-      channels: json['channels'] as int?,
+    _$KodiVideoStreamsAudioImpl(
+      channels: (json['channels'] as num?)?.toInt(),
       codec: json['codec'] as String?,
       language: json['language'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiVideoStreamsAudioToJson(
-    _$_KodiVideoStreamsAudio instance) {
+Map<String, dynamic> _$$KodiVideoStreamsAudioImplToJson(
+    _$KodiVideoStreamsAudioImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -61,14 +63,14 @@ Map<String, dynamic> _$$_KodiVideoStreamsAudioToJson(
   return val;
 }
 
-_$_KodiVideoStreamsSubtitle _$$_KodiVideoStreamsSubtitleFromJson(
+_$KodiVideoStreamsSubtitleImpl _$$KodiVideoStreamsSubtitleImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiVideoStreamsSubtitle(
+    _$KodiVideoStreamsSubtitleImpl(
       language: json['language'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiVideoStreamsSubtitleToJson(
-    _$_KodiVideoStreamsSubtitle instance) {
+Map<String, dynamic> _$$KodiVideoStreamsSubtitleImplToJson(
+    _$KodiVideoStreamsSubtitleImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -81,18 +83,18 @@ Map<String, dynamic> _$$_KodiVideoStreamsSubtitleToJson(
   return val;
 }
 
-_$_KodiVideoStreamsVideo _$$_KodiVideoStreamsVideoFromJson(
+_$KodiVideoStreamsVideoImpl _$$KodiVideoStreamsVideoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiVideoStreamsVideo(
+    _$KodiVideoStreamsVideoImpl(
       aspect: (json['aspect'] as num?)?.toDouble(),
       codec: json['codec'] as String?,
-      duration: json['duration'] as int?,
-      height: json['height'] as int?,
-      width: json['width'] as int?,
+      duration: (json['duration'] as num?)?.toInt(),
+      height: (json['height'] as num?)?.toInt(),
+      width: (json['width'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$_KodiVideoStreamsVideoToJson(
-    _$_KodiVideoStreamsVideo instance) {
+Map<String, dynamic> _$$KodiVideoStreamsVideoImplToJson(
+    _$KodiVideoStreamsVideoImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

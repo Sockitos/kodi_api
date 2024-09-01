@@ -6,9 +6,10 @@ part of 'eject_optical_drive.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EjectOpticalDrive _$$_EjectOpticalDriveFromJson(Map<String, dynamic> json) =>
-    _$_EjectOpticalDrive();
+_$EjectOpticalDriveImpl _$$EjectOpticalDriveImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EjectOpticalDriveImpl();
 
-Map<String, dynamic> _$$_EjectOpticalDriveToJson(
-        _$_EjectOpticalDrive instance) =>
+Map<String, dynamic> _$$EjectOpticalDriveImplToJson(
+        _$EjectOpticalDriveImpl instance) =>
     <String, dynamic>{};

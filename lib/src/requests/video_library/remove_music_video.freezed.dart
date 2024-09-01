@@ -12,7 +12,7 @@ part of 'remove_music_video.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RemoveMusicVideo _$RemoveMusicVideoFromJson(Map<String, dynamic> json) {
   return _RemoveMusicVideo.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$RemoveMusicVideo {
   @JsonKey(name: 'musicvideoid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this RemoveMusicVideo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoveMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoveMusicVideoCopyWith<RemoveMusicVideo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$RemoveMusicVideoCopyWithImpl<$Res, $Val extends RemoveMusicVideo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoveMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,30 +69,32 @@ class _$RemoveMusicVideoCopyWithImpl<$Res, $Val extends RemoveMusicVideo>
 }
 
 /// @nodoc
-abstract class _$$_RemoveMusicVideoCopyWith<$Res>
+abstract class _$$RemoveMusicVideoImplCopyWith<$Res>
     implements $RemoveMusicVideoCopyWith<$Res> {
-  factory _$$_RemoveMusicVideoCopyWith(
-          _$_RemoveMusicVideo value, $Res Function(_$_RemoveMusicVideo) then) =
-      __$$_RemoveMusicVideoCopyWithImpl<$Res>;
+  factory _$$RemoveMusicVideoImplCopyWith(_$RemoveMusicVideoImpl value,
+          $Res Function(_$RemoveMusicVideoImpl) then) =
+      __$$RemoveMusicVideoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'musicvideoid') int id});
 }
 
 /// @nodoc
-class __$$_RemoveMusicVideoCopyWithImpl<$Res>
-    extends _$RemoveMusicVideoCopyWithImpl<$Res, _$_RemoveMusicVideo>
-    implements _$$_RemoveMusicVideoCopyWith<$Res> {
-  __$$_RemoveMusicVideoCopyWithImpl(
-      _$_RemoveMusicVideo _value, $Res Function(_$_RemoveMusicVideo) _then)
+class __$$RemoveMusicVideoImplCopyWithImpl<$Res>
+    extends _$RemoveMusicVideoCopyWithImpl<$Res, _$RemoveMusicVideoImpl>
+    implements _$$RemoveMusicVideoImplCopyWith<$Res> {
+  __$$RemoveMusicVideoImplCopyWithImpl(_$RemoveMusicVideoImpl _value,
+      $Res Function(_$RemoveMusicVideoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoveMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_RemoveMusicVideo(
+    return _then(_$RemoveMusicVideoImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -97,11 +105,12 @@ class __$$_RemoveMusicVideoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RemoveMusicVideo extends _RemoveMusicVideo {
-  const _$_RemoveMusicVideo(@JsonKey(name: 'musicvideoid') this.id) : super._();
+class _$RemoveMusicVideoImpl extends _RemoveMusicVideo {
+  const _$RemoveMusicVideoImpl(@JsonKey(name: 'musicvideoid') this.id)
+      : super._();
 
-  factory _$_RemoveMusicVideo.fromJson(Map<String, dynamic> json) =>
-      _$$_RemoveMusicVideoFromJson(json);
+  factory _$RemoveMusicVideoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RemoveMusicVideoImplFromJson(json);
 
   @override
   @JsonKey(name: 'musicvideoid')
@@ -113,26 +122,29 @@ class _$_RemoveMusicVideo extends _RemoveMusicVideo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RemoveMusicVideo &&
+            other is _$RemoveMusicVideoImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoveMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RemoveMusicVideoCopyWith<_$_RemoveMusicVideo> get copyWith =>
-      __$$_RemoveMusicVideoCopyWithImpl<_$_RemoveMusicVideo>(this, _$identity);
+  _$$RemoveMusicVideoImplCopyWith<_$RemoveMusicVideoImpl> get copyWith =>
+      __$$RemoveMusicVideoImplCopyWithImpl<_$RemoveMusicVideoImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RemoveMusicVideoToJson(
+    return _$$RemoveMusicVideoImplToJson(
       this,
     );
   }
@@ -140,17 +152,20 @@ class _$_RemoveMusicVideo extends _RemoveMusicVideo {
 
 abstract class _RemoveMusicVideo extends RemoveMusicVideo {
   const factory _RemoveMusicVideo(@JsonKey(name: 'musicvideoid') final int id) =
-      _$_RemoveMusicVideo;
+      _$RemoveMusicVideoImpl;
   const _RemoveMusicVideo._() : super._();
 
   factory _RemoveMusicVideo.fromJson(Map<String, dynamic> json) =
-      _$_RemoveMusicVideo.fromJson;
+      _$RemoveMusicVideoImpl.fromJson;
 
   @override
   @JsonKey(name: 'musicvideoid')
   int get id;
+
+  /// Create a copy of RemoveMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RemoveMusicVideoCopyWith<_$_RemoveMusicVideo> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RemoveMusicVideoImplCopyWith<_$RemoveMusicVideoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

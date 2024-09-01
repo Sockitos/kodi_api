@@ -12,7 +12,7 @@ part of 'kodi_pvr_details_recording.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsRecording _$KodiPVRDetailsRecordingFromJson(
     Map<String, dynamic> json) {
@@ -60,8 +60,12 @@ mixin _$KodiPVRDetailsRecording {
   String get title => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsRecording to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsRecordingCopyWith<KodiPVRDetailsRecording> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -115,6 +119,8 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -253,6 +259,8 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res> get art {
@@ -261,6 +269,8 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoResumeCopyWith<$Res> get resume {
@@ -271,11 +281,12 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsRecordingCopyWith<$Res>
+abstract class _$$KodiPVRDetailsRecordingImplCopyWith<$Res>
     implements $KodiPVRDetailsRecordingCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsRecordingCopyWith(_$_KodiPVRDetailsRecording value,
-          $Res Function(_$_KodiPVRDetailsRecording) then) =
-      __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsRecordingImplCopyWith(
+          _$KodiPVRDetailsRecordingImpl value,
+          $Res Function(_$KodiPVRDetailsRecordingImpl) then) =
+      __$$KodiPVRDetailsRecordingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -313,14 +324,17 @@ abstract class _$$_KodiPVRDetailsRecordingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
+class __$$KodiPVRDetailsRecordingImplCopyWithImpl<$Res>
     extends _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
-        _$_KodiPVRDetailsRecording>
-    implements _$$_KodiPVRDetailsRecordingCopyWith<$Res> {
-  __$$_KodiPVRDetailsRecordingCopyWithImpl(_$_KodiPVRDetailsRecording _value,
-      $Res Function(_$_KodiPVRDetailsRecording) _then)
+        _$KodiPVRDetailsRecordingImpl>
+    implements _$$KodiPVRDetailsRecordingImplCopyWith<$Res> {
+  __$$KodiPVRDetailsRecordingImplCopyWithImpl(
+      _$KodiPVRDetailsRecordingImpl _value,
+      $Res Function(_$KodiPVRDetailsRecordingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -351,7 +365,7 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
     Object? title = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsRecording(
+    return _then(_$KodiPVRDetailsRecordingImpl(
       art: null == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
@@ -463,8 +477,8 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
-  const _$_KodiPVRDetailsRecording(
+class _$KodiPVRDetailsRecordingImpl implements _KodiPVRDetailsRecording {
+  const _$KodiPVRDetailsRecordingImpl(
       {required this.art,
       required this.channel,
       @JsonKey(name: 'channeluid') required this.channelUid,
@@ -492,8 +506,8 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
       required this.title,
       required this.label});
 
-  factory _$_KodiPVRDetailsRecording.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsRecordingFromJson(json);
+  factory _$KodiPVRDetailsRecordingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRDetailsRecordingImplFromJson(json);
 
   @override
   final KodiMediaArtwork art;
@@ -566,10 +580,10 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsRecording &&
+            other is _$KodiPVRDetailsRecordingImpl &&
             (identical(other.art, art) || other.art == art) &&
             (identical(other.channel, channel) || other.channel == channel) &&
             (identical(other.channelUid, channelUid) ||
@@ -610,7 +624,7 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -642,17 +656,18 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsRecordingCopyWith<_$_KodiPVRDetailsRecording>
-      get copyWith =>
-          __$$_KodiPVRDetailsRecordingCopyWithImpl<_$_KodiPVRDetailsRecording>(
-              this, _$identity);
+  _$$KodiPVRDetailsRecordingImplCopyWith<_$KodiPVRDetailsRecordingImpl>
+      get copyWith => __$$KodiPVRDetailsRecordingImplCopyWithImpl<
+          _$KodiPVRDetailsRecordingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsRecordingToJson(
+    return _$$KodiPVRDetailsRecordingImplToJson(
       this,
     );
   }
@@ -685,10 +700,10 @@ abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
       @JsonKey(name: 'starttime') required final DateTime startTime,
       @JsonKey(name: 'streamurl') required final String streamUrl,
       required final String title,
-      required final String label}) = _$_KodiPVRDetailsRecording;
+      required final String label}) = _$KodiPVRDetailsRecordingImpl;
 
   factory _KodiPVRDetailsRecording.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRDetailsRecording.fromJson;
+      _$KodiPVRDetailsRecordingImpl.fromJson;
 
   @override
   KodiMediaArtwork get art;
@@ -754,8 +769,11 @@ abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
   String get title;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsRecordingCopyWith<_$_KodiPVRDetailsRecording>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsRecordingImplCopyWith<_$KodiPVRDetailsRecordingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

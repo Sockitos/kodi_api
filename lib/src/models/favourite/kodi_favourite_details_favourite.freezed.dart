@@ -12,7 +12,7 @@ part of 'kodi_favourite_details_favourite.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiFavouriteDetailsFavourite _$KodiFavouriteDetailsFavouriteFromJson(
     Map<String, dynamic> json) {
@@ -29,8 +29,12 @@ mixin _$KodiFavouriteDetailsFavourite {
   @JsonKey(name: 'windowparameter')
   String? get windowParameter => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiFavouriteDetailsFavourite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiFavouriteDetailsFavouriteCopyWith<KodiFavouriteDetailsFavourite>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$KodiFavouriteDetailsFavouriteCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,12 +109,12 @@ class _$KodiFavouriteDetailsFavouriteCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiFavouriteDetailsFavouriteCopyWith<$Res>
+abstract class _$$KodiFavouriteDetailsFavouriteImplCopyWith<$Res>
     implements $KodiFavouriteDetailsFavouriteCopyWith<$Res> {
-  factory _$$_KodiFavouriteDetailsFavouriteCopyWith(
-          _$_KodiFavouriteDetailsFavourite value,
-          $Res Function(_$_KodiFavouriteDetailsFavourite) then) =
-      __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<$Res>;
+  factory _$$KodiFavouriteDetailsFavouriteImplCopyWith(
+          _$KodiFavouriteDetailsFavouriteImpl value,
+          $Res Function(_$KodiFavouriteDetailsFavouriteImpl) then) =
+      __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,15 +127,17 @@ abstract class _$$_KodiFavouriteDetailsFavouriteCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<$Res>
+class __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl<$Res>
     extends _$KodiFavouriteDetailsFavouriteCopyWithImpl<$Res,
-        _$_KodiFavouriteDetailsFavourite>
-    implements _$$_KodiFavouriteDetailsFavouriteCopyWith<$Res> {
-  __$$_KodiFavouriteDetailsFavouriteCopyWithImpl(
-      _$_KodiFavouriteDetailsFavourite _value,
-      $Res Function(_$_KodiFavouriteDetailsFavourite) _then)
+        _$KodiFavouriteDetailsFavouriteImpl>
+    implements _$$KodiFavouriteDetailsFavouriteImplCopyWith<$Res> {
+  __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl(
+      _$KodiFavouriteDetailsFavouriteImpl _value,
+      $Res Function(_$KodiFavouriteDetailsFavouriteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,7 +148,7 @@ class __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<$Res>
     Object? window = freezed,
     Object? windowParameter = freezed,
   }) {
-    return _then(_$_KodiFavouriteDetailsFavourite(
+    return _then(_$KodiFavouriteDetailsFavouriteImpl(
       path: freezed == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -171,9 +179,9 @@ class __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiFavouriteDetailsFavourite
+class _$KodiFavouriteDetailsFavouriteImpl
     implements _KodiFavouriteDetailsFavourite {
-  const _$_KodiFavouriteDetailsFavourite(
+  const _$KodiFavouriteDetailsFavouriteImpl(
       {this.path,
       this.thumbnail,
       required this.title,
@@ -181,9 +189,9 @@ class _$_KodiFavouriteDetailsFavourite
       this.window,
       @JsonKey(name: 'windowparameter') this.windowParameter});
 
-  factory _$_KodiFavouriteDetailsFavourite.fromJson(
+  factory _$KodiFavouriteDetailsFavouriteImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiFavouriteDetailsFavouriteFromJson(json);
+      _$$KodiFavouriteDetailsFavouriteImplFromJson(json);
 
   @override
   final String? path;
@@ -205,10 +213,10 @@ class _$_KodiFavouriteDetailsFavourite
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiFavouriteDetailsFavourite &&
+            other is _$KodiFavouriteDetailsFavouriteImpl &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
@@ -219,21 +227,24 @@ class _$_KodiFavouriteDetailsFavourite
                 other.windowParameter == windowParameter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, path, thumbnail, title, type, window, windowParameter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiFavouriteDetailsFavouriteCopyWith<_$_KodiFavouriteDetailsFavourite>
-      get copyWith => __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<
-          _$_KodiFavouriteDetailsFavourite>(this, _$identity);
+  _$$KodiFavouriteDetailsFavouriteImplCopyWith<
+          _$KodiFavouriteDetailsFavouriteImpl>
+      get copyWith => __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl<
+          _$KodiFavouriteDetailsFavouriteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiFavouriteDetailsFavouriteToJson(
+    return _$$KodiFavouriteDetailsFavouriteImplToJson(
       this,
     );
   }
@@ -248,10 +259,10 @@ abstract class _KodiFavouriteDetailsFavourite
           required final KodiFavouriteType type,
           final String? window,
           @JsonKey(name: 'windowparameter') final String? windowParameter}) =
-      _$_KodiFavouriteDetailsFavourite;
+      _$KodiFavouriteDetailsFavouriteImpl;
 
   factory _KodiFavouriteDetailsFavourite.fromJson(Map<String, dynamic> json) =
-      _$_KodiFavouriteDetailsFavourite.fromJson;
+      _$KodiFavouriteDetailsFavouriteImpl.fromJson;
 
   @override
   String? get path;
@@ -266,8 +277,12 @@ abstract class _KodiFavouriteDetailsFavourite
   @override
   @JsonKey(name: 'windowparameter')
   String? get windowParameter;
+
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiFavouriteDetailsFavouriteCopyWith<_$_KodiFavouriteDetailsFavourite>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiFavouriteDetailsFavouriteImplCopyWith<
+          _$KodiFavouriteDetailsFavouriteImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'swap.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Swap _$SwapFromJson(Map<String, dynamic> json) {
   return _Swap.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$Swap {
   int get position1 => throw _privateConstructorUsedError;
   int get position2 => throw _privateConstructorUsedError;
 
+  /// Serializes this Swap to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Swap
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SwapCopyWith<Swap> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -49,6 +53,8 @@ class _$SwapCopyWithImpl<$Res, $Val extends Swap>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Swap
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,9 +80,10 @@ class _$SwapCopyWithImpl<$Res, $Val extends Swap>
 }
 
 /// @nodoc
-abstract class _$$_SwapCopyWith<$Res> implements $SwapCopyWith<$Res> {
-  factory _$$_SwapCopyWith(_$_Swap value, $Res Function(_$_Swap) then) =
-      __$$_SwapCopyWithImpl<$Res>;
+abstract class _$$SwapImplCopyWith<$Res> implements $SwapCopyWith<$Res> {
+  factory _$$SwapImplCopyWith(
+          _$SwapImpl value, $Res Function(_$SwapImpl) then) =
+      __$$SwapImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -84,11 +91,14 @@ abstract class _$$_SwapCopyWith<$Res> implements $SwapCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SwapCopyWithImpl<$Res> extends _$SwapCopyWithImpl<$Res, _$_Swap>
-    implements _$$_SwapCopyWith<$Res> {
-  __$$_SwapCopyWithImpl(_$_Swap _value, $Res Function(_$_Swap) _then)
+class __$$SwapImplCopyWithImpl<$Res>
+    extends _$SwapCopyWithImpl<$Res, _$SwapImpl>
+    implements _$$SwapImplCopyWith<$Res> {
+  __$$SwapImplCopyWithImpl(_$SwapImpl _value, $Res Function(_$SwapImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Swap
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -96,7 +106,7 @@ class __$$_SwapCopyWithImpl<$Res> extends _$SwapCopyWithImpl<$Res, _$_Swap>
     Object? position1 = null,
     Object? position2 = null,
   }) {
-    return _then(_$_Swap(
+    return _then(_$SwapImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -115,12 +125,13 @@ class __$$_SwapCopyWithImpl<$Res> extends _$SwapCopyWithImpl<$Res, _$_Swap>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Swap extends _Swap {
-  const _$_Swap(
+class _$SwapImpl extends _Swap {
+  const _$SwapImpl(
       @JsonKey(name: 'playlistid') this.id, this.position1, this.position2)
       : super._();
 
-  factory _$_Swap.fromJson(Map<String, dynamic> json) => _$$_SwapFromJson(json);
+  factory _$SwapImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SwapImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistid')
@@ -136,10 +147,10 @@ class _$_Swap extends _Swap {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Swap &&
+            other is _$SwapImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.position1, position1) ||
                 other.position1 == position1) &&
@@ -147,19 +158,21 @@ class _$_Swap extends _Swap {
                 other.position2 == position2));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, position1, position2);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Swap
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SwapCopyWith<_$_Swap> get copyWith =>
-      __$$_SwapCopyWithImpl<_$_Swap>(this, _$identity);
+  _$$SwapImplCopyWith<_$SwapImpl> get copyWith =>
+      __$$SwapImplCopyWithImpl<_$SwapImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SwapToJson(
+    return _$$SwapImplToJson(
       this,
     );
   }
@@ -167,10 +180,10 @@ class _$_Swap extends _Swap {
 
 abstract class _Swap extends Swap {
   const factory _Swap(@JsonKey(name: 'playlistid') final int id,
-      final int position1, final int position2) = _$_Swap;
+      final int position1, final int position2) = _$SwapImpl;
   const _Swap._() : super._();
 
-  factory _Swap.fromJson(Map<String, dynamic> json) = _$_Swap.fromJson;
+  factory _Swap.fromJson(Map<String, dynamic> json) = _$SwapImpl.fromJson;
 
   @override
   @JsonKey(name: 'playlistid')
@@ -179,7 +192,11 @@ abstract class _Swap extends Swap {
   int get position1;
   @override
   int get position2;
+
+  /// Create a copy of Swap
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SwapCopyWith<_$_Swap> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SwapImplCopyWith<_$SwapImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

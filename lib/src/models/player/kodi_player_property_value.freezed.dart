@@ -12,7 +12,7 @@ part of 'kodi_player_property_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerPropertyValue _$KodiPlayerPropertyValueFromJson(
     Map<String, dynamic> json) {
@@ -68,8 +68,12 @@ mixin _$KodiPlayerPropertyValue {
   List<KodiPlayerVideoStream>? get videoStreams =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerPropertyValueCopyWith<KodiPlayerPropertyValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -129,6 +133,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -267,6 +273,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerAudioStreamCopyWith<$Res>? get currentAudioStream {
@@ -280,6 +288,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerSubtitleCopyWith<$Res>? get currentSubtitle {
@@ -292,6 +302,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerVideoStreamCopyWith<$Res>? get currentVideoStream {
@@ -305,6 +317,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res>? get time {
@@ -317,6 +331,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res>? get totalTime {
@@ -331,11 +347,12 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPropertyValueCopyWith<$Res>
+abstract class _$$KodiPlayerPropertyValueImplCopyWith<$Res>
     implements $KodiPlayerPropertyValueCopyWith<$Res> {
-  factory _$$_KodiPlayerPropertyValueCopyWith(_$_KodiPlayerPropertyValue value,
-          $Res Function(_$_KodiPlayerPropertyValue) then) =
-      __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>;
+  factory _$$KodiPlayerPropertyValueImplCopyWith(
+          _$KodiPlayerPropertyValueImpl value,
+          $Res Function(_$KodiPlayerPropertyValueImpl) then) =
+      __$$KodiPlayerPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -382,14 +399,17 @@ abstract class _$$_KodiPlayerPropertyValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>
+class __$$KodiPlayerPropertyValueImplCopyWithImpl<$Res>
     extends _$KodiPlayerPropertyValueCopyWithImpl<$Res,
-        _$_KodiPlayerPropertyValue>
-    implements _$$_KodiPlayerPropertyValueCopyWith<$Res> {
-  __$$_KodiPlayerPropertyValueCopyWithImpl(_$_KodiPlayerPropertyValue _value,
-      $Res Function(_$_KodiPlayerPropertyValue) _then)
+        _$KodiPlayerPropertyValueImpl>
+    implements _$$KodiPlayerPropertyValueImplCopyWith<$Res> {
+  __$$KodiPlayerPropertyValueImplCopyWithImpl(
+      _$KodiPlayerPropertyValueImpl _value,
+      $Res Function(_$KodiPlayerPropertyValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -420,7 +440,7 @@ class __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>
     Object? type = freezed,
     Object? videoStreams = freezed,
   }) {
-    return _then(_$_KodiPlayerPropertyValue(
+    return _then(_$KodiPlayerPropertyValueImpl(
       audioStreams: freezed == audioStreams
           ? _value._audioStreams
           : audioStreams // ignore: cast_nullable_to_non_nullable
@@ -531,8 +551,8 @@ class __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
-  const _$_KodiPlayerPropertyValue(
+class _$KodiPlayerPropertyValueImpl implements _KodiPlayerPropertyValue {
+  const _$KodiPlayerPropertyValueImpl(
       {@JsonKey(name: 'audiostreams')
       final List<KodiPlayerAudioStream>? audioStreams,
       @JsonKey(name: 'cachepercentage') this.cachePercentage,
@@ -565,8 +585,8 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
         _subtitles = subtitles,
         _videoStreams = videoStreams;
 
-  factory _$_KodiPlayerPropertyValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerPropertyValueFromJson(json);
+  factory _$KodiPlayerPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerPropertyValueImplFromJson(json);
 
   final List<KodiPlayerAudioStream>? _audioStreams;
   @override
@@ -666,10 +686,10 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPropertyValue &&
+            other is _$KodiPlayerPropertyValueImpl &&
             const DeepCollectionEquality()
                 .equals(other._audioStreams, _audioStreams) &&
             (identical(other.cachePercentage, cachePercentage) ||
@@ -716,7 +736,7 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
                 .equals(other._videoStreams, _videoStreams));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -748,17 +768,18 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
         const DeepCollectionEquality().hash(_videoStreams)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPropertyValueCopyWith<_$_KodiPlayerPropertyValue>
-      get copyWith =>
-          __$$_KodiPlayerPropertyValueCopyWithImpl<_$_KodiPlayerPropertyValue>(
-              this, _$identity);
+  _$$KodiPlayerPropertyValueImplCopyWith<_$KodiPlayerPropertyValueImpl>
+      get copyWith => __$$KodiPlayerPropertyValueImplCopyWithImpl<
+          _$KodiPlayerPropertyValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPropertyValueToJson(
+    return _$$KodiPlayerPropertyValueImplToJson(
       this,
     );
   }
@@ -797,10 +818,10 @@ abstract class _KodiPlayerPropertyValue implements KodiPlayerPropertyValue {
           final KodiPlayerType? type,
           @JsonKey(name: 'videostreams')
           final List<KodiPlayerVideoStream>? videoStreams}) =
-      _$_KodiPlayerPropertyValue;
+      _$KodiPlayerPropertyValueImpl;
 
   factory _KodiPlayerPropertyValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerPropertyValue.fromJson;
+      _$KodiPlayerPropertyValueImpl.fromJson;
 
   @override
   @JsonKey(name: 'audiostreams')
@@ -870,8 +891,11 @@ abstract class _KodiPlayerPropertyValue implements KodiPlayerPropertyValue {
   @override
   @JsonKey(name: 'videostreams')
   List<KodiPlayerVideoStream>? get videoStreams;
+
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPropertyValueCopyWith<_$_KodiPlayerPropertyValue>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPropertyValueImplCopyWith<_$KodiPlayerPropertyValueImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

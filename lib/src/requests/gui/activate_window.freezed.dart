@@ -12,7 +12,7 @@ part of 'activate_window.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ActivateWindow _$ActivateWindowFromJson(Map<String, dynamic> json) {
   return _ActivateWindow.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$ActivateWindow {
   KodiGUIWindow get window => throw _privateConstructorUsedError;
   List<String> get parameters => throw _privateConstructorUsedError;
 
+  /// Serializes this ActivateWindow to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ActivateWindow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ActivateWindowCopyWith<ActivateWindow> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$ActivateWindowCopyWithImpl<$Res, $Val extends ActivateWindow>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ActivateWindow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,31 +74,33 @@ class _$ActivateWindowCopyWithImpl<$Res, $Val extends ActivateWindow>
 }
 
 /// @nodoc
-abstract class _$$_ActivateWindowCopyWith<$Res>
+abstract class _$$ActivateWindowImplCopyWith<$Res>
     implements $ActivateWindowCopyWith<$Res> {
-  factory _$$_ActivateWindowCopyWith(
-          _$_ActivateWindow value, $Res Function(_$_ActivateWindow) then) =
-      __$$_ActivateWindowCopyWithImpl<$Res>;
+  factory _$$ActivateWindowImplCopyWith(_$ActivateWindowImpl value,
+          $Res Function(_$ActivateWindowImpl) then) =
+      __$$ActivateWindowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiGUIWindow window, List<String> parameters});
 }
 
 /// @nodoc
-class __$$_ActivateWindowCopyWithImpl<$Res>
-    extends _$ActivateWindowCopyWithImpl<$Res, _$_ActivateWindow>
-    implements _$$_ActivateWindowCopyWith<$Res> {
-  __$$_ActivateWindowCopyWithImpl(
-      _$_ActivateWindow _value, $Res Function(_$_ActivateWindow) _then)
+class __$$ActivateWindowImplCopyWithImpl<$Res>
+    extends _$ActivateWindowCopyWithImpl<$Res, _$ActivateWindowImpl>
+    implements _$$ActivateWindowImplCopyWith<$Res> {
+  __$$ActivateWindowImplCopyWithImpl(
+      _$ActivateWindowImpl _value, $Res Function(_$ActivateWindowImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ActivateWindow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? window = null,
     Object? parameters = null,
   }) {
-    return _then(_$_ActivateWindow(
+    return _then(_$ActivateWindowImpl(
       null == window
           ? _value.window
           : window // ignore: cast_nullable_to_non_nullable
@@ -107,14 +115,14 @@ class __$$_ActivateWindowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ActivateWindow extends _ActivateWindow {
-  const _$_ActivateWindow(this.window, final List<String> parameters)
+class _$ActivateWindowImpl extends _ActivateWindow {
+  const _$ActivateWindowImpl(this.window, final List<String> parameters)
       : assert(parameters.length > 0, 'Parameters must not be empty!'),
         _parameters = parameters,
         super._();
 
-  factory _$_ActivateWindow.fromJson(Map<String, dynamic> json) =>
-      _$$_ActivateWindowFromJson(json);
+  factory _$ActivateWindowImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ActivateWindowImplFromJson(json);
 
   @override
   final KodiGUIWindow window;
@@ -132,29 +140,32 @@ class _$_ActivateWindow extends _ActivateWindow {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ActivateWindow &&
+            other is _$ActivateWindowImpl &&
             (identical(other.window, window) || other.window == window) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, window, const DeepCollectionEquality().hash(_parameters));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ActivateWindow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ActivateWindowCopyWith<_$_ActivateWindow> get copyWith =>
-      __$$_ActivateWindowCopyWithImpl<_$_ActivateWindow>(this, _$identity);
+  _$$ActivateWindowImplCopyWith<_$ActivateWindowImpl> get copyWith =>
+      __$$ActivateWindowImplCopyWithImpl<_$ActivateWindowImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivateWindowToJson(
+    return _$$ActivateWindowImplToJson(
       this,
     );
   }
@@ -163,18 +174,21 @@ class _$_ActivateWindow extends _ActivateWindow {
 abstract class _ActivateWindow extends ActivateWindow {
   const factory _ActivateWindow(
           final KodiGUIWindow window, final List<String> parameters) =
-      _$_ActivateWindow;
+      _$ActivateWindowImpl;
   const _ActivateWindow._() : super._();
 
   factory _ActivateWindow.fromJson(Map<String, dynamic> json) =
-      _$_ActivateWindow.fromJson;
+      _$ActivateWindowImpl.fromJson;
 
   @override
   KodiGUIWindow get window;
   @override
   List<String> get parameters;
+
+  /// Create a copy of ActivateWindow
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ActivateWindowCopyWith<_$_ActivateWindow> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ActivateWindowImplCopyWith<_$ActivateWindowImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

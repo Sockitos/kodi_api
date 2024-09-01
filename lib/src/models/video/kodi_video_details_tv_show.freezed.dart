@@ -12,7 +12,7 @@ part of 'kodi_video_details_tv_show.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiVideoDetailsTvShow _$KodiVideoDetailsTvShowFromJson(
     Map<String, dynamic> json) {
@@ -67,8 +67,12 @@ mixin _$KodiVideoDetailsTvShow {
   String? get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiVideoDetailsTvShow to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiVideoDetailsTvShow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiVideoDetailsTvShowCopyWith<KodiVideoDetailsTvShow> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -127,6 +131,8 @@ class _$KodiVideoDetailsTvShowCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiVideoDetailsTvShow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -295,6 +301,8 @@ class _$KodiVideoDetailsTvShowCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiVideoDetailsTvShow
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -309,11 +317,12 @@ class _$KodiVideoDetailsTvShowCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoDetailsTvShowCopyWith<$Res>
+abstract class _$$KodiVideoDetailsTvShowImplCopyWith<$Res>
     implements $KodiVideoDetailsTvShowCopyWith<$Res> {
-  factory _$$_KodiVideoDetailsTvShowCopyWith(_$_KodiVideoDetailsTvShow value,
-          $Res Function(_$_KodiVideoDetailsTvShow) then) =
-      __$$_KodiVideoDetailsTvShowCopyWithImpl<$Res>;
+  factory _$$KodiVideoDetailsTvShowImplCopyWith(
+          _$KodiVideoDetailsTvShowImpl value,
+          $Res Function(_$KodiVideoDetailsTvShowImpl) then) =
+      __$$KodiVideoDetailsTvShowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -355,14 +364,17 @@ abstract class _$$_KodiVideoDetailsTvShowCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiVideoDetailsTvShowCopyWithImpl<$Res>
+class __$$KodiVideoDetailsTvShowImplCopyWithImpl<$Res>
     extends _$KodiVideoDetailsTvShowCopyWithImpl<$Res,
-        _$_KodiVideoDetailsTvShow>
-    implements _$$_KodiVideoDetailsTvShowCopyWith<$Res> {
-  __$$_KodiVideoDetailsTvShowCopyWithImpl(_$_KodiVideoDetailsTvShow _value,
-      $Res Function(_$_KodiVideoDetailsTvShow) _then)
+        _$KodiVideoDetailsTvShowImpl>
+    implements _$$KodiVideoDetailsTvShowImplCopyWith<$Res> {
+  __$$KodiVideoDetailsTvShowImplCopyWithImpl(
+      _$KodiVideoDetailsTvShowImpl _value,
+      $Res Function(_$KodiVideoDetailsTvShowImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoDetailsTvShow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -399,7 +411,7 @@ class __$$_KodiVideoDetailsTvShowCopyWithImpl<$Res>
     Object? thumbnail = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiVideoDetailsTvShow(
+    return _then(_$KodiVideoDetailsTvShowImpl(
       cast: freezed == cast
           ? _value._cast
           : cast // ignore: cast_nullable_to_non_nullable
@@ -535,8 +547,8 @@ class __$$_KodiVideoDetailsTvShowCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiVideoDetailsTvShow implements _KodiVideoDetailsTvShow {
-  const _$_KodiVideoDetailsTvShow(
+class _$KodiVideoDetailsTvShowImpl implements _KodiVideoDetailsTvShow {
+  const _$KodiVideoDetailsTvShowImpl(
       {final List<KodiVideoCast>? cast,
       @JsonKey(name: 'episode') this.episode,
       @JsonKey(name: 'episodeguide') this.episodeGuide,
@@ -576,8 +588,8 @@ class _$_KodiVideoDetailsTvShow implements _KodiVideoDetailsTvShow {
         _tag = tag,
         _uniqueId = uniqueId;
 
-  factory _$_KodiVideoDetailsTvShow.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiVideoDetailsTvShowFromJson(json);
+  factory _$KodiVideoDetailsTvShowImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiVideoDetailsTvShowImplFromJson(json);
 
   final List<KodiVideoCast>? _cast;
   @override
@@ -710,10 +722,10 @@ class _$_KodiVideoDetailsTvShow implements _KodiVideoDetailsTvShow {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoDetailsTvShow &&
+            other is _$KodiVideoDetailsTvShowImpl &&
             const DeepCollectionEquality().equals(other._cast, _cast) &&
             (identical(other.episode, episode) || other.episode == episode) &&
             (identical(other.episodeGuide, episodeGuide) ||
@@ -760,7 +772,7 @@ class _$_KodiVideoDetailsTvShow implements _KodiVideoDetailsTvShow {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -798,16 +810,18 @@ class _$_KodiVideoDetailsTvShow implements _KodiVideoDetailsTvShow {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoDetailsTvShow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoDetailsTvShowCopyWith<_$_KodiVideoDetailsTvShow> get copyWith =>
-      __$$_KodiVideoDetailsTvShowCopyWithImpl<_$_KodiVideoDetailsTvShow>(
-          this, _$identity);
+  _$$KodiVideoDetailsTvShowImplCopyWith<_$KodiVideoDetailsTvShowImpl>
+      get copyWith => __$$KodiVideoDetailsTvShowImplCopyWithImpl<
+          _$KodiVideoDetailsTvShowImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoDetailsTvShowToJson(
+    return _$$KodiVideoDetailsTvShowImplToJson(
       this,
     );
   }
@@ -846,10 +860,10 @@ abstract class _KodiVideoDetailsTvShow implements KodiVideoDetailsTvShow {
       @JsonKey(name: 'playcount') final int? playCount,
       final String? fanart,
       final String? thumbnail,
-      required final String label}) = _$_KodiVideoDetailsTvShow;
+      required final String label}) = _$KodiVideoDetailsTvShowImpl;
 
   factory _KodiVideoDetailsTvShow.fromJson(Map<String, dynamic> json) =
-      _$_KodiVideoDetailsTvShow.fromJson;
+      _$KodiVideoDetailsTvShowImpl.fromJson;
 
   @override
   List<KodiVideoCast>? get cast;
@@ -927,8 +941,11 @@ abstract class _KodiVideoDetailsTvShow implements KodiVideoDetailsTvShow {
   String? get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiVideoDetailsTvShow
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiVideoDetailsTvShowCopyWith<_$_KodiVideoDetailsTvShow> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoDetailsTvShowImplCopyWith<_$KodiVideoDetailsTvShowImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

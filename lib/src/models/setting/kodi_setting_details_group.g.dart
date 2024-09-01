@@ -6,9 +6,9 @@ part of 'kodi_setting_details_group.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiSettingDetailsGroup _$$_KodiSettingDetailsGroupFromJson(
+_$KodiSettingDetailsGroupImpl _$$KodiSettingDetailsGroupImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingDetailsGroup(
+    _$KodiSettingDetailsGroupImpl(
       id: json['id'] as String,
       settings: (json['settings'] as List<dynamic>?)
           ?.map((e) =>
@@ -16,8 +16,8 @@ _$_KodiSettingDetailsGroup _$$_KodiSettingDetailsGroupFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_KodiSettingDetailsGroupToJson(
-    _$_KodiSettingDetailsGroup instance) {
+Map<String, dynamic> _$$KodiSettingDetailsGroupImplToJson(
+    _$KodiSettingDetailsGroupImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };

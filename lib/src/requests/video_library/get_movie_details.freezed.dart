@@ -12,7 +12,7 @@ part of 'get_movie_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetMovieDetails _$GetMovieDetailsFromJson(Map<String, dynamic> json) {
   return _GetMovieDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetMovieDetails {
   Set<KodiVideoFieldsMovie>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetMovieDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetMovieDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetMovieDetailsCopyWith<GetMovieDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$GetMovieDetailsCopyWithImpl<$Res, $Val extends GetMovieDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetMovieDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,11 +78,11 @@ class _$GetMovieDetailsCopyWithImpl<$Res, $Val extends GetMovieDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetMovieDetailsCopyWith<$Res>
+abstract class _$$GetMovieDetailsImplCopyWith<$Res>
     implements $GetMovieDetailsCopyWith<$Res> {
-  factory _$$_GetMovieDetailsCopyWith(
-          _$_GetMovieDetails value, $Res Function(_$_GetMovieDetails) then) =
-      __$$_GetMovieDetailsCopyWithImpl<$Res>;
+  factory _$$GetMovieDetailsImplCopyWith(_$GetMovieDetailsImpl value,
+          $Res Function(_$GetMovieDetailsImpl) then) =
+      __$$GetMovieDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,20 +91,22 @@ abstract class _$$_GetMovieDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetMovieDetailsCopyWithImpl<$Res>
-    extends _$GetMovieDetailsCopyWithImpl<$Res, _$_GetMovieDetails>
-    implements _$$_GetMovieDetailsCopyWith<$Res> {
-  __$$_GetMovieDetailsCopyWithImpl(
-      _$_GetMovieDetails _value, $Res Function(_$_GetMovieDetails) _then)
+class __$$GetMovieDetailsImplCopyWithImpl<$Res>
+    extends _$GetMovieDetailsCopyWithImpl<$Res, _$GetMovieDetailsImpl>
+    implements _$$GetMovieDetailsImplCopyWith<$Res> {
+  __$$GetMovieDetailsImplCopyWithImpl(
+      _$GetMovieDetailsImpl _value, $Res Function(_$GetMovieDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetMovieDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetMovieDetails(
+    return _then(_$GetMovieDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -113,14 +121,14 @@ class __$$_GetMovieDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetMovieDetails extends _GetMovieDetails {
-  const _$_GetMovieDetails(@JsonKey(name: 'movieid') this.id,
+class _$GetMovieDetailsImpl extends _GetMovieDetails {
+  const _$GetMovieDetailsImpl(@JsonKey(name: 'movieid') this.id,
       {final Set<KodiVideoFieldsMovie>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetMovieDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetMovieDetailsFromJson(json);
+  factory _$GetMovieDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetMovieDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'movieid')
@@ -141,29 +149,32 @@ class _$_GetMovieDetails extends _GetMovieDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetMovieDetails &&
+            other is _$GetMovieDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetMovieDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetMovieDetailsCopyWith<_$_GetMovieDetails> get copyWith =>
-      __$$_GetMovieDetailsCopyWithImpl<_$_GetMovieDetails>(this, _$identity);
+  _$$GetMovieDetailsImplCopyWith<_$GetMovieDetailsImpl> get copyWith =>
+      __$$GetMovieDetailsImplCopyWithImpl<_$GetMovieDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetMovieDetailsToJson(
+    return _$$GetMovieDetailsImplToJson(
       this,
     );
   }
@@ -171,19 +182,22 @@ class _$_GetMovieDetails extends _GetMovieDetails {
 
 abstract class _GetMovieDetails extends GetMovieDetails {
   const factory _GetMovieDetails(@JsonKey(name: 'movieid') final int id,
-      {final Set<KodiVideoFieldsMovie>? properties}) = _$_GetMovieDetails;
+      {final Set<KodiVideoFieldsMovie>? properties}) = _$GetMovieDetailsImpl;
   const _GetMovieDetails._() : super._();
 
   factory _GetMovieDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetMovieDetails.fromJson;
+      _$GetMovieDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'movieid')
   int get id;
   @override
   Set<KodiVideoFieldsMovie>? get properties;
+
+  /// Create a copy of GetMovieDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetMovieDetailsCopyWith<_$_GetMovieDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetMovieDetailsImplCopyWith<_$GetMovieDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

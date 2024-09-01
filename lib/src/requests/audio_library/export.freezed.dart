@@ -12,7 +12,7 @@ part of 'export.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Export _$ExportFromJson(Map<String, dynamic> json) {
   return _Export.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Export {
   KodiAudioLibraryExportOptions get options =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this Export to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExportCopyWith<Export> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -51,6 +55,8 @@ class _$ExportCopyWithImpl<$Res, $Val extends Export>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -64,6 +70,8 @@ class _$ExportCopyWithImpl<$Res, $Val extends Export>
     ) as $Val);
   }
 
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiAudioLibraryExportOptionsCopyWith<$Res> get options {
@@ -75,9 +83,10 @@ class _$ExportCopyWithImpl<$Res, $Val extends Export>
 }
 
 /// @nodoc
-abstract class _$$_ExportCopyWith<$Res> implements $ExportCopyWith<$Res> {
-  factory _$$_ExportCopyWith(_$_Export value, $Res Function(_$_Export) then) =
-      __$$_ExportCopyWithImpl<$Res>;
+abstract class _$$ExportImplCopyWith<$Res> implements $ExportCopyWith<$Res> {
+  factory _$$ExportImplCopyWith(
+          _$ExportImpl value, $Res Function(_$ExportImpl) then) =
+      __$$ExportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -89,18 +98,21 @@ abstract class _$$_ExportCopyWith<$Res> implements $ExportCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ExportCopyWithImpl<$Res>
-    extends _$ExportCopyWithImpl<$Res, _$_Export>
-    implements _$$_ExportCopyWith<$Res> {
-  __$$_ExportCopyWithImpl(_$_Export _value, $Res Function(_$_Export) _then)
+class __$$ExportImplCopyWithImpl<$Res>
+    extends _$ExportCopyWithImpl<$Res, _$ExportImpl>
+    implements _$$ExportImplCopyWith<$Res> {
+  __$$ExportImplCopyWithImpl(
+      _$ExportImpl _value, $Res Function(_$ExportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? options = null,
   }) {
-    return _then(_$_Export(
+    return _then(_$ExportImpl(
       options: null == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
@@ -112,13 +124,13 @@ class __$$_ExportCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_Export extends _Export {
-  const _$_Export(
+class _$ExportImpl extends _Export {
+  const _$ExportImpl(
       {@KodiAudioLibraryExportOptionsConverter() required this.options})
       : super._();
 
-  factory _$_Export.fromJson(Map<String, dynamic> json) =>
-      _$$_ExportFromJson(json);
+  factory _$ExportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExportImplFromJson(json);
 
   @override
   @KodiAudioLibraryExportOptionsConverter()
@@ -130,26 +142,28 @@ class _$_Export extends _Export {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Export &&
+            other is _$ExportImpl &&
             (identical(other.options, options) || other.options == options));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, options);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExportCopyWith<_$_Export> get copyWith =>
-      __$$_ExportCopyWithImpl<_$_Export>(this, _$identity);
+  _$$ExportImplCopyWith<_$ExportImpl> get copyWith =>
+      __$$ExportImplCopyWithImpl<_$ExportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExportToJson(
+    return _$$ExportImplToJson(
       this,
     );
   }
@@ -158,17 +172,20 @@ class _$_Export extends _Export {
 abstract class _Export extends Export {
   const factory _Export(
       {@KodiAudioLibraryExportOptionsConverter()
-      required final KodiAudioLibraryExportOptions options}) = _$_Export;
+      required final KodiAudioLibraryExportOptions options}) = _$ExportImpl;
   const _Export._() : super._();
 
-  factory _Export.fromJson(Map<String, dynamic> json) = _$_Export.fromJson;
+  factory _Export.fromJson(Map<String, dynamic> json) = _$ExportImpl.fromJson;
 
   @override
   @KodiAudioLibraryExportOptionsConverter()
   KodiAudioLibraryExportOptions get options;
+
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ExportCopyWith<_$_Export> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ExportImplCopyWith<_$ExportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -233,6 +250,8 @@ mixin _$KodiAudioLibraryExportOptions {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiAudioLibraryExportOptions to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -255,34 +274,39 @@ class _$KodiAudioLibraryExportOptionsCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiAudioLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryExportOptionsPathCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryExportOptionsPathCopyWith(
-          _$_KodiAudioLibraryExportOptionsPath value,
-          $Res Function(_$_KodiAudioLibraryExportOptionsPath) then) =
-      __$$_KodiAudioLibraryExportOptionsPathCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryExportOptionsPathImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryExportOptionsPathImplCopyWith(
+          _$KodiAudioLibraryExportOptionsPathImpl value,
+          $Res Function(_$KodiAudioLibraryExportOptionsPathImpl) then) =
+      __$$KodiAudioLibraryExportOptionsPathImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String path});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryExportOptionsPathCopyWithImpl<$Res>
+class __$$KodiAudioLibraryExportOptionsPathImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryExportOptionsCopyWithImpl<$Res,
-        _$_KodiAudioLibraryExportOptionsPath>
-    implements _$$_KodiAudioLibraryExportOptionsPathCopyWith<$Res> {
-  __$$_KodiAudioLibraryExportOptionsPathCopyWithImpl(
-      _$_KodiAudioLibraryExportOptionsPath _value,
-      $Res Function(_$_KodiAudioLibraryExportOptionsPath) _then)
+        _$KodiAudioLibraryExportOptionsPathImpl>
+    implements _$$KodiAudioLibraryExportOptionsPathImplCopyWith<$Res> {
+  __$$KodiAudioLibraryExportOptionsPathImplCopyWithImpl(
+      _$KodiAudioLibraryExportOptionsPathImpl _value,
+      $Res Function(_$KodiAudioLibraryExportOptionsPathImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = null,
   }) {
-    return _then(_$_KodiAudioLibraryExportOptionsPath(
+    return _then(_$KodiAudioLibraryExportOptionsPathImpl(
       null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -293,15 +317,16 @@ class __$$_KodiAudioLibraryExportOptionsPathCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryExportOptionsPath
+class _$KodiAudioLibraryExportOptionsPathImpl
     extends _KodiAudioLibraryExportOptionsPath {
-  const _$_KodiAudioLibraryExportOptionsPath(this.path, {final String? $type})
+  const _$KodiAudioLibraryExportOptionsPathImpl(this.path,
+      {final String? $type})
       : $type = $type ?? 'path',
         super._();
 
-  factory _$_KodiAudioLibraryExportOptionsPath.fromJson(
+  factory _$KodiAudioLibraryExportOptionsPathImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryExportOptionsPathFromJson(json);
+      _$$KodiAudioLibraryExportOptionsPathImplFromJson(json);
 
   @override
   final String path;
@@ -315,24 +340,26 @@ class _$_KodiAudioLibraryExportOptionsPath
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryExportOptionsPath &&
+            other is _$KodiAudioLibraryExportOptionsPathImpl &&
             (identical(other.path, path) || other.path == path));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryExportOptionsPathCopyWith<
-          _$_KodiAudioLibraryExportOptionsPath>
-      get copyWith => __$$_KodiAudioLibraryExportOptionsPathCopyWithImpl<
-          _$_KodiAudioLibraryExportOptionsPath>(this, _$identity);
+  _$$KodiAudioLibraryExportOptionsPathImplCopyWith<
+          _$KodiAudioLibraryExportOptionsPathImpl>
+      get copyWith => __$$KodiAudioLibraryExportOptionsPathImplCopyWithImpl<
+          _$KodiAudioLibraryExportOptionsPathImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -402,7 +429,7 @@ class _$_KodiAudioLibraryExportOptionsPath
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryExportOptionsPathToJson(
+    return _$$KodiAudioLibraryExportOptionsPathImplToJson(
       this,
     );
   }
@@ -411,47 +438,55 @@ class _$_KodiAudioLibraryExportOptionsPath
 abstract class _KodiAudioLibraryExportOptionsPath
     extends KodiAudioLibraryExportOptions {
   const factory _KodiAudioLibraryExportOptionsPath(final String path) =
-      _$_KodiAudioLibraryExportOptionsPath;
+      _$KodiAudioLibraryExportOptionsPathImpl;
   const _KodiAudioLibraryExportOptionsPath._() : super._();
 
   factory _KodiAudioLibraryExportOptionsPath.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryExportOptionsPath.fromJson;
+      _$KodiAudioLibraryExportOptionsPathImpl.fromJson;
 
   String get path;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryExportOptionsPathCopyWith<
-          _$_KodiAudioLibraryExportOptionsPath>
+
+  /// Create a copy of KodiAudioLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryExportOptionsPathImplCopyWith<
+          _$KodiAudioLibraryExportOptionsPathImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWith(
-          _$_KodiAudioLibraryExportOptionsImagesOverwrite value,
-          $Res Function(_$_KodiAudioLibraryExportOptionsImagesOverwrite) then) =
-      __$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWith<
+    $Res> {
+  factory _$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWith(
+          _$KodiAudioLibraryExportOptionsImagesOverwriteImpl value,
+          $Res Function(_$KodiAudioLibraryExportOptionsImagesOverwriteImpl)
+              then) =
+      __$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool images, bool overwrite});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWithImpl<$Res>
+class __$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryExportOptionsCopyWithImpl<$Res,
-        _$_KodiAudioLibraryExportOptionsImagesOverwrite>
-    implements _$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWith<$Res> {
-  __$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWithImpl(
-      _$_KodiAudioLibraryExportOptionsImagesOverwrite _value,
-      $Res Function(_$_KodiAudioLibraryExportOptionsImagesOverwrite) _then)
+        _$KodiAudioLibraryExportOptionsImagesOverwriteImpl>
+    implements
+        _$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWith<$Res> {
+  __$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWithImpl(
+      _$KodiAudioLibraryExportOptionsImagesOverwriteImpl _value,
+      $Res Function(_$KodiAudioLibraryExportOptionsImagesOverwriteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? images = null,
     Object? overwrite = null,
   }) {
-    return _then(_$_KodiAudioLibraryExportOptionsImagesOverwrite(
+    return _then(_$KodiAudioLibraryExportOptionsImagesOverwriteImpl(
       images: null == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
@@ -466,16 +501,16 @@ class __$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryExportOptionsImagesOverwrite
+class _$KodiAudioLibraryExportOptionsImagesOverwriteImpl
     extends _KodiAudioLibraryExportOptionsImagesOverwrite {
-  const _$_KodiAudioLibraryExportOptionsImagesOverwrite(
+  const _$KodiAudioLibraryExportOptionsImagesOverwriteImpl(
       {this.images = false, this.overwrite = false, final String? $type})
       : $type = $type ?? 'imagesOverwrite',
         super._();
 
-  factory _$_KodiAudioLibraryExportOptionsImagesOverwrite.fromJson(
+  factory _$KodiAudioLibraryExportOptionsImagesOverwriteImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryExportOptionsImagesOverwriteFromJson(json);
+      _$$KodiAudioLibraryExportOptionsImagesOverwriteImplFromJson(json);
 
   @override
   @JsonKey()
@@ -493,27 +528,29 @@ class _$_KodiAudioLibraryExportOptionsImagesOverwrite
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryExportOptionsImagesOverwrite &&
+            other is _$KodiAudioLibraryExportOptionsImagesOverwriteImpl &&
             (identical(other.images, images) || other.images == images) &&
             (identical(other.overwrite, overwrite) ||
                 other.overwrite == overwrite));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, images, overwrite);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWith<
-          _$_KodiAudioLibraryExportOptionsImagesOverwrite>
+  _$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWith<
+          _$KodiAudioLibraryExportOptionsImagesOverwriteImpl>
       get copyWith =>
-          __$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWithImpl<
-                  _$_KodiAudioLibraryExportOptionsImagesOverwrite>(
+          __$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWithImpl<
+                  _$KodiAudioLibraryExportOptionsImagesOverwriteImpl>(
               this, _$identity);
 
   @override
@@ -584,7 +621,7 @@ class _$_KodiAudioLibraryExportOptionsImagesOverwrite
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryExportOptionsImagesOverwriteToJson(
+    return _$$KodiAudioLibraryExportOptionsImagesOverwriteImplToJson(
       this,
     );
   }
@@ -593,18 +630,21 @@ class _$_KodiAudioLibraryExportOptionsImagesOverwrite
 abstract class _KodiAudioLibraryExportOptionsImagesOverwrite
     extends KodiAudioLibraryExportOptions {
   const factory _KodiAudioLibraryExportOptionsImagesOverwrite(
-      {final bool images,
-      final bool overwrite}) = _$_KodiAudioLibraryExportOptionsImagesOverwrite;
+          {final bool images, final bool overwrite}) =
+      _$KodiAudioLibraryExportOptionsImagesOverwriteImpl;
   const _KodiAudioLibraryExportOptionsImagesOverwrite._() : super._();
 
   factory _KodiAudioLibraryExportOptionsImagesOverwrite.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryExportOptionsImagesOverwrite.fromJson;
+      _$KodiAudioLibraryExportOptionsImagesOverwriteImpl.fromJson;
 
   bool get images;
   bool get overwrite;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryExportOptionsImagesOverwriteCopyWith<
-          _$_KodiAudioLibraryExportOptionsImagesOverwrite>
+
+  /// Create a copy of KodiAudioLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWith<
+          _$KodiAudioLibraryExportOptionsImagesOverwriteImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

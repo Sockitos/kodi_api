@@ -12,7 +12,7 @@ part of 'refresh_episode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RefreshEpisode _$RefreshEpisodeFromJson(Map<String, dynamic> json) {
   return _RefreshEpisode.fromJson(json);
@@ -26,8 +26,12 @@ mixin _$RefreshEpisode {
   bool get ignoreNFO => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
 
+  /// Serializes this RefreshEpisode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RefreshEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RefreshEpisodeCopyWith<RefreshEpisode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$RefreshEpisodeCopyWithImpl<$Res, $Val extends RefreshEpisode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RefreshEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,11 +85,11 @@ class _$RefreshEpisodeCopyWithImpl<$Res, $Val extends RefreshEpisode>
 }
 
 /// @nodoc
-abstract class _$$_RefreshEpisodeCopyWith<$Res>
+abstract class _$$RefreshEpisodeImplCopyWith<$Res>
     implements $RefreshEpisodeCopyWith<$Res> {
-  factory _$$_RefreshEpisodeCopyWith(
-          _$_RefreshEpisode value, $Res Function(_$_RefreshEpisode) then) =
-      __$$_RefreshEpisodeCopyWithImpl<$Res>;
+  factory _$$RefreshEpisodeImplCopyWith(_$RefreshEpisodeImpl value,
+          $Res Function(_$RefreshEpisodeImpl) then) =
+      __$$RefreshEpisodeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,13 +99,15 @@ abstract class _$$_RefreshEpisodeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RefreshEpisodeCopyWithImpl<$Res>
-    extends _$RefreshEpisodeCopyWithImpl<$Res, _$_RefreshEpisode>
-    implements _$$_RefreshEpisodeCopyWith<$Res> {
-  __$$_RefreshEpisodeCopyWithImpl(
-      _$_RefreshEpisode _value, $Res Function(_$_RefreshEpisode) _then)
+class __$$RefreshEpisodeImplCopyWithImpl<$Res>
+    extends _$RefreshEpisodeCopyWithImpl<$Res, _$RefreshEpisodeImpl>
+    implements _$$RefreshEpisodeImplCopyWith<$Res> {
+  __$$RefreshEpisodeImplCopyWithImpl(
+      _$RefreshEpisodeImpl _value, $Res Function(_$RefreshEpisodeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RefreshEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,7 +115,7 @@ class __$$_RefreshEpisodeCopyWithImpl<$Res>
     Object? ignoreNFO = null,
     Object? title = freezed,
   }) {
-    return _then(_$_RefreshEpisode(
+    return _then(_$RefreshEpisodeImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,13 +134,13 @@ class __$$_RefreshEpisodeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RefreshEpisode extends _RefreshEpisode {
-  const _$_RefreshEpisode(@JsonKey(name: 'episodeid') this.id,
+class _$RefreshEpisodeImpl extends _RefreshEpisode {
+  const _$RefreshEpisodeImpl(@JsonKey(name: 'episodeid') this.id,
       {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false, this.title})
       : super._();
 
-  factory _$_RefreshEpisode.fromJson(Map<String, dynamic> json) =>
-      _$$_RefreshEpisodeFromJson(json);
+  factory _$RefreshEpisodeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RefreshEpisodeImplFromJson(json);
 
   @override
   @JsonKey(name: 'episodeid')
@@ -149,29 +157,32 @@ class _$_RefreshEpisode extends _RefreshEpisode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RefreshEpisode &&
+            other is _$RefreshEpisodeImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.ignoreNFO, ignoreNFO) ||
                 other.ignoreNFO == ignoreNFO) &&
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, ignoreNFO, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RefreshEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RefreshEpisodeCopyWith<_$_RefreshEpisode> get copyWith =>
-      __$$_RefreshEpisodeCopyWithImpl<_$_RefreshEpisode>(this, _$identity);
+  _$$RefreshEpisodeImplCopyWith<_$RefreshEpisodeImpl> get copyWith =>
+      __$$RefreshEpisodeImplCopyWithImpl<_$RefreshEpisodeImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RefreshEpisodeToJson(
+    return _$$RefreshEpisodeImplToJson(
       this,
     );
   }
@@ -180,11 +191,11 @@ class _$_RefreshEpisode extends _RefreshEpisode {
 abstract class _RefreshEpisode extends RefreshEpisode {
   const factory _RefreshEpisode(@JsonKey(name: 'episodeid') final int id,
       {@JsonKey(name: 'ignorenfo') final bool ignoreNFO,
-      final String? title}) = _$_RefreshEpisode;
+      final String? title}) = _$RefreshEpisodeImpl;
   const _RefreshEpisode._() : super._();
 
   factory _RefreshEpisode.fromJson(Map<String, dynamic> json) =
-      _$_RefreshEpisode.fromJson;
+      _$RefreshEpisodeImpl.fromJson;
 
   @override
   @JsonKey(name: 'episodeid')
@@ -194,8 +205,11 @@ abstract class _RefreshEpisode extends RefreshEpisode {
   bool get ignoreNFO;
   @override
   String? get title;
+
+  /// Create a copy of RefreshEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RefreshEpisodeCopyWith<_$_RefreshEpisode> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RefreshEpisodeImplCopyWith<_$RefreshEpisodeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

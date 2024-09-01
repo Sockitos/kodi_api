@@ -6,10 +6,10 @@ part of 'set_movie_set_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetMovieSetDetails _$$_SetMovieSetDetailsFromJson(
+_$SetMovieSetDetailsImpl _$$SetMovieSetDetailsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetMovieSetDetails(
-      json['setid'] as int,
+    _$SetMovieSetDetailsImpl(
+      (json['setid'] as num).toInt(),
       title: json['title'] as String?,
       art: json['art'] == null
           ? null
@@ -17,8 +17,8 @@ _$_SetMovieSetDetails _$$_SetMovieSetDetailsFromJson(
       plot: json['plot'] as String?,
     );
 
-Map<String, dynamic> _$$_SetMovieSetDetailsToJson(
-    _$_SetMovieSetDetails instance) {
+Map<String, dynamic> _$$SetMovieSetDetailsImplToJson(
+    _$SetMovieSetDetailsImpl instance) {
   final val = <String, dynamic>{
     'setid': instance.id,
   };

@@ -12,7 +12,7 @@ part of 'kodi_audio_details_song.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAudioDetailsSong _$KodiAudioDetailsSongFromJson(Map<String, dynamic> json) {
   return _KodiAudioDetailsSong.fromJson(json);
@@ -96,8 +96,12 @@ mixin _$KodiAudioDetailsSong {
   String? get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAudioDetailsSong to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAudioDetailsSong
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAudioDetailsSongCopyWith<KodiAudioDetailsSong> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -173,6 +177,8 @@ class _$KodiAudioDetailsSongCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAudioDetailsSong
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -416,6 +422,8 @@ class _$KodiAudioDetailsSongCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiAudioDetailsSong
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -430,11 +438,11 @@ class _$KodiAudioDetailsSongCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioDetailsSongCopyWith<$Res>
+abstract class _$$KodiAudioDetailsSongImplCopyWith<$Res>
     implements $KodiAudioDetailsSongCopyWith<$Res> {
-  factory _$$_KodiAudioDetailsSongCopyWith(_$_KodiAudioDetailsSong value,
-          $Res Function(_$_KodiAudioDetailsSong) then) =
-      __$$_KodiAudioDetailsSongCopyWithImpl<$Res>;
+  factory _$$KodiAudioDetailsSongImplCopyWith(_$KodiAudioDetailsSongImpl value,
+          $Res Function(_$KodiAudioDetailsSongImpl) then) =
+      __$$KodiAudioDetailsSongImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -493,13 +501,15 @@ abstract class _$$_KodiAudioDetailsSongCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAudioDetailsSongCopyWithImpl<$Res>
-    extends _$KodiAudioDetailsSongCopyWithImpl<$Res, _$_KodiAudioDetailsSong>
-    implements _$$_KodiAudioDetailsSongCopyWith<$Res> {
-  __$$_KodiAudioDetailsSongCopyWithImpl(_$_KodiAudioDetailsSong _value,
-      $Res Function(_$_KodiAudioDetailsSong) _then)
+class __$$KodiAudioDetailsSongImplCopyWithImpl<$Res>
+    extends _$KodiAudioDetailsSongCopyWithImpl<$Res, _$KodiAudioDetailsSongImpl>
+    implements _$$KodiAudioDetailsSongImplCopyWith<$Res> {
+  __$$KodiAudioDetailsSongImplCopyWithImpl(_$KodiAudioDetailsSongImpl _value,
+      $Res Function(_$KodiAudioDetailsSongImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioDetailsSong
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -551,7 +561,7 @@ class __$$_KodiAudioDetailsSongCopyWithImpl<$Res>
     Object? thumbnail = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiAudioDetailsSong(
+    return _then(_$KodiAudioDetailsSongImpl(
       album: freezed == album
           ? _value.album
           : album // ignore: cast_nullable_to_non_nullable
@@ -747,8 +757,8 @@ class __$$_KodiAudioDetailsSongCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiAudioDetailsSong implements _KodiAudioDetailsSong {
-  const _$_KodiAudioDetailsSong(
+class _$KodiAudioDetailsSongImpl implements _KodiAudioDetailsSong {
+  const _$KodiAudioDetailsSongImpl(
       {this.album,
       @JsonKey(name: 'albumartist') final List<String>? albumArtist,
       @JsonKey(name: 'albumartistid') final List<int>? albumArtistId,
@@ -810,8 +820,8 @@ class _$_KodiAudioDetailsSong implements _KodiAudioDetailsSong {
         _musicBrainzAlbumArtistId = musicBrainzAlbumArtistId,
         _genre = genre;
 
-  factory _$_KodiAudioDetailsSong.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAudioDetailsSongFromJson(json);
+  factory _$KodiAudioDetailsSongImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAudioDetailsSongImplFromJson(json);
 
   @override
   final String? album;
@@ -1029,10 +1039,10 @@ class _$_KodiAudioDetailsSong implements _KodiAudioDetailsSong {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioDetailsSong &&
+            other is _$KodiAudioDetailsSongImpl &&
             (identical(other.album, album) || other.album == album) &&
             const DeepCollectionEquality()
                 .equals(other._albumArtist, _albumArtist) &&
@@ -1106,7 +1116,7 @@ class _$_KodiAudioDetailsSong implements _KodiAudioDetailsSong {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1159,16 +1169,19 @@ class _$_KodiAudioDetailsSong implements _KodiAudioDetailsSong {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioDetailsSong
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioDetailsSongCopyWith<_$_KodiAudioDetailsSong> get copyWith =>
-      __$$_KodiAudioDetailsSongCopyWithImpl<_$_KodiAudioDetailsSong>(
-          this, _$identity);
+  _$$KodiAudioDetailsSongImplCopyWith<_$KodiAudioDetailsSongImpl>
+      get copyWith =>
+          __$$KodiAudioDetailsSongImplCopyWithImpl<_$KodiAudioDetailsSongImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioDetailsSongToJson(
+    return _$$KodiAudioDetailsSongImplToJson(
       this,
     );
   }
@@ -1225,10 +1238,10 @@ abstract class _KodiAudioDetailsSong implements KodiAudioDetailsSong {
       final List<String>? genre,
       final String? fanart,
       final String? thumbnail,
-      required final String label}) = _$_KodiAudioDetailsSong;
+      required final String label}) = _$KodiAudioDetailsSongImpl;
 
   factory _KodiAudioDetailsSong.fromJson(Map<String, dynamic> json) =
-      _$_KodiAudioDetailsSong.fromJson;
+      _$KodiAudioDetailsSongImpl.fromJson;
 
   @override
   String? get album;
@@ -1349,8 +1362,11 @@ abstract class _KodiAudioDetailsSong implements KodiAudioDetailsSong {
   String? get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiAudioDetailsSong
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAudioDetailsSongCopyWith<_$_KodiAudioDetailsSong> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioDetailsSongImplCopyWith<_$KodiAudioDetailsSongImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

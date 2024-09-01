@@ -6,15 +6,15 @@ part of 'kodi_video_cast.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoCast _$$_KodiVideoCastFromJson(Map<String, dynamic> json) =>
-    _$_KodiVideoCast(
+_$KodiVideoCastImpl _$$KodiVideoCastImplFromJson(Map<String, dynamic> json) =>
+    _$KodiVideoCastImpl(
       name: json['name'] as String,
-      order: json['order'] as int,
+      order: (json['order'] as num).toInt(),
       role: json['role'] as String,
       thumbnail: json['thumbnail'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiVideoCastToJson(_$_KodiVideoCast instance) {
+Map<String, dynamic> _$$KodiVideoCastImplToJson(_$KodiVideoCastImpl instance) {
   final val = <String, dynamic>{
     'name': instance.name,
     'order': instance.order,

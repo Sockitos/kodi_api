@@ -12,7 +12,7 @@ part of 'get_items.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetItems _$GetItemsFromJson(Map<String, dynamic> json) {
   return _GetItems.fromJson(json);
@@ -26,8 +26,12 @@ mixin _$GetItems {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetItems to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetItems
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetItemsCopyWith<GetItems> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$GetItemsCopyWithImpl<$Res, $Val extends GetItems>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetItems
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class _$GetItemsCopyWithImpl<$Res, $Val extends GetItems>
     ) as $Val);
   }
 
+  /// Create a copy of GetItems
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -97,6 +105,8 @@ class _$GetItemsCopyWithImpl<$Res, $Val extends GetItems>
     });
   }
 
+  /// Create a copy of GetItems
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -111,10 +121,11 @@ class _$GetItemsCopyWithImpl<$Res, $Val extends GetItems>
 }
 
 /// @nodoc
-abstract class _$$_GetItemsCopyWith<$Res> implements $GetItemsCopyWith<$Res> {
-  factory _$$_GetItemsCopyWith(
-          _$_GetItems value, $Res Function(_$_GetItems) then) =
-      __$$_GetItemsCopyWithImpl<$Res>;
+abstract class _$$GetItemsImplCopyWith<$Res>
+    implements $GetItemsCopyWith<$Res> {
+  factory _$$GetItemsImplCopyWith(
+          _$GetItemsImpl value, $Res Function(_$GetItemsImpl) then) =
+      __$$GetItemsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -130,13 +141,15 @@ abstract class _$$_GetItemsCopyWith<$Res> implements $GetItemsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetItemsCopyWithImpl<$Res>
-    extends _$GetItemsCopyWithImpl<$Res, _$_GetItems>
-    implements _$$_GetItemsCopyWith<$Res> {
-  __$$_GetItemsCopyWithImpl(
-      _$_GetItems _value, $Res Function(_$_GetItems) _then)
+class __$$GetItemsImplCopyWithImpl<$Res>
+    extends _$GetItemsCopyWithImpl<$Res, _$GetItemsImpl>
+    implements _$$GetItemsImplCopyWith<$Res> {
+  __$$GetItemsImplCopyWithImpl(
+      _$GetItemsImpl _value, $Res Function(_$GetItemsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetItems
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,7 +158,7 @@ class __$$_GetItemsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetItems(
+    return _then(_$GetItemsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -168,14 +181,14 @@ class __$$_GetItemsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetItems extends _GetItems {
-  const _$_GetItems(@JsonKey(name: 'playlistid') this.id,
+class _$GetItemsImpl extends _GetItems {
+  const _$GetItemsImpl(@JsonKey(name: 'playlistid') this.id,
       {final Set<KodiListFieldsAll>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetItems.fromJson(Map<String, dynamic> json) =>
-      _$$_GetItemsFromJson(json);
+  factory _$GetItemsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetItemsImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistid')
@@ -201,10 +214,10 @@ class _$_GetItems extends _GetItems {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetItems &&
+            other is _$GetItemsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
@@ -212,20 +225,22 @@ class _$_GetItems extends _GetItems {
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetItems
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetItemsCopyWith<_$_GetItems> get copyWith =>
-      __$$_GetItemsCopyWithImpl<_$_GetItems>(this, _$identity);
+  _$$GetItemsImplCopyWith<_$GetItemsImpl> get copyWith =>
+      __$$GetItemsImplCopyWithImpl<_$GetItemsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetItemsToJson(
+    return _$$GetItemsImplToJson(
       this,
     );
   }
@@ -235,10 +250,11 @@ abstract class _GetItems extends GetItems {
   const factory _GetItems(@JsonKey(name: 'playlistid') final int id,
       {final Set<KodiListFieldsAll>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetItems;
+      final KodiListSort? sort}) = _$GetItemsImpl;
   const _GetItems._() : super._();
 
-  factory _GetItems.fromJson(Map<String, dynamic> json) = _$_GetItems.fromJson;
+  factory _GetItems.fromJson(Map<String, dynamic> json) =
+      _$GetItemsImpl.fromJson;
 
   @override
   @JsonKey(name: 'playlistid')
@@ -249,9 +265,12 @@ abstract class _GetItems extends GetItems {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetItems
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetItemsCopyWith<_$_GetItems> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetItemsImplCopyWith<_$GetItemsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -265,8 +284,12 @@ mixin _$KodiPlaylistGetItemsResponse {
   List<KodiListItemAll> get items => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlaylistGetItemsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlaylistGetItemsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlaylistGetItemsResponseCopyWith<KodiPlaylistGetItemsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -295,6 +318,8 @@ class _$KodiPlaylistGetItemsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlaylistGetItemsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -313,6 +338,8 @@ class _$KodiPlaylistGetItemsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPlaylistGetItemsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -323,12 +350,12 @@ class _$KodiPlaylistGetItemsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlaylistGetItemsResponseCopyWith<$Res>
+abstract class _$$KodiPlaylistGetItemsResponseImplCopyWith<$Res>
     implements $KodiPlaylistGetItemsResponseCopyWith<$Res> {
-  factory _$$_KodiPlaylistGetItemsResponseCopyWith(
-          _$_KodiPlaylistGetItemsResponse value,
-          $Res Function(_$_KodiPlaylistGetItemsResponse) then) =
-      __$$_KodiPlaylistGetItemsResponseCopyWithImpl<$Res>;
+  factory _$$KodiPlaylistGetItemsResponseImplCopyWith(
+          _$KodiPlaylistGetItemsResponseImpl value,
+          $Res Function(_$KodiPlaylistGetItemsResponseImpl) then) =
+      __$$KodiPlaylistGetItemsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiListItemAll> items, KodiListLimitsReturned limits});
@@ -338,22 +365,24 @@ abstract class _$$_KodiPlaylistGetItemsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlaylistGetItemsResponseCopyWithImpl<$Res>
+class __$$KodiPlaylistGetItemsResponseImplCopyWithImpl<$Res>
     extends _$KodiPlaylistGetItemsResponseCopyWithImpl<$Res,
-        _$_KodiPlaylistGetItemsResponse>
-    implements _$$_KodiPlaylistGetItemsResponseCopyWith<$Res> {
-  __$$_KodiPlaylistGetItemsResponseCopyWithImpl(
-      _$_KodiPlaylistGetItemsResponse _value,
-      $Res Function(_$_KodiPlaylistGetItemsResponse) _then)
+        _$KodiPlaylistGetItemsResponseImpl>
+    implements _$$KodiPlaylistGetItemsResponseImplCopyWith<$Res> {
+  __$$KodiPlaylistGetItemsResponseImplCopyWithImpl(
+      _$KodiPlaylistGetItemsResponseImpl _value,
+      $Res Function(_$KodiPlaylistGetItemsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistGetItemsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? items = null,
     Object? limits = null,
   }) {
-    return _then(_$_KodiPlaylistGetItemsResponse(
+    return _then(_$KodiPlaylistGetItemsResponseImpl(
       items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
@@ -368,13 +397,15 @@ class __$$_KodiPlaylistGetItemsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlaylistGetItemsResponse implements _KodiPlaylistGetItemsResponse {
-  const _$_KodiPlaylistGetItemsResponse(
+class _$KodiPlaylistGetItemsResponseImpl
+    implements _KodiPlaylistGetItemsResponse {
+  const _$KodiPlaylistGetItemsResponseImpl(
       {required final List<KodiListItemAll> items, required this.limits})
       : _items = items;
 
-  factory _$_KodiPlaylistGetItemsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlaylistGetItemsResponseFromJson(json);
+  factory _$KodiPlaylistGetItemsResponseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPlaylistGetItemsResponseImplFromJson(json);
 
   final List<KodiListItemAll> _items;
   @override
@@ -393,29 +424,32 @@ class _$_KodiPlaylistGetItemsResponse implements _KodiPlaylistGetItemsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlaylistGetItemsResponse &&
+            other is _$KodiPlaylistGetItemsResponseImpl &&
             const DeepCollectionEquality().equals(other._items, _items) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_items), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistGetItemsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlaylistGetItemsResponseCopyWith<_$_KodiPlaylistGetItemsResponse>
-      get copyWith => __$$_KodiPlaylistGetItemsResponseCopyWithImpl<
-          _$_KodiPlaylistGetItemsResponse>(this, _$identity);
+  _$$KodiPlaylistGetItemsResponseImplCopyWith<
+          _$KodiPlaylistGetItemsResponseImpl>
+      get copyWith => __$$KodiPlaylistGetItemsResponseImplCopyWithImpl<
+          _$KodiPlaylistGetItemsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlaylistGetItemsResponseToJson(
+    return _$$KodiPlaylistGetItemsResponseImplToJson(
       this,
     );
   }
@@ -426,17 +460,21 @@ abstract class _KodiPlaylistGetItemsResponse
   const factory _KodiPlaylistGetItemsResponse(
           {required final List<KodiListItemAll> items,
           required final KodiListLimitsReturned limits}) =
-      _$_KodiPlaylistGetItemsResponse;
+      _$KodiPlaylistGetItemsResponseImpl;
 
   factory _KodiPlaylistGetItemsResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlaylistGetItemsResponse.fromJson;
+      _$KodiPlaylistGetItemsResponseImpl.fromJson;
 
   @override
   List<KodiListItemAll> get items;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of KodiPlaylistGetItemsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlaylistGetItemsResponseCopyWith<_$_KodiPlaylistGetItemsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistGetItemsResponseImplCopyWith<
+          _$KodiPlaylistGetItemsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

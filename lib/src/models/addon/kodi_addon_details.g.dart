@@ -6,8 +6,9 @@ part of 'kodi_addon_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiAddonDetails _$$_KodiAddonDetailsFromJson(Map<String, dynamic> json) =>
-    _$_KodiAddonDetails(
+_$KodiAddonDetailsImpl _$$KodiAddonDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiAddonDetailsImpl(
       addonId: json['addonid'] as String,
       author: json['author'] as String?,
       broken: json['broken'] as bool?,
@@ -27,7 +28,7 @@ _$_KodiAddonDetails _$$_KodiAddonDetailsFromJson(Map<String, dynamic> json) =>
       installed: json['installed'] as bool?,
       name: json['name'] as String?,
       path: json['path'] as String?,
-      rating: json['rating'] as int?,
+      rating: (json['rating'] as num?)?.toInt(),
       summary: json['summary'] as String?,
       thumbnail: json['thumbnail'] as String?,
       type: $enumDecode(_$KodiAddonTypeEnumMap, json['type']),
@@ -35,7 +36,8 @@ _$_KodiAddonDetails _$$_KodiAddonDetailsFromJson(Map<String, dynamic> json) =>
       label: json['label'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiAddonDetailsToJson(_$_KodiAddonDetails instance) {
+Map<String, dynamic> _$$KodiAddonDetailsImplToJson(
+    _$KodiAddonDetailsImpl instance) {
   final val = <String, dynamic>{
     'addonid': instance.addonId,
   };
@@ -114,17 +116,17 @@ const _$KodiAddonTypeEnumMap = {
   KodiAddonType.kodiAddonGame: 'kodi.addon.game',
 };
 
-_$_KodiAddonDetailsDependencies _$$_KodiAddonDetailsDependenciesFromJson(
+_$KodiAddonDetailsDependenciesImpl _$$KodiAddonDetailsDependenciesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAddonDetailsDependencies(
+    _$KodiAddonDetailsDependenciesImpl(
       addonId: json['addonid'] as String,
       minVersion: json['minversion'] as String,
       optional: json['optional'] as bool,
       version: json['version'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAddonDetailsDependenciesToJson(
-        _$_KodiAddonDetailsDependencies instance) =>
+Map<String, dynamic> _$$KodiAddonDetailsDependenciesImplToJson(
+        _$KodiAddonDetailsDependenciesImpl instance) =>
     <String, dynamic>{
       'addonid': instance.addonId,
       'minversion': instance.minVersion,
@@ -132,15 +134,15 @@ Map<String, dynamic> _$$_KodiAddonDetailsDependenciesToJson(
       'version': instance.version,
     };
 
-_$_KodiAddonDetailsExtraInfo _$$_KodiAddonDetailsExtraInfoFromJson(
+_$KodiAddonDetailsExtraInfoImpl _$$KodiAddonDetailsExtraInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAddonDetailsExtraInfo(
+    _$KodiAddonDetailsExtraInfoImpl(
       key: json['key'] as String,
       value: json['value'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAddonDetailsExtraInfoToJson(
-        _$_KodiAddonDetailsExtraInfo instance) =>
+Map<String, dynamic> _$$KodiAddonDetailsExtraInfoImplToJson(
+        _$KodiAddonDetailsExtraInfoImpl instance) =>
     <String, dynamic>{
       'key': instance.key,
       'value': instance.value,

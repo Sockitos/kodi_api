@@ -6,12 +6,12 @@ part of 'remove_tv_show.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RemoveTVShow _$$_RemoveTVShowFromJson(Map<String, dynamic> json) =>
-    _$_RemoveTVShow(
-      json['tvshowid'] as int,
+_$RemoveTVShowImpl _$$RemoveTVShowImplFromJson(Map<String, dynamic> json) =>
+    _$RemoveTVShowImpl(
+      (json['tvshowid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_RemoveTVShowToJson(_$_RemoveTVShow instance) =>
+Map<String, dynamic> _$$RemoveTVShowImplToJson(_$RemoveTVShowImpl instance) =>
     <String, dynamic>{
       'tvshowid': instance.id,
     };

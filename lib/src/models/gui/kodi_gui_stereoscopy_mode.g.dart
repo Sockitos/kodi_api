@@ -6,15 +6,15 @@ part of 'kodi_gui_stereoscopy_mode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiGUIStereoscopyMode _$$_KodiGUIStereoscopyModeFromJson(
+_$KodiGUIStereoscopyModeImpl _$$KodiGUIStereoscopyModeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiGUIStereoscopyMode(
+    _$KodiGUIStereoscopyModeImpl(
       label: json['label'] as String,
       mode: $enumDecode(_$KodiGUIStereoscopicModeEnumMap, json['mode']),
     );
 
-Map<String, dynamic> _$$_KodiGUIStereoscopyModeToJson(
-        _$_KodiGUIStereoscopyMode instance) =>
+Map<String, dynamic> _$$KodiGUIStereoscopyModeImplToJson(
+        _$KodiGUIStereoscopyModeImpl instance) =>
     <String, dynamic>{
       'label': instance.label,
       'mode': _$KodiGUIStereoscopicModeEnumMap[instance.mode]!,

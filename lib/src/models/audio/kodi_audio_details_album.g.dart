@@ -6,11 +6,11 @@ part of 'kodi_audio_details_album.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiAudioDetailsAlbum _$$_KodiAudioDetailsAlbumFromJson(
+_$KodiAudioDetailsAlbumImpl _$$KodiAudioDetailsAlbumImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAudioDetailsAlbum(
-      albumDuration: json['albumduration'] as int?,
-      albumId: json['albumid'] as int,
+    _$KodiAudioDetailsAlbumImpl(
+      albumDuration: (json['albumduration'] as num?)?.toInt(),
+      albumId: (json['albumid'] as num).toInt(),
       albumLabel: json['albumlabel'] as String?,
       albumStatus: json['albumstatus'] as String?,
       compilation: json['compilation'] as bool?,
@@ -20,25 +20,27 @@ _$_KodiAudioDetailsAlbum _$$_KodiAudioDetailsAlbumFromJson(
       mood: (json['mood'] as List<dynamic>?)?.map((e) => e as String).toList(),
       musicBrainzAlbumId: json['musicbrainzalbumid'] as String?,
       musicBrainzReleaseGroupId: json['musicbrainzreleasegroupid'] as String?,
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       releasetype: $enumDecodeNullable(
           _$KodiAudioAlbumReleaseTypeEnumMap, json['releasetype']),
       songGenres: (json['songgenres'] as List<dynamic>?)
           ?.map(
               (e) => KodiAudioDetailsGenres.fromJson(e as Map<String, dynamic>))
           .toList(),
-      sourceId:
-          (json['sourceid'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      sourceId: (json['sourceid'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       style:
           (json['style'] as List<dynamic>?)?.map((e) => e as String).toList(),
       theme:
           (json['theme'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      totaldiscs: json['totaldiscs'] as int?,
+      totaldiscs: (json['totaldiscs'] as num?)?.toInt(),
       type: json['type'] as String?,
       artist:
           (json['artist'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      artistId:
-          (json['artistid'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      artistId: (json['artistid'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       displayArtist: json['displayartist'] as String?,
       musicBrainzAlbumArtistId:
           (json['musicbrainzalbumartistid'] as List<dynamic>?)
@@ -49,9 +51,9 @@ _$_KodiAudioDetailsAlbum _$$_KodiAudioDetailsAlbumFromJson(
       releaseDate: const DateTimeConverter().fromJson(json['releasedate']),
       sortArtist: json['sortartist'] as String?,
       title: json['title'] as String?,
-      userRating: json['userrating'] as int?,
-      votes: json['votes'] as int?,
-      year: json['year'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
+      votes: (json['votes'] as num?)?.toInt(),
+      year: (json['year'] as num?)?.toInt(),
       art: json['art'] == null
           ? null
           : KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
@@ -63,8 +65,8 @@ _$_KodiAudioDetailsAlbum _$$_KodiAudioDetailsAlbumFromJson(
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAudioDetailsAlbumToJson(
-    _$_KodiAudioDetailsAlbum instance) {
+Map<String, dynamic> _$$KodiAudioDetailsAlbumImplToJson(
+    _$KodiAudioDetailsAlbumImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

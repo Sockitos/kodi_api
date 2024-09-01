@@ -12,7 +12,7 @@ part of 'kodi_addon_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAddonDetails _$KodiAddonDetailsFromJson(Map<String, dynamic> json) {
   return _KodiAddonDetails.fromJson(json);
@@ -44,8 +44,12 @@ mixin _$KodiAddonDetails {
   String? get version => throw _privateConstructorUsedError;
   String? get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAddonDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAddonDetailsCopyWith<KodiAddonDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -88,6 +92,8 @@ class _$KodiAddonDetailsCopyWithImpl<$Res, $Val extends KodiAddonDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -193,11 +199,11 @@ class _$KodiAddonDetailsCopyWithImpl<$Res, $Val extends KodiAddonDetails>
 }
 
 /// @nodoc
-abstract class _$$_KodiAddonDetailsCopyWith<$Res>
+abstract class _$$KodiAddonDetailsImplCopyWith<$Res>
     implements $KodiAddonDetailsCopyWith<$Res> {
-  factory _$$_KodiAddonDetailsCopyWith(
-          _$_KodiAddonDetails value, $Res Function(_$_KodiAddonDetails) then) =
-      __$$_KodiAddonDetailsCopyWithImpl<$Res>;
+  factory _$$KodiAddonDetailsImplCopyWith(_$KodiAddonDetailsImpl value,
+          $Res Function(_$KodiAddonDetailsImpl) then) =
+      __$$KodiAddonDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -223,13 +229,15 @@ abstract class _$$_KodiAddonDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAddonDetailsCopyWithImpl<$Res>
-    extends _$KodiAddonDetailsCopyWithImpl<$Res, _$_KodiAddonDetails>
-    implements _$$_KodiAddonDetailsCopyWith<$Res> {
-  __$$_KodiAddonDetailsCopyWithImpl(
-      _$_KodiAddonDetails _value, $Res Function(_$_KodiAddonDetails) _then)
+class __$$KodiAddonDetailsImplCopyWithImpl<$Res>
+    extends _$KodiAddonDetailsCopyWithImpl<$Res, _$KodiAddonDetailsImpl>
+    implements _$$KodiAddonDetailsImplCopyWith<$Res> {
+  __$$KodiAddonDetailsImplCopyWithImpl(_$KodiAddonDetailsImpl _value,
+      $Res Function(_$KodiAddonDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -253,7 +261,7 @@ class __$$_KodiAddonDetailsCopyWithImpl<$Res>
     Object? version = freezed,
     Object? label = freezed,
   }) {
-    return _then(_$_KodiAddonDetails(
+    return _then(_$KodiAddonDetailsImpl(
       addonId: null == addonId
           ? _value.addonId
           : addonId // ignore: cast_nullable_to_non_nullable
@@ -336,8 +344,8 @@ class __$$_KodiAddonDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAddonDetails implements _KodiAddonDetails {
-  const _$_KodiAddonDetails(
+class _$KodiAddonDetailsImpl implements _KodiAddonDetails {
+  const _$KodiAddonDetailsImpl(
       {@JsonKey(name: 'addonid') required this.addonId,
       this.author,
       this.broken,
@@ -361,8 +369,8 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
       : _dependencies = dependencies,
         _extraInfo = extraInfo;
 
-  factory _$_KodiAddonDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAddonDetailsFromJson(json);
+  factory _$KodiAddonDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAddonDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'addonid')
@@ -427,10 +435,10 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAddonDetails &&
+            other is _$KodiAddonDetailsImpl &&
             (identical(other.addonId, addonId) || other.addonId == addonId) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.broken, broken) || other.broken == broken) &&
@@ -459,7 +467,7 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -484,15 +492,18 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAddonDetailsCopyWith<_$_KodiAddonDetails> get copyWith =>
-      __$$_KodiAddonDetailsCopyWithImpl<_$_KodiAddonDetails>(this, _$identity);
+  _$$KodiAddonDetailsImplCopyWith<_$KodiAddonDetailsImpl> get copyWith =>
+      __$$KodiAddonDetailsImplCopyWithImpl<_$KodiAddonDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAddonDetailsToJson(
+    return _$$KodiAddonDetailsImplToJson(
       this,
     );
   }
@@ -519,10 +530,10 @@ abstract class _KodiAddonDetails implements KodiAddonDetails {
       final String? thumbnail,
       required final KodiAddonType type,
       final String? version,
-      final String? label}) = _$_KodiAddonDetails;
+      final String? label}) = _$KodiAddonDetailsImpl;
 
   factory _KodiAddonDetails.fromJson(Map<String, dynamic> json) =
-      _$_KodiAddonDetails.fromJson;
+      _$KodiAddonDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'addonid')
@@ -564,9 +575,12 @@ abstract class _KodiAddonDetails implements KodiAddonDetails {
   String? get version;
   @override
   String? get label;
+
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAddonDetailsCopyWith<_$_KodiAddonDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonDetailsImplCopyWith<_$KodiAddonDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -584,8 +598,12 @@ mixin _$KodiAddonDetailsDependencies {
   bool get optional => throw _privateConstructorUsedError;
   String get version => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAddonDetailsDependencies to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAddonDetailsDependenciesCopyWith<KodiAddonDetailsDependencies>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -616,6 +634,8 @@ class _$KodiAddonDetailsDependenciesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -646,12 +666,12 @@ class _$KodiAddonDetailsDependenciesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAddonDetailsDependenciesCopyWith<$Res>
+abstract class _$$KodiAddonDetailsDependenciesImplCopyWith<$Res>
     implements $KodiAddonDetailsDependenciesCopyWith<$Res> {
-  factory _$$_KodiAddonDetailsDependenciesCopyWith(
-          _$_KodiAddonDetailsDependencies value,
-          $Res Function(_$_KodiAddonDetailsDependencies) then) =
-      __$$_KodiAddonDetailsDependenciesCopyWithImpl<$Res>;
+  factory _$$KodiAddonDetailsDependenciesImplCopyWith(
+          _$KodiAddonDetailsDependenciesImpl value,
+          $Res Function(_$KodiAddonDetailsDependenciesImpl) then) =
+      __$$KodiAddonDetailsDependenciesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -662,15 +682,17 @@ abstract class _$$_KodiAddonDetailsDependenciesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAddonDetailsDependenciesCopyWithImpl<$Res>
+class __$$KodiAddonDetailsDependenciesImplCopyWithImpl<$Res>
     extends _$KodiAddonDetailsDependenciesCopyWithImpl<$Res,
-        _$_KodiAddonDetailsDependencies>
-    implements _$$_KodiAddonDetailsDependenciesCopyWith<$Res> {
-  __$$_KodiAddonDetailsDependenciesCopyWithImpl(
-      _$_KodiAddonDetailsDependencies _value,
-      $Res Function(_$_KodiAddonDetailsDependencies) _then)
+        _$KodiAddonDetailsDependenciesImpl>
+    implements _$$KodiAddonDetailsDependenciesImplCopyWith<$Res> {
+  __$$KodiAddonDetailsDependenciesImplCopyWithImpl(
+      _$KodiAddonDetailsDependenciesImpl _value,
+      $Res Function(_$KodiAddonDetailsDependenciesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -679,7 +701,7 @@ class __$$_KodiAddonDetailsDependenciesCopyWithImpl<$Res>
     Object? optional = null,
     Object? version = null,
   }) {
-    return _then(_$_KodiAddonDetailsDependencies(
+    return _then(_$KodiAddonDetailsDependenciesImpl(
       addonId: null == addonId
           ? _value.addonId
           : addonId // ignore: cast_nullable_to_non_nullable
@@ -702,15 +724,17 @@ class __$$_KodiAddonDetailsDependenciesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAddonDetailsDependencies implements _KodiAddonDetailsDependencies {
-  const _$_KodiAddonDetailsDependencies(
+class _$KodiAddonDetailsDependenciesImpl
+    implements _KodiAddonDetailsDependencies {
+  const _$KodiAddonDetailsDependenciesImpl(
       {@JsonKey(name: 'addonid') required this.addonId,
       @JsonKey(name: 'minversion') required this.minVersion,
       required this.optional,
       required this.version});
 
-  factory _$_KodiAddonDetailsDependencies.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAddonDetailsDependenciesFromJson(json);
+  factory _$KodiAddonDetailsDependenciesImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiAddonDetailsDependenciesImplFromJson(json);
 
   @override
   @JsonKey(name: 'addonid')
@@ -729,10 +753,10 @@ class _$_KodiAddonDetailsDependencies implements _KodiAddonDetailsDependencies {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAddonDetailsDependencies &&
+            other is _$KodiAddonDetailsDependenciesImpl &&
             (identical(other.addonId, addonId) || other.addonId == addonId) &&
             (identical(other.minVersion, minVersion) ||
                 other.minVersion == minVersion) &&
@@ -741,21 +765,24 @@ class _$_KodiAddonDetailsDependencies implements _KodiAddonDetailsDependencies {
             (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, addonId, minVersion, optional, version);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAddonDetailsDependenciesCopyWith<_$_KodiAddonDetailsDependencies>
-      get copyWith => __$$_KodiAddonDetailsDependenciesCopyWithImpl<
-          _$_KodiAddonDetailsDependencies>(this, _$identity);
+  _$$KodiAddonDetailsDependenciesImplCopyWith<
+          _$KodiAddonDetailsDependenciesImpl>
+      get copyWith => __$$KodiAddonDetailsDependenciesImplCopyWithImpl<
+          _$KodiAddonDetailsDependenciesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAddonDetailsDependenciesToJson(
+    return _$$KodiAddonDetailsDependenciesImplToJson(
       this,
     );
   }
@@ -767,10 +794,10 @@ abstract class _KodiAddonDetailsDependencies
       {@JsonKey(name: 'addonid') required final String addonId,
       @JsonKey(name: 'minversion') required final String minVersion,
       required final bool optional,
-      required final String version}) = _$_KodiAddonDetailsDependencies;
+      required final String version}) = _$KodiAddonDetailsDependenciesImpl;
 
   factory _KodiAddonDetailsDependencies.fromJson(Map<String, dynamic> json) =
-      _$_KodiAddonDetailsDependencies.fromJson;
+      _$KodiAddonDetailsDependenciesImpl.fromJson;
 
   @override
   @JsonKey(name: 'addonid')
@@ -782,9 +809,13 @@ abstract class _KodiAddonDetailsDependencies
   bool get optional;
   @override
   String get version;
+
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAddonDetailsDependenciesCopyWith<_$_KodiAddonDetailsDependencies>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonDetailsDependenciesImplCopyWith<
+          _$KodiAddonDetailsDependenciesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -798,8 +829,12 @@ mixin _$KodiAddonDetailsExtraInfo {
   String get key => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAddonDetailsExtraInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAddonDetailsExtraInfoCopyWith<KodiAddonDetailsExtraInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -824,6 +859,8 @@ class _$KodiAddonDetailsExtraInfoCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -844,34 +881,36 @@ class _$KodiAddonDetailsExtraInfoCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAddonDetailsExtraInfoCopyWith<$Res>
+abstract class _$$KodiAddonDetailsExtraInfoImplCopyWith<$Res>
     implements $KodiAddonDetailsExtraInfoCopyWith<$Res> {
-  factory _$$_KodiAddonDetailsExtraInfoCopyWith(
-          _$_KodiAddonDetailsExtraInfo value,
-          $Res Function(_$_KodiAddonDetailsExtraInfo) then) =
-      __$$_KodiAddonDetailsExtraInfoCopyWithImpl<$Res>;
+  factory _$$KodiAddonDetailsExtraInfoImplCopyWith(
+          _$KodiAddonDetailsExtraInfoImpl value,
+          $Res Function(_$KodiAddonDetailsExtraInfoImpl) then) =
+      __$$KodiAddonDetailsExtraInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String key, String value});
 }
 
 /// @nodoc
-class __$$_KodiAddonDetailsExtraInfoCopyWithImpl<$Res>
+class __$$KodiAddonDetailsExtraInfoImplCopyWithImpl<$Res>
     extends _$KodiAddonDetailsExtraInfoCopyWithImpl<$Res,
-        _$_KodiAddonDetailsExtraInfo>
-    implements _$$_KodiAddonDetailsExtraInfoCopyWith<$Res> {
-  __$$_KodiAddonDetailsExtraInfoCopyWithImpl(
-      _$_KodiAddonDetailsExtraInfo _value,
-      $Res Function(_$_KodiAddonDetailsExtraInfo) _then)
+        _$KodiAddonDetailsExtraInfoImpl>
+    implements _$$KodiAddonDetailsExtraInfoImplCopyWith<$Res> {
+  __$$KodiAddonDetailsExtraInfoImplCopyWithImpl(
+      _$KodiAddonDetailsExtraInfoImpl _value,
+      $Res Function(_$KodiAddonDetailsExtraInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? key = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiAddonDetailsExtraInfo(
+    return _then(_$KodiAddonDetailsExtraInfoImpl(
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -886,11 +925,12 @@ class __$$_KodiAddonDetailsExtraInfoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAddonDetailsExtraInfo implements _KodiAddonDetailsExtraInfo {
-  const _$_KodiAddonDetailsExtraInfo({required this.key, required this.value});
+class _$KodiAddonDetailsExtraInfoImpl implements _KodiAddonDetailsExtraInfo {
+  const _$KodiAddonDetailsExtraInfoImpl(
+      {required this.key, required this.value});
 
-  factory _$_KodiAddonDetailsExtraInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAddonDetailsExtraInfoFromJson(json);
+  factory _$KodiAddonDetailsExtraInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAddonDetailsExtraInfoImplFromJson(json);
 
   @override
   final String key;
@@ -903,28 +943,30 @@ class _$_KodiAddonDetailsExtraInfo implements _KodiAddonDetailsExtraInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAddonDetailsExtraInfo &&
+            other is _$KodiAddonDetailsExtraInfoImpl &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAddonDetailsExtraInfoCopyWith<_$_KodiAddonDetailsExtraInfo>
-      get copyWith => __$$_KodiAddonDetailsExtraInfoCopyWithImpl<
-          _$_KodiAddonDetailsExtraInfo>(this, _$identity);
+  _$$KodiAddonDetailsExtraInfoImplCopyWith<_$KodiAddonDetailsExtraInfoImpl>
+      get copyWith => __$$KodiAddonDetailsExtraInfoImplCopyWithImpl<
+          _$KodiAddonDetailsExtraInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAddonDetailsExtraInfoToJson(
+    return _$$KodiAddonDetailsExtraInfoImplToJson(
       this,
     );
   }
@@ -933,17 +975,20 @@ class _$_KodiAddonDetailsExtraInfo implements _KodiAddonDetailsExtraInfo {
 abstract class _KodiAddonDetailsExtraInfo implements KodiAddonDetailsExtraInfo {
   const factory _KodiAddonDetailsExtraInfo(
       {required final String key,
-      required final String value}) = _$_KodiAddonDetailsExtraInfo;
+      required final String value}) = _$KodiAddonDetailsExtraInfoImpl;
 
   factory _KodiAddonDetailsExtraInfo.fromJson(Map<String, dynamic> json) =
-      _$_KodiAddonDetailsExtraInfo.fromJson;
+      _$KodiAddonDetailsExtraInfoImpl.fromJson;
 
   @override
   String get key;
   @override
   String get value;
+
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAddonDetailsExtraInfoCopyWith<_$_KodiAddonDetailsExtraInfo>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonDetailsExtraInfoImplCopyWith<_$KodiAddonDetailsExtraInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

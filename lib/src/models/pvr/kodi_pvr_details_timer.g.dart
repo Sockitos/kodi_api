@@ -6,18 +6,18 @@ part of 'kodi_pvr_details_timer.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsTimer _$$_KodiPVRDetailsTimerFromJson(
+_$KodiPVRDetailsTimerImpl _$$KodiPVRDetailsTimerImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsTimer(
-      broadcastId: json['broadcastid'] as int,
-      channelId: json['channelid'] as int,
-      clientId: json['clientid'] as int,
+    _$KodiPVRDetailsTimerImpl(
+      broadcastId: (json['broadcastid'] as num).toInt(),
+      channelId: (json['channelid'] as num).toInt(),
+      clientId: (json['clientid'] as num).toInt(),
       directory: json['directory'] as String,
       endAnyTime: json['endanytime'] as bool,
-      endMargin: json['endmargin'] as int,
+      endMargin: (json['endmargin'] as num).toInt(),
       endTime: DateTime.parse(json['endtime'] as String),
       epgSearchRequired: json['epgsearchrequired'] as String,
-      epgUid: json['epguid'] as int,
+      epgUid: (json['epguid'] as num).toInt(),
       file: json['file'] as String,
       firstDay: DateTime.parse(json['firstday'] as String),
       fullTextEpgSearch: json['fulltextepgsearch'] as bool,
@@ -26,18 +26,19 @@ _$_KodiPVRDetailsTimer _$$_KodiPVRDetailsTimerFromJson(
       isReadOnly: json['isreadonly'] as bool,
       isReminder: json['isreminder'] as bool,
       isTimerRule: json['istimerrule'] as bool,
-      lifetime: json['lifetime'] as int,
-      maxRecordings: json['maxrecordings'] as int,
-      preventDuplicateEpisodes: json['preventduplicateepisodes'] as int,
-      priority: json['priority'] as int,
-      recordingGroup: json['recordinggroup'] as int,
-      runtime: json['runtime'] as int,
+      lifetime: (json['lifetime'] as num).toInt(),
+      maxRecordings: (json['maxrecordings'] as num).toInt(),
+      preventDuplicateEpisodes:
+          (json['preventduplicateepisodes'] as num).toInt(),
+      priority: (json['priority'] as num).toInt(),
+      recordingGroup: (json['recordinggroup'] as num).toInt(),
+      runtime: (json['runtime'] as num).toInt(),
       startAnyTime: json['startanytime'] as bool,
-      startMargin: json['startmargin'] as int,
+      startMargin: (json['startmargin'] as num).toInt(),
       startTime: DateTime.parse(json['starttime'] as String),
       state: $enumDecode(_$KodiPVRTimerStateEnumMap, json['state']),
       summary: json['summary'] as String,
-      timerId: json['timerid'] as int,
+      timerId: (json['timerid'] as num).toInt(),
       title: json['title'] as String,
       weekdays: (json['weekdays'] as List<dynamic>)
           .map((e) => $enumDecode(_$KodiGlobalWeekdayEnumMap, e))
@@ -45,8 +46,8 @@ _$_KodiPVRDetailsTimer _$$_KodiPVRDetailsTimerFromJson(
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsTimerToJson(
-        _$_KodiPVRDetailsTimer instance) =>
+Map<String, dynamic> _$$KodiPVRDetailsTimerImplToJson(
+        _$KodiPVRDetailsTimerImpl instance) =>
     <String, dynamic>{
       'broadcastid': instance.broadcastId,
       'channelid': instance.channelId,

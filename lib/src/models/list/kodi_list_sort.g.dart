@@ -6,8 +6,8 @@ part of 'kodi_list_sort.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListSort _$$_KodiListSortFromJson(Map<String, dynamic> json) =>
-    _$_KodiListSort(
+_$KodiListSortImpl _$$KodiListSortImplFromJson(Map<String, dynamic> json) =>
+    _$KodiListSortImpl(
       ignoreArticle: json['ignorearticle'] as bool? ?? false,
       method: $enumDecodeNullable(_$KodiListSortValueEnumMap, json['method']) ??
           KodiListSortValue.none,
@@ -16,7 +16,7 @@ _$_KodiListSort _$$_KodiListSortFromJson(Map<String, dynamic> json) =>
       userArtistSortName: json['useartistsortname'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_KodiListSortToJson(_$_KodiListSort instance) =>
+Map<String, dynamic> _$$KodiListSortImplToJson(_$KodiListSortImpl instance) =>
     <String, dynamic>{
       'ignorearticle': instance.ignoreArticle,
       'method': _$KodiListSortValueEnumMap[instance.method]!,

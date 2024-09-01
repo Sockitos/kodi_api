@@ -6,7 +6,7 @@ part of 'record.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Record _$$_RecordFromJson(Map<String, dynamic> json) => _$_Record(
+_$RecordImpl _$$RecordImplFromJson(Map<String, dynamic> json) => _$RecordImpl(
       record: json['record'] == null
           ? const KodiGlobalToggle.enumerator(KodiGlobalToggleEnum.toggle)
           : KodiGlobalToggle.fromJson(json['record'] as Map<String, dynamic>),
@@ -15,7 +15,7 @@ _$_Record _$$_RecordFromJson(Map<String, dynamic> json) => _$_Record(
           : const RecordChannelConverter().fromJson(json['channel']),
     );
 
-Map<String, dynamic> _$$_RecordToJson(_$_Record instance) {
+Map<String, dynamic> _$$RecordImplToJson(_$RecordImpl instance) {
   final val = <String, dynamic>{
     'record': instance.record.toJson(),
   };
@@ -31,26 +31,29 @@ Map<String, dynamic> _$$_RecordToJson(_$_Record instance) {
   return val;
 }
 
-_$_RecordChannelInt _$$_RecordChannelIntFromJson(Map<String, dynamic> json) =>
-    _$_RecordChannelInt(
-      json['channel'] as int,
+_$RecordChannelIntImpl _$$RecordChannelIntImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RecordChannelIntImpl(
+      (json['channel'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_RecordChannelIntToJson(_$_RecordChannelInt instance) =>
+Map<String, dynamic> _$$RecordChannelIntImplToJson(
+        _$RecordChannelIntImpl instance) =>
     <String, dynamic>{
       'channel': instance.channel,
       'runtimeType': instance.$type,
     };
 
-_$_RecordChannelEnum _$$_RecordChannelEnumFromJson(Map<String, dynamic> json) =>
-    _$_RecordChannelEnum(
+_$RecordChannelEnumImpl _$$RecordChannelEnumImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RecordChannelEnumImpl(
       $enumDecode(_$KodiPVRChannelEnumMap, json['channel']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_RecordChannelEnumToJson(
-        _$_RecordChannelEnum instance) =>
+Map<String, dynamic> _$$RecordChannelEnumImplToJson(
+        _$RecordChannelEnumImpl instance) =>
     <String, dynamic>{
       'channel': _$KodiPVRChannelEnumMap[instance.channel]!,
       'runtimeType': instance.$type,

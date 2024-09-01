@@ -12,7 +12,7 @@ part of 'kodi_video_cast.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiVideoCast _$KodiVideoCastFromJson(Map<String, dynamic> json) {
   return _KodiVideoCast.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$KodiVideoCast {
   String get role => throw _privateConstructorUsedError;
   String? get thumbnail => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiVideoCast to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiVideoCast
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiVideoCastCopyWith<KodiVideoCast> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$KodiVideoCastCopyWithImpl<$Res, $Val extends KodiVideoCast>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiVideoCast
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,24 +86,26 @@ class _$KodiVideoCastCopyWithImpl<$Res, $Val extends KodiVideoCast>
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoCastCopyWith<$Res>
+abstract class _$$KodiVideoCastImplCopyWith<$Res>
     implements $KodiVideoCastCopyWith<$Res> {
-  factory _$$_KodiVideoCastCopyWith(
-          _$_KodiVideoCast value, $Res Function(_$_KodiVideoCast) then) =
-      __$$_KodiVideoCastCopyWithImpl<$Res>;
+  factory _$$KodiVideoCastImplCopyWith(
+          _$KodiVideoCastImpl value, $Res Function(_$KodiVideoCastImpl) then) =
+      __$$KodiVideoCastImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, int order, String role, String? thumbnail});
 }
 
 /// @nodoc
-class __$$_KodiVideoCastCopyWithImpl<$Res>
-    extends _$KodiVideoCastCopyWithImpl<$Res, _$_KodiVideoCast>
-    implements _$$_KodiVideoCastCopyWith<$Res> {
-  __$$_KodiVideoCastCopyWithImpl(
-      _$_KodiVideoCast _value, $Res Function(_$_KodiVideoCast) _then)
+class __$$KodiVideoCastImplCopyWithImpl<$Res>
+    extends _$KodiVideoCastCopyWithImpl<$Res, _$KodiVideoCastImpl>
+    implements _$$KodiVideoCastImplCopyWith<$Res> {
+  __$$KodiVideoCastImplCopyWithImpl(
+      _$KodiVideoCastImpl _value, $Res Function(_$KodiVideoCastImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoCast
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,7 +114,7 @@ class __$$_KodiVideoCastCopyWithImpl<$Res>
     Object? role = null,
     Object? thumbnail = freezed,
   }) {
-    return _then(_$_KodiVideoCast(
+    return _then(_$KodiVideoCastImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -129,15 +137,15 @@ class __$$_KodiVideoCastCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoCast implements _KodiVideoCast {
-  const _$_KodiVideoCast(
+class _$KodiVideoCastImpl implements _KodiVideoCast {
+  const _$KodiVideoCastImpl(
       {required this.name,
       required this.order,
       required this.role,
       this.thumbnail});
 
-  factory _$_KodiVideoCast.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiVideoCastFromJson(json);
+  factory _$KodiVideoCastImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiVideoCastImplFromJson(json);
 
   @override
   final String name;
@@ -154,10 +162,10 @@ class _$_KodiVideoCast implements _KodiVideoCast {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoCast &&
+            other is _$KodiVideoCastImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.order, order) || other.order == order) &&
             (identical(other.role, role) || other.role == role) &&
@@ -165,19 +173,21 @@ class _$_KodiVideoCast implements _KodiVideoCast {
                 other.thumbnail == thumbnail));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, order, role, thumbnail);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoCast
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoCastCopyWith<_$_KodiVideoCast> get copyWith =>
-      __$$_KodiVideoCastCopyWithImpl<_$_KodiVideoCast>(this, _$identity);
+  _$$KodiVideoCastImplCopyWith<_$KodiVideoCastImpl> get copyWith =>
+      __$$KodiVideoCastImplCopyWithImpl<_$KodiVideoCastImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoCastToJson(
+    return _$$KodiVideoCastImplToJson(
       this,
     );
   }
@@ -188,10 +198,10 @@ abstract class _KodiVideoCast implements KodiVideoCast {
       {required final String name,
       required final int order,
       required final String role,
-      final String? thumbnail}) = _$_KodiVideoCast;
+      final String? thumbnail}) = _$KodiVideoCastImpl;
 
   factory _KodiVideoCast.fromJson(Map<String, dynamic> json) =
-      _$_KodiVideoCast.fromJson;
+      _$KodiVideoCastImpl.fromJson;
 
   @override
   String get name;
@@ -201,8 +211,11 @@ abstract class _KodiVideoCast implements KodiVideoCast {
   String get role;
   @override
   String? get thumbnail;
+
+  /// Create a copy of KodiVideoCast
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiVideoCastCopyWith<_$_KodiVideoCast> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoCastImplCopyWith<_$KodiVideoCastImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

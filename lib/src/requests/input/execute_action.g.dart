@@ -6,12 +6,12 @@ part of 'execute_action.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ExecuteAction _$$_ExecuteActionFromJson(Map<String, dynamic> json) =>
-    _$_ExecuteAction(
+_$ExecuteActionImpl _$$ExecuteActionImplFromJson(Map<String, dynamic> json) =>
+    _$ExecuteActionImpl(
       $enumDecode(_$KodiInputActionEnumMap, json['action']),
     );
 
-Map<String, dynamic> _$$_ExecuteActionToJson(_$_ExecuteAction instance) =>
+Map<String, dynamic> _$$ExecuteActionImplToJson(_$ExecuteActionImpl instance) =>
     <String, dynamic>{
       'action': _$KodiInputActionEnumMap[instance.action]!,
     };

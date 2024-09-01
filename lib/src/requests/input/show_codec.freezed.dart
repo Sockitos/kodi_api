@@ -12,7 +12,7 @@ part of 'show_codec.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ShowCodec _$ShowCodecFromJson(Map<String, dynamic> json) {
   return _ShowCodec.fromJson(json);
@@ -20,6 +20,7 @@ ShowCodec _$ShowCodecFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ShowCodec {
+  /// Serializes this ShowCodec to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,31 +39,37 @@ class _$ShowCodecCopyWithImpl<$Res, $Val extends ShowCodec>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ShowCodec
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_ShowCodecCopyWith<$Res> {
-  factory _$$_ShowCodecCopyWith(
-          _$_ShowCodec value, $Res Function(_$_ShowCodec) then) =
-      __$$_ShowCodecCopyWithImpl<$Res>;
+abstract class _$$ShowCodecImplCopyWith<$Res> {
+  factory _$$ShowCodecImplCopyWith(
+          _$ShowCodecImpl value, $Res Function(_$ShowCodecImpl) then) =
+      __$$ShowCodecImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ShowCodecCopyWithImpl<$Res>
-    extends _$ShowCodecCopyWithImpl<$Res, _$_ShowCodec>
-    implements _$$_ShowCodecCopyWith<$Res> {
-  __$$_ShowCodecCopyWithImpl(
-      _$_ShowCodec _value, $Res Function(_$_ShowCodec) _then)
+class __$$ShowCodecImplCopyWithImpl<$Res>
+    extends _$ShowCodecCopyWithImpl<$Res, _$ShowCodecImpl>
+    implements _$$ShowCodecImplCopyWith<$Res> {
+  __$$ShowCodecImplCopyWithImpl(
+      _$ShowCodecImpl _value, $Res Function(_$ShowCodecImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ShowCodec
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShowCodec extends _ShowCodec {
-  const _$_ShowCodec() : super._();
+class _$ShowCodecImpl extends _ShowCodec {
+  const _$ShowCodecImpl() : super._();
 
-  factory _$_ShowCodec.fromJson(Map<String, dynamic> json) =>
-      _$$_ShowCodecFromJson(json);
+  factory _$ShowCodecImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ShowCodecImplFromJson(json);
 
   @override
   String toString() {
@@ -70,27 +77,27 @@ class _$_ShowCodec extends _ShowCodec {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ShowCodec);
+        (other.runtimeType == runtimeType && other is _$ShowCodecImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowCodecToJson(
+    return _$$ShowCodecImplToJson(
       this,
     );
   }
 }
 
 abstract class _ShowCodec extends ShowCodec {
-  const factory _ShowCodec() = _$_ShowCodec;
+  const factory _ShowCodec() = _$ShowCodecImpl;
   const _ShowCodec._() : super._();
 
   factory _ShowCodec.fromJson(Map<String, dynamic> json) =
-      _$_ShowCodec.fromJson;
+      _$ShowCodecImpl.fromJson;
 }

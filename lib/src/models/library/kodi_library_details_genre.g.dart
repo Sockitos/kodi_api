@@ -6,19 +6,20 @@ part of 'kodi_library_details_genre.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiLibraryDetailsGenre _$$_KodiLibraryDetailsGenreFromJson(
+_$KodiLibraryDetailsGenreImpl _$$KodiLibraryDetailsGenreImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiLibraryDetailsGenre(
-      genreId: json['genreid'] as int,
-      sourceId:
-          (json['sourceid'] as List<dynamic>?)?.map((e) => e as int).toList(),
+    _$KodiLibraryDetailsGenreImpl(
+      genreId: (json['genreid'] as num).toInt(),
+      sourceId: (json['sourceid'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       thumbnail: json['thumbnail'] as String?,
       title: json['title'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiLibraryDetailsGenreToJson(
-    _$_KodiLibraryDetailsGenre instance) {
+Map<String, dynamic> _$$KodiLibraryDetailsGenreImplToJson(
+    _$KodiLibraryDetailsGenreImpl instance) {
   final val = <String, dynamic>{
     'genreid': instance.genreId,
   };

@@ -12,7 +12,7 @@ part of 'select.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Select _$SelectFromJson(Map<String, dynamic> json) {
   return _Select.fromJson(json);
@@ -20,6 +20,7 @@ Select _$SelectFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Select {
+  /// Serializes this Select to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,29 +39,37 @@ class _$SelectCopyWithImpl<$Res, $Val extends Select>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Select
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SelectCopyWith<$Res> {
-  factory _$$_SelectCopyWith(_$_Select value, $Res Function(_$_Select) then) =
-      __$$_SelectCopyWithImpl<$Res>;
+abstract class _$$SelectImplCopyWith<$Res> {
+  factory _$$SelectImplCopyWith(
+          _$SelectImpl value, $Res Function(_$SelectImpl) then) =
+      __$$SelectImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SelectCopyWithImpl<$Res>
-    extends _$SelectCopyWithImpl<$Res, _$_Select>
-    implements _$$_SelectCopyWith<$Res> {
-  __$$_SelectCopyWithImpl(_$_Select _value, $Res Function(_$_Select) _then)
+class __$$SelectImplCopyWithImpl<$Res>
+    extends _$SelectCopyWithImpl<$Res, _$SelectImpl>
+    implements _$$SelectImplCopyWith<$Res> {
+  __$$SelectImplCopyWithImpl(
+      _$SelectImpl _value, $Res Function(_$SelectImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Select
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Select extends _Select {
-  const _$_Select() : super._();
+class _$SelectImpl extends _Select {
+  const _$SelectImpl() : super._();
 
-  factory _$_Select.fromJson(Map<String, dynamic> json) =>
-      _$$_SelectFromJson(json);
+  factory _$SelectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SelectImplFromJson(json);
 
   @override
   String toString() {
@@ -68,26 +77,26 @@ class _$_Select extends _Select {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Select);
+        (other.runtimeType == runtimeType && other is _$SelectImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SelectToJson(
+    return _$$SelectImplToJson(
       this,
     );
   }
 }
 
 abstract class _Select extends Select {
-  const factory _Select() = _$_Select;
+  const factory _Select() = _$SelectImpl;
   const _Select._() : super._();
 
-  factory _Select.fromJson(Map<String, dynamic> json) = _$_Select.fromJson;
+  factory _Select.fromJson(Map<String, dynamic> json) = _$SelectImpl.fromJson;
 }

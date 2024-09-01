@@ -12,7 +12,7 @@ part of 'get_broadcast_is_playable.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetBroadcastIsPlayable _$GetBroadcastIsPlayableFromJson(
     Map<String, dynamic> json) {
@@ -24,8 +24,12 @@ mixin _$GetBroadcastIsPlayable {
   @JsonKey(name: 'broadcastid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this GetBroadcastIsPlayable to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetBroadcastIsPlayable
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetBroadcastIsPlayableCopyWith<GetBroadcastIsPlayable> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GetBroadcastIsPlayableCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetBroadcastIsPlayable
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -65,31 +71,35 @@ class _$GetBroadcastIsPlayableCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetBroadcastIsPlayableCopyWith<$Res>
+abstract class _$$GetBroadcastIsPlayableImplCopyWith<$Res>
     implements $GetBroadcastIsPlayableCopyWith<$Res> {
-  factory _$$_GetBroadcastIsPlayableCopyWith(_$_GetBroadcastIsPlayable value,
-          $Res Function(_$_GetBroadcastIsPlayable) then) =
-      __$$_GetBroadcastIsPlayableCopyWithImpl<$Res>;
+  factory _$$GetBroadcastIsPlayableImplCopyWith(
+          _$GetBroadcastIsPlayableImpl value,
+          $Res Function(_$GetBroadcastIsPlayableImpl) then) =
+      __$$GetBroadcastIsPlayableImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'broadcastid') int id});
 }
 
 /// @nodoc
-class __$$_GetBroadcastIsPlayableCopyWithImpl<$Res>
+class __$$GetBroadcastIsPlayableImplCopyWithImpl<$Res>
     extends _$GetBroadcastIsPlayableCopyWithImpl<$Res,
-        _$_GetBroadcastIsPlayable>
-    implements _$$_GetBroadcastIsPlayableCopyWith<$Res> {
-  __$$_GetBroadcastIsPlayableCopyWithImpl(_$_GetBroadcastIsPlayable _value,
-      $Res Function(_$_GetBroadcastIsPlayable) _then)
+        _$GetBroadcastIsPlayableImpl>
+    implements _$$GetBroadcastIsPlayableImplCopyWith<$Res> {
+  __$$GetBroadcastIsPlayableImplCopyWithImpl(
+      _$GetBroadcastIsPlayableImpl _value,
+      $Res Function(_$GetBroadcastIsPlayableImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetBroadcastIsPlayable
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_GetBroadcastIsPlayable(
+    return _then(_$GetBroadcastIsPlayableImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -100,12 +110,12 @@ class __$$_GetBroadcastIsPlayableCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBroadcastIsPlayable extends _GetBroadcastIsPlayable {
-  const _$_GetBroadcastIsPlayable(@JsonKey(name: 'broadcastid') this.id)
+class _$GetBroadcastIsPlayableImpl extends _GetBroadcastIsPlayable {
+  const _$GetBroadcastIsPlayableImpl(@JsonKey(name: 'broadcastid') this.id)
       : super._();
 
-  factory _$_GetBroadcastIsPlayable.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBroadcastIsPlayableFromJson(json);
+  factory _$GetBroadcastIsPlayableImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBroadcastIsPlayableImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -117,27 +127,29 @@ class _$_GetBroadcastIsPlayable extends _GetBroadcastIsPlayable {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBroadcastIsPlayable &&
+            other is _$GetBroadcastIsPlayableImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetBroadcastIsPlayable
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBroadcastIsPlayableCopyWith<_$_GetBroadcastIsPlayable> get copyWith =>
-      __$$_GetBroadcastIsPlayableCopyWithImpl<_$_GetBroadcastIsPlayable>(
-          this, _$identity);
+  _$$GetBroadcastIsPlayableImplCopyWith<_$GetBroadcastIsPlayableImpl>
+      get copyWith => __$$GetBroadcastIsPlayableImplCopyWithImpl<
+          _$GetBroadcastIsPlayableImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBroadcastIsPlayableToJson(
+    return _$$GetBroadcastIsPlayableImplToJson(
       this,
     );
   }
@@ -145,17 +157,21 @@ class _$_GetBroadcastIsPlayable extends _GetBroadcastIsPlayable {
 
 abstract class _GetBroadcastIsPlayable extends GetBroadcastIsPlayable {
   const factory _GetBroadcastIsPlayable(
-      @JsonKey(name: 'broadcastid') final int id) = _$_GetBroadcastIsPlayable;
+          @JsonKey(name: 'broadcastid') final int id) =
+      _$GetBroadcastIsPlayableImpl;
   const _GetBroadcastIsPlayable._() : super._();
 
   factory _GetBroadcastIsPlayable.fromJson(Map<String, dynamic> json) =
-      _$_GetBroadcastIsPlayable.fromJson;
+      _$GetBroadcastIsPlayableImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastid')
   int get id;
+
+  /// Create a copy of GetBroadcastIsPlayable
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetBroadcastIsPlayableCopyWith<_$_GetBroadcastIsPlayable> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetBroadcastIsPlayableImplCopyWith<_$GetBroadcastIsPlayableImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

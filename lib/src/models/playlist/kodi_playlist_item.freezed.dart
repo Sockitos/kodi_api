@@ -12,7 +12,7 @@ part of 'kodi_playlist_item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlaylistItem _$KodiPlaylistItemFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -130,6 +130,8 @@ mixin _$KodiPlaylistItem {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlaylistItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -149,31 +151,36 @@ class _$KodiPlaylistItemCopyWithImpl<$Res, $Val extends KodiPlaylistItem>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemFileCopyWith<$Res> {
-  factory _$$KodiPlaylistItemFileCopyWith(_$KodiPlaylistItemFile value,
-          $Res Function(_$KodiPlaylistItemFile) then) =
-      __$$KodiPlaylistItemFileCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemFileImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemFileImplCopyWith(_$KodiPlaylistItemFileImpl value,
+          $Res Function(_$KodiPlaylistItemFileImpl) then) =
+      __$$KodiPlaylistItemFileImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String file});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemFileCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemFile>
-    implements _$$KodiPlaylistItemFileCopyWith<$Res> {
-  __$$KodiPlaylistItemFileCopyWithImpl(_$KodiPlaylistItemFile _value,
-      $Res Function(_$KodiPlaylistItemFile) _then)
+class __$$KodiPlaylistItemFileImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemFileImpl>
+    implements _$$KodiPlaylistItemFileImplCopyWith<$Res> {
+  __$$KodiPlaylistItemFileImplCopyWithImpl(_$KodiPlaylistItemFileImpl _value,
+      $Res Function(_$KodiPlaylistItemFileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? file = null,
   }) {
-    return _then(_$KodiPlaylistItemFile(
+    return _then(_$KodiPlaylistItemFileImpl(
       file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
@@ -184,12 +191,12 @@ class __$$KodiPlaylistItemFileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemFile implements KodiPlaylistItemFile {
-  const _$KodiPlaylistItemFile({required this.file, final String? $type})
+class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
+  const _$KodiPlaylistItemFileImpl({required this.file, final String? $type})
       : $type = $type ?? 'file';
 
-  factory _$KodiPlaylistItemFile.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemFileFromJson(json);
+  factory _$KodiPlaylistItemFileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemFileImplFromJson(json);
 
   @override
   final String file;
@@ -203,23 +210,26 @@ class _$KodiPlaylistItemFile implements KodiPlaylistItemFile {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemFile &&
+            other is _$KodiPlaylistItemFileImpl &&
             (identical(other.file, file) || other.file == file));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, file);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemFileCopyWith<_$KodiPlaylistItemFile> get copyWith =>
-      __$$KodiPlaylistItemFileCopyWithImpl<_$KodiPlaylistItemFile>(
-          this, _$identity);
+  _$$KodiPlaylistItemFileImplCopyWith<_$KodiPlaylistItemFileImpl>
+      get copyWith =>
+          __$$KodiPlaylistItemFileImplCopyWithImpl<_$KodiPlaylistItemFileImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -334,7 +344,7 @@ class _$KodiPlaylistItemFile implements KodiPlaylistItemFile {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemFileToJson(
+    return _$$KodiPlaylistItemFileImplToJson(
       this,
     );
   }
@@ -342,37 +352,42 @@ class _$KodiPlaylistItemFile implements KodiPlaylistItemFile {
 
 abstract class KodiPlaylistItemFile implements KodiPlaylistItem {
   const factory KodiPlaylistItemFile({required final String file}) =
-      _$KodiPlaylistItemFile;
+      _$KodiPlaylistItemFileImpl;
 
   factory KodiPlaylistItemFile.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemFile.fromJson;
+      _$KodiPlaylistItemFileImpl.fromJson;
 
   String get file;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemFileCopyWith<_$KodiPlaylistItemFile> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemFileImplCopyWith<_$KodiPlaylistItemFileImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemDirectoryMediaRecursiveCopyWith<$Res> {
-  factory _$$KodiPlaylistItemDirectoryMediaRecursiveCopyWith(
-          _$KodiPlaylistItemDirectoryMediaRecursive value,
-          $Res Function(_$KodiPlaylistItemDirectoryMediaRecursive) then) =
-      __$$KodiPlaylistItemDirectoryMediaRecursiveCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWith(
+          _$KodiPlaylistItemDirectoryMediaRecursiveImpl value,
+          $Res Function(_$KodiPlaylistItemDirectoryMediaRecursiveImpl) then) =
+      __$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String directory, KodiFilesMedia media, bool recursive});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemDirectoryMediaRecursiveCopyWithImpl<$Res>
+class __$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWithImpl<$Res>
     extends _$KodiPlaylistItemCopyWithImpl<$Res,
-        _$KodiPlaylistItemDirectoryMediaRecursive>
-    implements _$$KodiPlaylistItemDirectoryMediaRecursiveCopyWith<$Res> {
-  __$$KodiPlaylistItemDirectoryMediaRecursiveCopyWithImpl(
-      _$KodiPlaylistItemDirectoryMediaRecursive _value,
-      $Res Function(_$KodiPlaylistItemDirectoryMediaRecursive) _then)
+        _$KodiPlaylistItemDirectoryMediaRecursiveImpl>
+    implements _$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWith<$Res> {
+  __$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWithImpl(
+      _$KodiPlaylistItemDirectoryMediaRecursiveImpl _value,
+      $Res Function(_$KodiPlaylistItemDirectoryMediaRecursiveImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -380,7 +395,7 @@ class __$$KodiPlaylistItemDirectoryMediaRecursiveCopyWithImpl<$Res>
     Object? media = null,
     Object? recursive = null,
   }) {
-    return _then(_$KodiPlaylistItemDirectoryMediaRecursive(
+    return _then(_$KodiPlaylistItemDirectoryMediaRecursiveImpl(
       directory: null == directory
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
@@ -399,18 +414,18 @@ class __$$KodiPlaylistItemDirectoryMediaRecursiveCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemDirectoryMediaRecursive
+class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
     implements KodiPlaylistItemDirectoryMediaRecursive {
-  const _$KodiPlaylistItemDirectoryMediaRecursive(
+  const _$KodiPlaylistItemDirectoryMediaRecursiveImpl(
       {required this.directory,
       required this.media,
       required this.recursive,
       final String? $type})
       : $type = $type ?? 'directoryMediaRecursive';
 
-  factory _$KodiPlaylistItemDirectoryMediaRecursive.fromJson(
+  factory _$KodiPlaylistItemDirectoryMediaRecursiveImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemDirectoryMediaRecursiveFromJson(json);
+      _$$KodiPlaylistItemDirectoryMediaRecursiveImplFromJson(json);
 
   @override
   final String directory;
@@ -428,10 +443,10 @@ class _$KodiPlaylistItemDirectoryMediaRecursive
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemDirectoryMediaRecursive &&
+            other is _$KodiPlaylistItemDirectoryMediaRecursiveImpl &&
             (identical(other.directory, directory) ||
                 other.directory == directory) &&
             (identical(other.media, media) || other.media == media) &&
@@ -439,17 +454,20 @@ class _$KodiPlaylistItemDirectoryMediaRecursive
                 other.recursive == recursive));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, directory, media, recursive);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemDirectoryMediaRecursiveCopyWith<
-          _$KodiPlaylistItemDirectoryMediaRecursive>
-      get copyWith => __$$KodiPlaylistItemDirectoryMediaRecursiveCopyWithImpl<
-          _$KodiPlaylistItemDirectoryMediaRecursive>(this, _$identity);
+  _$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWith<
+          _$KodiPlaylistItemDirectoryMediaRecursiveImpl>
+      get copyWith =>
+          __$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWithImpl<
+              _$KodiPlaylistItemDirectoryMediaRecursiveImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -564,7 +582,7 @@ class _$KodiPlaylistItemDirectoryMediaRecursive
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemDirectoryMediaRecursiveToJson(
+    return _$$KodiPlaylistItemDirectoryMediaRecursiveImplToJson(
       this,
     );
   }
@@ -576,44 +594,51 @@ abstract class KodiPlaylistItemDirectoryMediaRecursive
           {required final String directory,
           required final KodiFilesMedia media,
           required final bool recursive}) =
-      _$KodiPlaylistItemDirectoryMediaRecursive;
+      _$KodiPlaylistItemDirectoryMediaRecursiveImpl;
 
   factory KodiPlaylistItemDirectoryMediaRecursive.fromJson(
           Map<String, dynamic> json) =
-      _$KodiPlaylistItemDirectoryMediaRecursive.fromJson;
+      _$KodiPlaylistItemDirectoryMediaRecursiveImpl.fromJson;
 
   String get directory;
   KodiFilesMedia get media;
   bool get recursive;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemDirectoryMediaRecursiveCopyWith<
-          _$KodiPlaylistItemDirectoryMediaRecursive>
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemDirectoryMediaRecursiveImplCopyWith<
+          _$KodiPlaylistItemDirectoryMediaRecursiveImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemMovieIdCopyWith<$Res> {
-  factory _$$KodiPlaylistItemMovieIdCopyWith(_$KodiPlaylistItemMovieId value,
-          $Res Function(_$KodiPlaylistItemMovieId) then) =
-      __$$KodiPlaylistItemMovieIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemMovieIdImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemMovieIdImplCopyWith(
+          _$KodiPlaylistItemMovieIdImpl value,
+          $Res Function(_$KodiPlaylistItemMovieIdImpl) then) =
+      __$$KodiPlaylistItemMovieIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int movieId});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemMovieIdCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemMovieId>
-    implements _$$KodiPlaylistItemMovieIdCopyWith<$Res> {
-  __$$KodiPlaylistItemMovieIdCopyWithImpl(_$KodiPlaylistItemMovieId _value,
-      $Res Function(_$KodiPlaylistItemMovieId) _then)
+class __$$KodiPlaylistItemMovieIdImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemMovieIdImpl>
+    implements _$$KodiPlaylistItemMovieIdImplCopyWith<$Res> {
+  __$$KodiPlaylistItemMovieIdImplCopyWithImpl(
+      _$KodiPlaylistItemMovieIdImpl _value,
+      $Res Function(_$KodiPlaylistItemMovieIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? movieId = null,
   }) {
-    return _then(_$KodiPlaylistItemMovieId(
+    return _then(_$KodiPlaylistItemMovieIdImpl(
       movieId: null == movieId
           ? _value.movieId
           : movieId // ignore: cast_nullable_to_non_nullable
@@ -624,12 +649,13 @@ class __$$KodiPlaylistItemMovieIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemMovieId implements KodiPlaylistItemMovieId {
-  const _$KodiPlaylistItemMovieId({required this.movieId, final String? $type})
+class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
+  const _$KodiPlaylistItemMovieIdImpl(
+      {required this.movieId, final String? $type})
       : $type = $type ?? 'movieId';
 
-  factory _$KodiPlaylistItemMovieId.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemMovieIdFromJson(json);
+  factory _$KodiPlaylistItemMovieIdImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemMovieIdImplFromJson(json);
 
   @override
   final int movieId;
@@ -643,23 +669,25 @@ class _$KodiPlaylistItemMovieId implements KodiPlaylistItemMovieId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemMovieId &&
+            other is _$KodiPlaylistItemMovieIdImpl &&
             (identical(other.movieId, movieId) || other.movieId == movieId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, movieId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemMovieIdCopyWith<_$KodiPlaylistItemMovieId> get copyWith =>
-      __$$KodiPlaylistItemMovieIdCopyWithImpl<_$KodiPlaylistItemMovieId>(
-          this, _$identity);
+  _$$KodiPlaylistItemMovieIdImplCopyWith<_$KodiPlaylistItemMovieIdImpl>
+      get copyWith => __$$KodiPlaylistItemMovieIdImplCopyWithImpl<
+          _$KodiPlaylistItemMovieIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -774,7 +802,7 @@ class _$KodiPlaylistItemMovieId implements KodiPlaylistItemMovieId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemMovieIdToJson(
+    return _$$KodiPlaylistItemMovieIdImplToJson(
       this,
     );
   }
@@ -782,41 +810,48 @@ class _$KodiPlaylistItemMovieId implements KodiPlaylistItemMovieId {
 
 abstract class KodiPlaylistItemMovieId implements KodiPlaylistItem {
   const factory KodiPlaylistItemMovieId({required final int movieId}) =
-      _$KodiPlaylistItemMovieId;
+      _$KodiPlaylistItemMovieIdImpl;
 
   factory KodiPlaylistItemMovieId.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemMovieId.fromJson;
+      _$KodiPlaylistItemMovieIdImpl.fromJson;
 
   int get movieId;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemMovieIdCopyWith<_$KodiPlaylistItemMovieId> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemMovieIdImplCopyWith<_$KodiPlaylistItemMovieIdImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemEpisodeIdCopyWith<$Res> {
-  factory _$$KodiPlaylistItemEpisodeIdCopyWith(
-          _$KodiPlaylistItemEpisodeId value,
-          $Res Function(_$KodiPlaylistItemEpisodeId) then) =
-      __$$KodiPlaylistItemEpisodeIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemEpisodeIdImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemEpisodeIdImplCopyWith(
+          _$KodiPlaylistItemEpisodeIdImpl value,
+          $Res Function(_$KodiPlaylistItemEpisodeIdImpl) then) =
+      __$$KodiPlaylistItemEpisodeIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int episodeId});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemEpisodeIdCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemEpisodeId>
-    implements _$$KodiPlaylistItemEpisodeIdCopyWith<$Res> {
-  __$$KodiPlaylistItemEpisodeIdCopyWithImpl(_$KodiPlaylistItemEpisodeId _value,
-      $Res Function(_$KodiPlaylistItemEpisodeId) _then)
+class __$$KodiPlaylistItemEpisodeIdImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res,
+        _$KodiPlaylistItemEpisodeIdImpl>
+    implements _$$KodiPlaylistItemEpisodeIdImplCopyWith<$Res> {
+  __$$KodiPlaylistItemEpisodeIdImplCopyWithImpl(
+      _$KodiPlaylistItemEpisodeIdImpl _value,
+      $Res Function(_$KodiPlaylistItemEpisodeIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? episodeId = null,
   }) {
-    return _then(_$KodiPlaylistItemEpisodeId(
+    return _then(_$KodiPlaylistItemEpisodeIdImpl(
       episodeId: null == episodeId
           ? _value.episodeId
           : episodeId // ignore: cast_nullable_to_non_nullable
@@ -827,13 +862,13 @@ class __$$KodiPlaylistItemEpisodeIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemEpisodeId implements KodiPlaylistItemEpisodeId {
-  const _$KodiPlaylistItemEpisodeId(
+class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
+  const _$KodiPlaylistItemEpisodeIdImpl(
       {required this.episodeId, final String? $type})
       : $type = $type ?? 'episodeId';
 
-  factory _$KodiPlaylistItemEpisodeId.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemEpisodeIdFromJson(json);
+  factory _$KodiPlaylistItemEpisodeIdImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemEpisodeIdImplFromJson(json);
 
   @override
   final int episodeId;
@@ -847,24 +882,26 @@ class _$KodiPlaylistItemEpisodeId implements KodiPlaylistItemEpisodeId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemEpisodeId &&
+            other is _$KodiPlaylistItemEpisodeIdImpl &&
             (identical(other.episodeId, episodeId) ||
                 other.episodeId == episodeId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, episodeId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemEpisodeIdCopyWith<_$KodiPlaylistItemEpisodeId>
-      get copyWith => __$$KodiPlaylistItemEpisodeIdCopyWithImpl<
-          _$KodiPlaylistItemEpisodeId>(this, _$identity);
+  _$$KodiPlaylistItemEpisodeIdImplCopyWith<_$KodiPlaylistItemEpisodeIdImpl>
+      get copyWith => __$$KodiPlaylistItemEpisodeIdImplCopyWithImpl<
+          _$KodiPlaylistItemEpisodeIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -979,7 +1016,7 @@ class _$KodiPlaylistItemEpisodeId implements KodiPlaylistItemEpisodeId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemEpisodeIdToJson(
+    return _$$KodiPlaylistItemEpisodeIdImplToJson(
       this,
     );
   }
@@ -987,42 +1024,48 @@ class _$KodiPlaylistItemEpisodeId implements KodiPlaylistItemEpisodeId {
 
 abstract class KodiPlaylistItemEpisodeId implements KodiPlaylistItem {
   const factory KodiPlaylistItemEpisodeId({required final int episodeId}) =
-      _$KodiPlaylistItemEpisodeId;
+      _$KodiPlaylistItemEpisodeIdImpl;
 
   factory KodiPlaylistItemEpisodeId.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemEpisodeId.fromJson;
+      _$KodiPlaylistItemEpisodeIdImpl.fromJson;
 
   int get episodeId;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemEpisodeIdCopyWith<_$KodiPlaylistItemEpisodeId>
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemEpisodeIdImplCopyWith<_$KodiPlaylistItemEpisodeIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemMusicVideoIdCopyWith<$Res> {
-  factory _$$KodiPlaylistItemMusicVideoIdCopyWith(
-          _$KodiPlaylistItemMusicVideoId value,
-          $Res Function(_$KodiPlaylistItemMusicVideoId) then) =
-      __$$KodiPlaylistItemMusicVideoIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemMusicVideoIdImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemMusicVideoIdImplCopyWith(
+          _$KodiPlaylistItemMusicVideoIdImpl value,
+          $Res Function(_$KodiPlaylistItemMusicVideoIdImpl) then) =
+      __$$KodiPlaylistItemMusicVideoIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int musicVideoid});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemMusicVideoIdCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemMusicVideoId>
-    implements _$$KodiPlaylistItemMusicVideoIdCopyWith<$Res> {
-  __$$KodiPlaylistItemMusicVideoIdCopyWithImpl(
-      _$KodiPlaylistItemMusicVideoId _value,
-      $Res Function(_$KodiPlaylistItemMusicVideoId) _then)
+class __$$KodiPlaylistItemMusicVideoIdImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res,
+        _$KodiPlaylistItemMusicVideoIdImpl>
+    implements _$$KodiPlaylistItemMusicVideoIdImplCopyWith<$Res> {
+  __$$KodiPlaylistItemMusicVideoIdImplCopyWithImpl(
+      _$KodiPlaylistItemMusicVideoIdImpl _value,
+      $Res Function(_$KodiPlaylistItemMusicVideoIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? musicVideoid = null,
   }) {
-    return _then(_$KodiPlaylistItemMusicVideoId(
+    return _then(_$KodiPlaylistItemMusicVideoIdImpl(
       musicVideoid: null == musicVideoid
           ? _value.musicVideoid
           : musicVideoid // ignore: cast_nullable_to_non_nullable
@@ -1033,13 +1076,15 @@ class __$$KodiPlaylistItemMusicVideoIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemMusicVideoId implements KodiPlaylistItemMusicVideoId {
-  const _$KodiPlaylistItemMusicVideoId(
+class _$KodiPlaylistItemMusicVideoIdImpl
+    implements KodiPlaylistItemMusicVideoId {
+  const _$KodiPlaylistItemMusicVideoIdImpl(
       {required this.musicVideoid, final String? $type})
       : $type = $type ?? 'musicVideoid';
 
-  factory _$KodiPlaylistItemMusicVideoId.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemMusicVideoIdFromJson(json);
+  factory _$KodiPlaylistItemMusicVideoIdImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemMusicVideoIdImplFromJson(json);
 
   @override
   final int musicVideoid;
@@ -1053,24 +1098,27 @@ class _$KodiPlaylistItemMusicVideoId implements KodiPlaylistItemMusicVideoId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemMusicVideoId &&
+            other is _$KodiPlaylistItemMusicVideoIdImpl &&
             (identical(other.musicVideoid, musicVideoid) ||
                 other.musicVideoid == musicVideoid));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, musicVideoid);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemMusicVideoIdCopyWith<_$KodiPlaylistItemMusicVideoId>
-      get copyWith => __$$KodiPlaylistItemMusicVideoIdCopyWithImpl<
-          _$KodiPlaylistItemMusicVideoId>(this, _$identity);
+  _$$KodiPlaylistItemMusicVideoIdImplCopyWith<
+          _$KodiPlaylistItemMusicVideoIdImpl>
+      get copyWith => __$$KodiPlaylistItemMusicVideoIdImplCopyWithImpl<
+          _$KodiPlaylistItemMusicVideoIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1185,7 +1233,7 @@ class _$KodiPlaylistItemMusicVideoId implements KodiPlaylistItemMusicVideoId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemMusicVideoIdToJson(
+    return _$$KodiPlaylistItemMusicVideoIdImplToJson(
       this,
     );
   }
@@ -1193,40 +1241,48 @@ class _$KodiPlaylistItemMusicVideoId implements KodiPlaylistItemMusicVideoId {
 
 abstract class KodiPlaylistItemMusicVideoId implements KodiPlaylistItem {
   const factory KodiPlaylistItemMusicVideoId(
-      {required final int musicVideoid}) = _$KodiPlaylistItemMusicVideoId;
+      {required final int musicVideoid}) = _$KodiPlaylistItemMusicVideoIdImpl;
 
   factory KodiPlaylistItemMusicVideoId.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemMusicVideoId.fromJson;
+      _$KodiPlaylistItemMusicVideoIdImpl.fromJson;
 
   int get musicVideoid;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemMusicVideoIdCopyWith<_$KodiPlaylistItemMusicVideoId>
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemMusicVideoIdImplCopyWith<
+          _$KodiPlaylistItemMusicVideoIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemArtistIdCopyWith<$Res> {
-  factory _$$KodiPlaylistItemArtistIdCopyWith(_$KodiPlaylistItemArtistId value,
-          $Res Function(_$KodiPlaylistItemArtistId) then) =
-      __$$KodiPlaylistItemArtistIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemArtistIdImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemArtistIdImplCopyWith(
+          _$KodiPlaylistItemArtistIdImpl value,
+          $Res Function(_$KodiPlaylistItemArtistIdImpl) then) =
+      __$$KodiPlaylistItemArtistIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int artistId});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemArtistIdCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemArtistId>
-    implements _$$KodiPlaylistItemArtistIdCopyWith<$Res> {
-  __$$KodiPlaylistItemArtistIdCopyWithImpl(_$KodiPlaylistItemArtistId _value,
-      $Res Function(_$KodiPlaylistItemArtistId) _then)
+class __$$KodiPlaylistItemArtistIdImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemArtistIdImpl>
+    implements _$$KodiPlaylistItemArtistIdImplCopyWith<$Res> {
+  __$$KodiPlaylistItemArtistIdImplCopyWithImpl(
+      _$KodiPlaylistItemArtistIdImpl _value,
+      $Res Function(_$KodiPlaylistItemArtistIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artistId = null,
   }) {
-    return _then(_$KodiPlaylistItemArtistId(
+    return _then(_$KodiPlaylistItemArtistIdImpl(
       artistId: null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
@@ -1237,13 +1293,13 @@ class __$$KodiPlaylistItemArtistIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemArtistId implements KodiPlaylistItemArtistId {
-  const _$KodiPlaylistItemArtistId(
+class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
+  const _$KodiPlaylistItemArtistIdImpl(
       {required this.artistId, final String? $type})
       : $type = $type ?? 'artistId';
 
-  factory _$KodiPlaylistItemArtistId.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemArtistIdFromJson(json);
+  factory _$KodiPlaylistItemArtistIdImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemArtistIdImplFromJson(json);
 
   @override
   final int artistId;
@@ -1257,25 +1313,26 @@ class _$KodiPlaylistItemArtistId implements KodiPlaylistItemArtistId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemArtistId &&
+            other is _$KodiPlaylistItemArtistIdImpl &&
             (identical(other.artistId, artistId) ||
                 other.artistId == artistId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artistId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemArtistIdCopyWith<_$KodiPlaylistItemArtistId>
-      get copyWith =>
-          __$$KodiPlaylistItemArtistIdCopyWithImpl<_$KodiPlaylistItemArtistId>(
-              this, _$identity);
+  _$$KodiPlaylistItemArtistIdImplCopyWith<_$KodiPlaylistItemArtistIdImpl>
+      get copyWith => __$$KodiPlaylistItemArtistIdImplCopyWithImpl<
+          _$KodiPlaylistItemArtistIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1390,7 +1447,7 @@ class _$KodiPlaylistItemArtistId implements KodiPlaylistItemArtistId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemArtistIdToJson(
+    return _$$KodiPlaylistItemArtistIdImplToJson(
       this,
     );
   }
@@ -1398,40 +1455,47 @@ class _$KodiPlaylistItemArtistId implements KodiPlaylistItemArtistId {
 
 abstract class KodiPlaylistItemArtistId implements KodiPlaylistItem {
   const factory KodiPlaylistItemArtistId({required final int artistId}) =
-      _$KodiPlaylistItemArtistId;
+      _$KodiPlaylistItemArtistIdImpl;
 
   factory KodiPlaylistItemArtistId.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemArtistId.fromJson;
+      _$KodiPlaylistItemArtistIdImpl.fromJson;
 
   int get artistId;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemArtistIdCopyWith<_$KodiPlaylistItemArtistId>
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemArtistIdImplCopyWith<_$KodiPlaylistItemArtistIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemAlbumIdCopyWith<$Res> {
-  factory _$$KodiPlaylistItemAlbumIdCopyWith(_$KodiPlaylistItemAlbumId value,
-          $Res Function(_$KodiPlaylistItemAlbumId) then) =
-      __$$KodiPlaylistItemAlbumIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemAlbumIdImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemAlbumIdImplCopyWith(
+          _$KodiPlaylistItemAlbumIdImpl value,
+          $Res Function(_$KodiPlaylistItemAlbumIdImpl) then) =
+      __$$KodiPlaylistItemAlbumIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int albumId});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemAlbumIdCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemAlbumId>
-    implements _$$KodiPlaylistItemAlbumIdCopyWith<$Res> {
-  __$$KodiPlaylistItemAlbumIdCopyWithImpl(_$KodiPlaylistItemAlbumId _value,
-      $Res Function(_$KodiPlaylistItemAlbumId) _then)
+class __$$KodiPlaylistItemAlbumIdImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemAlbumIdImpl>
+    implements _$$KodiPlaylistItemAlbumIdImplCopyWith<$Res> {
+  __$$KodiPlaylistItemAlbumIdImplCopyWithImpl(
+      _$KodiPlaylistItemAlbumIdImpl _value,
+      $Res Function(_$KodiPlaylistItemAlbumIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumId = null,
   }) {
-    return _then(_$KodiPlaylistItemAlbumId(
+    return _then(_$KodiPlaylistItemAlbumIdImpl(
       albumId: null == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
@@ -1442,12 +1506,13 @@ class __$$KodiPlaylistItemAlbumIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemAlbumId implements KodiPlaylistItemAlbumId {
-  const _$KodiPlaylistItemAlbumId({required this.albumId, final String? $type})
+class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
+  const _$KodiPlaylistItemAlbumIdImpl(
+      {required this.albumId, final String? $type})
       : $type = $type ?? 'albumId';
 
-  factory _$KodiPlaylistItemAlbumId.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemAlbumIdFromJson(json);
+  factory _$KodiPlaylistItemAlbumIdImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemAlbumIdImplFromJson(json);
 
   @override
   final int albumId;
@@ -1461,23 +1526,25 @@ class _$KodiPlaylistItemAlbumId implements KodiPlaylistItemAlbumId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemAlbumId &&
+            other is _$KodiPlaylistItemAlbumIdImpl &&
             (identical(other.albumId, albumId) || other.albumId == albumId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, albumId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemAlbumIdCopyWith<_$KodiPlaylistItemAlbumId> get copyWith =>
-      __$$KodiPlaylistItemAlbumIdCopyWithImpl<_$KodiPlaylistItemAlbumId>(
-          this, _$identity);
+  _$$KodiPlaylistItemAlbumIdImplCopyWith<_$KodiPlaylistItemAlbumIdImpl>
+      get copyWith => __$$KodiPlaylistItemAlbumIdImplCopyWithImpl<
+          _$KodiPlaylistItemAlbumIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1592,7 +1659,7 @@ class _$KodiPlaylistItemAlbumId implements KodiPlaylistItemAlbumId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemAlbumIdToJson(
+    return _$$KodiPlaylistItemAlbumIdImplToJson(
       this,
     );
   }
@@ -1600,40 +1667,47 @@ class _$KodiPlaylistItemAlbumId implements KodiPlaylistItemAlbumId {
 
 abstract class KodiPlaylistItemAlbumId implements KodiPlaylistItem {
   const factory KodiPlaylistItemAlbumId({required final int albumId}) =
-      _$KodiPlaylistItemAlbumId;
+      _$KodiPlaylistItemAlbumIdImpl;
 
   factory KodiPlaylistItemAlbumId.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemAlbumId.fromJson;
+      _$KodiPlaylistItemAlbumIdImpl.fromJson;
 
   int get albumId;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemAlbumIdCopyWith<_$KodiPlaylistItemAlbumId> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemAlbumIdImplCopyWith<_$KodiPlaylistItemAlbumIdImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemSongIdCopyWith<$Res> {
-  factory _$$KodiPlaylistItemSongIdCopyWith(_$KodiPlaylistItemSongId value,
-          $Res Function(_$KodiPlaylistItemSongId) then) =
-      __$$KodiPlaylistItemSongIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemSongIdImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemSongIdImplCopyWith(
+          _$KodiPlaylistItemSongIdImpl value,
+          $Res Function(_$KodiPlaylistItemSongIdImpl) then) =
+      __$$KodiPlaylistItemSongIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int songId});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemSongIdCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemSongId>
-    implements _$$KodiPlaylistItemSongIdCopyWith<$Res> {
-  __$$KodiPlaylistItemSongIdCopyWithImpl(_$KodiPlaylistItemSongId _value,
-      $Res Function(_$KodiPlaylistItemSongId) _then)
+class __$$KodiPlaylistItemSongIdImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemSongIdImpl>
+    implements _$$KodiPlaylistItemSongIdImplCopyWith<$Res> {
+  __$$KodiPlaylistItemSongIdImplCopyWithImpl(
+      _$KodiPlaylistItemSongIdImpl _value,
+      $Res Function(_$KodiPlaylistItemSongIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? songId = null,
   }) {
-    return _then(_$KodiPlaylistItemSongId(
+    return _then(_$KodiPlaylistItemSongIdImpl(
       songId: null == songId
           ? _value.songId
           : songId // ignore: cast_nullable_to_non_nullable
@@ -1644,12 +1718,13 @@ class __$$KodiPlaylistItemSongIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemSongId implements KodiPlaylistItemSongId {
-  const _$KodiPlaylistItemSongId({required this.songId, final String? $type})
+class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
+  const _$KodiPlaylistItemSongIdImpl(
+      {required this.songId, final String? $type})
       : $type = $type ?? 'songId';
 
-  factory _$KodiPlaylistItemSongId.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemSongIdFromJson(json);
+  factory _$KodiPlaylistItemSongIdImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemSongIdImplFromJson(json);
 
   @override
   final int songId;
@@ -1663,23 +1738,25 @@ class _$KodiPlaylistItemSongId implements KodiPlaylistItemSongId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemSongId &&
+            other is _$KodiPlaylistItemSongIdImpl &&
             (identical(other.songId, songId) || other.songId == songId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, songId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemSongIdCopyWith<_$KodiPlaylistItemSongId> get copyWith =>
-      __$$KodiPlaylistItemSongIdCopyWithImpl<_$KodiPlaylistItemSongId>(
-          this, _$identity);
+  _$$KodiPlaylistItemSongIdImplCopyWith<_$KodiPlaylistItemSongIdImpl>
+      get copyWith => __$$KodiPlaylistItemSongIdImplCopyWithImpl<
+          _$KodiPlaylistItemSongIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1794,7 +1871,7 @@ class _$KodiPlaylistItemSongId implements KodiPlaylistItemSongId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemSongIdToJson(
+    return _$$KodiPlaylistItemSongIdImplToJson(
       this,
     );
   }
@@ -1802,40 +1879,47 @@ class _$KodiPlaylistItemSongId implements KodiPlaylistItemSongId {
 
 abstract class KodiPlaylistItemSongId implements KodiPlaylistItem {
   const factory KodiPlaylistItemSongId({required final int songId}) =
-      _$KodiPlaylistItemSongId;
+      _$KodiPlaylistItemSongIdImpl;
 
   factory KodiPlaylistItemSongId.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemSongId.fromJson;
+      _$KodiPlaylistItemSongIdImpl.fromJson;
 
   int get songId;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemSongIdCopyWith<_$KodiPlaylistItemSongId> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemSongIdImplCopyWith<_$KodiPlaylistItemSongIdImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlaylistItemGenreIdCopyWith<$Res> {
-  factory _$$KodiPlaylistItemGenreIdCopyWith(_$KodiPlaylistItemGenreId value,
-          $Res Function(_$KodiPlaylistItemGenreId) then) =
-      __$$KodiPlaylistItemGenreIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlaylistItemGenreIdImplCopyWith<$Res> {
+  factory _$$KodiPlaylistItemGenreIdImplCopyWith(
+          _$KodiPlaylistItemGenreIdImpl value,
+          $Res Function(_$KodiPlaylistItemGenreIdImpl) then) =
+      __$$KodiPlaylistItemGenreIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int genreId});
 }
 
 /// @nodoc
-class __$$KodiPlaylistItemGenreIdCopyWithImpl<$Res>
-    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemGenreId>
-    implements _$$KodiPlaylistItemGenreIdCopyWith<$Res> {
-  __$$KodiPlaylistItemGenreIdCopyWithImpl(_$KodiPlaylistItemGenreId _value,
-      $Res Function(_$KodiPlaylistItemGenreId) _then)
+class __$$KodiPlaylistItemGenreIdImplCopyWithImpl<$Res>
+    extends _$KodiPlaylistItemCopyWithImpl<$Res, _$KodiPlaylistItemGenreIdImpl>
+    implements _$$KodiPlaylistItemGenreIdImplCopyWith<$Res> {
+  __$$KodiPlaylistItemGenreIdImplCopyWithImpl(
+      _$KodiPlaylistItemGenreIdImpl _value,
+      $Res Function(_$KodiPlaylistItemGenreIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genreId = null,
   }) {
-    return _then(_$KodiPlaylistItemGenreId(
+    return _then(_$KodiPlaylistItemGenreIdImpl(
       genreId: null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
@@ -1846,12 +1930,13 @@ class __$$KodiPlaylistItemGenreIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlaylistItemGenreId implements KodiPlaylistItemGenreId {
-  const _$KodiPlaylistItemGenreId({required this.genreId, final String? $type})
+class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
+  const _$KodiPlaylistItemGenreIdImpl(
+      {required this.genreId, final String? $type})
       : $type = $type ?? 'genreId';
 
-  factory _$KodiPlaylistItemGenreId.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlaylistItemGenreIdFromJson(json);
+  factory _$KodiPlaylistItemGenreIdImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistItemGenreIdImplFromJson(json);
 
   @override
   final int genreId;
@@ -1865,23 +1950,25 @@ class _$KodiPlaylistItemGenreId implements KodiPlaylistItemGenreId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlaylistItemGenreId &&
+            other is _$KodiPlaylistItemGenreIdImpl &&
             (identical(other.genreId, genreId) || other.genreId == genreId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genreId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlaylistItemGenreIdCopyWith<_$KodiPlaylistItemGenreId> get copyWith =>
-      __$$KodiPlaylistItemGenreIdCopyWithImpl<_$KodiPlaylistItemGenreId>(
-          this, _$identity);
+  _$$KodiPlaylistItemGenreIdImplCopyWith<_$KodiPlaylistItemGenreIdImpl>
+      get copyWith => __$$KodiPlaylistItemGenreIdImplCopyWithImpl<
+          _$KodiPlaylistItemGenreIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1996,7 +2083,7 @@ class _$KodiPlaylistItemGenreId implements KodiPlaylistItemGenreId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlaylistItemGenreIdToJson(
+    return _$$KodiPlaylistItemGenreIdImplToJson(
       this,
     );
   }
@@ -2004,13 +2091,16 @@ class _$KodiPlaylistItemGenreId implements KodiPlaylistItemGenreId {
 
 abstract class KodiPlaylistItemGenreId implements KodiPlaylistItem {
   const factory KodiPlaylistItemGenreId({required final int genreId}) =
-      _$KodiPlaylistItemGenreId;
+      _$KodiPlaylistItemGenreIdImpl;
 
   factory KodiPlaylistItemGenreId.fromJson(Map<String, dynamic> json) =
-      _$KodiPlaylistItemGenreId.fromJson;
+      _$KodiPlaylistItemGenreIdImpl.fromJson;
 
   int get genreId;
-  @JsonKey(ignore: true)
-  _$$KodiPlaylistItemGenreIdCopyWith<_$KodiPlaylistItemGenreId> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiPlaylistItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistItemGenreIdImplCopyWith<_$KodiPlaylistItemGenreIdImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

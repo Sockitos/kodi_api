@@ -6,17 +6,17 @@ part of 'get_recording_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRecordingDetails _$$_GetRecordingDetailsFromJson(
+_$GetRecordingDetailsImpl _$$GetRecordingDetailsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRecordingDetails(
-      json['recordingid'] as int,
+    _$GetRecordingDetailsImpl(
+      (json['recordingid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsRecordingEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetRecordingDetailsToJson(
-    _$_GetRecordingDetails instance) {
+Map<String, dynamic> _$$GetRecordingDetailsImplToJson(
+    _$GetRecordingDetailsImpl instance) {
   final val = <String, dynamic>{
     'recordingid': instance.id,
   };

@@ -12,7 +12,7 @@ part of 'get_info_booleans.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetInfoBooleans _$GetInfoBooleansFromJson(Map<String, dynamic> json) {
   return _GetInfoBooleans.fromJson(json);
@@ -22,8 +22,12 @@ GetInfoBooleans _$GetInfoBooleansFromJson(Map<String, dynamic> json) {
 mixin _$GetInfoBooleans {
   List<String> get booleans => throw _privateConstructorUsedError;
 
+  /// Serializes this GetInfoBooleans to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetInfoBooleans
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetInfoBooleansCopyWith<GetInfoBooleans> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$GetInfoBooleansCopyWithImpl<$Res, $Val extends GetInfoBooleans>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetInfoBooleans
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,30 +68,32 @@ class _$GetInfoBooleansCopyWithImpl<$Res, $Val extends GetInfoBooleans>
 }
 
 /// @nodoc
-abstract class _$$_GetInfoBooleansCopyWith<$Res>
+abstract class _$$GetInfoBooleansImplCopyWith<$Res>
     implements $GetInfoBooleansCopyWith<$Res> {
-  factory _$$_GetInfoBooleansCopyWith(
-          _$_GetInfoBooleans value, $Res Function(_$_GetInfoBooleans) then) =
-      __$$_GetInfoBooleansCopyWithImpl<$Res>;
+  factory _$$GetInfoBooleansImplCopyWith(_$GetInfoBooleansImpl value,
+          $Res Function(_$GetInfoBooleansImpl) then) =
+      __$$GetInfoBooleansImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<String> booleans});
 }
 
 /// @nodoc
-class __$$_GetInfoBooleansCopyWithImpl<$Res>
-    extends _$GetInfoBooleansCopyWithImpl<$Res, _$_GetInfoBooleans>
-    implements _$$_GetInfoBooleansCopyWith<$Res> {
-  __$$_GetInfoBooleansCopyWithImpl(
-      _$_GetInfoBooleans _value, $Res Function(_$_GetInfoBooleans) _then)
+class __$$GetInfoBooleansImplCopyWithImpl<$Res>
+    extends _$GetInfoBooleansCopyWithImpl<$Res, _$GetInfoBooleansImpl>
+    implements _$$GetInfoBooleansImplCopyWith<$Res> {
+  __$$GetInfoBooleansImplCopyWithImpl(
+      _$GetInfoBooleansImpl _value, $Res Function(_$GetInfoBooleansImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetInfoBooleans
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? booleans = null,
   }) {
-    return _then(_$_GetInfoBooleans(
+    return _then(_$GetInfoBooleansImpl(
       null == booleans
           ? _value._booleans
           : booleans // ignore: cast_nullable_to_non_nullable
@@ -96,13 +104,13 @@ class __$$_GetInfoBooleansCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetInfoBooleans extends _GetInfoBooleans {
-  const _$_GetInfoBooleans(final List<String> booleans)
+class _$GetInfoBooleansImpl extends _GetInfoBooleans {
+  const _$GetInfoBooleansImpl(final List<String> booleans)
       : _booleans = booleans,
         super._();
 
-  factory _$_GetInfoBooleans.fromJson(Map<String, dynamic> json) =>
-      _$$_GetInfoBooleansFromJson(json);
+  factory _$GetInfoBooleansImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetInfoBooleansImplFromJson(json);
 
   final List<String> _booleans;
   @override
@@ -118,27 +126,30 @@ class _$_GetInfoBooleans extends _GetInfoBooleans {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetInfoBooleans &&
+            other is _$GetInfoBooleansImpl &&
             const DeepCollectionEquality().equals(other._booleans, _booleans));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_booleans));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetInfoBooleans
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetInfoBooleansCopyWith<_$_GetInfoBooleans> get copyWith =>
-      __$$_GetInfoBooleansCopyWithImpl<_$_GetInfoBooleans>(this, _$identity);
+  _$$GetInfoBooleansImplCopyWith<_$GetInfoBooleansImpl> get copyWith =>
+      __$$GetInfoBooleansImplCopyWithImpl<_$GetInfoBooleansImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetInfoBooleansToJson(
+    return _$$GetInfoBooleansImplToJson(
       this,
     );
   }
@@ -146,16 +157,19 @@ class _$_GetInfoBooleans extends _GetInfoBooleans {
 
 abstract class _GetInfoBooleans extends GetInfoBooleans {
   const factory _GetInfoBooleans(final List<String> booleans) =
-      _$_GetInfoBooleans;
+      _$GetInfoBooleansImpl;
   const _GetInfoBooleans._() : super._();
 
   factory _GetInfoBooleans.fromJson(Map<String, dynamic> json) =
-      _$_GetInfoBooleans.fromJson;
+      _$GetInfoBooleansImpl.fromJson;
 
   @override
   List<String> get booleans;
+
+  /// Create a copy of GetInfoBooleans
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetInfoBooleansCopyWith<_$_GetInfoBooleans> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetInfoBooleansImplCopyWith<_$GetInfoBooleansImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

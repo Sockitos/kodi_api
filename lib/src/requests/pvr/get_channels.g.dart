@@ -6,8 +6,8 @@ part of 'get_channels.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetChannels _$$_GetChannelsFromJson(Map<String, dynamic> json) =>
-    _$_GetChannels(
+_$GetChannelsImpl _$$GetChannelsImplFromJson(Map<String, dynamic> json) =>
+    _$GetChannelsImpl(
       KodiPVRChannelGroupId.fromJson(
           json['channelgroupid'] as Map<String, dynamic>),
       properties: (json['properties'] as List<dynamic>?)
@@ -21,7 +21,7 @@ _$_GetChannels _$$_GetChannelsFromJson(Map<String, dynamic> json) =>
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetChannelsToJson(_$_GetChannels instance) {
+Map<String, dynamic> _$$GetChannelsImplToJson(_$GetChannelsImpl instance) {
   final val = <String, dynamic>{
     'channelgroupid': instance.groupId.toJson(),
   };
@@ -60,9 +60,9 @@ const _$KodiPVRFieldsChannelEnumMap = {
   KodiPVRFieldsChannel.clientId: 'clientid',
 };
 
-_$_KodiPVRGetChannelsResponse _$$_KodiPVRGetChannelsResponseFromJson(
+_$KodiPVRGetChannelsResponseImpl _$$KodiPVRGetChannelsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRGetChannelsResponse(
+    _$KodiPVRGetChannelsResponseImpl(
       channels: (json['channels'] as List<dynamic>)
           .map((e) => KodiPVRDetailsChannel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -70,8 +70,8 @@ _$_KodiPVRGetChannelsResponse _$$_KodiPVRGetChannelsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiPVRGetChannelsResponseToJson(
-        _$_KodiPVRGetChannelsResponse instance) =>
+Map<String, dynamic> _$$KodiPVRGetChannelsResponseImplToJson(
+        _$KodiPVRGetChannelsResponseImpl instance) =>
     <String, dynamic>{
       'channels': instance.channels.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

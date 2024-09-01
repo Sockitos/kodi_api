@@ -12,7 +12,7 @@ part of 'set_stereoscopic_mode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetStereoscopicMode _$SetStereoscopicModeFromJson(Map<String, dynamic> json) {
   return _SetStereoscopicMode.fromJson(json);
@@ -22,8 +22,12 @@ SetStereoscopicMode _$SetStereoscopicModeFromJson(Map<String, dynamic> json) {
 mixin _$SetStereoscopicMode {
   KodiGUIStereoscopicSetMode get mode => throw _privateConstructorUsedError;
 
+  /// Serializes this SetStereoscopicMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetStereoscopicModeCopyWith<SetStereoscopicMode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$SetStereoscopicModeCopyWithImpl<$Res, $Val extends SetStereoscopicMode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,30 +68,32 @@ class _$SetStereoscopicModeCopyWithImpl<$Res, $Val extends SetStereoscopicMode>
 }
 
 /// @nodoc
-abstract class _$$_SetStereoscopicModeCopyWith<$Res>
+abstract class _$$SetStereoscopicModeImplCopyWith<$Res>
     implements $SetStereoscopicModeCopyWith<$Res> {
-  factory _$$_SetStereoscopicModeCopyWith(_$_SetStereoscopicMode value,
-          $Res Function(_$_SetStereoscopicMode) then) =
-      __$$_SetStereoscopicModeCopyWithImpl<$Res>;
+  factory _$$SetStereoscopicModeImplCopyWith(_$SetStereoscopicModeImpl value,
+          $Res Function(_$SetStereoscopicModeImpl) then) =
+      __$$SetStereoscopicModeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiGUIStereoscopicSetMode mode});
 }
 
 /// @nodoc
-class __$$_SetStereoscopicModeCopyWithImpl<$Res>
-    extends _$SetStereoscopicModeCopyWithImpl<$Res, _$_SetStereoscopicMode>
-    implements _$$_SetStereoscopicModeCopyWith<$Res> {
-  __$$_SetStereoscopicModeCopyWithImpl(_$_SetStereoscopicMode _value,
-      $Res Function(_$_SetStereoscopicMode) _then)
+class __$$SetStereoscopicModeImplCopyWithImpl<$Res>
+    extends _$SetStereoscopicModeCopyWithImpl<$Res, _$SetStereoscopicModeImpl>
+    implements _$$SetStereoscopicModeImplCopyWith<$Res> {
+  __$$SetStereoscopicModeImplCopyWithImpl(_$SetStereoscopicModeImpl _value,
+      $Res Function(_$SetStereoscopicModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? mode = null,
   }) {
-    return _then(_$_SetStereoscopicMode(
+    return _then(_$SetStereoscopicModeImpl(
       null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
@@ -96,11 +104,11 @@ class __$$_SetStereoscopicModeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetStereoscopicMode extends _SetStereoscopicMode {
-  const _$_SetStereoscopicMode(this.mode) : super._();
+class _$SetStereoscopicModeImpl extends _SetStereoscopicMode {
+  const _$SetStereoscopicModeImpl(this.mode) : super._();
 
-  factory _$_SetStereoscopicMode.fromJson(Map<String, dynamic> json) =>
-      _$$_SetStereoscopicModeFromJson(json);
+  factory _$SetStereoscopicModeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetStereoscopicModeImplFromJson(json);
 
   @override
   final KodiGUIStereoscopicSetMode mode;
@@ -111,27 +119,29 @@ class _$_SetStereoscopicMode extends _SetStereoscopicMode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetStereoscopicMode &&
+            other is _$SetStereoscopicModeImpl &&
             (identical(other.mode, mode) || other.mode == mode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, mode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetStereoscopicModeCopyWith<_$_SetStereoscopicMode> get copyWith =>
-      __$$_SetStereoscopicModeCopyWithImpl<_$_SetStereoscopicMode>(
+  _$$SetStereoscopicModeImplCopyWith<_$SetStereoscopicModeImpl> get copyWith =>
+      __$$SetStereoscopicModeImplCopyWithImpl<_$SetStereoscopicModeImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetStereoscopicModeToJson(
+    return _$$SetStereoscopicModeImplToJson(
       this,
     );
   }
@@ -139,16 +149,19 @@ class _$_SetStereoscopicMode extends _SetStereoscopicMode {
 
 abstract class _SetStereoscopicMode extends SetStereoscopicMode {
   const factory _SetStereoscopicMode(final KodiGUIStereoscopicSetMode mode) =
-      _$_SetStereoscopicMode;
+      _$SetStereoscopicModeImpl;
   const _SetStereoscopicMode._() : super._();
 
   factory _SetStereoscopicMode.fromJson(Map<String, dynamic> json) =
-      _$_SetStereoscopicMode.fromJson;
+      _$SetStereoscopicModeImpl.fromJson;
 
   @override
   KodiGUIStereoscopicSetMode get mode;
+
+  /// Create a copy of SetStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetStereoscopicModeCopyWith<_$_SetStereoscopicMode> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetStereoscopicModeImplCopyWith<_$SetStereoscopicModeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

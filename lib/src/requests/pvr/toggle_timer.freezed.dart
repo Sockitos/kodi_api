@@ -12,7 +12,7 @@ part of 'toggle_timer.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ToggleTimer _$ToggleTimerFromJson(Map<String, dynamic> json) {
   return _ToggleTimer.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$ToggleTimer {
   @JsonKey(name: 'timerrule')
   bool get timerRule => throw _privateConstructorUsedError;
 
+  /// Serializes this ToggleTimer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ToggleTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ToggleTimerCopyWith<ToggleTimer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$ToggleTimerCopyWithImpl<$Res, $Val extends ToggleTimer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ToggleTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,11 +78,11 @@ class _$ToggleTimerCopyWithImpl<$Res, $Val extends ToggleTimer>
 }
 
 /// @nodoc
-abstract class _$$_ToggleTimerCopyWith<$Res>
+abstract class _$$ToggleTimerImplCopyWith<$Res>
     implements $ToggleTimerCopyWith<$Res> {
-  factory _$$_ToggleTimerCopyWith(
-          _$_ToggleTimer value, $Res Function(_$_ToggleTimer) then) =
-      __$$_ToggleTimerCopyWithImpl<$Res>;
+  factory _$$ToggleTimerImplCopyWith(
+          _$ToggleTimerImpl value, $Res Function(_$ToggleTimerImpl) then) =
+      __$$ToggleTimerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,20 +91,22 @@ abstract class _$$_ToggleTimerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ToggleTimerCopyWithImpl<$Res>
-    extends _$ToggleTimerCopyWithImpl<$Res, _$_ToggleTimer>
-    implements _$$_ToggleTimerCopyWith<$Res> {
-  __$$_ToggleTimerCopyWithImpl(
-      _$_ToggleTimer _value, $Res Function(_$_ToggleTimer) _then)
+class __$$ToggleTimerImplCopyWithImpl<$Res>
+    extends _$ToggleTimerCopyWithImpl<$Res, _$ToggleTimerImpl>
+    implements _$$ToggleTimerImplCopyWith<$Res> {
+  __$$ToggleTimerImplCopyWithImpl(
+      _$ToggleTimerImpl _value, $Res Function(_$ToggleTimerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ToggleTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? timerRule = null,
   }) {
-    return _then(_$_ToggleTimer(
+    return _then(_$ToggleTimerImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -113,13 +121,13 @@ class __$$_ToggleTimerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ToggleTimer extends _ToggleTimer {
-  const _$_ToggleTimer(@JsonKey(name: 'broadcastid') this.id,
+class _$ToggleTimerImpl extends _ToggleTimer {
+  const _$ToggleTimerImpl(@JsonKey(name: 'broadcastid') this.id,
       {@JsonKey(name: 'timerrule') this.timerRule = false})
       : super._();
 
-  factory _$_ToggleTimer.fromJson(Map<String, dynamic> json) =>
-      _$$_ToggleTimerFromJson(json);
+  factory _$ToggleTimerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ToggleTimerImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -134,28 +142,30 @@ class _$_ToggleTimer extends _ToggleTimer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ToggleTimer &&
+            other is _$ToggleTimerImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.timerRule, timerRule) ||
                 other.timerRule == timerRule));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, timerRule);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ToggleTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ToggleTimerCopyWith<_$_ToggleTimer> get copyWith =>
-      __$$_ToggleTimerCopyWithImpl<_$_ToggleTimer>(this, _$identity);
+  _$$ToggleTimerImplCopyWith<_$ToggleTimerImpl> get copyWith =>
+      __$$ToggleTimerImplCopyWithImpl<_$ToggleTimerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ToggleTimerToJson(
+    return _$$ToggleTimerImplToJson(
       this,
     );
   }
@@ -163,11 +173,11 @@ class _$_ToggleTimer extends _ToggleTimer {
 
 abstract class _ToggleTimer extends ToggleTimer {
   const factory _ToggleTimer(@JsonKey(name: 'broadcastid') final int id,
-      {@JsonKey(name: 'timerrule') final bool timerRule}) = _$_ToggleTimer;
+      {@JsonKey(name: 'timerrule') final bool timerRule}) = _$ToggleTimerImpl;
   const _ToggleTimer._() : super._();
 
   factory _ToggleTimer.fromJson(Map<String, dynamic> json) =
-      _$_ToggleTimer.fromJson;
+      _$ToggleTimerImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -175,8 +185,11 @@ abstract class _ToggleTimer extends ToggleTimer {
   @override
   @JsonKey(name: 'timerrule')
   bool get timerRule;
+
+  /// Create a copy of ToggleTimer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ToggleTimerCopyWith<_$_ToggleTimer> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ToggleTimerImplCopyWith<_$ToggleTimerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

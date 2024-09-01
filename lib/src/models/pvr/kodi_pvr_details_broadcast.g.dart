@@ -6,47 +6,47 @@ part of 'kodi_pvr_details_broadcast.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsBroadcast _$$_KodiPVRDetailsBroadcastFromJson(
+_$KodiPVRDetailsBroadcastImpl _$$KodiPVRDetailsBroadcastImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsBroadcast(
-      broadcastId: json['broadcastid'] as int,
+    _$KodiPVRDetailsBroadcastImpl(
+      broadcastId: (json['broadcastid'] as num).toInt(),
       cast: json['cast'] as String,
-      clientId: json['clientid'] as int,
+      clientId: (json['clientid'] as num).toInt(),
       director: json['director'] as String,
       endTime: DateTime.parse(json['endtime'] as String),
       episodeName: json['episodename'] as String,
-      episodeNum: json['episodenum'] as int,
-      episodePart: json['episodepart'] as int,
+      episodeNum: (json['episodenum'] as num).toInt(),
+      episodePart: (json['episodepart'] as num).toInt(),
       firstAired: DateTime.parse(json['firstaired'] as String),
       genre: json['genre'] as String,
       hasRecording: json['hasrecording'] as bool,
       hasReminder: json['hasreminder'] as bool,
       hasTimer: json['hastimer'] as bool,
       hasTimerRule: json['hastimerrule'] as bool,
-      imdbNumber: json['imdbnumber'] as int,
+      imdbNumber: (json['imdbnumber'] as num).toInt(),
       isActive: json['isactive'] as bool,
       isPlayable: json['isplayable'] as bool,
       isSeries: json['isseries'] as bool,
       originalTitle: json['originaltitle'] as String,
-      parentalRating: json['parentalrating'] as int,
+      parentalRating: (json['parentalrating'] as num).toInt(),
       plot: json['plot'] as String,
       plotOutline: json['plotoutline'] as String,
-      progress: json['progress'] as int,
+      progress: (json['progress'] as num).toInt(),
       progressPercentage: (json['progresspercentage'] as num).toDouble(),
-      rating: json['rating'] as int,
+      rating: (json['rating'] as num).toInt(),
       recording: json['recording'] as String,
-      runtime: json['runtime'] as int,
+      runtime: (json['runtime'] as num).toInt(),
       startTime: DateTime.parse(json['starttime'] as String),
       thumbnail: json['thumbnail'] as String,
       title: json['title'] as String,
       wasActive: json['wasactive'] as bool,
       writer: json['writer'] as String,
-      year: json['year'] as int,
+      year: (json['year'] as num).toInt(),
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsBroadcastToJson(
-        _$_KodiPVRDetailsBroadcast instance) =>
+Map<String, dynamic> _$$KodiPVRDetailsBroadcastImplToJson(
+        _$KodiPVRDetailsBroadcastImpl instance) =>
     <String, dynamic>{
       'broadcastid': instance.broadcastId,
       'cast': instance.cast,

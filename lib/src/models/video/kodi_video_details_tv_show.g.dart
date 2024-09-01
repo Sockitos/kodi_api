@@ -6,13 +6,13 @@ part of 'kodi_video_details_tv_show.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoDetailsTvShow _$$_KodiVideoDetailsTvShowFromJson(
+_$KodiVideoDetailsTvShowImpl _$$KodiVideoDetailsTvShowImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiVideoDetailsTvShow(
+    _$KodiVideoDetailsTvShowImpl(
       cast: (json['cast'] as List<dynamic>?)
           ?.map((e) => KodiVideoCast.fromJson(e as Map<String, dynamic>))
           .toList(),
-      episode: json['episode'] as int?,
+      episode: (json['episode'] as num?)?.toInt(),
       episodeGuide: json['episodeguide'] as String?,
       genre:
           (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
@@ -22,20 +22,20 @@ _$_KodiVideoDetailsTvShow _$$_KodiVideoDetailsTvShowFromJson(
       premiered: const DateTimeConverter().fromJson(json['premiered']),
       rating: (json['rating'] as num?)?.toDouble(),
       ratings: json['ratings'] as Map<String, dynamic>?,
-      runtime: json['runtime'] as int?,
-      season: json['season'] as int?,
+      runtime: (json['runtime'] as num?)?.toInt(),
+      season: (json['season'] as num?)?.toInt(),
       sortTitle: json['sorttitle'] as String?,
       status: $enumDecodeNullable(
           _$KodiVideoLibrarySetTvShowDetailsStatusEnumMap, json['status']),
       studio:
           (json['studio'] as List<dynamic>?)?.map((e) => e as String).toList(),
       tag: (json['tag'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      tvShowId: json['tvshowid'] as int,
+      tvShowId: (json['tvshowid'] as num).toInt(),
       uniqueId: json['uniqueid'] as Map<String, dynamic>?,
-      userRating: json['userrating'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
       votes: json['votes'] as String?,
-      watchedEpisodes: json['watchedepisodes'] as int?,
-      year: json['year'] as int?,
+      watchedEpisodes: (json['watchedepisodes'] as num?)?.toInt(),
+      year: (json['year'] as num?)?.toInt(),
       dateAdded: const DateTimeConverter().fromJson(json['dateadded']),
       file: json['file'] as String?,
       lastPlayed: const DateTimeConverter().fromJson(json['lastplayed']),
@@ -44,14 +44,14 @@ _$_KodiVideoDetailsTvShow _$$_KodiVideoDetailsTvShowFromJson(
       art: json['art'] == null
           ? null
           : KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       fanart: json['fanart'] as String?,
       thumbnail: json['thumbnail'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiVideoDetailsTvShowToJson(
-    _$_KodiVideoDetailsTvShow instance) {
+Map<String, dynamic> _$$KodiVideoDetailsTvShowImplToJson(
+    _$KodiVideoDetailsTvShowImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

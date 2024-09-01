@@ -12,7 +12,7 @@ part of 'get_clients.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetClients _$GetClientsFromJson(Map<String, dynamic> json) {
   return _GetClients.fromJson(json);
@@ -22,8 +22,12 @@ GetClients _$GetClientsFromJson(Map<String, dynamic> json) {
 mixin _$GetClients {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetClients to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetClients
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetClientsCopyWith<GetClients> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$GetClientsCopyWithImpl<$Res, $Val extends GetClients>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetClients
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,6 +68,8 @@ class _$GetClientsCopyWithImpl<$Res, $Val extends GetClients>
     ) as $Val);
   }
 
+  /// Create a copy of GetClients
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -76,11 +84,11 @@ class _$GetClientsCopyWithImpl<$Res, $Val extends GetClients>
 }
 
 /// @nodoc
-abstract class _$$_GetClientsCopyWith<$Res>
+abstract class _$$GetClientsImplCopyWith<$Res>
     implements $GetClientsCopyWith<$Res> {
-  factory _$$_GetClientsCopyWith(
-          _$_GetClients value, $Res Function(_$_GetClients) then) =
-      __$$_GetClientsCopyWithImpl<$Res>;
+  factory _$$GetClientsImplCopyWith(
+          _$GetClientsImpl value, $Res Function(_$GetClientsImpl) then) =
+      __$$GetClientsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiListLimits? limits});
@@ -90,19 +98,21 @@ abstract class _$$_GetClientsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetClientsCopyWithImpl<$Res>
-    extends _$GetClientsCopyWithImpl<$Res, _$_GetClients>
-    implements _$$_GetClientsCopyWith<$Res> {
-  __$$_GetClientsCopyWithImpl(
-      _$_GetClients _value, $Res Function(_$_GetClients) _then)
+class __$$GetClientsImplCopyWithImpl<$Res>
+    extends _$GetClientsCopyWithImpl<$Res, _$GetClientsImpl>
+    implements _$$GetClientsImplCopyWith<$Res> {
+  __$$GetClientsImplCopyWithImpl(
+      _$GetClientsImpl _value, $Res Function(_$GetClientsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetClients
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? limits = freezed,
   }) {
-    return _then(_$_GetClients(
+    return _then(_$GetClientsImpl(
       limits: freezed == limits
           ? _value.limits
           : limits // ignore: cast_nullable_to_non_nullable
@@ -113,11 +123,11 @@ class __$$_GetClientsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetClients extends _GetClients {
-  const _$_GetClients({this.limits}) : super._();
+class _$GetClientsImpl extends _GetClients {
+  const _$GetClientsImpl({this.limits}) : super._();
 
-  factory _$_GetClients.fromJson(Map<String, dynamic> json) =>
-      _$$_GetClientsFromJson(json);
+  factory _$GetClientsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetClientsImplFromJson(json);
 
   @override
   final KodiListLimits? limits;
@@ -128,43 +138,48 @@ class _$_GetClients extends _GetClients {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetClients &&
+            other is _$GetClientsImpl &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetClients
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetClientsCopyWith<_$_GetClients> get copyWith =>
-      __$$_GetClientsCopyWithImpl<_$_GetClients>(this, _$identity);
+  _$$GetClientsImplCopyWith<_$GetClientsImpl> get copyWith =>
+      __$$GetClientsImplCopyWithImpl<_$GetClientsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetClientsToJson(
+    return _$$GetClientsImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetClients extends GetClients {
-  const factory _GetClients({final KodiListLimits? limits}) = _$_GetClients;
+  const factory _GetClients({final KodiListLimits? limits}) = _$GetClientsImpl;
   const _GetClients._() : super._();
 
   factory _GetClients.fromJson(Map<String, dynamic> json) =
-      _$_GetClients.fromJson;
+      _$GetClientsImpl.fromJson;
 
   @override
   KodiListLimits? get limits;
+
+  /// Create a copy of GetClients
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetClientsCopyWith<_$_GetClients> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetClientsImplCopyWith<_$GetClientsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -178,8 +193,12 @@ mixin _$KodiPVRGetClientsResponse {
   List<KodiPVRDetailsClient> get clients => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRGetClientsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRGetClientsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRGetClientsResponseCopyWith<KodiPVRGetClientsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -207,6 +226,8 @@ class _$KodiPVRGetClientsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRGetClientsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -225,6 +246,8 @@ class _$KodiPVRGetClientsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPVRGetClientsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -235,12 +258,12 @@ class _$KodiPVRGetClientsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRGetClientsResponseCopyWith<$Res>
+abstract class _$$KodiPVRGetClientsResponseImplCopyWith<$Res>
     implements $KodiPVRGetClientsResponseCopyWith<$Res> {
-  factory _$$_KodiPVRGetClientsResponseCopyWith(
-          _$_KodiPVRGetClientsResponse value,
-          $Res Function(_$_KodiPVRGetClientsResponse) then) =
-      __$$_KodiPVRGetClientsResponseCopyWithImpl<$Res>;
+  factory _$$KodiPVRGetClientsResponseImplCopyWith(
+          _$KodiPVRGetClientsResponseImpl value,
+          $Res Function(_$KodiPVRGetClientsResponseImpl) then) =
+      __$$KodiPVRGetClientsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -251,22 +274,24 @@ abstract class _$$_KodiPVRGetClientsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRGetClientsResponseCopyWithImpl<$Res>
+class __$$KodiPVRGetClientsResponseImplCopyWithImpl<$Res>
     extends _$KodiPVRGetClientsResponseCopyWithImpl<$Res,
-        _$_KodiPVRGetClientsResponse>
-    implements _$$_KodiPVRGetClientsResponseCopyWith<$Res> {
-  __$$_KodiPVRGetClientsResponseCopyWithImpl(
-      _$_KodiPVRGetClientsResponse _value,
-      $Res Function(_$_KodiPVRGetClientsResponse) _then)
+        _$KodiPVRGetClientsResponseImpl>
+    implements _$$KodiPVRGetClientsResponseImplCopyWith<$Res> {
+  __$$KodiPVRGetClientsResponseImplCopyWithImpl(
+      _$KodiPVRGetClientsResponseImpl _value,
+      $Res Function(_$KodiPVRGetClientsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRGetClientsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? clients = null,
     Object? limits = null,
   }) {
-    return _then(_$_KodiPVRGetClientsResponse(
+    return _then(_$KodiPVRGetClientsResponseImpl(
       clients: null == clients
           ? _value._clients
           : clients // ignore: cast_nullable_to_non_nullable
@@ -281,13 +306,13 @@ class __$$_KodiPVRGetClientsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRGetClientsResponse implements _KodiPVRGetClientsResponse {
-  const _$_KodiPVRGetClientsResponse(
+class _$KodiPVRGetClientsResponseImpl implements _KodiPVRGetClientsResponse {
+  const _$KodiPVRGetClientsResponseImpl(
       {required final List<KodiPVRDetailsClient> clients, required this.limits})
       : _clients = clients;
 
-  factory _$_KodiPVRGetClientsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRGetClientsResponseFromJson(json);
+  factory _$KodiPVRGetClientsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRGetClientsResponseImplFromJson(json);
 
   final List<KodiPVRDetailsClient> _clients;
   @override
@@ -306,29 +331,31 @@ class _$_KodiPVRGetClientsResponse implements _KodiPVRGetClientsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRGetClientsResponse &&
+            other is _$KodiPVRGetClientsResponseImpl &&
             const DeepCollectionEquality().equals(other._clients, _clients) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_clients), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRGetClientsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRGetClientsResponseCopyWith<_$_KodiPVRGetClientsResponse>
-      get copyWith => __$$_KodiPVRGetClientsResponseCopyWithImpl<
-          _$_KodiPVRGetClientsResponse>(this, _$identity);
+  _$$KodiPVRGetClientsResponseImplCopyWith<_$KodiPVRGetClientsResponseImpl>
+      get copyWith => __$$KodiPVRGetClientsResponseImplCopyWithImpl<
+          _$KodiPVRGetClientsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRGetClientsResponseToJson(
+    return _$$KodiPVRGetClientsResponseImplToJson(
       this,
     );
   }
@@ -338,17 +365,20 @@ abstract class _KodiPVRGetClientsResponse implements KodiPVRGetClientsResponse {
   const factory _KodiPVRGetClientsResponse(
           {required final List<KodiPVRDetailsClient> clients,
           required final KodiListLimitsReturned limits}) =
-      _$_KodiPVRGetClientsResponse;
+      _$KodiPVRGetClientsResponseImpl;
 
   factory _KodiPVRGetClientsResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRGetClientsResponse.fromJson;
+      _$KodiPVRGetClientsResponseImpl.fromJson;
 
   @override
   List<KodiPVRDetailsClient> get clients;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of KodiPVRGetClientsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRGetClientsResponseCopyWith<_$_KodiPVRGetClientsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRGetClientsResponseImplCopyWith<_$KodiPVRGetClientsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'set_file_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetFileDetails _$SetFileDetailsFromJson(Map<String, dynamic> json) {
   return _SetFileDetails.fromJson(json);
@@ -28,8 +28,12 @@ mixin _$SetFileDetails {
   DateTime? get lastPlayed => throw _privateConstructorUsedError;
   KodiVideoResume? get resume => throw _privateConstructorUsedError;
 
+  /// Serializes this SetFileDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetFileDetailsCopyWith<SetFileDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$SetFileDetailsCopyWithImpl<$Res, $Val extends SetFileDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class _$SetFileDetailsCopyWithImpl<$Res, $Val extends SetFileDetails>
     ) as $Val);
   }
 
+  /// Create a copy of SetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoResumeCopyWith<$Res>? get resume {
@@ -107,11 +115,11 @@ class _$SetFileDetailsCopyWithImpl<$Res, $Val extends SetFileDetails>
 }
 
 /// @nodoc
-abstract class _$$_SetFileDetailsCopyWith<$Res>
+abstract class _$$SetFileDetailsImplCopyWith<$Res>
     implements $SetFileDetailsCopyWith<$Res> {
-  factory _$$_SetFileDetailsCopyWith(
-          _$_SetFileDetails value, $Res Function(_$_SetFileDetails) then) =
-      __$$_SetFileDetailsCopyWithImpl<$Res>;
+  factory _$$SetFileDetailsImplCopyWith(_$SetFileDetailsImpl value,
+          $Res Function(_$SetFileDetailsImpl) then) =
+      __$$SetFileDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -126,13 +134,15 @@ abstract class _$$_SetFileDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetFileDetailsCopyWithImpl<$Res>
-    extends _$SetFileDetailsCopyWithImpl<$Res, _$_SetFileDetails>
-    implements _$$_SetFileDetailsCopyWith<$Res> {
-  __$$_SetFileDetailsCopyWithImpl(
-      _$_SetFileDetails _value, $Res Function(_$_SetFileDetails) _then)
+class __$$SetFileDetailsImplCopyWithImpl<$Res>
+    extends _$SetFileDetailsCopyWithImpl<$Res, _$SetFileDetailsImpl>
+    implements _$$SetFileDetailsImplCopyWith<$Res> {
+  __$$SetFileDetailsImplCopyWithImpl(
+      _$SetFileDetailsImpl _value, $Res Function(_$SetFileDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -142,7 +152,7 @@ class __$$_SetFileDetailsCopyWithImpl<$Res>
     Object? lastPlayed = freezed,
     Object? resume = freezed,
   }) {
-    return _then(_$_SetFileDetails(
+    return _then(_$SetFileDetailsImpl(
       null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
@@ -170,15 +180,15 @@ class __$$_SetFileDetailsCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_SetFileDetails extends _SetFileDetails {
-  const _$_SetFileDetails(this.file, this.media,
+class _$SetFileDetailsImpl extends _SetFileDetails {
+  const _$SetFileDetailsImpl(this.file, this.media,
       {@JsonKey(name: 'playcount') this.playCount,
       @JsonKey(name: 'lastplayed') this.lastPlayed,
       this.resume})
       : super._();
 
-  factory _$_SetFileDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_SetFileDetailsFromJson(json);
+  factory _$SetFileDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetFileDetailsImplFromJson(json);
 
   @override
   final String file;
@@ -199,10 +209,10 @@ class _$_SetFileDetails extends _SetFileDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetFileDetails &&
+            other is _$SetFileDetailsImpl &&
             (identical(other.file, file) || other.file == file) &&
             (identical(other.media, media) || other.media == media) &&
             (identical(other.playCount, playCount) ||
@@ -212,20 +222,23 @@ class _$_SetFileDetails extends _SetFileDetails {
             (identical(other.resume, resume) || other.resume == resume));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, file, media, playCount, lastPlayed, resume);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetFileDetailsCopyWith<_$_SetFileDetails> get copyWith =>
-      __$$_SetFileDetailsCopyWithImpl<_$_SetFileDetails>(this, _$identity);
+  _$$SetFileDetailsImplCopyWith<_$SetFileDetailsImpl> get copyWith =>
+      __$$SetFileDetailsImplCopyWithImpl<_$SetFileDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetFileDetailsToJson(
+    return _$$SetFileDetailsImplToJson(
       this,
     );
   }
@@ -235,11 +248,11 @@ abstract class _SetFileDetails extends SetFileDetails {
   const factory _SetFileDetails(final String file, final KodiFilesMedia media,
       {@JsonKey(name: 'playcount') final int? playCount,
       @JsonKey(name: 'lastplayed') final DateTime? lastPlayed,
-      final KodiVideoResume? resume}) = _$_SetFileDetails;
+      final KodiVideoResume? resume}) = _$SetFileDetailsImpl;
   const _SetFileDetails._() : super._();
 
   factory _SetFileDetails.fromJson(Map<String, dynamic> json) =
-      _$_SetFileDetails.fromJson;
+      _$SetFileDetailsImpl.fromJson;
 
   @override
   String get file;
@@ -253,8 +266,11 @@ abstract class _SetFileDetails extends SetFileDetails {
   DateTime? get lastPlayed;
   @override
   KodiVideoResume? get resume;
+
+  /// Create a copy of SetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetFileDetailsCopyWith<_$_SetFileDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetFileDetailsImplCopyWith<_$SetFileDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

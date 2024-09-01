@@ -6,33 +6,34 @@ part of 'kodi_notification_audio_library_on_remove_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationAudioLibraryOnRemoveParams
-    _$$_KodiNotificationAudioLibraryOnRemoveParamsFromJson(
+_$KodiNotificationAudioLibraryOnRemoveParamsImpl
+    _$$KodiNotificationAudioLibraryOnRemoveParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnRemoveParams(
+        _$KodiNotificationAudioLibraryOnRemoveParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationAudioLibraryOnRemoveParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnRemoveParamsToJson(
-        _$_KodiNotificationAudioLibraryOnRemoveParams instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnRemoveParamsImplToJson(
+        _$KodiNotificationAudioLibraryOnRemoveParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnRemoveParamsData
-    _$$_KodiNotificationAudioLibraryOnRemoveParamsDataFromJson(
+_$KodiNotificationAudioLibraryOnRemoveParamsDataImpl
+    _$$KodiNotificationAudioLibraryOnRemoveParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnRemoveParamsData(
-          id: json['id'] as int,
+        _$KodiNotificationAudioLibraryOnRemoveParamsDataImpl(
+          id: (json['id'] as num).toInt(),
           transaction: json['transaction'] as bool?,
-          type: json['type'] as int,
+          type: (json['type'] as num).toInt(),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnRemoveParamsDataToJson(
-    _$_KodiNotificationAudioLibraryOnRemoveParamsData instance) {
+Map<String, dynamic>
+    _$$KodiNotificationAudioLibraryOnRemoveParamsDataImplToJson(
+        _$KodiNotificationAudioLibraryOnRemoveParamsDataImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };

@@ -12,7 +12,7 @@ part of 'kodi_notification_application_on_volume_changed_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationApplicationOnVolumeChangedParams
     _$KodiNotificationApplicationOnVolumeChangedParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationApplicationOnVolumeChangedParams {
   KodiNotificationApplicationOnVolumeChangedParamsData get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationApplicationOnVolumeChangedParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationApplicationOnVolumeChangedParamsCopyWith<
           KodiNotificationApplicationOnVolumeChangedParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -61,6 +65,8 @@ class _$KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<$Res> get data {
@@ -90,14 +98,15 @@ class _$KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWith<
+abstract class _$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWith<
         $Res>
     implements $KodiNotificationApplicationOnVolumeChangedParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWith(
-          _$_KodiNotificationApplicationOnVolumeChangedParams value,
-          $Res Function(_$_KodiNotificationApplicationOnVolumeChangedParams)
+  factory _$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWith(
+          _$KodiNotificationApplicationOnVolumeChangedParamsImpl value,
+          $Res Function(_$KodiNotificationApplicationOnVolumeChangedParamsImpl)
               then) =
-      __$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<$Res>;
+      __$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWithImpl<
+          $Res>;
   @override
   @useResult
   $Res call(
@@ -109,23 +118,26 @@ abstract class _$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWith<
 }
 
 /// @nodoc
-class __$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<$Res>
+class __$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<$Res,
-        _$_KodiNotificationApplicationOnVolumeChangedParams>
+        _$KodiNotificationApplicationOnVolumeChangedParamsImpl>
     implements
-        _$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWith<$Res> {
-  __$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl(
-      _$_KodiNotificationApplicationOnVolumeChangedParams _value,
-      $Res Function(_$_KodiNotificationApplicationOnVolumeChangedParams) _then)
+        _$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWith<$Res> {
+  __$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWithImpl(
+      _$KodiNotificationApplicationOnVolumeChangedParamsImpl _value,
+      $Res Function(_$KodiNotificationApplicationOnVolumeChangedParamsImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationApplicationOnVolumeChangedParams(
+    return _then(_$KodiNotificationApplicationOnVolumeChangedParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -140,14 +152,14 @@ class __$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationApplicationOnVolumeChangedParams
+class _$KodiNotificationApplicationOnVolumeChangedParamsImpl
     implements _KodiNotificationApplicationOnVolumeChangedParams {
-  const _$_KodiNotificationApplicationOnVolumeChangedParams(
+  const _$KodiNotificationApplicationOnVolumeChangedParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationApplicationOnVolumeChangedParams.fromJson(
+  factory _$KodiNotificationApplicationOnVolumeChangedParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationApplicationOnVolumeChangedParamsFromJson(json);
+      _$$KodiNotificationApplicationOnVolumeChangedParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -160,31 +172,33 @@ class _$_KodiNotificationApplicationOnVolumeChangedParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationApplicationOnVolumeChangedParams &&
+            other is _$KodiNotificationApplicationOnVolumeChangedParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWith<
-          _$_KodiNotificationApplicationOnVolumeChangedParams>
+  _$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWith<
+          _$KodiNotificationApplicationOnVolumeChangedParamsImpl>
       get copyWith =>
-          __$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWithImpl<
-                  _$_KodiNotificationApplicationOnVolumeChangedParams>(
+          __$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWithImpl<
+                  _$KodiNotificationApplicationOnVolumeChangedParamsImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationApplicationOnVolumeChangedParamsToJson(
+    return _$$KodiNotificationApplicationOnVolumeChangedParamsImplToJson(
       this,
     );
   }
@@ -195,20 +209,23 @@ abstract class _KodiNotificationApplicationOnVolumeChangedParams
   const factory _KodiNotificationApplicationOnVolumeChangedParams(
       {required final String sender,
       required final KodiNotificationApplicationOnVolumeChangedParamsData
-          data}) = _$_KodiNotificationApplicationOnVolumeChangedParams;
+          data}) = _$KodiNotificationApplicationOnVolumeChangedParamsImpl;
 
   factory _KodiNotificationApplicationOnVolumeChangedParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationApplicationOnVolumeChangedParams.fromJson;
+      _$KodiNotificationApplicationOnVolumeChangedParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationApplicationOnVolumeChangedParamsData get data;
+
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationApplicationOnVolumeChangedParamsCopyWith<
-          _$_KodiNotificationApplicationOnVolumeChangedParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationApplicationOnVolumeChangedParamsImplCopyWith<
+          _$KodiNotificationApplicationOnVolumeChangedParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -223,8 +240,12 @@ mixin _$KodiNotificationApplicationOnVolumeChangedParamsData {
   bool get muted => throw _privateConstructorUsedError;
   double get volume => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationApplicationOnVolumeChangedParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<
           KodiNotificationApplicationOnVolumeChangedParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -256,6 +277,8 @@ class _$KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -276,15 +299,16 @@ class _$KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<
+abstract class _$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWith<
         $Res>
     implements
         $KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith(
-          _$_KodiNotificationApplicationOnVolumeChangedParamsData value,
-          $Res Function(_$_KodiNotificationApplicationOnVolumeChangedParamsData)
+  factory _$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWith(
+          _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl value,
+          $Res Function(
+                  _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl)
               then) =
-      __$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl<
+      __$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWithImpl<
           $Res>;
   @override
   @useResult
@@ -292,25 +316,28 @@ abstract class _$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<
 }
 
 /// @nodoc
-class __$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl<
+class __$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWithImpl<
         $Res>
     extends _$KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl<
-        $Res, _$_KodiNotificationApplicationOnVolumeChangedParamsData>
+        $Res, _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl>
     implements
-        _$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl(
-      _$_KodiNotificationApplicationOnVolumeChangedParamsData _value,
-      $Res Function(_$_KodiNotificationApplicationOnVolumeChangedParamsData)
+        _$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWith<
+            $Res> {
+  __$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWithImpl(
+      _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl _value,
+      $Res Function(_$KodiNotificationApplicationOnVolumeChangedParamsDataImpl)
           _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? muted = null,
     Object? volume = null,
   }) {
-    return _then(_$_KodiNotificationApplicationOnVolumeChangedParamsData(
+    return _then(_$KodiNotificationApplicationOnVolumeChangedParamsDataImpl(
       muted: null == muted
           ? _value.muted
           : muted // ignore: cast_nullable_to_non_nullable
@@ -325,14 +352,14 @@ class __$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl<
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationApplicationOnVolumeChangedParamsData
+class _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl
     implements _KodiNotificationApplicationOnVolumeChangedParamsData {
-  const _$_KodiNotificationApplicationOnVolumeChangedParamsData(
+  const _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl(
       {required this.muted, required this.volume});
 
-  factory _$_KodiNotificationApplicationOnVolumeChangedParamsData.fromJson(
+  factory _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationApplicationOnVolumeChangedParamsDataFromJson(json);
+      _$$KodiNotificationApplicationOnVolumeChangedParamsDataImplFromJson(json);
 
   @override
   final bool muted;
@@ -345,31 +372,34 @@ class _$_KodiNotificationApplicationOnVolumeChangedParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationApplicationOnVolumeChangedParamsData &&
+            other
+                is _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl &&
             (identical(other.muted, muted) || other.muted == muted) &&
             (identical(other.volume, volume) || other.volume == volume));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, muted, volume);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<
-          _$_KodiNotificationApplicationOnVolumeChangedParamsData>
+  _$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWith<
+          _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWithImpl<
-                  _$_KodiNotificationApplicationOnVolumeChangedParamsData>(
+          __$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWithImpl<
+                  _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationApplicationOnVolumeChangedParamsDataToJson(
+    return _$$KodiNotificationApplicationOnVolumeChangedParamsDataImplToJson(
       this,
     );
   }
@@ -379,19 +409,22 @@ abstract class _KodiNotificationApplicationOnVolumeChangedParamsData
     implements KodiNotificationApplicationOnVolumeChangedParamsData {
   const factory _KodiNotificationApplicationOnVolumeChangedParamsData(
           {required final bool muted, required final double volume}) =
-      _$_KodiNotificationApplicationOnVolumeChangedParamsData;
+      _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl;
 
   factory _KodiNotificationApplicationOnVolumeChangedParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationApplicationOnVolumeChangedParamsData.fromJson;
+      _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl.fromJson;
 
   @override
   bool get muted;
   @override
   double get volume;
+
+  /// Create a copy of KodiNotificationApplicationOnVolumeChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationApplicationOnVolumeChangedParamsDataCopyWith<
-          _$_KodiNotificationApplicationOnVolumeChangedParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationApplicationOnVolumeChangedParamsDataImplCopyWith<
+          _$KodiNotificationApplicationOnVolumeChangedParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

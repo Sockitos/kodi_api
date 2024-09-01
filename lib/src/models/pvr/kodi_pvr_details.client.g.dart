@@ -6,11 +6,11 @@ part of 'kodi_pvr_details.client.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsClient _$$_KodiPVRDetailsClientFromJson(
+_$KodiPVRDetailsClientImpl _$$KodiPVRDetailsClientImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsClient(
+    _$KodiPVRDetailsClientImpl(
       addonId: json['addonid'] as String,
-      clientId: json['clientid'] as int,
+      clientId: (json['clientid'] as num).toInt(),
       supportsChannelGroups: json['supportschannelgroups'] as bool,
       supportsChannelScan: json['supportschannelscan'] as bool,
       supportsEpg: json['supportsepg'] as bool,
@@ -21,8 +21,8 @@ _$_KodiPVRDetailsClient _$$_KodiPVRDetailsClientFromJson(
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsClientToJson(
-        _$_KodiPVRDetailsClient instance) =>
+Map<String, dynamic> _$$KodiPVRDetailsClientImplToJson(
+        _$KodiPVRDetailsClientImpl instance) =>
     <String, dynamic>{
       'addonid': instance.addonId,
       'clientid': instance.clientId,

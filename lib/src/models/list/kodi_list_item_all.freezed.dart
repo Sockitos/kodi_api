@@ -12,7 +12,7 @@ part of 'kodi_list_item_all.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListItemAll _$KodiListItemAllFromJson(Map<String, dynamic> json) {
   return _KodiListItemAll.fromJson(json);
@@ -173,8 +173,12 @@ mixin _$KodiListItemAll {
   int? get year => throw _privateConstructorUsedError;
   List<String>? get genre => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListItemAll to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListItemAllCopyWith<KodiListItemAll> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -302,6 +306,8 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -800,6 +806,8 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
     ) as $Val);
   }
 
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoResumeCopyWith<$Res>? get resume {
@@ -812,6 +820,8 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
     });
   }
 
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoStreamsCopyWith<$Res>? get streamDetails {
@@ -824,6 +834,8 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
     });
   }
 
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -838,11 +850,11 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
 }
 
 /// @nodoc
-abstract class _$$_KodiListItemAllCopyWith<$Res>
+abstract class _$$KodiListItemAllImplCopyWith<$Res>
     implements $KodiListItemAllCopyWith<$Res> {
-  factory _$$_KodiListItemAllCopyWith(
-          _$_KodiListItemAll value, $Res Function(_$_KodiListItemAll) then) =
-      __$$_KodiListItemAllCopyWithImpl<$Res>;
+  factory _$$KodiListItemAllImplCopyWith(_$KodiListItemAllImpl value,
+          $Res Function(_$KodiListItemAllImpl) then) =
+      __$$KodiListItemAllImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -956,13 +968,15 @@ abstract class _$$_KodiListItemAllCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiListItemAllCopyWithImpl<$Res>
-    extends _$KodiListItemAllCopyWithImpl<$Res, _$_KodiListItemAll>
-    implements _$$_KodiListItemAllCopyWith<$Res> {
-  __$$_KodiListItemAllCopyWithImpl(
-      _$_KodiListItemAll _value, $Res Function(_$_KodiListItemAll) _then)
+class __$$KodiListItemAllImplCopyWithImpl<$Res>
+    extends _$KodiListItemAllCopyWithImpl<$Res, _$KodiListItemAllImpl>
+    implements _$$KodiListItemAllImplCopyWith<$Res> {
+  __$$KodiListItemAllImplCopyWithImpl(
+      _$KodiListItemAllImpl _value, $Res Function(_$KodiListItemAllImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1065,7 +1079,7 @@ class __$$_KodiListItemAllCopyWithImpl<$Res>
     Object? year = freezed,
     Object? genre = freezed,
   }) {
-    return _then(_$_KodiListItemAll(
+    return _then(_$KodiListItemAllImpl(
       channel: freezed == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
@@ -1465,8 +1479,8 @@ class __$$_KodiListItemAllCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiListItemAll implements _KodiListItemAll {
-  const _$_KodiListItemAll(
+class _$KodiListItemAllImpl implements _KodiListItemAll {
+  const _$KodiListItemAllImpl(
       {this.channel,
       @JsonKey(name: 'channelnumber') this.channelNumber,
       @JsonKey(name: 'channeltype') this.channelType,
@@ -1588,8 +1602,8 @@ class _$_KodiListItemAll implements _KodiListItemAll {
         _musicBrainzAlbumArtistId = musicBrainzAlbumArtistId,
         _genre = genre;
 
-  factory _$_KodiListItemAll.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListItemAllFromJson(json);
+  factory _$KodiListItemAllImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListItemAllImplFromJson(json);
 
   @override
   final String? channel;
@@ -1997,10 +2011,10 @@ class _$_KodiListItemAll implements _KodiListItemAll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListItemAll &&
+            other is _$KodiListItemAllImpl &&
             (identical(other.channel, channel) || other.channel == channel) &&
             (identical(other.channelNumber, channelNumber) ||
                 other.channelNumber == channelNumber) &&
@@ -2144,7 +2158,7 @@ class _$_KodiListItemAll implements _KodiListItemAll {
             const DeepCollectionEquality().equals(other._genre, _genre));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2248,15 +2262,18 @@ class _$_KodiListItemAll implements _KodiListItemAll {
         const DeepCollectionEquality().hash(_genre)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListItemAllCopyWith<_$_KodiListItemAll> get copyWith =>
-      __$$_KodiListItemAllCopyWithImpl<_$_KodiListItemAll>(this, _$identity);
+  _$$KodiListItemAllImplCopyWith<_$KodiListItemAllImpl> get copyWith =>
+      __$$KodiListItemAllImplCopyWithImpl<_$KodiListItemAllImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListItemAllToJson(
+    return _$$KodiListItemAllImplToJson(
       this,
     );
   }
@@ -2365,10 +2382,10 @@ abstract class _KodiListItemAll implements KodiListItemAll {
       @JsonKey(name: 'sortartist') final String? sortArtist,
       @JsonKey(name: 'userrating') final int? userRating,
       final int? year,
-      final List<String>? genre}) = _$_KodiListItemAll;
+      final List<String>? genre}) = _$KodiListItemAllImpl;
 
   factory _KodiListItemAll.fromJson(Map<String, dynamic> json) =
-      _$_KodiListItemAll.fromJson;
+      _$KodiListItemAllImpl.fromJson;
 
   @override
   String? get channel;
@@ -2616,8 +2633,11 @@ abstract class _KodiListItemAll implements KodiListItemAll {
   int? get year;
   @override
   List<String>? get genre;
+
+  /// Create a copy of KodiListItemAll
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListItemAllCopyWith<_$_KodiListItemAll> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListItemAllImplCopyWith<_$KodiListItemAllImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

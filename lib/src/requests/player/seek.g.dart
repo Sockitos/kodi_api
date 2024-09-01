@@ -6,12 +6,12 @@ part of 'seek.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Seek _$$_SeekFromJson(Map<String, dynamic> json) => _$_Seek(
-      json['playerid'] as int,
+_$SeekImpl _$$SeekImplFromJson(Map<String, dynamic> json) => _$SeekImpl(
+      (json['playerid'] as num).toInt(),
       const KodiPlayerSeekValueConverter().fromJson(json['value']),
     );
 
-Map<String, dynamic> _$$_SeekToJson(_$_Seek instance) {
+Map<String, dynamic> _$$SeekImplToJson(_$SeekImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };
@@ -27,61 +27,61 @@ Map<String, dynamic> _$$_SeekToJson(_$_Seek instance) {
   return val;
 }
 
-_$_KodiPlayerSeekResponse _$$_KodiPlayerSeekResponseFromJson(
+_$KodiPlayerSeekResponseImpl _$$KodiPlayerSeekResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerSeekResponse(
+    _$KodiPlayerSeekResponseImpl(
       percentage: (json['percentage'] as num).toDouble(),
       time: KodiGlobalTime.fromJson(json['time'] as Map<String, dynamic>),
       totalTime:
           KodiGlobalTime.fromJson(json['totaltime'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiPlayerSeekResponseToJson(
-        _$_KodiPlayerSeekResponse instance) =>
+Map<String, dynamic> _$$KodiPlayerSeekResponseImplToJson(
+        _$KodiPlayerSeekResponseImpl instance) =>
     <String, dynamic>{
       'percentage': instance.percentage,
       'time': instance.time.toJson(),
       'totaltime': instance.totalTime.toJson(),
     };
 
-_$KodiPlayerSeekValuePercentage _$$KodiPlayerSeekValuePercentageFromJson(
-        Map<String, dynamic> json) =>
-    _$KodiPlayerSeekValuePercentage(
-      percentage: (json['percentage'] as num).toDouble(),
-      $type: json['runtimeType'] as String?,
-    );
+_$KodiPlayerSeekValuePercentageImpl
+    _$$KodiPlayerSeekValuePercentageImplFromJson(Map<String, dynamic> json) =>
+        _$KodiPlayerSeekValuePercentageImpl(
+          percentage: (json['percentage'] as num).toDouble(),
+          $type: json['runtimeType'] as String?,
+        );
 
-Map<String, dynamic> _$$KodiPlayerSeekValuePercentageToJson(
-        _$KodiPlayerSeekValuePercentage instance) =>
+Map<String, dynamic> _$$KodiPlayerSeekValuePercentageImplToJson(
+        _$KodiPlayerSeekValuePercentageImpl instance) =>
     <String, dynamic>{
       'percentage': instance.percentage,
       'runtimeType': instance.$type,
     };
 
-_$KodiPlayerSeekValueTime _$$KodiPlayerSeekValueTimeFromJson(
+_$KodiPlayerSeekValueTimeImpl _$$KodiPlayerSeekValueTimeImplFromJson(
         Map<String, dynamic> json) =>
-    _$KodiPlayerSeekValueTime(
+    _$KodiPlayerSeekValueTimeImpl(
       time:
           KodiPlayerPositionTime.fromJson(json['time'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$KodiPlayerSeekValueTimeToJson(
-        _$KodiPlayerSeekValueTime instance) =>
+Map<String, dynamic> _$$KodiPlayerSeekValueTimeImplToJson(
+        _$KodiPlayerSeekValueTimeImpl instance) =>
     <String, dynamic>{
       'time': instance.time.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$KodiPlayerSeekValueStep _$$KodiPlayerSeekValueStepFromJson(
+_$KodiPlayerSeekValueStepImpl _$$KodiPlayerSeekValueStepImplFromJson(
         Map<String, dynamic> json) =>
-    _$KodiPlayerSeekValueStep(
+    _$KodiPlayerSeekValueStepImpl(
       step: $enumDecode(_$KodiPlayerSeekStepEnumMap, json['step']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$KodiPlayerSeekValueStepToJson(
-        _$KodiPlayerSeekValueStep instance) =>
+Map<String, dynamic> _$$KodiPlayerSeekValueStepImplToJson(
+        _$KodiPlayerSeekValueStepImpl instance) =>
     <String, dynamic>{
       'step': _$KodiPlayerSeekStepEnumMap[instance.step]!,
       'runtimeType': instance.$type,
@@ -94,15 +94,15 @@ const _$KodiPlayerSeekStepEnumMap = {
   KodiPlayerSeekStep.bigBackward: 'bigbackward',
 };
 
-_$KodiPlayerSeekValueSeconds _$$KodiPlayerSeekValueSecondsFromJson(
+_$KodiPlayerSeekValueSecondsImpl _$$KodiPlayerSeekValueSecondsImplFromJson(
         Map<String, dynamic> json) =>
-    _$KodiPlayerSeekValueSeconds(
-      seconds: json['seconds'] as int,
+    _$KodiPlayerSeekValueSecondsImpl(
+      seconds: (json['seconds'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$KodiPlayerSeekValueSecondsToJson(
-        _$KodiPlayerSeekValueSeconds instance) =>
+Map<String, dynamic> _$$KodiPlayerSeekValueSecondsImplToJson(
+        _$KodiPlayerSeekValueSecondsImpl instance) =>
     <String, dynamic>{
       'seconds': instance.seconds,
       'runtimeType': instance.$type,

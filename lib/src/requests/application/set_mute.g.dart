@@ -6,11 +6,12 @@ part of 'set_mute.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetMute _$$_SetMuteFromJson(Map<String, dynamic> json) => _$_SetMute(
+_$SetMuteImpl _$$SetMuteImplFromJson(Map<String, dynamic> json) =>
+    _$SetMuteImpl(
       const KodiGlobalToggleConverter().fromJson(json['mute']),
     );
 
-Map<String, dynamic> _$$_SetMuteToJson(_$_SetMute instance) {
+Map<String, dynamic> _$$SetMuteImplToJson(_$SetMuteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

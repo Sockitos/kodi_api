@@ -6,15 +6,16 @@ part of 'kodi_host.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiHost _$$_KodiHostFromJson(Map<String, dynamic> json) => _$_KodiHost(
+_$KodiHostImpl _$$KodiHostImplFromJson(Map<String, dynamic> json) =>
+    _$KodiHostImpl(
       ip: json['ip'] as String,
-      port: json['port'] as int,
+      port: (json['port'] as num).toInt(),
       name: json['name'] as String,
       username: json['username'] as String?,
       password: json['password'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiHostToJson(_$_KodiHost instance) {
+Map<String, dynamic> _$$KodiHostImplToJson(_$KodiHostImpl instance) {
   final val = <String, dynamic>{
     'ip': instance.ip,
     'port': instance.port,

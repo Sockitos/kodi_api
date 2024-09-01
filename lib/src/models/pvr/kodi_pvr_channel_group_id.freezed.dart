@@ -12,7 +12,7 @@ part of 'kodi_pvr_channel_group_id.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRChannelGroupId _$KodiPVRChannelGroupIdFromJson(
     Map<String, dynamic> json) {
@@ -73,6 +73,8 @@ mixin _$KodiPVRChannelGroupId {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPVRChannelGroupId to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -93,34 +95,39 @@ class _$KodiPVRChannelGroupIdCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPVRChannelGroupId
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRChannelGroupIdIntegerCopyWith<$Res> {
-  factory _$$_KodiPVRChannelGroupIdIntegerCopyWith(
-          _$_KodiPVRChannelGroupIdInteger value,
-          $Res Function(_$_KodiPVRChannelGroupIdInteger) then) =
-      __$$_KodiPVRChannelGroupIdIntegerCopyWithImpl<$Res>;
+abstract class _$$KodiPVRChannelGroupIdIntegerImplCopyWith<$Res> {
+  factory _$$KodiPVRChannelGroupIdIntegerImplCopyWith(
+          _$KodiPVRChannelGroupIdIntegerImpl value,
+          $Res Function(_$KodiPVRChannelGroupIdIntegerImpl) then) =
+      __$$KodiPVRChannelGroupIdIntegerImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class __$$_KodiPVRChannelGroupIdIntegerCopyWithImpl<$Res>
+class __$$KodiPVRChannelGroupIdIntegerImplCopyWithImpl<$Res>
     extends _$KodiPVRChannelGroupIdCopyWithImpl<$Res,
-        _$_KodiPVRChannelGroupIdInteger>
-    implements _$$_KodiPVRChannelGroupIdIntegerCopyWith<$Res> {
-  __$$_KodiPVRChannelGroupIdIntegerCopyWithImpl(
-      _$_KodiPVRChannelGroupIdInteger _value,
-      $Res Function(_$_KodiPVRChannelGroupIdInteger) _then)
+        _$KodiPVRChannelGroupIdIntegerImpl>
+    implements _$$KodiPVRChannelGroupIdIntegerImplCopyWith<$Res> {
+  __$$KodiPVRChannelGroupIdIntegerImplCopyWithImpl(
+      _$KodiPVRChannelGroupIdIntegerImpl _value,
+      $Res Function(_$KodiPVRChannelGroupIdIntegerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRChannelGroupId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_KodiPVRChannelGroupIdInteger(
+    return _then(_$KodiPVRChannelGroupIdIntegerImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -131,12 +138,15 @@ class __$$_KodiPVRChannelGroupIdIntegerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRChannelGroupIdInteger implements _KodiPVRChannelGroupIdInteger {
-  const _$_KodiPVRChannelGroupIdInteger({required this.id, final String? $type})
+class _$KodiPVRChannelGroupIdIntegerImpl
+    implements _KodiPVRChannelGroupIdInteger {
+  const _$KodiPVRChannelGroupIdIntegerImpl(
+      {required this.id, final String? $type})
       : $type = $type ?? 'integer';
 
-  factory _$_KodiPVRChannelGroupIdInteger.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRChannelGroupIdIntegerFromJson(json);
+  factory _$KodiPVRChannelGroupIdIntegerImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPVRChannelGroupIdIntegerImplFromJson(json);
 
   @override
   final int id;
@@ -150,23 +160,26 @@ class _$_KodiPVRChannelGroupIdInteger implements _KodiPVRChannelGroupIdInteger {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRChannelGroupIdInteger &&
+            other is _$KodiPVRChannelGroupIdIntegerImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRChannelGroupId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRChannelGroupIdIntegerCopyWith<_$_KodiPVRChannelGroupIdInteger>
-      get copyWith => __$$_KodiPVRChannelGroupIdIntegerCopyWithImpl<
-          _$_KodiPVRChannelGroupIdInteger>(this, _$identity);
+  _$$KodiPVRChannelGroupIdIntegerImplCopyWith<
+          _$KodiPVRChannelGroupIdIntegerImpl>
+      get copyWith => __$$KodiPVRChannelGroupIdIntegerImplCopyWithImpl<
+          _$KodiPVRChannelGroupIdIntegerImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -233,7 +246,7 @@ class _$_KodiPVRChannelGroupIdInteger implements _KodiPVRChannelGroupIdInteger {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRChannelGroupIdIntegerToJson(
+    return _$$KodiPVRChannelGroupIdIntegerImplToJson(
       this,
     );
   }
@@ -241,44 +254,50 @@ class _$_KodiPVRChannelGroupIdInteger implements _KodiPVRChannelGroupIdInteger {
 
 abstract class _KodiPVRChannelGroupIdInteger implements KodiPVRChannelGroupId {
   const factory _KodiPVRChannelGroupIdInteger({required final int id}) =
-      _$_KodiPVRChannelGroupIdInteger;
+      _$KodiPVRChannelGroupIdIntegerImpl;
 
   factory _KodiPVRChannelGroupIdInteger.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRChannelGroupIdInteger.fromJson;
+      _$KodiPVRChannelGroupIdIntegerImpl.fromJson;
 
   @override
   int get id;
-  @JsonKey(ignore: true)
-  _$$_KodiPVRChannelGroupIdIntegerCopyWith<_$_KodiPVRChannelGroupIdInteger>
+
+  /// Create a copy of KodiPVRChannelGroupId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRChannelGroupIdIntegerImplCopyWith<
+          _$KodiPVRChannelGroupIdIntegerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRChannelGroupIdEnumeratorCopyWith<$Res> {
-  factory _$$_KodiPVRChannelGroupIdEnumeratorCopyWith(
-          _$_KodiPVRChannelGroupIdEnumerator value,
-          $Res Function(_$_KodiPVRChannelGroupIdEnumerator) then) =
-      __$$_KodiPVRChannelGroupIdEnumeratorCopyWithImpl<$Res>;
+abstract class _$$KodiPVRChannelGroupIdEnumeratorImplCopyWith<$Res> {
+  factory _$$KodiPVRChannelGroupIdEnumeratorImplCopyWith(
+          _$KodiPVRChannelGroupIdEnumeratorImpl value,
+          $Res Function(_$KodiPVRChannelGroupIdEnumeratorImpl) then) =
+      __$$KodiPVRChannelGroupIdEnumeratorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPVRChannelGroupIdValue id});
 }
 
 /// @nodoc
-class __$$_KodiPVRChannelGroupIdEnumeratorCopyWithImpl<$Res>
+class __$$KodiPVRChannelGroupIdEnumeratorImplCopyWithImpl<$Res>
     extends _$KodiPVRChannelGroupIdCopyWithImpl<$Res,
-        _$_KodiPVRChannelGroupIdEnumerator>
-    implements _$$_KodiPVRChannelGroupIdEnumeratorCopyWith<$Res> {
-  __$$_KodiPVRChannelGroupIdEnumeratorCopyWithImpl(
-      _$_KodiPVRChannelGroupIdEnumerator _value,
-      $Res Function(_$_KodiPVRChannelGroupIdEnumerator) _then)
+        _$KodiPVRChannelGroupIdEnumeratorImpl>
+    implements _$$KodiPVRChannelGroupIdEnumeratorImplCopyWith<$Res> {
+  __$$KodiPVRChannelGroupIdEnumeratorImplCopyWithImpl(
+      _$KodiPVRChannelGroupIdEnumeratorImpl _value,
+      $Res Function(_$KodiPVRChannelGroupIdEnumeratorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRChannelGroupId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_KodiPVRChannelGroupIdEnumerator(
+    return _then(_$KodiPVRChannelGroupIdEnumeratorImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -289,15 +308,15 @@ class __$$_KodiPVRChannelGroupIdEnumeratorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRChannelGroupIdEnumerator
+class _$KodiPVRChannelGroupIdEnumeratorImpl
     implements _KodiPVRChannelGroupIdEnumerator {
-  const _$_KodiPVRChannelGroupIdEnumerator(
+  const _$KodiPVRChannelGroupIdEnumeratorImpl(
       {required this.id, final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiPVRChannelGroupIdEnumerator.fromJson(
+  factory _$KodiPVRChannelGroupIdEnumeratorImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPVRChannelGroupIdEnumeratorFromJson(json);
+      _$$KodiPVRChannelGroupIdEnumeratorImplFromJson(json);
 
   @override
   final KodiPVRChannelGroupIdValue id;
@@ -311,24 +330,26 @@ class _$_KodiPVRChannelGroupIdEnumerator
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRChannelGroupIdEnumerator &&
+            other is _$KodiPVRChannelGroupIdEnumeratorImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRChannelGroupId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRChannelGroupIdEnumeratorCopyWith<
-          _$_KodiPVRChannelGroupIdEnumerator>
-      get copyWith => __$$_KodiPVRChannelGroupIdEnumeratorCopyWithImpl<
-          _$_KodiPVRChannelGroupIdEnumerator>(this, _$identity);
+  _$$KodiPVRChannelGroupIdEnumeratorImplCopyWith<
+          _$KodiPVRChannelGroupIdEnumeratorImpl>
+      get copyWith => __$$KodiPVRChannelGroupIdEnumeratorImplCopyWithImpl<
+          _$KodiPVRChannelGroupIdEnumeratorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -395,7 +416,7 @@ class _$_KodiPVRChannelGroupIdEnumerator
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRChannelGroupIdEnumeratorToJson(
+    return _$$KodiPVRChannelGroupIdEnumeratorImplToJson(
       this,
     );
   }
@@ -405,15 +426,18 @@ abstract class _KodiPVRChannelGroupIdEnumerator
     implements KodiPVRChannelGroupId {
   const factory _KodiPVRChannelGroupIdEnumerator(
           {required final KodiPVRChannelGroupIdValue id}) =
-      _$_KodiPVRChannelGroupIdEnumerator;
+      _$KodiPVRChannelGroupIdEnumeratorImpl;
 
   factory _KodiPVRChannelGroupIdEnumerator.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRChannelGroupIdEnumerator.fromJson;
+      _$KodiPVRChannelGroupIdEnumeratorImpl.fromJson;
 
   @override
   KodiPVRChannelGroupIdValue get id;
-  @JsonKey(ignore: true)
-  _$$_KodiPVRChannelGroupIdEnumeratorCopyWith<
-          _$_KodiPVRChannelGroupIdEnumerator>
+
+  /// Create a copy of KodiPVRChannelGroupId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRChannelGroupIdEnumeratorImplCopyWith<
+          _$KodiPVRChannelGroupIdEnumeratorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

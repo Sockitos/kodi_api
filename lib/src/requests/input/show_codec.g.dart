@@ -6,7 +6,8 @@ part of 'show_codec.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ShowCodec _$$_ShowCodecFromJson(Map<String, dynamic> json) => _$_ShowCodec();
+_$ShowCodecImpl _$$ShowCodecImplFromJson(Map<String, dynamic> json) =>
+    _$ShowCodecImpl();
 
-Map<String, dynamic> _$$_ShowCodecToJson(_$_ShowCodec instance) =>
+Map<String, dynamic> _$$ShowCodecImplToJson(_$ShowCodecImpl instance) =>
     <String, dynamic>{};

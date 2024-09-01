@@ -6,9 +6,9 @@ part of 'kodi_application_property_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiApplicationPropertyValue _$$_KodiApplicationPropertyValueFromJson(
+_$KodiApplicationPropertyValueImpl _$$KodiApplicationPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiApplicationPropertyValue(
+    _$KodiApplicationPropertyValueImpl(
       language: json['language'] as String?,
       muted: json['muted'] as bool?,
       name: json['name'] as String?,
@@ -19,11 +19,11 @@ _$_KodiApplicationPropertyValue _$$_KodiApplicationPropertyValueFromJson(
           ? null
           : KodiApplicationPropertyValueVersion.fromJson(
               json['version'] as Map<String, dynamic>),
-      volume: json['volume'] as int?,
+      volume: (json['volume'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$_KodiApplicationPropertyValueToJson(
-    _$_KodiApplicationPropertyValue instance) {
+Map<String, dynamic> _$$KodiApplicationPropertyValueImplToJson(
+    _$KodiApplicationPropertyValueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -41,20 +41,20 @@ Map<String, dynamic> _$$_KodiApplicationPropertyValueToJson(
   return val;
 }
 
-_$_KodiApplicationPropertyValueVersion
-    _$$_KodiApplicationPropertyValueVersionFromJson(
+_$KodiApplicationPropertyValueVersionImpl
+    _$$KodiApplicationPropertyValueVersionImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiApplicationPropertyValueVersion(
-          major: json['major'] as int,
-          minor: json['minor'] as int,
+        _$KodiApplicationPropertyValueVersionImpl(
+          major: (json['major'] as num).toInt(),
+          minor: (json['minor'] as num).toInt(),
           revision: json['revision'] as String,
           tag: $enumDecode(
               _$KodiApplicationPropertyValueVersionTagEnumMap, json['tag']),
           tagVersion: json['tagversion'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiApplicationPropertyValueVersionToJson(
-    _$_KodiApplicationPropertyValueVersion instance) {
+Map<String, dynamic> _$$KodiApplicationPropertyValueVersionImplToJson(
+    _$KodiApplicationPropertyValueVersionImpl instance) {
   final val = <String, dynamic>{
     'major': instance.major,
     'minor': instance.minor,

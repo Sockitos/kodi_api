@@ -6,13 +6,15 @@ part of 'kodi_video_resume.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoResume _$$_KodiVideoResumeFromJson(Map<String, dynamic> json) =>
-    _$_KodiVideoResume(
+_$KodiVideoResumeImpl _$$KodiVideoResumeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiVideoResumeImpl(
       position: (json['position'] as num?)?.toDouble(),
       total: (json['total'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_KodiVideoResumeToJson(_$_KodiVideoResume instance) {
+Map<String, dynamic> _$$KodiVideoResumeImplToJson(
+    _$KodiVideoResumeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

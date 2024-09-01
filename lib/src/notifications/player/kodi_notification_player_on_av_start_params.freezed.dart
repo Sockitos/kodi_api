@@ -12,7 +12,7 @@ part of 'kodi_notification_player_on_av_start_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationPlayerOnAVStartParams
     _$KodiNotificationPlayerOnAVStartParamsFromJson(Map<String, dynamic> json) {
@@ -24,8 +24,12 @@ mixin _$KodiNotificationPlayerOnAVStartParams {
   String get sender => throw _privateConstructorUsedError;
   KodiPlayerNotificationsData get data => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlayerOnAVStartParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlayerOnAVStartParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlayerOnAVStartParamsCopyWith<
           KodiNotificationPlayerOnAVStartParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -55,6 +59,8 @@ class _$KodiNotificationPlayerOnAVStartParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlayerOnAVStartParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -73,6 +79,8 @@ class _$KodiNotificationPlayerOnAVStartParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlayerOnAVStartParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerNotificationsDataCopyWith<$Res> get data {
@@ -83,12 +91,12 @@ class _$KodiNotificationPlayerOnAVStartParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnAVStartParamsCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnAVStartParamsImplCopyWith<$Res>
     implements $KodiNotificationPlayerOnAVStartParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnAVStartParamsCopyWith(
-          _$_KodiNotificationPlayerOnAVStartParams value,
-          $Res Function(_$_KodiNotificationPlayerOnAVStartParams) then) =
-      __$$_KodiNotificationPlayerOnAVStartParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnAVStartParamsImplCopyWith(
+          _$KodiNotificationPlayerOnAVStartParamsImpl value,
+          $Res Function(_$KodiNotificationPlayerOnAVStartParamsImpl) then) =
+      __$$KodiNotificationPlayerOnAVStartParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiPlayerNotificationsData data});
@@ -98,22 +106,24 @@ abstract class _$$_KodiNotificationPlayerOnAVStartParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnAVStartParamsCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnAVStartParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlayerOnAVStartParamsCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnAVStartParams>
-    implements _$$_KodiNotificationPlayerOnAVStartParamsCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnAVStartParamsCopyWithImpl(
-      _$_KodiNotificationPlayerOnAVStartParams _value,
-      $Res Function(_$_KodiNotificationPlayerOnAVStartParams) _then)
+        _$KodiNotificationPlayerOnAVStartParamsImpl>
+    implements _$$KodiNotificationPlayerOnAVStartParamsImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnAVStartParamsImplCopyWithImpl(
+      _$KodiNotificationPlayerOnAVStartParamsImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnAVStartParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlayerOnAVStartParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnAVStartParams(
+    return _then(_$KodiNotificationPlayerOnAVStartParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -128,14 +138,14 @@ class __$$_KodiNotificationPlayerOnAVStartParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnAVStartParams
+class _$KodiNotificationPlayerOnAVStartParamsImpl
     implements _KodiNotificationPlayerOnAVStartParams {
-  const _$_KodiNotificationPlayerOnAVStartParams(
+  const _$KodiNotificationPlayerOnAVStartParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationPlayerOnAVStartParams.fromJson(
+  factory _$KodiNotificationPlayerOnAVStartParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnAVStartParamsFromJson(json);
+      _$$KodiNotificationPlayerOnAVStartParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -148,29 +158,31 @@ class _$_KodiNotificationPlayerOnAVStartParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnAVStartParams &&
+            other is _$KodiNotificationPlayerOnAVStartParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlayerOnAVStartParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnAVStartParamsCopyWith<
-          _$_KodiNotificationPlayerOnAVStartParams>
-      get copyWith => __$$_KodiNotificationPlayerOnAVStartParamsCopyWithImpl<
-          _$_KodiNotificationPlayerOnAVStartParams>(this, _$identity);
+  _$$KodiNotificationPlayerOnAVStartParamsImplCopyWith<
+          _$KodiNotificationPlayerOnAVStartParamsImpl>
+      get copyWith => __$$KodiNotificationPlayerOnAVStartParamsImplCopyWithImpl<
+          _$KodiNotificationPlayerOnAVStartParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnAVStartParamsToJson(
+    return _$$KodiNotificationPlayerOnAVStartParamsImplToJson(
       this,
     );
   }
@@ -181,19 +193,22 @@ abstract class _KodiNotificationPlayerOnAVStartParams
   const factory _KodiNotificationPlayerOnAVStartParams(
           {required final String sender,
           required final KodiPlayerNotificationsData data}) =
-      _$_KodiNotificationPlayerOnAVStartParams;
+      _$KodiNotificationPlayerOnAVStartParamsImpl;
 
   factory _KodiNotificationPlayerOnAVStartParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnAVStartParams.fromJson;
+      _$KodiNotificationPlayerOnAVStartParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiPlayerNotificationsData get data;
+
+  /// Create a copy of KodiNotificationPlayerOnAVStartParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnAVStartParamsCopyWith<
-          _$_KodiNotificationPlayerOnAVStartParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnAVStartParamsImplCopyWith<
+          _$KodiNotificationPlayerOnAVStartParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

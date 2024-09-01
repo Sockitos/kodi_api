@@ -12,7 +12,7 @@ part of 'show_notification.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ShowNotification _$ShowNotificationFromJson(Map<String, dynamic> json) {
   return _ShowNotification.fromJson(json);
@@ -27,8 +27,12 @@ mixin _$ShowNotification {
   @JsonKey(name: 'displaytime')
   int get displayTime => throw _privateConstructorUsedError;
 
+  /// Serializes this ShowNotification to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ShowNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ShowNotificationCopyWith<ShowNotification> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$ShowNotificationCopyWithImpl<$Res, $Val extends ShowNotification>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ShowNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class _$ShowNotificationCopyWithImpl<$Res, $Val extends ShowNotification>
     ) as $Val);
   }
 
+  /// Create a copy of ShowNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ShowNotificationImageCopyWith<$Res>? get image {
@@ -100,11 +108,11 @@ class _$ShowNotificationCopyWithImpl<$Res, $Val extends ShowNotification>
 }
 
 /// @nodoc
-abstract class _$$_ShowNotificationCopyWith<$Res>
+abstract class _$$ShowNotificationImplCopyWith<$Res>
     implements $ShowNotificationCopyWith<$Res> {
-  factory _$$_ShowNotificationCopyWith(
-          _$_ShowNotification value, $Res Function(_$_ShowNotification) then) =
-      __$$_ShowNotificationCopyWithImpl<$Res>;
+  factory _$$ShowNotificationImplCopyWith(_$ShowNotificationImpl value,
+          $Res Function(_$ShowNotificationImpl) then) =
+      __$$ShowNotificationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -118,13 +126,15 @@ abstract class _$$_ShowNotificationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ShowNotificationCopyWithImpl<$Res>
-    extends _$ShowNotificationCopyWithImpl<$Res, _$_ShowNotification>
-    implements _$$_ShowNotificationCopyWith<$Res> {
-  __$$_ShowNotificationCopyWithImpl(
-      _$_ShowNotification _value, $Res Function(_$_ShowNotification) _then)
+class __$$ShowNotificationImplCopyWithImpl<$Res>
+    extends _$ShowNotificationCopyWithImpl<$Res, _$ShowNotificationImpl>
+    implements _$$ShowNotificationImplCopyWith<$Res> {
+  __$$ShowNotificationImplCopyWithImpl(_$ShowNotificationImpl _value,
+      $Res Function(_$ShowNotificationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ShowNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,7 +143,7 @@ class __$$_ShowNotificationCopyWithImpl<$Res>
     Object? image = freezed,
     Object? displayTime = null,
   }) {
-    return _then(_$_ShowNotification(
+    return _then(_$ShowNotificationImpl(
       null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -156,15 +166,15 @@ class __$$_ShowNotificationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShowNotification extends _ShowNotification {
-  const _$_ShowNotification(this.title, this.message,
+class _$ShowNotificationImpl extends _ShowNotification {
+  const _$ShowNotificationImpl(this.title, this.message,
       {@ShowNotificationImageConverter() this.image,
       @JsonKey(name: 'displaytime') this.displayTime = 5000})
       : assert(displayTime >= 1500, 'displayTime has a minimum value of 1500'),
         super._();
 
-  factory _$_ShowNotification.fromJson(Map<String, dynamic> json) =>
-      _$$_ShowNotificationFromJson(json);
+  factory _$ShowNotificationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ShowNotificationImplFromJson(json);
 
   @override
   final String title;
@@ -183,10 +193,10 @@ class _$_ShowNotification extends _ShowNotification {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShowNotification &&
+            other is _$ShowNotificationImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.image, image) || other.image == image) &&
@@ -194,20 +204,23 @@ class _$_ShowNotification extends _ShowNotification {
                 other.displayTime == displayTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, title, message, image, displayTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ShowNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ShowNotificationCopyWith<_$_ShowNotification> get copyWith =>
-      __$$_ShowNotificationCopyWithImpl<_$_ShowNotification>(this, _$identity);
+  _$$ShowNotificationImplCopyWith<_$ShowNotificationImpl> get copyWith =>
+      __$$ShowNotificationImplCopyWithImpl<_$ShowNotificationImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowNotificationToJson(
+    return _$$ShowNotificationImplToJson(
       this,
     );
   }
@@ -217,11 +230,11 @@ abstract class _ShowNotification extends ShowNotification {
   const factory _ShowNotification(final String title, final String message,
           {@ShowNotificationImageConverter() final ShowNotificationImage? image,
           @JsonKey(name: 'displaytime') final int displayTime}) =
-      _$_ShowNotification;
+      _$ShowNotificationImpl;
   const _ShowNotification._() : super._();
 
   factory _ShowNotification.fromJson(Map<String, dynamic> json) =
-      _$_ShowNotification.fromJson;
+      _$ShowNotificationImpl.fromJson;
 
   @override
   String get title;
@@ -233,9 +246,12 @@ abstract class _ShowNotification extends ShowNotification {
   @override
   @JsonKey(name: 'displaytime')
   int get displayTime;
+
+  /// Create a copy of ShowNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ShowNotificationCopyWith<_$_ShowNotification> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ShowNotificationImplCopyWith<_$ShowNotificationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -298,6 +314,8 @@ mixin _$ShowNotificationImage {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this ShowNotificationImage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -318,34 +336,39 @@ class _$ShowNotificationImageCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ShowNotificationImage
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_ShowNotificationImageStringCopyWith<$Res> {
-  factory _$$_ShowNotificationImageStringCopyWith(
-          _$_ShowNotificationImageString value,
-          $Res Function(_$_ShowNotificationImageString) then) =
-      __$$_ShowNotificationImageStringCopyWithImpl<$Res>;
+abstract class _$$ShowNotificationImageStringImplCopyWith<$Res> {
+  factory _$$ShowNotificationImageStringImplCopyWith(
+          _$ShowNotificationImageStringImpl value,
+          $Res Function(_$ShowNotificationImageStringImpl) then) =
+      __$$ShowNotificationImageStringImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String image});
 }
 
 /// @nodoc
-class __$$_ShowNotificationImageStringCopyWithImpl<$Res>
+class __$$ShowNotificationImageStringImplCopyWithImpl<$Res>
     extends _$ShowNotificationImageCopyWithImpl<$Res,
-        _$_ShowNotificationImageString>
-    implements _$$_ShowNotificationImageStringCopyWith<$Res> {
-  __$$_ShowNotificationImageStringCopyWithImpl(
-      _$_ShowNotificationImageString _value,
-      $Res Function(_$_ShowNotificationImageString) _then)
+        _$ShowNotificationImageStringImpl>
+    implements _$$ShowNotificationImageStringImplCopyWith<$Res> {
+  __$$ShowNotificationImageStringImplCopyWithImpl(
+      _$ShowNotificationImageStringImpl _value,
+      $Res Function(_$ShowNotificationImageStringImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ShowNotificationImage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? image = null,
   }) {
-    return _then(_$_ShowNotificationImageString(
+    return _then(_$ShowNotificationImageStringImpl(
       null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -356,12 +379,14 @@ class __$$_ShowNotificationImageStringCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShowNotificationImageString implements _ShowNotificationImageString {
-  const _$_ShowNotificationImageString(this.image, {final String? $type})
+class _$ShowNotificationImageStringImpl
+    implements _ShowNotificationImageString {
+  const _$ShowNotificationImageStringImpl(this.image, {final String? $type})
       : $type = $type ?? 'string';
 
-  factory _$_ShowNotificationImageString.fromJson(Map<String, dynamic> json) =>
-      _$$_ShowNotificationImageStringFromJson(json);
+  factory _$ShowNotificationImageStringImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ShowNotificationImageStringImplFromJson(json);
 
   @override
   final String image;
@@ -375,23 +400,25 @@ class _$_ShowNotificationImageString implements _ShowNotificationImageString {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShowNotificationImageString &&
+            other is _$ShowNotificationImageStringImpl &&
             (identical(other.image, image) || other.image == image));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ShowNotificationImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ShowNotificationImageStringCopyWith<_$_ShowNotificationImageString>
-      get copyWith => __$$_ShowNotificationImageStringCopyWithImpl<
-          _$_ShowNotificationImageString>(this, _$identity);
+  _$$ShowNotificationImageStringImplCopyWith<_$ShowNotificationImageStringImpl>
+      get copyWith => __$$ShowNotificationImageStringImplCopyWithImpl<
+          _$ShowNotificationImageStringImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -458,7 +485,7 @@ class _$_ShowNotificationImageString implements _ShowNotificationImageString {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowNotificationImageStringToJson(
+    return _$$ShowNotificationImageStringImplToJson(
       this,
     );
   }
@@ -466,44 +493,49 @@ class _$_ShowNotificationImageString implements _ShowNotificationImageString {
 
 abstract class _ShowNotificationImageString implements ShowNotificationImage {
   const factory _ShowNotificationImageString(final String image) =
-      _$_ShowNotificationImageString;
+      _$ShowNotificationImageStringImpl;
 
   factory _ShowNotificationImageString.fromJson(Map<String, dynamic> json) =
-      _$_ShowNotificationImageString.fromJson;
+      _$ShowNotificationImageStringImpl.fromJson;
 
   @override
   String get image;
-  @JsonKey(ignore: true)
-  _$$_ShowNotificationImageStringCopyWith<_$_ShowNotificationImageString>
+
+  /// Create a copy of ShowNotificationImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ShowNotificationImageStringImplCopyWith<_$ShowNotificationImageStringImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ShowNotificationImageEnumeratorCopyWith<$Res> {
-  factory _$$_ShowNotificationImageEnumeratorCopyWith(
-          _$_ShowNotificationImageEnumerator value,
-          $Res Function(_$_ShowNotificationImageEnumerator) then) =
-      __$$_ShowNotificationImageEnumeratorCopyWithImpl<$Res>;
+abstract class _$$ShowNotificationImageEnumeratorImplCopyWith<$Res> {
+  factory _$$ShowNotificationImageEnumeratorImplCopyWith(
+          _$ShowNotificationImageEnumeratorImpl value,
+          $Res Function(_$ShowNotificationImageEnumeratorImpl) then) =
+      __$$ShowNotificationImageEnumeratorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiGUINotificationImageType image});
 }
 
 /// @nodoc
-class __$$_ShowNotificationImageEnumeratorCopyWithImpl<$Res>
+class __$$ShowNotificationImageEnumeratorImplCopyWithImpl<$Res>
     extends _$ShowNotificationImageCopyWithImpl<$Res,
-        _$_ShowNotificationImageEnumerator>
-    implements _$$_ShowNotificationImageEnumeratorCopyWith<$Res> {
-  __$$_ShowNotificationImageEnumeratorCopyWithImpl(
-      _$_ShowNotificationImageEnumerator _value,
-      $Res Function(_$_ShowNotificationImageEnumerator) _then)
+        _$ShowNotificationImageEnumeratorImpl>
+    implements _$$ShowNotificationImageEnumeratorImplCopyWith<$Res> {
+  __$$ShowNotificationImageEnumeratorImplCopyWithImpl(
+      _$ShowNotificationImageEnumeratorImpl _value,
+      $Res Function(_$ShowNotificationImageEnumeratorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ShowNotificationImage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? image = null,
   }) {
-    return _then(_$_ShowNotificationImageEnumerator(
+    return _then(_$ShowNotificationImageEnumeratorImpl(
       null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -514,14 +546,14 @@ class __$$_ShowNotificationImageEnumeratorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShowNotificationImageEnumerator
+class _$ShowNotificationImageEnumeratorImpl
     implements _ShowNotificationImageEnumerator {
-  const _$_ShowNotificationImageEnumerator(this.image, {final String? $type})
+  const _$ShowNotificationImageEnumeratorImpl(this.image, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_ShowNotificationImageEnumerator.fromJson(
+  factory _$ShowNotificationImageEnumeratorImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_ShowNotificationImageEnumeratorFromJson(json);
+      _$$ShowNotificationImageEnumeratorImplFromJson(json);
 
   @override
   final KodiGUINotificationImageType image;
@@ -535,24 +567,26 @@ class _$_ShowNotificationImageEnumerator
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShowNotificationImageEnumerator &&
+            other is _$ShowNotificationImageEnumeratorImpl &&
             (identical(other.image, image) || other.image == image));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, image);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ShowNotificationImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ShowNotificationImageEnumeratorCopyWith<
-          _$_ShowNotificationImageEnumerator>
-      get copyWith => __$$_ShowNotificationImageEnumeratorCopyWithImpl<
-          _$_ShowNotificationImageEnumerator>(this, _$identity);
+  _$$ShowNotificationImageEnumeratorImplCopyWith<
+          _$ShowNotificationImageEnumeratorImpl>
+      get copyWith => __$$ShowNotificationImageEnumeratorImplCopyWithImpl<
+          _$ShowNotificationImageEnumeratorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -619,7 +653,7 @@ class _$_ShowNotificationImageEnumerator
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowNotificationImageEnumeratorToJson(
+    return _$$ShowNotificationImageEnumeratorImplToJson(
       this,
     );
   }
@@ -629,15 +663,18 @@ abstract class _ShowNotificationImageEnumerator
     implements ShowNotificationImage {
   const factory _ShowNotificationImageEnumerator(
           final KodiGUINotificationImageType image) =
-      _$_ShowNotificationImageEnumerator;
+      _$ShowNotificationImageEnumeratorImpl;
 
   factory _ShowNotificationImageEnumerator.fromJson(Map<String, dynamic> json) =
-      _$_ShowNotificationImageEnumerator.fromJson;
+      _$ShowNotificationImageEnumeratorImpl.fromJson;
 
   @override
   KodiGUINotificationImageType get image;
-  @JsonKey(ignore: true)
-  _$$_ShowNotificationImageEnumeratorCopyWith<
-          _$_ShowNotificationImageEnumerator>
+
+  /// Create a copy of ShowNotificationImage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ShowNotificationImageEnumeratorImplCopyWith<
+          _$ShowNotificationImageEnumeratorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,12 +1,13 @@
 targets:
   $default:
     builders:
-      json_serializable|json_serializable:
+      json_serializable:
         enabled: true
         generate_for:
-          - lib/src/models/**.dart
-          - lib/src/notifications/**.dart
-          - lib/src/requests/**.dart
+          include:
+            - lib/src/models/**.dart
+            - lib/src/notifications/**.dart
+            - lib/src/requests/**.dart
         options:
           explicit_to_json: true
           include_if_null: false
@@ -15,6 +16,7 @@ targets:
       freezed|freezed:
         enabled: true
         generate_for:
-          - lib/src/models/**.dart
-          - lib/src/notifications/**.dart
-          - lib/src/requests/**.dart
+          include:
+            - lib/src/models/**.dart
+            - lib/src/notifications/**.dart
+            - lib/src/requests/**.dart

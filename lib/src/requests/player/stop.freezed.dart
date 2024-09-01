@@ -12,7 +12,7 @@ part of 'stop.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Stop _$StopFromJson(Map<String, dynamic> json) {
   return _Stop.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$Stop {
   @JsonKey(name: 'playerid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this Stop to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Stop
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StopCopyWith<Stop> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$StopCopyWithImpl<$Res, $Val extends Stop>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Stop
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -61,26 +67,30 @@ class _$StopCopyWithImpl<$Res, $Val extends Stop>
 }
 
 /// @nodoc
-abstract class _$$_StopCopyWith<$Res> implements $StopCopyWith<$Res> {
-  factory _$$_StopCopyWith(_$_Stop value, $Res Function(_$_Stop) then) =
-      __$$_StopCopyWithImpl<$Res>;
+abstract class _$$StopImplCopyWith<$Res> implements $StopCopyWith<$Res> {
+  factory _$$StopImplCopyWith(
+          _$StopImpl value, $Res Function(_$StopImpl) then) =
+      __$$StopImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'playerid') int id});
 }
 
 /// @nodoc
-class __$$_StopCopyWithImpl<$Res> extends _$StopCopyWithImpl<$Res, _$_Stop>
-    implements _$$_StopCopyWith<$Res> {
-  __$$_StopCopyWithImpl(_$_Stop _value, $Res Function(_$_Stop) _then)
+class __$$StopImplCopyWithImpl<$Res>
+    extends _$StopCopyWithImpl<$Res, _$StopImpl>
+    implements _$$StopImplCopyWith<$Res> {
+  __$$StopImplCopyWithImpl(_$StopImpl _value, $Res Function(_$StopImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Stop
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_Stop(
+    return _then(_$StopImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -91,10 +101,11 @@ class __$$_StopCopyWithImpl<$Res> extends _$StopCopyWithImpl<$Res, _$_Stop>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Stop extends _Stop {
-  const _$_Stop(@JsonKey(name: 'playerid') this.id) : super._();
+class _$StopImpl extends _Stop {
+  const _$StopImpl(@JsonKey(name: 'playerid') this.id) : super._();
 
-  factory _$_Stop.fromJson(Map<String, dynamic> json) => _$$_StopFromJson(json);
+  factory _$StopImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StopImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -106,41 +117,47 @@ class _$_Stop extends _Stop {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Stop &&
+            other is _$StopImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Stop
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StopCopyWith<_$_Stop> get copyWith =>
-      __$$_StopCopyWithImpl<_$_Stop>(this, _$identity);
+  _$$StopImplCopyWith<_$StopImpl> get copyWith =>
+      __$$StopImplCopyWithImpl<_$StopImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StopToJson(
+    return _$$StopImplToJson(
       this,
     );
   }
 }
 
 abstract class _Stop extends Stop {
-  const factory _Stop(@JsonKey(name: 'playerid') final int id) = _$_Stop;
+  const factory _Stop(@JsonKey(name: 'playerid') final int id) = _$StopImpl;
   const _Stop._() : super._();
 
-  factory _Stop.fromJson(Map<String, dynamic> json) = _$_Stop.fromJson;
+  factory _Stop.fromJson(Map<String, dynamic> json) = _$StopImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
   int get id;
+
+  /// Create a copy of Stop
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_StopCopyWith<_$_Stop> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$StopImplCopyWith<_$StopImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

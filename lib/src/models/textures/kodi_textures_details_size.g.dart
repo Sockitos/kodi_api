@@ -6,18 +6,18 @@ part of 'kodi_textures_details_size.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiTexturesDetailsSize _$$_KodiTexturesDetailsSizeFromJson(
+_$KodiTexturesDetailsSizeImpl _$$KodiTexturesDetailsSizeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiTexturesDetailsSize(
-      height: json['height'] as int?,
+    _$KodiTexturesDetailsSizeImpl(
+      height: (json['height'] as num?)?.toInt(),
       lastUsed: const DateTimeConverter().fromJson(json['lastused']),
-      size: json['size'] as int?,
-      useCount: json['usecount'] as int?,
-      width: json['width'] as int?,
+      size: (json['size'] as num?)?.toInt(),
+      useCount: (json['usecount'] as num?)?.toInt(),
+      width: (json['width'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$_KodiTexturesDetailsSizeToJson(
-    _$_KodiTexturesDetailsSize instance) {
+Map<String, dynamic> _$$KodiTexturesDetailsSizeImplToJson(
+    _$KodiTexturesDetailsSizeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

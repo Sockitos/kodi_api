@@ -6,9 +6,10 @@ part of 'kodi_player_notifications_player_seek.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerNotificationsPlayerSeek
-    _$$_KodiPlayerNotificationsPlayerSeekFromJson(Map<String, dynamic> json) =>
-        _$_KodiPlayerNotificationsPlayerSeek(
+_$KodiPlayerNotificationsPlayerSeekImpl
+    _$$KodiPlayerNotificationsPlayerSeekImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiPlayerNotificationsPlayerSeekImpl(
           seekOffset: json['seekoffset'] == null
               ? null
               : KodiGlobalTime.fromJson(
@@ -16,12 +17,12 @@ _$_KodiPlayerNotificationsPlayerSeek
           time: json['time'] == null
               ? null
               : KodiGlobalTime.fromJson(json['time'] as Map<String, dynamic>),
-          playerId: json['playerid'] as int,
-          speed: json['speed'] as int?,
+          playerId: (json['playerid'] as num).toInt(),
+          speed: (json['speed'] as num?)?.toInt(),
         );
 
-Map<String, dynamic> _$$_KodiPlayerNotificationsPlayerSeekToJson(
-    _$_KodiPlayerNotificationsPlayerSeek instance) {
+Map<String, dynamic> _$$KodiPlayerNotificationsPlayerSeekImplToJson(
+    _$KodiPlayerNotificationsPlayerSeekImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

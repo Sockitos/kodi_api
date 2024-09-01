@@ -6,16 +6,16 @@ part of 'kodi_library_details_tag.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiLibraryDetailsTag _$$_KodiLibraryDetailsTagFromJson(
+_$KodiLibraryDetailsTagImpl _$$KodiLibraryDetailsTagImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiLibraryDetailsTag(
-      tagId: json['tagid'] as int,
+    _$KodiLibraryDetailsTagImpl(
+      tagId: (json['tagid'] as num).toInt(),
       title: json['title'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiLibraryDetailsTagToJson(
-    _$_KodiLibraryDetailsTag instance) {
+Map<String, dynamic> _$$KodiLibraryDetailsTagImplToJson(
+    _$KodiLibraryDetailsTagImpl instance) {
   final val = <String, dynamic>{
     'tagid': instance.tagId,
   };

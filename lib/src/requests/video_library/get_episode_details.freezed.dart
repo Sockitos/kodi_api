@@ -12,7 +12,7 @@ part of 'get_episode_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetEpisodeDetails _$GetEpisodeDetailsFromJson(Map<String, dynamic> json) {
   return _GetEpisodeDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetEpisodeDetails {
   Set<KodiVideoFieldsEpisode>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetEpisodeDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetEpisodeDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetEpisodeDetailsCopyWith<GetEpisodeDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$GetEpisodeDetailsCopyWithImpl<$Res, $Val extends GetEpisodeDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetEpisodeDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,11 +78,11 @@ class _$GetEpisodeDetailsCopyWithImpl<$Res, $Val extends GetEpisodeDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetEpisodeDetailsCopyWith<$Res>
+abstract class _$$GetEpisodeDetailsImplCopyWith<$Res>
     implements $GetEpisodeDetailsCopyWith<$Res> {
-  factory _$$_GetEpisodeDetailsCopyWith(_$_GetEpisodeDetails value,
-          $Res Function(_$_GetEpisodeDetails) then) =
-      __$$_GetEpisodeDetailsCopyWithImpl<$Res>;
+  factory _$$GetEpisodeDetailsImplCopyWith(_$GetEpisodeDetailsImpl value,
+          $Res Function(_$GetEpisodeDetailsImpl) then) =
+      __$$GetEpisodeDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,20 +91,22 @@ abstract class _$$_GetEpisodeDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetEpisodeDetailsCopyWithImpl<$Res>
-    extends _$GetEpisodeDetailsCopyWithImpl<$Res, _$_GetEpisodeDetails>
-    implements _$$_GetEpisodeDetailsCopyWith<$Res> {
-  __$$_GetEpisodeDetailsCopyWithImpl(
-      _$_GetEpisodeDetails _value, $Res Function(_$_GetEpisodeDetails) _then)
+class __$$GetEpisodeDetailsImplCopyWithImpl<$Res>
+    extends _$GetEpisodeDetailsCopyWithImpl<$Res, _$GetEpisodeDetailsImpl>
+    implements _$$GetEpisodeDetailsImplCopyWith<$Res> {
+  __$$GetEpisodeDetailsImplCopyWithImpl(_$GetEpisodeDetailsImpl _value,
+      $Res Function(_$GetEpisodeDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetEpisodeDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetEpisodeDetails(
+    return _then(_$GetEpisodeDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -113,14 +121,14 @@ class __$$_GetEpisodeDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetEpisodeDetails extends _GetEpisodeDetails {
-  const _$_GetEpisodeDetails(@JsonKey(name: 'episodeid') this.id,
+class _$GetEpisodeDetailsImpl extends _GetEpisodeDetails {
+  const _$GetEpisodeDetailsImpl(@JsonKey(name: 'episodeid') this.id,
       {final Set<KodiVideoFieldsEpisode>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetEpisodeDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetEpisodeDetailsFromJson(json);
+  factory _$GetEpisodeDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetEpisodeDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'episodeid')
@@ -141,30 +149,32 @@ class _$_GetEpisodeDetails extends _GetEpisodeDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetEpisodeDetails &&
+            other is _$GetEpisodeDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetEpisodeDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetEpisodeDetailsCopyWith<_$_GetEpisodeDetails> get copyWith =>
-      __$$_GetEpisodeDetailsCopyWithImpl<_$_GetEpisodeDetails>(
+  _$$GetEpisodeDetailsImplCopyWith<_$GetEpisodeDetailsImpl> get copyWith =>
+      __$$GetEpisodeDetailsImplCopyWithImpl<_$GetEpisodeDetailsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetEpisodeDetailsToJson(
+    return _$$GetEpisodeDetailsImplToJson(
       this,
     );
   }
@@ -172,19 +182,23 @@ class _$_GetEpisodeDetails extends _GetEpisodeDetails {
 
 abstract class _GetEpisodeDetails extends GetEpisodeDetails {
   const factory _GetEpisodeDetails(@JsonKey(name: 'episodeid') final int id,
-      {final Set<KodiVideoFieldsEpisode>? properties}) = _$_GetEpisodeDetails;
+          {final Set<KodiVideoFieldsEpisode>? properties}) =
+      _$GetEpisodeDetailsImpl;
   const _GetEpisodeDetails._() : super._();
 
   factory _GetEpisodeDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetEpisodeDetails.fromJson;
+      _$GetEpisodeDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'episodeid')
   int get id;
   @override
   Set<KodiVideoFieldsEpisode>? get properties;
+
+  /// Create a copy of GetEpisodeDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetEpisodeDetailsCopyWith<_$_GetEpisodeDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetEpisodeDetailsImplCopyWith<_$GetEpisodeDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

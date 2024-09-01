@@ -12,7 +12,7 @@ part of 'get_sections.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSections _$GetSectionsFromJson(Map<String, dynamic> json) {
   return _GetSections.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$GetSections {
   Set<KodiSettingsGetSectionsProperties>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetSections to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSections
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSectionsCopyWith<GetSections> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$GetSectionsCopyWithImpl<$Res, $Val extends GetSections>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSections
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,11 +77,11 @@ class _$GetSectionsCopyWithImpl<$Res, $Val extends GetSections>
 }
 
 /// @nodoc
-abstract class _$$_GetSectionsCopyWith<$Res>
+abstract class _$$GetSectionsImplCopyWith<$Res>
     implements $GetSectionsCopyWith<$Res> {
-  factory _$$_GetSectionsCopyWith(
-          _$_GetSections value, $Res Function(_$_GetSections) then) =
-      __$$_GetSectionsCopyWithImpl<$Res>;
+  factory _$$GetSectionsImplCopyWith(
+          _$GetSectionsImpl value, $Res Function(_$GetSectionsImpl) then) =
+      __$$GetSectionsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -84,20 +90,22 @@ abstract class _$$_GetSectionsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSectionsCopyWithImpl<$Res>
-    extends _$GetSectionsCopyWithImpl<$Res, _$_GetSections>
-    implements _$$_GetSectionsCopyWith<$Res> {
-  __$$_GetSectionsCopyWithImpl(
-      _$_GetSections _value, $Res Function(_$_GetSections) _then)
+class __$$GetSectionsImplCopyWithImpl<$Res>
+    extends _$GetSectionsCopyWithImpl<$Res, _$GetSectionsImpl>
+    implements _$$GetSectionsImplCopyWith<$Res> {
+  __$$GetSectionsImplCopyWithImpl(
+      _$GetSectionsImpl _value, $Res Function(_$GetSectionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSections
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? level = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetSections(
+    return _then(_$GetSectionsImpl(
       level: null == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
@@ -112,15 +120,15 @@ class __$$_GetSectionsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSections extends _GetSections {
-  const _$_GetSections(
+class _$GetSectionsImpl extends _GetSections {
+  const _$GetSectionsImpl(
       {this.level = KodiSettingLevel.standard,
       final Set<KodiSettingsGetSectionsProperties>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetSections.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSectionsFromJson(json);
+  factory _$GetSectionsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSectionsImplFromJson(json);
 
   @override
   @JsonKey()
@@ -141,29 +149,31 @@ class _$_GetSections extends _GetSections {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSections &&
+            other is _$GetSectionsImpl &&
             (identical(other.level, level) || other.level == level) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, level, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSections
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSectionsCopyWith<_$_GetSections> get copyWith =>
-      __$$_GetSectionsCopyWithImpl<_$_GetSections>(this, _$identity);
+  _$$GetSectionsImplCopyWith<_$GetSectionsImpl> get copyWith =>
+      __$$GetSectionsImplCopyWithImpl<_$GetSectionsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSectionsToJson(
+    return _$$GetSectionsImplToJson(
       this,
     );
   }
@@ -173,19 +183,22 @@ abstract class _GetSections extends GetSections {
   const factory _GetSections(
           {final KodiSettingLevel level,
           final Set<KodiSettingsGetSectionsProperties>? properties}) =
-      _$_GetSections;
+      _$GetSectionsImpl;
   const _GetSections._() : super._();
 
   factory _GetSections.fromJson(Map<String, dynamic> json) =
-      _$_GetSections.fromJson;
+      _$GetSectionsImpl.fromJson;
 
   @override
   KodiSettingLevel get level;
   @override
   Set<KodiSettingsGetSectionsProperties>? get properties;
+
+  /// Create a copy of GetSections
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSectionsCopyWith<_$_GetSections> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSectionsImplCopyWith<_$GetSectionsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -199,8 +212,12 @@ mixin _$KodiSettingsGetSectionsResponse {
   List<KodiSettingDetailsSection> get sections =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiSettingsGetSectionsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSettingsGetSectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSettingsGetSectionsResponseCopyWith<KodiSettingsGetSectionsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -227,6 +244,8 @@ class _$KodiSettingsGetSectionsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSettingsGetSectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,33 +261,35 @@ class _$KodiSettingsGetSectionsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingsGetSectionsResponseCopyWith<$Res>
+abstract class _$$KodiSettingsGetSectionsResponseImplCopyWith<$Res>
     implements $KodiSettingsGetSectionsResponseCopyWith<$Res> {
-  factory _$$_KodiSettingsGetSectionsResponseCopyWith(
-          _$_KodiSettingsGetSectionsResponse value,
-          $Res Function(_$_KodiSettingsGetSectionsResponse) then) =
-      __$$_KodiSettingsGetSectionsResponseCopyWithImpl<$Res>;
+  factory _$$KodiSettingsGetSectionsResponseImplCopyWith(
+          _$KodiSettingsGetSectionsResponseImpl value,
+          $Res Function(_$KodiSettingsGetSectionsResponseImpl) then) =
+      __$$KodiSettingsGetSectionsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiSettingDetailsSection> sections});
 }
 
 /// @nodoc
-class __$$_KodiSettingsGetSectionsResponseCopyWithImpl<$Res>
+class __$$KodiSettingsGetSectionsResponseImplCopyWithImpl<$Res>
     extends _$KodiSettingsGetSectionsResponseCopyWithImpl<$Res,
-        _$_KodiSettingsGetSectionsResponse>
-    implements _$$_KodiSettingsGetSectionsResponseCopyWith<$Res> {
-  __$$_KodiSettingsGetSectionsResponseCopyWithImpl(
-      _$_KodiSettingsGetSectionsResponse _value,
-      $Res Function(_$_KodiSettingsGetSectionsResponse) _then)
+        _$KodiSettingsGetSectionsResponseImpl>
+    implements _$$KodiSettingsGetSectionsResponseImplCopyWith<$Res> {
+  __$$KodiSettingsGetSectionsResponseImplCopyWithImpl(
+      _$KodiSettingsGetSectionsResponseImpl _value,
+      $Res Function(_$KodiSettingsGetSectionsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingsGetSectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sections = null,
   }) {
-    return _then(_$_KodiSettingsGetSectionsResponse(
+    return _then(_$KodiSettingsGetSectionsResponseImpl(
       sections: null == sections
           ? _value._sections
           : sections // ignore: cast_nullable_to_non_nullable
@@ -279,15 +300,15 @@ class __$$_KodiSettingsGetSectionsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingsGetSectionsResponse
+class _$KodiSettingsGetSectionsResponseImpl
     implements _KodiSettingsGetSectionsResponse {
-  const _$_KodiSettingsGetSectionsResponse(
+  const _$KodiSettingsGetSectionsResponseImpl(
       {required final List<KodiSettingDetailsSection> sections})
       : _sections = sections;
 
-  factory _$_KodiSettingsGetSectionsResponse.fromJson(
+  factory _$KodiSettingsGetSectionsResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingsGetSectionsResponseFromJson(json);
+      _$$KodiSettingsGetSectionsResponseImplFromJson(json);
 
   final List<KodiSettingDetailsSection> _sections;
   @override
@@ -303,29 +324,31 @@ class _$_KodiSettingsGetSectionsResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingsGetSectionsResponse &&
+            other is _$KodiSettingsGetSectionsResponseImpl &&
             const DeepCollectionEquality().equals(other._sections, _sections));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_sections));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingsGetSectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingsGetSectionsResponseCopyWith<
-          _$_KodiSettingsGetSectionsResponse>
-      get copyWith => __$$_KodiSettingsGetSectionsResponseCopyWithImpl<
-          _$_KodiSettingsGetSectionsResponse>(this, _$identity);
+  _$$KodiSettingsGetSectionsResponseImplCopyWith<
+          _$KodiSettingsGetSectionsResponseImpl>
+      get copyWith => __$$KodiSettingsGetSectionsResponseImplCopyWithImpl<
+          _$KodiSettingsGetSectionsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingsGetSectionsResponseToJson(
+    return _$$KodiSettingsGetSectionsResponseImplToJson(
       this,
     );
   }
@@ -335,16 +358,19 @@ abstract class _KodiSettingsGetSectionsResponse
     implements KodiSettingsGetSectionsResponse {
   const factory _KodiSettingsGetSectionsResponse(
           {required final List<KodiSettingDetailsSection> sections}) =
-      _$_KodiSettingsGetSectionsResponse;
+      _$KodiSettingsGetSectionsResponseImpl;
 
   factory _KodiSettingsGetSectionsResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingsGetSectionsResponse.fromJson;
+      _$KodiSettingsGetSectionsResponseImpl.fromJson;
 
   @override
   List<KodiSettingDetailsSection> get sections;
+
+  /// Create a copy of KodiSettingsGetSectionsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingsGetSectionsResponseCopyWith<
-          _$_KodiSettingsGetSectionsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingsGetSectionsResponseImplCopyWith<
+          _$KodiSettingsGetSectionsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

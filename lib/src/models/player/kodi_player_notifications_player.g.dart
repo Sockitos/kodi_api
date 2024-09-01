@@ -6,15 +6,15 @@ part of 'kodi_player_notifications_player.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerNotificationsPlayer _$$_KodiPlayerNotificationsPlayerFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiPlayerNotificationsPlayer(
-      playerId: json['playerid'] as int,
-      speed: json['speed'] as int?,
-    );
+_$KodiPlayerNotificationsPlayerImpl
+    _$$KodiPlayerNotificationsPlayerImplFromJson(Map<String, dynamic> json) =>
+        _$KodiPlayerNotificationsPlayerImpl(
+          playerId: (json['playerid'] as num).toInt(),
+          speed: (json['speed'] as num?)?.toInt(),
+        );
 
-Map<String, dynamic> _$$_KodiPlayerNotificationsPlayerToJson(
-    _$_KodiPlayerNotificationsPlayer instance) {
+Map<String, dynamic> _$$KodiPlayerNotificationsPlayerImplToJson(
+    _$KodiPlayerNotificationsPlayerImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.playerId,
   };

@@ -6,6 +6,7 @@ part of 'quit.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Quit _$$_QuitFromJson(Map<String, dynamic> json) => _$_Quit();
+_$QuitImpl _$$QuitImplFromJson(Map<String, dynamic> json) => _$QuitImpl();
 
-Map<String, dynamic> _$$_QuitToJson(_$_Quit instance) => <String, dynamic>{};
+Map<String, dynamic> _$$QuitImplToJson(_$QuitImpl instance) =>
+    <String, dynamic>{};

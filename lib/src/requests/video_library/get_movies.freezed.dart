@@ -12,7 +12,7 @@ part of 'get_movies.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetMovies _$GetMoviesFromJson(Map<String, dynamic> json) {
   return _GetMovies.fromJson(json);
@@ -28,8 +28,12 @@ mixin _$GetMovies {
   KodiVideoLibraryGetMoviesFilter? get filter =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetMovies to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetMoviesCopyWith<GetMovies> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$GetMoviesCopyWithImpl<$Res, $Val extends GetMovies>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class _$GetMoviesCopyWithImpl<$Res, $Val extends GetMovies>
     ) as $Val);
   }
 
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -101,6 +109,8 @@ class _$GetMoviesCopyWithImpl<$Res, $Val extends GetMovies>
     });
   }
 
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -113,6 +123,8 @@ class _$GetMoviesCopyWithImpl<$Res, $Val extends GetMovies>
     });
   }
 
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoLibraryGetMoviesFilterCopyWith<$Res>? get filter {
@@ -128,10 +140,11 @@ class _$GetMoviesCopyWithImpl<$Res, $Val extends GetMovies>
 }
 
 /// @nodoc
-abstract class _$$_GetMoviesCopyWith<$Res> implements $GetMoviesCopyWith<$Res> {
-  factory _$$_GetMoviesCopyWith(
-          _$_GetMovies value, $Res Function(_$_GetMovies) then) =
-      __$$_GetMoviesCopyWithImpl<$Res>;
+abstract class _$$GetMoviesImplCopyWith<$Res>
+    implements $GetMoviesCopyWith<$Res> {
+  factory _$$GetMoviesImplCopyWith(
+          _$GetMoviesImpl value, $Res Function(_$GetMoviesImpl) then) =
+      __$$GetMoviesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -150,13 +163,15 @@ abstract class _$$_GetMoviesCopyWith<$Res> implements $GetMoviesCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetMoviesCopyWithImpl<$Res>
-    extends _$GetMoviesCopyWithImpl<$Res, _$_GetMovies>
-    implements _$$_GetMoviesCopyWith<$Res> {
-  __$$_GetMoviesCopyWithImpl(
-      _$_GetMovies _value, $Res Function(_$_GetMovies) _then)
+class __$$GetMoviesImplCopyWithImpl<$Res>
+    extends _$GetMoviesCopyWithImpl<$Res, _$GetMoviesImpl>
+    implements _$$GetMoviesImplCopyWith<$Res> {
+  __$$GetMoviesImplCopyWithImpl(
+      _$GetMoviesImpl _value, $Res Function(_$GetMoviesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -165,7 +180,7 @@ class __$$_GetMoviesCopyWithImpl<$Res>
     Object? sort = freezed,
     Object? filter = freezed,
   }) {
-    return _then(_$_GetMovies(
+    return _then(_$GetMoviesImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -188,8 +203,8 @@ class __$$_GetMoviesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetMovies extends _GetMovies {
-  const _$_GetMovies(
+class _$GetMoviesImpl extends _GetMovies {
+  const _$GetMoviesImpl(
       {final Set<KodiVideoFieldsMovie>? properties,
       this.limits,
       this.sort,
@@ -197,8 +212,8 @@ class _$_GetMovies extends _GetMovies {
       : _properties = properties,
         super._();
 
-  factory _$_GetMovies.fromJson(Map<String, dynamic> json) =>
-      _$$_GetMoviesFromJson(json);
+  factory _$GetMoviesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetMoviesImplFromJson(json);
 
   final Set<KodiVideoFieldsMovie>? _properties;
   @override
@@ -224,10 +239,10 @@ class _$_GetMovies extends _GetMovies {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetMovies &&
+            other is _$GetMoviesImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
@@ -235,20 +250,22 @@ class _$_GetMovies extends _GetMovies {
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort, filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetMoviesCopyWith<_$_GetMovies> get copyWith =>
-      __$$_GetMoviesCopyWithImpl<_$_GetMovies>(this, _$identity);
+  _$$GetMoviesImplCopyWith<_$GetMoviesImpl> get copyWith =>
+      __$$GetMoviesImplCopyWithImpl<_$GetMoviesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetMoviesToJson(
+    return _$$GetMoviesImplToJson(
       this,
     );
   }
@@ -260,11 +277,11 @@ abstract class _GetMovies extends GetMovies {
       final KodiListLimits? limits,
       final KodiListSort? sort,
       @KodiVideoLibraryGetMoviesFilterConverter()
-      final KodiVideoLibraryGetMoviesFilter? filter}) = _$_GetMovies;
+      final KodiVideoLibraryGetMoviesFilter? filter}) = _$GetMoviesImpl;
   const _GetMovies._() : super._();
 
   factory _GetMovies.fromJson(Map<String, dynamic> json) =
-      _$_GetMovies.fromJson;
+      _$GetMoviesImpl.fromJson;
 
   @override
   Set<KodiVideoFieldsMovie>? get properties;
@@ -275,9 +292,12 @@ abstract class _GetMovies extends GetMovies {
   @override
   @KodiVideoLibraryGetMoviesFilterConverter()
   KodiVideoLibraryGetMoviesFilter? get filter;
+
+  /// Create a copy of GetMovies
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetMoviesCopyWith<_$_GetMovies> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetMoviesImplCopyWith<_$GetMoviesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -290,8 +310,12 @@ mixin _$GetMoviesResponse {
   List<KodiVideoDetailsMovie> get movies => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetMoviesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetMoviesResponseCopyWith<GetMoviesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -318,6 +342,8 @@ class _$GetMoviesResponseCopyWithImpl<$Res, $Val extends GetMoviesResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -336,6 +362,8 @@ class _$GetMoviesResponseCopyWithImpl<$Res, $Val extends GetMoviesResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -346,11 +374,11 @@ class _$GetMoviesResponseCopyWithImpl<$Res, $Val extends GetMoviesResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetMoviesResponseCopyWith<$Res>
+abstract class _$$GetMoviesResponseImplCopyWith<$Res>
     implements $GetMoviesResponseCopyWith<$Res> {
-  factory _$$_GetMoviesResponseCopyWith(_$_GetMoviesResponse value,
-          $Res Function(_$_GetMoviesResponse) then) =
-      __$$_GetMoviesResponseCopyWithImpl<$Res>;
+  factory _$$GetMoviesResponseImplCopyWith(_$GetMoviesResponseImpl value,
+          $Res Function(_$GetMoviesResponseImpl) then) =
+      __$$GetMoviesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -361,20 +389,22 @@ abstract class _$$_GetMoviesResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetMoviesResponseCopyWithImpl<$Res>
-    extends _$GetMoviesResponseCopyWithImpl<$Res, _$_GetMoviesResponse>
-    implements _$$_GetMoviesResponseCopyWith<$Res> {
-  __$$_GetMoviesResponseCopyWithImpl(
-      _$_GetMoviesResponse _value, $Res Function(_$_GetMoviesResponse) _then)
+class __$$GetMoviesResponseImplCopyWithImpl<$Res>
+    extends _$GetMoviesResponseCopyWithImpl<$Res, _$GetMoviesResponseImpl>
+    implements _$$GetMoviesResponseImplCopyWith<$Res> {
+  __$$GetMoviesResponseImplCopyWithImpl(_$GetMoviesResponseImpl _value,
+      $Res Function(_$GetMoviesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? movies = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetMoviesResponse(
+    return _then(_$GetMoviesResponseImpl(
       movies: null == movies
           ? _value._movies
           : movies // ignore: cast_nullable_to_non_nullable
@@ -389,13 +419,13 @@ class __$$_GetMoviesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetMoviesResponse implements _GetMoviesResponse {
-  const _$_GetMoviesResponse(
+class _$GetMoviesResponseImpl implements _GetMoviesResponse {
+  const _$GetMoviesResponseImpl(
       {required final List<KodiVideoDetailsMovie> movies, required this.limits})
       : _movies = movies;
 
-  factory _$_GetMoviesResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetMoviesResponseFromJson(json);
+  factory _$GetMoviesResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetMoviesResponseImplFromJson(json);
 
   final List<KodiVideoDetailsMovie> _movies;
   @override
@@ -414,29 +444,31 @@ class _$_GetMoviesResponse implements _GetMoviesResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetMoviesResponse &&
+            other is _$GetMoviesResponseImpl &&
             const DeepCollectionEquality().equals(other._movies, _movies) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_movies), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetMoviesResponseCopyWith<_$_GetMoviesResponse> get copyWith =>
-      __$$_GetMoviesResponseCopyWithImpl<_$_GetMoviesResponse>(
+  _$$GetMoviesResponseImplCopyWith<_$GetMoviesResponseImpl> get copyWith =>
+      __$$GetMoviesResponseImplCopyWithImpl<_$GetMoviesResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetMoviesResponseToJson(
+    return _$$GetMoviesResponseImplToJson(
       this,
     );
   }
@@ -445,18 +477,21 @@ class _$_GetMoviesResponse implements _GetMoviesResponse {
 abstract class _GetMoviesResponse implements GetMoviesResponse {
   const factory _GetMoviesResponse(
       {required final List<KodiVideoDetailsMovie> movies,
-      required final KodiListLimitsReturned limits}) = _$_GetMoviesResponse;
+      required final KodiListLimitsReturned limits}) = _$GetMoviesResponseImpl;
 
   factory _GetMoviesResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetMoviesResponse.fromJson;
+      _$GetMoviesResponseImpl.fromJson;
 
   @override
   List<KodiVideoDetailsMovie> get movies;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetMoviesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetMoviesResponseCopyWith<_$_GetMoviesResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetMoviesResponseImplCopyWith<_$GetMoviesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -603,6 +638,8 @@ mixin _$KodiVideoLibraryGetMoviesFilter {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiVideoLibraryGetMoviesFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -625,34 +662,39 @@ class _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterGenreId value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterGenreId) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterGenreIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterGenreIdImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'genreid') int genreId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterGenreId>
-    implements _$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterGenreId _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterGenreId) _then)
+        _$KodiVideoLibraryGetMoviesFilterGenreIdImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterGenreIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterGenreIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genreId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterGenreId(
+    return _then(_$KodiVideoLibraryGetMoviesFilterGenreIdImpl(
       genreId: null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
@@ -663,15 +705,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterGenreId
+class _$KodiVideoLibraryGetMoviesFilterGenreIdImpl
     implements _KodiVideoLibraryGetMoviesFilterGenreId {
-  const _$_KodiVideoLibraryGetMoviesFilterGenreId(
+  const _$KodiVideoLibraryGetMoviesFilterGenreIdImpl(
       {@JsonKey(name: 'genreid') required this.genreId, final String? $type})
       : $type = $type ?? 'genreId';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterGenreId.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterGenreIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterGenreIdFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterGenreIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'genreid')
@@ -686,24 +728,27 @@ class _$_KodiVideoLibraryGetMoviesFilterGenreId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterGenreId &&
+            other is _$KodiVideoLibraryGetMoviesFilterGenreIdImpl &&
             (identical(other.genreId, genreId) || other.genreId == genreId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genreId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterGenreId>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterGenreId>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterGenreIdImpl>
+      get copyWith =>
+          __$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWithImpl<
+              _$KodiVideoLibraryGetMoviesFilterGenreIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -837,7 +882,7 @@ class _$_KodiVideoLibraryGetMoviesFilterGenreId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterGenreIdToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterGenreIdImplToJson(
       this,
     );
   }
@@ -847,46 +892,51 @@ abstract class _KodiVideoLibraryGetMoviesFilterGenreId
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterGenreId(
           {@JsonKey(name: 'genreid') required final int genreId}) =
-      _$_KodiVideoLibraryGetMoviesFilterGenreId;
+      _$KodiVideoLibraryGetMoviesFilterGenreIdImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterGenreId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterGenreId.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterGenreIdImpl.fromJson;
 
   @JsonKey(name: 'genreid')
   int get genreId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterGenreIdCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterGenreId>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterGenreIdImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterGenreIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterGenreCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterGenreCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterGenre value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterGenre) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterGenreCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterGenreImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterGenreImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String genre});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterGenreCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterGenre>
-    implements _$$_KodiVideoLibraryGetMoviesFilterGenreCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterGenreCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterGenre _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterGenre) _then)
+        _$KodiVideoLibraryGetMoviesFilterGenreImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterGenreImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterGenreImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genre = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterGenre(
+    return _then(_$KodiVideoLibraryGetMoviesFilterGenreImpl(
       genre: null == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
@@ -897,15 +947,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterGenreCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterGenre
+class _$KodiVideoLibraryGetMoviesFilterGenreImpl
     implements _KodiVideoLibraryGetMoviesFilterGenre {
-  const _$_KodiVideoLibraryGetMoviesFilterGenre(
+  const _$KodiVideoLibraryGetMoviesFilterGenreImpl(
       {required this.genre, final String? $type})
       : $type = $type ?? 'genre';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterGenre.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterGenreImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterGenreFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterGenreImplFromJson(json);
 
   @override
   final String genre;
@@ -919,24 +969,26 @@ class _$_KodiVideoLibraryGetMoviesFilterGenre
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterGenre &&
+            other is _$KodiVideoLibraryGetMoviesFilterGenreImpl &&
             (identical(other.genre, genre) || other.genre == genre));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genre);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterGenreCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterGenre>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterGenreCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterGenre>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterGenreImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterGenreImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1070,7 +1122,7 @@ class _$_KodiVideoLibraryGetMoviesFilterGenre
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterGenreToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterGenreImplToJson(
       this,
     );
   }
@@ -1079,45 +1131,51 @@ class _$_KodiVideoLibraryGetMoviesFilterGenre
 abstract class _KodiVideoLibraryGetMoviesFilterGenre
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterGenre(
-      {required final String genre}) = _$_KodiVideoLibraryGetMoviesFilterGenre;
+          {required final String genre}) =
+      _$KodiVideoLibraryGetMoviesFilterGenreImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterGenre.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterGenre.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterGenreImpl.fromJson;
 
   String get genre;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterGenreCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterGenre>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterGenreImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterGenreImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterYearCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterYearCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterYear value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterYear) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterYearCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterYearImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterYearImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterYearImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterYearImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterYearImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int year});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterYearCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterYearImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterYear>
-    implements _$$_KodiVideoLibraryGetMoviesFilterYearCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterYearCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterYear _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterYear) _then)
+        _$KodiVideoLibraryGetMoviesFilterYearImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterYearImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterYearImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterYearImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterYearImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? year = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterYear(
+    return _then(_$KodiVideoLibraryGetMoviesFilterYearImpl(
       year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -1128,15 +1186,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterYearCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterYear
+class _$KodiVideoLibraryGetMoviesFilterYearImpl
     implements _KodiVideoLibraryGetMoviesFilterYear {
-  const _$_KodiVideoLibraryGetMoviesFilterYear(
+  const _$KodiVideoLibraryGetMoviesFilterYearImpl(
       {required this.year, final String? $type})
       : $type = $type ?? 'year';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterYear.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterYearImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterYearFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterYearImplFromJson(json);
 
   @override
   final int year;
@@ -1150,24 +1208,26 @@ class _$_KodiVideoLibraryGetMoviesFilterYear
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterYear &&
+            other is _$KodiVideoLibraryGetMoviesFilterYearImpl &&
             (identical(other.year, year) || other.year == year));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, year);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterYearCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterYear>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterYearCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterYear>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterYearImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterYearImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterYearImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterYearImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1301,7 +1361,7 @@ class _$_KodiVideoLibraryGetMoviesFilterYear
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterYearToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterYearImplToJson(
       this,
     );
   }
@@ -1310,45 +1370,50 @@ class _$_KodiVideoLibraryGetMoviesFilterYear
 abstract class _KodiVideoLibraryGetMoviesFilterYear
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterYear(
-      {required final int year}) = _$_KodiVideoLibraryGetMoviesFilterYear;
+      {required final int year}) = _$KodiVideoLibraryGetMoviesFilterYearImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterYear.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterYear.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterYearImpl.fromJson;
 
   int get year;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterYearCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterYear>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterYearImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterYearImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterActorCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterActorCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterActor value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterActor) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterActorCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterActorImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterActorImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterActorImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterActorImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterActorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String actor});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterActorCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterActorImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterActor>
-    implements _$$_KodiVideoLibraryGetMoviesFilterActorCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterActorCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterActor _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterActor) _then)
+        _$KodiVideoLibraryGetMoviesFilterActorImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterActorImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterActorImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterActorImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterActorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? actor = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterActor(
+    return _then(_$KodiVideoLibraryGetMoviesFilterActorImpl(
       actor: null == actor
           ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
@@ -1359,15 +1424,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterActorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterActor
+class _$KodiVideoLibraryGetMoviesFilterActorImpl
     implements _KodiVideoLibraryGetMoviesFilterActor {
-  const _$_KodiVideoLibraryGetMoviesFilterActor(
+  const _$KodiVideoLibraryGetMoviesFilterActorImpl(
       {required this.actor, final String? $type})
       : $type = $type ?? 'actor';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterActor.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterActorImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterActorFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterActorImplFromJson(json);
 
   @override
   final String actor;
@@ -1381,24 +1446,26 @@ class _$_KodiVideoLibraryGetMoviesFilterActor
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterActor &&
+            other is _$KodiVideoLibraryGetMoviesFilterActorImpl &&
             (identical(other.actor, actor) || other.actor == actor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, actor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterActorCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterActor>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterActorCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterActor>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterActorImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterActorImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterActorImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterActorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1532,7 +1599,7 @@ class _$_KodiVideoLibraryGetMoviesFilterActor
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterActorToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterActorImplToJson(
       this,
     );
   }
@@ -1541,45 +1608,51 @@ class _$_KodiVideoLibraryGetMoviesFilterActor
 abstract class _KodiVideoLibraryGetMoviesFilterActor
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterActor(
-      {required final String actor}) = _$_KodiVideoLibraryGetMoviesFilterActor;
+          {required final String actor}) =
+      _$KodiVideoLibraryGetMoviesFilterActorImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterActor.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterActor.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterActorImpl.fromJson;
 
   String get actor;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterActorCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterActor>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterActorImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterActorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterDirector value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterDirector) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterDirectorImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterDirectorImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String director});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterDirector>
-    implements _$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterDirector _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterDirector) _then)
+        _$KodiVideoLibraryGetMoviesFilterDirectorImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterDirectorImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterDirectorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? director = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterDirector(
+    return _then(_$KodiVideoLibraryGetMoviesFilterDirectorImpl(
       director: null == director
           ? _value.director
           : director // ignore: cast_nullable_to_non_nullable
@@ -1590,15 +1663,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterDirector
+class _$KodiVideoLibraryGetMoviesFilterDirectorImpl
     implements _KodiVideoLibraryGetMoviesFilterDirector {
-  const _$_KodiVideoLibraryGetMoviesFilterDirector(
+  const _$KodiVideoLibraryGetMoviesFilterDirectorImpl(
       {required this.director, final String? $type})
       : $type = $type ?? 'director';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterDirector.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterDirectorImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterDirectorFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterDirectorImplFromJson(json);
 
   @override
   final String director;
@@ -1612,25 +1685,28 @@ class _$_KodiVideoLibraryGetMoviesFilterDirector
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterDirector &&
+            other is _$KodiVideoLibraryGetMoviesFilterDirectorImpl &&
             (identical(other.director, director) ||
                 other.director == director));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, director);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterDirector>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterDirector>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterDirectorImpl>
+      get copyWith =>
+          __$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWithImpl<
+              _$KodiVideoLibraryGetMoviesFilterDirectorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1764,7 +1840,7 @@ class _$_KodiVideoLibraryGetMoviesFilterDirector
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterDirectorToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterDirectorImplToJson(
       this,
     );
   }
@@ -1774,45 +1850,50 @@ abstract class _KodiVideoLibraryGetMoviesFilterDirector
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterDirector(
           {required final String director}) =
-      _$_KodiVideoLibraryGetMoviesFilterDirector;
+      _$KodiVideoLibraryGetMoviesFilterDirectorImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterDirector.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterDirector.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterDirectorImpl.fromJson;
 
   String get director;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterDirectorCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterDirector>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterDirectorImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterDirectorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterStudioCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterStudioCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterStudio value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterStudio) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterStudioCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterStudioImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterStudioImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String studio});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterStudioCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterStudio>
-    implements _$$_KodiVideoLibraryGetMoviesFilterStudioCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterStudioCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterStudio _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterStudio) _then)
+        _$KodiVideoLibraryGetMoviesFilterStudioImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterStudioImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterStudioImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? studio = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterStudio(
+    return _then(_$KodiVideoLibraryGetMoviesFilterStudioImpl(
       studio: null == studio
           ? _value.studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -1823,15 +1904,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterStudioCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterStudio
+class _$KodiVideoLibraryGetMoviesFilterStudioImpl
     implements _KodiVideoLibraryGetMoviesFilterStudio {
-  const _$_KodiVideoLibraryGetMoviesFilterStudio(
+  const _$KodiVideoLibraryGetMoviesFilterStudioImpl(
       {required this.studio, final String? $type})
       : $type = $type ?? 'studio';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterStudio.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterStudioImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterStudioFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterStudioImplFromJson(json);
 
   @override
   final String studio;
@@ -1845,24 +1926,26 @@ class _$_KodiVideoLibraryGetMoviesFilterStudio
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterStudio &&
+            other is _$KodiVideoLibraryGetMoviesFilterStudioImpl &&
             (identical(other.studio, studio) || other.studio == studio));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, studio);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterStudioCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterStudio>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterStudioCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterStudio>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterStudioImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterStudioImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1996,7 +2079,7 @@ class _$_KodiVideoLibraryGetMoviesFilterStudio
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterStudioToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterStudioImplToJson(
       this,
     );
   }
@@ -2006,45 +2089,50 @@ abstract class _KodiVideoLibraryGetMoviesFilterStudio
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterStudio(
           {required final String studio}) =
-      _$_KodiVideoLibraryGetMoviesFilterStudio;
+      _$KodiVideoLibraryGetMoviesFilterStudioImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterStudio.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterStudio.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterStudioImpl.fromJson;
 
   String get studio;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterStudioCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterStudio>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterStudioImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterStudioImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterCountryCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterCountryCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterCountry value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterCountry) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterCountryCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterCountryImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterCountryImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String country});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterCountryCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterCountry>
-    implements _$$_KodiVideoLibraryGetMoviesFilterCountryCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterCountryCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterCountry _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterCountry) _then)
+        _$KodiVideoLibraryGetMoviesFilterCountryImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterCountryImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterCountryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? country = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterCountry(
+    return _then(_$KodiVideoLibraryGetMoviesFilterCountryImpl(
       country: null == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
@@ -2055,15 +2143,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterCountryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterCountry
+class _$KodiVideoLibraryGetMoviesFilterCountryImpl
     implements _KodiVideoLibraryGetMoviesFilterCountry {
-  const _$_KodiVideoLibraryGetMoviesFilterCountry(
+  const _$KodiVideoLibraryGetMoviesFilterCountryImpl(
       {required this.country, final String? $type})
       : $type = $type ?? 'country';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterCountry.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterCountryImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterCountryFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterCountryImplFromJson(json);
 
   @override
   final String country;
@@ -2077,24 +2165,27 @@ class _$_KodiVideoLibraryGetMoviesFilterCountry
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterCountry &&
+            other is _$KodiVideoLibraryGetMoviesFilterCountryImpl &&
             (identical(other.country, country) || other.country == country));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, country);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterCountryCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterCountry>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterCountryCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterCountry>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterCountryImpl>
+      get copyWith =>
+          __$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWithImpl<
+              _$KodiVideoLibraryGetMoviesFilterCountryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2228,7 +2319,7 @@ class _$_KodiVideoLibraryGetMoviesFilterCountry
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterCountryToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterCountryImplToJson(
       this,
     );
   }
@@ -2238,45 +2329,50 @@ abstract class _KodiVideoLibraryGetMoviesFilterCountry
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterCountry(
           {required final String country}) =
-      _$_KodiVideoLibraryGetMoviesFilterCountry;
+      _$KodiVideoLibraryGetMoviesFilterCountryImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterCountry.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterCountry.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterCountryImpl.fromJson;
 
   String get country;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterCountryCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterCountry>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterCountryImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterCountryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterSetId value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterSetId) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterSetIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterSetIdImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'setid') int setId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterSetId>
-    implements _$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterSetId _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterSetId) _then)
+        _$KodiVideoLibraryGetMoviesFilterSetIdImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterSetIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterSetIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? setId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterSetId(
+    return _then(_$KodiVideoLibraryGetMoviesFilterSetIdImpl(
       setId: null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
@@ -2287,15 +2383,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterSetId
+class _$KodiVideoLibraryGetMoviesFilterSetIdImpl
     implements _KodiVideoLibraryGetMoviesFilterSetId {
-  const _$_KodiVideoLibraryGetMoviesFilterSetId(
+  const _$KodiVideoLibraryGetMoviesFilterSetIdImpl(
       {@JsonKey(name: 'setid') required this.setId, final String? $type})
       : $type = $type ?? 'setId';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterSetId.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterSetIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterSetIdFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterSetIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'setid')
@@ -2310,24 +2406,26 @@ class _$_KodiVideoLibraryGetMoviesFilterSetId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterSetId &&
+            other is _$KodiVideoLibraryGetMoviesFilterSetIdImpl &&
             (identical(other.setId, setId) || other.setId == setId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, setId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterSetId>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterSetId>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterSetIdImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterSetIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2461,7 +2559,7 @@ class _$_KodiVideoLibraryGetMoviesFilterSetId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterSetIdToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterSetIdImplToJson(
       this,
     );
   }
@@ -2471,46 +2569,51 @@ abstract class _KodiVideoLibraryGetMoviesFilterSetId
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterSetId(
           {@JsonKey(name: 'setid') required final int setId}) =
-      _$_KodiVideoLibraryGetMoviesFilterSetId;
+      _$KodiVideoLibraryGetMoviesFilterSetIdImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterSetId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterSetId.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterSetIdImpl.fromJson;
 
   @JsonKey(name: 'setid')
   int get setId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterSetIdCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterSetId>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterSetIdImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterSetIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterSetCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterSetCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterSet value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterSet) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterSetCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterSetImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterSetImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterSetImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterSetImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterSetImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String set});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterSetCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterSetImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterSet>
-    implements _$$_KodiVideoLibraryGetMoviesFilterSetCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterSetCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterSet _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterSet) _then)
+        _$KodiVideoLibraryGetMoviesFilterSetImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterSetImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterSetImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterSetImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterSetImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? set = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterSet(
+    return _then(_$KodiVideoLibraryGetMoviesFilterSetImpl(
       set: null == set
           ? _value.set
           : set // ignore: cast_nullable_to_non_nullable
@@ -2521,15 +2624,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterSetCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterSet
+class _$KodiVideoLibraryGetMoviesFilterSetImpl
     implements _KodiVideoLibraryGetMoviesFilterSet {
-  const _$_KodiVideoLibraryGetMoviesFilterSet(
+  const _$KodiVideoLibraryGetMoviesFilterSetImpl(
       {required this.set, final String? $type})
       : $type = $type ?? 'set';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterSet.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterSetImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterSetFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterSetImplFromJson(json);
 
   @override
   final String set;
@@ -2543,24 +2646,26 @@ class _$_KodiVideoLibraryGetMoviesFilterSet
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterSet &&
+            other is _$KodiVideoLibraryGetMoviesFilterSetImpl &&
             (identical(other.set, set) || other.set == set));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, set);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterSetCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterSet>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterSetCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterSet>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterSetImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterSetImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterSetImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterSetImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2694,7 +2799,7 @@ class _$_KodiVideoLibraryGetMoviesFilterSet
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterSetToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterSetImplToJson(
       this,
     );
   }
@@ -2703,45 +2808,50 @@ class _$_KodiVideoLibraryGetMoviesFilterSet
 abstract class _KodiVideoLibraryGetMoviesFilterSet
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterSet(
-      {required final String set}) = _$_KodiVideoLibraryGetMoviesFilterSet;
+      {required final String set}) = _$KodiVideoLibraryGetMoviesFilterSetImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterSet.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterSet.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterSetImpl.fromJson;
 
   String get set;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterSetCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterSet>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterSetImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterSetImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterTagCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterTagCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterTag value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterTag) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterTagCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterTagImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterTagImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterTagImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterTagImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterTagImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String tag});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterTagCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterTagImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterTag>
-    implements _$$_KodiVideoLibraryGetMoviesFilterTagCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterTagCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterTag _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterTag) _then)
+        _$KodiVideoLibraryGetMoviesFilterTagImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterTagImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterTagImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterTagImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterTagImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tag = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterTag(
+    return _then(_$KodiVideoLibraryGetMoviesFilterTagImpl(
       tag: null == tag
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
@@ -2752,15 +2862,15 @@ class __$$_KodiVideoLibraryGetMoviesFilterTagCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterTag
+class _$KodiVideoLibraryGetMoviesFilterTagImpl
     implements _KodiVideoLibraryGetMoviesFilterTag {
-  const _$_KodiVideoLibraryGetMoviesFilterTag(
+  const _$KodiVideoLibraryGetMoviesFilterTagImpl(
       {required this.tag, final String? $type})
       : $type = $type ?? 'tag';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterTag.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterTagImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterTagFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterTagImplFromJson(json);
 
   @override
   final String tag;
@@ -2774,24 +2884,26 @@ class _$_KodiVideoLibraryGetMoviesFilterTag
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterTag &&
+            other is _$KodiVideoLibraryGetMoviesFilterTagImpl &&
             (identical(other.tag, tag) || other.tag == tag));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tag);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterTagCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterTag>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterTagCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterTag>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterTagImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterTagImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterTagImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterTagImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2925,7 +3037,7 @@ class _$_KodiVideoLibraryGetMoviesFilterTag
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterTagToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterTagImplToJson(
       this,
     );
   }
@@ -2934,25 +3046,28 @@ class _$_KodiVideoLibraryGetMoviesFilterTag
 abstract class _KodiVideoLibraryGetMoviesFilterTag
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterTag(
-      {required final String tag}) = _$_KodiVideoLibraryGetMoviesFilterTag;
+      {required final String tag}) = _$KodiVideoLibraryGetMoviesFilterTagImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterTag.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterTag.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterTagImpl.fromJson;
 
   String get tag;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterTagCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterTag>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterTagImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterTagImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetMoviesFilterFilterCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetMoviesFilterFilterCopyWith(
-          _$_KodiVideoLibraryGetMoviesFilterFilter value,
-          $Res Function(_$_KodiVideoLibraryGetMoviesFilterFilter) then) =
-      __$$_KodiVideoLibraryGetMoviesFilterFilterCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWith(
+          _$KodiVideoLibraryGetMoviesFilterFilterImpl value,
+          $Res Function(_$KodiVideoLibraryGetMoviesFilterFilterImpl) then) =
+      __$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@KodiListFilterMoviesConverter() KodiListFilterMovies filter});
 
@@ -2960,21 +3075,23 @@ abstract class _$$_KodiVideoLibraryGetMoviesFilterFilterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetMoviesFilterFilterCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetMoviesFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetMoviesFilterFilter>
-    implements _$$_KodiVideoLibraryGetMoviesFilterFilterCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetMoviesFilterFilterCopyWithImpl(
-      _$_KodiVideoLibraryGetMoviesFilterFilter _value,
-      $Res Function(_$_KodiVideoLibraryGetMoviesFilterFilter) _then)
+        _$KodiVideoLibraryGetMoviesFilterFilterImpl>
+    implements _$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWithImpl(
+      _$KodiVideoLibraryGetMoviesFilterFilterImpl _value,
+      $Res Function(_$KodiVideoLibraryGetMoviesFilterFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? filter = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetMoviesFilterFilter(
+    return _then(_$KodiVideoLibraryGetMoviesFilterFilterImpl(
       null == filter
           ? _value.filter
           : filter // ignore: cast_nullable_to_non_nullable
@@ -2982,6 +3099,8 @@ class __$$_KodiVideoLibraryGetMoviesFilterFilterCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterMoviesCopyWith<$Res> get filter {
@@ -2993,16 +3112,16 @@ class __$$_KodiVideoLibraryGetMoviesFilterFilterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetMoviesFilterFilter
+class _$KodiVideoLibraryGetMoviesFilterFilterImpl
     implements _KodiVideoLibraryGetMoviesFilterFilter {
-  const _$_KodiVideoLibraryGetMoviesFilterFilter(
+  const _$KodiVideoLibraryGetMoviesFilterFilterImpl(
       @KodiListFilterMoviesConverter() this.filter,
       {final String? $type})
       : $type = $type ?? 'filter';
 
-  factory _$_KodiVideoLibraryGetMoviesFilterFilter.fromJson(
+  factory _$KodiVideoLibraryGetMoviesFilterFilterImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetMoviesFilterFilterFromJson(json);
+      _$$KodiVideoLibraryGetMoviesFilterFilterImplFromJson(json);
 
   @override
   @KodiListFilterMoviesConverter()
@@ -3017,24 +3136,26 @@ class _$_KodiVideoLibraryGetMoviesFilterFilter
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetMoviesFilterFilter &&
+            other is _$KodiVideoLibraryGetMoviesFilterFilterImpl &&
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetMoviesFilterFilterCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterFilter>
-      get copyWith => __$$_KodiVideoLibraryGetMoviesFilterFilterCopyWithImpl<
-          _$_KodiVideoLibraryGetMoviesFilterFilter>(this, _$identity);
+  _$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterFilterImpl>
+      get copyWith => __$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWithImpl<
+          _$KodiVideoLibraryGetMoviesFilterFilterImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3168,7 +3289,7 @@ class _$_KodiVideoLibraryGetMoviesFilterFilter
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetMoviesFilterFilterToJson(
+    return _$$KodiVideoLibraryGetMoviesFilterFilterImplToJson(
       this,
     );
   }
@@ -3178,16 +3299,19 @@ abstract class _KodiVideoLibraryGetMoviesFilterFilter
     implements KodiVideoLibraryGetMoviesFilter {
   const factory _KodiVideoLibraryGetMoviesFilterFilter(
           @KodiListFilterMoviesConverter() final KodiListFilterMovies filter) =
-      _$_KodiVideoLibraryGetMoviesFilterFilter;
+      _$KodiVideoLibraryGetMoviesFilterFilterImpl;
 
   factory _KodiVideoLibraryGetMoviesFilterFilter.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetMoviesFilterFilter.fromJson;
+      _$KodiVideoLibraryGetMoviesFilterFilterImpl.fromJson;
 
   @KodiListFilterMoviesConverter()
   KodiListFilterMovies get filter;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetMoviesFilterFilterCopyWith<
-          _$_KodiVideoLibraryGetMoviesFilterFilter>
+
+  /// Create a copy of KodiVideoLibraryGetMoviesFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetMoviesFilterFilterImplCopyWith<
+          _$KodiVideoLibraryGetMoviesFilterFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

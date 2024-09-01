@@ -6,26 +6,27 @@ part of 'set_repeat.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetRepeat _$$_SetRepeatFromJson(Map<String, dynamic> json) => _$_SetRepeat(
-      json['playerid'] as int,
+_$SetRepeatImpl _$$SetRepeatImplFromJson(Map<String, dynamic> json) =>
+    _$SetRepeatImpl(
+      (json['playerid'] as num).toInt(),
       const SetRepeatRepeatConverter().fromJson(json['repeat'] as String),
     );
 
-Map<String, dynamic> _$$_SetRepeatToJson(_$_SetRepeat instance) =>
+Map<String, dynamic> _$$SetRepeatImplToJson(_$SetRepeatImpl instance) =>
     <String, dynamic>{
       'playerid': instance.id,
       'repeat': const SetRepeatRepeatConverter().toJson(instance.repeat),
     };
 
-_$_SetRepeatRepeatplayerRepeat _$$_SetRepeatRepeatplayerRepeatFromJson(
+_$SetRepeatRepeatplayerRepeatImpl _$$SetRepeatRepeatplayerRepeatImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetRepeatRepeatplayerRepeat(
+    _$SetRepeatRepeatplayerRepeatImpl(
       $enumDecode(_$KodiPlayerRepeatEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetRepeatRepeatplayerRepeatToJson(
-        _$_SetRepeatRepeatplayerRepeat instance) =>
+Map<String, dynamic> _$$SetRepeatRepeatplayerRepeatImplToJson(
+        _$SetRepeatRepeatplayerRepeatImpl instance) =>
     <String, dynamic>{
       'value': _$KodiPlayerRepeatEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -37,15 +38,15 @@ const _$KodiPlayerRepeatEnumMap = {
   KodiPlayerRepeat.all: 'all',
 };
 
-_$_SetRepeatRepeatCycle _$$_SetRepeatRepeatCycleFromJson(
+_$SetRepeatRepeatCycleImpl _$$SetRepeatRepeatCycleImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetRepeatRepeatCycle(
+    _$SetRepeatRepeatCycleImpl(
       $enumDecode(_$KodiPlayerRepeatCycleEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetRepeatRepeatCycleToJson(
-        _$_SetRepeatRepeatCycle instance) =>
+Map<String, dynamic> _$$SetRepeatRepeatCycleImplToJson(
+        _$SetRepeatRepeatCycleImpl instance) =>
     <String, dynamic>{
       'value': _$KodiPlayerRepeatCycleEnumMap[instance.value]!,
       'runtimeType': instance.$type,

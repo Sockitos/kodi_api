@@ -6,15 +6,15 @@ part of 'execute_addon.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ExecuteAddon _$$_ExecuteAddonFromJson(Map<String, dynamic> json) =>
-    _$_ExecuteAddon(
+_$ExecuteAddonImpl _$$ExecuteAddonImplFromJson(Map<String, dynamic> json) =>
+    _$ExecuteAddonImpl(
       json['id'] as String,
       params: const KodiAddonsExecuteAddonParamsConverter()
           .fromJson(json['params']),
       wait: json['wait'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_ExecuteAddonToJson(_$_ExecuteAddon instance) {
+Map<String, dynamic> _$$ExecuteAddonImplToJson(_$ExecuteAddonImpl instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -40,47 +40,49 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$KodiAddonsExecuteAddonParamsAdditionalProperties
-    _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesFromJson(
+_$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl
+    _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplFromJson(
             Map<String, dynamic> json) =>
-        _$KodiAddonsExecuteAddonParamsAdditionalProperties(
+        _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl(
           additionalProperties:
               json['additional_properties'] as Map<String, dynamic>,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesToJson(
-        _$KodiAddonsExecuteAddonParamsAdditionalProperties instance) =>
-    <String, dynamic>{
-      'additional_properties': instance.additionalProperties,
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic>
+    _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplToJson(
+            _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl instance) =>
+        <String, dynamic>{
+          'additional_properties': instance.additionalProperties,
+          'runtimeType': instance.$type,
+        };
 
-_$KodiAddonsExecuteAddonParamsItems
-    _$$KodiAddonsExecuteAddonParamsItemsFromJson(Map<String, dynamic> json) =>
-        _$KodiAddonsExecuteAddonParamsItems(
+_$KodiAddonsExecuteAddonParamsItemsImpl
+    _$$KodiAddonsExecuteAddonParamsItemsImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiAddonsExecuteAddonParamsItemsImpl(
           items:
               (json['items'] as List<dynamic>).map((e) => e as String).toList(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$KodiAddonsExecuteAddonParamsItemsToJson(
-        _$KodiAddonsExecuteAddonParamsItems instance) =>
+Map<String, dynamic> _$$KodiAddonsExecuteAddonParamsItemsImplToJson(
+        _$KodiAddonsExecuteAddonParamsItemsImpl instance) =>
     <String, dynamic>{
       'items': instance.items,
       'runtimeType': instance.$type,
     };
 
-_$KodiAddonsExecuteAddonParamsDescription
-    _$$KodiAddonsExecuteAddonParamsDescriptionFromJson(
+_$KodiAddonsExecuteAddonParamsDescriptionImpl
+    _$$KodiAddonsExecuteAddonParamsDescriptionImplFromJson(
             Map<String, dynamic> json) =>
-        _$KodiAddonsExecuteAddonParamsDescription(
+        _$KodiAddonsExecuteAddonParamsDescriptionImpl(
           description: json['description'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$KodiAddonsExecuteAddonParamsDescriptionToJson(
-        _$KodiAddonsExecuteAddonParamsDescription instance) =>
+Map<String, dynamic> _$$KodiAddonsExecuteAddonParamsDescriptionImplToJson(
+        _$KodiAddonsExecuteAddonParamsDescriptionImpl instance) =>
     <String, dynamic>{
       'description': instance.description,
       'runtimeType': instance.$type,

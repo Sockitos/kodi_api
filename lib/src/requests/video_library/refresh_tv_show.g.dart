@@ -6,15 +6,15 @@ part of 'refresh_tv_show.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RefreshTVShow _$$_RefreshTVShowFromJson(Map<String, dynamic> json) =>
-    _$_RefreshTVShow(
-      json['tvshowid'] as int,
+_$RefreshTVShowImpl _$$RefreshTVShowImplFromJson(Map<String, dynamic> json) =>
+    _$RefreshTVShowImpl(
+      (json['tvshowid'] as num).toInt(),
       ignoreNFO: json['ignorenfo'] as bool? ?? false,
       refreshEpisodes: json['refreshepisodes'] as bool? ?? false,
       title: json['title'] as String?,
     );
 
-Map<String, dynamic> _$$_RefreshTVShowToJson(_$_RefreshTVShow instance) {
+Map<String, dynamic> _$$RefreshTVShowImplToJson(_$RefreshTVShowImpl instance) {
   final val = <String, dynamic>{
     'tvshowid': instance.id,
     'ignorenfo': instance.ignoreNFO,

@@ -12,7 +12,7 @@ part of 'add_favourite.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AddFavourite _$AddFavouriteFromJson(Map<String, dynamic> json) {
   return _AddFavourite.fromJson(json);
@@ -28,8 +28,12 @@ mixin _$AddFavourite {
   String? get windowParameter => throw _privateConstructorUsedError;
   String? get thumbnail => throw _privateConstructorUsedError;
 
+  /// Serializes this AddFavourite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddFavourite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddFavouriteCopyWith<AddFavourite> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$AddFavouriteCopyWithImpl<$Res, $Val extends AddFavourite>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,11 +105,11 @@ class _$AddFavouriteCopyWithImpl<$Res, $Val extends AddFavourite>
 }
 
 /// @nodoc
-abstract class _$$_AddFavouriteCopyWith<$Res>
+abstract class _$$AddFavouriteImplCopyWith<$Res>
     implements $AddFavouriteCopyWith<$Res> {
-  factory _$$_AddFavouriteCopyWith(
-          _$_AddFavourite value, $Res Function(_$_AddFavourite) then) =
-      __$$_AddFavouriteCopyWithImpl<$Res>;
+  factory _$$AddFavouriteImplCopyWith(
+          _$AddFavouriteImpl value, $Res Function(_$AddFavouriteImpl) then) =
+      __$$AddFavouriteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,13 +122,15 @@ abstract class _$$_AddFavouriteCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AddFavouriteCopyWithImpl<$Res>
-    extends _$AddFavouriteCopyWithImpl<$Res, _$_AddFavourite>
-    implements _$$_AddFavouriteCopyWith<$Res> {
-  __$$_AddFavouriteCopyWithImpl(
-      _$_AddFavourite _value, $Res Function(_$_AddFavourite) _then)
+class __$$AddFavouriteImplCopyWithImpl<$Res>
+    extends _$AddFavouriteCopyWithImpl<$Res, _$AddFavouriteImpl>
+    implements _$$AddFavouriteImplCopyWith<$Res> {
+  __$$AddFavouriteImplCopyWithImpl(
+      _$AddFavouriteImpl _value, $Res Function(_$AddFavouriteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,7 +141,7 @@ class __$$_AddFavouriteCopyWithImpl<$Res>
     Object? windowParameter = freezed,
     Object? thumbnail = freezed,
   }) {
-    return _then(_$_AddFavourite(
+    return _then(_$AddFavouriteImpl(
       null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -164,16 +172,16 @@ class __$$_AddFavouriteCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AddFavourite extends _AddFavourite {
-  const _$_AddFavourite(this.title, this.type,
+class _$AddFavouriteImpl extends _AddFavourite {
+  const _$AddFavouriteImpl(this.title, this.type,
       {this.path,
       this.window,
       @JsonKey(name: 'windowparameter') this.windowParameter,
       this.thumbnail})
       : super._();
 
-  factory _$_AddFavourite.fromJson(Map<String, dynamic> json) =>
-      _$$_AddFavouriteFromJson(json);
+  factory _$AddFavouriteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddFavouriteImplFromJson(json);
 
   @override
   final String title;
@@ -195,10 +203,10 @@ class _$_AddFavourite extends _AddFavourite {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddFavourite &&
+            other is _$AddFavouriteImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.path, path) || other.path == path) &&
@@ -209,20 +217,22 @@ class _$_AddFavourite extends _AddFavourite {
                 other.thumbnail == thumbnail));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, title, type, path, window, windowParameter, thumbnail);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddFavourite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddFavouriteCopyWith<_$_AddFavourite> get copyWith =>
-      __$$_AddFavouriteCopyWithImpl<_$_AddFavourite>(this, _$identity);
+  _$$AddFavouriteImplCopyWith<_$AddFavouriteImpl> get copyWith =>
+      __$$AddFavouriteImplCopyWithImpl<_$AddFavouriteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddFavouriteToJson(
+    return _$$AddFavouriteImplToJson(
       this,
     );
   }
@@ -233,11 +243,11 @@ abstract class _AddFavourite extends AddFavourite {
       {final String? path,
       final String? window,
       @JsonKey(name: 'windowparameter') final String? windowParameter,
-      final String? thumbnail}) = _$_AddFavourite;
+      final String? thumbnail}) = _$AddFavouriteImpl;
   const _AddFavourite._() : super._();
 
   factory _AddFavourite.fromJson(Map<String, dynamic> json) =
-      _$_AddFavourite.fromJson;
+      _$AddFavouriteImpl.fromJson;
 
   @override
   String get title;
@@ -252,8 +262,11 @@ abstract class _AddFavourite extends AddFavourite {
   String? get windowParameter;
   @override
   String? get thumbnail;
+
+  /// Create a copy of AddFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_AddFavouriteCopyWith<_$_AddFavourite> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddFavouriteImplCopyWith<_$AddFavouriteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

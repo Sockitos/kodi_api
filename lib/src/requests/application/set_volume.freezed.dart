@@ -12,7 +12,7 @@ part of 'set_volume.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetVolume _$SetVolumeFromJson(Map<String, dynamic> json) {
   return _SetVolume.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$SetVolume {
   @SetVolumeValueConverter()
   SetVolumeValue get volume => throw _privateConstructorUsedError;
 
+  /// Serializes this SetVolume to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetVolume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetVolumeCopyWith<SetVolume> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$SetVolumeCopyWithImpl<$Res, $Val extends SetVolume>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetVolume
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,6 +68,8 @@ class _$SetVolumeCopyWithImpl<$Res, $Val extends SetVolume>
     ) as $Val);
   }
 
+  /// Create a copy of SetVolume
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SetVolumeValueCopyWith<$Res> get volume {
@@ -72,10 +80,11 @@ class _$SetVolumeCopyWithImpl<$Res, $Val extends SetVolume>
 }
 
 /// @nodoc
-abstract class _$$_SetVolumeCopyWith<$Res> implements $SetVolumeCopyWith<$Res> {
-  factory _$$_SetVolumeCopyWith(
-          _$_SetVolume value, $Res Function(_$_SetVolume) then) =
-      __$$_SetVolumeCopyWithImpl<$Res>;
+abstract class _$$SetVolumeImplCopyWith<$Res>
+    implements $SetVolumeCopyWith<$Res> {
+  factory _$$SetVolumeImplCopyWith(
+          _$SetVolumeImpl value, $Res Function(_$SetVolumeImpl) then) =
+      __$$SetVolumeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@SetVolumeValueConverter() SetVolumeValue volume});
@@ -85,19 +94,21 @@ abstract class _$$_SetVolumeCopyWith<$Res> implements $SetVolumeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SetVolumeCopyWithImpl<$Res>
-    extends _$SetVolumeCopyWithImpl<$Res, _$_SetVolume>
-    implements _$$_SetVolumeCopyWith<$Res> {
-  __$$_SetVolumeCopyWithImpl(
-      _$_SetVolume _value, $Res Function(_$_SetVolume) _then)
+class __$$SetVolumeImplCopyWithImpl<$Res>
+    extends _$SetVolumeCopyWithImpl<$Res, _$SetVolumeImpl>
+    implements _$$SetVolumeImplCopyWith<$Res> {
+  __$$SetVolumeImplCopyWithImpl(
+      _$SetVolumeImpl _value, $Res Function(_$SetVolumeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetVolume
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? volume = null,
   }) {
-    return _then(_$_SetVolume(
+    return _then(_$SetVolumeImpl(
       null == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
@@ -108,11 +119,11 @@ class __$$_SetVolumeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetVolume extends _SetVolume {
-  const _$_SetVolume(@SetVolumeValueConverter() this.volume) : super._();
+class _$SetVolumeImpl extends _SetVolume {
+  const _$SetVolumeImpl(@SetVolumeValueConverter() this.volume) : super._();
 
-  factory _$_SetVolume.fromJson(Map<String, dynamic> json) =>
-      _$$_SetVolumeFromJson(json);
+  factory _$SetVolumeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetVolumeImplFromJson(json);
 
   @override
   @SetVolumeValueConverter()
@@ -124,26 +135,28 @@ class _$_SetVolume extends _SetVolume {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetVolume &&
+            other is _$SetVolumeImpl &&
             (identical(other.volume, volume) || other.volume == volume));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, volume);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetVolume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetVolumeCopyWith<_$_SetVolume> get copyWith =>
-      __$$_SetVolumeCopyWithImpl<_$_SetVolume>(this, _$identity);
+  _$$SetVolumeImplCopyWith<_$SetVolumeImpl> get copyWith =>
+      __$$SetVolumeImplCopyWithImpl<_$SetVolumeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetVolumeToJson(
+    return _$$SetVolumeImplToJson(
       this,
     );
   }
@@ -151,18 +164,21 @@ class _$_SetVolume extends _SetVolume {
 
 abstract class _SetVolume extends SetVolume {
   const factory _SetVolume(
-      @SetVolumeValueConverter() final SetVolumeValue volume) = _$_SetVolume;
+      @SetVolumeValueConverter() final SetVolumeValue volume) = _$SetVolumeImpl;
   const _SetVolume._() : super._();
 
   factory _SetVolume.fromJson(Map<String, dynamic> json) =
-      _$_SetVolume.fromJson;
+      _$SetVolumeImpl.fromJson;
 
   @override
   @SetVolumeValueConverter()
   SetVolumeValue get volume;
+
+  /// Create a copy of SetVolume
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetVolumeCopyWith<_$_SetVolume> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetVolumeImplCopyWith<_$SetVolumeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -220,6 +236,8 @@ mixin _$SetVolumeValue {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SetVolumeValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -239,31 +257,36 @@ class _$SetVolumeValueCopyWithImpl<$Res, $Val extends SetVolumeValue>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SetVolumeValue
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SetVolumeValueIntCopyWith<$Res> {
-  factory _$$_SetVolumeValueIntCopyWith(_$_SetVolumeValueInt value,
-          $Res Function(_$_SetVolumeValueInt) then) =
-      __$$_SetVolumeValueIntCopyWithImpl<$Res>;
+abstract class _$$SetVolumeValueIntImplCopyWith<$Res> {
+  factory _$$SetVolumeValueIntImplCopyWith(_$SetVolumeValueIntImpl value,
+          $Res Function(_$SetVolumeValueIntImpl) then) =
+      __$$SetVolumeValueIntImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int volume});
 }
 
 /// @nodoc
-class __$$_SetVolumeValueIntCopyWithImpl<$Res>
-    extends _$SetVolumeValueCopyWithImpl<$Res, _$_SetVolumeValueInt>
-    implements _$$_SetVolumeValueIntCopyWith<$Res> {
-  __$$_SetVolumeValueIntCopyWithImpl(
-      _$_SetVolumeValueInt _value, $Res Function(_$_SetVolumeValueInt) _then)
+class __$$SetVolumeValueIntImplCopyWithImpl<$Res>
+    extends _$SetVolumeValueCopyWithImpl<$Res, _$SetVolumeValueIntImpl>
+    implements _$$SetVolumeValueIntImplCopyWith<$Res> {
+  __$$SetVolumeValueIntImplCopyWithImpl(_$SetVolumeValueIntImpl _value,
+      $Res Function(_$SetVolumeValueIntImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetVolumeValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? volume = null,
   }) {
-    return _then(_$_SetVolumeValueInt(
+    return _then(_$SetVolumeValueIntImpl(
       null == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
@@ -274,12 +297,12 @@ class __$$_SetVolumeValueIntCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetVolumeValueInt implements _SetVolumeValueInt {
-  const _$_SetVolumeValueInt(this.volume, {final String? $type})
+class _$SetVolumeValueIntImpl implements _SetVolumeValueInt {
+  const _$SetVolumeValueIntImpl(this.volume, {final String? $type})
       : $type = $type ?? 'abs';
 
-  factory _$_SetVolumeValueInt.fromJson(Map<String, dynamic> json) =>
-      _$$_SetVolumeValueIntFromJson(json);
+  factory _$SetVolumeValueIntImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetVolumeValueIntImplFromJson(json);
 
   @override
   final int volume;
@@ -293,22 +316,24 @@ class _$_SetVolumeValueInt implements _SetVolumeValueInt {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetVolumeValueInt &&
+            other is _$SetVolumeValueIntImpl &&
             (identical(other.volume, volume) || other.volume == volume));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, volume);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetVolumeValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetVolumeValueIntCopyWith<_$_SetVolumeValueInt> get copyWith =>
-      __$$_SetVolumeValueIntCopyWithImpl<_$_SetVolumeValueInt>(
+  _$$SetVolumeValueIntImplCopyWith<_$SetVolumeValueIntImpl> get copyWith =>
+      __$$SetVolumeValueIntImplCopyWithImpl<_$SetVolumeValueIntImpl>(
           this, _$identity);
 
   @override
@@ -375,48 +400,53 @@ class _$_SetVolumeValueInt implements _SetVolumeValueInt {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetVolumeValueIntToJson(
+    return _$$SetVolumeValueIntImplToJson(
       this,
     );
   }
 }
 
 abstract class _SetVolumeValueInt implements SetVolumeValue {
-  const factory _SetVolumeValueInt(final int volume) = _$_SetVolumeValueInt;
+  const factory _SetVolumeValueInt(final int volume) = _$SetVolumeValueIntImpl;
 
   factory _SetVolumeValueInt.fromJson(Map<String, dynamic> json) =
-      _$_SetVolumeValueInt.fromJson;
+      _$SetVolumeValueIntImpl.fromJson;
 
   @override
   int get volume;
-  @JsonKey(ignore: true)
-  _$$_SetVolumeValueIntCopyWith<_$_SetVolumeValueInt> get copyWith =>
+
+  /// Create a copy of SetVolumeValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetVolumeValueIntImplCopyWith<_$SetVolumeValueIntImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SetVolumeValueIncDecCopyWith<$Res> {
-  factory _$$_SetVolumeValueIncDecCopyWith(_$_SetVolumeValueIncDec value,
-          $Res Function(_$_SetVolumeValueIncDec) then) =
-      __$$_SetVolumeValueIncDecCopyWithImpl<$Res>;
+abstract class _$$SetVolumeValueIncDecImplCopyWith<$Res> {
+  factory _$$SetVolumeValueIncDecImplCopyWith(_$SetVolumeValueIncDecImpl value,
+          $Res Function(_$SetVolumeValueIncDecImpl) then) =
+      __$$SetVolumeValueIncDecImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiGlobalIncrementDecrement volume});
 }
 
 /// @nodoc
-class __$$_SetVolumeValueIncDecCopyWithImpl<$Res>
-    extends _$SetVolumeValueCopyWithImpl<$Res, _$_SetVolumeValueIncDec>
-    implements _$$_SetVolumeValueIncDecCopyWith<$Res> {
-  __$$_SetVolumeValueIncDecCopyWithImpl(_$_SetVolumeValueIncDec _value,
-      $Res Function(_$_SetVolumeValueIncDec) _then)
+class __$$SetVolumeValueIncDecImplCopyWithImpl<$Res>
+    extends _$SetVolumeValueCopyWithImpl<$Res, _$SetVolumeValueIncDecImpl>
+    implements _$$SetVolumeValueIncDecImplCopyWith<$Res> {
+  __$$SetVolumeValueIncDecImplCopyWithImpl(_$SetVolumeValueIncDecImpl _value,
+      $Res Function(_$SetVolumeValueIncDecImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetVolumeValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? volume = null,
   }) {
-    return _then(_$_SetVolumeValueIncDec(
+    return _then(_$SetVolumeValueIncDecImpl(
       null == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
@@ -427,12 +457,12 @@ class __$$_SetVolumeValueIncDecCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetVolumeValueIncDec implements _SetVolumeValueIncDec {
-  const _$_SetVolumeValueIncDec(this.volume, {final String? $type})
+class _$SetVolumeValueIncDecImpl implements _SetVolumeValueIncDec {
+  const _$SetVolumeValueIncDecImpl(this.volume, {final String? $type})
       : $type = $type ?? 'incDec';
 
-  factory _$_SetVolumeValueIncDec.fromJson(Map<String, dynamic> json) =>
-      _$$_SetVolumeValueIncDecFromJson(json);
+  factory _$SetVolumeValueIncDecImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetVolumeValueIncDecImplFromJson(json);
 
   @override
   final KodiGlobalIncrementDecrement volume;
@@ -446,23 +476,26 @@ class _$_SetVolumeValueIncDec implements _SetVolumeValueIncDec {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetVolumeValueIncDec &&
+            other is _$SetVolumeValueIncDecImpl &&
             (identical(other.volume, volume) || other.volume == volume));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, volume);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetVolumeValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetVolumeValueIncDecCopyWith<_$_SetVolumeValueIncDec> get copyWith =>
-      __$$_SetVolumeValueIncDecCopyWithImpl<_$_SetVolumeValueIncDec>(
-          this, _$identity);
+  _$$SetVolumeValueIncDecImplCopyWith<_$SetVolumeValueIncDecImpl>
+      get copyWith =>
+          __$$SetVolumeValueIncDecImplCopyWithImpl<_$SetVolumeValueIncDecImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -528,7 +561,7 @@ class _$_SetVolumeValueIncDec implements _SetVolumeValueIncDec {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetVolumeValueIncDecToJson(
+    return _$$SetVolumeValueIncDecImplToJson(
       this,
     );
   }
@@ -536,14 +569,17 @@ class _$_SetVolumeValueIncDec implements _SetVolumeValueIncDec {
 
 abstract class _SetVolumeValueIncDec implements SetVolumeValue {
   const factory _SetVolumeValueIncDec(
-      final KodiGlobalIncrementDecrement volume) = _$_SetVolumeValueIncDec;
+      final KodiGlobalIncrementDecrement volume) = _$SetVolumeValueIncDecImpl;
 
   factory _SetVolumeValueIncDec.fromJson(Map<String, dynamic> json) =
-      _$_SetVolumeValueIncDec.fromJson;
+      _$SetVolumeValueIncDecImpl.fromJson;
 
   @override
   KodiGlobalIncrementDecrement get volume;
-  @JsonKey(ignore: true)
-  _$$_SetVolumeValueIncDecCopyWith<_$_SetVolumeValueIncDec> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of SetVolumeValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetVolumeValueIncDecImplCopyWith<_$SetVolumeValueIncDecImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

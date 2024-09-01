@@ -6,8 +6,8 @@ part of 'get_tv_shows.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTVShows _$$_GetTVShowsFromJson(Map<String, dynamic> json) =>
-    _$_GetTVShows(
+_$GetTVShowsImpl _$$GetTVShowsImplFromJson(Map<String, dynamic> json) =>
+    _$GetTVShowsImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsTvShowEnumMap, e))
           .toSet(),
@@ -21,7 +21,7 @@ _$_GetTVShows _$$_GetTVShowsFromJson(Map<String, dynamic> json) =>
           .fromJson(json['filter']),
     );
 
-Map<String, dynamic> _$$_GetTVShowsToJson(_$_GetTVShows instance) {
+Map<String, dynamic> _$$GetTVShowsImplToJson(_$GetTVShowsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -83,9 +83,9 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_GetTVShowsResponse _$$_GetTVShowsResponseFromJson(
+_$GetTVShowsResponseImpl _$$GetTVShowsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetTVShowsResponse(
+    _$GetTVShowsResponseImpl(
       tvShows: (json['tvshows'] as List<dynamic>)
           .map(
               (e) => KodiVideoDetailsTvShow.fromJson(e as Map<String, dynamic>))
@@ -94,112 +94,113 @@ _$_GetTVShowsResponse _$$_GetTVShowsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetTVShowsResponseToJson(
-        _$_GetTVShowsResponse instance) =>
+Map<String, dynamic> _$$GetTVShowsResponseImplToJson(
+        _$GetTVShowsResponseImpl instance) =>
     <String, dynamic>{
       'tvshows': instance.tvShows.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),
     };
 
-_$_KodiVideoLibraryGetTvShowsFilterGenreId
-    _$$_KodiVideoLibraryGetTvShowsFilterGenreIdFromJson(
+_$KodiVideoLibraryGetTvShowsFilterGenreIdImpl
+    _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetTvShowsFilterGenreId(
-          genreId: json['genreid'] as int,
+        _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl(
+          genreId: (json['genreid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetTvShowsFilterGenreIdToJson(
-        _$_KodiVideoLibraryGetTvShowsFilterGenreId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplToJson(
+        _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl instance) =>
     <String, dynamic>{
       'genreid': instance.genreId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetTvShowsFilterGenre
-    _$$_KodiVideoLibraryGetTvShowsFilterGenreFromJson(
+_$KodiVideoLibraryGetTvShowsFilterGenreImpl
+    _$$KodiVideoLibraryGetTvShowsFilterGenreImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetTvShowsFilterGenre(
+        _$KodiVideoLibraryGetTvShowsFilterGenreImpl(
           genre: json['genre'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetTvShowsFilterGenreToJson(
-        _$_KodiVideoLibraryGetTvShowsFilterGenre instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetTvShowsFilterGenreImplToJson(
+        _$KodiVideoLibraryGetTvShowsFilterGenreImpl instance) =>
     <String, dynamic>{
       'genre': instance.genre,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGeTvShowsFilterYear
-    _$$_KodiVideoLibraryGeTvShowsFilterYearFromJson(
+_$KodiVideoLibraryGeTvShowsFilterYearImpl
+    _$$KodiVideoLibraryGeTvShowsFilterYearImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGeTvShowsFilterYear(
-          year: json['year'] as int,
+        _$KodiVideoLibraryGeTvShowsFilterYearImpl(
+          year: (json['year'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGeTvShowsFilterYearToJson(
-        _$_KodiVideoLibraryGeTvShowsFilterYear instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGeTvShowsFilterYearImplToJson(
+        _$KodiVideoLibraryGeTvShowsFilterYearImpl instance) =>
     <String, dynamic>{
       'year': instance.year,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGeTvShowsFilterActor
-    _$$_KodiVideoLibraryGeTvShowsFilterActorFromJson(
+_$KodiVideoLibraryGeTvShowsFilterActorImpl
+    _$$KodiVideoLibraryGeTvShowsFilterActorImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGeTvShowsFilterActor(
+        _$KodiVideoLibraryGeTvShowsFilterActorImpl(
           actor: json['actor'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGeTvShowsFilterActorToJson(
-        _$_KodiVideoLibraryGeTvShowsFilterActor instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGeTvShowsFilterActorImplToJson(
+        _$KodiVideoLibraryGeTvShowsFilterActorImpl instance) =>
     <String, dynamic>{
       'actor': instance.actor,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGeTvShowsFilterStudio
-    _$$_KodiVideoLibraryGeTvShowsFilterStudioFromJson(
+_$KodiVideoLibraryGeTvShowsFilterStudioImpl
+    _$$KodiVideoLibraryGeTvShowsFilterStudioImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGeTvShowsFilterStudio(
+        _$KodiVideoLibraryGeTvShowsFilterStudioImpl(
           studio: json['studio'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGeTvShowsFilterStudioToJson(
-        _$_KodiVideoLibraryGeTvShowsFilterStudio instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGeTvShowsFilterStudioImplToJson(
+        _$KodiVideoLibraryGeTvShowsFilterStudioImpl instance) =>
     <String, dynamic>{
       'studio': instance.studio,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGeTvShowsFilterTag
-    _$$_KodiVideoLibraryGeTvShowsFilterTagFromJson(Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGeTvShowsFilterTag(
+_$KodiVideoLibraryGeTvShowsFilterTagImpl
+    _$$KodiVideoLibraryGeTvShowsFilterTagImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiVideoLibraryGeTvShowsFilterTagImpl(
           tag: json['tag'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGeTvShowsFilterTagToJson(
-        _$_KodiVideoLibraryGeTvShowsFilterTag instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGeTvShowsFilterTagImplToJson(
+        _$KodiVideoLibraryGeTvShowsFilterTagImpl instance) =>
     <String, dynamic>{
       'tag': instance.tag,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetTvShowsFilterFilter
-    _$$_KodiVideoLibraryGetTvShowsFilterFilterFromJson(
+_$KodiVideoLibraryGetTvShowsFilterFilterImpl
+    _$$KodiVideoLibraryGetTvShowsFilterFilterImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetTvShowsFilterFilter(
+        _$KodiVideoLibraryGetTvShowsFilterFilterImpl(
           const KodiListFilterTvShowsConverter().fromJson(json['filter']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetTvShowsFilterFilterToJson(
-    _$_KodiVideoLibraryGetTvShowsFilterFilter instance) {
+Map<String, dynamic> _$$KodiVideoLibraryGetTvShowsFilterFilterImplToJson(
+    _$KodiVideoLibraryGetTvShowsFilterFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

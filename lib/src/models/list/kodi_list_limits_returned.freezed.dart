@@ -12,7 +12,7 @@ part of 'kodi_list_limits_returned.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListLimitsReturned _$KodiListLimitsReturnedFromJson(
     Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiListLimitsReturned {
   int get start => throw _privateConstructorUsedError;
   int get total => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListLimitsReturned to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListLimitsReturned
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListLimitsReturnedCopyWith<KodiListLimitsReturned> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$KodiListLimitsReturnedCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListLimitsReturned
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -76,25 +82,29 @@ class _$KodiListLimitsReturnedCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiListLimitsReturnedCopyWith<$Res>
+abstract class _$$KodiListLimitsReturnedImplCopyWith<$Res>
     implements $KodiListLimitsReturnedCopyWith<$Res> {
-  factory _$$_KodiListLimitsReturnedCopyWith(_$_KodiListLimitsReturned value,
-          $Res Function(_$_KodiListLimitsReturned) then) =
-      __$$_KodiListLimitsReturnedCopyWithImpl<$Res>;
+  factory _$$KodiListLimitsReturnedImplCopyWith(
+          _$KodiListLimitsReturnedImpl value,
+          $Res Function(_$KodiListLimitsReturnedImpl) then) =
+      __$$KodiListLimitsReturnedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int end, int start, int total});
 }
 
 /// @nodoc
-class __$$_KodiListLimitsReturnedCopyWithImpl<$Res>
+class __$$KodiListLimitsReturnedImplCopyWithImpl<$Res>
     extends _$KodiListLimitsReturnedCopyWithImpl<$Res,
-        _$_KodiListLimitsReturned>
-    implements _$$_KodiListLimitsReturnedCopyWith<$Res> {
-  __$$_KodiListLimitsReturnedCopyWithImpl(_$_KodiListLimitsReturned _value,
-      $Res Function(_$_KodiListLimitsReturned) _then)
+        _$KodiListLimitsReturnedImpl>
+    implements _$$KodiListLimitsReturnedImplCopyWith<$Res> {
+  __$$KodiListLimitsReturnedImplCopyWithImpl(
+      _$KodiListLimitsReturnedImpl _value,
+      $Res Function(_$KodiListLimitsReturnedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListLimitsReturned
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,7 +112,7 @@ class __$$_KodiListLimitsReturnedCopyWithImpl<$Res>
     Object? start = null,
     Object? total = null,
   }) {
-    return _then(_$_KodiListLimitsReturned(
+    return _then(_$KodiListLimitsReturnedImpl(
       end: null == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
@@ -121,12 +131,12 @@ class __$$_KodiListLimitsReturnedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListLimitsReturned implements _KodiListLimitsReturned {
-  const _$_KodiListLimitsReturned(
+class _$KodiListLimitsReturnedImpl implements _KodiListLimitsReturned {
+  const _$KodiListLimitsReturnedImpl(
       {required this.end, required this.start, required this.total});
 
-  factory _$_KodiListLimitsReturned.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListLimitsReturnedFromJson(json);
+  factory _$KodiListLimitsReturnedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListLimitsReturnedImplFromJson(json);
 
   @override
   final int end;
@@ -141,29 +151,31 @@ class _$_KodiListLimitsReturned implements _KodiListLimitsReturned {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListLimitsReturned &&
+            other is _$KodiListLimitsReturnedImpl &&
             (identical(other.end, end) || other.end == end) &&
             (identical(other.start, start) || other.start == start) &&
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, end, start, total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListLimitsReturned
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListLimitsReturnedCopyWith<_$_KodiListLimitsReturned> get copyWith =>
-      __$$_KodiListLimitsReturnedCopyWithImpl<_$_KodiListLimitsReturned>(
-          this, _$identity);
+  _$$KodiListLimitsReturnedImplCopyWith<_$KodiListLimitsReturnedImpl>
+      get copyWith => __$$KodiListLimitsReturnedImplCopyWithImpl<
+          _$KodiListLimitsReturnedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListLimitsReturnedToJson(
+    return _$$KodiListLimitsReturnedImplToJson(
       this,
     );
   }
@@ -173,10 +185,10 @@ abstract class _KodiListLimitsReturned implements KodiListLimitsReturned {
   const factory _KodiListLimitsReturned(
       {required final int end,
       required final int start,
-      required final int total}) = _$_KodiListLimitsReturned;
+      required final int total}) = _$KodiListLimitsReturnedImpl;
 
   factory _KodiListLimitsReturned.fromJson(Map<String, dynamic> json) =
-      _$_KodiListLimitsReturned.fromJson;
+      _$KodiListLimitsReturnedImpl.fromJson;
 
   @override
   int get end;
@@ -184,8 +196,11 @@ abstract class _KodiListLimitsReturned implements KodiListLimitsReturned {
   int get start;
   @override
   int get total;
+
+  /// Create a copy of KodiListLimitsReturned
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListLimitsReturnedCopyWith<_$_KodiListLimitsReturned> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListLimitsReturnedImplCopyWith<_$KodiListLimitsReturnedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

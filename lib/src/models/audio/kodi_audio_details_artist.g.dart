@@ -6,11 +6,11 @@ part of 'kodi_audio_details_artist.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiAudioDetailsArtist _$$_KodiAudioDetailsArtistFromJson(
+_$KodiAudioDetailsArtistImpl _$$KodiAudioDetailsArtistImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAudioDetailsArtist(
+    _$KodiAudioDetailsArtistImpl(
       artist: json['artist'] as String,
-      artistid: json['artistid'] as int,
+      artistid: (json['artistid'] as num).toInt(),
       born: json['born'] as String?,
       compilationArtist: json['compilationartist'] as bool?,
       description: json['description'] as String?,
@@ -35,8 +35,9 @@ _$_KodiAudioDetailsArtist _$$_KodiAudioDetailsArtistFromJson(
               (e) => KodiAudioDetailsGenres.fromJson(e as Map<String, dynamic>))
           .toList(),
       sortName: json['sortname'] as String?,
-      sourceId:
-          (json['sourceid'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      sourceId: (json['sourceid'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
       style:
           (json['style'] as List<dynamic>?)?.map((e) => e as String).toList(),
       type: json['type'] as String?,
@@ -54,8 +55,8 @@ _$_KodiAudioDetailsArtist _$$_KodiAudioDetailsArtistFromJson(
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAudioDetailsArtistToJson(
-    _$_KodiAudioDetailsArtist instance) {
+Map<String, dynamic> _$$KodiAudioDetailsArtistImplToJson(
+    _$KodiAudioDetailsArtistImpl instance) {
   final val = <String, dynamic>{
     'artist': instance.artist,
     'artistid': instance.artistid,

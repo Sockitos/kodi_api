@@ -6,6 +6,7 @@ part of 'ping.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Ping _$$_PingFromJson(Map<String, dynamic> json) => _$_Ping();
+_$PingImpl _$$PingImplFromJson(Map<String, dynamic> json) => _$PingImpl();
 
-Map<String, dynamic> _$$_PingToJson(_$_Ping instance) => <String, dynamic>{};
+Map<String, dynamic> _$$PingImplToJson(_$PingImpl instance) =>
+    <String, dynamic>{};

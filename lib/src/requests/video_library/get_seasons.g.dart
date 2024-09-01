@@ -6,9 +6,9 @@ part of 'get_seasons.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSeasons _$$_GetSeasonsFromJson(Map<String, dynamic> json) =>
-    _$_GetSeasons(
-      tvShowId: json['tvshowid'] as int?,
+_$GetSeasonsImpl _$$GetSeasonsImplFromJson(Map<String, dynamic> json) =>
+    _$GetSeasonsImpl(
+      tvShowId: (json['tvshowid'] as num?)?.toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsSeasonEnumMap, e))
           .toSet(),
@@ -20,7 +20,7 @@ _$_GetSeasons _$$_GetSeasonsFromJson(Map<String, dynamic> json) =>
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSeasonsToJson(_$_GetSeasons instance) {
+Map<String, dynamic> _$$GetSeasonsImplToJson(_$GetSeasonsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -54,9 +54,9 @@ const _$KodiVideoFieldsSeasonEnumMap = {
   KodiVideoFieldsSeason.title: 'title',
 };
 
-_$_GetSeasonsResponse _$$_GetSeasonsResponseFromJson(
+_$GetSeasonsResponseImpl _$$GetSeasonsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetSeasonsResponse(
+    _$GetSeasonsResponseImpl(
       seasons: (json['seasons'] as List<dynamic>)
           .map(
               (e) => KodiVideoDetailsSeason.fromJson(e as Map<String, dynamic>))
@@ -65,8 +65,8 @@ _$_GetSeasonsResponse _$$_GetSeasonsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSeasonsResponseToJson(
-        _$_GetSeasonsResponse instance) =>
+Map<String, dynamic> _$$GetSeasonsResponseImplToJson(
+        _$GetSeasonsResponseImpl instance) =>
     <String, dynamic>{
       'seasons': instance.seasons.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

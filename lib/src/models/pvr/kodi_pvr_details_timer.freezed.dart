@@ -12,7 +12,7 @@ part of 'kodi_pvr_details_timer.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsTimer _$KodiPVRDetailsTimerFromJson(Map<String, dynamic> json) {
   return _KodiPVRDetailsTimer.fromJson(json);
@@ -75,8 +75,12 @@ mixin _$KodiPVRDetailsTimer {
   Set<KodiGlobalWeekday> get weekdays => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsTimer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsTimerCopyWith<KodiPVRDetailsTimer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -132,6 +136,8 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -302,11 +308,11 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsTimerCopyWith<$Res>
+abstract class _$$KodiPVRDetailsTimerImplCopyWith<$Res>
     implements $KodiPVRDetailsTimerCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsTimerCopyWith(_$_KodiPVRDetailsTimer value,
-          $Res Function(_$_KodiPVRDetailsTimer) then) =
-      __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsTimerImplCopyWith(_$KodiPVRDetailsTimerImpl value,
+          $Res Function(_$KodiPVRDetailsTimerImpl) then) =
+      __$$KodiPVRDetailsTimerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -345,13 +351,15 @@ abstract class _$$_KodiPVRDetailsTimerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
-    extends _$KodiPVRDetailsTimerCopyWithImpl<$Res, _$_KodiPVRDetailsTimer>
-    implements _$$_KodiPVRDetailsTimerCopyWith<$Res> {
-  __$$_KodiPVRDetailsTimerCopyWithImpl(_$_KodiPVRDetailsTimer _value,
-      $Res Function(_$_KodiPVRDetailsTimer) _then)
+class __$$KodiPVRDetailsTimerImplCopyWithImpl<$Res>
+    extends _$KodiPVRDetailsTimerCopyWithImpl<$Res, _$KodiPVRDetailsTimerImpl>
+    implements _$$KodiPVRDetailsTimerImplCopyWith<$Res> {
+  __$$KodiPVRDetailsTimerImplCopyWithImpl(_$KodiPVRDetailsTimerImpl _value,
+      $Res Function(_$KodiPVRDetailsTimerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -388,7 +396,7 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
     Object? weekdays = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsTimer(
+    return _then(_$KodiPVRDetailsTimerImpl(
       broadcastId: null == broadcastId
           ? _value.broadcastId
           : broadcastId // ignore: cast_nullable_to_non_nullable
@@ -524,8 +532,8 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
-  const _$_KodiPVRDetailsTimer(
+class _$KodiPVRDetailsTimerImpl implements _KodiPVRDetailsTimer {
+  const _$KodiPVRDetailsTimerImpl(
       {@JsonKey(name: 'broadcastid') required this.broadcastId,
       @JsonKey(name: 'channelid') required this.channelId,
       @JsonKey(name: 'clientid') required this.clientId,
@@ -561,8 +569,8 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
       required this.label})
       : _weekdays = weekdays;
 
-  factory _$_KodiPVRDetailsTimer.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsTimerFromJson(json);
+  factory _$KodiPVRDetailsTimerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRDetailsTimerImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -663,10 +671,10 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsTimer &&
+            other is _$KodiPVRDetailsTimerImpl &&
             (identical(other.broadcastId, broadcastId) ||
                 other.broadcastId == broadcastId) &&
             (identical(other.channelId, channelId) ||
@@ -723,7 +731,7 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -761,16 +769,18 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsTimerCopyWith<_$_KodiPVRDetailsTimer> get copyWith =>
-      __$$_KodiPVRDetailsTimerCopyWithImpl<_$_KodiPVRDetailsTimer>(
+  _$$KodiPVRDetailsTimerImplCopyWith<_$KodiPVRDetailsTimerImpl> get copyWith =>
+      __$$KodiPVRDetailsTimerImplCopyWithImpl<_$KodiPVRDetailsTimerImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsTimerToJson(
+    return _$$KodiPVRDetailsTimerImplToJson(
       this,
     );
   }
@@ -811,10 +821,10 @@ abstract class _KodiPVRDetailsTimer implements KodiPVRDetailsTimer {
       @JsonKey(name: 'timerid') required final int timerId,
       required final String title,
       required final Set<KodiGlobalWeekday> weekdays,
-      required final String label}) = _$_KodiPVRDetailsTimer;
+      required final String label}) = _$KodiPVRDetailsTimerImpl;
 
   factory _KodiPVRDetailsTimer.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRDetailsTimer.fromJson;
+      _$KodiPVRDetailsTimerImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -902,8 +912,11 @@ abstract class _KodiPVRDetailsTimer implements KodiPVRDetailsTimer {
   Set<KodiGlobalWeekday> get weekdays;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsTimerCopyWith<_$_KodiPVRDetailsTimer> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsTimerImplCopyWith<_$KodiPVRDetailsTimerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

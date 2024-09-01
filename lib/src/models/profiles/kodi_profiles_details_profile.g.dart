@@ -6,16 +6,16 @@ part of 'kodi_profiles_details_profile.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiProfilesDetailsProfile _$$_KodiProfilesDetailsProfileFromJson(
+_$KodiProfilesDetailsProfileImpl _$$KodiProfilesDetailsProfileImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiProfilesDetailsProfile(
-      lockMode: json['lockmode'] as int?,
+    _$KodiProfilesDetailsProfileImpl(
+      lockMode: (json['lockmode'] as num?)?.toInt(),
       thumbnail: json['thumbnail'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiProfilesDetailsProfileToJson(
-    _$_KodiProfilesDetailsProfile instance) {
+Map<String, dynamic> _$$KodiProfilesDetailsProfileImplToJson(
+    _$KodiProfilesDetailsProfileImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -12,7 +12,7 @@ part of 'kodi_list_filter_movies.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListFilterMovies _$KodiListFilterMoviesFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -78,6 +78,8 @@ mixin _$KodiListFilterMovies {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiListFilterMovies to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -98,31 +100,39 @@ class _$KodiListFilterMoviesCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterMoviesAndCopyWith<$Res> {
-  factory _$$_KodiListFilterMoviesAndCopyWith(_$_KodiListFilterMoviesAnd value,
-          $Res Function(_$_KodiListFilterMoviesAnd) then) =
-      __$$_KodiListFilterMoviesAndCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterMoviesAndImplCopyWith<$Res> {
+  factory _$$KodiListFilterMoviesAndImplCopyWith(
+          _$KodiListFilterMoviesAndImpl value,
+          $Res Function(_$KodiListFilterMoviesAndImpl) then) =
+      __$$KodiListFilterMoviesAndImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<KodiListFilterMovies> and});
 }
 
 /// @nodoc
-class __$$_KodiListFilterMoviesAndCopyWithImpl<$Res>
-    extends _$KodiListFilterMoviesCopyWithImpl<$Res, _$_KodiListFilterMoviesAnd>
-    implements _$$_KodiListFilterMoviesAndCopyWith<$Res> {
-  __$$_KodiListFilterMoviesAndCopyWithImpl(_$_KodiListFilterMoviesAnd _value,
-      $Res Function(_$_KodiListFilterMoviesAnd) _then)
+class __$$KodiListFilterMoviesAndImplCopyWithImpl<$Res>
+    extends _$KodiListFilterMoviesCopyWithImpl<$Res,
+        _$KodiListFilterMoviesAndImpl>
+    implements _$$KodiListFilterMoviesAndImplCopyWith<$Res> {
+  __$$KodiListFilterMoviesAndImplCopyWithImpl(
+      _$KodiListFilterMoviesAndImpl _value,
+      $Res Function(_$KodiListFilterMoviesAndImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? and = null,
   }) {
-    return _then(_$_KodiListFilterMoviesAnd(
+    return _then(_$KodiListFilterMoviesAndImpl(
       null == and
           ? _value._and
           : and // ignore: cast_nullable_to_non_nullable
@@ -133,15 +143,15 @@ class __$$_KodiListFilterMoviesAndCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterMoviesAnd implements _KodiListFilterMoviesAnd {
-  const _$_KodiListFilterMoviesAnd(final List<KodiListFilterMovies> and,
+class _$KodiListFilterMoviesAndImpl implements _KodiListFilterMoviesAnd {
+  const _$KodiListFilterMoviesAndImpl(final List<KodiListFilterMovies> and,
       {final String? $type})
       : assert(and.length > 0, 'List must not be empty!'),
         _and = and,
         $type = $type ?? 'and';
 
-  factory _$_KodiListFilterMoviesAnd.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterMoviesAndFromJson(json);
+  factory _$KodiListFilterMoviesAndImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListFilterMoviesAndImplFromJson(json);
 
   final List<KodiListFilterMovies> _and;
   @override
@@ -160,25 +170,26 @@ class _$_KodiListFilterMoviesAnd implements _KodiListFilterMoviesAnd {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterMoviesAnd &&
+            other is _$KodiListFilterMoviesAndImpl &&
             const DeepCollectionEquality().equals(other._and, _and));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_and));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterMoviesAndCopyWith<_$_KodiListFilterMoviesAnd>
-      get copyWith =>
-          __$$_KodiListFilterMoviesAndCopyWithImpl<_$_KodiListFilterMoviesAnd>(
-              this, _$identity);
+  _$$KodiListFilterMoviesAndImplCopyWith<_$KodiListFilterMoviesAndImpl>
+      get copyWith => __$$KodiListFilterMoviesAndImplCopyWithImpl<
+          _$KodiListFilterMoviesAndImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -250,7 +261,7 @@ class _$_KodiListFilterMoviesAnd implements _KodiListFilterMoviesAnd {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterMoviesAndToJson(
+    return _$$KodiListFilterMoviesAndImplToJson(
       this,
     );
   }
@@ -258,40 +269,48 @@ class _$_KodiListFilterMoviesAnd implements _KodiListFilterMoviesAnd {
 
 abstract class _KodiListFilterMoviesAnd implements KodiListFilterMovies {
   const factory _KodiListFilterMoviesAnd(final List<KodiListFilterMovies> and) =
-      _$_KodiListFilterMoviesAnd;
+      _$KodiListFilterMoviesAndImpl;
 
   factory _KodiListFilterMoviesAnd.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterMoviesAnd.fromJson;
+      _$KodiListFilterMoviesAndImpl.fromJson;
 
   List<KodiListFilterMovies> get and;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterMoviesAndCopyWith<_$_KodiListFilterMoviesAnd>
+
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterMoviesAndImplCopyWith<_$KodiListFilterMoviesAndImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterMoviesOrCopyWith<$Res> {
-  factory _$$_KodiListFilterMoviesOrCopyWith(_$_KodiListFilterMoviesOr value,
-          $Res Function(_$_KodiListFilterMoviesOr) then) =
-      __$$_KodiListFilterMoviesOrCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterMoviesOrImplCopyWith<$Res> {
+  factory _$$KodiListFilterMoviesOrImplCopyWith(
+          _$KodiListFilterMoviesOrImpl value,
+          $Res Function(_$KodiListFilterMoviesOrImpl) then) =
+      __$$KodiListFilterMoviesOrImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<KodiListFilterMovies> or});
 }
 
 /// @nodoc
-class __$$_KodiListFilterMoviesOrCopyWithImpl<$Res>
-    extends _$KodiListFilterMoviesCopyWithImpl<$Res, _$_KodiListFilterMoviesOr>
-    implements _$$_KodiListFilterMoviesOrCopyWith<$Res> {
-  __$$_KodiListFilterMoviesOrCopyWithImpl(_$_KodiListFilterMoviesOr _value,
-      $Res Function(_$_KodiListFilterMoviesOr) _then)
+class __$$KodiListFilterMoviesOrImplCopyWithImpl<$Res>
+    extends _$KodiListFilterMoviesCopyWithImpl<$Res,
+        _$KodiListFilterMoviesOrImpl>
+    implements _$$KodiListFilterMoviesOrImplCopyWith<$Res> {
+  __$$KodiListFilterMoviesOrImplCopyWithImpl(
+      _$KodiListFilterMoviesOrImpl _value,
+      $Res Function(_$KodiListFilterMoviesOrImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? or = null,
   }) {
-    return _then(_$_KodiListFilterMoviesOr(
+    return _then(_$KodiListFilterMoviesOrImpl(
       null == or
           ? _value._or
           : or // ignore: cast_nullable_to_non_nullable
@@ -302,15 +321,15 @@ class __$$_KodiListFilterMoviesOrCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterMoviesOr implements _KodiListFilterMoviesOr {
-  const _$_KodiListFilterMoviesOr(final List<KodiListFilterMovies> or,
+class _$KodiListFilterMoviesOrImpl implements _KodiListFilterMoviesOr {
+  const _$KodiListFilterMoviesOrImpl(final List<KodiListFilterMovies> or,
       {final String? $type})
       : assert(or.length > 0, 'List must not be empty!'),
         _or = or,
         $type = $type ?? 'or';
 
-  factory _$_KodiListFilterMoviesOr.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterMoviesOrFromJson(json);
+  factory _$KodiListFilterMoviesOrImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListFilterMoviesOrImplFromJson(json);
 
   final List<KodiListFilterMovies> _or;
   @override
@@ -329,24 +348,26 @@ class _$_KodiListFilterMoviesOr implements _KodiListFilterMoviesOr {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterMoviesOr &&
+            other is _$KodiListFilterMoviesOrImpl &&
             const DeepCollectionEquality().equals(other._or, _or));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_or));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterMoviesOrCopyWith<_$_KodiListFilterMoviesOr> get copyWith =>
-      __$$_KodiListFilterMoviesOrCopyWithImpl<_$_KodiListFilterMoviesOr>(
-          this, _$identity);
+  _$$KodiListFilterMoviesOrImplCopyWith<_$KodiListFilterMoviesOrImpl>
+      get copyWith => __$$KodiListFilterMoviesOrImplCopyWithImpl<
+          _$KodiListFilterMoviesOrImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -418,7 +439,7 @@ class _$_KodiListFilterMoviesOr implements _KodiListFilterMoviesOr {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterMoviesOrToJson(
+    return _$$KodiListFilterMoviesOrImplToJson(
       this,
     );
   }
@@ -426,23 +447,26 @@ class _$_KodiListFilterMoviesOr implements _KodiListFilterMoviesOr {
 
 abstract class _KodiListFilterMoviesOr implements KodiListFilterMovies {
   const factory _KodiListFilterMoviesOr(final List<KodiListFilterMovies> or) =
-      _$_KodiListFilterMoviesOr;
+      _$KodiListFilterMoviesOrImpl;
 
   factory _KodiListFilterMoviesOr.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterMoviesOr.fromJson;
+      _$KodiListFilterMoviesOrImpl.fromJson;
 
   List<KodiListFilterMovies> get or;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterMoviesOrCopyWith<_$_KodiListFilterMoviesOr> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterMoviesOrImplCopyWith<_$KodiListFilterMoviesOrImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterMoviesValueCopyWith<$Res> {
-  factory _$$_KodiListFilterMoviesValueCopyWith(
-          _$_KodiListFilterMoviesValue value,
-          $Res Function(_$_KodiListFilterMoviesValue) then) =
-      __$$_KodiListFilterMoviesValueCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterMoviesValueImplCopyWith<$Res> {
+  factory _$$KodiListFilterMoviesValueImplCopyWith(
+          _$KodiListFilterMoviesValueImpl value,
+          $Res Function(_$KodiListFilterMoviesValueImpl) then) =
+      __$$KodiListFilterMoviesValueImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiListFilterRuleMovies value});
 
@@ -450,21 +474,23 @@ abstract class _$$_KodiListFilterMoviesValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiListFilterMoviesValueCopyWithImpl<$Res>
+class __$$KodiListFilterMoviesValueImplCopyWithImpl<$Res>
     extends _$KodiListFilterMoviesCopyWithImpl<$Res,
-        _$_KodiListFilterMoviesValue>
-    implements _$$_KodiListFilterMoviesValueCopyWith<$Res> {
-  __$$_KodiListFilterMoviesValueCopyWithImpl(
-      _$_KodiListFilterMoviesValue _value,
-      $Res Function(_$_KodiListFilterMoviesValue) _then)
+        _$KodiListFilterMoviesValueImpl>
+    implements _$$KodiListFilterMoviesValueImplCopyWith<$Res> {
+  __$$KodiListFilterMoviesValueImplCopyWithImpl(
+      _$KodiListFilterMoviesValueImpl _value,
+      $Res Function(_$KodiListFilterMoviesValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterMoviesValue(
+    return _then(_$KodiListFilterMoviesValueImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -472,6 +498,8 @@ class __$$_KodiListFilterMoviesValueCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterRuleMoviesCopyWith<$Res> get value {
@@ -483,12 +511,12 @@ class __$$_KodiListFilterMoviesValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterMoviesValue implements _KodiListFilterMoviesValue {
-  const _$_KodiListFilterMoviesValue(this.value, {final String? $type})
+class _$KodiListFilterMoviesValueImpl implements _KodiListFilterMoviesValue {
+  const _$KodiListFilterMoviesValueImpl(this.value, {final String? $type})
       : $type = $type ?? 'value';
 
-  factory _$_KodiListFilterMoviesValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterMoviesValueFromJson(json);
+  factory _$KodiListFilterMoviesValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListFilterMoviesValueImplFromJson(json);
 
   @override
   final KodiListFilterRuleMovies value;
@@ -502,23 +530,25 @@ class _$_KodiListFilterMoviesValue implements _KodiListFilterMoviesValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterMoviesValue &&
+            other is _$KodiListFilterMoviesValueImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterMoviesValueCopyWith<_$_KodiListFilterMoviesValue>
-      get copyWith => __$$_KodiListFilterMoviesValueCopyWithImpl<
-          _$_KodiListFilterMoviesValue>(this, _$identity);
+  _$$KodiListFilterMoviesValueImplCopyWith<_$KodiListFilterMoviesValueImpl>
+      get copyWith => __$$KodiListFilterMoviesValueImplCopyWithImpl<
+          _$KodiListFilterMoviesValueImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -590,7 +620,7 @@ class _$_KodiListFilterMoviesValue implements _KodiListFilterMoviesValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterMoviesValueToJson(
+    return _$$KodiListFilterMoviesValueImplToJson(
       this,
     );
   }
@@ -598,13 +628,16 @@ class _$_KodiListFilterMoviesValue implements _KodiListFilterMoviesValue {
 
 abstract class _KodiListFilterMoviesValue implements KodiListFilterMovies {
   const factory _KodiListFilterMoviesValue(
-      final KodiListFilterRuleMovies value) = _$_KodiListFilterMoviesValue;
+      final KodiListFilterRuleMovies value) = _$KodiListFilterMoviesValueImpl;
 
   factory _KodiListFilterMoviesValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterMoviesValue.fromJson;
+      _$KodiListFilterMoviesValueImpl.fromJson;
 
   KodiListFilterRuleMovies get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterMoviesValueCopyWith<_$_KodiListFilterMoviesValue>
+
+  /// Create a copy of KodiListFilterMovies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterMoviesValueImplCopyWith<_$KodiListFilterMoviesValueImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

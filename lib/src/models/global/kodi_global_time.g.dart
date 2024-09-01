@@ -6,15 +6,16 @@ part of 'kodi_global_time.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiGlobalTime _$$_KodiGlobalTimeFromJson(Map<String, dynamic> json) =>
-    _$_KodiGlobalTime(
-      hours: json['hours'] as int,
-      milliseconds: json['milliseconds'] as int,
-      minutes: json['minutes'] as int,
-      seconds: json['seconds'] as int,
+_$KodiGlobalTimeImpl _$$KodiGlobalTimeImplFromJson(Map<String, dynamic> json) =>
+    _$KodiGlobalTimeImpl(
+      hours: (json['hours'] as num).toInt(),
+      milliseconds: (json['milliseconds'] as num).toInt(),
+      minutes: (json['minutes'] as num).toInt(),
+      seconds: (json['seconds'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_KodiGlobalTimeToJson(_$_KodiGlobalTime instance) =>
+Map<String, dynamic> _$$KodiGlobalTimeImplToJson(
+        _$KodiGlobalTimeImpl instance) =>
     <String, dynamic>{
       'hours': instance.hours,
       'milliseconds': instance.milliseconds,

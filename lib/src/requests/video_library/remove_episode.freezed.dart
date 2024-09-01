@@ -12,7 +12,7 @@ part of 'remove_episode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RemoveEpisode _$RemoveEpisodeFromJson(Map<String, dynamic> json) {
   return _RemoveEpisode.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$RemoveEpisode {
   @JsonKey(name: 'episodeid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this RemoveEpisode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoveEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoveEpisodeCopyWith<RemoveEpisode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$RemoveEpisodeCopyWithImpl<$Res, $Val extends RemoveEpisode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoveEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,30 +69,32 @@ class _$RemoveEpisodeCopyWithImpl<$Res, $Val extends RemoveEpisode>
 }
 
 /// @nodoc
-abstract class _$$_RemoveEpisodeCopyWith<$Res>
+abstract class _$$RemoveEpisodeImplCopyWith<$Res>
     implements $RemoveEpisodeCopyWith<$Res> {
-  factory _$$_RemoveEpisodeCopyWith(
-          _$_RemoveEpisode value, $Res Function(_$_RemoveEpisode) then) =
-      __$$_RemoveEpisodeCopyWithImpl<$Res>;
+  factory _$$RemoveEpisodeImplCopyWith(
+          _$RemoveEpisodeImpl value, $Res Function(_$RemoveEpisodeImpl) then) =
+      __$$RemoveEpisodeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'episodeid') int id});
 }
 
 /// @nodoc
-class __$$_RemoveEpisodeCopyWithImpl<$Res>
-    extends _$RemoveEpisodeCopyWithImpl<$Res, _$_RemoveEpisode>
-    implements _$$_RemoveEpisodeCopyWith<$Res> {
-  __$$_RemoveEpisodeCopyWithImpl(
-      _$_RemoveEpisode _value, $Res Function(_$_RemoveEpisode) _then)
+class __$$RemoveEpisodeImplCopyWithImpl<$Res>
+    extends _$RemoveEpisodeCopyWithImpl<$Res, _$RemoveEpisodeImpl>
+    implements _$$RemoveEpisodeImplCopyWith<$Res> {
+  __$$RemoveEpisodeImplCopyWithImpl(
+      _$RemoveEpisodeImpl _value, $Res Function(_$RemoveEpisodeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoveEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_RemoveEpisode(
+    return _then(_$RemoveEpisodeImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -97,11 +105,11 @@ class __$$_RemoveEpisodeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RemoveEpisode extends _RemoveEpisode {
-  const _$_RemoveEpisode(@JsonKey(name: 'episodeid') this.id) : super._();
+class _$RemoveEpisodeImpl extends _RemoveEpisode {
+  const _$RemoveEpisodeImpl(@JsonKey(name: 'episodeid') this.id) : super._();
 
-  factory _$_RemoveEpisode.fromJson(Map<String, dynamic> json) =>
-      _$$_RemoveEpisodeFromJson(json);
+  factory _$RemoveEpisodeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RemoveEpisodeImplFromJson(json);
 
   @override
   @JsonKey(name: 'episodeid')
@@ -113,26 +121,28 @@ class _$_RemoveEpisode extends _RemoveEpisode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RemoveEpisode &&
+            other is _$RemoveEpisodeImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoveEpisode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RemoveEpisodeCopyWith<_$_RemoveEpisode> get copyWith =>
-      __$$_RemoveEpisodeCopyWithImpl<_$_RemoveEpisode>(this, _$identity);
+  _$$RemoveEpisodeImplCopyWith<_$RemoveEpisodeImpl> get copyWith =>
+      __$$RemoveEpisodeImplCopyWithImpl<_$RemoveEpisodeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RemoveEpisodeToJson(
+    return _$$RemoveEpisodeImplToJson(
       this,
     );
   }
@@ -140,17 +150,20 @@ class _$_RemoveEpisode extends _RemoveEpisode {
 
 abstract class _RemoveEpisode extends RemoveEpisode {
   const factory _RemoveEpisode(@JsonKey(name: 'episodeid') final int id) =
-      _$_RemoveEpisode;
+      _$RemoveEpisodeImpl;
   const _RemoveEpisode._() : super._();
 
   factory _RemoveEpisode.fromJson(Map<String, dynamic> json) =
-      _$_RemoveEpisode.fromJson;
+      _$RemoveEpisodeImpl.fromJson;
 
   @override
   @JsonKey(name: 'episodeid')
   int get id;
+
+  /// Create a copy of RemoveEpisode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RemoveEpisodeCopyWith<_$_RemoveEpisode> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RemoveEpisodeImplCopyWith<_$RemoveEpisodeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

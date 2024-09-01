@@ -6,10 +6,11 @@ part of 'clear.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Clear _$$_ClearFromJson(Map<String, dynamic> json) => _$_Clear(
-      json['playlistid'] as int,
+_$ClearImpl _$$ClearImplFromJson(Map<String, dynamic> json) => _$ClearImpl(
+      (json['playlistid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_ClearToJson(_$_Clear instance) => <String, dynamic>{
+Map<String, dynamic> _$$ClearImplToJson(_$ClearImpl instance) =>
+    <String, dynamic>{
       'playlistid': instance.id,
     };

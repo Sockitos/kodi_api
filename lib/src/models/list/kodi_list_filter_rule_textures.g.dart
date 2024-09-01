@@ -6,17 +6,17 @@ part of 'kodi_list_filter_rule_textures.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterRuleTextures _$$_KodiListFilterRuleTexturesFromJson(
+_$KodiListFilterRuleTexturesImpl _$$KodiListFilterRuleTexturesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterRuleTextures(
+    _$KodiListFilterRuleTexturesImpl(
       field: $enumDecode(_$KodiListFilterFieldsTexturesEnumMap, json['field']),
       operator: $enumDecode(_$KodiListFilterOperatorsEnumMap, json['operator']),
       value: const KodiListFilterRuleTexturesValueConverter()
           .fromJson(json['value']),
     );
 
-Map<String, dynamic> _$$_KodiListFilterRuleTexturesToJson(
-    _$_KodiListFilterRuleTextures instance) {
+Map<String, dynamic> _$$KodiListFilterRuleTexturesImplToJson(
+    _$KodiListFilterRuleTexturesImpl instance) {
   final val = <String, dynamic>{
     'field': _$KodiListFilterFieldsTexturesEnumMap[instance.field]!,
     'operator': _$KodiListFilterOperatorsEnumMap[instance.operator]!,
@@ -63,31 +63,31 @@ const _$KodiListFilterOperatorsEnumMap = {
   KodiListFilterOperators.between: 'between',
 };
 
-_$_KodiListFilterRuleTexturesValueSingle
-    _$$_KodiListFilterRuleTexturesValueSingleFromJson(
+_$KodiListFilterRuleTexturesValueSingleImpl
+    _$$KodiListFilterRuleTexturesValueSingleImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleTexturesValueSingle(
+        _$KodiListFilterRuleTexturesValueSingleImpl(
           json['value'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleTexturesValueSingleToJson(
-        _$_KodiListFilterRuleTexturesValueSingle instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleTexturesValueSingleImplToJson(
+        _$KodiListFilterRuleTexturesValueSingleImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterRuleTexturesValueGroup
-    _$$_KodiListFilterRuleTexturesValueGroupFromJson(
+_$KodiListFilterRuleTexturesValueGroupImpl
+    _$$KodiListFilterRuleTexturesValueGroupImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleTexturesValueGroup(
+        _$KodiListFilterRuleTexturesValueGroupImpl(
           (json['value'] as List<dynamic>).map((e) => e as String).toList(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleTexturesValueGroupToJson(
-        _$_KodiListFilterRuleTexturesValueGroup instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleTexturesValueGroupImplToJson(
+        _$KodiListFilterRuleTexturesValueGroupImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

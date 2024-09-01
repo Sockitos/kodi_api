@@ -12,7 +12,7 @@ part of 'set_party_mode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetPartyMode _$SetPartyModeFromJson(Map<String, dynamic> json) {
   return _SetPartyMode.fromJson(json);
@@ -26,8 +26,12 @@ mixin _$SetPartyMode {
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get partyMode => throw _privateConstructorUsedError;
 
+  /// Serializes this SetPartyMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetPartyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetPartyModeCopyWith<SetPartyMode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$SetPartyModeCopyWithImpl<$Res, $Val extends SetPartyMode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetPartyMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +81,8 @@ class _$SetPartyModeCopyWithImpl<$Res, $Val extends SetPartyMode>
     ) as $Val);
   }
 
+  /// Create a copy of SetPartyMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalToggleCopyWith<$Res> get partyMode {
@@ -85,11 +93,11 @@ class _$SetPartyModeCopyWithImpl<$Res, $Val extends SetPartyMode>
 }
 
 /// @nodoc
-abstract class _$$_SetPartyModeCopyWith<$Res>
+abstract class _$$SetPartyModeImplCopyWith<$Res>
     implements $SetPartyModeCopyWith<$Res> {
-  factory _$$_SetPartyModeCopyWith(
-          _$_SetPartyMode value, $Res Function(_$_SetPartyMode) then) =
-      __$$_SetPartyModeCopyWithImpl<$Res>;
+  factory _$$SetPartyModeImplCopyWith(
+          _$SetPartyModeImpl value, $Res Function(_$SetPartyModeImpl) then) =
+      __$$SetPartyModeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -103,20 +111,22 @@ abstract class _$$_SetPartyModeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetPartyModeCopyWithImpl<$Res>
-    extends _$SetPartyModeCopyWithImpl<$Res, _$_SetPartyMode>
-    implements _$$_SetPartyModeCopyWith<$Res> {
-  __$$_SetPartyModeCopyWithImpl(
-      _$_SetPartyMode _value, $Res Function(_$_SetPartyMode) _then)
+class __$$SetPartyModeImplCopyWithImpl<$Res>
+    extends _$SetPartyModeCopyWithImpl<$Res, _$SetPartyModeImpl>
+    implements _$$SetPartyModeImplCopyWith<$Res> {
+  __$$SetPartyModeImplCopyWithImpl(
+      _$SetPartyModeImpl _value, $Res Function(_$SetPartyModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetPartyMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? partyMode = null,
   }) {
-    return _then(_$_SetPartyMode(
+    return _then(_$SetPartyModeImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -131,13 +141,13 @@ class __$$_SetPartyModeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetPartyMode extends _SetPartyMode {
-  const _$_SetPartyMode(@JsonKey(name: 'playerid') this.id,
+class _$SetPartyModeImpl extends _SetPartyMode {
+  const _$SetPartyModeImpl(@JsonKey(name: 'playerid') this.id,
       @JsonKey(name: 'partymode') @KodiGlobalToggleConverter() this.partyMode)
       : super._();
 
-  factory _$_SetPartyMode.fromJson(Map<String, dynamic> json) =>
-      _$$_SetPartyModeFromJson(json);
+  factory _$SetPartyModeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetPartyModeImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -153,28 +163,30 @@ class _$_SetPartyMode extends _SetPartyMode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetPartyMode &&
+            other is _$SetPartyModeImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.partyMode, partyMode) ||
                 other.partyMode == partyMode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, partyMode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetPartyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetPartyModeCopyWith<_$_SetPartyMode> get copyWith =>
-      __$$_SetPartyModeCopyWithImpl<_$_SetPartyMode>(this, _$identity);
+  _$$SetPartyModeImplCopyWith<_$SetPartyModeImpl> get copyWith =>
+      __$$SetPartyModeImplCopyWithImpl<_$SetPartyModeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetPartyModeToJson(
+    return _$$SetPartyModeImplToJson(
       this,
     );
   }
@@ -185,11 +197,11 @@ abstract class _SetPartyMode extends SetPartyMode {
       @JsonKey(name: 'playerid') final int id,
       @JsonKey(name: 'partymode')
       @KodiGlobalToggleConverter()
-      final KodiGlobalToggle partyMode) = _$_SetPartyMode;
+      final KodiGlobalToggle partyMode) = _$SetPartyModeImpl;
   const _SetPartyMode._() : super._();
 
   factory _SetPartyMode.fromJson(Map<String, dynamic> json) =
-      _$_SetPartyMode.fromJson;
+      _$SetPartyModeImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -198,8 +210,11 @@ abstract class _SetPartyMode extends SetPartyMode {
   @JsonKey(name: 'partymode')
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get partyMode;
+
+  /// Create a copy of SetPartyMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetPartyModeCopyWith<_$_SetPartyMode> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetPartyModeImplCopyWith<_$SetPartyModeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

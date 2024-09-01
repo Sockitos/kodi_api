@@ -6,16 +6,17 @@ part of 'get_episode_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetEpisodeDetails _$$_GetEpisodeDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetEpisodeDetails(
-      json['episodeid'] as int,
+_$GetEpisodeDetailsImpl _$$GetEpisodeDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetEpisodeDetailsImpl(
+      (json['episodeid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsEpisodeEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetEpisodeDetailsToJson(
-    _$_GetEpisodeDetails instance) {
+Map<String, dynamic> _$$GetEpisodeDetailsImplToJson(
+    _$GetEpisodeDetailsImpl instance) {
   final val = <String, dynamic>{
     'episodeid': instance.id,
   };

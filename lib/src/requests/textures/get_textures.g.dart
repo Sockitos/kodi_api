@@ -6,15 +6,15 @@ part of 'get_textures.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTextures _$$_GetTexturesFromJson(Map<String, dynamic> json) =>
-    _$_GetTextures(
+_$GetTexturesImpl _$$GetTexturesImplFromJson(Map<String, dynamic> json) =>
+    _$GetTexturesImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiTexturesFieldsTextureEnumMap, e))
           .toSet(),
       filter: const KodiListFilterTexturesConverter().fromJson(json['filter']),
     );
 
-Map<String, dynamic> _$$_GetTexturesToJson(_$_GetTextures instance) {
+Map<String, dynamic> _$$GetTexturesImplToJson(_$GetTexturesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -12,7 +12,7 @@ part of 'set_repeat.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetRepeat _$SetRepeatFromJson(Map<String, dynamic> json) {
   return _SetRepeat.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$SetRepeat {
   @SetRepeatRepeatConverter()
   SetRepeatRepeat get repeat => throw _privateConstructorUsedError;
 
+  /// Serializes this SetRepeat to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetRepeat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetRepeatCopyWith<SetRepeat> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$SetRepeatCopyWithImpl<$Res, $Val extends SetRepeat>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetRepeat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$SetRepeatCopyWithImpl<$Res, $Val extends SetRepeat>
     ) as $Val);
   }
 
+  /// Create a copy of SetRepeat
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SetRepeatRepeatCopyWith<$Res> get repeat {
@@ -81,10 +89,11 @@ class _$SetRepeatCopyWithImpl<$Res, $Val extends SetRepeat>
 }
 
 /// @nodoc
-abstract class _$$_SetRepeatCopyWith<$Res> implements $SetRepeatCopyWith<$Res> {
-  factory _$$_SetRepeatCopyWith(
-          _$_SetRepeat value, $Res Function(_$_SetRepeat) then) =
-      __$$_SetRepeatCopyWithImpl<$Res>;
+abstract class _$$SetRepeatImplCopyWith<$Res>
+    implements $SetRepeatCopyWith<$Res> {
+  factory _$$SetRepeatImplCopyWith(
+          _$SetRepeatImpl value, $Res Function(_$SetRepeatImpl) then) =
+      __$$SetRepeatImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -96,20 +105,22 @@ abstract class _$$_SetRepeatCopyWith<$Res> implements $SetRepeatCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SetRepeatCopyWithImpl<$Res>
-    extends _$SetRepeatCopyWithImpl<$Res, _$_SetRepeat>
-    implements _$$_SetRepeatCopyWith<$Res> {
-  __$$_SetRepeatCopyWithImpl(
-      _$_SetRepeat _value, $Res Function(_$_SetRepeat) _then)
+class __$$SetRepeatImplCopyWithImpl<$Res>
+    extends _$SetRepeatCopyWithImpl<$Res, _$SetRepeatImpl>
+    implements _$$SetRepeatImplCopyWith<$Res> {
+  __$$SetRepeatImplCopyWithImpl(
+      _$SetRepeatImpl _value, $Res Function(_$SetRepeatImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetRepeat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? repeat = null,
   }) {
-    return _then(_$_SetRepeat(
+    return _then(_$SetRepeatImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -124,13 +135,13 @@ class __$$_SetRepeatCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetRepeat extends _SetRepeat {
-  const _$_SetRepeat(@JsonKey(name: 'playerid') this.id,
+class _$SetRepeatImpl extends _SetRepeat {
+  const _$SetRepeatImpl(@JsonKey(name: 'playerid') this.id,
       @SetRepeatRepeatConverter() this.repeat)
       : super._();
 
-  factory _$_SetRepeat.fromJson(Map<String, dynamic> json) =>
-      _$$_SetRepeatFromJson(json);
+  factory _$SetRepeatImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetRepeatImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -145,27 +156,29 @@ class _$_SetRepeat extends _SetRepeat {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetRepeat &&
+            other is _$SetRepeatImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.repeat, repeat) || other.repeat == repeat));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, repeat);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetRepeat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetRepeatCopyWith<_$_SetRepeat> get copyWith =>
-      __$$_SetRepeatCopyWithImpl<_$_SetRepeat>(this, _$identity);
+  _$$SetRepeatImplCopyWith<_$SetRepeatImpl> get copyWith =>
+      __$$SetRepeatImplCopyWithImpl<_$SetRepeatImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetRepeatToJson(
+    return _$$SetRepeatImplToJson(
       this,
     );
   }
@@ -173,11 +186,12 @@ class _$_SetRepeat extends _SetRepeat {
 
 abstract class _SetRepeat extends SetRepeat {
   const factory _SetRepeat(@JsonKey(name: 'playerid') final int id,
-      @SetRepeatRepeatConverter() final SetRepeatRepeat repeat) = _$_SetRepeat;
+          @SetRepeatRepeatConverter() final SetRepeatRepeat repeat) =
+      _$SetRepeatImpl;
   const _SetRepeat._() : super._();
 
   factory _SetRepeat.fromJson(Map<String, dynamic> json) =
-      _$_SetRepeat.fromJson;
+      _$SetRepeatImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -185,9 +199,12 @@ abstract class _SetRepeat extends SetRepeat {
   @override
   @SetRepeatRepeatConverter()
   SetRepeatRepeat get repeat;
+
+  /// Create a copy of SetRepeat
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetRepeatCopyWith<_$_SetRepeat> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetRepeatImplCopyWith<_$SetRepeatImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -245,6 +262,8 @@ mixin _$SetRepeatRepeat {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SetRepeatRepeat to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -264,33 +283,39 @@ class _$SetRepeatRepeatCopyWithImpl<$Res, $Val extends SetRepeatRepeat>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SetRepeatRepeat
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SetRepeatRepeatplayerRepeatCopyWith<$Res> {
-  factory _$$_SetRepeatRepeatplayerRepeatCopyWith(
-          _$_SetRepeatRepeatplayerRepeat value,
-          $Res Function(_$_SetRepeatRepeatplayerRepeat) then) =
-      __$$_SetRepeatRepeatplayerRepeatCopyWithImpl<$Res>;
+abstract class _$$SetRepeatRepeatplayerRepeatImplCopyWith<$Res> {
+  factory _$$SetRepeatRepeatplayerRepeatImplCopyWith(
+          _$SetRepeatRepeatplayerRepeatImpl value,
+          $Res Function(_$SetRepeatRepeatplayerRepeatImpl) then) =
+      __$$SetRepeatRepeatplayerRepeatImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerRepeat value});
 }
 
 /// @nodoc
-class __$$_SetRepeatRepeatplayerRepeatCopyWithImpl<$Res>
-    extends _$SetRepeatRepeatCopyWithImpl<$Res, _$_SetRepeatRepeatplayerRepeat>
-    implements _$$_SetRepeatRepeatplayerRepeatCopyWith<$Res> {
-  __$$_SetRepeatRepeatplayerRepeatCopyWithImpl(
-      _$_SetRepeatRepeatplayerRepeat _value,
-      $Res Function(_$_SetRepeatRepeatplayerRepeat) _then)
+class __$$SetRepeatRepeatplayerRepeatImplCopyWithImpl<$Res>
+    extends _$SetRepeatRepeatCopyWithImpl<$Res,
+        _$SetRepeatRepeatplayerRepeatImpl>
+    implements _$$SetRepeatRepeatplayerRepeatImplCopyWith<$Res> {
+  __$$SetRepeatRepeatplayerRepeatImplCopyWithImpl(
+      _$SetRepeatRepeatplayerRepeatImpl _value,
+      $Res Function(_$SetRepeatRepeatplayerRepeatImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetRepeatRepeat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetRepeatRepeatplayerRepeat(
+    return _then(_$SetRepeatRepeatplayerRepeatImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -301,12 +326,14 @@ class __$$_SetRepeatRepeatplayerRepeatCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetRepeatRepeatplayerRepeat implements _SetRepeatRepeatplayerRepeat {
-  const _$_SetRepeatRepeatplayerRepeat(this.value, {final String? $type})
+class _$SetRepeatRepeatplayerRepeatImpl
+    implements _SetRepeatRepeatplayerRepeat {
+  const _$SetRepeatRepeatplayerRepeatImpl(this.value, {final String? $type})
       : $type = $type ?? 'playerRepeat';
 
-  factory _$_SetRepeatRepeatplayerRepeat.fromJson(Map<String, dynamic> json) =>
-      _$$_SetRepeatRepeatplayerRepeatFromJson(json);
+  factory _$SetRepeatRepeatplayerRepeatImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$SetRepeatRepeatplayerRepeatImplFromJson(json);
 
   @override
   final KodiPlayerRepeat value;
@@ -320,23 +347,25 @@ class _$_SetRepeatRepeatplayerRepeat implements _SetRepeatRepeatplayerRepeat {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetRepeatRepeatplayerRepeat &&
+            other is _$SetRepeatRepeatplayerRepeatImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetRepeatRepeat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetRepeatRepeatplayerRepeatCopyWith<_$_SetRepeatRepeatplayerRepeat>
-      get copyWith => __$$_SetRepeatRepeatplayerRepeatCopyWithImpl<
-          _$_SetRepeatRepeatplayerRepeat>(this, _$identity);
+  _$$SetRepeatRepeatplayerRepeatImplCopyWith<_$SetRepeatRepeatplayerRepeatImpl>
+      get copyWith => __$$SetRepeatRepeatplayerRepeatImplCopyWithImpl<
+          _$SetRepeatRepeatplayerRepeatImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -402,7 +431,7 @@ class _$_SetRepeatRepeatplayerRepeat implements _SetRepeatRepeatplayerRepeat {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetRepeatRepeatplayerRepeatToJson(
+    return _$$SetRepeatRepeatplayerRepeatImplToJson(
       this,
     );
   }
@@ -410,41 +439,46 @@ class _$_SetRepeatRepeatplayerRepeat implements _SetRepeatRepeatplayerRepeat {
 
 abstract class _SetRepeatRepeatplayerRepeat implements SetRepeatRepeat {
   const factory _SetRepeatRepeatplayerRepeat(final KodiPlayerRepeat value) =
-      _$_SetRepeatRepeatplayerRepeat;
+      _$SetRepeatRepeatplayerRepeatImpl;
 
   factory _SetRepeatRepeatplayerRepeat.fromJson(Map<String, dynamic> json) =
-      _$_SetRepeatRepeatplayerRepeat.fromJson;
+      _$SetRepeatRepeatplayerRepeatImpl.fromJson;
 
   @override
   KodiPlayerRepeat get value;
-  @JsonKey(ignore: true)
-  _$$_SetRepeatRepeatplayerRepeatCopyWith<_$_SetRepeatRepeatplayerRepeat>
+
+  /// Create a copy of SetRepeatRepeat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetRepeatRepeatplayerRepeatImplCopyWith<_$SetRepeatRepeatplayerRepeatImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SetRepeatRepeatCycleCopyWith<$Res> {
-  factory _$$_SetRepeatRepeatCycleCopyWith(_$_SetRepeatRepeatCycle value,
-          $Res Function(_$_SetRepeatRepeatCycle) then) =
-      __$$_SetRepeatRepeatCycleCopyWithImpl<$Res>;
+abstract class _$$SetRepeatRepeatCycleImplCopyWith<$Res> {
+  factory _$$SetRepeatRepeatCycleImplCopyWith(_$SetRepeatRepeatCycleImpl value,
+          $Res Function(_$SetRepeatRepeatCycleImpl) then) =
+      __$$SetRepeatRepeatCycleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerRepeatCycle value});
 }
 
 /// @nodoc
-class __$$_SetRepeatRepeatCycleCopyWithImpl<$Res>
-    extends _$SetRepeatRepeatCopyWithImpl<$Res, _$_SetRepeatRepeatCycle>
-    implements _$$_SetRepeatRepeatCycleCopyWith<$Res> {
-  __$$_SetRepeatRepeatCycleCopyWithImpl(_$_SetRepeatRepeatCycle _value,
-      $Res Function(_$_SetRepeatRepeatCycle) _then)
+class __$$SetRepeatRepeatCycleImplCopyWithImpl<$Res>
+    extends _$SetRepeatRepeatCopyWithImpl<$Res, _$SetRepeatRepeatCycleImpl>
+    implements _$$SetRepeatRepeatCycleImplCopyWith<$Res> {
+  __$$SetRepeatRepeatCycleImplCopyWithImpl(_$SetRepeatRepeatCycleImpl _value,
+      $Res Function(_$SetRepeatRepeatCycleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetRepeatRepeat
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetRepeatRepeatCycle(
+    return _then(_$SetRepeatRepeatCycleImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -455,12 +489,12 @@ class __$$_SetRepeatRepeatCycleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetRepeatRepeatCycle implements _SetRepeatRepeatCycle {
-  const _$_SetRepeatRepeatCycle(this.value, {final String? $type})
+class _$SetRepeatRepeatCycleImpl implements _SetRepeatRepeatCycle {
+  const _$SetRepeatRepeatCycleImpl(this.value, {final String? $type})
       : $type = $type ?? 'cycle';
 
-  factory _$_SetRepeatRepeatCycle.fromJson(Map<String, dynamic> json) =>
-      _$$_SetRepeatRepeatCycleFromJson(json);
+  factory _$SetRepeatRepeatCycleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetRepeatRepeatCycleImplFromJson(json);
 
   @override
   final KodiPlayerRepeatCycle value;
@@ -474,23 +508,26 @@ class _$_SetRepeatRepeatCycle implements _SetRepeatRepeatCycle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetRepeatRepeatCycle &&
+            other is _$SetRepeatRepeatCycleImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetRepeatRepeat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetRepeatRepeatCycleCopyWith<_$_SetRepeatRepeatCycle> get copyWith =>
-      __$$_SetRepeatRepeatCycleCopyWithImpl<_$_SetRepeatRepeatCycle>(
-          this, _$identity);
+  _$$SetRepeatRepeatCycleImplCopyWith<_$SetRepeatRepeatCycleImpl>
+      get copyWith =>
+          __$$SetRepeatRepeatCycleImplCopyWithImpl<_$SetRepeatRepeatCycleImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -556,7 +593,7 @@ class _$_SetRepeatRepeatCycle implements _SetRepeatRepeatCycle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetRepeatRepeatCycleToJson(
+    return _$$SetRepeatRepeatCycleImplToJson(
       this,
     );
   }
@@ -564,14 +601,17 @@ class _$_SetRepeatRepeatCycle implements _SetRepeatRepeatCycle {
 
 abstract class _SetRepeatRepeatCycle implements SetRepeatRepeat {
   const factory _SetRepeatRepeatCycle(final KodiPlayerRepeatCycle value) =
-      _$_SetRepeatRepeatCycle;
+      _$SetRepeatRepeatCycleImpl;
 
   factory _SetRepeatRepeatCycle.fromJson(Map<String, dynamic> json) =
-      _$_SetRepeatRepeatCycle.fromJson;
+      _$SetRepeatRepeatCycleImpl.fromJson;
 
   @override
   KodiPlayerRepeatCycle get value;
-  @JsonKey(ignore: true)
-  _$$_SetRepeatRepeatCycleCopyWith<_$_SetRepeatRepeatCycle> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of SetRepeatRepeat
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetRepeatRepeatCycleImplCopyWith<_$SetRepeatRepeatCycleImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

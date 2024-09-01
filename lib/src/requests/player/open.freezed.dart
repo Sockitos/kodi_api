@@ -12,7 +12,7 @@ part of 'open.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Open _$OpenFromJson(Map<String, dynamic> json) {
   return _Open.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$Open {
   KodiPlayerPlayerOpenOptions? get options =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this Open to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Open
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OpenCopyWith<Open> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -53,6 +57,8 @@ class _$OpenCopyWithImpl<$Res, $Val extends Open>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Open
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$OpenCopyWithImpl<$Res, $Val extends Open>
     ) as $Val);
   }
 
+  /// Create a copy of Open
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerPlayerOpenItemCopyWith<$Res> get item {
@@ -79,6 +87,8 @@ class _$OpenCopyWithImpl<$Res, $Val extends Open>
     });
   }
 
+  /// Create a copy of Open
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerPlayerOpenOptionsCopyWith<$Res>? get options {
@@ -93,9 +103,10 @@ class _$OpenCopyWithImpl<$Res, $Val extends Open>
 }
 
 /// @nodoc
-abstract class _$$_OpenCopyWith<$Res> implements $OpenCopyWith<$Res> {
-  factory _$$_OpenCopyWith(_$_Open value, $Res Function(_$_Open) then) =
-      __$$_OpenCopyWithImpl<$Res>;
+abstract class _$$OpenImplCopyWith<$Res> implements $OpenCopyWith<$Res> {
+  factory _$$OpenImplCopyWith(
+          _$OpenImpl value, $Res Function(_$OpenImpl) then) =
+      __$$OpenImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -109,18 +120,21 @@ abstract class _$$_OpenCopyWith<$Res> implements $OpenCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_OpenCopyWithImpl<$Res> extends _$OpenCopyWithImpl<$Res, _$_Open>
-    implements _$$_OpenCopyWith<$Res> {
-  __$$_OpenCopyWithImpl(_$_Open _value, $Res Function(_$_Open) _then)
+class __$$OpenImplCopyWithImpl<$Res>
+    extends _$OpenCopyWithImpl<$Res, _$OpenImpl>
+    implements _$$OpenImplCopyWith<$Res> {
+  __$$OpenImplCopyWithImpl(_$OpenImpl _value, $Res Function(_$OpenImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Open
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? item = null,
     Object? options = freezed,
   }) {
-    return _then(_$_Open(
+    return _then(_$OpenImpl(
       null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
@@ -135,11 +149,13 @@ class __$$_OpenCopyWithImpl<$Res> extends _$OpenCopyWithImpl<$Res, _$_Open>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Open extends _Open {
-  const _$_Open(@KodiPlayerPlayerOpenItemConverter() this.item, {this.options})
+class _$OpenImpl extends _Open {
+  const _$OpenImpl(@KodiPlayerPlayerOpenItemConverter() this.item,
+      {this.options})
       : super._();
 
-  factory _$_Open.fromJson(Map<String, dynamic> json) => _$$_OpenFromJson(json);
+  factory _$OpenImpl.fromJson(Map<String, dynamic> json) =>
+      _$$OpenImplFromJson(json);
 
   @override
   @KodiPlayerPlayerOpenItemConverter()
@@ -153,27 +169,29 @@ class _$_Open extends _Open {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Open &&
+            other is _$OpenImpl &&
             (identical(other.item, item) || other.item == item) &&
             (identical(other.options, options) || other.options == options));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, item, options);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Open
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OpenCopyWith<_$_Open> get copyWith =>
-      __$$_OpenCopyWithImpl<_$_Open>(this, _$identity);
+  _$$OpenImplCopyWith<_$OpenImpl> get copyWith =>
+      __$$OpenImplCopyWithImpl<_$OpenImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OpenToJson(
+    return _$$OpenImplToJson(
       this,
     );
   }
@@ -182,19 +200,23 @@ class _$_Open extends _Open {
 abstract class _Open extends Open {
   const factory _Open(
       @KodiPlayerPlayerOpenItemConverter() final KodiPlayerPlayerOpenItem item,
-      {final KodiPlayerPlayerOpenOptions? options}) = _$_Open;
+      {final KodiPlayerPlayerOpenOptions? options}) = _$OpenImpl;
   const _Open._() : super._();
 
-  factory _Open.fromJson(Map<String, dynamic> json) = _$_Open.fromJson;
+  factory _Open.fromJson(Map<String, dynamic> json) = _$OpenImpl.fromJson;
 
   @override
   @KodiPlayerPlayerOpenItemConverter()
   KodiPlayerPlayerOpenItem get item;
   @override
   KodiPlayerPlayerOpenOptions? get options;
+
+  /// Create a copy of Open
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_OpenCopyWith<_$_Open> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OpenImplCopyWith<_$OpenImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 KodiPlayerPlayerOpenItem _$KodiPlayerPlayerOpenItemFromJson(
@@ -333,6 +355,8 @@ mixin _$KodiPlayerPlayerOpenItem {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerPlayerOpenItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -353,35 +377,41 @@ class _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWith(
-          _$_KodiPlayerPlayerOpenItemPlaylistIdPosition value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemPlaylistIdPosition) then) =
-      __$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWith(
+          _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl)
+              then) =
+      __$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'playlistid') int playlistId, int position});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemPlaylistIdPosition>
-    implements _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemPlaylistIdPosition _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemPlaylistIdPosition) _then)
+        _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl>
+    implements _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playlistId = null,
     Object? position = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemPlaylistIdPosition(
+    return _then(_$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl(
       playlistId: null == playlistId
           ? _value.playlistId
           : playlistId // ignore: cast_nullable_to_non_nullable
@@ -396,17 +426,17 @@ class __$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemPlaylistIdPosition
+class _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl
     implements _KodiPlayerPlayerOpenItemPlaylistIdPosition {
-  const _$_KodiPlayerPlayerOpenItemPlaylistIdPosition(
+  const _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl(
       {@JsonKey(name: 'playlistid') required this.playlistId,
       required this.position,
       final String? $type})
       : $type = $type ?? 'playlistIdPosition';
 
-  factory _$_KodiPlayerPlayerOpenItemPlaylistIdPosition.fromJson(
+  factory _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionFromJson(json);
+      _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistid')
@@ -423,28 +453,31 @@ class _$_KodiPlayerPlayerOpenItemPlaylistIdPosition
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemPlaylistIdPosition &&
+            other is _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl &&
             (identical(other.playlistId, playlistId) ||
                 other.playlistId == playlistId) &&
             (identical(other.position, position) ||
                 other.position == position));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playlistId, position);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWith<
-          _$_KodiPlayerPlayerOpenItemPlaylistIdPosition>
+  _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl>
       get copyWith =>
-          __$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWithImpl<
-              _$_KodiPlayerPlayerOpenItemPlaylistIdPosition>(this, _$identity);
+          __$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWithImpl<
+                  _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -579,7 +612,7 @@ class _$_KodiPlayerPlayerOpenItemPlaylistIdPosition
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionToJson(
+    return _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplToJson(
       this,
     );
   }
@@ -590,27 +623,30 @@ abstract class _KodiPlayerPlayerOpenItemPlaylistIdPosition
   const factory _KodiPlayerPlayerOpenItemPlaylistIdPosition(
           {@JsonKey(name: 'playlistid') required final int playlistId,
           required final int position}) =
-      _$_KodiPlayerPlayerOpenItemPlaylistIdPosition;
+      _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl;
 
   factory _KodiPlayerPlayerOpenItemPlaylistIdPosition.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemPlaylistIdPosition.fromJson;
+      _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl.fromJson;
 
   @JsonKey(name: 'playlistid')
   int get playlistId;
   int get position;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionCopyWith<
-          _$_KodiPlayerPlayerOpenItemPlaylistIdPosition>
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWith(
-          _$_KodiPlayerPlayerOpenItemPlaylistItem value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemPlaylistItem) then) =
-      __$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWith(
+          _$KodiPlayerPlayerOpenItemPlaylistItemImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemPlaylistItemImpl) then) =
+      __$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'playlistitem') KodiPlaylistItem playlistItem});
 
@@ -618,21 +654,23 @@ abstract class _$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemPlaylistItem>
-    implements _$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemPlaylistItem _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemPlaylistItem) _then)
+        _$KodiPlayerPlayerOpenItemPlaylistItemImpl>
+    implements _$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemPlaylistItemImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemPlaylistItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playlistItem = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemPlaylistItem(
+    return _then(_$KodiPlayerPlayerOpenItemPlaylistItemImpl(
       null == playlistItem
           ? _value.playlistItem
           : playlistItem // ignore: cast_nullable_to_non_nullable
@@ -640,6 +678,8 @@ class __$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlaylistItemCopyWith<$Res> get playlistItem {
@@ -651,16 +691,16 @@ class __$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemPlaylistItem
+class _$KodiPlayerPlayerOpenItemPlaylistItemImpl
     implements _KodiPlayerPlayerOpenItemPlaylistItem {
-  const _$_KodiPlayerPlayerOpenItemPlaylistItem(
+  const _$KodiPlayerPlayerOpenItemPlaylistItemImpl(
       @JsonKey(name: 'playlistitem') this.playlistItem,
       {final String? $type})
       : $type = $type ?? 'playlistItem';
 
-  factory _$_KodiPlayerPlayerOpenItemPlaylistItem.fromJson(
+  factory _$KodiPlayerPlayerOpenItemPlaylistItemImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemPlaylistItemFromJson(json);
+      _$$KodiPlayerPlayerOpenItemPlaylistItemImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistitem')
@@ -675,25 +715,27 @@ class _$_KodiPlayerPlayerOpenItemPlaylistItem
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemPlaylistItem &&
+            other is _$KodiPlayerPlayerOpenItemPlaylistItemImpl &&
             (identical(other.playlistItem, playlistItem) ||
                 other.playlistItem == playlistItem));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playlistItem);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWith<
-          _$_KodiPlayerPlayerOpenItemPlaylistItem>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemPlaylistItem>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPlaylistItemImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemPlaylistItemImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -828,7 +870,7 @@ class _$_KodiPlayerPlayerOpenItemPlaylistItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemPlaylistItemToJson(
+    return _$$KodiPlayerPlayerOpenItemPlaylistItemImplToJson(
       this,
     );
   }
@@ -838,47 +880,52 @@ abstract class _KodiPlayerPlayerOpenItemPlaylistItem
     implements KodiPlayerPlayerOpenItem {
   const factory _KodiPlayerPlayerOpenItemPlaylistItem(
           @JsonKey(name: 'playlistitem') final KodiPlaylistItem playlistItem) =
-      _$_KodiPlayerPlayerOpenItemPlaylistItem;
+      _$KodiPlayerPlayerOpenItemPlaylistItemImpl;
 
   factory _KodiPlayerPlayerOpenItemPlaylistItem.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemPlaylistItem.fromJson;
+      _$KodiPlayerPlayerOpenItemPlaylistItemImpl.fromJson;
 
   @JsonKey(name: 'playlistitem')
   KodiPlaylistItem get playlistItem;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemPlaylistItemCopyWith<
-          _$_KodiPlayerPlayerOpenItemPlaylistItem>
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemPlaylistItemImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPlaylistItemImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWith(
-          _$_KodiPlayerPlayerOpenItemPathRecursive value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemPathRecursive) then) =
-      __$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWith(
+          _$KodiPlayerPlayerOpenItemPathRecursiveImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemPathRecursiveImpl) then) =
+      __$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String path, bool recursive});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemPathRecursive>
-    implements _$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemPathRecursive _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemPathRecursive) _then)
+        _$KodiPlayerPlayerOpenItemPathRecursiveImpl>
+    implements _$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemPathRecursiveImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemPathRecursiveImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = null,
     Object? recursive = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemPathRecursive(
+    return _then(_$KodiPlayerPlayerOpenItemPathRecursiveImpl(
       path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -893,15 +940,15 @@ class __$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemPathRecursive
+class _$KodiPlayerPlayerOpenItemPathRecursiveImpl
     implements _KodiPlayerPlayerOpenItemPathRecursive {
-  const _$_KodiPlayerPlayerOpenItemPathRecursive(
+  const _$KodiPlayerPlayerOpenItemPathRecursiveImpl(
       {required this.path, this.recursive = true, final String? $type})
       : $type = $type ?? 'pathRecursive';
 
-  factory _$_KodiPlayerPlayerOpenItemPathRecursive.fromJson(
+  factory _$KodiPlayerPlayerOpenItemPathRecursiveImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemPathRecursiveFromJson(json);
+      _$$KodiPlayerPlayerOpenItemPathRecursiveImplFromJson(json);
 
   @override
   final String path;
@@ -918,26 +965,28 @@ class _$_KodiPlayerPlayerOpenItemPathRecursive
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemPathRecursive &&
+            other is _$KodiPlayerPlayerOpenItemPathRecursiveImpl &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.recursive, recursive) ||
                 other.recursive == recursive));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path, recursive);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWith<
-          _$_KodiPlayerPlayerOpenItemPathRecursive>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemPathRecursive>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPathRecursiveImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemPathRecursiveImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1072,7 +1121,7 @@ class _$_KodiPlayerPlayerOpenItemPathRecursive
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemPathRecursiveToJson(
+    return _$$KodiPlayerPlayerOpenItemPathRecursiveImplToJson(
       this,
     );
   }
@@ -1082,26 +1131,29 @@ abstract class _KodiPlayerPlayerOpenItemPathRecursive
     implements KodiPlayerPlayerOpenItem {
   const factory _KodiPlayerPlayerOpenItemPathRecursive(
       {required final String path,
-      final bool recursive}) = _$_KodiPlayerPlayerOpenItemPathRecursive;
+      final bool recursive}) = _$KodiPlayerPlayerOpenItemPathRecursiveImpl;
 
   factory _KodiPlayerPlayerOpenItemPathRecursive.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemPathRecursive.fromJson;
+      _$KodiPlayerPlayerOpenItemPathRecursiveImpl.fromJson;
 
   String get path;
   bool get recursive;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemPathRecursiveCopyWith<
-          _$_KodiPlayerPlayerOpenItemPathRecursive>
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemPathRecursiveImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPathRecursiveImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWith(
-          _$_KodiPlayerPlayerOpenItemPathPartyMode value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemPathPartyMode) then) =
-      __$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWith(
+          _$KodiPlayerPlayerOpenItemPathPartyModeImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemPathPartyModeImpl) then) =
+      __$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
       {@JsonKey(name: 'partymode')
@@ -1111,21 +1163,23 @@ abstract class _$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemPathPartyMode>
-    implements _$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemPathPartyMode _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemPathPartyMode) _then)
+        _$KodiPlayerPlayerOpenItemPathPartyModeImpl>
+    implements _$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemPathPartyModeImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemPathPartyModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? partyMode = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemPathPartyMode(
+    return _then(_$KodiPlayerPlayerOpenItemPathPartyModeImpl(
       null == partyMode
           ? _value.partyMode
           : partyMode // ignore: cast_nullable_to_non_nullable
@@ -1133,6 +1187,8 @@ class __$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerPlayerOpenItemPartyModeCopyWith<$Res> get partyMode {
@@ -1145,16 +1201,16 @@ class __$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemPathPartyMode
+class _$KodiPlayerPlayerOpenItemPathPartyModeImpl
     implements _KodiPlayerPlayerOpenItemPathPartyMode {
-  const _$_KodiPlayerPlayerOpenItemPathPartyMode(
+  const _$KodiPlayerPlayerOpenItemPathPartyModeImpl(
       @JsonKey(name: 'partymode') this.partyMode,
       {final String? $type})
       : $type = $type ?? 'partyMode';
 
-  factory _$_KodiPlayerPlayerOpenItemPathPartyMode.fromJson(
+  factory _$KodiPlayerPlayerOpenItemPathPartyModeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemPathPartyModeFromJson(json);
+      _$$KodiPlayerPlayerOpenItemPathPartyModeImplFromJson(json);
 
   @override
   @JsonKey(name: 'partymode')
@@ -1169,25 +1225,27 @@ class _$_KodiPlayerPlayerOpenItemPathPartyMode
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemPathPartyMode &&
+            other is _$KodiPlayerPlayerOpenItemPathPartyModeImpl &&
             (identical(other.partyMode, partyMode) ||
                 other.partyMode == partyMode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, partyMode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWith<
-          _$_KodiPlayerPlayerOpenItemPathPartyMode>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemPathPartyMode>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPathPartyModeImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemPathPartyModeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1322,7 +1380,7 @@ class _$_KodiPlayerPlayerOpenItemPathPartyMode
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemPathPartyModeToJson(
+    return _$$KodiPlayerPlayerOpenItemPathPartyModeImplToJson(
       this,
     );
   }
@@ -1333,46 +1391,51 @@ abstract class _KodiPlayerPlayerOpenItemPathPartyMode
   const factory _KodiPlayerPlayerOpenItemPathPartyMode(
           @JsonKey(name: 'partymode')
           final KodiPlayerPlayerOpenItemPartyMode partyMode) =
-      _$_KodiPlayerPlayerOpenItemPathPartyMode;
+      _$KodiPlayerPlayerOpenItemPathPartyModeImpl;
 
   factory _KodiPlayerPlayerOpenItemPathPartyMode.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemPathPartyMode.fromJson;
+      _$KodiPlayerPlayerOpenItemPathPartyModeImpl.fromJson;
 
   @JsonKey(name: 'partymode')
   KodiPlayerPlayerOpenItemPartyMode get partyMode;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemPathPartyModeCopyWith<
-          _$_KodiPlayerPlayerOpenItemPathPartyMode>
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemPathPartyModeImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPathPartyModeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWith(
-          _$_KodiPlayerPlayerOpenItemBroadcastId value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemBroadcastId) then) =
-      __$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWith(
+          _$KodiPlayerPlayerOpenItemBroadcastIdImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemBroadcastIdImpl) then) =
+      __$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'broadcastid') int broadcastId});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemBroadcastId>
-    implements _$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemBroadcastId _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemBroadcastId) _then)
+        _$KodiPlayerPlayerOpenItemBroadcastIdImpl>
+    implements _$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemBroadcastIdImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemBroadcastIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? broadcastId = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemBroadcastId(
+    return _then(_$KodiPlayerPlayerOpenItemBroadcastIdImpl(
       null == broadcastId
           ? _value.broadcastId
           : broadcastId // ignore: cast_nullable_to_non_nullable
@@ -1383,16 +1446,16 @@ class __$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemBroadcastId
+class _$KodiPlayerPlayerOpenItemBroadcastIdImpl
     implements _KodiPlayerPlayerOpenItemBroadcastId {
-  const _$_KodiPlayerPlayerOpenItemBroadcastId(
+  const _$KodiPlayerPlayerOpenItemBroadcastIdImpl(
       @JsonKey(name: 'broadcastid') this.broadcastId,
       {final String? $type})
       : $type = $type ?? 'broadcastId';
 
-  factory _$_KodiPlayerPlayerOpenItemBroadcastId.fromJson(
+  factory _$KodiPlayerPlayerOpenItemBroadcastIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemBroadcastIdFromJson(json);
+      _$$KodiPlayerPlayerOpenItemBroadcastIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -1407,25 +1470,27 @@ class _$_KodiPlayerPlayerOpenItemBroadcastId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemBroadcastId &&
+            other is _$KodiPlayerPlayerOpenItemBroadcastIdImpl &&
             (identical(other.broadcastId, broadcastId) ||
                 other.broadcastId == broadcastId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, broadcastId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWith<
-          _$_KodiPlayerPlayerOpenItemBroadcastId>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemBroadcastId>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWith<
+          _$KodiPlayerPlayerOpenItemBroadcastIdImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemBroadcastIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1560,7 +1625,7 @@ class _$_KodiPlayerPlayerOpenItemBroadcastId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemBroadcastIdToJson(
+    return _$$KodiPlayerPlayerOpenItemBroadcastIdImplToJson(
       this,
     );
   }
@@ -1570,46 +1635,51 @@ abstract class _KodiPlayerPlayerOpenItemBroadcastId
     implements KodiPlayerPlayerOpenItem {
   const factory _KodiPlayerPlayerOpenItemBroadcastId(
           @JsonKey(name: 'broadcastid') final int broadcastId) =
-      _$_KodiPlayerPlayerOpenItemBroadcastId;
+      _$KodiPlayerPlayerOpenItemBroadcastIdImpl;
 
   factory _KodiPlayerPlayerOpenItemBroadcastId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemBroadcastId.fromJson;
+      _$KodiPlayerPlayerOpenItemBroadcastIdImpl.fromJson;
 
   @JsonKey(name: 'broadcastid')
   int get broadcastId;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemBroadcastIdCopyWith<
-          _$_KodiPlayerPlayerOpenItemBroadcastId>
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemBroadcastIdImplCopyWith<
+          _$KodiPlayerPlayerOpenItemBroadcastIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemChannelIdCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemChannelIdCopyWith(
-          _$_KodiPlayerPlayerOpenItemChannelId value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemChannelId) then) =
-      __$$_KodiPlayerPlayerOpenItemChannelIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemChannelIdImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemChannelIdImplCopyWith(
+          _$KodiPlayerPlayerOpenItemChannelIdImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemChannelIdImpl) then) =
+      __$$KodiPlayerPlayerOpenItemChannelIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'channelid') int channelId});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemChannelIdCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemChannelIdImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemChannelId>
-    implements _$$_KodiPlayerPlayerOpenItemChannelIdCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemChannelIdCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemChannelId _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemChannelId) _then)
+        _$KodiPlayerPlayerOpenItemChannelIdImpl>
+    implements _$$KodiPlayerPlayerOpenItemChannelIdImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemChannelIdImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemChannelIdImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemChannelIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? channelId = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemChannelId(
+    return _then(_$KodiPlayerPlayerOpenItemChannelIdImpl(
       null == channelId
           ? _value.channelId
           : channelId // ignore: cast_nullable_to_non_nullable
@@ -1620,16 +1690,16 @@ class __$$_KodiPlayerPlayerOpenItemChannelIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemChannelId
+class _$KodiPlayerPlayerOpenItemChannelIdImpl
     implements _KodiPlayerPlayerOpenItemChannelId {
-  const _$_KodiPlayerPlayerOpenItemChannelId(
+  const _$KodiPlayerPlayerOpenItemChannelIdImpl(
       @JsonKey(name: 'channelid') this.channelId,
       {final String? $type})
       : $type = $type ?? 'channelId';
 
-  factory _$_KodiPlayerPlayerOpenItemChannelId.fromJson(
+  factory _$KodiPlayerPlayerOpenItemChannelIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemChannelIdFromJson(json);
+      _$$KodiPlayerPlayerOpenItemChannelIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'channelid')
@@ -1644,25 +1714,27 @@ class _$_KodiPlayerPlayerOpenItemChannelId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemChannelId &&
+            other is _$KodiPlayerPlayerOpenItemChannelIdImpl &&
             (identical(other.channelId, channelId) ||
                 other.channelId == channelId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, channelId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemChannelIdCopyWith<
-          _$_KodiPlayerPlayerOpenItemChannelId>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemChannelIdCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemChannelId>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemChannelIdImplCopyWith<
+          _$KodiPlayerPlayerOpenItemChannelIdImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemChannelIdImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemChannelIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1797,7 +1869,7 @@ class _$_KodiPlayerPlayerOpenItemChannelId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemChannelIdToJson(
+    return _$$KodiPlayerPlayerOpenItemChannelIdImplToJson(
       this,
     );
   }
@@ -1807,46 +1879,51 @@ abstract class _KodiPlayerPlayerOpenItemChannelId
     implements KodiPlayerPlayerOpenItem {
   const factory _KodiPlayerPlayerOpenItemChannelId(
           @JsonKey(name: 'channelid') final int channelId) =
-      _$_KodiPlayerPlayerOpenItemChannelId;
+      _$KodiPlayerPlayerOpenItemChannelIdImpl;
 
   factory _KodiPlayerPlayerOpenItemChannelId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemChannelId.fromJson;
+      _$KodiPlayerPlayerOpenItemChannelIdImpl.fromJson;
 
   @JsonKey(name: 'channelid')
   int get channelId;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemChannelIdCopyWith<
-          _$_KodiPlayerPlayerOpenItemChannelId>
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemChannelIdImplCopyWith<
+          _$KodiPlayerPlayerOpenItemChannelIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemRecordingIdCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemRecordingIdCopyWith(
-          _$_KodiPlayerPlayerOpenItemRecordingId value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemRecordingId) then) =
-      __$$_KodiPlayerPlayerOpenItemRecordingIdCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWith(
+          _$KodiPlayerPlayerOpenItemRecordingIdImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemRecordingIdImpl) then) =
+      __$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'recordingid') int recordingId});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemRecordingIdCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemRecordingId>
-    implements _$$_KodiPlayerPlayerOpenItemRecordingIdCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemRecordingIdCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemRecordingId _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemRecordingId) _then)
+        _$KodiPlayerPlayerOpenItemRecordingIdImpl>
+    implements _$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemRecordingIdImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemRecordingIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? recordingId = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemRecordingId(
+    return _then(_$KodiPlayerPlayerOpenItemRecordingIdImpl(
       null == recordingId
           ? _value.recordingId
           : recordingId // ignore: cast_nullable_to_non_nullable
@@ -1857,16 +1934,16 @@ class __$$_KodiPlayerPlayerOpenItemRecordingIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemRecordingId
+class _$KodiPlayerPlayerOpenItemRecordingIdImpl
     implements _KodiPlayerPlayerOpenItemRecordingId {
-  const _$_KodiPlayerPlayerOpenItemRecordingId(
+  const _$KodiPlayerPlayerOpenItemRecordingIdImpl(
       @JsonKey(name: 'recordingid') this.recordingId,
       {final String? $type})
       : $type = $type ?? 'recordingId';
 
-  factory _$_KodiPlayerPlayerOpenItemRecordingId.fromJson(
+  factory _$KodiPlayerPlayerOpenItemRecordingIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemRecordingIdFromJson(json);
+      _$$KodiPlayerPlayerOpenItemRecordingIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'recordingid')
@@ -1881,25 +1958,27 @@ class _$_KodiPlayerPlayerOpenItemRecordingId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemRecordingId &&
+            other is _$KodiPlayerPlayerOpenItemRecordingIdImpl &&
             (identical(other.recordingId, recordingId) ||
                 other.recordingId == recordingId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, recordingId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemRecordingIdCopyWith<
-          _$_KodiPlayerPlayerOpenItemRecordingId>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemRecordingIdCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemRecordingId>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWith<
+          _$KodiPlayerPlayerOpenItemRecordingIdImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemRecordingIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2034,7 +2113,7 @@ class _$_KodiPlayerPlayerOpenItemRecordingId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemRecordingIdToJson(
+    return _$$KodiPlayerPlayerOpenItemRecordingIdImplToJson(
       this,
     );
   }
@@ -2044,17 +2123,20 @@ abstract class _KodiPlayerPlayerOpenItemRecordingId
     implements KodiPlayerPlayerOpenItem {
   const factory _KodiPlayerPlayerOpenItemRecordingId(
           @JsonKey(name: 'recordingid') final int recordingId) =
-      _$_KodiPlayerPlayerOpenItemRecordingId;
+      _$KodiPlayerPlayerOpenItemRecordingIdImpl;
 
   factory _KodiPlayerPlayerOpenItemRecordingId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemRecordingId.fromJson;
+      _$KodiPlayerPlayerOpenItemRecordingIdImpl.fromJson;
 
   @JsonKey(name: 'recordingid')
   int get recordingId;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemRecordingIdCopyWith<
-          _$_KodiPlayerPlayerOpenItemRecordingId>
+
+  /// Create a copy of KodiPlayerPlayerOpenItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemRecordingIdImplCopyWith<
+          _$KodiPlayerPlayerOpenItemRecordingIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2117,6 +2199,8 @@ mixin _$KodiPlayerPlayerOpenItemPartyMode {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerPlayerOpenItemPartyMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -2139,34 +2223,39 @@ class _$KodiPlayerPlayerOpenItemPartyModeCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerPlayerOpenItemPartyMode
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWith(
-          _$_KodiPlayerPlayerOpenItemPartyModeEnum value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemPartyModeEnum) then) =
-      __$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWith(
+          _$KodiPlayerPlayerOpenItemPartyModeEnumImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemPartyModeEnumImpl) then) =
+      __$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerPartyMode mode});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemPartyModeCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemPartyModeEnum>
-    implements _$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemPartyModeEnum _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemPartyModeEnum) _then)
+        _$KodiPlayerPlayerOpenItemPartyModeEnumImpl>
+    implements _$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemPartyModeEnumImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemPartyModeEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItemPartyMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? mode = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemPartyModeEnum(
+    return _then(_$KodiPlayerPlayerOpenItemPartyModeEnumImpl(
       null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
@@ -2177,15 +2266,15 @@ class __$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemPartyModeEnum
+class _$KodiPlayerPlayerOpenItemPartyModeEnumImpl
     implements _KodiPlayerPlayerOpenItemPartyModeEnum {
-  const _$_KodiPlayerPlayerOpenItemPartyModeEnum(this.mode,
+  const _$KodiPlayerPlayerOpenItemPartyModeEnumImpl(this.mode,
       {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiPlayerPlayerOpenItemPartyModeEnum.fromJson(
+  factory _$KodiPlayerPlayerOpenItemPartyModeEnumImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemPartyModeEnumFromJson(json);
+      _$$KodiPlayerPlayerOpenItemPartyModeEnumImplFromJson(json);
 
   @override
   final KodiPlayerPartyMode mode;
@@ -2199,24 +2288,26 @@ class _$_KodiPlayerPlayerOpenItemPartyModeEnum
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemPartyModeEnum &&
+            other is _$KodiPlayerPlayerOpenItemPartyModeEnumImpl &&
             (identical(other.mode, mode) || other.mode == mode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, mode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItemPartyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWith<
-          _$_KodiPlayerPlayerOpenItemPartyModeEnum>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemPartyModeEnum>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPartyModeEnumImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemPartyModeEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2284,7 +2375,7 @@ class _$_KodiPlayerPlayerOpenItemPartyModeEnum
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemPartyModeEnumToJson(
+    return _$$KodiPlayerPlayerOpenItemPartyModeEnumImplToJson(
       this,
     );
   }
@@ -2294,45 +2385,50 @@ abstract class _KodiPlayerPlayerOpenItemPartyModeEnum
     implements KodiPlayerPlayerOpenItemPartyMode {
   const factory _KodiPlayerPlayerOpenItemPartyModeEnum(
           final KodiPlayerPartyMode mode) =
-      _$_KodiPlayerPlayerOpenItemPartyModeEnum;
+      _$KodiPlayerPlayerOpenItemPartyModeEnumImpl;
 
   factory _KodiPlayerPlayerOpenItemPartyModeEnum.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemPartyModeEnum.fromJson;
+      _$KodiPlayerPlayerOpenItemPartyModeEnumImpl.fromJson;
 
   KodiPlayerPartyMode get mode;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemPartyModeEnumCopyWith<
-          _$_KodiPlayerPlayerOpenItemPartyModeEnum>
+
+  /// Create a copy of KodiPlayerPlayerOpenItemPartyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemPartyModeEnumImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPartyModeEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenItemPartyModePathCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenItemPartyModePathCopyWith(
-          _$_KodiPlayerPlayerOpenItemPartyModePath value,
-          $Res Function(_$_KodiPlayerPlayerOpenItemPartyModePath) then) =
-      __$$_KodiPlayerPlayerOpenItemPartyModePathCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWith(
+          _$KodiPlayerPlayerOpenItemPartyModePathImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenItemPartyModePathImpl) then) =
+      __$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String path});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenItemPartyModePathCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenItemPartyModeCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenItemPartyModePath>
-    implements _$$_KodiPlayerPlayerOpenItemPartyModePathCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenItemPartyModePathCopyWithImpl(
-      _$_KodiPlayerPlayerOpenItemPartyModePath _value,
-      $Res Function(_$_KodiPlayerPlayerOpenItemPartyModePath) _then)
+        _$KodiPlayerPlayerOpenItemPartyModePathImpl>
+    implements _$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenItemPartyModePathImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenItemPartyModePathImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenItemPartyMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenItemPartyModePath(
+    return _then(_$KodiPlayerPlayerOpenItemPartyModePathImpl(
       null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -2343,15 +2439,15 @@ class __$$_KodiPlayerPlayerOpenItemPartyModePathCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenItemPartyModePath
+class _$KodiPlayerPlayerOpenItemPartyModePathImpl
     implements _KodiPlayerPlayerOpenItemPartyModePath {
-  const _$_KodiPlayerPlayerOpenItemPartyModePath(this.path,
+  const _$KodiPlayerPlayerOpenItemPartyModePathImpl(this.path,
       {final String? $type})
       : $type = $type ?? 'path';
 
-  factory _$_KodiPlayerPlayerOpenItemPartyModePath.fromJson(
+  factory _$KodiPlayerPlayerOpenItemPartyModePathImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenItemPartyModePathFromJson(json);
+      _$$KodiPlayerPlayerOpenItemPartyModePathImplFromJson(json);
 
   @override
   final String path;
@@ -2365,24 +2461,26 @@ class _$_KodiPlayerPlayerOpenItemPartyModePath
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenItemPartyModePath &&
+            other is _$KodiPlayerPlayerOpenItemPartyModePathImpl &&
             (identical(other.path, path) || other.path == path));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenItemPartyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenItemPartyModePathCopyWith<
-          _$_KodiPlayerPlayerOpenItemPartyModePath>
-      get copyWith => __$$_KodiPlayerPlayerOpenItemPartyModePathCopyWithImpl<
-          _$_KodiPlayerPlayerOpenItemPartyModePath>(this, _$identity);
+  _$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPartyModePathImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenItemPartyModePathImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2450,7 +2548,7 @@ class _$_KodiPlayerPlayerOpenItemPartyModePath
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenItemPartyModePathToJson(
+    return _$$KodiPlayerPlayerOpenItemPartyModePathImplToJson(
       this,
     );
   }
@@ -2459,16 +2557,19 @@ class _$_KodiPlayerPlayerOpenItemPartyModePath
 abstract class _KodiPlayerPlayerOpenItemPartyModePath
     implements KodiPlayerPlayerOpenItemPartyMode {
   const factory _KodiPlayerPlayerOpenItemPartyModePath(final String path) =
-      _$_KodiPlayerPlayerOpenItemPartyModePath;
+      _$KodiPlayerPlayerOpenItemPartyModePathImpl;
 
   factory _KodiPlayerPlayerOpenItemPartyModePath.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenItemPartyModePath.fromJson;
+      _$KodiPlayerPlayerOpenItemPartyModePathImpl.fromJson;
 
   String get path;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenItemPartyModePathCopyWith<
-          _$_KodiPlayerPlayerOpenItemPartyModePath>
+
+  /// Create a copy of KodiPlayerPlayerOpenItemPartyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenItemPartyModePathImplCopyWith<
+          _$KodiPlayerPlayerOpenItemPartyModePathImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2489,8 +2590,12 @@ mixin _$KodiPlayerPlayerOpenOptions {
       throw _privateConstructorUsedError;
   bool? get shuffled => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerPlayerOpenOptions to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerPlayerOpenOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerPlayerOpenOptionsCopyWith<KodiPlayerPlayerOpenOptions>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2527,6 +2632,8 @@ class _$KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerPlayerOpenOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2555,6 +2662,8 @@ class _$KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPlayerPlayerOpenOptions
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerOpenOptionsPlayerNameCopyWith<$Res>? get playerName {
@@ -2568,6 +2677,8 @@ class _$KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPlayerOpenOptions
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerPlayerOpenOptionsResumeCopyWith<$Res>? get resume {
@@ -2583,12 +2694,12 @@ class _$KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenOptionsCopyWith<$Res>
+abstract class _$$KodiPlayerPlayerOpenOptionsImplCopyWith<$Res>
     implements $KodiPlayerPlayerOpenOptionsCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenOptionsCopyWith(
-          _$_KodiPlayerPlayerOpenOptions value,
-          $Res Function(_$_KodiPlayerPlayerOpenOptions) then) =
-      __$$_KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res>;
+  factory _$$KodiPlayerPlayerOpenOptionsImplCopyWith(
+          _$KodiPlayerPlayerOpenOptionsImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenOptionsImpl) then) =
+      __$$KodiPlayerPlayerOpenOptionsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2607,15 +2718,17 @@ abstract class _$$_KodiPlayerPlayerOpenOptionsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenOptionsImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenOptions>
-    implements _$$_KodiPlayerPlayerOpenOptionsCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenOptionsCopyWithImpl(
-      _$_KodiPlayerPlayerOpenOptions _value,
-      $Res Function(_$_KodiPlayerPlayerOpenOptions) _then)
+        _$KodiPlayerPlayerOpenOptionsImpl>
+    implements _$$KodiPlayerPlayerOpenOptionsImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenOptionsImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenOptionsImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenOptionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2624,7 +2737,7 @@ class __$$_KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res>
     Object? resume = freezed,
     Object? shuffled = freezed,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenOptions(
+    return _then(_$KodiPlayerPlayerOpenOptionsImpl(
       playerName: freezed == playerName
           ? _value.playerName
           : playerName // ignore: cast_nullable_to_non_nullable
@@ -2647,8 +2760,9 @@ class __$$_KodiPlayerPlayerOpenOptionsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenOptions implements _KodiPlayerPlayerOpenOptions {
-  const _$_KodiPlayerPlayerOpenOptions(
+class _$KodiPlayerPlayerOpenOptionsImpl
+    implements _KodiPlayerPlayerOpenOptions {
+  const _$KodiPlayerPlayerOpenOptionsImpl(
       {@JsonKey(name: 'playername')
       @KodiPlayerOpenOptionsPlayerNameConverter()
       this.playerName,
@@ -2657,8 +2771,9 @@ class _$_KodiPlayerPlayerOpenOptions implements _KodiPlayerPlayerOpenOptions {
       this.resume = const KodiPlayerPlayerOpenOptionsResume.bool(false),
       this.shuffled});
 
-  factory _$_KodiPlayerPlayerOpenOptions.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenOptionsFromJson(json);
+  factory _$KodiPlayerPlayerOpenOptionsImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPlayerPlayerOpenOptionsImplFromJson(json);
 
   @override
   @JsonKey(name: 'playername')
@@ -2679,10 +2794,10 @@ class _$_KodiPlayerPlayerOpenOptions implements _KodiPlayerPlayerOpenOptions {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenOptions &&
+            other is _$KodiPlayerPlayerOpenOptionsImpl &&
             (identical(other.playerName, playerName) ||
                 other.playerName == playerName) &&
             (identical(other.repeat, repeat) || other.repeat == repeat) &&
@@ -2691,21 +2806,23 @@ class _$_KodiPlayerPlayerOpenOptions implements _KodiPlayerPlayerOpenOptions {
                 other.shuffled == shuffled));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, playerName, repeat, resume, shuffled);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenOptionsCopyWith<_$_KodiPlayerPlayerOpenOptions>
-      get copyWith => __$$_KodiPlayerPlayerOpenOptionsCopyWithImpl<
-          _$_KodiPlayerPlayerOpenOptions>(this, _$identity);
+  _$$KodiPlayerPlayerOpenOptionsImplCopyWith<_$KodiPlayerPlayerOpenOptionsImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenOptionsImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenOptionsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenOptionsToJson(
+    return _$$KodiPlayerPlayerOpenOptionsImplToJson(
       this,
     );
   }
@@ -2720,10 +2837,10 @@ abstract class _KodiPlayerPlayerOpenOptions
       final KodiPlayerRepeat? repeat,
       @KodiPlayerPlayerOpenOptionsResumeConverter()
       final KodiPlayerPlayerOpenOptionsResume? resume,
-      final bool? shuffled}) = _$_KodiPlayerPlayerOpenOptions;
+      final bool? shuffled}) = _$KodiPlayerPlayerOpenOptionsImpl;
 
   factory _KodiPlayerPlayerOpenOptions.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenOptions.fromJson;
+      _$KodiPlayerPlayerOpenOptionsImpl.fromJson;
 
   @override
   @JsonKey(name: 'playername')
@@ -2736,9 +2853,12 @@ abstract class _KodiPlayerPlayerOpenOptions
   KodiPlayerPlayerOpenOptionsResume? get resume;
   @override
   bool? get shuffled;
+
+  /// Create a copy of KodiPlayerPlayerOpenOptions
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenOptionsCopyWith<_$_KodiPlayerPlayerOpenOptions>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenOptionsImplCopyWith<_$KodiPlayerPlayerOpenOptionsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2803,6 +2923,8 @@ mixin _$KodiPlayerOpenOptionsPlayerName {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerOpenOptionsPlayerName to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -2825,34 +2947,39 @@ class _$KodiPlayerOpenOptionsPlayerNameCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerOpenOptionsPlayerName
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWith<$Res> {
-  factory _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWith(
-          _$_KodiPlayerOpenOptionsPlayerNameEnumerator value,
-          $Res Function(_$_KodiPlayerOpenOptionsPlayerNameEnumerator) then) =
-      __$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWith<$Res> {
+  factory _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWith(
+          _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl value,
+          $Res Function(_$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl) then) =
+      __$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerDefault playerName});
 }
 
 /// @nodoc
-class __$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWithImpl<$Res>
+class __$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWithImpl<$Res>
     extends _$KodiPlayerOpenOptionsPlayerNameCopyWithImpl<$Res,
-        _$_KodiPlayerOpenOptionsPlayerNameEnumerator>
-    implements _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWith<$Res> {
-  __$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWithImpl(
-      _$_KodiPlayerOpenOptionsPlayerNameEnumerator _value,
-      $Res Function(_$_KodiPlayerOpenOptionsPlayerNameEnumerator) _then)
+        _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl>
+    implements _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWith<$Res> {
+  __$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWithImpl(
+      _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl _value,
+      $Res Function(_$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerOpenOptionsPlayerName
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playerName = null,
   }) {
-    return _then(_$_KodiPlayerOpenOptionsPlayerNameEnumerator(
+    return _then(_$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl(
       playerName: null == playerName
           ? _value.playerName
           : playerName // ignore: cast_nullable_to_non_nullable
@@ -2863,15 +2990,15 @@ class __$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerOpenOptionsPlayerNameEnumerator
+class _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl
     implements _KodiPlayerOpenOptionsPlayerNameEnumerator {
-  const _$_KodiPlayerOpenOptionsPlayerNameEnumerator(
+  const _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl(
       {this.playerName = KodiPlayerDefault.defaultt, final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiPlayerOpenOptionsPlayerNameEnumerator.fromJson(
+  factory _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorFromJson(json);
+      _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplFromJson(json);
 
   @override
   @JsonKey()
@@ -2886,26 +3013,29 @@ class _$_KodiPlayerOpenOptionsPlayerNameEnumerator
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerOpenOptionsPlayerNameEnumerator &&
+            other is _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl &&
             (identical(other.playerName, playerName) ||
                 other.playerName == playerName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playerName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerOpenOptionsPlayerName
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWith<
-          _$_KodiPlayerOpenOptionsPlayerNameEnumerator>
+  _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWith<
+          _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl>
       get copyWith =>
-          __$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWithImpl<
-              _$_KodiPlayerOpenOptionsPlayerNameEnumerator>(this, _$identity);
+          __$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWithImpl<
+                  _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2974,7 +3104,7 @@ class _$_KodiPlayerOpenOptionsPlayerNameEnumerator
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorToJson(
+    return _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplToJson(
       this,
     );
   }
@@ -2984,46 +3114,51 @@ abstract class _KodiPlayerOpenOptionsPlayerNameEnumerator
     implements KodiPlayerOpenOptionsPlayerName {
   const factory _KodiPlayerOpenOptionsPlayerNameEnumerator(
           {final KodiPlayerDefault playerName}) =
-      _$_KodiPlayerOpenOptionsPlayerNameEnumerator;
+      _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl;
 
   factory _KodiPlayerOpenOptionsPlayerNameEnumerator.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerOpenOptionsPlayerNameEnumerator.fromJson;
+      _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl.fromJson;
 
   @override
   KodiPlayerDefault get playerName;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorCopyWith<
-          _$_KodiPlayerOpenOptionsPlayerNameEnumerator>
+
+  /// Create a copy of KodiPlayerOpenOptionsPlayerName
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplCopyWith<
+          _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerOpenOptionsPlayerNameNameCopyWith<$Res> {
-  factory _$$_KodiPlayerOpenOptionsPlayerNameNameCopyWith(
-          _$_KodiPlayerOpenOptionsPlayerNameName value,
-          $Res Function(_$_KodiPlayerOpenOptionsPlayerNameName) then) =
-      __$$_KodiPlayerOpenOptionsPlayerNameNameCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWith<$Res> {
+  factory _$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWith(
+          _$KodiPlayerOpenOptionsPlayerNameNameImpl value,
+          $Res Function(_$KodiPlayerOpenOptionsPlayerNameNameImpl) then) =
+      __$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String playerName});
 }
 
 /// @nodoc
-class __$$_KodiPlayerOpenOptionsPlayerNameNameCopyWithImpl<$Res>
+class __$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWithImpl<$Res>
     extends _$KodiPlayerOpenOptionsPlayerNameCopyWithImpl<$Res,
-        _$_KodiPlayerOpenOptionsPlayerNameName>
-    implements _$$_KodiPlayerOpenOptionsPlayerNameNameCopyWith<$Res> {
-  __$$_KodiPlayerOpenOptionsPlayerNameNameCopyWithImpl(
-      _$_KodiPlayerOpenOptionsPlayerNameName _value,
-      $Res Function(_$_KodiPlayerOpenOptionsPlayerNameName) _then)
+        _$KodiPlayerOpenOptionsPlayerNameNameImpl>
+    implements _$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWith<$Res> {
+  __$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWithImpl(
+      _$KodiPlayerOpenOptionsPlayerNameNameImpl _value,
+      $Res Function(_$KodiPlayerOpenOptionsPlayerNameNameImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerOpenOptionsPlayerName
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playerName = null,
   }) {
-    return _then(_$_KodiPlayerOpenOptionsPlayerNameName(
+    return _then(_$KodiPlayerOpenOptionsPlayerNameNameImpl(
       null == playerName
           ? _value.playerName
           : playerName // ignore: cast_nullable_to_non_nullable
@@ -3034,15 +3169,15 @@ class __$$_KodiPlayerOpenOptionsPlayerNameNameCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerOpenOptionsPlayerNameName
+class _$KodiPlayerOpenOptionsPlayerNameNameImpl
     implements _KodiPlayerOpenOptionsPlayerNameName {
-  const _$_KodiPlayerOpenOptionsPlayerNameName(this.playerName,
+  const _$KodiPlayerOpenOptionsPlayerNameNameImpl(this.playerName,
       {final String? $type})
       : $type = $type ?? 'name';
 
-  factory _$_KodiPlayerOpenOptionsPlayerNameName.fromJson(
+  factory _$KodiPlayerOpenOptionsPlayerNameNameImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerOpenOptionsPlayerNameNameFromJson(json);
+      _$$KodiPlayerOpenOptionsPlayerNameNameImplFromJson(json);
 
   @override
   final String playerName;
@@ -3056,25 +3191,27 @@ class _$_KodiPlayerOpenOptionsPlayerNameName
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerOpenOptionsPlayerNameName &&
+            other is _$KodiPlayerOpenOptionsPlayerNameNameImpl &&
             (identical(other.playerName, playerName) ||
                 other.playerName == playerName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playerName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerOpenOptionsPlayerName
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerOpenOptionsPlayerNameNameCopyWith<
-          _$_KodiPlayerOpenOptionsPlayerNameName>
-      get copyWith => __$$_KodiPlayerOpenOptionsPlayerNameNameCopyWithImpl<
-          _$_KodiPlayerOpenOptionsPlayerNameName>(this, _$identity);
+  _$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWith<
+          _$KodiPlayerOpenOptionsPlayerNameNameImpl>
+      get copyWith => __$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWithImpl<
+          _$KodiPlayerOpenOptionsPlayerNameNameImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3143,7 +3280,7 @@ class _$_KodiPlayerOpenOptionsPlayerNameName
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerOpenOptionsPlayerNameNameToJson(
+    return _$$KodiPlayerOpenOptionsPlayerNameNameImplToJson(
       this,
     );
   }
@@ -3152,17 +3289,20 @@ class _$_KodiPlayerOpenOptionsPlayerNameName
 abstract class _KodiPlayerOpenOptionsPlayerNameName
     implements KodiPlayerOpenOptionsPlayerName {
   const factory _KodiPlayerOpenOptionsPlayerNameName(final String playerName) =
-      _$_KodiPlayerOpenOptionsPlayerNameName;
+      _$KodiPlayerOpenOptionsPlayerNameNameImpl;
 
   factory _KodiPlayerOpenOptionsPlayerNameName.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerOpenOptionsPlayerNameName.fromJson;
+      _$KodiPlayerOpenOptionsPlayerNameNameImpl.fromJson;
 
   @override
   String get playerName;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerOpenOptionsPlayerNameNameCopyWith<
-          _$_KodiPlayerOpenOptionsPlayerNameName>
+
+  /// Create a copy of KodiPlayerOpenOptionsPlayerName
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerOpenOptionsPlayerNameNameImplCopyWith<
+          _$KodiPlayerOpenOptionsPlayerNameNameImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3238,6 +3378,8 @@ mixin _$KodiPlayerPlayerOpenOptionsResume {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerPlayerOpenOptionsResume to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -3260,34 +3402,39 @@ class _$KodiPlayerPlayerOpenOptionsResumeCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWith(
-          _$_KodiPlayerPlayerOpenOptionsResumeBool value,
-          $Res Function(_$_KodiPlayerPlayerOpenOptionsResumeBool) then) =
-      __$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWith(
+          _$KodiPlayerPlayerOpenOptionsResumeBoolImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenOptionsResumeBoolImpl) then) =
+      __$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenOptionsResumeCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenOptionsResumeBool>
-    implements _$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWithImpl(
-      _$_KodiPlayerPlayerOpenOptionsResumeBool _value,
-      $Res Function(_$_KodiPlayerPlayerOpenOptionsResumeBool) _then)
+        _$KodiPlayerPlayerOpenOptionsResumeBoolImpl>
+    implements _$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenOptionsResumeBoolImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenOptionsResumeBoolImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenOptionsResumeBool(
+    return _then(_$KodiPlayerPlayerOpenOptionsResumeBoolImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -3298,15 +3445,15 @@ class __$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenOptionsResumeBool
+class _$KodiPlayerPlayerOpenOptionsResumeBoolImpl
     implements _KodiPlayerPlayerOpenOptionsResumeBool {
-  const _$_KodiPlayerPlayerOpenOptionsResumeBool(this.value,
+  const _$KodiPlayerPlayerOpenOptionsResumeBoolImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'bool';
 
-  factory _$_KodiPlayerPlayerOpenOptionsResumeBool.fromJson(
+  factory _$KodiPlayerPlayerOpenOptionsResumeBoolImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenOptionsResumeBoolFromJson(json);
+      _$$KodiPlayerPlayerOpenOptionsResumeBoolImplFromJson(json);
 
   @override
   final bool value;
@@ -3320,24 +3467,26 @@ class _$_KodiPlayerPlayerOpenOptionsResumeBool
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenOptionsResumeBool &&
+            other is _$KodiPlayerPlayerOpenOptionsResumeBoolImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWith<
-          _$_KodiPlayerPlayerOpenOptionsResumeBool>
-      get copyWith => __$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWithImpl<
-          _$_KodiPlayerPlayerOpenOptionsResumeBool>(this, _$identity);
+  _$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWith<
+          _$KodiPlayerPlayerOpenOptionsResumeBoolImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenOptionsResumeBoolImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3415,7 +3564,7 @@ class _$_KodiPlayerPlayerOpenOptionsResumeBool
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenOptionsResumeBoolToJson(
+    return _$$KodiPlayerPlayerOpenOptionsResumeBoolImplToJson(
       this,
     );
   }
@@ -3424,46 +3573,54 @@ class _$_KodiPlayerPlayerOpenOptionsResumeBool
 abstract class _KodiPlayerPlayerOpenOptionsResumeBool
     implements KodiPlayerPlayerOpenOptionsResume {
   const factory _KodiPlayerPlayerOpenOptionsResumeBool(final bool value) =
-      _$_KodiPlayerPlayerOpenOptionsResumeBool;
+      _$KodiPlayerPlayerOpenOptionsResumeBoolImpl;
 
   factory _KodiPlayerPlayerOpenOptionsResumeBool.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenOptionsResumeBool.fromJson;
+      _$KodiPlayerPlayerOpenOptionsResumeBoolImpl.fromJson;
 
   @override
   bool get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenOptionsResumeBoolCopyWith<
-          _$_KodiPlayerPlayerOpenOptionsResumeBool>
+
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenOptionsResumeBoolImplCopyWith<
+          _$KodiPlayerPlayerOpenOptionsResumeBoolImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWith(
-          _$_KodiPlayerPlayerOpenOptionsResumePercentage value,
-          $Res Function(_$_KodiPlayerPlayerOpenOptionsResumePercentage) then) =
-      __$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWith<
+    $Res> {
+  factory _$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWith(
+          _$KodiPlayerPlayerOpenOptionsResumePercentageImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenOptionsResumePercentageImpl)
+              then) =
+      __$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenOptionsResumeCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenOptionsResumePercentage>
-    implements _$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWithImpl(
-      _$_KodiPlayerPlayerOpenOptionsResumePercentage _value,
-      $Res Function(_$_KodiPlayerPlayerOpenOptionsResumePercentage) _then)
+        _$KodiPlayerPlayerOpenOptionsResumePercentageImpl>
+    implements
+        _$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenOptionsResumePercentageImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenOptionsResumePercentageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenOptionsResumePercentage(
+    return _then(_$KodiPlayerPlayerOpenOptionsResumePercentageImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -3474,15 +3631,15 @@ class __$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenOptionsResumePercentage
+class _$KodiPlayerPlayerOpenOptionsResumePercentageImpl
     implements _KodiPlayerPlayerOpenOptionsResumePercentage {
-  const _$_KodiPlayerPlayerOpenOptionsResumePercentage(this.value,
+  const _$KodiPlayerPlayerOpenOptionsResumePercentageImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'percentage';
 
-  factory _$_KodiPlayerPlayerOpenOptionsResumePercentage.fromJson(
+  factory _$KodiPlayerPlayerOpenOptionsResumePercentageImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenOptionsResumePercentageFromJson(json);
+      _$$KodiPlayerPlayerOpenOptionsResumePercentageImplFromJson(json);
 
   @override
   final double value;
@@ -3496,25 +3653,28 @@ class _$_KodiPlayerPlayerOpenOptionsResumePercentage
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenOptionsResumePercentage &&
+            other is _$KodiPlayerPlayerOpenOptionsResumePercentageImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWith<
-          _$_KodiPlayerPlayerOpenOptionsResumePercentage>
+  _$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWith<
+          _$KodiPlayerPlayerOpenOptionsResumePercentageImpl>
       get copyWith =>
-          __$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWithImpl<
-              _$_KodiPlayerPlayerOpenOptionsResumePercentage>(this, _$identity);
+          __$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWithImpl<
+                  _$KodiPlayerPlayerOpenOptionsResumePercentageImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3592,7 +3752,7 @@ class _$_KodiPlayerPlayerOpenOptionsResumePercentage
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenOptionsResumePercentageToJson(
+    return _$$KodiPlayerPlayerOpenOptionsResumePercentageImplToJson(
       this,
     );
   }
@@ -3601,26 +3761,29 @@ class _$_KodiPlayerPlayerOpenOptionsResumePercentage
 abstract class _KodiPlayerPlayerOpenOptionsResumePercentage
     implements KodiPlayerPlayerOpenOptionsResume {
   const factory _KodiPlayerPlayerOpenOptionsResumePercentage(
-      final double value) = _$_KodiPlayerPlayerOpenOptionsResumePercentage;
+      final double value) = _$KodiPlayerPlayerOpenOptionsResumePercentageImpl;
 
   factory _KodiPlayerPlayerOpenOptionsResumePercentage.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenOptionsResumePercentage.fromJson;
+      _$KodiPlayerPlayerOpenOptionsResumePercentageImpl.fromJson;
 
   @override
   double get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenOptionsResumePercentageCopyWith<
-          _$_KodiPlayerPlayerOpenOptionsResumePercentage>
+
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenOptionsResumePercentageImplCopyWith<
+          _$KodiPlayerPlayerOpenOptionsResumePercentageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWith(
-          _$_KodiPlayerPlayerOpenOptionsResumeTime value,
-          $Res Function(_$_KodiPlayerPlayerOpenOptionsResumeTime) then) =
-      __$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWith<$Res> {
+  factory _$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWith(
+          _$KodiPlayerPlayerOpenOptionsResumeTimeImpl value,
+          $Res Function(_$KodiPlayerPlayerOpenOptionsResumeTimeImpl) then) =
+      __$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerPositionTime value});
 
@@ -3628,21 +3791,23 @@ abstract class _$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWithImpl<$Res>
+class __$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWithImpl<$Res>
     extends _$KodiPlayerPlayerOpenOptionsResumeCopyWithImpl<$Res,
-        _$_KodiPlayerPlayerOpenOptionsResumeTime>
-    implements _$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWith<$Res> {
-  __$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWithImpl(
-      _$_KodiPlayerPlayerOpenOptionsResumeTime _value,
-      $Res Function(_$_KodiPlayerPlayerOpenOptionsResumeTime) _then)
+        _$KodiPlayerPlayerOpenOptionsResumeTimeImpl>
+    implements _$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWithImpl(
+      _$KodiPlayerPlayerOpenOptionsResumeTimeImpl _value,
+      $Res Function(_$KodiPlayerPlayerOpenOptionsResumeTimeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerPlayerOpenOptionsResumeTime(
+    return _then(_$KodiPlayerPlayerOpenOptionsResumeTimeImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -3650,6 +3815,8 @@ class __$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerPositionTimeCopyWith<$Res> get value {
@@ -3661,15 +3828,15 @@ class __$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayerOpenOptionsResumeTime
+class _$KodiPlayerPlayerOpenOptionsResumeTimeImpl
     implements _KodiPlayerPlayerOpenOptionsResumeTime {
-  const _$_KodiPlayerPlayerOpenOptionsResumeTime(this.value,
+  const _$KodiPlayerPlayerOpenOptionsResumeTimeImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'time';
 
-  factory _$_KodiPlayerPlayerOpenOptionsResumeTime.fromJson(
+  factory _$KodiPlayerPlayerOpenOptionsResumeTimeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerOpenOptionsResumeTimeFromJson(json);
+      _$$KodiPlayerPlayerOpenOptionsResumeTimeImplFromJson(json);
 
   @override
   final KodiPlayerPositionTime value;
@@ -3683,24 +3850,26 @@ class _$_KodiPlayerPlayerOpenOptionsResumeTime
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayerOpenOptionsResumeTime &&
+            other is _$KodiPlayerPlayerOpenOptionsResumeTimeImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWith<
-          _$_KodiPlayerPlayerOpenOptionsResumeTime>
-      get copyWith => __$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWithImpl<
-          _$_KodiPlayerPlayerOpenOptionsResumeTime>(this, _$identity);
+  _$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWith<
+          _$KodiPlayerPlayerOpenOptionsResumeTimeImpl>
+      get copyWith => __$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWithImpl<
+          _$KodiPlayerPlayerOpenOptionsResumeTimeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3778,7 +3947,7 @@ class _$_KodiPlayerPlayerOpenOptionsResumeTime
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerOpenOptionsResumeTimeToJson(
+    return _$$KodiPlayerPlayerOpenOptionsResumeTimeImplToJson(
       this,
     );
   }
@@ -3788,16 +3957,19 @@ abstract class _KodiPlayerPlayerOpenOptionsResumeTime
     implements KodiPlayerPlayerOpenOptionsResume {
   const factory _KodiPlayerPlayerOpenOptionsResumeTime(
           final KodiPlayerPositionTime value) =
-      _$_KodiPlayerPlayerOpenOptionsResumeTime;
+      _$KodiPlayerPlayerOpenOptionsResumeTimeImpl;
 
   factory _KodiPlayerPlayerOpenOptionsResumeTime.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerPlayerOpenOptionsResumeTime.fromJson;
+      _$KodiPlayerPlayerOpenOptionsResumeTimeImpl.fromJson;
 
   @override
   KodiPlayerPositionTime get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerOpenOptionsResumeTimeCopyWith<
-          _$_KodiPlayerPlayerOpenOptionsResumeTime>
+
+  /// Create a copy of KodiPlayerPlayerOpenOptionsResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerOpenOptionsResumeTimeImplCopyWith<
+          _$KodiPlayerPlayerOpenOptionsResumeTimeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

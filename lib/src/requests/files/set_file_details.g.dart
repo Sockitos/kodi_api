@@ -6,18 +6,19 @@ part of 'set_file_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetFileDetails _$$_SetFileDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetFileDetails(
+_$SetFileDetailsImpl _$$SetFileDetailsImplFromJson(Map<String, dynamic> json) =>
+    _$SetFileDetailsImpl(
       json['file'] as String,
       $enumDecode(_$KodiFilesMediaEnumMap, json['media']),
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       lastPlayed: const DateTimeConverter().fromJson(json['lastplayed']),
       resume: json['resume'] == null
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SetFileDetailsToJson(_$_SetFileDetails instance) {
+Map<String, dynamic> _$$SetFileDetailsImplToJson(
+    _$SetFileDetailsImpl instance) {
   final val = <String, dynamic>{
     'file': instance.file,
     'media': _$KodiFilesMediaEnumMap[instance.media]!,

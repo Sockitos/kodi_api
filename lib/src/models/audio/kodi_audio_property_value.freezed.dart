@@ -12,7 +12,7 @@ part of 'kodi_audio_property_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAudioPropertyValue _$KodiAudioPropertyValueFromJson(
     Map<String, dynamic> json) {
@@ -44,8 +44,12 @@ mixin _$KodiAudioPropertyValue {
   @JsonKey(name: 'songsmodified')
   DateTime? get songsModified => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAudioPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAudioPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAudioPropertyValueCopyWith<KodiAudioPropertyValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -81,6 +85,8 @@ class _$KodiAudioPropertyValueCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAudioPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -146,11 +152,12 @@ class _$KodiAudioPropertyValueCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioPropertyValueCopyWith<$Res>
+abstract class _$$KodiAudioPropertyValueImplCopyWith<$Res>
     implements $KodiAudioPropertyValueCopyWith<$Res> {
-  factory _$$_KodiAudioPropertyValueCopyWith(_$_KodiAudioPropertyValue value,
-          $Res Function(_$_KodiAudioPropertyValue) then) =
-      __$$_KodiAudioPropertyValueCopyWithImpl<$Res>;
+  factory _$$KodiAudioPropertyValueImplCopyWith(
+          _$KodiAudioPropertyValueImpl value,
+          $Res Function(_$KodiAudioPropertyValueImpl) then) =
+      __$$KodiAudioPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -168,14 +175,17 @@ abstract class _$$_KodiAudioPropertyValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAudioPropertyValueCopyWithImpl<$Res>
+class __$$KodiAudioPropertyValueImplCopyWithImpl<$Res>
     extends _$KodiAudioPropertyValueCopyWithImpl<$Res,
-        _$_KodiAudioPropertyValue>
-    implements _$$_KodiAudioPropertyValueCopyWith<$Res> {
-  __$$_KodiAudioPropertyValueCopyWithImpl(_$_KodiAudioPropertyValue _value,
-      $Res Function(_$_KodiAudioPropertyValue) _then)
+        _$KodiAudioPropertyValueImpl>
+    implements _$$KodiAudioPropertyValueImplCopyWith<$Res> {
+  __$$KodiAudioPropertyValueImplCopyWithImpl(
+      _$KodiAudioPropertyValueImpl _value,
+      $Res Function(_$KodiAudioPropertyValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -191,7 +201,7 @@ class __$$_KodiAudioPropertyValueCopyWithImpl<$Res>
     Object? songsLastAdded = freezed,
     Object? songsModified = freezed,
   }) {
-    return _then(_$_KodiAudioPropertyValue(
+    return _then(_$KodiAudioPropertyValueImpl(
       albumsLastAdded: freezed == albumsLastAdded
           ? _value.albumsLastAdded
           : albumsLastAdded // ignore: cast_nullable_to_non_nullable
@@ -243,8 +253,8 @@ class __$$_KodiAudioPropertyValueCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiAudioPropertyValue implements _KodiAudioPropertyValue {
-  const _$_KodiAudioPropertyValue(
+class _$KodiAudioPropertyValueImpl implements _KodiAudioPropertyValue {
+  const _$KodiAudioPropertyValueImpl(
       {@JsonKey(name: 'albumslastadded') this.albumsLastAdded,
       @JsonKey(name: 'albumsmodified') this.albumsModified,
       @JsonKey(name: 'artistlinksupdated') this.artistLinksUpdated,
@@ -257,8 +267,8 @@ class _$_KodiAudioPropertyValue implements _KodiAudioPropertyValue {
       @JsonKey(name: 'songslastadded') this.songsLastAdded,
       @JsonKey(name: 'songsmodified') this.songsModified});
 
-  factory _$_KodiAudioPropertyValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAudioPropertyValueFromJson(json);
+  factory _$KodiAudioPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAudioPropertyValueImplFromJson(json);
 
   @override
   @JsonKey(name: 'albumslastadded')
@@ -300,10 +310,10 @@ class _$_KodiAudioPropertyValue implements _KodiAudioPropertyValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioPropertyValue &&
+            other is _$KodiAudioPropertyValueImpl &&
             (identical(other.albumsLastAdded, albumsLastAdded) ||
                 other.albumsLastAdded == albumsLastAdded) &&
             (identical(other.albumsModified, albumsModified) ||
@@ -328,7 +338,7 @@ class _$_KodiAudioPropertyValue implements _KodiAudioPropertyValue {
                 other.songsModified == songsModified));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -344,16 +354,18 @@ class _$_KodiAudioPropertyValue implements _KodiAudioPropertyValue {
       songsLastAdded,
       songsModified);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioPropertyValueCopyWith<_$_KodiAudioPropertyValue> get copyWith =>
-      __$$_KodiAudioPropertyValueCopyWithImpl<_$_KodiAudioPropertyValue>(
-          this, _$identity);
+  _$$KodiAudioPropertyValueImplCopyWith<_$KodiAudioPropertyValueImpl>
+      get copyWith => __$$KodiAudioPropertyValueImplCopyWithImpl<
+          _$KodiAudioPropertyValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioPropertyValueToJson(
+    return _$$KodiAudioPropertyValueImplToJson(
       this,
     );
   }
@@ -372,10 +384,10 @@ abstract class _KodiAudioPropertyValue implements KodiAudioPropertyValue {
       @JsonKey(name: 'missingartistid') final int? missingArtistId,
       @JsonKey(name: 'songslastadded') final DateTime? songsLastAdded,
       @JsonKey(name: 'songsmodified')
-      final DateTime? songsModified}) = _$_KodiAudioPropertyValue;
+      final DateTime? songsModified}) = _$KodiAudioPropertyValueImpl;
 
   factory _KodiAudioPropertyValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiAudioPropertyValue.fromJson;
+      _$KodiAudioPropertyValueImpl.fromJson;
 
   @override
   @JsonKey(name: 'albumslastadded')
@@ -410,8 +422,11 @@ abstract class _KodiAudioPropertyValue implements KodiAudioPropertyValue {
   @override
   @JsonKey(name: 'songsmodified')
   DateTime? get songsModified;
+
+  /// Create a copy of KodiAudioPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAudioPropertyValueCopyWith<_$_KodiAudioPropertyValue> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioPropertyValueImplCopyWith<_$KodiAudioPropertyValueImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

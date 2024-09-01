@@ -12,7 +12,7 @@ part of 'kodi_notification_audio_library_on_update_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationAudioLibraryOnUpdateParams
     _$KodiNotificationAudioLibraryOnUpdateParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationAudioLibraryOnUpdateParams {
   KodiNotificationAudioLibraryOnUpdateParamsData get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationAudioLibraryOnUpdateParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationAudioLibraryOnUpdateParamsCopyWith<
           KodiNotificationAudioLibraryOnUpdateParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -59,6 +63,8 @@ class _$KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class _$KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<$Res> get data {
@@ -88,12 +96,13 @@ class _$KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWith<$Res>
     implements $KodiNotificationAudioLibraryOnUpdateParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWith(
-          _$_KodiNotificationAudioLibraryOnUpdateParams value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnUpdateParams) then) =
-      __$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWith(
+          _$KodiNotificationAudioLibraryOnUpdateParamsImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnUpdateParamsImpl)
+              then) =
+      __$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,22 +113,24 @@ abstract class _$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnUpdateParams>
-    implements _$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnUpdateParams _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnUpdateParams) _then)
+        _$KodiNotificationAudioLibraryOnUpdateParamsImpl>
+    implements _$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnUpdateParamsImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnUpdateParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnUpdateParams(
+    return _then(_$KodiNotificationAudioLibraryOnUpdateParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -134,14 +145,14 @@ class __$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnUpdateParams
+class _$KodiNotificationAudioLibraryOnUpdateParamsImpl
     implements _KodiNotificationAudioLibraryOnUpdateParams {
-  const _$_KodiNotificationAudioLibraryOnUpdateParams(
+  const _$KodiNotificationAudioLibraryOnUpdateParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationAudioLibraryOnUpdateParams.fromJson(
+  factory _$KodiNotificationAudioLibraryOnUpdateParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnUpdateParamsFromJson(json);
+      _$$KodiNotificationAudioLibraryOnUpdateParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -154,30 +165,33 @@ class _$_KodiNotificationAudioLibraryOnUpdateParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnUpdateParams &&
+            other is _$KodiNotificationAudioLibraryOnUpdateParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWith<
-          _$_KodiNotificationAudioLibraryOnUpdateParams>
+  _$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWith<
+          _$KodiNotificationAudioLibraryOnUpdateParamsImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWithImpl<
-              _$_KodiNotificationAudioLibraryOnUpdateParams>(this, _$identity);
+          __$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnUpdateParamsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnUpdateParamsToJson(
+    return _$$KodiNotificationAudioLibraryOnUpdateParamsImplToJson(
       this,
     );
   }
@@ -188,20 +202,23 @@ abstract class _KodiNotificationAudioLibraryOnUpdateParams
   const factory _KodiNotificationAudioLibraryOnUpdateParams(
           {required final String sender,
           required final KodiNotificationAudioLibraryOnUpdateParamsData data}) =
-      _$_KodiNotificationAudioLibraryOnUpdateParams;
+      _$KodiNotificationAudioLibraryOnUpdateParamsImpl;
 
   factory _KodiNotificationAudioLibraryOnUpdateParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnUpdateParams.fromJson;
+      _$KodiNotificationAudioLibraryOnUpdateParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationAudioLibraryOnUpdateParamsData get data;
+
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnUpdateParamsCopyWith<
-          _$_KodiNotificationAudioLibraryOnUpdateParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnUpdateParamsImplCopyWith<
+          _$KodiNotificationAudioLibraryOnUpdateParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -219,8 +236,12 @@ mixin _$KodiNotificationAudioLibraryOnUpdateParamsData {
   KodiNotificationsLibraryAudioType get type =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationAudioLibraryOnUpdateParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<
           KodiNotificationAudioLibraryOnUpdateParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -253,6 +274,8 @@ class _$KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -283,13 +306,14 @@ class _$KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWith<
+        $Res>
     implements $KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith(
-          _$_KodiNotificationAudioLibraryOnUpdateParamsData value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnUpdateParamsData)
+  factory _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWith(
+          _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnUpdateParamsDataImpl)
               then) =
-      __$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<$Res>;
+      __$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -300,16 +324,18 @@ abstract class _$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnUpdateParamsData>
+        _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl>
     implements
-        _$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnUpdateParamsData _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnUpdateParamsData) _then)
+        _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnUpdateParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -318,7 +344,7 @@ class __$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<$Res>
     Object? transaction = freezed,
     Object? type = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnUpdateParamsData(
+    return _then(_$KodiNotificationAudioLibraryOnUpdateParamsDataImpl(
       added: freezed == added
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
@@ -341,14 +367,14 @@ class __$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnUpdateParamsData
+class _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl
     implements _KodiNotificationAudioLibraryOnUpdateParamsData {
-  const _$_KodiNotificationAudioLibraryOnUpdateParamsData(
+  const _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl(
       {this.added, required this.id, this.transaction, required this.type});
 
-  factory _$_KodiNotificationAudioLibraryOnUpdateParamsData.fromJson(
+  factory _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnUpdateParamsDataFromJson(json);
+      _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplFromJson(json);
 
   @override
   final bool? added;
@@ -365,10 +391,10 @@ class _$_KodiNotificationAudioLibraryOnUpdateParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnUpdateParamsData &&
+            other is _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl &&
             (identical(other.added, added) || other.added == added) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.transaction, transaction) ||
@@ -376,23 +402,25 @@ class _$_KodiNotificationAudioLibraryOnUpdateParamsData
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, added, id, transaction, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<
-          _$_KodiNotificationAudioLibraryOnUpdateParamsData>
+  _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWith<
+          _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWithImpl<
-                  _$_KodiNotificationAudioLibraryOnUpdateParamsData>(
+          __$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnUpdateParamsDataToJson(
+    return _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplToJson(
       this,
     );
   }
@@ -405,11 +433,11 @@ abstract class _KodiNotificationAudioLibraryOnUpdateParamsData
           required final int id,
           final bool? transaction,
           required final KodiNotificationsLibraryAudioType type}) =
-      _$_KodiNotificationAudioLibraryOnUpdateParamsData;
+      _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl;
 
   factory _KodiNotificationAudioLibraryOnUpdateParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnUpdateParamsData.fromJson;
+      _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl.fromJson;
 
   @override
   bool? get added;
@@ -419,9 +447,12 @@ abstract class _KodiNotificationAudioLibraryOnUpdateParamsData
   bool? get transaction;
   @override
   KodiNotificationsLibraryAudioType get type;
+
+  /// Create a copy of KodiNotificationAudioLibraryOnUpdateParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnUpdateParamsDataCopyWith<
-          _$_KodiNotificationAudioLibraryOnUpdateParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplCopyWith<
+          _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

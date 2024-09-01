@@ -6,10 +6,10 @@ part of 'get_episodes.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetEpisodes _$$_GetEpisodesFromJson(Map<String, dynamic> json) =>
-    _$_GetEpisodes(
-      showId: json['tvshowid'] as int?,
-      season: json['season'] as int?,
+_$GetEpisodesImpl _$$GetEpisodesImplFromJson(Map<String, dynamic> json) =>
+    _$GetEpisodesImpl(
+      showId: (json['tvshowid'] as num?)?.toInt(),
+      season: (json['season'] as num?)?.toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsEpisodeEnumMap, e))
           .toSet(),
@@ -23,7 +23,7 @@ _$_GetEpisodes _$$_GetEpisodesFromJson(Map<String, dynamic> json) =>
           .fromJson(json['filter']),
     );
 
-Map<String, dynamic> _$$_GetEpisodesToJson(_$_GetEpisodes instance) {
+Map<String, dynamic> _$$GetEpisodesImplToJson(_$GetEpisodesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -88,10 +88,10 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_KodiVideoLibraryGetEpisodesResponse
-    _$$_KodiVideoLibraryGetEpisodesResponseFromJson(
+_$KodiVideoLibraryGetEpisodesResponseImpl
+    _$$KodiVideoLibraryGetEpisodesResponseImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetEpisodesResponse(
+        _$KodiVideoLibraryGetEpisodesResponseImpl(
           episodes: (json['episodes'] as List<dynamic>)
               .map((e) =>
                   KodiVideoDetailsEpisode.fromJson(e as Map<String, dynamic>))
@@ -100,98 +100,98 @@ _$_KodiVideoLibraryGetEpisodesResponse
               json['limits'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetEpisodesResponseToJson(
-        _$_KodiVideoLibraryGetEpisodesResponse instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetEpisodesResponseImplToJson(
+        _$KodiVideoLibraryGetEpisodesResponseImpl instance) =>
     <String, dynamic>{
       'episodes': instance.episodes.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),
     };
 
-_$_KodiVideoLibraryGetEpisodesFilterGenreId
-    _$$_KodiVideoLibraryGetEpisodesFilterGenreIdFromJson(
+_$KodiVideoLibraryGetEpisodesFilterGenreIdImpl
+    _$$KodiVideoLibraryGetEpisodesFilterGenreIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetEpisodesFilterGenreId(
-          json['genreid'] as int,
+        _$KodiVideoLibraryGetEpisodesFilterGenreIdImpl(
+          (json['genreid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetEpisodesFilterGenreIdToJson(
-        _$_KodiVideoLibraryGetEpisodesFilterGenreId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetEpisodesFilterGenreIdImplToJson(
+        _$KodiVideoLibraryGetEpisodesFilterGenreIdImpl instance) =>
     <String, dynamic>{
       'genreid': instance.genreId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetEpisodesFilterGenre
-    _$$_KodiVideoLibraryGetEpisodesFilterGenreFromJson(
+_$KodiVideoLibraryGetEpisodesFilterGenreImpl
+    _$$KodiVideoLibraryGetEpisodesFilterGenreImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetEpisodesFilterGenre(
+        _$KodiVideoLibraryGetEpisodesFilterGenreImpl(
           json['genre'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetEpisodesFilterGenreToJson(
-        _$_KodiVideoLibraryGetEpisodesFilterGenre instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetEpisodesFilterGenreImplToJson(
+        _$KodiVideoLibraryGetEpisodesFilterGenreImpl instance) =>
     <String, dynamic>{
       'genre': instance.genre,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetEpisodesFilterYear
-    _$$_KodiVideoLibraryGetEpisodesFilterYearFromJson(
+_$KodiVideoLibraryGetEpisodesFilterYearImpl
+    _$$KodiVideoLibraryGetEpisodesFilterYearImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetEpisodesFilterYear(
-          json['year'] as int,
+        _$KodiVideoLibraryGetEpisodesFilterYearImpl(
+          (json['year'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetEpisodesFilterYearToJson(
-        _$_KodiVideoLibraryGetEpisodesFilterYear instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetEpisodesFilterYearImplToJson(
+        _$KodiVideoLibraryGetEpisodesFilterYearImpl instance) =>
     <String, dynamic>{
       'year': instance.year,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetEpisodesFilterActor
-    _$$_KodiVideoLibraryGetEpisodesFilterActorFromJson(
+_$KodiVideoLibraryGetEpisodesFilterActorImpl
+    _$$KodiVideoLibraryGetEpisodesFilterActorImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetEpisodesFilterActor(
+        _$KodiVideoLibraryGetEpisodesFilterActorImpl(
           json['actor'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetEpisodesFilterActorToJson(
-        _$_KodiVideoLibraryGetEpisodesFilterActor instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetEpisodesFilterActorImplToJson(
+        _$KodiVideoLibraryGetEpisodesFilterActorImpl instance) =>
     <String, dynamic>{
       'actor': instance.actor,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetEpisodesFilterDirector
-    _$$_KodiVideoLibraryGetEpisodesFilterDirectorFromJson(
+_$KodiVideoLibraryGetEpisodesFilterDirectorImpl
+    _$$KodiVideoLibraryGetEpisodesFilterDirectorImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetEpisodesFilterDirector(
+        _$KodiVideoLibraryGetEpisodesFilterDirectorImpl(
           json['director'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetEpisodesFilterDirectorToJson(
-        _$_KodiVideoLibraryGetEpisodesFilterDirector instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetEpisodesFilterDirectorImplToJson(
+        _$KodiVideoLibraryGetEpisodesFilterDirectorImpl instance) =>
     <String, dynamic>{
       'director': instance.director,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetEpisodesFilterFilter
-    _$$_KodiVideoLibraryGetEpisodesFilterFilterFromJson(
+_$KodiVideoLibraryGetEpisodesFilterFilterImpl
+    _$$KodiVideoLibraryGetEpisodesFilterFilterImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetEpisodesFilterFilter(
+        _$KodiVideoLibraryGetEpisodesFilterFilterImpl(
           const KodiListFilterEpisodesConverter().fromJson(json['filter']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetEpisodesFilterFilterToJson(
-    _$_KodiVideoLibraryGetEpisodesFilterFilter instance) {
+Map<String, dynamic> _$$KodiVideoLibraryGetEpisodesFilterFilterImplToJson(
+    _$KodiVideoLibraryGetEpisodesFilterFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -6,14 +6,14 @@ part of 'get_broadcast_is_playable.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBroadcastIsPlayable _$$_GetBroadcastIsPlayableFromJson(
+_$GetBroadcastIsPlayableImpl _$$GetBroadcastIsPlayableImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetBroadcastIsPlayable(
-      json['broadcastid'] as int,
+    _$GetBroadcastIsPlayableImpl(
+      (json['broadcastid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_GetBroadcastIsPlayableToJson(
-        _$_GetBroadcastIsPlayable instance) =>
+Map<String, dynamic> _$$GetBroadcastIsPlayableImplToJson(
+        _$GetBroadcastIsPlayableImpl instance) =>
     <String, dynamic>{
       'broadcastid': instance.id,
     };

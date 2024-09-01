@@ -6,30 +6,30 @@ part of 'kodi_pvr_details_recording.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsRecording _$$_KodiPVRDetailsRecordingFromJson(
+_$KodiPVRDetailsRecordingImpl _$$KodiPVRDetailsRecordingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsRecording(
+    _$KodiPVRDetailsRecordingImpl(
       art: KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
       channel: json['channel'] as String,
-      channelUid: json['channeluid'] as int,
-      clientId: json['clientid'] as int,
+      channelUid: (json['channeluid'] as num).toInt(),
+      clientId: (json['clientid'] as num).toInt(),
       directory: json['directory'] as String,
       endTime: json['endtime'] as String,
-      epgEventId: json['epgeventid'] as int,
-      episode: json['episode'] as int,
+      epgEventId: (json['epgeventid'] as num).toInt(),
+      episode: (json['episode'] as num).toInt(),
       file: json['file'] as String,
       genre: json['genre'] as String,
       icon: json['icon'] as String,
       isDeleted: json['isdeleted'] as bool,
-      lifeTime: json['lifetime'] as int,
-      playCount: json['playcount'] as int,
+      lifeTime: (json['lifetime'] as num).toInt(),
+      playCount: (json['playcount'] as num).toInt(),
       plot: json['plot'] as String,
       plotOutline: json['plotoutline'] as String,
       radio: json['radio'] as bool,
-      recordingId: json['recordingid'] as int,
+      recordingId: (json['recordingid'] as num).toInt(),
       resume: KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
-      runtime: json['runtime'] as int,
-      season: json['season'] as int,
+      runtime: (json['runtime'] as num).toInt(),
+      season: (json['season'] as num).toInt(),
       showTitle: json['showtitle'] as String,
       startTime: DateTime.parse(json['starttime'] as String),
       streamUrl: json['streamurl'] as String,
@@ -37,8 +37,8 @@ _$_KodiPVRDetailsRecording _$$_KodiPVRDetailsRecordingFromJson(
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsRecordingToJson(
-        _$_KodiPVRDetailsRecording instance) =>
+Map<String, dynamic> _$$KodiPVRDetailsRecordingImplToJson(
+        _$KodiPVRDetailsRecordingImpl instance) =>
     <String, dynamic>{
       'art': instance.art.toJson(),
       'channel': instance.channel,

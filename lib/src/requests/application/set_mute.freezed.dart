@@ -12,7 +12,7 @@ part of 'set_mute.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetMute _$SetMuteFromJson(Map<String, dynamic> json) {
   return _SetMute.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$SetMute {
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get mute => throw _privateConstructorUsedError;
 
+  /// Serializes this SetMute to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetMute
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetMuteCopyWith<SetMute> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -48,6 +52,8 @@ class _$SetMuteCopyWithImpl<$Res, $Val extends SetMute>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetMute
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -61,6 +67,8 @@ class _$SetMuteCopyWithImpl<$Res, $Val extends SetMute>
     ) as $Val);
   }
 
+  /// Create a copy of SetMute
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalToggleCopyWith<$Res> get mute {
@@ -71,10 +79,10 @@ class _$SetMuteCopyWithImpl<$Res, $Val extends SetMute>
 }
 
 /// @nodoc
-abstract class _$$_SetMuteCopyWith<$Res> implements $SetMuteCopyWith<$Res> {
-  factory _$$_SetMuteCopyWith(
-          _$_SetMute value, $Res Function(_$_SetMute) then) =
-      __$$_SetMuteCopyWithImpl<$Res>;
+abstract class _$$SetMuteImplCopyWith<$Res> implements $SetMuteCopyWith<$Res> {
+  factory _$$SetMuteImplCopyWith(
+          _$SetMuteImpl value, $Res Function(_$SetMuteImpl) then) =
+      __$$SetMuteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@KodiGlobalToggleConverter() KodiGlobalToggle mute});
@@ -84,18 +92,21 @@ abstract class _$$_SetMuteCopyWith<$Res> implements $SetMuteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SetMuteCopyWithImpl<$Res>
-    extends _$SetMuteCopyWithImpl<$Res, _$_SetMute>
-    implements _$$_SetMuteCopyWith<$Res> {
-  __$$_SetMuteCopyWithImpl(_$_SetMute _value, $Res Function(_$_SetMute) _then)
+class __$$SetMuteImplCopyWithImpl<$Res>
+    extends _$SetMuteCopyWithImpl<$Res, _$SetMuteImpl>
+    implements _$$SetMuteImplCopyWith<$Res> {
+  __$$SetMuteImplCopyWithImpl(
+      _$SetMuteImpl _value, $Res Function(_$SetMuteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetMute
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? mute = null,
   }) {
-    return _then(_$_SetMute(
+    return _then(_$SetMuteImpl(
       null == mute
           ? _value.mute
           : mute // ignore: cast_nullable_to_non_nullable
@@ -106,11 +117,11 @@ class __$$_SetMuteCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetMute extends _SetMute {
-  const _$_SetMute(@KodiGlobalToggleConverter() this.mute) : super._();
+class _$SetMuteImpl extends _SetMute {
+  const _$SetMuteImpl(@KodiGlobalToggleConverter() this.mute) : super._();
 
-  factory _$_SetMute.fromJson(Map<String, dynamic> json) =>
-      _$$_SetMuteFromJson(json);
+  factory _$SetMuteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetMuteImplFromJson(json);
 
   @override
   @KodiGlobalToggleConverter()
@@ -122,26 +133,28 @@ class _$_SetMute extends _SetMute {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetMute &&
+            other is _$SetMuteImpl &&
             (identical(other.mute, mute) || other.mute == mute));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, mute);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetMute
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetMuteCopyWith<_$_SetMute> get copyWith =>
-      __$$_SetMuteCopyWithImpl<_$_SetMute>(this, _$identity);
+  _$$SetMuteImplCopyWith<_$SetMuteImpl> get copyWith =>
+      __$$SetMuteImplCopyWithImpl<_$SetMuteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetMuteToJson(
+    return _$$SetMuteImplToJson(
       this,
     );
   }
@@ -149,16 +162,19 @@ class _$_SetMute extends _SetMute {
 
 abstract class _SetMute extends SetMute {
   const factory _SetMute(
-      @KodiGlobalToggleConverter() final KodiGlobalToggle mute) = _$_SetMute;
+      @KodiGlobalToggleConverter() final KodiGlobalToggle mute) = _$SetMuteImpl;
   const _SetMute._() : super._();
 
-  factory _SetMute.fromJson(Map<String, dynamic> json) = _$_SetMute.fromJson;
+  factory _SetMute.fromJson(Map<String, dynamic> json) = _$SetMuteImpl.fromJson;
 
   @override
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get mute;
+
+  /// Create a copy of SetMute
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetMuteCopyWith<_$_SetMute> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetMuteImplCopyWith<_$SetMuteImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

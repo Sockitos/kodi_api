@@ -12,7 +12,7 @@ part of 'up.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Up _$UpFromJson(Map<String, dynamic> json) {
   return _Up.fromJson(json);
@@ -20,6 +20,7 @@ Up _$UpFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Up {
+  /// Serializes this Up to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -37,27 +38,34 @@ class _$UpCopyWithImpl<$Res, $Val extends Up> implements $UpCopyWith<$Res> {
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Up
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_UpCopyWith<$Res> {
-  factory _$$_UpCopyWith(_$_Up value, $Res Function(_$_Up) then) =
-      __$$_UpCopyWithImpl<$Res>;
+abstract class _$$UpImplCopyWith<$Res> {
+  factory _$$UpImplCopyWith(_$UpImpl value, $Res Function(_$UpImpl) then) =
+      __$$UpImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_UpCopyWithImpl<$Res> extends _$UpCopyWithImpl<$Res, _$_Up>
-    implements _$$_UpCopyWith<$Res> {
-  __$$_UpCopyWithImpl(_$_Up _value, $Res Function(_$_Up) _then)
+class __$$UpImplCopyWithImpl<$Res> extends _$UpCopyWithImpl<$Res, _$UpImpl>
+    implements _$$UpImplCopyWith<$Res> {
+  __$$UpImplCopyWithImpl(_$UpImpl _value, $Res Function(_$UpImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Up
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Up extends _Up {
-  const _$_Up() : super._();
+class _$UpImpl extends _Up {
+  const _$UpImpl() : super._();
 
-  factory _$_Up.fromJson(Map<String, dynamic> json) => _$$_UpFromJson(json);
+  factory _$UpImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UpImplFromJson(json);
 
   @override
   String toString() {
@@ -65,26 +73,26 @@ class _$_Up extends _Up {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Up);
+        (other.runtimeType == runtimeType && other is _$UpImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UpToJson(
+    return _$$UpImplToJson(
       this,
     );
   }
 }
 
 abstract class _Up extends Up {
-  const factory _Up() = _$_Up;
+  const factory _Up() = _$UpImpl;
   const _Up._() : super._();
 
-  factory _Up.fromJson(Map<String, dynamic> json) = _$_Up.fromJson;
+  factory _Up.fromJson(Map<String, dynamic> json) = _$UpImpl.fromJson;
 }

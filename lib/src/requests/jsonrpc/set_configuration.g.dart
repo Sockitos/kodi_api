@@ -6,21 +6,23 @@ part of 'set_configuration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetConfiguration _$$_SetConfigurationFromJson(Map<String, dynamic> json) =>
-    _$_SetConfiguration(
+_$SetConfigurationImpl _$$SetConfigurationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetConfigurationImpl(
       KodiJSONRPCSetConfigurationNotifications.fromJson(
           json['notifications'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SetConfigurationToJson(_$_SetConfiguration instance) =>
+Map<String, dynamic> _$$SetConfigurationImplToJson(
+        _$SetConfigurationImpl instance) =>
     <String, dynamic>{
       'notifications': instance.notifications.toJson(),
     };
 
-_$_KodiJSONRPCSetConfigurationNotifications
-    _$$_KodiJSONRPCSetConfigurationNotificationsFromJson(
+_$KodiJSONRPCSetConfigurationNotificationsImpl
+    _$$KodiJSONRPCSetConfigurationNotificationsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiJSONRPCSetConfigurationNotifications(
+        _$KodiJSONRPCSetConfigurationNotificationsImpl(
           application: json['application'] as bool?,
           audioLibrary: json['audio_library'] as bool?,
           gui: json['gui'] as bool?,
@@ -32,8 +34,8 @@ _$_KodiJSONRPCSetConfigurationNotifications
           videoLibrary: json['video_library'] as bool?,
         );
 
-Map<String, dynamic> _$$_KodiJSONRPCSetConfigurationNotificationsToJson(
-    _$_KodiJSONRPCSetConfigurationNotifications instance) {
+Map<String, dynamic> _$$KodiJSONRPCSetConfigurationNotificationsImplToJson(
+    _$KodiJSONRPCSetConfigurationNotificationsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

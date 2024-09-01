@@ -12,7 +12,7 @@ part of 'kodi_list_item_file.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListItemFile _$KodiListItemFileFromJson(Map<String, dynamic> json) {
   return _KodiListItemFile.fromJson(json);
@@ -168,8 +168,12 @@ mixin _$KodiListItemFile {
   int? get year => throw _privateConstructorUsedError;
   List<String>? get genre => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListItemFile to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListItemFileCopyWith<KodiListItemFile> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -296,6 +300,8 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -779,6 +785,8 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
     ) as $Val);
   }
 
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoCastCopyWith<$Res>? get cast {
@@ -791,6 +799,8 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
     });
   }
 
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiAudioContributorsCopyWith<$Res>? get contributors {
@@ -803,6 +813,8 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
     });
   }
 
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoResumeCopyWith<$Res>? get resume {
@@ -815,6 +827,8 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
     });
   }
 
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoStreamsCopyWith<$Res>? get streamDetails {
@@ -827,6 +841,8 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
     });
   }
 
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -841,11 +857,11 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
 }
 
 /// @nodoc
-abstract class _$$_KodiListItemFileCopyWith<$Res>
+abstract class _$$KodiListItemFileImplCopyWith<$Res>
     implements $KodiListItemFileCopyWith<$Res> {
-  factory _$$_KodiListItemFileCopyWith(
-          _$_KodiListItemFile value, $Res Function(_$_KodiListItemFile) then) =
-      __$$_KodiListItemFileCopyWithImpl<$Res>;
+  factory _$$KodiListItemFileImplCopyWith(_$KodiListItemFileImpl value,
+          $Res Function(_$KodiListItemFileImpl) then) =
+      __$$KodiListItemFileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -960,13 +976,15 @@ abstract class _$$_KodiListItemFileCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiListItemFileCopyWithImpl<$Res>
-    extends _$KodiListItemFileCopyWithImpl<$Res, _$_KodiListItemFile>
-    implements _$$_KodiListItemFileCopyWith<$Res> {
-  __$$_KodiListItemFileCopyWithImpl(
-      _$_KodiListItemFile _value, $Res Function(_$_KodiListItemFile) _then)
+class __$$KodiListItemFileImplCopyWithImpl<$Res>
+    extends _$KodiListItemFileCopyWithImpl<$Res, _$KodiListItemFileImpl>
+    implements _$$KodiListItemFileImplCopyWith<$Res> {
+  __$$KodiListItemFileImplCopyWithImpl(_$KodiListItemFileImpl _value,
+      $Res Function(_$KodiListItemFileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1066,7 +1084,7 @@ class __$$_KodiListItemFileCopyWithImpl<$Res>
     Object? year = freezed,
     Object? genre = freezed,
   }) {
-    return _then(_$_KodiListItemFile(
+    return _then(_$KodiListItemFileImpl(
       file: freezed == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
@@ -1454,8 +1472,8 @@ class __$$_KodiListItemFileCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiListItemFile implements _KodiListItemFile {
-  const _$_KodiListItemFile(
+class _$KodiListItemFileImpl implements _KodiListItemFile {
+  const _$KodiListItemFileImpl(
       {this.file,
       @JsonKey(name: 'filetype') this.fileType,
       @JsonKey(name: 'lastmodified') this.lastModified,
@@ -1573,8 +1591,8 @@ class _$_KodiListItemFile implements _KodiListItemFile {
         _musicBrainzAlbumArtistId = musicBrainzAlbumArtistId,
         _genre = genre;
 
-  factory _$_KodiListItemFile.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListItemFileFromJson(json);
+  factory _$KodiListItemFileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListItemFileImplFromJson(json);
 
   @override
   final String? file;
@@ -1966,10 +1984,10 @@ class _$_KodiListItemFile implements _KodiListItemFile {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListItemFile &&
+            other is _$KodiListItemFileImpl &&
             (identical(other.file, file) || other.file == file) &&
             (identical(other.fileType, fileType) ||
                 other.fileType == fileType) &&
@@ -2110,7 +2128,7 @@ class _$_KodiListItemFile implements _KodiListItemFile {
             const DeepCollectionEquality().equals(other._genre, _genre));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2211,15 +2229,18 @@ class _$_KodiListItemFile implements _KodiListItemFile {
         const DeepCollectionEquality().hash(_genre)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListItemFileCopyWith<_$_KodiListItemFile> get copyWith =>
-      __$$_KodiListItemFileCopyWithImpl<_$_KodiListItemFile>(this, _$identity);
+  _$$KodiListItemFileImplCopyWith<_$KodiListItemFileImpl> get copyWith =>
+      __$$KodiListItemFileImplCopyWithImpl<_$KodiListItemFileImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListItemFileToJson(
+    return _$$KodiListItemFileImplToJson(
       this,
     );
   }
@@ -2326,10 +2347,10 @@ abstract class _KodiListItemFile implements KodiListItemFile {
       @JsonKey(name: 'sortartist') final String? sortArtist,
       @JsonKey(name: 'userrating') final int? userRating,
       final int? year,
-      final List<String>? genre}) = _$_KodiListItemFile;
+      final List<String>? genre}) = _$KodiListItemFileImpl;
 
   factory _KodiListItemFile.fromJson(Map<String, dynamic> json) =
-      _$_KodiListItemFile.fromJson;
+      _$KodiListItemFileImpl.fromJson;
 
   @override
   String? get file;
@@ -2569,8 +2590,11 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   int? get year;
   @override
   List<String>? get genre;
+
+  /// Create a copy of KodiListItemFile
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListItemFileCopyWith<_$_KodiListItemFile> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListItemFileImplCopyWith<_$KodiListItemFileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'kodi_player_custom_view_mode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerCustomViewMode _$KodiPlayerCustomViewModeFromJson(
     Map<String, dynamic> json) {
@@ -36,8 +36,12 @@ mixin _$KodiPlayerCustomViewMode {
   @KodiPlayerCustomViewModeZoomConverter()
   KodiPlayerCustomViewModeZoom? get zoom => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerCustomViewMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerCustomViewModeCopyWith<KodiPlayerCustomViewMode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -78,6 +82,8 @@ class _$KodiPlayerCustomViewModeCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +112,8 @@ class _$KodiPlayerCustomViewModeCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerCustomViewModeNonLinearStretchCopyWith<$Res>?
@@ -120,6 +128,8 @@ class _$KodiPlayerCustomViewModeCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerCustomViewModePixelRatioCopyWith<$Res>? get pixelRatio {
@@ -133,6 +143,8 @@ class _$KodiPlayerCustomViewModeCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerCustomViewModeVerticalShiftCopyWith<$Res>? get verticalShift {
@@ -146,6 +158,8 @@ class _$KodiPlayerCustomViewModeCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerCustomViewModeZoomCopyWith<$Res>? get zoom {
@@ -160,12 +174,12 @@ class _$KodiPlayerCustomViewModeCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModeCopyWith<$Res>
+abstract class _$$KodiPlayerCustomViewModeImplCopyWith<$Res>
     implements $KodiPlayerCustomViewModeCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModeCopyWith(
-          _$_KodiPlayerCustomViewMode value,
-          $Res Function(_$_KodiPlayerCustomViewMode) then) =
-      __$$_KodiPlayerCustomViewModeCopyWithImpl<$Res>;
+  factory _$$KodiPlayerCustomViewModeImplCopyWith(
+          _$KodiPlayerCustomViewModeImpl value,
+          $Res Function(_$KodiPlayerCustomViewModeImpl) then) =
+      __$$KodiPlayerCustomViewModeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -192,14 +206,17 @@ abstract class _$$_KodiPlayerCustomViewModeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModeCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModeImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModeCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewMode>
-    implements _$$_KodiPlayerCustomViewModeCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModeCopyWithImpl(_$_KodiPlayerCustomViewMode _value,
-      $Res Function(_$_KodiPlayerCustomViewMode) _then)
+        _$KodiPlayerCustomViewModeImpl>
+    implements _$$KodiPlayerCustomViewModeImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModeImplCopyWithImpl(
+      _$KodiPlayerCustomViewModeImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -208,7 +225,7 @@ class __$$_KodiPlayerCustomViewModeCopyWithImpl<$Res>
     Object? verticalShift = freezed,
     Object? zoom = freezed,
   }) {
-    return _then(_$_KodiPlayerCustomViewMode(
+    return _then(_$KodiPlayerCustomViewModeImpl(
       nonLinearStretch: freezed == nonLinearStretch
           ? _value.nonLinearStretch
           : nonLinearStretch // ignore: cast_nullable_to_non_nullable
@@ -231,8 +248,8 @@ class __$$_KodiPlayerCustomViewModeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewMode implements _KodiPlayerCustomViewMode {
-  const _$_KodiPlayerCustomViewMode(
+class _$KodiPlayerCustomViewModeImpl implements _KodiPlayerCustomViewMode {
+  const _$KodiPlayerCustomViewModeImpl(
       {@JsonKey(name: 'nonlinearstretch')
       @KodiPlayerCustomViewModeNonLinearStretchConverter()
       this.nonLinearStretch,
@@ -244,8 +261,8 @@ class _$_KodiPlayerCustomViewMode implements _KodiPlayerCustomViewMode {
       this.verticalShift,
       @KodiPlayerCustomViewModeZoomConverter() this.zoom});
 
-  factory _$_KodiPlayerCustomViewMode.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModeFromJson(json);
+  factory _$KodiPlayerCustomViewModeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerCustomViewModeImplFromJson(json);
 
   @override
   @JsonKey(name: 'nonlinearstretch')
@@ -269,10 +286,10 @@ class _$_KodiPlayerCustomViewMode implements _KodiPlayerCustomViewMode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewMode &&
+            other is _$KodiPlayerCustomViewModeImpl &&
             (identical(other.nonLinearStretch, nonLinearStretch) ||
                 other.nonLinearStretch == nonLinearStretch) &&
             (identical(other.pixelRatio, pixelRatio) ||
@@ -282,21 +299,23 @@ class _$_KodiPlayerCustomViewMode implements _KodiPlayerCustomViewMode {
             (identical(other.zoom, zoom) || other.zoom == zoom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, nonLinearStretch, pixelRatio, verticalShift, zoom);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModeCopyWith<_$_KodiPlayerCustomViewMode>
-      get copyWith => __$$_KodiPlayerCustomViewModeCopyWithImpl<
-          _$_KodiPlayerCustomViewMode>(this, _$identity);
+  _$$KodiPlayerCustomViewModeImplCopyWith<_$KodiPlayerCustomViewModeImpl>
+      get copyWith => __$$KodiPlayerCustomViewModeImplCopyWithImpl<
+          _$KodiPlayerCustomViewModeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModeToJson(
+    return _$$KodiPlayerCustomViewModeImplToJson(
       this,
     );
   }
@@ -304,20 +323,21 @@ class _$_KodiPlayerCustomViewMode implements _KodiPlayerCustomViewMode {
 
 abstract class _KodiPlayerCustomViewMode implements KodiPlayerCustomViewMode {
   const factory _KodiPlayerCustomViewMode(
-      {@JsonKey(name: 'nonlinearstretch')
-      @KodiPlayerCustomViewModeNonLinearStretchConverter()
-      final KodiPlayerCustomViewModeNonLinearStretch? nonLinearStretch,
-      @JsonKey(name: 'pixelratio')
-      @KodiPlayerCustomViewModePixelRatioConverter()
-      final KodiPlayerCustomViewModePixelRatio? pixelRatio,
-      @JsonKey(name: 'verticalshift')
-      @KodiPlayerCustomViewModeVerticalShiftConverter()
-      final KodiPlayerCustomViewModeVerticalShift? verticalShift,
-      @KodiPlayerCustomViewModeZoomConverter()
-      final KodiPlayerCustomViewModeZoom? zoom}) = _$_KodiPlayerCustomViewMode;
+          {@JsonKey(name: 'nonlinearstretch')
+          @KodiPlayerCustomViewModeNonLinearStretchConverter()
+          final KodiPlayerCustomViewModeNonLinearStretch? nonLinearStretch,
+          @JsonKey(name: 'pixelratio')
+          @KodiPlayerCustomViewModePixelRatioConverter()
+          final KodiPlayerCustomViewModePixelRatio? pixelRatio,
+          @JsonKey(name: 'verticalshift')
+          @KodiPlayerCustomViewModeVerticalShiftConverter()
+          final KodiPlayerCustomViewModeVerticalShift? verticalShift,
+          @KodiPlayerCustomViewModeZoomConverter()
+          final KodiPlayerCustomViewModeZoom? zoom}) =
+      _$KodiPlayerCustomViewModeImpl;
 
   factory _KodiPlayerCustomViewMode.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewMode.fromJson;
+      _$KodiPlayerCustomViewModeImpl.fromJson;
 
   @override
   @JsonKey(name: 'nonlinearstretch')
@@ -334,9 +354,12 @@ abstract class _KodiPlayerCustomViewMode implements KodiPlayerCustomViewMode {
   @override
   @KodiPlayerCustomViewModeZoomConverter()
   KodiPlayerCustomViewModeZoom? get zoom;
+
+  /// Create a copy of KodiPlayerCustomViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModeCopyWith<_$_KodiPlayerCustomViewMode>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModeImplCopyWith<_$KodiPlayerCustomViewModeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -406,6 +429,8 @@ mixin _$KodiPlayerCustomViewModeNonLinearStretch {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerCustomViewModeNonLinearStretch to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -429,34 +454,42 @@ class _$KodiPlayerCustomViewModeNonLinearStretchCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerCustomViewModeNonLinearStretch
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWith(
-          _$_KodiPlayerCustomViewModeNonLinearStretchEnum value,
-          $Res Function(_$_KodiPlayerCustomViewModeNonLinearStretchEnum) then) =
-      __$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWith<
+    $Res> {
+  factory _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWith(
+          _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl value,
+          $Res Function(_$KodiPlayerCustomViewModeNonLinearStretchEnumImpl)
+              then) =
+      __$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({IncDec value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModeNonLinearStretchCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModeNonLinearStretchEnum>
-    implements _$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWithImpl(
-      _$_KodiPlayerCustomViewModeNonLinearStretchEnum _value,
-      $Res Function(_$_KodiPlayerCustomViewModeNonLinearStretchEnum) _then)
+        _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl>
+    implements
+        _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWithImpl(
+      _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModeNonLinearStretchEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModeNonLinearStretch
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModeNonLinearStretchEnum(
+    return _then(_$KodiPlayerCustomViewModeNonLinearStretchEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -467,15 +500,15 @@ class __$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModeNonLinearStretchEnum
+class _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl
     implements _KodiPlayerCustomViewModeNonLinearStretchEnum {
-  const _$_KodiPlayerCustomViewModeNonLinearStretchEnum(this.value,
+  const _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiPlayerCustomViewModeNonLinearStretchEnum.fromJson(
+  factory _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModeNonLinearStretchEnumFromJson(json);
+      _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplFromJson(json);
 
   @override
   final IncDec value;
@@ -489,25 +522,27 @@ class _$_KodiPlayerCustomViewModeNonLinearStretchEnum
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModeNonLinearStretchEnum &&
+            other is _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModeNonLinearStretch
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWith<
-          _$_KodiPlayerCustomViewModeNonLinearStretchEnum>
+  _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWith<
+          _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl>
       get copyWith =>
-          __$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWithImpl<
-                  _$_KodiPlayerCustomViewModeNonLinearStretchEnum>(
+          __$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWithImpl<
+                  _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl>(
               this, _$identity);
 
   @override
@@ -581,7 +616,7 @@ class _$_KodiPlayerCustomViewModeNonLinearStretchEnum
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModeNonLinearStretchEnumToJson(
+    return _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplToJson(
       this,
     );
   }
@@ -590,46 +625,54 @@ class _$_KodiPlayerCustomViewModeNonLinearStretchEnum
 abstract class _KodiPlayerCustomViewModeNonLinearStretchEnum
     implements KodiPlayerCustomViewModeNonLinearStretch {
   const factory _KodiPlayerCustomViewModeNonLinearStretchEnum(
-      final IncDec value) = _$_KodiPlayerCustomViewModeNonLinearStretchEnum;
+      final IncDec value) = _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl;
 
   factory _KodiPlayerCustomViewModeNonLinearStretchEnum.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewModeNonLinearStretchEnum.fromJson;
+      _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl.fromJson;
 
   @override
   IncDec get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModeNonLinearStretchEnumCopyWith<
-          _$_KodiPlayerCustomViewModeNonLinearStretchEnum>
+
+  /// Create a copy of KodiPlayerCustomViewModeNonLinearStretch
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplCopyWith<
+          _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWith(
-          _$_KodiPlayerCustomViewModeNonLinearStretchBool value,
-          $Res Function(_$_KodiPlayerCustomViewModeNonLinearStretchBool) then) =
-      __$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWith<
+    $Res> {
+  factory _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWith(
+          _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl value,
+          $Res Function(_$KodiPlayerCustomViewModeNonLinearStretchBoolImpl)
+              then) =
+      __$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModeNonLinearStretchCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModeNonLinearStretchBool>
-    implements _$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWithImpl(
-      _$_KodiPlayerCustomViewModeNonLinearStretchBool _value,
-      $Res Function(_$_KodiPlayerCustomViewModeNonLinearStretchBool) _then)
+        _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl>
+    implements
+        _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWithImpl(
+      _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModeNonLinearStretchBoolImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModeNonLinearStretch
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModeNonLinearStretchBool(
+    return _then(_$KodiPlayerCustomViewModeNonLinearStretchBoolImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -640,15 +683,15 @@ class __$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModeNonLinearStretchBool
+class _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl
     implements _KodiPlayerCustomViewModeNonLinearStretchBool {
-  const _$_KodiPlayerCustomViewModeNonLinearStretchBool(this.value,
+  const _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'bool';
 
-  factory _$_KodiPlayerCustomViewModeNonLinearStretchBool.fromJson(
+  factory _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModeNonLinearStretchBoolFromJson(json);
+      _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplFromJson(json);
 
   @override
   final bool value;
@@ -662,25 +705,27 @@ class _$_KodiPlayerCustomViewModeNonLinearStretchBool
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModeNonLinearStretchBool &&
+            other is _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModeNonLinearStretch
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWith<
-          _$_KodiPlayerCustomViewModeNonLinearStretchBool>
+  _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWith<
+          _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl>
       get copyWith =>
-          __$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWithImpl<
-                  _$_KodiPlayerCustomViewModeNonLinearStretchBool>(
+          __$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWithImpl<
+                  _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl>(
               this, _$identity);
 
   @override
@@ -754,7 +799,7 @@ class _$_KodiPlayerCustomViewModeNonLinearStretchBool
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModeNonLinearStretchBoolToJson(
+    return _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplToJson(
       this,
     );
   }
@@ -763,17 +808,20 @@ class _$_KodiPlayerCustomViewModeNonLinearStretchBool
 abstract class _KodiPlayerCustomViewModeNonLinearStretchBool
     implements KodiPlayerCustomViewModeNonLinearStretch {
   const factory _KodiPlayerCustomViewModeNonLinearStretchBool(
-      final bool value) = _$_KodiPlayerCustomViewModeNonLinearStretchBool;
+      final bool value) = _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl;
 
   factory _KodiPlayerCustomViewModeNonLinearStretchBool.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewModeNonLinearStretchBool.fromJson;
+      _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl.fromJson;
 
   @override
   bool get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModeNonLinearStretchBoolCopyWith<
-          _$_KodiPlayerCustomViewModeNonLinearStretchBool>
+
+  /// Create a copy of KodiPlayerCustomViewModeNonLinearStretch
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplCopyWith<
+          _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -837,6 +885,8 @@ mixin _$KodiPlayerCustomViewModePixelRatio {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerCustomViewModePixelRatio to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -859,34 +909,39 @@ class _$KodiPlayerCustomViewModePixelRatioCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerCustomViewModePixelRatio
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModePixelRatioEnumCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModePixelRatioEnumCopyWith(
-          _$_KodiPlayerCustomViewModePixelRatioEnum value,
-          $Res Function(_$_KodiPlayerCustomViewModePixelRatioEnum) then) =
-      __$$_KodiPlayerCustomViewModePixelRatioEnumCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWith<$Res> {
+  factory _$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWith(
+          _$KodiPlayerCustomViewModePixelRatioEnumImpl value,
+          $Res Function(_$KodiPlayerCustomViewModePixelRatioEnumImpl) then) =
+      __$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({IncDec value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModePixelRatioEnumCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModePixelRatioCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModePixelRatioEnum>
-    implements _$$_KodiPlayerCustomViewModePixelRatioEnumCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModePixelRatioEnumCopyWithImpl(
-      _$_KodiPlayerCustomViewModePixelRatioEnum _value,
-      $Res Function(_$_KodiPlayerCustomViewModePixelRatioEnum) _then)
+        _$KodiPlayerCustomViewModePixelRatioEnumImpl>
+    implements _$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWithImpl(
+      _$KodiPlayerCustomViewModePixelRatioEnumImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModePixelRatioEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModePixelRatio
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModePixelRatioEnum(
+    return _then(_$KodiPlayerCustomViewModePixelRatioEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -897,15 +952,15 @@ class __$$_KodiPlayerCustomViewModePixelRatioEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModePixelRatioEnum
+class _$KodiPlayerCustomViewModePixelRatioEnumImpl
     implements _KodiPlayerCustomViewModePixelRatioEnum {
-  const _$_KodiPlayerCustomViewModePixelRatioEnum(this.value,
+  const _$KodiPlayerCustomViewModePixelRatioEnumImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiPlayerCustomViewModePixelRatioEnum.fromJson(
+  factory _$KodiPlayerCustomViewModePixelRatioEnumImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModePixelRatioEnumFromJson(json);
+      _$$KodiPlayerCustomViewModePixelRatioEnumImplFromJson(json);
 
   @override
   final IncDec value;
@@ -919,24 +974,27 @@ class _$_KodiPlayerCustomViewModePixelRatioEnum
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModePixelRatioEnum &&
+            other is _$KodiPlayerCustomViewModePixelRatioEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModePixelRatio
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModePixelRatioEnumCopyWith<
-          _$_KodiPlayerCustomViewModePixelRatioEnum>
-      get copyWith => __$$_KodiPlayerCustomViewModePixelRatioEnumCopyWithImpl<
-          _$_KodiPlayerCustomViewModePixelRatioEnum>(this, _$identity);
+  _$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWith<
+          _$KodiPlayerCustomViewModePixelRatioEnumImpl>
+      get copyWith =>
+          __$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWithImpl<
+              _$KodiPlayerCustomViewModePixelRatioEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1004,7 +1062,7 @@ class _$_KodiPlayerCustomViewModePixelRatioEnum
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModePixelRatioEnumToJson(
+    return _$$KodiPlayerCustomViewModePixelRatioEnumImplToJson(
       this,
     );
   }
@@ -1013,46 +1071,51 @@ class _$_KodiPlayerCustomViewModePixelRatioEnum
 abstract class _KodiPlayerCustomViewModePixelRatioEnum
     implements KodiPlayerCustomViewModePixelRatio {
   const factory _KodiPlayerCustomViewModePixelRatioEnum(final IncDec value) =
-      _$_KodiPlayerCustomViewModePixelRatioEnum;
+      _$KodiPlayerCustomViewModePixelRatioEnumImpl;
 
   factory _KodiPlayerCustomViewModePixelRatioEnum.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewModePixelRatioEnum.fromJson;
+      _$KodiPlayerCustomViewModePixelRatioEnumImpl.fromJson;
 
   @override
   IncDec get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModePixelRatioEnumCopyWith<
-          _$_KodiPlayerCustomViewModePixelRatioEnum>
+
+  /// Create a copy of KodiPlayerCustomViewModePixelRatio
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModePixelRatioEnumImplCopyWith<
+          _$KodiPlayerCustomViewModePixelRatioEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModePixelRatioAbsCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModePixelRatioAbsCopyWith(
-          _$_KodiPlayerCustomViewModePixelRatioAbs value,
-          $Res Function(_$_KodiPlayerCustomViewModePixelRatioAbs) then) =
-      __$$_KodiPlayerCustomViewModePixelRatioAbsCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWith<$Res> {
+  factory _$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWith(
+          _$KodiPlayerCustomViewModePixelRatioAbsImpl value,
+          $Res Function(_$KodiPlayerCustomViewModePixelRatioAbsImpl) then) =
+      __$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModePixelRatioAbsCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModePixelRatioCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModePixelRatioAbs>
-    implements _$$_KodiPlayerCustomViewModePixelRatioAbsCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModePixelRatioAbsCopyWithImpl(
-      _$_KodiPlayerCustomViewModePixelRatioAbs _value,
-      $Res Function(_$_KodiPlayerCustomViewModePixelRatioAbs) _then)
+        _$KodiPlayerCustomViewModePixelRatioAbsImpl>
+    implements _$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWithImpl(
+      _$KodiPlayerCustomViewModePixelRatioAbsImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModePixelRatioAbsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModePixelRatio
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModePixelRatioAbs(
+    return _then(_$KodiPlayerCustomViewModePixelRatioAbsImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -1063,15 +1126,15 @@ class __$$_KodiPlayerCustomViewModePixelRatioAbsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModePixelRatioAbs
+class _$KodiPlayerCustomViewModePixelRatioAbsImpl
     implements _KodiPlayerCustomViewModePixelRatioAbs {
-  const _$_KodiPlayerCustomViewModePixelRatioAbs(this.value,
+  const _$KodiPlayerCustomViewModePixelRatioAbsImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'abs';
 
-  factory _$_KodiPlayerCustomViewModePixelRatioAbs.fromJson(
+  factory _$KodiPlayerCustomViewModePixelRatioAbsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModePixelRatioAbsFromJson(json);
+      _$$KodiPlayerCustomViewModePixelRatioAbsImplFromJson(json);
 
   @override
   final double value;
@@ -1085,24 +1148,26 @@ class _$_KodiPlayerCustomViewModePixelRatioAbs
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModePixelRatioAbs &&
+            other is _$KodiPlayerCustomViewModePixelRatioAbsImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModePixelRatio
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModePixelRatioAbsCopyWith<
-          _$_KodiPlayerCustomViewModePixelRatioAbs>
-      get copyWith => __$$_KodiPlayerCustomViewModePixelRatioAbsCopyWithImpl<
-          _$_KodiPlayerCustomViewModePixelRatioAbs>(this, _$identity);
+  _$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWith<
+          _$KodiPlayerCustomViewModePixelRatioAbsImpl>
+      get copyWith => __$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWithImpl<
+          _$KodiPlayerCustomViewModePixelRatioAbsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1170,7 +1235,7 @@ class _$_KodiPlayerCustomViewModePixelRatioAbs
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModePixelRatioAbsToJson(
+    return _$$KodiPlayerCustomViewModePixelRatioAbsImplToJson(
       this,
     );
   }
@@ -1179,17 +1244,20 @@ class _$_KodiPlayerCustomViewModePixelRatioAbs
 abstract class _KodiPlayerCustomViewModePixelRatioAbs
     implements KodiPlayerCustomViewModePixelRatio {
   const factory _KodiPlayerCustomViewModePixelRatioAbs(final double value) =
-      _$_KodiPlayerCustomViewModePixelRatioAbs;
+      _$KodiPlayerCustomViewModePixelRatioAbsImpl;
 
   factory _KodiPlayerCustomViewModePixelRatioAbs.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewModePixelRatioAbs.fromJson;
+      _$KodiPlayerCustomViewModePixelRatioAbsImpl.fromJson;
 
   @override
   double get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModePixelRatioAbsCopyWith<
-          _$_KodiPlayerCustomViewModePixelRatioAbs>
+
+  /// Create a copy of KodiPlayerCustomViewModePixelRatio
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModePixelRatioAbsImplCopyWith<
+          _$KodiPlayerCustomViewModePixelRatioAbsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1255,6 +1323,8 @@ mixin _$KodiPlayerCustomViewModeVerticalShift {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerCustomViewModeVerticalShift to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -1277,34 +1347,39 @@ class _$KodiPlayerCustomViewModeVerticalShiftCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerCustomViewModeVerticalShift
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWith(
-          _$_KodiPlayerCustomViewModeVerticalShiftEnum value,
-          $Res Function(_$_KodiPlayerCustomViewModeVerticalShiftEnum) then) =
-      __$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWith<$Res> {
+  factory _$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWith(
+          _$KodiPlayerCustomViewModeVerticalShiftEnumImpl value,
+          $Res Function(_$KodiPlayerCustomViewModeVerticalShiftEnumImpl) then) =
+      __$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({IncDec value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModeVerticalShiftCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModeVerticalShiftEnum>
-    implements _$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWithImpl(
-      _$_KodiPlayerCustomViewModeVerticalShiftEnum _value,
-      $Res Function(_$_KodiPlayerCustomViewModeVerticalShiftEnum) _then)
+        _$KodiPlayerCustomViewModeVerticalShiftEnumImpl>
+    implements _$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWithImpl(
+      _$KodiPlayerCustomViewModeVerticalShiftEnumImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModeVerticalShiftEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModeVerticalShift
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModeVerticalShiftEnum(
+    return _then(_$KodiPlayerCustomViewModeVerticalShiftEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -1315,15 +1390,15 @@ class __$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModeVerticalShiftEnum
+class _$KodiPlayerCustomViewModeVerticalShiftEnumImpl
     implements _KodiPlayerCustomViewModeVerticalShiftEnum {
-  const _$_KodiPlayerCustomViewModeVerticalShiftEnum(this.value,
+  const _$KodiPlayerCustomViewModeVerticalShiftEnumImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiPlayerCustomViewModeVerticalShiftEnum.fromJson(
+  factory _$KodiPlayerCustomViewModeVerticalShiftEnumImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModeVerticalShiftEnumFromJson(json);
+      _$$KodiPlayerCustomViewModeVerticalShiftEnumImplFromJson(json);
 
   @override
   final IncDec value;
@@ -1337,25 +1412,28 @@ class _$_KodiPlayerCustomViewModeVerticalShiftEnum
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModeVerticalShiftEnum &&
+            other is _$KodiPlayerCustomViewModeVerticalShiftEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModeVerticalShift
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWith<
-          _$_KodiPlayerCustomViewModeVerticalShiftEnum>
+  _$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWith<
+          _$KodiPlayerCustomViewModeVerticalShiftEnumImpl>
       get copyWith =>
-          __$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWithImpl<
-              _$_KodiPlayerCustomViewModeVerticalShiftEnum>(this, _$identity);
+          __$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWithImpl<
+                  _$KodiPlayerCustomViewModeVerticalShiftEnumImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1425,7 +1503,7 @@ class _$_KodiPlayerCustomViewModeVerticalShiftEnum
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModeVerticalShiftEnumToJson(
+    return _$$KodiPlayerCustomViewModeVerticalShiftEnumImplToJson(
       this,
     );
   }
@@ -1434,46 +1512,51 @@ class _$_KodiPlayerCustomViewModeVerticalShiftEnum
 abstract class _KodiPlayerCustomViewModeVerticalShiftEnum
     implements KodiPlayerCustomViewModeVerticalShift {
   const factory _KodiPlayerCustomViewModeVerticalShiftEnum(final IncDec value) =
-      _$_KodiPlayerCustomViewModeVerticalShiftEnum;
+      _$KodiPlayerCustomViewModeVerticalShiftEnumImpl;
 
   factory _KodiPlayerCustomViewModeVerticalShiftEnum.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewModeVerticalShiftEnum.fromJson;
+      _$KodiPlayerCustomViewModeVerticalShiftEnumImpl.fromJson;
 
   @override
   IncDec get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModeVerticalShiftEnumCopyWith<
-          _$_KodiPlayerCustomViewModeVerticalShiftEnum>
+
+  /// Create a copy of KodiPlayerCustomViewModeVerticalShift
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModeVerticalShiftEnumImplCopyWith<
+          _$KodiPlayerCustomViewModeVerticalShiftEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWith(
-          _$_KodiPlayerCustomViewModeVerticalShiftAbs value,
-          $Res Function(_$_KodiPlayerCustomViewModeVerticalShiftAbs) then) =
-      __$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWith<$Res> {
+  factory _$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWith(
+          _$KodiPlayerCustomViewModeVerticalShiftAbsImpl value,
+          $Res Function(_$KodiPlayerCustomViewModeVerticalShiftAbsImpl) then) =
+      __$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModeVerticalShiftCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModeVerticalShiftAbs>
-    implements _$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWithImpl(
-      _$_KodiPlayerCustomViewModeVerticalShiftAbs _value,
-      $Res Function(_$_KodiPlayerCustomViewModeVerticalShiftAbs) _then)
+        _$KodiPlayerCustomViewModeVerticalShiftAbsImpl>
+    implements _$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWithImpl(
+      _$KodiPlayerCustomViewModeVerticalShiftAbsImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModeVerticalShiftAbsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModeVerticalShift
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModeVerticalShiftAbs(
+    return _then(_$KodiPlayerCustomViewModeVerticalShiftAbsImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -1484,15 +1567,15 @@ class __$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModeVerticalShiftAbs
+class _$KodiPlayerCustomViewModeVerticalShiftAbsImpl
     implements _KodiPlayerCustomViewModeVerticalShiftAbs {
-  const _$_KodiPlayerCustomViewModeVerticalShiftAbs(this.value,
+  const _$KodiPlayerCustomViewModeVerticalShiftAbsImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'abs';
 
-  factory _$_KodiPlayerCustomViewModeVerticalShiftAbs.fromJson(
+  factory _$KodiPlayerCustomViewModeVerticalShiftAbsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModeVerticalShiftAbsFromJson(json);
+      _$$KodiPlayerCustomViewModeVerticalShiftAbsImplFromJson(json);
 
   @override
   final double value;
@@ -1506,24 +1589,27 @@ class _$_KodiPlayerCustomViewModeVerticalShiftAbs
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModeVerticalShiftAbs &&
+            other is _$KodiPlayerCustomViewModeVerticalShiftAbsImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModeVerticalShift
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWith<
-          _$_KodiPlayerCustomViewModeVerticalShiftAbs>
-      get copyWith => __$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWithImpl<
-          _$_KodiPlayerCustomViewModeVerticalShiftAbs>(this, _$identity);
+  _$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWith<
+          _$KodiPlayerCustomViewModeVerticalShiftAbsImpl>
+      get copyWith =>
+          __$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWithImpl<
+              _$KodiPlayerCustomViewModeVerticalShiftAbsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1593,7 +1679,7 @@ class _$_KodiPlayerCustomViewModeVerticalShiftAbs
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModeVerticalShiftAbsToJson(
+    return _$$KodiPlayerCustomViewModeVerticalShiftAbsImplToJson(
       this,
     );
   }
@@ -1602,17 +1688,20 @@ class _$_KodiPlayerCustomViewModeVerticalShiftAbs
 abstract class _KodiPlayerCustomViewModeVerticalShiftAbs
     implements KodiPlayerCustomViewModeVerticalShift {
   const factory _KodiPlayerCustomViewModeVerticalShiftAbs(final double value) =
-      _$_KodiPlayerCustomViewModeVerticalShiftAbs;
+      _$KodiPlayerCustomViewModeVerticalShiftAbsImpl;
 
   factory _KodiPlayerCustomViewModeVerticalShiftAbs.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewModeVerticalShiftAbs.fromJson;
+      _$KodiPlayerCustomViewModeVerticalShiftAbsImpl.fromJson;
 
   @override
   double get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModeVerticalShiftAbsCopyWith<
-          _$_KodiPlayerCustomViewModeVerticalShiftAbs>
+
+  /// Create a copy of KodiPlayerCustomViewModeVerticalShift
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModeVerticalShiftAbsImplCopyWith<
+          _$KodiPlayerCustomViewModeVerticalShiftAbsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1675,6 +1764,8 @@ mixin _$KodiPlayerCustomViewModeZoom {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerCustomViewModeZoom to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -1697,34 +1788,39 @@ class _$KodiPlayerCustomViewModeZoomCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerCustomViewModeZoom
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModeZoomEnumCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModeZoomEnumCopyWith(
-          _$_KodiPlayerCustomViewModeZoomEnum value,
-          $Res Function(_$_KodiPlayerCustomViewModeZoomEnum) then) =
-      __$$_KodiPlayerCustomViewModeZoomEnumCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModeZoomEnumImplCopyWith<$Res> {
+  factory _$$KodiPlayerCustomViewModeZoomEnumImplCopyWith(
+          _$KodiPlayerCustomViewModeZoomEnumImpl value,
+          $Res Function(_$KodiPlayerCustomViewModeZoomEnumImpl) then) =
+      __$$KodiPlayerCustomViewModeZoomEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({IncDec value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModeZoomEnumCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModeZoomEnumImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModeZoomCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModeZoomEnum>
-    implements _$$_KodiPlayerCustomViewModeZoomEnumCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModeZoomEnumCopyWithImpl(
-      _$_KodiPlayerCustomViewModeZoomEnum _value,
-      $Res Function(_$_KodiPlayerCustomViewModeZoomEnum) _then)
+        _$KodiPlayerCustomViewModeZoomEnumImpl>
+    implements _$$KodiPlayerCustomViewModeZoomEnumImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModeZoomEnumImplCopyWithImpl(
+      _$KodiPlayerCustomViewModeZoomEnumImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModeZoomEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModeZoom
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModeZoomEnum(
+    return _then(_$KodiPlayerCustomViewModeZoomEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -1735,14 +1831,15 @@ class __$$_KodiPlayerCustomViewModeZoomEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModeZoomEnum
+class _$KodiPlayerCustomViewModeZoomEnumImpl
     implements _KodiPlayerCustomViewModeZoomEnum {
-  const _$_KodiPlayerCustomViewModeZoomEnum(this.value, {final String? $type})
+  const _$KodiPlayerCustomViewModeZoomEnumImpl(this.value,
+      {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiPlayerCustomViewModeZoomEnum.fromJson(
+  factory _$KodiPlayerCustomViewModeZoomEnumImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModeZoomEnumFromJson(json);
+      _$$KodiPlayerCustomViewModeZoomEnumImplFromJson(json);
 
   @override
   final IncDec value;
@@ -1756,24 +1853,26 @@ class _$_KodiPlayerCustomViewModeZoomEnum
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModeZoomEnum &&
+            other is _$KodiPlayerCustomViewModeZoomEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModeZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModeZoomEnumCopyWith<
-          _$_KodiPlayerCustomViewModeZoomEnum>
-      get copyWith => __$$_KodiPlayerCustomViewModeZoomEnumCopyWithImpl<
-          _$_KodiPlayerCustomViewModeZoomEnum>(this, _$identity);
+  _$$KodiPlayerCustomViewModeZoomEnumImplCopyWith<
+          _$KodiPlayerCustomViewModeZoomEnumImpl>
+      get copyWith => __$$KodiPlayerCustomViewModeZoomEnumImplCopyWithImpl<
+          _$KodiPlayerCustomViewModeZoomEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1840,7 +1939,7 @@ class _$_KodiPlayerCustomViewModeZoomEnum
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModeZoomEnumToJson(
+    return _$$KodiPlayerCustomViewModeZoomEnumImplToJson(
       this,
     );
   }
@@ -1849,45 +1948,51 @@ class _$_KodiPlayerCustomViewModeZoomEnum
 abstract class _KodiPlayerCustomViewModeZoomEnum
     implements KodiPlayerCustomViewModeZoom {
   const factory _KodiPlayerCustomViewModeZoomEnum(final IncDec value) =
-      _$_KodiPlayerCustomViewModeZoomEnum;
+      _$KodiPlayerCustomViewModeZoomEnumImpl;
 
   factory _KodiPlayerCustomViewModeZoomEnum.fromJson(
-      Map<String, dynamic> json) = _$_KodiPlayerCustomViewModeZoomEnum.fromJson;
+          Map<String, dynamic> json) =
+      _$KodiPlayerCustomViewModeZoomEnumImpl.fromJson;
 
   @override
   IncDec get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModeZoomEnumCopyWith<
-          _$_KodiPlayerCustomViewModeZoomEnum>
+
+  /// Create a copy of KodiPlayerCustomViewModeZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModeZoomEnumImplCopyWith<
+          _$KodiPlayerCustomViewModeZoomEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerCustomViewModeZoomAbsCopyWith<$Res> {
-  factory _$$_KodiPlayerCustomViewModeZoomAbsCopyWith(
-          _$_KodiPlayerCustomViewModeZoomAbs value,
-          $Res Function(_$_KodiPlayerCustomViewModeZoomAbs) then) =
-      __$$_KodiPlayerCustomViewModeZoomAbsCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerCustomViewModeZoomAbsImplCopyWith<$Res> {
+  factory _$$KodiPlayerCustomViewModeZoomAbsImplCopyWith(
+          _$KodiPlayerCustomViewModeZoomAbsImpl value,
+          $Res Function(_$KodiPlayerCustomViewModeZoomAbsImpl) then) =
+      __$$KodiPlayerCustomViewModeZoomAbsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$$_KodiPlayerCustomViewModeZoomAbsCopyWithImpl<$Res>
+class __$$KodiPlayerCustomViewModeZoomAbsImplCopyWithImpl<$Res>
     extends _$KodiPlayerCustomViewModeZoomCopyWithImpl<$Res,
-        _$_KodiPlayerCustomViewModeZoomAbs>
-    implements _$$_KodiPlayerCustomViewModeZoomAbsCopyWith<$Res> {
-  __$$_KodiPlayerCustomViewModeZoomAbsCopyWithImpl(
-      _$_KodiPlayerCustomViewModeZoomAbs _value,
-      $Res Function(_$_KodiPlayerCustomViewModeZoomAbs) _then)
+        _$KodiPlayerCustomViewModeZoomAbsImpl>
+    implements _$$KodiPlayerCustomViewModeZoomAbsImplCopyWith<$Res> {
+  __$$KodiPlayerCustomViewModeZoomAbsImplCopyWithImpl(
+      _$KodiPlayerCustomViewModeZoomAbsImpl _value,
+      $Res Function(_$KodiPlayerCustomViewModeZoomAbsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerCustomViewModeZoom
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiPlayerCustomViewModeZoomAbs(
+    return _then(_$KodiPlayerCustomViewModeZoomAbsImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -1898,14 +2003,14 @@ class __$$_KodiPlayerCustomViewModeZoomAbsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerCustomViewModeZoomAbs
+class _$KodiPlayerCustomViewModeZoomAbsImpl
     implements _KodiPlayerCustomViewModeZoomAbs {
-  const _$_KodiPlayerCustomViewModeZoomAbs(this.value, {final String? $type})
+  const _$KodiPlayerCustomViewModeZoomAbsImpl(this.value, {final String? $type})
       : $type = $type ?? 'abs';
 
-  factory _$_KodiPlayerCustomViewModeZoomAbs.fromJson(
+  factory _$KodiPlayerCustomViewModeZoomAbsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerCustomViewModeZoomAbsFromJson(json);
+      _$$KodiPlayerCustomViewModeZoomAbsImplFromJson(json);
 
   @override
   final double value;
@@ -1919,24 +2024,26 @@ class _$_KodiPlayerCustomViewModeZoomAbs
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerCustomViewModeZoomAbs &&
+            other is _$KodiPlayerCustomViewModeZoomAbsImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerCustomViewModeZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerCustomViewModeZoomAbsCopyWith<
-          _$_KodiPlayerCustomViewModeZoomAbs>
-      get copyWith => __$$_KodiPlayerCustomViewModeZoomAbsCopyWithImpl<
-          _$_KodiPlayerCustomViewModeZoomAbs>(this, _$identity);
+  _$$KodiPlayerCustomViewModeZoomAbsImplCopyWith<
+          _$KodiPlayerCustomViewModeZoomAbsImpl>
+      get copyWith => __$$KodiPlayerCustomViewModeZoomAbsImplCopyWithImpl<
+          _$KodiPlayerCustomViewModeZoomAbsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2003,7 +2110,7 @@ class _$_KodiPlayerCustomViewModeZoomAbs
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerCustomViewModeZoomAbsToJson(
+    return _$$KodiPlayerCustomViewModeZoomAbsImplToJson(
       this,
     );
   }
@@ -2012,15 +2119,18 @@ class _$_KodiPlayerCustomViewModeZoomAbs
 abstract class _KodiPlayerCustomViewModeZoomAbs
     implements KodiPlayerCustomViewModeZoom {
   const factory _KodiPlayerCustomViewModeZoomAbs(final double value) =
-      _$_KodiPlayerCustomViewModeZoomAbs;
+      _$KodiPlayerCustomViewModeZoomAbsImpl;
 
   factory _KodiPlayerCustomViewModeZoomAbs.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerCustomViewModeZoomAbs.fromJson;
+      _$KodiPlayerCustomViewModeZoomAbsImpl.fromJson;
 
   @override
   double get value;
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerCustomViewModeZoomAbsCopyWith<
-          _$_KodiPlayerCustomViewModeZoomAbs>
+
+  /// Create a copy of KodiPlayerCustomViewModeZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerCustomViewModeZoomAbsImplCopyWith<
+          _$KodiPlayerCustomViewModeZoomAbsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

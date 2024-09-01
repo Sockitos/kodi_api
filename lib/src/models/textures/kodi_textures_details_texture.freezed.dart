@@ -12,7 +12,7 @@ part of 'kodi_textures_details_texture.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiTexturesDetailsTexture _$KodiTexturesDetailsTextureFromJson(
     Map<String, dynamic> json) {
@@ -33,8 +33,12 @@ mixin _$KodiTexturesDetailsTexture {
   int? get textureId => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiTexturesDetailsTexture to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiTexturesDetailsTexture
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiTexturesDetailsTextureCopyWith<KodiTexturesDetailsTexture>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -66,6 +70,8 @@ class _$KodiTexturesDetailsTextureCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiTexturesDetailsTexture
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,12 +112,12 @@ class _$KodiTexturesDetailsTextureCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiTexturesDetailsTextureCopyWith<$Res>
+abstract class _$$KodiTexturesDetailsTextureImplCopyWith<$Res>
     implements $KodiTexturesDetailsTextureCopyWith<$Res> {
-  factory _$$_KodiTexturesDetailsTextureCopyWith(
-          _$_KodiTexturesDetailsTexture value,
-          $Res Function(_$_KodiTexturesDetailsTexture) then) =
-      __$$_KodiTexturesDetailsTextureCopyWithImpl<$Res>;
+  factory _$$KodiTexturesDetailsTextureImplCopyWith(
+          _$KodiTexturesDetailsTextureImpl value,
+          $Res Function(_$KodiTexturesDetailsTextureImpl) then) =
+      __$$KodiTexturesDetailsTextureImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,15 +130,17 @@ abstract class _$$_KodiTexturesDetailsTextureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiTexturesDetailsTextureCopyWithImpl<$Res>
+class __$$KodiTexturesDetailsTextureImplCopyWithImpl<$Res>
     extends _$KodiTexturesDetailsTextureCopyWithImpl<$Res,
-        _$_KodiTexturesDetailsTexture>
-    implements _$$_KodiTexturesDetailsTextureCopyWith<$Res> {
-  __$$_KodiTexturesDetailsTextureCopyWithImpl(
-      _$_KodiTexturesDetailsTexture _value,
-      $Res Function(_$_KodiTexturesDetailsTexture) _then)
+        _$KodiTexturesDetailsTextureImpl>
+    implements _$$KodiTexturesDetailsTextureImplCopyWith<$Res> {
+  __$$KodiTexturesDetailsTextureImplCopyWithImpl(
+      _$KodiTexturesDetailsTextureImpl _value,
+      $Res Function(_$KodiTexturesDetailsTextureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiTexturesDetailsTexture
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,7 +151,7 @@ class __$$_KodiTexturesDetailsTextureCopyWithImpl<$Res>
     Object? textureId = freezed,
     Object? url = freezed,
   }) {
-    return _then(_$_KodiTexturesDetailsTexture(
+    return _then(_$KodiTexturesDetailsTextureImpl(
       cachedUrl: freezed == cachedUrl
           ? _value.cachedUrl
           : cachedUrl // ignore: cast_nullable_to_non_nullable
@@ -174,8 +182,8 @@ class __$$_KodiTexturesDetailsTextureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiTexturesDetailsTexture implements _KodiTexturesDetailsTexture {
-  const _$_KodiTexturesDetailsTexture(
+class _$KodiTexturesDetailsTextureImpl implements _KodiTexturesDetailsTexture {
+  const _$KodiTexturesDetailsTextureImpl(
       {@JsonKey(name: 'cachedurl') this.cachedUrl,
       @JsonKey(name: 'imagehash') this.imageHash,
       @JsonKey(name: 'lasthashcheck') this.lastHashCheck,
@@ -184,8 +192,9 @@ class _$_KodiTexturesDetailsTexture implements _KodiTexturesDetailsTexture {
       this.url})
       : _sizes = sizes;
 
-  factory _$_KodiTexturesDetailsTexture.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiTexturesDetailsTextureFromJson(json);
+  factory _$KodiTexturesDetailsTextureImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiTexturesDetailsTextureImplFromJson(json);
 
   @override
   @JsonKey(name: 'cachedurl')
@@ -218,10 +227,10 @@ class _$_KodiTexturesDetailsTexture implements _KodiTexturesDetailsTexture {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiTexturesDetailsTexture &&
+            other is _$KodiTexturesDetailsTextureImpl &&
             (identical(other.cachedUrl, cachedUrl) ||
                 other.cachedUrl == cachedUrl) &&
             (identical(other.imageHash, imageHash) ||
@@ -234,7 +243,7 @@ class _$_KodiTexturesDetailsTexture implements _KodiTexturesDetailsTexture {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -245,16 +254,18 @@ class _$_KodiTexturesDetailsTexture implements _KodiTexturesDetailsTexture {
       textureId,
       url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiTexturesDetailsTexture
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiTexturesDetailsTextureCopyWith<_$_KodiTexturesDetailsTexture>
-      get copyWith => __$$_KodiTexturesDetailsTextureCopyWithImpl<
-          _$_KodiTexturesDetailsTexture>(this, _$identity);
+  _$$KodiTexturesDetailsTextureImplCopyWith<_$KodiTexturesDetailsTextureImpl>
+      get copyWith => __$$KodiTexturesDetailsTextureImplCopyWithImpl<
+          _$KodiTexturesDetailsTextureImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiTexturesDetailsTextureToJson(
+    return _$$KodiTexturesDetailsTextureImplToJson(
       this,
     );
   }
@@ -268,10 +279,10 @@ abstract class _KodiTexturesDetailsTexture
       @JsonKey(name: 'lasthashcheck') final String? lastHashCheck,
       final List<KodiTexturesDetailsSize>? sizes,
       @JsonKey(name: 'textureid') final int? textureId,
-      final String? url}) = _$_KodiTexturesDetailsTexture;
+      final String? url}) = _$KodiTexturesDetailsTextureImpl;
 
   factory _KodiTexturesDetailsTexture.fromJson(Map<String, dynamic> json) =
-      _$_KodiTexturesDetailsTexture.fromJson;
+      _$KodiTexturesDetailsTextureImpl.fromJson;
 
   @override
   @JsonKey(name: 'cachedurl')
@@ -289,8 +300,11 @@ abstract class _KodiTexturesDetailsTexture
   int? get textureId;
   @override
   String? get url;
+
+  /// Create a copy of KodiTexturesDetailsTexture
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiTexturesDetailsTextureCopyWith<_$_KodiTexturesDetailsTexture>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiTexturesDetailsTextureImplCopyWith<_$KodiTexturesDetailsTextureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

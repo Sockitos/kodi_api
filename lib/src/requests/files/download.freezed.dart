@@ -12,7 +12,7 @@ part of 'download.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Download _$DownloadFromJson(Map<String, dynamic> json) {
   return _Download.fromJson(json);
@@ -22,8 +22,12 @@ Download _$DownloadFromJson(Map<String, dynamic> json) {
 mixin _$Download {
   String get path => throw _privateConstructorUsedError;
 
+  /// Serializes this Download to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Download
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DownloadCopyWith<Download> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -46,6 +50,8 @@ class _$DownloadCopyWithImpl<$Res, $Val extends Download>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Download
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -61,29 +67,32 @@ class _$DownloadCopyWithImpl<$Res, $Val extends Download>
 }
 
 /// @nodoc
-abstract class _$$_DownloadCopyWith<$Res> implements $DownloadCopyWith<$Res> {
-  factory _$$_DownloadCopyWith(
-          _$_Download value, $Res Function(_$_Download) then) =
-      __$$_DownloadCopyWithImpl<$Res>;
+abstract class _$$DownloadImplCopyWith<$Res>
+    implements $DownloadCopyWith<$Res> {
+  factory _$$DownloadImplCopyWith(
+          _$DownloadImpl value, $Res Function(_$DownloadImpl) then) =
+      __$$DownloadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String path});
 }
 
 /// @nodoc
-class __$$_DownloadCopyWithImpl<$Res>
-    extends _$DownloadCopyWithImpl<$Res, _$_Download>
-    implements _$$_DownloadCopyWith<$Res> {
-  __$$_DownloadCopyWithImpl(
-      _$_Download _value, $Res Function(_$_Download) _then)
+class __$$DownloadImplCopyWithImpl<$Res>
+    extends _$DownloadCopyWithImpl<$Res, _$DownloadImpl>
+    implements _$$DownloadImplCopyWith<$Res> {
+  __$$DownloadImplCopyWithImpl(
+      _$DownloadImpl _value, $Res Function(_$DownloadImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Download
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = null,
   }) {
-    return _then(_$_Download(
+    return _then(_$DownloadImpl(
       null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -94,11 +103,11 @@ class __$$_DownloadCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Download extends _Download {
-  const _$_Download(this.path) : super._();
+class _$DownloadImpl extends _Download {
+  const _$DownloadImpl(this.path) : super._();
 
-  factory _$_Download.fromJson(Map<String, dynamic> json) =>
-      _$$_DownloadFromJson(json);
+  factory _$DownloadImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DownloadImplFromJson(json);
 
   @override
   final String path;
@@ -109,41 +118,47 @@ class _$_Download extends _Download {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Download &&
+            other is _$DownloadImpl &&
             (identical(other.path, path) || other.path == path));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Download
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DownloadCopyWith<_$_Download> get copyWith =>
-      __$$_DownloadCopyWithImpl<_$_Download>(this, _$identity);
+  _$$DownloadImplCopyWith<_$DownloadImpl> get copyWith =>
+      __$$DownloadImplCopyWithImpl<_$DownloadImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DownloadToJson(
+    return _$$DownloadImplToJson(
       this,
     );
   }
 }
 
 abstract class _Download extends Download {
-  const factory _Download(final String path) = _$_Download;
+  const factory _Download(final String path) = _$DownloadImpl;
   const _Download._() : super._();
 
-  factory _Download.fromJson(Map<String, dynamic> json) = _$_Download.fromJson;
+  factory _Download.fromJson(Map<String, dynamic> json) =
+      _$DownloadImpl.fromJson;
 
   @override
   String get path;
+
+  /// Create a copy of Download
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_DownloadCopyWith<_$_Download> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DownloadImplCopyWith<_$DownloadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,17 +6,17 @@ part of 'kodi_media_artwork_set.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiMediaArtworkSet _$$_KodiMediaArtworkSetFromJson(
+_$KodiMediaArtworkSetImpl _$$KodiMediaArtworkSetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiMediaArtworkSet(
+    _$KodiMediaArtworkSetImpl(
       banner: json['banner'] as String?,
       fanart: json['fanart'] as String?,
       poster: json['poster'] as String?,
       thumb: json['thumb'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiMediaArtworkSetToJson(
-    _$_KodiMediaArtworkSet instance) {
+Map<String, dynamic> _$$KodiMediaArtworkSetImplToJson(
+    _$KodiMediaArtworkSetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

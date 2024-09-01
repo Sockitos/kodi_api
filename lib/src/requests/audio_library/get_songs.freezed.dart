@@ -12,7 +12,7 @@ part of 'get_songs.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSongs _$GetSongsFromJson(Map<String, dynamic> json) {
   return _GetSongs.fromJson(json);
@@ -34,8 +34,12 @@ mixin _$GetSongs {
   @JsonKey(name: 'singlesonly')
   bool get singlesOnly => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSongs to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSongsCopyWith<GetSongs> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -70,6 +74,8 @@ class _$GetSongsCopyWithImpl<$Res, $Val extends GetSongs>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,6 +119,8 @@ class _$GetSongsCopyWithImpl<$Res, $Val extends GetSongs>
     ) as $Val);
   }
 
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -125,6 +133,8 @@ class _$GetSongsCopyWithImpl<$Res, $Val extends GetSongs>
     });
   }
 
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -137,6 +147,8 @@ class _$GetSongsCopyWithImpl<$Res, $Val extends GetSongs>
     });
   }
 
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiAudioLibraryGetSongsFilterCopyWith<$Res>? get filter {
@@ -152,10 +164,11 @@ class _$GetSongsCopyWithImpl<$Res, $Val extends GetSongs>
 }
 
 /// @nodoc
-abstract class _$$_GetSongsCopyWith<$Res> implements $GetSongsCopyWith<$Res> {
-  factory _$$_GetSongsCopyWith(
-          _$_GetSongs value, $Res Function(_$_GetSongs) then) =
-      __$$_GetSongsCopyWithImpl<$Res>;
+abstract class _$$GetSongsImplCopyWith<$Res>
+    implements $GetSongsCopyWith<$Res> {
+  factory _$$GetSongsImplCopyWith(
+          _$GetSongsImpl value, $Res Function(_$GetSongsImpl) then) =
+      __$$GetSongsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -177,13 +190,15 @@ abstract class _$$_GetSongsCopyWith<$Res> implements $GetSongsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetSongsCopyWithImpl<$Res>
-    extends _$GetSongsCopyWithImpl<$Res, _$_GetSongs>
-    implements _$$_GetSongsCopyWith<$Res> {
-  __$$_GetSongsCopyWithImpl(
-      _$_GetSongs _value, $Res Function(_$_GetSongs) _then)
+class __$$GetSongsImplCopyWithImpl<$Res>
+    extends _$GetSongsCopyWithImpl<$Res, _$GetSongsImpl>
+    implements _$$GetSongsImplCopyWith<$Res> {
+  __$$GetSongsImplCopyWithImpl(
+      _$GetSongsImpl _value, $Res Function(_$GetSongsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -195,7 +210,7 @@ class __$$_GetSongsCopyWithImpl<$Res>
     Object? allRoles = null,
     Object? singlesOnly = null,
   }) {
-    return _then(_$_GetSongs(
+    return _then(_$GetSongsImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -230,8 +245,8 @@ class __$$_GetSongsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSongs extends _GetSongs {
-  const _$_GetSongs(
+class _$GetSongsImpl extends _GetSongs {
+  const _$GetSongsImpl(
       {final Set<KodiAudioFieldsSong>? properties,
       this.limits,
       this.sort,
@@ -242,8 +257,8 @@ class _$_GetSongs extends _GetSongs {
       : _properties = properties,
         super._();
 
-  factory _$_GetSongs.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSongsFromJson(json);
+  factory _$GetSongsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSongsImplFromJson(json);
 
   final Set<KodiAudioFieldsSong>? _properties;
   @override
@@ -278,10 +293,10 @@ class _$_GetSongs extends _GetSongs {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSongs &&
+            other is _$GetSongsImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
@@ -295,7 +310,7 @@ class _$_GetSongs extends _GetSongs {
                 other.singlesOnly == singlesOnly));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -307,15 +322,17 @@ class _$_GetSongs extends _GetSongs {
       allRoles,
       singlesOnly);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSongsCopyWith<_$_GetSongs> get copyWith =>
-      __$$_GetSongsCopyWithImpl<_$_GetSongs>(this, _$identity);
+  _$$GetSongsImplCopyWith<_$GetSongsImpl> get copyWith =>
+      __$$GetSongsImplCopyWithImpl<_$GetSongsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSongsToJson(
+    return _$$GetSongsImplToJson(
       this,
     );
   }
@@ -330,10 +347,11 @@ abstract class _GetSongs extends GetSongs {
       final KodiAudioLibraryGetSongsFilter? filter,
       @JsonKey(name: 'includesingles') final bool includeSingles,
       @JsonKey(name: 'allroles') final bool allRoles,
-      @JsonKey(name: 'singlesonly') final bool singlesOnly}) = _$_GetSongs;
+      @JsonKey(name: 'singlesonly') final bool singlesOnly}) = _$GetSongsImpl;
   const _GetSongs._() : super._();
 
-  factory _GetSongs.fromJson(Map<String, dynamic> json) = _$_GetSongs.fromJson;
+  factory _GetSongs.fromJson(Map<String, dynamic> json) =
+      _$GetSongsImpl.fromJson;
 
   @override
   Set<KodiAudioFieldsSong>? get properties;
@@ -353,9 +371,12 @@ abstract class _GetSongs extends GetSongs {
   @override
   @JsonKey(name: 'singlesonly')
   bool get singlesOnly;
+
+  /// Create a copy of GetSongs
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSongsCopyWith<_$_GetSongs> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSongsImplCopyWith<_$GetSongsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -368,8 +389,12 @@ mixin _$GetSongsResponse {
   List<KodiAudioDetailsSong> get songs => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSongsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSongsResponseCopyWith<GetSongsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -395,6 +420,8 @@ class _$GetSongsResponseCopyWithImpl<$Res, $Val extends GetSongsResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -413,6 +440,8 @@ class _$GetSongsResponseCopyWithImpl<$Res, $Val extends GetSongsResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -423,11 +452,11 @@ class _$GetSongsResponseCopyWithImpl<$Res, $Val extends GetSongsResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetSongsResponseCopyWith<$Res>
+abstract class _$$GetSongsResponseImplCopyWith<$Res>
     implements $GetSongsResponseCopyWith<$Res> {
-  factory _$$_GetSongsResponseCopyWith(
-          _$_GetSongsResponse value, $Res Function(_$_GetSongsResponse) then) =
-      __$$_GetSongsResponseCopyWithImpl<$Res>;
+  factory _$$GetSongsResponseImplCopyWith(_$GetSongsResponseImpl value,
+          $Res Function(_$GetSongsResponseImpl) then) =
+      __$$GetSongsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiAudioDetailsSong> songs, KodiListLimitsReturned limits});
@@ -437,20 +466,22 @@ abstract class _$$_GetSongsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSongsResponseCopyWithImpl<$Res>
-    extends _$GetSongsResponseCopyWithImpl<$Res, _$_GetSongsResponse>
-    implements _$$_GetSongsResponseCopyWith<$Res> {
-  __$$_GetSongsResponseCopyWithImpl(
-      _$_GetSongsResponse _value, $Res Function(_$_GetSongsResponse) _then)
+class __$$GetSongsResponseImplCopyWithImpl<$Res>
+    extends _$GetSongsResponseCopyWithImpl<$Res, _$GetSongsResponseImpl>
+    implements _$$GetSongsResponseImplCopyWith<$Res> {
+  __$$GetSongsResponseImplCopyWithImpl(_$GetSongsResponseImpl _value,
+      $Res Function(_$GetSongsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? songs = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetSongsResponse(
+    return _then(_$GetSongsResponseImpl(
       songs: null == songs
           ? _value._songs
           : songs // ignore: cast_nullable_to_non_nullable
@@ -465,13 +496,13 @@ class __$$_GetSongsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSongsResponse implements _GetSongsResponse {
-  const _$_GetSongsResponse(
+class _$GetSongsResponseImpl implements _GetSongsResponse {
+  const _$GetSongsResponseImpl(
       {required final List<KodiAudioDetailsSong> songs, required this.limits})
       : _songs = songs;
 
-  factory _$_GetSongsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSongsResponseFromJson(json);
+  factory _$GetSongsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSongsResponseImplFromJson(json);
 
   final List<KodiAudioDetailsSong> _songs;
   @override
@@ -490,28 +521,31 @@ class _$_GetSongsResponse implements _GetSongsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSongsResponse &&
+            other is _$GetSongsResponseImpl &&
             const DeepCollectionEquality().equals(other._songs, _songs) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_songs), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSongsResponseCopyWith<_$_GetSongsResponse> get copyWith =>
-      __$$_GetSongsResponseCopyWithImpl<_$_GetSongsResponse>(this, _$identity);
+  _$$GetSongsResponseImplCopyWith<_$GetSongsResponseImpl> get copyWith =>
+      __$$GetSongsResponseImplCopyWithImpl<_$GetSongsResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSongsResponseToJson(
+    return _$$GetSongsResponseImplToJson(
       this,
     );
   }
@@ -520,18 +554,21 @@ class _$_GetSongsResponse implements _GetSongsResponse {
 abstract class _GetSongsResponse implements GetSongsResponse {
   const factory _GetSongsResponse(
       {required final List<KodiAudioDetailsSong> songs,
-      required final KodiListLimitsReturned limits}) = _$_GetSongsResponse;
+      required final KodiListLimitsReturned limits}) = _$GetSongsResponseImpl;
 
   factory _GetSongsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetSongsResponse.fromJson;
+      _$GetSongsResponseImpl.fromJson;
 
   @override
   List<KodiAudioDetailsSong> get songs;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSongsResponseCopyWith<_$_GetSongsResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSongsResponseImplCopyWith<_$GetSongsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -702,6 +739,8 @@ mixin _$KodiAudioLibraryGetSongsFilter {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiAudioLibraryGetSongsFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -724,34 +763,39 @@ class _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterGenreId value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterGenreId) then) =
-      __$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterGenreIdImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterGenreIdImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'genreid') int genreId});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterGenreId>
-    implements _$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterGenreId _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterGenreId) _then)
+        _$KodiAudioLibraryGetSongsFilterGenreIdImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterGenreIdImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterGenreIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genreId = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterGenreId(
+    return _then(_$KodiAudioLibraryGetSongsFilterGenreIdImpl(
       genreId: null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
@@ -762,15 +806,15 @@ class __$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterGenreId
+class _$KodiAudioLibraryGetSongsFilterGenreIdImpl
     implements _KodiAudioLibraryGetSongsFilterGenreId {
-  const _$_KodiAudioLibraryGetSongsFilterGenreId(
+  const _$KodiAudioLibraryGetSongsFilterGenreIdImpl(
       {@JsonKey(name: 'genreid') required this.genreId, final String? $type})
       : $type = $type ?? 'genreId';
 
-  factory _$_KodiAudioLibraryGetSongsFilterGenreId.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterGenreIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterGenreIdFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterGenreIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'genreid')
@@ -785,24 +829,26 @@ class _$_KodiAudioLibraryGetSongsFilterGenreId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterGenreId &&
+            other is _$KodiAudioLibraryGetSongsFilterGenreIdImpl &&
             (identical(other.genreId, genreId) || other.genreId == genreId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genreId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterGenreId>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterGenreId>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterGenreIdImpl>
+      get copyWith => __$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWithImpl<
+          _$KodiAudioLibraryGetSongsFilterGenreIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -960,7 +1006,7 @@ class _$_KodiAudioLibraryGetSongsFilterGenreId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterGenreIdToJson(
+    return _$$KodiAudioLibraryGetSongsFilterGenreIdImplToJson(
       this,
     );
   }
@@ -970,46 +1016,51 @@ abstract class _KodiAudioLibraryGetSongsFilterGenreId
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterGenreId(
           {@JsonKey(name: 'genreid') required final int genreId}) =
-      _$_KodiAudioLibraryGetSongsFilterGenreId;
+      _$KodiAudioLibraryGetSongsFilterGenreIdImpl;
 
   factory _KodiAudioLibraryGetSongsFilterGenreId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterGenreId.fromJson;
+      _$KodiAudioLibraryGetSongsFilterGenreIdImpl.fromJson;
 
   @JsonKey(name: 'genreid')
   int get genreId;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterGenreIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterGenreId>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterGenreIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterGenreIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterGenreCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterGenreCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterGenre value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterGenre) then) =
-      __$$_KodiAudioLibraryGetSongsFilterGenreCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterGenreImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterGenreImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterGenreImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterGenreImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterGenreImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String genre});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterGenreCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterGenreImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterGenre>
-    implements _$$_KodiAudioLibraryGetSongsFilterGenreCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterGenreCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterGenre _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterGenre) _then)
+        _$KodiAudioLibraryGetSongsFilterGenreImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterGenreImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterGenreImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterGenreImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterGenreImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genre = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterGenre(
+    return _then(_$KodiAudioLibraryGetSongsFilterGenreImpl(
       genre: null == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
@@ -1020,15 +1071,15 @@ class __$$_KodiAudioLibraryGetSongsFilterGenreCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterGenre
+class _$KodiAudioLibraryGetSongsFilterGenreImpl
     implements _KodiAudioLibraryGetSongsFilterGenre {
-  const _$_KodiAudioLibraryGetSongsFilterGenre(
+  const _$KodiAudioLibraryGetSongsFilterGenreImpl(
       {required this.genre, final String? $type})
       : $type = $type ?? 'genre';
 
-  factory _$_KodiAudioLibraryGetSongsFilterGenre.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterGenreImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterGenreFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterGenreImplFromJson(json);
 
   @override
   final String genre;
@@ -1042,24 +1093,26 @@ class _$_KodiAudioLibraryGetSongsFilterGenre
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterGenre &&
+            other is _$KodiAudioLibraryGetSongsFilterGenreImpl &&
             (identical(other.genre, genre) || other.genre == genre));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genre);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterGenreCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterGenre>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterGenreCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterGenre>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterGenreImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterGenreImpl>
+      get copyWith => __$$KodiAudioLibraryGetSongsFilterGenreImplCopyWithImpl<
+          _$KodiAudioLibraryGetSongsFilterGenreImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1217,7 +1270,7 @@ class _$_KodiAudioLibraryGetSongsFilterGenre
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterGenreToJson(
+    return _$$KodiAudioLibraryGetSongsFilterGenreImplToJson(
       this,
     );
   }
@@ -1226,45 +1279,51 @@ class _$_KodiAudioLibraryGetSongsFilterGenre
 abstract class _KodiAudioLibraryGetSongsFilterGenre
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterGenre(
-      {required final String genre}) = _$_KodiAudioLibraryGetSongsFilterGenre;
+          {required final String genre}) =
+      _$KodiAudioLibraryGetSongsFilterGenreImpl;
 
   factory _KodiAudioLibraryGetSongsFilterGenre.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterGenre.fromJson;
+      _$KodiAudioLibraryGetSongsFilterGenreImpl.fromJson;
 
   String get genre;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterGenreCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterGenre>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterGenreImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterGenreImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterArtistId value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistId) then) =
-      __$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterArtistIdImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterArtistIdImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'artistid') int artistId});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterArtistId>
-    implements _$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterArtistId _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistId) _then)
+        _$KodiAudioLibraryGetSongsFilterArtistIdImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterArtistIdImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterArtistIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artistId = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterArtistId(
+    return _then(_$KodiAudioLibraryGetSongsFilterArtistIdImpl(
       artistId: null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
@@ -1275,15 +1334,15 @@ class __$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterArtistId
+class _$KodiAudioLibraryGetSongsFilterArtistIdImpl
     implements _KodiAudioLibraryGetSongsFilterArtistId {
-  const _$_KodiAudioLibraryGetSongsFilterArtistId(
+  const _$KodiAudioLibraryGetSongsFilterArtistIdImpl(
       {@JsonKey(name: 'artistid') required this.artistId, final String? $type})
       : $type = $type ?? 'artistId';
 
-  factory _$_KodiAudioLibraryGetSongsFilterArtistId.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterArtistIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterArtistIdFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterArtistIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'artistid')
@@ -1298,25 +1357,28 @@ class _$_KodiAudioLibraryGetSongsFilterArtistId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterArtistId &&
+            other is _$KodiAudioLibraryGetSongsFilterArtistIdImpl &&
             (identical(other.artistId, artistId) ||
                 other.artistId == artistId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artistId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistId>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterArtistId>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistIdImpl>
+      get copyWith =>
+          __$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWithImpl<
+              _$KodiAudioLibraryGetSongsFilterArtistIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1474,7 +1536,7 @@ class _$_KodiAudioLibraryGetSongsFilterArtistId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterArtistIdToJson(
+    return _$$KodiAudioLibraryGetSongsFilterArtistIdImplToJson(
       this,
     );
   }
@@ -1484,26 +1546,31 @@ abstract class _KodiAudioLibraryGetSongsFilterArtistId
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterArtistId(
           {@JsonKey(name: 'artistid') required final int artistId}) =
-      _$_KodiAudioLibraryGetSongsFilterArtistId;
+      _$KodiAudioLibraryGetSongsFilterArtistIdImpl;
 
   factory _KodiAudioLibraryGetSongsFilterArtistId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterArtistId.fromJson;
+      _$KodiAudioLibraryGetSongsFilterArtistIdImpl.fromJson;
 
   @JsonKey(name: 'artistid')
   int get artistId;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterArtistIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistId>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterArtistIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistIdRoleId) then) =
-      __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWith<
+    $Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl)
+              then) =
+      __$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
       {@JsonKey(name: 'artistid') int artistId,
@@ -1511,22 +1578,25 @@ abstract class _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId>
-    implements _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistIdRoleId) _then)
+        _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl>
+    implements
+        _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artistId = null,
     Object? roleId = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterArtistIdRoleId(
+    return _then(_$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl(
       artistId: null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
@@ -1541,17 +1611,17 @@ class __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId
+class _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl
     implements _KodiAudioLibraryGetSongsFilterArtistIdRoleId {
-  const _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId(
+  const _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl(
       {@JsonKey(name: 'artistid') required this.artistId,
       @JsonKey(name: 'roleid') required this.roleId,
       final String? $type})
       : $type = $type ?? 'artistIdRoleId';
 
-  factory _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'artistid')
@@ -1569,27 +1639,29 @@ class _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId &&
+            other is _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl &&
             (identical(other.artistId, artistId) ||
                 other.artistId == artistId) &&
             (identical(other.roleId, roleId) || other.roleId == roleId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artistId, roleId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId>
+  _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl>
       get copyWith =>
-          __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWithImpl<
-                  _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId>(
+          __$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWithImpl<
+                  _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl>(
               this, _$identity);
 
   @override
@@ -1748,7 +1820,7 @@ class _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdToJson(
+    return _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplToJson(
       this,
     );
   }
@@ -1759,49 +1831,55 @@ abstract class _KodiAudioLibraryGetSongsFilterArtistIdRoleId
   const factory _KodiAudioLibraryGetSongsFilterArtistIdRoleId(
           {@JsonKey(name: 'artistid') required final int artistId,
           @JsonKey(name: 'roleid') required final int roleId}) =
-      _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId;
+      _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl;
 
   factory _KodiAudioLibraryGetSongsFilterArtistIdRoleId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId.fromJson;
+      _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl.fromJson;
 
   @JsonKey(name: 'artistid')
   int get artistId;
   @JsonKey(name: 'roleid')
   int get roleId;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterArtistIdRole value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistIdRole) then) =
-      __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl)
+              then) =
+      __$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'artistid') int artistId, String role});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterArtistIdRole>
-    implements _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterArtistIdRole _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistIdRole) _then)
+        _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artistId = null,
     Object? role = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterArtistIdRole(
+    return _then(_$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl(
       artistId: null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
@@ -1816,17 +1894,17 @@ class __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterArtistIdRole
+class _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl
     implements _KodiAudioLibraryGetSongsFilterArtistIdRole {
-  const _$_KodiAudioLibraryGetSongsFilterArtistIdRole(
+  const _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl(
       {@JsonKey(name: 'artistid') required this.artistId,
       required this.role,
       final String? $type})
       : $type = $type ?? 'artistIdRole';
 
-  factory _$_KodiAudioLibraryGetSongsFilterArtistIdRole.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplFromJson(json);
 
   @override
   @JsonKey(name: 'artistid')
@@ -1843,27 +1921,30 @@ class _$_KodiAudioLibraryGetSongsFilterArtistIdRole
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterArtistIdRole &&
+            other is _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl &&
             (identical(other.artistId, artistId) ||
                 other.artistId == artistId) &&
             (identical(other.role, role) || other.role == role));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artistId, role);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistIdRole>
+  _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl>
       get copyWith =>
-          __$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWithImpl<
-              _$_KodiAudioLibraryGetSongsFilterArtistIdRole>(this, _$identity);
+          __$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWithImpl<
+                  _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2021,7 +2102,7 @@ class _$_KodiAudioLibraryGetSongsFilterArtistIdRole
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleToJson(
+    return _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplToJson(
       this,
     );
   }
@@ -2032,47 +2113,52 @@ abstract class _KodiAudioLibraryGetSongsFilterArtistIdRole
   const factory _KodiAudioLibraryGetSongsFilterArtistIdRole(
           {@JsonKey(name: 'artistid') required final int artistId,
           required final String role}) =
-      _$_KodiAudioLibraryGetSongsFilterArtistIdRole;
+      _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl;
 
   factory _KodiAudioLibraryGetSongsFilterArtistIdRole.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterArtistIdRole.fromJson;
+      _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl.fromJson;
 
   @JsonKey(name: 'artistid')
   int get artistId;
   String get role;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistIdRole>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterArtistCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterArtistCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterArtist value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterArtist) then) =
-      __$$_KodiAudioLibraryGetSongsFilterArtistCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterArtistImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterArtistImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterArtistImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterArtistImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterArtistImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String artist});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterArtistCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterArtistImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterArtist>
-    implements _$$_KodiAudioLibraryGetSongsFilterArtistCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterArtistCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterArtist _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterArtist) _then)
+        _$KodiAudioLibraryGetSongsFilterArtistImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterArtistImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterArtistImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterArtistImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterArtistImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artist = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterArtist(
+    return _then(_$KodiAudioLibraryGetSongsFilterArtistImpl(
       artist: null == artist
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -2083,15 +2169,15 @@ class __$$_KodiAudioLibraryGetSongsFilterArtistCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterArtist
+class _$KodiAudioLibraryGetSongsFilterArtistImpl
     implements _KodiAudioLibraryGetSongsFilterArtist {
-  const _$_KodiAudioLibraryGetSongsFilterArtist(
+  const _$KodiAudioLibraryGetSongsFilterArtistImpl(
       {required this.artist, final String? $type})
       : $type = $type ?? 'artist';
 
-  factory _$_KodiAudioLibraryGetSongsFilterArtist.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterArtistImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterArtistFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterArtistImplFromJson(json);
 
   @override
   final String artist;
@@ -2105,24 +2191,26 @@ class _$_KodiAudioLibraryGetSongsFilterArtist
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterArtist &&
+            other is _$KodiAudioLibraryGetSongsFilterArtistImpl &&
             (identical(other.artist, artist) || other.artist == artist));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artist);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterArtistCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtist>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterArtistCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterArtist>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterArtistImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistImpl>
+      get copyWith => __$$KodiAudioLibraryGetSongsFilterArtistImplCopyWithImpl<
+          _$KodiAudioLibraryGetSongsFilterArtistImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2280,7 +2368,7 @@ class _$_KodiAudioLibraryGetSongsFilterArtist
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterArtistToJson(
+    return _$$KodiAudioLibraryGetSongsFilterArtistImplToJson(
       this,
     );
   }
@@ -2289,46 +2377,53 @@ class _$_KodiAudioLibraryGetSongsFilterArtist
 abstract class _KodiAudioLibraryGetSongsFilterArtist
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterArtist(
-      {required final String artist}) = _$_KodiAudioLibraryGetSongsFilterArtist;
+          {required final String artist}) =
+      _$KodiAudioLibraryGetSongsFilterArtistImpl;
 
   factory _KodiAudioLibraryGetSongsFilterArtist.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterArtist.fromJson;
+      _$KodiAudioLibraryGetSongsFilterArtistImpl.fromJson;
 
   String get artist;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterArtistCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtist>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterArtistImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterArtistRoleId value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistRoleId) then) =
-      __$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl)
+              then) =
+      __$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String artist, @JsonKey(name: 'roleid') int roleId});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterArtistRoleId>
-    implements _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterArtistRoleId _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistRoleId) _then)
+        _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artist = null,
     Object? roleId = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterArtistRoleId(
+    return _then(_$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl(
       artist: null == artist
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -2343,17 +2438,17 @@ class __$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterArtistRoleId
+class _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl
     implements _KodiAudioLibraryGetSongsFilterArtistRoleId {
-  const _$_KodiAudioLibraryGetSongsFilterArtistRoleId(
+  const _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl(
       {required this.artist,
       @JsonKey(name: 'roleid') required this.roleId,
       final String? $type})
       : $type = $type ?? 'artistRoleId';
 
-  factory _$_KodiAudioLibraryGetSongsFilterArtistRoleId.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplFromJson(json);
 
   @override
   final String artist;
@@ -2370,26 +2465,29 @@ class _$_KodiAudioLibraryGetSongsFilterArtistRoleId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterArtistRoleId &&
+            other is _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl &&
             (identical(other.artist, artist) || other.artist == artist) &&
             (identical(other.roleId, roleId) || other.roleId == roleId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artist, roleId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistRoleId>
+  _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl>
       get copyWith =>
-          __$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWithImpl<
-              _$_KodiAudioLibraryGetSongsFilterArtistRoleId>(this, _$identity);
+          __$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWithImpl<
+                  _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2547,7 +2645,7 @@ class _$_KodiAudioLibraryGetSongsFilterArtistRoleId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdToJson(
+    return _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplToJson(
       this,
     );
   }
@@ -2558,48 +2656,53 @@ abstract class _KodiAudioLibraryGetSongsFilterArtistRoleId
   const factory _KodiAudioLibraryGetSongsFilterArtistRoleId(
           {required final String artist,
           @JsonKey(name: 'roleid') required final int roleId}) =
-      _$_KodiAudioLibraryGetSongsFilterArtistRoleId;
+      _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl;
 
   factory _KodiAudioLibraryGetSongsFilterArtistRoleId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterArtistRoleId.fromJson;
+      _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl.fromJson;
 
   String get artist;
   @JsonKey(name: 'roleid')
   int get roleId;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistRoleId>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterArtistRole value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistRole) then) =
-      __$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterArtistRoleImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterArtistRoleImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String artist, String role});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterArtistRole>
-    implements _$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterArtistRole _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterArtistRole) _then)
+        _$KodiAudioLibraryGetSongsFilterArtistRoleImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterArtistRoleImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterArtistRoleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artist = null,
     Object? role = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterArtistRole(
+    return _then(_$KodiAudioLibraryGetSongsFilterArtistRoleImpl(
       artist: null == artist
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -2614,15 +2717,15 @@ class __$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterArtistRole
+class _$KodiAudioLibraryGetSongsFilterArtistRoleImpl
     implements _KodiAudioLibraryGetSongsFilterArtistRole {
-  const _$_KodiAudioLibraryGetSongsFilterArtistRole(
+  const _$KodiAudioLibraryGetSongsFilterArtistRoleImpl(
       {required this.artist, required this.role, final String? $type})
       : $type = $type ?? 'artistRole';
 
-  factory _$_KodiAudioLibraryGetSongsFilterArtistRole.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterArtistRoleImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterArtistRoleFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterArtistRoleImplFromJson(json);
 
   @override
   final String artist;
@@ -2638,25 +2741,28 @@ class _$_KodiAudioLibraryGetSongsFilterArtistRole
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterArtistRole &&
+            other is _$KodiAudioLibraryGetSongsFilterArtistRoleImpl &&
             (identical(other.artist, artist) || other.artist == artist) &&
             (identical(other.role, role) || other.role == role));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artist, role);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistRole>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterArtistRole>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistRoleImpl>
+      get copyWith =>
+          __$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWithImpl<
+              _$KodiAudioLibraryGetSongsFilterArtistRoleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2814,7 +2920,7 @@ class _$_KodiAudioLibraryGetSongsFilterArtistRole
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterArtistRoleToJson(
+    return _$$KodiAudioLibraryGetSongsFilterArtistRoleImplToJson(
       this,
     );
   }
@@ -2824,46 +2930,51 @@ abstract class _KodiAudioLibraryGetSongsFilterArtistRole
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterArtistRole(
           {required final String artist, required final String role}) =
-      _$_KodiAudioLibraryGetSongsFilterArtistRole;
+      _$KodiAudioLibraryGetSongsFilterArtistRoleImpl;
 
   factory _KodiAudioLibraryGetSongsFilterArtistRole.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterArtistRole.fromJson;
+      _$KodiAudioLibraryGetSongsFilterArtistRoleImpl.fromJson;
 
   String get artist;
   String get role;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterArtistRoleCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterArtistRole>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterArtistRoleImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterArtistRoleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterAlbumId value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterAlbumId) then) =
-      __$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterAlbumIdImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterAlbumIdImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'albumid') int albumId});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterAlbumId>
-    implements _$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterAlbumId _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterAlbumId) _then)
+        _$KodiAudioLibraryGetSongsFilterAlbumIdImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterAlbumIdImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterAlbumIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumId = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterAlbumId(
+    return _then(_$KodiAudioLibraryGetSongsFilterAlbumIdImpl(
       albumId: null == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
@@ -2874,15 +2985,15 @@ class __$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterAlbumId
+class _$KodiAudioLibraryGetSongsFilterAlbumIdImpl
     implements _KodiAudioLibraryGetSongsFilterAlbumId {
-  const _$_KodiAudioLibraryGetSongsFilterAlbumId(
+  const _$KodiAudioLibraryGetSongsFilterAlbumIdImpl(
       {@JsonKey(name: 'albumid') required this.albumId, final String? $type})
       : $type = $type ?? 'albumId';
 
-  factory _$_KodiAudioLibraryGetSongsFilterAlbumId.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterAlbumIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterAlbumIdFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterAlbumIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'albumid')
@@ -2897,24 +3008,26 @@ class _$_KodiAudioLibraryGetSongsFilterAlbumId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterAlbumId &&
+            other is _$KodiAudioLibraryGetSongsFilterAlbumIdImpl &&
             (identical(other.albumId, albumId) || other.albumId == albumId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, albumId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterAlbumId>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterAlbumId>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterAlbumIdImpl>
+      get copyWith => __$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWithImpl<
+          _$KodiAudioLibraryGetSongsFilterAlbumIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3072,7 +3185,7 @@ class _$_KodiAudioLibraryGetSongsFilterAlbumId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterAlbumIdToJson(
+    return _$$KodiAudioLibraryGetSongsFilterAlbumIdImplToJson(
       this,
     );
   }
@@ -3082,46 +3195,51 @@ abstract class _KodiAudioLibraryGetSongsFilterAlbumId
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterAlbumId(
           {@JsonKey(name: 'albumid') required final int albumId}) =
-      _$_KodiAudioLibraryGetSongsFilterAlbumId;
+      _$KodiAudioLibraryGetSongsFilterAlbumIdImpl;
 
   factory _KodiAudioLibraryGetSongsFilterAlbumId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterAlbumId.fromJson;
+      _$KodiAudioLibraryGetSongsFilterAlbumIdImpl.fromJson;
 
   @JsonKey(name: 'albumid')
   int get albumId;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterAlbumIdCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterAlbumId>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterAlbumIdImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterAlbumIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterAlbumCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterAlbumCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterAlbum value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterAlbum) then) =
-      __$$_KodiAudioLibraryGetSongsFilterAlbumCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterAlbumImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterAlbumImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String album});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterAlbumCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterAlbum>
-    implements _$$_KodiAudioLibraryGetSongsFilterAlbumCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterAlbumCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterAlbum _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterAlbum) _then)
+        _$KodiAudioLibraryGetSongsFilterAlbumImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterAlbumImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterAlbumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? album = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterAlbum(
+    return _then(_$KodiAudioLibraryGetSongsFilterAlbumImpl(
       album: null == album
           ? _value.album
           : album // ignore: cast_nullable_to_non_nullable
@@ -3132,15 +3250,15 @@ class __$$_KodiAudioLibraryGetSongsFilterAlbumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterAlbum
+class _$KodiAudioLibraryGetSongsFilterAlbumImpl
     implements _KodiAudioLibraryGetSongsFilterAlbum {
-  const _$_KodiAudioLibraryGetSongsFilterAlbum(
+  const _$KodiAudioLibraryGetSongsFilterAlbumImpl(
       {required this.album, final String? $type})
       : $type = $type ?? 'album';
 
-  factory _$_KodiAudioLibraryGetSongsFilterAlbum.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterAlbumImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterAlbumFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterAlbumImplFromJson(json);
 
   @override
   final String album;
@@ -3154,24 +3272,26 @@ class _$_KodiAudioLibraryGetSongsFilterAlbum
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterAlbum &&
+            other is _$KodiAudioLibraryGetSongsFilterAlbumImpl &&
             (identical(other.album, album) || other.album == album));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, album);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterAlbumCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterAlbum>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterAlbumCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterAlbum>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterAlbumImpl>
+      get copyWith => __$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWithImpl<
+          _$KodiAudioLibraryGetSongsFilterAlbumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3329,7 +3449,7 @@ class _$_KodiAudioLibraryGetSongsFilterAlbum
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterAlbumToJson(
+    return _$$KodiAudioLibraryGetSongsFilterAlbumImplToJson(
       this,
     );
   }
@@ -3338,25 +3458,29 @@ class _$_KodiAudioLibraryGetSongsFilterAlbum
 abstract class _KodiAudioLibraryGetSongsFilterAlbum
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterAlbum(
-      {required final String album}) = _$_KodiAudioLibraryGetSongsFilterAlbum;
+          {required final String album}) =
+      _$KodiAudioLibraryGetSongsFilterAlbumImpl;
 
   factory _KodiAudioLibraryGetSongsFilterAlbum.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterAlbum.fromJson;
+      _$KodiAudioLibraryGetSongsFilterAlbumImpl.fromJson;
 
   String get album;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterAlbumCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterAlbum>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterAlbumImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterAlbumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetSongsFilterFilterCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetSongsFilterFilterCopyWith(
-          _$_KodiAudioLibraryGetSongsFilterFilter value,
-          $Res Function(_$_KodiAudioLibraryGetSongsFilterFilter) then) =
-      __$$_KodiAudioLibraryGetSongsFilterFilterCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetSongsFilterFilterImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetSongsFilterFilterImplCopyWith(
+          _$KodiAudioLibraryGetSongsFilterFilterImpl value,
+          $Res Function(_$KodiAudioLibraryGetSongsFilterFilterImpl) then) =
+      __$$KodiAudioLibraryGetSongsFilterFilterImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@KodiListFilterSongsConverter() KodiListFilterSongs filter});
 
@@ -3364,21 +3488,23 @@ abstract class _$$_KodiAudioLibraryGetSongsFilterFilterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetSongsFilterFilterCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetSongsFilterFilterImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetSongsFilterCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetSongsFilterFilter>
-    implements _$$_KodiAudioLibraryGetSongsFilterFilterCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetSongsFilterFilterCopyWithImpl(
-      _$_KodiAudioLibraryGetSongsFilterFilter _value,
-      $Res Function(_$_KodiAudioLibraryGetSongsFilterFilter) _then)
+        _$KodiAudioLibraryGetSongsFilterFilterImpl>
+    implements _$$KodiAudioLibraryGetSongsFilterFilterImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetSongsFilterFilterImplCopyWithImpl(
+      _$KodiAudioLibraryGetSongsFilterFilterImpl _value,
+      $Res Function(_$KodiAudioLibraryGetSongsFilterFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? filter = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetSongsFilterFilter(
+    return _then(_$KodiAudioLibraryGetSongsFilterFilterImpl(
       null == filter
           ? _value.filter
           : filter // ignore: cast_nullable_to_non_nullable
@@ -3386,6 +3512,8 @@ class __$$_KodiAudioLibraryGetSongsFilterFilterCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterSongsCopyWith<$Res> get filter {
@@ -3397,16 +3525,16 @@ class __$$_KodiAudioLibraryGetSongsFilterFilterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetSongsFilterFilter
+class _$KodiAudioLibraryGetSongsFilterFilterImpl
     implements _KodiAudioLibraryGetSongsFilterFilter {
-  const _$_KodiAudioLibraryGetSongsFilterFilter(
+  const _$KodiAudioLibraryGetSongsFilterFilterImpl(
       @KodiListFilterSongsConverter() this.filter,
       {final String? $type})
       : $type = $type ?? 'filter';
 
-  factory _$_KodiAudioLibraryGetSongsFilterFilter.fromJson(
+  factory _$KodiAudioLibraryGetSongsFilterFilterImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetSongsFilterFilterFromJson(json);
+      _$$KodiAudioLibraryGetSongsFilterFilterImplFromJson(json);
 
   @override
   @KodiListFilterSongsConverter()
@@ -3421,24 +3549,26 @@ class _$_KodiAudioLibraryGetSongsFilterFilter
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetSongsFilterFilter &&
+            other is _$KodiAudioLibraryGetSongsFilterFilterImpl &&
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetSongsFilterFilterCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterFilter>
-      get copyWith => __$$_KodiAudioLibraryGetSongsFilterFilterCopyWithImpl<
-          _$_KodiAudioLibraryGetSongsFilterFilter>(this, _$identity);
+  _$$KodiAudioLibraryGetSongsFilterFilterImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterFilterImpl>
+      get copyWith => __$$KodiAudioLibraryGetSongsFilterFilterImplCopyWithImpl<
+          _$KodiAudioLibraryGetSongsFilterFilterImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3596,7 +3726,7 @@ class _$_KodiAudioLibraryGetSongsFilterFilter
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetSongsFilterFilterToJson(
+    return _$$KodiAudioLibraryGetSongsFilterFilterImplToJson(
       this,
     );
   }
@@ -3606,16 +3736,19 @@ abstract class _KodiAudioLibraryGetSongsFilterFilter
     implements KodiAudioLibraryGetSongsFilter {
   const factory _KodiAudioLibraryGetSongsFilterFilter(
           @KodiListFilterSongsConverter() final KodiListFilterSongs filter) =
-      _$_KodiAudioLibraryGetSongsFilterFilter;
+      _$KodiAudioLibraryGetSongsFilterFilterImpl;
 
   factory _KodiAudioLibraryGetSongsFilterFilter.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetSongsFilterFilter.fromJson;
+      _$KodiAudioLibraryGetSongsFilterFilterImpl.fromJson;
 
   @KodiListFilterSongsConverter()
   KodiListFilterSongs get filter;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetSongsFilterFilterCopyWith<
-          _$_KodiAudioLibraryGetSongsFilterFilter>
+
+  /// Create a copy of KodiAudioLibraryGetSongsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetSongsFilterFilterImplCopyWith<
+          _$KodiAudioLibraryGetSongsFilterFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

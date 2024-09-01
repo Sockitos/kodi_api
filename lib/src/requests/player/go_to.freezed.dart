@@ -12,7 +12,7 @@ part of 'go_to.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GoTo _$GoToFromJson(Map<String, dynamic> json) {
   return _GoTo.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GoTo {
   @GoToToConverter()
   GoToTo get to => throw _privateConstructorUsedError;
 
+  /// Serializes this GoTo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GoToCopyWith<GoTo> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -50,6 +54,8 @@ class _$GoToCopyWithImpl<$Res, $Val extends GoTo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$GoToCopyWithImpl<$Res, $Val extends GoTo>
     ) as $Val);
   }
 
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GoToToCopyWith<$Res> get to {
@@ -78,9 +86,10 @@ class _$GoToCopyWithImpl<$Res, $Val extends GoTo>
 }
 
 /// @nodoc
-abstract class _$$_GoToCopyWith<$Res> implements $GoToCopyWith<$Res> {
-  factory _$$_GoToCopyWith(_$_GoTo value, $Res Function(_$_GoTo) then) =
-      __$$_GoToCopyWithImpl<$Res>;
+abstract class _$$GoToImplCopyWith<$Res> implements $GoToCopyWith<$Res> {
+  factory _$$GoToImplCopyWith(
+          _$GoToImpl value, $Res Function(_$GoToImpl) then) =
+      __$$GoToImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'playerid') int id, @GoToToConverter() GoToTo to});
@@ -90,18 +99,21 @@ abstract class _$$_GoToCopyWith<$Res> implements $GoToCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GoToCopyWithImpl<$Res> extends _$GoToCopyWithImpl<$Res, _$_GoTo>
-    implements _$$_GoToCopyWith<$Res> {
-  __$$_GoToCopyWithImpl(_$_GoTo _value, $Res Function(_$_GoTo) _then)
+class __$$GoToImplCopyWithImpl<$Res>
+    extends _$GoToCopyWithImpl<$Res, _$GoToImpl>
+    implements _$$GoToImplCopyWith<$Res> {
+  __$$GoToImplCopyWithImpl(_$GoToImpl _value, $Res Function(_$GoToImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? to = null,
   }) {
-    return _then(_$_GoTo(
+    return _then(_$GoToImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -116,11 +128,13 @@ class __$$_GoToCopyWithImpl<$Res> extends _$GoToCopyWithImpl<$Res, _$_GoTo>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GoTo extends _GoTo {
-  const _$_GoTo(@JsonKey(name: 'playerid') this.id, @GoToToConverter() this.to)
+class _$GoToImpl extends _GoTo {
+  const _$GoToImpl(
+      @JsonKey(name: 'playerid') this.id, @GoToToConverter() this.to)
       : super._();
 
-  factory _$_GoTo.fromJson(Map<String, dynamic> json) => _$$_GoToFromJson(json);
+  factory _$GoToImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoToImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -135,27 +149,29 @@ class _$_GoTo extends _GoTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GoTo &&
+            other is _$GoToImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.to, to) || other.to == to));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, to);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GoToCopyWith<_$_GoTo> get copyWith =>
-      __$$_GoToCopyWithImpl<_$_GoTo>(this, _$identity);
+  _$$GoToImplCopyWith<_$GoToImpl> get copyWith =>
+      __$$GoToImplCopyWithImpl<_$GoToImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoToToJson(
+    return _$$GoToImplToJson(
       this,
     );
   }
@@ -163,10 +179,10 @@ class _$_GoTo extends _GoTo {
 
 abstract class _GoTo extends GoTo {
   const factory _GoTo(@JsonKey(name: 'playerid') final int id,
-      @GoToToConverter() final GoToTo to) = _$_GoTo;
+      @GoToToConverter() final GoToTo to) = _$GoToImpl;
   const _GoTo._() : super._();
 
-  factory _GoTo.fromJson(Map<String, dynamic> json) = _$_GoTo.fromJson;
+  factory _GoTo.fromJson(Map<String, dynamic> json) = _$GoToImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -174,9 +190,13 @@ abstract class _GoTo extends GoTo {
   @override
   @GoToToConverter()
   GoToTo get to;
+
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GoToCopyWith<_$_GoTo> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GoToImplCopyWith<_$GoToImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GoToTo _$GoToToFromJson(Map<String, dynamic> json) {
@@ -233,6 +253,8 @@ mixin _$GoToTo {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this GoToTo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -251,31 +273,36 @@ class _$GoToToCopyWithImpl<$Res, $Val extends GoToTo>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_GoToToAbsCopyWith<$Res> {
-  factory _$$_GoToToAbsCopyWith(
-          _$_GoToToAbs value, $Res Function(_$_GoToToAbs) then) =
-      __$$_GoToToAbsCopyWithImpl<$Res>;
+abstract class _$$GoToToAbsImplCopyWith<$Res> {
+  factory _$$GoToToAbsImplCopyWith(
+          _$GoToToAbsImpl value, $Res Function(_$GoToToAbsImpl) then) =
+      __$$GoToToAbsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int value});
 }
 
 /// @nodoc
-class __$$_GoToToAbsCopyWithImpl<$Res>
-    extends _$GoToToCopyWithImpl<$Res, _$_GoToToAbs>
-    implements _$$_GoToToAbsCopyWith<$Res> {
-  __$$_GoToToAbsCopyWithImpl(
-      _$_GoToToAbs _value, $Res Function(_$_GoToToAbs) _then)
+class __$$GoToToAbsImplCopyWithImpl<$Res>
+    extends _$GoToToCopyWithImpl<$Res, _$GoToToAbsImpl>
+    implements _$$GoToToAbsImplCopyWith<$Res> {
+  __$$GoToToAbsImplCopyWithImpl(
+      _$GoToToAbsImpl _value, $Res Function(_$GoToToAbsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_GoToToAbs(
+    return _then(_$GoToToAbsImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -286,12 +313,12 @@ class __$$_GoToToAbsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GoToToAbs implements _GoToToAbs {
-  const _$_GoToToAbs(this.value, {final String? $type})
+class _$GoToToAbsImpl implements _GoToToAbs {
+  const _$GoToToAbsImpl(this.value, {final String? $type})
       : $type = $type ?? 'abs';
 
-  factory _$_GoToToAbs.fromJson(Map<String, dynamic> json) =>
-      _$$_GoToToAbsFromJson(json);
+  factory _$GoToToAbsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoToToAbsImplFromJson(json);
 
   @override
   final int value;
@@ -305,22 +332,24 @@ class _$_GoToToAbs implements _GoToToAbs {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GoToToAbs &&
+            other is _$GoToToAbsImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GoToToAbsCopyWith<_$_GoToToAbs> get copyWith =>
-      __$$_GoToToAbsCopyWithImpl<_$_GoToToAbs>(this, _$identity);
+  _$$GoToToAbsImplCopyWith<_$GoToToAbsImpl> get copyWith =>
+      __$$GoToToAbsImplCopyWithImpl<_$GoToToAbsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -386,48 +415,53 @@ class _$_GoToToAbs implements _GoToToAbs {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoToToAbsToJson(
+    return _$$GoToToAbsImplToJson(
       this,
     );
   }
 }
 
 abstract class _GoToToAbs implements GoToTo {
-  const factory _GoToToAbs(final int value) = _$_GoToToAbs;
+  const factory _GoToToAbs(final int value) = _$GoToToAbsImpl;
 
   factory _GoToToAbs.fromJson(Map<String, dynamic> json) =
-      _$_GoToToAbs.fromJson;
+      _$GoToToAbsImpl.fromJson;
 
   @override
   int get value;
-  @JsonKey(ignore: true)
-  _$$_GoToToAbsCopyWith<_$_GoToToAbs> get copyWith =>
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GoToToAbsImplCopyWith<_$GoToToAbsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_GoToToEnumCopyWith<$Res> {
-  factory _$$_GoToToEnumCopyWith(
-          _$_GoToToEnum value, $Res Function(_$_GoToToEnum) then) =
-      __$$_GoToToEnumCopyWithImpl<$Res>;
+abstract class _$$GoToToEnumImplCopyWith<$Res> {
+  factory _$$GoToToEnumImplCopyWith(
+          _$GoToToEnumImpl value, $Res Function(_$GoToToEnumImpl) then) =
+      __$$GoToToEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerGoToTo value});
 }
 
 /// @nodoc
-class __$$_GoToToEnumCopyWithImpl<$Res>
-    extends _$GoToToCopyWithImpl<$Res, _$_GoToToEnum>
-    implements _$$_GoToToEnumCopyWith<$Res> {
-  __$$_GoToToEnumCopyWithImpl(
-      _$_GoToToEnum _value, $Res Function(_$_GoToToEnum) _then)
+class __$$GoToToEnumImplCopyWithImpl<$Res>
+    extends _$GoToToCopyWithImpl<$Res, _$GoToToEnumImpl>
+    implements _$$GoToToEnumImplCopyWith<$Res> {
+  __$$GoToToEnumImplCopyWithImpl(
+      _$GoToToEnumImpl _value, $Res Function(_$GoToToEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_GoToToEnum(
+    return _then(_$GoToToEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -438,12 +472,12 @@ class __$$_GoToToEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GoToToEnum implements _GoToToEnum {
-  const _$_GoToToEnum(this.value, {final String? $type})
+class _$GoToToEnumImpl implements _GoToToEnum {
+  const _$GoToToEnumImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_GoToToEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_GoToToEnumFromJson(json);
+  factory _$GoToToEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoToToEnumImplFromJson(json);
 
   @override
   final KodiPlayerGoToTo value;
@@ -457,22 +491,24 @@ class _$_GoToToEnum implements _GoToToEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GoToToEnum &&
+            other is _$GoToToEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GoToToEnumCopyWith<_$_GoToToEnum> get copyWith =>
-      __$$_GoToToEnumCopyWithImpl<_$_GoToToEnum>(this, _$identity);
+  _$$GoToToEnumImplCopyWith<_$GoToToEnumImpl> get copyWith =>
+      __$$GoToToEnumImplCopyWithImpl<_$GoToToEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -538,21 +574,24 @@ class _$_GoToToEnum implements _GoToToEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoToToEnumToJson(
+    return _$$GoToToEnumImplToJson(
       this,
     );
   }
 }
 
 abstract class _GoToToEnum implements GoToTo {
-  const factory _GoToToEnum(final KodiPlayerGoToTo value) = _$_GoToToEnum;
+  const factory _GoToToEnum(final KodiPlayerGoToTo value) = _$GoToToEnumImpl;
 
   factory _GoToToEnum.fromJson(Map<String, dynamic> json) =
-      _$_GoToToEnum.fromJson;
+      _$GoToToEnumImpl.fromJson;
 
   @override
   KodiPlayerGoToTo get value;
-  @JsonKey(ignore: true)
-  _$$_GoToToEnumCopyWith<_$_GoToToEnum> get copyWith =>
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GoToToEnumImplCopyWith<_$GoToToEnumImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

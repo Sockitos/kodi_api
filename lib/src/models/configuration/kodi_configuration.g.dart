@@ -6,14 +6,15 @@ part of 'kodi_configuration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiConfiguration _$$_KodiConfigurationFromJson(Map<String, dynamic> json) =>
-    _$_KodiConfiguration(
+_$KodiConfigurationImpl _$$KodiConfigurationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiConfigurationImpl(
       notifications: KodiConfigurationNotifications.fromJson(
           json['notifications'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiConfigurationToJson(
-        _$_KodiConfiguration instance) =>
+Map<String, dynamic> _$$KodiConfigurationImplToJson(
+        _$KodiConfigurationImpl instance) =>
     <String, dynamic>{
       'notifications': instance.notifications.toJson(),
     };

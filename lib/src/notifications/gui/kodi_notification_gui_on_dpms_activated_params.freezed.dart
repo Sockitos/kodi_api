@@ -12,7 +12,7 @@ part of 'kodi_notification_gui_on_dpms_activated_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationGUIOnDPMSActivatedParams
     _$KodiNotificationGUIOnDPMSActivatedParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationGUIOnDPMSActivatedParams {
   KodiNotificationGUIOnDPMSActivatedParamsData? get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationGUIOnDPMSActivatedParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationGUIOnDPMSActivatedParamsCopyWith<
           KodiNotificationGUIOnDPMSActivatedParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -59,6 +63,8 @@ class _$KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class _$KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith<$Res>? get data {
@@ -92,12 +100,12 @@ class _$KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWith<$Res>
+abstract class _$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWith<$Res>
     implements $KodiNotificationGUIOnDPMSActivatedParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWith(
-          _$_KodiNotificationGUIOnDPMSActivatedParams value,
-          $Res Function(_$_KodiNotificationGUIOnDPMSActivatedParams) then) =
-      __$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWith(
+          _$KodiNotificationGUIOnDPMSActivatedParamsImpl value,
+          $Res Function(_$KodiNotificationGUIOnDPMSActivatedParamsImpl) then) =
+      __$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,22 +116,24 @@ abstract class _$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<$Res>
+class __$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<$Res,
-        _$_KodiNotificationGUIOnDPMSActivatedParams>
-    implements _$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWith<$Res> {
-  __$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl(
-      _$_KodiNotificationGUIOnDPMSActivatedParams _value,
-      $Res Function(_$_KodiNotificationGUIOnDPMSActivatedParams) _then)
+        _$KodiNotificationGUIOnDPMSActivatedParamsImpl>
+    implements _$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWith<$Res> {
+  __$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWithImpl(
+      _$KodiNotificationGUIOnDPMSActivatedParamsImpl _value,
+      $Res Function(_$KodiNotificationGUIOnDPMSActivatedParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = freezed,
   }) {
-    return _then(_$_KodiNotificationGUIOnDPMSActivatedParams(
+    return _then(_$KodiNotificationGUIOnDPMSActivatedParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -138,14 +148,14 @@ class __$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationGUIOnDPMSActivatedParams
+class _$KodiNotificationGUIOnDPMSActivatedParamsImpl
     implements _KodiNotificationGUIOnDPMSActivatedParams {
-  const _$_KodiNotificationGUIOnDPMSActivatedParams(
+  const _$KodiNotificationGUIOnDPMSActivatedParamsImpl(
       {required this.sender, this.data});
 
-  factory _$_KodiNotificationGUIOnDPMSActivatedParams.fromJson(
+  factory _$KodiNotificationGUIOnDPMSActivatedParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationGUIOnDPMSActivatedParamsFromJson(json);
+      _$$KodiNotificationGUIOnDPMSActivatedParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -158,29 +168,32 @@ class _$_KodiNotificationGUIOnDPMSActivatedParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationGUIOnDPMSActivatedParams &&
+            other is _$KodiNotificationGUIOnDPMSActivatedParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWith<
-          _$_KodiNotificationGUIOnDPMSActivatedParams>
-      get copyWith => __$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWithImpl<
-          _$_KodiNotificationGUIOnDPMSActivatedParams>(this, _$identity);
+  _$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWith<
+          _$KodiNotificationGUIOnDPMSActivatedParamsImpl>
+      get copyWith =>
+          __$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWithImpl<
+              _$KodiNotificationGUIOnDPMSActivatedParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationGUIOnDPMSActivatedParamsToJson(
+    return _$$KodiNotificationGUIOnDPMSActivatedParamsImplToJson(
       this,
     );
   }
@@ -191,20 +204,23 @@ abstract class _KodiNotificationGUIOnDPMSActivatedParams
   const factory _KodiNotificationGUIOnDPMSActivatedParams(
           {required final String sender,
           final KodiNotificationGUIOnDPMSActivatedParamsData? data}) =
-      _$_KodiNotificationGUIOnDPMSActivatedParams;
+      _$KodiNotificationGUIOnDPMSActivatedParamsImpl;
 
   factory _KodiNotificationGUIOnDPMSActivatedParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationGUIOnDPMSActivatedParams.fromJson;
+      _$KodiNotificationGUIOnDPMSActivatedParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationGUIOnDPMSActivatedParamsData? get data;
+
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationGUIOnDPMSActivatedParamsCopyWith<
-          _$_KodiNotificationGUIOnDPMSActivatedParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationGUIOnDPMSActivatedParamsImplCopyWith<
+          _$KodiNotificationGUIOnDPMSActivatedParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -218,8 +234,12 @@ KodiNotificationGUIOnDPMSActivatedParamsData
 mixin _$KodiNotificationGUIOnDPMSActivatedParamsData {
   String get test => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationGUIOnDPMSActivatedParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith<
           KodiNotificationGUIOnDPMSActivatedParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -248,6 +268,8 @@ class _$KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -263,33 +285,37 @@ class _$KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWith<$Res>
     implements $KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith(
-          _$_KodiNotificationGUIOnDPMSActivatedParamsData value,
-          $Res Function(_$_KodiNotificationGUIOnDPMSActivatedParamsData) then) =
-      __$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl<$Res>;
+  factory _$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWith(
+          _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl value,
+          $Res Function(_$KodiNotificationGUIOnDPMSActivatedParamsDataImpl)
+              then) =
+      __$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String test});
 }
 
 /// @nodoc
-class __$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationGUIOnDPMSActivatedParamsData>
-    implements _$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl(
-      _$_KodiNotificationGUIOnDPMSActivatedParamsData _value,
-      $Res Function(_$_KodiNotificationGUIOnDPMSActivatedParamsData) _then)
+        _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl>
+    implements
+        _$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWithImpl(
+      _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl _value,
+      $Res Function(_$KodiNotificationGUIOnDPMSActivatedParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? test = null,
   }) {
-    return _then(_$_KodiNotificationGUIOnDPMSActivatedParamsData(
+    return _then(_$KodiNotificationGUIOnDPMSActivatedParamsDataImpl(
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -300,13 +326,14 @@ class __$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationGUIOnDPMSActivatedParamsData
+class _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl
     implements _KodiNotificationGUIOnDPMSActivatedParamsData {
-  const _$_KodiNotificationGUIOnDPMSActivatedParamsData({required this.test});
+  const _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl(
+      {required this.test});
 
-  factory _$_KodiNotificationGUIOnDPMSActivatedParamsData.fromJson(
+  factory _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationGUIOnDPMSActivatedParamsDataFromJson(json);
+      _$$KodiNotificationGUIOnDPMSActivatedParamsDataImplFromJson(json);
 
   @override
   final String test;
@@ -317,30 +344,32 @@ class _$_KodiNotificationGUIOnDPMSActivatedParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationGUIOnDPMSActivatedParamsData &&
+            other is _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl &&
             (identical(other.test, test) || other.test == test));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, test);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith<
-          _$_KodiNotificationGUIOnDPMSActivatedParamsData>
+  _$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWith<
+          _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWithImpl<
-                  _$_KodiNotificationGUIOnDPMSActivatedParamsData>(
+          __$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWithImpl<
+                  _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationGUIOnDPMSActivatedParamsDataToJson(
+    return _$$KodiNotificationGUIOnDPMSActivatedParamsDataImplToJson(
       this,
     );
   }
@@ -350,17 +379,20 @@ abstract class _KodiNotificationGUIOnDPMSActivatedParamsData
     implements KodiNotificationGUIOnDPMSActivatedParamsData {
   const factory _KodiNotificationGUIOnDPMSActivatedParamsData(
           {required final String test}) =
-      _$_KodiNotificationGUIOnDPMSActivatedParamsData;
+      _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl;
 
   factory _KodiNotificationGUIOnDPMSActivatedParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationGUIOnDPMSActivatedParamsData.fromJson;
+      _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl.fromJson;
 
   @override
   String get test;
+
+  /// Create a copy of KodiNotificationGUIOnDPMSActivatedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationGUIOnDPMSActivatedParamsDataCopyWith<
-          _$_KodiNotificationGUIOnDPMSActivatedParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationGUIOnDPMSActivatedParamsDataImplCopyWith<
+          _$KodiNotificationGUIOnDPMSActivatedParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

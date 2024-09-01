@@ -12,7 +12,7 @@ part of 'kodi_setting_details_category.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiSettingDetailsCategory _$KodiSettingDetailsCategoryFromJson(
     Map<String, dynamic> json) {
@@ -27,8 +27,12 @@ mixin _$KodiSettingDetailsCategory {
   String get id => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiSettingDetailsCategory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSettingDetailsCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSettingDetailsCategoryCopyWith<KodiSettingDetailsCategory>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$KodiSettingDetailsCategoryCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSettingDetailsCategory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,12 +94,12 @@ class _$KodiSettingDetailsCategoryCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsCategoryCopyWith<$Res>
+abstract class _$$KodiSettingDetailsCategoryImplCopyWith<$Res>
     implements $KodiSettingDetailsCategoryCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsCategoryCopyWith(
-          _$_KodiSettingDetailsCategory value,
-          $Res Function(_$_KodiSettingDetailsCategory) then) =
-      __$$_KodiSettingDetailsCategoryCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsCategoryImplCopyWith(
+          _$KodiSettingDetailsCategoryImpl value,
+          $Res Function(_$KodiSettingDetailsCategoryImpl) then) =
+      __$$KodiSettingDetailsCategoryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,15 +110,17 @@ abstract class _$$_KodiSettingDetailsCategoryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsCategoryCopyWithImpl<$Res>
+class __$$KodiSettingDetailsCategoryImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsCategoryCopyWithImpl<$Res,
-        _$_KodiSettingDetailsCategory>
-    implements _$$_KodiSettingDetailsCategoryCopyWith<$Res> {
-  __$$_KodiSettingDetailsCategoryCopyWithImpl(
-      _$_KodiSettingDetailsCategory _value,
-      $Res Function(_$_KodiSettingDetailsCategory) _then)
+        _$KodiSettingDetailsCategoryImpl>
+    implements _$$KodiSettingDetailsCategoryImplCopyWith<$Res> {
+  __$$KodiSettingDetailsCategoryImplCopyWithImpl(
+      _$KodiSettingDetailsCategoryImpl _value,
+      $Res Function(_$KodiSettingDetailsCategoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsCategory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,7 +129,7 @@ class __$$_KodiSettingDetailsCategoryCopyWithImpl<$Res>
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiSettingDetailsCategory(
+    return _then(_$KodiSettingDetailsCategoryImpl(
       groups: freezed == groups
           ? _value._groups
           : groups // ignore: cast_nullable_to_non_nullable
@@ -144,16 +152,17 @@ class __$$_KodiSettingDetailsCategoryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsCategory implements _KodiSettingDetailsCategory {
-  const _$_KodiSettingDetailsCategory(
+class _$KodiSettingDetailsCategoryImpl implements _KodiSettingDetailsCategory {
+  const _$KodiSettingDetailsCategoryImpl(
       {final List<KodiSettingDetailsGroup>? groups,
       this.help,
       required this.id,
       required this.label})
       : _groups = groups;
 
-  factory _$_KodiSettingDetailsCategory.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsCategoryFromJson(json);
+  factory _$KodiSettingDetailsCategoryImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsCategoryImplFromJson(json);
 
   final List<KodiSettingDetailsGroup>? _groups;
   @override
@@ -178,31 +187,33 @@ class _$_KodiSettingDetailsCategory implements _KodiSettingDetailsCategory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsCategory &&
+            other is _$KodiSettingDetailsCategoryImpl &&
             const DeepCollectionEquality().equals(other._groups, _groups) &&
             (identical(other.help, help) || other.help == help) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_groups), help, id, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsCategoryCopyWith<_$_KodiSettingDetailsCategory>
-      get copyWith => __$$_KodiSettingDetailsCategoryCopyWithImpl<
-          _$_KodiSettingDetailsCategory>(this, _$identity);
+  _$$KodiSettingDetailsCategoryImplCopyWith<_$KodiSettingDetailsCategoryImpl>
+      get copyWith => __$$KodiSettingDetailsCategoryImplCopyWithImpl<
+          _$KodiSettingDetailsCategoryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsCategoryToJson(
+    return _$$KodiSettingDetailsCategoryImplToJson(
       this,
     );
   }
@@ -214,10 +225,10 @@ abstract class _KodiSettingDetailsCategory
       {final List<KodiSettingDetailsGroup>? groups,
       final String? help,
       required final String id,
-      required final String label}) = _$_KodiSettingDetailsCategory;
+      required final String label}) = _$KodiSettingDetailsCategoryImpl;
 
   factory _KodiSettingDetailsCategory.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsCategory.fromJson;
+      _$KodiSettingDetailsCategoryImpl.fromJson;
 
   @override
   List<KodiSettingDetailsGroup>? get groups;
@@ -227,8 +238,11 @@ abstract class _KodiSettingDetailsCategory
   String get id;
   @override
   String get label;
+
+  /// Create a copy of KodiSettingDetailsCategory
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsCategoryCopyWith<_$_KodiSettingDetailsCategory>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsCategoryImplCopyWith<_$KodiSettingDetailsCategoryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

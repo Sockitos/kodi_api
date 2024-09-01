@@ -12,7 +12,7 @@ part of 'get_broadcast_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetBroadcastDetails _$GetBroadcastDetailsFromJson(Map<String, dynamic> json) {
   return _GetBroadcastDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetBroadcastDetails {
   Set<KodiPVRFieldsBroadcast>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetBroadcastDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetBroadcastDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetBroadcastDetailsCopyWith<GetBroadcastDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$GetBroadcastDetailsCopyWithImpl<$Res, $Val extends GetBroadcastDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetBroadcastDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,11 +78,11 @@ class _$GetBroadcastDetailsCopyWithImpl<$Res, $Val extends GetBroadcastDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetBroadcastDetailsCopyWith<$Res>
+abstract class _$$GetBroadcastDetailsImplCopyWith<$Res>
     implements $GetBroadcastDetailsCopyWith<$Res> {
-  factory _$$_GetBroadcastDetailsCopyWith(_$_GetBroadcastDetails value,
-          $Res Function(_$_GetBroadcastDetails) then) =
-      __$$_GetBroadcastDetailsCopyWithImpl<$Res>;
+  factory _$$GetBroadcastDetailsImplCopyWith(_$GetBroadcastDetailsImpl value,
+          $Res Function(_$GetBroadcastDetailsImpl) then) =
+      __$$GetBroadcastDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,20 +91,22 @@ abstract class _$$_GetBroadcastDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetBroadcastDetailsCopyWithImpl<$Res>
-    extends _$GetBroadcastDetailsCopyWithImpl<$Res, _$_GetBroadcastDetails>
-    implements _$$_GetBroadcastDetailsCopyWith<$Res> {
-  __$$_GetBroadcastDetailsCopyWithImpl(_$_GetBroadcastDetails _value,
-      $Res Function(_$_GetBroadcastDetails) _then)
+class __$$GetBroadcastDetailsImplCopyWithImpl<$Res>
+    extends _$GetBroadcastDetailsCopyWithImpl<$Res, _$GetBroadcastDetailsImpl>
+    implements _$$GetBroadcastDetailsImplCopyWith<$Res> {
+  __$$GetBroadcastDetailsImplCopyWithImpl(_$GetBroadcastDetailsImpl _value,
+      $Res Function(_$GetBroadcastDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetBroadcastDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetBroadcastDetails(
+    return _then(_$GetBroadcastDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -113,14 +121,14 @@ class __$$_GetBroadcastDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetBroadcastDetails extends _GetBroadcastDetails {
-  const _$_GetBroadcastDetails(@JsonKey(name: 'broadcastid') this.id,
+class _$GetBroadcastDetailsImpl extends _GetBroadcastDetails {
+  const _$GetBroadcastDetailsImpl(@JsonKey(name: 'broadcastid') this.id,
       {final Set<KodiPVRFieldsBroadcast>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetBroadcastDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetBroadcastDetailsFromJson(json);
+  factory _$GetBroadcastDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetBroadcastDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -141,30 +149,32 @@ class _$_GetBroadcastDetails extends _GetBroadcastDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetBroadcastDetails &&
+            other is _$GetBroadcastDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetBroadcastDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetBroadcastDetailsCopyWith<_$_GetBroadcastDetails> get copyWith =>
-      __$$_GetBroadcastDetailsCopyWithImpl<_$_GetBroadcastDetails>(
+  _$$GetBroadcastDetailsImplCopyWith<_$GetBroadcastDetailsImpl> get copyWith =>
+      __$$GetBroadcastDetailsImplCopyWithImpl<_$GetBroadcastDetailsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBroadcastDetailsToJson(
+    return _$$GetBroadcastDetailsImplToJson(
       this,
     );
   }
@@ -172,19 +182,23 @@ class _$_GetBroadcastDetails extends _GetBroadcastDetails {
 
 abstract class _GetBroadcastDetails extends GetBroadcastDetails {
   const factory _GetBroadcastDetails(@JsonKey(name: 'broadcastid') final int id,
-      {final Set<KodiPVRFieldsBroadcast>? properties}) = _$_GetBroadcastDetails;
+          {final Set<KodiPVRFieldsBroadcast>? properties}) =
+      _$GetBroadcastDetailsImpl;
   const _GetBroadcastDetails._() : super._();
 
   factory _GetBroadcastDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetBroadcastDetails.fromJson;
+      _$GetBroadcastDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastid')
   int get id;
   @override
   Set<KodiPVRFieldsBroadcast>? get properties;
+
+  /// Create a copy of GetBroadcastDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetBroadcastDetailsCopyWith<_$_GetBroadcastDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetBroadcastDetailsImplCopyWith<_$GetBroadcastDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

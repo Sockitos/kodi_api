@@ -6,10 +6,10 @@ part of 'get_recently_added_songs.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRecentlyAddedSongs _$$_GetRecentlyAddedSongsFromJson(
+_$GetRecentlyAddedSongsImpl _$$GetRecentlyAddedSongsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRecentlyAddedSongs(
-      albumLimit: json['albumlimit'] as int? ?? -1,
+    _$GetRecentlyAddedSongsImpl(
+      albumLimit: (json['albumlimit'] as num?)?.toInt() ?? -1,
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiAudioFieldsSongEnumMap, e))
           .toSet(),
@@ -21,8 +21,8 @@ _$_GetRecentlyAddedSongs _$$_GetRecentlyAddedSongsFromJson(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetRecentlyAddedSongsToJson(
-    _$_GetRecentlyAddedSongs instance) {
+Map<String, dynamic> _$$GetRecentlyAddedSongsImplToJson(
+    _$GetRecentlyAddedSongsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -93,18 +93,19 @@ const _$KodiAudioFieldsSongEnumMap = {
   KodiAudioFieldsSong.dateNew: 'datenew',
 };
 
-_$_GetRecentlyAddedSongsResponse _$$_GetRecentlyAddedSongsResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_GetRecentlyAddedSongsResponse(
-      songs: (json['songs'] as List<dynamic>)
-          .map((e) => KodiAudioDetailsSong.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      limits: KodiListLimitsReturned.fromJson(
-          json['limits'] as Map<String, dynamic>),
-    );
+_$GetRecentlyAddedSongsResponseImpl
+    _$$GetRecentlyAddedSongsResponseImplFromJson(Map<String, dynamic> json) =>
+        _$GetRecentlyAddedSongsResponseImpl(
+          songs: (json['songs'] as List<dynamic>)
+              .map((e) =>
+                  KodiAudioDetailsSong.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          limits: KodiListLimitsReturned.fromJson(
+              json['limits'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_GetRecentlyAddedSongsResponseToJson(
-        _$_GetRecentlyAddedSongsResponse instance) =>
+Map<String, dynamic> _$$GetRecentlyAddedSongsResponseImplToJson(
+        _$GetRecentlyAddedSongsResponseImpl instance) =>
     <String, dynamic>{
       'songs': instance.songs.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

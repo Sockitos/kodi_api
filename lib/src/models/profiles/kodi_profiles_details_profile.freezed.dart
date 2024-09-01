@@ -12,7 +12,7 @@ part of 'kodi_profiles_details_profile.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiProfilesDetailsProfile _$KodiProfilesDetailsProfileFromJson(
     Map<String, dynamic> json) {
@@ -26,8 +26,12 @@ mixin _$KodiProfilesDetailsProfile {
   String? get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiProfilesDetailsProfile to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiProfilesDetailsProfile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiProfilesDetailsProfileCopyWith<KodiProfilesDetailsProfile>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$KodiProfilesDetailsProfileCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiProfilesDetailsProfile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,12 +87,12 @@ class _$KodiProfilesDetailsProfileCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiProfilesDetailsProfileCopyWith<$Res>
+abstract class _$$KodiProfilesDetailsProfileImplCopyWith<$Res>
     implements $KodiProfilesDetailsProfileCopyWith<$Res> {
-  factory _$$_KodiProfilesDetailsProfileCopyWith(
-          _$_KodiProfilesDetailsProfile value,
-          $Res Function(_$_KodiProfilesDetailsProfile) then) =
-      __$$_KodiProfilesDetailsProfileCopyWithImpl<$Res>;
+  factory _$$KodiProfilesDetailsProfileImplCopyWith(
+          _$KodiProfilesDetailsProfileImpl value,
+          $Res Function(_$KodiProfilesDetailsProfileImpl) then) =
+      __$$KodiProfilesDetailsProfileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -96,15 +102,17 @@ abstract class _$$_KodiProfilesDetailsProfileCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiProfilesDetailsProfileCopyWithImpl<$Res>
+class __$$KodiProfilesDetailsProfileImplCopyWithImpl<$Res>
     extends _$KodiProfilesDetailsProfileCopyWithImpl<$Res,
-        _$_KodiProfilesDetailsProfile>
-    implements _$$_KodiProfilesDetailsProfileCopyWith<$Res> {
-  __$$_KodiProfilesDetailsProfileCopyWithImpl(
-      _$_KodiProfilesDetailsProfile _value,
-      $Res Function(_$_KodiProfilesDetailsProfile) _then)
+        _$KodiProfilesDetailsProfileImpl>
+    implements _$$KodiProfilesDetailsProfileImplCopyWith<$Res> {
+  __$$KodiProfilesDetailsProfileImplCopyWithImpl(
+      _$KodiProfilesDetailsProfileImpl _value,
+      $Res Function(_$KodiProfilesDetailsProfileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiProfilesDetailsProfile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -112,7 +120,7 @@ class __$$_KodiProfilesDetailsProfileCopyWithImpl<$Res>
     Object? thumbnail = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiProfilesDetailsProfile(
+    return _then(_$KodiProfilesDetailsProfileImpl(
       lockMode: freezed == lockMode
           ? _value.lockMode
           : lockMode // ignore: cast_nullable_to_non_nullable
@@ -131,14 +139,15 @@ class __$$_KodiProfilesDetailsProfileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiProfilesDetailsProfile implements _KodiProfilesDetailsProfile {
-  const _$_KodiProfilesDetailsProfile(
+class _$KodiProfilesDetailsProfileImpl implements _KodiProfilesDetailsProfile {
+  const _$KodiProfilesDetailsProfileImpl(
       {@JsonKey(name: 'lockmode') this.lockMode,
       this.thumbnail,
       required this.label});
 
-  factory _$_KodiProfilesDetailsProfile.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiProfilesDetailsProfileFromJson(json);
+  factory _$KodiProfilesDetailsProfileImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiProfilesDetailsProfileImplFromJson(json);
 
   @override
   @JsonKey(name: 'lockmode')
@@ -154,10 +163,10 @@ class _$_KodiProfilesDetailsProfile implements _KodiProfilesDetailsProfile {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiProfilesDetailsProfile &&
+            other is _$KodiProfilesDetailsProfileImpl &&
             (identical(other.lockMode, lockMode) ||
                 other.lockMode == lockMode) &&
             (identical(other.thumbnail, thumbnail) ||
@@ -165,20 +174,22 @@ class _$_KodiProfilesDetailsProfile implements _KodiProfilesDetailsProfile {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, lockMode, thumbnail, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiProfilesDetailsProfile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiProfilesDetailsProfileCopyWith<_$_KodiProfilesDetailsProfile>
-      get copyWith => __$$_KodiProfilesDetailsProfileCopyWithImpl<
-          _$_KodiProfilesDetailsProfile>(this, _$identity);
+  _$$KodiProfilesDetailsProfileImplCopyWith<_$KodiProfilesDetailsProfileImpl>
+      get copyWith => __$$KodiProfilesDetailsProfileImplCopyWithImpl<
+          _$KodiProfilesDetailsProfileImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiProfilesDetailsProfileToJson(
+    return _$$KodiProfilesDetailsProfileImplToJson(
       this,
     );
   }
@@ -189,10 +200,10 @@ abstract class _KodiProfilesDetailsProfile
   const factory _KodiProfilesDetailsProfile(
       {@JsonKey(name: 'lockmode') final int? lockMode,
       final String? thumbnail,
-      required final String label}) = _$_KodiProfilesDetailsProfile;
+      required final String label}) = _$KodiProfilesDetailsProfileImpl;
 
   factory _KodiProfilesDetailsProfile.fromJson(Map<String, dynamic> json) =
-      _$_KodiProfilesDetailsProfile.fromJson;
+      _$KodiProfilesDetailsProfileImpl.fromJson;
 
   @override
   @JsonKey(name: 'lockmode')
@@ -201,8 +212,11 @@ abstract class _KodiProfilesDetailsProfile
   String? get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiProfilesDetailsProfile
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiProfilesDetailsProfileCopyWith<_$_KodiProfilesDetailsProfile>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiProfilesDetailsProfileImplCopyWith<_$KodiProfilesDetailsProfileImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

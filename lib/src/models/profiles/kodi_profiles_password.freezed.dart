@@ -12,7 +12,7 @@ part of 'kodi_profiles_password.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiProfilesPassword _$KodiProfilesPasswordFromJson(Map<String, dynamic> json) {
   return _KodiProfilesPassword.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$KodiProfilesPassword {
       throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiProfilesPassword to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiProfilesPassword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiProfilesPasswordCopyWith<KodiProfilesPassword> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$KodiProfilesPasswordCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiProfilesPassword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,31 +76,33 @@ class _$KodiProfilesPasswordCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiProfilesPasswordCopyWith<$Res>
+abstract class _$$KodiProfilesPasswordImplCopyWith<$Res>
     implements $KodiProfilesPasswordCopyWith<$Res> {
-  factory _$$_KodiProfilesPasswordCopyWith(_$_KodiProfilesPassword value,
-          $Res Function(_$_KodiProfilesPassword) then) =
-      __$$_KodiProfilesPasswordCopyWithImpl<$Res>;
+  factory _$$KodiProfilesPasswordImplCopyWith(_$KodiProfilesPasswordImpl value,
+          $Res Function(_$KodiProfilesPasswordImpl) then) =
+      __$$KodiProfilesPasswordImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiProfilesPasswordEncryption encryption, String value});
 }
 
 /// @nodoc
-class __$$_KodiProfilesPasswordCopyWithImpl<$Res>
-    extends _$KodiProfilesPasswordCopyWithImpl<$Res, _$_KodiProfilesPassword>
-    implements _$$_KodiProfilesPasswordCopyWith<$Res> {
-  __$$_KodiProfilesPasswordCopyWithImpl(_$_KodiProfilesPassword _value,
-      $Res Function(_$_KodiProfilesPassword) _then)
+class __$$KodiProfilesPasswordImplCopyWithImpl<$Res>
+    extends _$KodiProfilesPasswordCopyWithImpl<$Res, _$KodiProfilesPasswordImpl>
+    implements _$$KodiProfilesPasswordImplCopyWith<$Res> {
+  __$$KodiProfilesPasswordImplCopyWithImpl(_$KodiProfilesPasswordImpl _value,
+      $Res Function(_$KodiProfilesPasswordImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiProfilesPassword
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? encryption = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiProfilesPassword(
+    return _then(_$KodiProfilesPasswordImpl(
       encryption: null == encryption
           ? _value.encryption
           : encryption // ignore: cast_nullable_to_non_nullable
@@ -109,13 +117,13 @@ class __$$_KodiProfilesPasswordCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiProfilesPassword implements _KodiProfilesPassword {
-  const _$_KodiProfilesPassword(
+class _$KodiProfilesPasswordImpl implements _KodiProfilesPassword {
+  const _$KodiProfilesPasswordImpl(
       {this.encryption = KodiProfilesPasswordEncryption.md5,
       required this.value});
 
-  factory _$_KodiProfilesPassword.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiProfilesPasswordFromJson(json);
+  factory _$KodiProfilesPasswordImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiProfilesPasswordImplFromJson(json);
 
   @override
   @JsonKey()
@@ -129,29 +137,32 @@ class _$_KodiProfilesPassword implements _KodiProfilesPassword {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiProfilesPassword &&
+            other is _$KodiProfilesPasswordImpl &&
             (identical(other.encryption, encryption) ||
                 other.encryption == encryption) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, encryption, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiProfilesPassword
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiProfilesPasswordCopyWith<_$_KodiProfilesPassword> get copyWith =>
-      __$$_KodiProfilesPasswordCopyWithImpl<_$_KodiProfilesPassword>(
-          this, _$identity);
+  _$$KodiProfilesPasswordImplCopyWith<_$KodiProfilesPasswordImpl>
+      get copyWith =>
+          __$$KodiProfilesPasswordImplCopyWithImpl<_$KodiProfilesPasswordImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiProfilesPasswordToJson(
+    return _$$KodiProfilesPasswordImplToJson(
       this,
     );
   }
@@ -160,17 +171,20 @@ class _$_KodiProfilesPassword implements _KodiProfilesPassword {
 abstract class _KodiProfilesPassword implements KodiProfilesPassword {
   const factory _KodiProfilesPassword(
       {final KodiProfilesPasswordEncryption encryption,
-      required final String value}) = _$_KodiProfilesPassword;
+      required final String value}) = _$KodiProfilesPasswordImpl;
 
   factory _KodiProfilesPassword.fromJson(Map<String, dynamic> json) =
-      _$_KodiProfilesPassword.fromJson;
+      _$KodiProfilesPasswordImpl.fromJson;
 
   @override
   KodiProfilesPasswordEncryption get encryption;
   @override
   String get value;
+
+  /// Create a copy of KodiProfilesPassword
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiProfilesPasswordCopyWith<_$_KodiProfilesPassword> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiProfilesPasswordImplCopyWith<_$KodiProfilesPasswordImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

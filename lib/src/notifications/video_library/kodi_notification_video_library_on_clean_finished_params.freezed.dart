@@ -12,7 +12,7 @@ part of 'kodi_notification_video_library_on_clean_finished_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationVideoLibraryOnCleanFinishedParams
     _$KodiNotificationVideoLibraryOnCleanFinishedParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationVideoLibraryOnCleanFinishedParams {
   KodiNotificationVideoLibraryOnCleanFinishedParamsData? get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationVideoLibraryOnCleanFinishedParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith<
           KodiNotificationVideoLibraryOnCleanFinishedParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -64,6 +68,8 @@ class _$KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,6 +88,8 @@ class _$KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith<$Res>?
@@ -98,15 +106,16 @@ class _$KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith<
+abstract class _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWith<
         $Res>
     implements
         $KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith(
-          _$_KodiNotificationVideoLibraryOnCleanFinishedParams value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnCleanFinishedParams)
+  factory _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWith(
+          _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl)
               then) =
-      __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<$Res>;
+      __$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWithImpl<
+          $Res>;
   @override
   @useResult
   $Res call(
@@ -119,23 +128,27 @@ abstract class _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith<
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWithImpl<
+        $Res>
     extends _$KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<
-        $Res, _$_KodiNotificationVideoLibraryOnCleanFinishedParams>
+        $Res, _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl>
     implements
-        _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnCleanFinishedParams _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnCleanFinishedParams) _then)
+        _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = freezed,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnCleanFinishedParams(
+    return _then(_$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -150,14 +163,14 @@ class __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnCleanFinishedParams
+class _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl
     implements _KodiNotificationVideoLibraryOnCleanFinishedParams {
-  const _$_KodiNotificationVideoLibraryOnCleanFinishedParams(
+  const _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl(
       {required this.sender, this.data});
 
-  factory _$_KodiNotificationVideoLibraryOnCleanFinishedParams.fromJson(
+  factory _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsFromJson(json);
+      _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -170,31 +183,33 @@ class _$_KodiNotificationVideoLibraryOnCleanFinishedParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnCleanFinishedParams &&
+            other is _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanFinishedParams>
+  _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl>
       get copyWith =>
-          __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWithImpl<
-                  _$_KodiNotificationVideoLibraryOnCleanFinishedParams>(
+          __$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWithImpl<
+                  _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsToJson(
+    return _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplToJson(
       this,
     );
   }
@@ -205,20 +220,23 @@ abstract class _KodiNotificationVideoLibraryOnCleanFinishedParams
   const factory _KodiNotificationVideoLibraryOnCleanFinishedParams(
           {required final String sender,
           final KodiNotificationVideoLibraryOnCleanFinishedParamsData? data}) =
-      _$_KodiNotificationVideoLibraryOnCleanFinishedParams;
+      _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl;
 
   factory _KodiNotificationVideoLibraryOnCleanFinishedParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnCleanFinishedParams.fromJson;
+      _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationVideoLibraryOnCleanFinishedParamsData? get data;
+
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanFinishedParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -232,8 +250,12 @@ KodiNotificationVideoLibraryOnCleanFinishedParamsData
 mixin _$KodiNotificationVideoLibraryOnCleanFinishedParamsData {
   String get test => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationVideoLibraryOnCleanFinishedParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith<
           KodiNotificationVideoLibraryOnCleanFinishedParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -265,6 +287,8 @@ class _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -280,16 +304,16 @@ class _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith<
+abstract class _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWith<
         $Res>
     implements
         $KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith(
-          _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData value,
+  factory _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWith(
+          _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl value,
           $Res Function(
-                  _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData)
+                  _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl)
               then) =
-      __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl<
+      __$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWithImpl<
           $Res>;
   @override
   @useResult
@@ -297,25 +321,27 @@ abstract class _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl<
+class __$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWithImpl<
         $Res>
     extends _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl<
-        $Res, _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData>
+        $Res, _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl>
     implements
-        _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith<
+        _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWith<
             $Res> {
-  __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnCleanFinishedParamsData)
+  __$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl)
           _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? test = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnCleanFinishedParamsData(
+    return _then(_$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl(
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -326,14 +352,15 @@ class __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl<
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData
+class _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl
     implements _KodiNotificationVideoLibraryOnCleanFinishedParamsData {
-  const _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData(
+  const _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl(
       {required this.test});
 
-  factory _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData.fromJson(
+  factory _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataFromJson(json);
+      _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplFromJson(
+          json);
 
   @override
   final String test;
@@ -344,30 +371,33 @@ class _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData &&
+            other
+                is _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl &&
             (identical(other.test, test) || other.test == test));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, test);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData>
+  _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWithImpl<
-                  _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData>(
+          __$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWithImpl<
+                  _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataToJson(
+    return _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplToJson(
       this,
     );
   }
@@ -377,17 +407,20 @@ abstract class _KodiNotificationVideoLibraryOnCleanFinishedParamsData
     implements KodiNotificationVideoLibraryOnCleanFinishedParamsData {
   const factory _KodiNotificationVideoLibraryOnCleanFinishedParamsData(
           {required final String test}) =
-      _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData;
+      _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl;
 
   factory _KodiNotificationVideoLibraryOnCleanFinishedParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData.fromJson;
+      _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl.fromJson;
 
   @override
   String get test;
+
+  /// Create a copy of KodiNotificationVideoLibraryOnCleanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

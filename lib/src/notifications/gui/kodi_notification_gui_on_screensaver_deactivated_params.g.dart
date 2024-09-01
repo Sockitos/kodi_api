@@ -6,33 +6,33 @@ part of 'kodi_notification_gui_on_screensaver_deactivated_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationGUIOnScreensaverDeactivatedParams
-    _$$_KodiNotificationGUIOnScreensaverDeactivatedParamsFromJson(
+_$KodiNotificationGUIOnScreensaverDeactivatedParamsImpl
+    _$$KodiNotificationGUIOnScreensaverDeactivatedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnScreensaverDeactivatedParams(
+        _$KodiNotificationGUIOnScreensaverDeactivatedParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationGUIOnScreensaverDeactivatedParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
 Map<String, dynamic>
-    _$$_KodiNotificationGUIOnScreensaverDeactivatedParamsToJson(
-            _$_KodiNotificationGUIOnScreensaverDeactivatedParams instance) =>
+    _$$KodiNotificationGUIOnScreensaverDeactivatedParamsImplToJson(
+            _$KodiNotificationGUIOnScreensaverDeactivatedParamsImpl instance) =>
         <String, dynamic>{
           'sender': instance.sender,
           'data': instance.data.toJson(),
         };
 
-_$_KodiNotificationGUIOnScreensaverDeactivatedParamsData
-    _$$_KodiNotificationGUIOnScreensaverDeactivatedParamsDataFromJson(
+_$KodiNotificationGUIOnScreensaverDeactivatedParamsDataImpl
+    _$$KodiNotificationGUIOnScreensaverDeactivatedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnScreensaverDeactivatedParamsData(
+        _$KodiNotificationGUIOnScreensaverDeactivatedParamsDataImpl(
           shuttingDown: json['shuttingdown'] as bool,
         );
 
 Map<String,
-    dynamic> _$$_KodiNotificationGUIOnScreensaverDeactivatedParamsDataToJson(
-        _$_KodiNotificationGUIOnScreensaverDeactivatedParamsData instance) =>
+    dynamic> _$$KodiNotificationGUIOnScreensaverDeactivatedParamsDataImplToJson(
+        _$KodiNotificationGUIOnScreensaverDeactivatedParamsDataImpl instance) =>
     <String, dynamic>{
       'shuttingdown': instance.shuttingDown,
     };

@@ -6,700 +6,704 @@ part of 'kodi_notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationApplicationOnVolumeChanged
-    _$$_KodiNotificationApplicationOnVolumeChangedFromJson(
+_$KodiNotificationApplicationOnVolumeChangedImpl
+    _$$KodiNotificationApplicationOnVolumeChangedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationApplicationOnVolumeChanged(
+        _$KodiNotificationApplicationOnVolumeChangedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationApplicationOnVolumeChangedParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationApplicationOnVolumeChangedToJson(
-        _$_KodiNotificationApplicationOnVolumeChanged instance) =>
+Map<String, dynamic> _$$KodiNotificationApplicationOnVolumeChangedImplToJson(
+        _$KodiNotificationApplicationOnVolumeChangedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnCleanFinished
-    _$$_KodiNotificationAudioLibraryOnCleanFinishedFromJson(
+_$KodiNotificationAudioLibraryOnCleanFinishedImpl
+    _$$KodiNotificationAudioLibraryOnCleanFinishedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnCleanFinished(
+        _$KodiNotificationAudioLibraryOnCleanFinishedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnCleanFinishedToJson(
-        _$_KodiNotificationAudioLibraryOnCleanFinished instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnCleanFinishedImplToJson(
+        _$KodiNotificationAudioLibraryOnCleanFinishedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnCleanStarted
-    _$$_KodiNotificationAudioLibraryOnCleanStartedFromJson(
+_$KodiNotificationAudioLibraryOnCleanStartedImpl
+    _$$KodiNotificationAudioLibraryOnCleanStartedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnCleanStarted(
+        _$KodiNotificationAudioLibraryOnCleanStartedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnCleanStartedToJson(
-        _$_KodiNotificationAudioLibraryOnCleanStarted instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnCleanStartedImplToJson(
+        _$KodiNotificationAudioLibraryOnCleanStartedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnExport
-    _$$_KodiNotificationAudioLibraryOnExportFromJson(
+_$KodiNotificationAudioLibraryOnExportImpl
+    _$$KodiNotificationAudioLibraryOnExportImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnExport(
+        _$KodiNotificationAudioLibraryOnExportImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationAudioLibraryOnExportParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnExportToJson(
-        _$_KodiNotificationAudioLibraryOnExport instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnExportImplToJson(
+        _$KodiNotificationAudioLibraryOnExportImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnRemove
-    _$$_KodiNotificationAudioLibraryOnRemoveFromJson(
+_$KodiNotificationAudioLibraryOnRemoveImpl
+    _$$KodiNotificationAudioLibraryOnRemoveImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnRemove(
+        _$KodiNotificationAudioLibraryOnRemoveImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationAudioLibraryOnRemoveParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnRemoveToJson(
-        _$_KodiNotificationAudioLibraryOnRemove instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnRemoveImplToJson(
+        _$KodiNotificationAudioLibraryOnRemoveImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnScanFinished
-    _$$_KodiNotificationAudioLibraryOnScanFinishedFromJson(
+_$KodiNotificationAudioLibraryOnScanFinishedImpl
+    _$$KodiNotificationAudioLibraryOnScanFinishedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnScanFinished(
+        _$KodiNotificationAudioLibraryOnScanFinishedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnScanFinishedToJson(
-        _$_KodiNotificationAudioLibraryOnScanFinished instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnScanFinishedImplToJson(
+        _$KodiNotificationAudioLibraryOnScanFinishedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnScanStarted
-    _$$_KodiNotificationAudioLibraryOnScanStartedFromJson(
+_$KodiNotificationAudioLibraryOnScanStartedImpl
+    _$$KodiNotificationAudioLibraryOnScanStartedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnScanStarted(
+        _$KodiNotificationAudioLibraryOnScanStartedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnScanStartedToJson(
-        _$_KodiNotificationAudioLibraryOnScanStarted instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnScanStartedImplToJson(
+        _$KodiNotificationAudioLibraryOnScanStartedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnUpdate
-    _$$_KodiNotificationAudioLibraryOnUpdateFromJson(
+_$KodiNotificationAudioLibraryOnUpdateImpl
+    _$$KodiNotificationAudioLibraryOnUpdateImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnUpdate(
+        _$KodiNotificationAudioLibraryOnUpdateImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationAudioLibraryOnUpdateParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnUpdateToJson(
-        _$_KodiNotificationAudioLibraryOnUpdate instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnUpdateImplToJson(
+        _$KodiNotificationAudioLibraryOnUpdateImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationGUIOnDPMSActivated
-    _$$_KodiNotificationGUIOnDPMSActivatedFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnDPMSActivated(
+_$KodiNotificationGUIOnDPMSActivatedImpl
+    _$$KodiNotificationGUIOnDPMSActivatedImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationGUIOnDPMSActivatedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationGUIOnDPMSActivatedToJson(
-        _$_KodiNotificationGUIOnDPMSActivated instance) =>
+Map<String, dynamic> _$$KodiNotificationGUIOnDPMSActivatedImplToJson(
+        _$KodiNotificationGUIOnDPMSActivatedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationGUIOnDPMSDeactivated
-    _$$_KodiNotificationGUIOnDPMSDeactivatedFromJson(
+_$KodiNotificationGUIOnDPMSDeactivatedImpl
+    _$$KodiNotificationGUIOnDPMSDeactivatedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnDPMSDeactivated(
+        _$KodiNotificationGUIOnDPMSDeactivatedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationGUIOnDPMSDeactivatedToJson(
-        _$_KodiNotificationGUIOnDPMSDeactivated instance) =>
+Map<String, dynamic> _$$KodiNotificationGUIOnDPMSDeactivatedImplToJson(
+        _$KodiNotificationGUIOnDPMSDeactivatedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationGUIOnScreensaverActivated
-    _$$_KodiNotificationGUIOnScreensaverActivatedFromJson(
+_$KodiNotificationGUIOnScreensaverActivatedImpl
+    _$$KodiNotificationGUIOnScreensaverActivatedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnScreensaverActivated(
+        _$KodiNotificationGUIOnScreensaverActivatedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationGUIOnScreensaverActivatedToJson(
-        _$_KodiNotificationGUIOnScreensaverActivated instance) =>
+Map<String, dynamic> _$$KodiNotificationGUIOnScreensaverActivatedImplToJson(
+        _$KodiNotificationGUIOnScreensaverActivatedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationGUIOnScreensaverDeactivated
-    _$$_KodiNotificationGUIOnScreensaverDeactivatedFromJson(
+_$KodiNotificationGUIOnScreensaverDeactivatedImpl
+    _$$KodiNotificationGUIOnScreensaverDeactivatedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnScreensaverDeactivated(
+        _$KodiNotificationGUIOnScreensaverDeactivatedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGUIOnScreensaverDeactivatedParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationGUIOnScreensaverDeactivatedToJson(
-        _$_KodiNotificationGUIOnScreensaverDeactivated instance) =>
+Map<String, dynamic> _$$KodiNotificationGUIOnScreensaverDeactivatedImplToJson(
+        _$KodiNotificationGUIOnScreensaverDeactivatedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationInputOnInputFinished
-    _$$_KodiNotificationInputOnInputFinishedFromJson(
+_$KodiNotificationInputOnInputFinishedImpl
+    _$$KodiNotificationInputOnInputFinishedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationInputOnInputFinished(
+        _$KodiNotificationInputOnInputFinishedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationInputOnInputFinishedToJson(
-        _$_KodiNotificationInputOnInputFinished instance) =>
+Map<String, dynamic> _$$KodiNotificationInputOnInputFinishedImplToJson(
+        _$KodiNotificationInputOnInputFinishedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationInputOnInputRequested
-    _$$_KodiNotificationInputOnInputRequestedFromJson(
+_$KodiNotificationInputOnInputRequestedImpl
+    _$$KodiNotificationInputOnInputRequestedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationInputOnInputRequested(
+        _$KodiNotificationInputOnInputRequestedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationInputOnInputRequestedParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationInputOnInputRequestedToJson(
-        _$_KodiNotificationInputOnInputRequested instance) =>
+Map<String, dynamic> _$$KodiNotificationInputOnInputRequestedImplToJson(
+        _$KodiNotificationInputOnInputRequestedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnAVChange
-    _$$_KodiNotificationPlayerOnAVChangeFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnAVChange(
+_$KodiNotificationPlayerOnAVChangeImpl
+    _$$KodiNotificationPlayerOnAVChangeImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationPlayerOnAVChangeImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationPlayerOnAVChangeParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnAVChangeToJson(
-        _$_KodiNotificationPlayerOnAVChange instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnAVChangeImplToJson(
+        _$KodiNotificationPlayerOnAVChangeImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnAVStart _$$_KodiNotificationPlayerOnAVStartFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationPlayerOnAVStart(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationPlayerOnAVStartParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
+_$KodiNotificationPlayerOnAVStartImpl
+    _$$KodiNotificationPlayerOnAVStartImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationPlayerOnAVStartImpl(
+          jsonrpc: json['jsonrpc'] as String,
+          method: json['method'] as String,
+          params: KodiNotificationPlayerOnAVStartParams.fromJson(
+              json['params'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnAVStartToJson(
-        _$_KodiNotificationPlayerOnAVStart instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnAVStartImplToJson(
+        _$KodiNotificationPlayerOnAVStartImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnPause _$$_KodiNotificationPlayerOnPauseFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationPlayerOnPause(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationPlayerOnPauseParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
+_$KodiNotificationPlayerOnPauseImpl
+    _$$KodiNotificationPlayerOnPauseImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationPlayerOnPauseImpl(
+          jsonrpc: json['jsonrpc'] as String,
+          method: json['method'] as String,
+          params: KodiNotificationPlayerOnPauseParams.fromJson(
+              json['params'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnPauseToJson(
-        _$_KodiNotificationPlayerOnPause instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnPauseImplToJson(
+        _$KodiNotificationPlayerOnPauseImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnPlay _$$_KodiNotificationPlayerOnPlayFromJson(
+_$KodiNotificationPlayerOnPlayImpl _$$KodiNotificationPlayerOnPlayImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationPlayerOnPlay(
+    _$KodiNotificationPlayerOnPlayImpl(
       jsonrpc: json['jsonrpc'] as String,
       method: json['method'] as String,
       params: KodiNotificationPlayerOnPlayParams.fromJson(
           json['params'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnPlayToJson(
-        _$_KodiNotificationPlayerOnPlay instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnPlayImplToJson(
+        _$KodiNotificationPlayerOnPlayImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnPropertyChanged
-    _$$_KodiNotificationPlayerOnPropertyChangedFromJson(
+_$KodiNotificationPlayerOnPropertyChangedImpl
+    _$$KodiNotificationPlayerOnPropertyChangedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnPropertyChanged(
+        _$KodiNotificationPlayerOnPropertyChangedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationPlayerOnPropertyChangedParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnPropertyChangedToJson(
-        _$_KodiNotificationPlayerOnPropertyChanged instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnPropertyChangedImplToJson(
+        _$KodiNotificationPlayerOnPropertyChangedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnResume _$$_KodiNotificationPlayerOnResumeFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationPlayerOnResume(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationPlayerOnResumeParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
+_$KodiNotificationPlayerOnResumeImpl
+    _$$KodiNotificationPlayerOnResumeImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationPlayerOnResumeImpl(
+          jsonrpc: json['jsonrpc'] as String,
+          method: json['method'] as String,
+          params: KodiNotificationPlayerOnResumeParams.fromJson(
+              json['params'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnResumeToJson(
-        _$_KodiNotificationPlayerOnResume instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnResumeImplToJson(
+        _$KodiNotificationPlayerOnResumeImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnSeek _$$_KodiNotificationPlayerOnSeekFromJson(
+_$KodiNotificationPlayerOnSeekImpl _$$KodiNotificationPlayerOnSeekImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationPlayerOnSeek(
+    _$KodiNotificationPlayerOnSeekImpl(
       jsonrpc: json['jsonrpc'] as String,
       method: json['method'] as String,
       params: KodiNotificationPlayerOnSeekParams.fromJson(
           json['params'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnSeekToJson(
-        _$_KodiNotificationPlayerOnSeek instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnSeekImplToJson(
+        _$KodiNotificationPlayerOnSeekImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnSpeedChanged
-    _$$_KodiNotificationPlayerOnSpeedChangedFromJson(
+_$KodiNotificationPlayerOnSpeedChangedImpl
+    _$$KodiNotificationPlayerOnSpeedChangedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnSpeedChanged(
+        _$KodiNotificationPlayerOnSpeedChangedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationPlayerOnSpeedChangedParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnSpeedChangedToJson(
-        _$_KodiNotificationPlayerOnSpeedChanged instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnSpeedChangedImplToJson(
+        _$KodiNotificationPlayerOnSpeedChangedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlayerOnStop _$$_KodiNotificationPlayerOnStopFromJson(
+_$KodiNotificationPlayerOnStopImpl _$$KodiNotificationPlayerOnStopImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationPlayerOnStop(
+    _$KodiNotificationPlayerOnStopImpl(
       jsonrpc: json['jsonrpc'] as String,
       method: json['method'] as String,
       params: KodiNotificationPlayerOnStopParams.fromJson(
           json['params'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnStopToJson(
-        _$_KodiNotificationPlayerOnStop instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnStopImplToJson(
+        _$KodiNotificationPlayerOnStopImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlaylistOnAdd _$$_KodiNotificationPlaylistOnAddFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationPlaylistOnAdd(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationPlaylistOnAddParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
+_$KodiNotificationPlaylistOnAddImpl
+    _$$KodiNotificationPlaylistOnAddImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationPlaylistOnAddImpl(
+          jsonrpc: json['jsonrpc'] as String,
+          method: json['method'] as String,
+          params: KodiNotificationPlaylistOnAddParams.fromJson(
+              json['params'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_KodiNotificationPlaylistOnAddToJson(
-        _$_KodiNotificationPlaylistOnAdd instance) =>
+Map<String, dynamic> _$$KodiNotificationPlaylistOnAddImplToJson(
+        _$KodiNotificationPlaylistOnAddImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlaylistOnClear _$$_KodiNotificationPlaylistOnClearFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationPlaylistOnClear(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationPlaylistOnClearParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
+_$KodiNotificationPlaylistOnClearImpl
+    _$$KodiNotificationPlaylistOnClearImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationPlaylistOnClearImpl(
+          jsonrpc: json['jsonrpc'] as String,
+          method: json['method'] as String,
+          params: KodiNotificationPlaylistOnClearParams.fromJson(
+              json['params'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_KodiNotificationPlaylistOnClearToJson(
-        _$_KodiNotificationPlaylistOnClear instance) =>
+Map<String, dynamic> _$$KodiNotificationPlaylistOnClearImplToJson(
+        _$KodiNotificationPlaylistOnClearImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationPlaylistOnRemove
-    _$$_KodiNotificationPlaylistOnRemoveFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationPlaylistOnRemove(
+_$KodiNotificationPlaylistOnRemoveImpl
+    _$$KodiNotificationPlaylistOnRemoveImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationPlaylistOnRemoveImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationPlaylistOnRemoveParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlaylistOnRemoveToJson(
-        _$_KodiNotificationPlaylistOnRemove instance) =>
+Map<String, dynamic> _$$KodiNotificationPlaylistOnRemoveImplToJson(
+        _$KodiNotificationPlaylistOnRemoveImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationSystemOnLowBattery
-    _$$_KodiNotificationSystemOnLowBatteryFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnLowBattery(
+_$KodiNotificationSystemOnLowBatteryImpl
+    _$$KodiNotificationSystemOnLowBatteryImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationSystemOnLowBatteryImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnLowBatteryToJson(
-        _$_KodiNotificationSystemOnLowBattery instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnLowBatteryImplToJson(
+        _$KodiNotificationSystemOnLowBatteryImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationSystemOnQuit _$$_KodiNotificationSystemOnQuitFromJson(
+_$KodiNotificationSystemOnQuitImpl _$$KodiNotificationSystemOnQuitImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationSystemOnQuit(
+    _$KodiNotificationSystemOnQuitImpl(
       jsonrpc: json['jsonrpc'] as String,
       method: json['method'] as String,
       params: KodiNotificationSystemOnQuitParams.fromJson(
           json['params'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnQuitToJson(
-        _$_KodiNotificationSystemOnQuit instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnQuitImplToJson(
+        _$KodiNotificationSystemOnQuitImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationSystemOnRestart _$$_KodiNotificationSystemOnRestartFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationSystemOnRestart(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationGenericParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_KodiNotificationSystemOnRestartToJson(
-        _$_KodiNotificationSystemOnRestart instance) =>
-    <String, dynamic>{
-      'jsonrpc': instance.jsonrpc,
-      'method': instance.method,
-      'params': instance.params.toJson(),
-    };
-
-_$_KodiNotificationSystemOnSleep _$$_KodiNotificationSystemOnSleepFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationSystemOnSleep(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationGenericParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_KodiNotificationSystemOnSleepToJson(
-        _$_KodiNotificationSystemOnSleep instance) =>
-    <String, dynamic>{
-      'jsonrpc': instance.jsonrpc,
-      'method': instance.method,
-      'params': instance.params.toJson(),
-    };
-
-_$_KodiNotificationSystemOnWake _$$_KodiNotificationSystemOnWakeFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationSystemOnWake(
-      jsonrpc: json['jsonrpc'] as String,
-      method: json['method'] as String,
-      params: KodiNotificationGenericParams.fromJson(
-          json['params'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_KodiNotificationSystemOnWakeToJson(
-        _$_KodiNotificationSystemOnWake instance) =>
-    <String, dynamic>{
-      'jsonrpc': instance.jsonrpc,
-      'method': instance.method,
-      'params': instance.params.toJson(),
-    };
-
-_$_KodiNotificationVideoLibraryOnCleanFinished
-    _$$_KodiNotificationVideoLibraryOnCleanFinishedFromJson(
-            Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnCleanFinished(
+_$KodiNotificationSystemOnRestartImpl
+    _$$KodiNotificationSystemOnRestartImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationSystemOnRestartImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnCleanFinishedToJson(
-        _$_KodiNotificationVideoLibraryOnCleanFinished instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnRestartImplToJson(
+        _$KodiNotificationSystemOnRestartImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnCleanStarted
-    _$$_KodiNotificationVideoLibraryOnCleanStartedFromJson(
-            Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnCleanStarted(
+_$KodiNotificationSystemOnSleepImpl
+    _$$KodiNotificationSystemOnSleepImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationSystemOnSleepImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnCleanStartedToJson(
-        _$_KodiNotificationVideoLibraryOnCleanStarted instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnSleepImplToJson(
+        _$KodiNotificationSystemOnSleepImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnExport
-    _$$_KodiNotificationVideoLibraryOnExportFromJson(
+_$KodiNotificationSystemOnWakeImpl _$$KodiNotificationSystemOnWakeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiNotificationSystemOnWakeImpl(
+      jsonrpc: json['jsonrpc'] as String,
+      method: json['method'] as String,
+      params: KodiNotificationGenericParams.fromJson(
+          json['params'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$KodiNotificationSystemOnWakeImplToJson(
+        _$KodiNotificationSystemOnWakeImpl instance) =>
+    <String, dynamic>{
+      'jsonrpc': instance.jsonrpc,
+      'method': instance.method,
+      'params': instance.params.toJson(),
+    };
+
+_$KodiNotificationVideoLibraryOnCleanFinishedImpl
+    _$$KodiNotificationVideoLibraryOnCleanFinishedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnExport(
+        _$KodiNotificationVideoLibraryOnCleanFinishedImpl(
+          jsonrpc: json['jsonrpc'] as String,
+          method: json['method'] as String,
+          params: KodiNotificationGenericParams.fromJson(
+              json['params'] as Map<String, dynamic>),
+        );
+
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnCleanFinishedImplToJson(
+        _$KodiNotificationVideoLibraryOnCleanFinishedImpl instance) =>
+    <String, dynamic>{
+      'jsonrpc': instance.jsonrpc,
+      'method': instance.method,
+      'params': instance.params.toJson(),
+    };
+
+_$KodiNotificationVideoLibraryOnCleanStartedImpl
+    _$$KodiNotificationVideoLibraryOnCleanStartedImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationVideoLibraryOnCleanStartedImpl(
+          jsonrpc: json['jsonrpc'] as String,
+          method: json['method'] as String,
+          params: KodiNotificationGenericParams.fromJson(
+              json['params'] as Map<String, dynamic>),
+        );
+
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnCleanStartedImplToJson(
+        _$KodiNotificationVideoLibraryOnCleanStartedImpl instance) =>
+    <String, dynamic>{
+      'jsonrpc': instance.jsonrpc,
+      'method': instance.method,
+      'params': instance.params.toJson(),
+    };
+
+_$KodiNotificationVideoLibraryOnExportImpl
+    _$$KodiNotificationVideoLibraryOnExportImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationVideoLibraryOnExportImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationVideoLibraryOnExportParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnExportToJson(
-        _$_KodiNotificationVideoLibraryOnExport instance) =>
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnExportImplToJson(
+        _$KodiNotificationVideoLibraryOnExportImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnRefresh
-    _$$_KodiNotificationVideoLibraryOnRefreshFromJson(
+_$KodiNotificationVideoLibraryOnRefreshImpl
+    _$$KodiNotificationVideoLibraryOnRefreshImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnRefresh(
+        _$KodiNotificationVideoLibraryOnRefreshImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnRefreshToJson(
-        _$_KodiNotificationVideoLibraryOnRefresh instance) =>
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnRefreshImplToJson(
+        _$KodiNotificationVideoLibraryOnRefreshImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnRemove
-    _$$_KodiNotificationVideoLibraryOnRemoveFromJson(
+_$KodiNotificationVideoLibraryOnRemoveImpl
+    _$$KodiNotificationVideoLibraryOnRemoveImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnRemove(
+        _$KodiNotificationVideoLibraryOnRemoveImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationVideoLibraryOnRemoveParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnRemoveToJson(
-        _$_KodiNotificationVideoLibraryOnRemove instance) =>
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnRemoveImplToJson(
+        _$KodiNotificationVideoLibraryOnRemoveImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnScanFinished
-    _$$_KodiNotificationVideoLibraryOnScanFinishedFromJson(
+_$KodiNotificationVideoLibraryOnScanFinishedImpl
+    _$$KodiNotificationVideoLibraryOnScanFinishedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnScanFinished(
+        _$KodiNotificationVideoLibraryOnScanFinishedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnScanFinishedToJson(
-        _$_KodiNotificationVideoLibraryOnScanFinished instance) =>
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnScanFinishedImplToJson(
+        _$KodiNotificationVideoLibraryOnScanFinishedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnScanStarted
-    _$$_KodiNotificationVideoLibraryOnScanStartedFromJson(
+_$KodiNotificationVideoLibraryOnScanStartedImpl
+    _$$KodiNotificationVideoLibraryOnScanStartedImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnScanStarted(
+        _$KodiNotificationVideoLibraryOnScanStartedImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationGenericParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnScanStartedToJson(
-        _$_KodiNotificationVideoLibraryOnScanStarted instance) =>
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnScanStartedImplToJson(
+        _$KodiNotificationVideoLibraryOnScanStartedImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationVideoLibraryOnUpdate
-    _$$_KodiNotificationVideoLibraryOnUpdateFromJson(
+_$KodiNotificationVideoLibraryOnUpdateImpl
+    _$$KodiNotificationVideoLibraryOnUpdateImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnUpdate(
+        _$KodiNotificationVideoLibraryOnUpdateImpl(
           jsonrpc: json['jsonrpc'] as String,
           method: json['method'] as String,
           params: KodiNotificationVideoLibraryOnUpdateParams.fromJson(
               json['params'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnUpdateToJson(
-        _$_KodiNotificationVideoLibraryOnUpdate instance) =>
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnUpdateImplToJson(
+        _$KodiNotificationVideoLibraryOnUpdateImpl instance) =>
     <String, dynamic>{
       'jsonrpc': instance.jsonrpc,
       'method': instance.method,
       'params': instance.params.toJson(),
     };
 
-_$_KodiNotificationGenericParams _$$_KodiNotificationGenericParamsFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationGenericParams(
-      sender: json['sender'] as String,
-    );
+_$KodiNotificationGenericParamsImpl
+    _$$KodiNotificationGenericParamsImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationGenericParamsImpl(
+          sender: json['sender'] as String,
+        );
 
-Map<String, dynamic> _$$_KodiNotificationGenericParamsToJson(
-        _$_KodiNotificationGenericParams instance) =>
+Map<String, dynamic> _$$KodiNotificationGenericParamsImplToJson(
+        _$KodiNotificationGenericParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
     };

@@ -6,14 +6,14 @@ part of 'refresh_movie.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RefreshMovie _$$_RefreshMovieFromJson(Map<String, dynamic> json) =>
-    _$_RefreshMovie(
-      json['movieid'] as int,
+_$RefreshMovieImpl _$$RefreshMovieImplFromJson(Map<String, dynamic> json) =>
+    _$RefreshMovieImpl(
+      (json['movieid'] as num).toInt(),
       ignoreNFO: json['ignorenfo'] as bool? ?? false,
       title: json['title'] as String?,
     );
 
-Map<String, dynamic> _$$_RefreshMovieToJson(_$_RefreshMovie instance) {
+Map<String, dynamic> _$$RefreshMovieImplToJson(_$RefreshMovieImpl instance) {
   final val = <String, dynamic>{
     'movieid': instance.id,
     'ignorenfo': instance.ignoreNFO,

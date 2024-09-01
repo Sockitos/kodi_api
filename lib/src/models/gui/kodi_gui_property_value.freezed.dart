@@ -12,7 +12,7 @@ part of 'kodi_gui_property_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiGUIPropertyValue _$KodiGUIPropertyValueFromJson(Map<String, dynamic> json) {
   return _KodiGUIPropertyValue.fromJson(json);
@@ -32,8 +32,12 @@ mixin _$KodiGUIPropertyValue {
   KodiGUIStereoscopyMode get stereoscopicMode =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGUIPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGUIPropertyValueCopyWith<KodiGUIPropertyValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -71,6 +75,8 @@ class _$KodiGUIPropertyValueCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -104,6 +110,8 @@ class _$KodiGUIPropertyValueCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGUIPropertyValueCurrentProtocolCopyWith<$Res> get currentControl {
@@ -113,6 +121,8 @@ class _$KodiGUIPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGUIPropertyValueCurrentWindowCopyWith<$Res> get currentWindow {
@@ -122,6 +132,8 @@ class _$KodiGUIPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGUIPropertyValueSkinCopyWith<$Res> get skin {
@@ -130,6 +142,8 @@ class _$KodiGUIPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGUIStereoscopyModeCopyWith<$Res> get stereoscopicMode {
@@ -141,11 +155,11 @@ class _$KodiGUIPropertyValueCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiGUIPropertyValueCopyWith<$Res>
+abstract class _$$KodiGUIPropertyValueImplCopyWith<$Res>
     implements $KodiGUIPropertyValueCopyWith<$Res> {
-  factory _$$_KodiGUIPropertyValueCopyWith(_$_KodiGUIPropertyValue value,
-          $Res Function(_$_KodiGUIPropertyValue) then) =
-      __$$_KodiGUIPropertyValueCopyWithImpl<$Res>;
+  factory _$$KodiGUIPropertyValueImplCopyWith(_$KodiGUIPropertyValueImpl value,
+          $Res Function(_$KodiGUIPropertyValueImpl) then) =
+      __$$KodiGUIPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -169,13 +183,15 @@ abstract class _$$_KodiGUIPropertyValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiGUIPropertyValueCopyWithImpl<$Res>
-    extends _$KodiGUIPropertyValueCopyWithImpl<$Res, _$_KodiGUIPropertyValue>
-    implements _$$_KodiGUIPropertyValueCopyWith<$Res> {
-  __$$_KodiGUIPropertyValueCopyWithImpl(_$_KodiGUIPropertyValue _value,
-      $Res Function(_$_KodiGUIPropertyValue) _then)
+class __$$KodiGUIPropertyValueImplCopyWithImpl<$Res>
+    extends _$KodiGUIPropertyValueCopyWithImpl<$Res, _$KodiGUIPropertyValueImpl>
+    implements _$$KodiGUIPropertyValueImplCopyWith<$Res> {
+  __$$KodiGUIPropertyValueImplCopyWithImpl(_$KodiGUIPropertyValueImpl _value,
+      $Res Function(_$KodiGUIPropertyValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -185,7 +201,7 @@ class __$$_KodiGUIPropertyValueCopyWithImpl<$Res>
     Object? skin = null,
     Object? stereoscopicMode = null,
   }) {
-    return _then(_$_KodiGUIPropertyValue(
+    return _then(_$KodiGUIPropertyValueImpl(
       currentControl: null == currentControl
           ? _value.currentControl
           : currentControl // ignore: cast_nullable_to_non_nullable
@@ -212,16 +228,16 @@ class __$$_KodiGUIPropertyValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGUIPropertyValue implements _KodiGUIPropertyValue {
-  const _$_KodiGUIPropertyValue(
+class _$KodiGUIPropertyValueImpl implements _KodiGUIPropertyValue {
+  const _$KodiGUIPropertyValueImpl(
       {@JsonKey(name: 'currentcontrol') required this.currentControl,
       @JsonKey(name: 'currentwindow') required this.currentWindow,
       required this.fullscreen,
       required this.skin,
       @JsonKey(name: 'stereoscopicmode') required this.stereoscopicMode});
 
-  factory _$_KodiGUIPropertyValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiGUIPropertyValueFromJson(json);
+  factory _$KodiGUIPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiGUIPropertyValueImplFromJson(json);
 
   @override
   @JsonKey(name: 'currentcontrol')
@@ -243,10 +259,10 @@ class _$_KodiGUIPropertyValue implements _KodiGUIPropertyValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGUIPropertyValue &&
+            other is _$KodiGUIPropertyValueImpl &&
             (identical(other.currentControl, currentControl) ||
                 other.currentControl == currentControl) &&
             (identical(other.currentWindow, currentWindow) ||
@@ -258,21 +274,24 @@ class _$_KodiGUIPropertyValue implements _KodiGUIPropertyValue {
                 other.stereoscopicMode == stereoscopicMode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, currentControl, currentWindow,
       fullscreen, skin, stereoscopicMode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGUIPropertyValueCopyWith<_$_KodiGUIPropertyValue> get copyWith =>
-      __$$_KodiGUIPropertyValueCopyWithImpl<_$_KodiGUIPropertyValue>(
-          this, _$identity);
+  _$$KodiGUIPropertyValueImplCopyWith<_$KodiGUIPropertyValueImpl>
+      get copyWith =>
+          __$$KodiGUIPropertyValueImplCopyWithImpl<_$KodiGUIPropertyValueImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGUIPropertyValueToJson(
+    return _$$KodiGUIPropertyValueImplToJson(
       this,
     );
   }
@@ -288,10 +307,10 @@ abstract class _KodiGUIPropertyValue implements KodiGUIPropertyValue {
           required final KodiGUIPropertyValueSkin skin,
           @JsonKey(name: 'stereoscopicmode')
           required final KodiGUIStereoscopyMode stereoscopicMode}) =
-      _$_KodiGUIPropertyValue;
+      _$KodiGUIPropertyValueImpl;
 
   factory _KodiGUIPropertyValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiGUIPropertyValue.fromJson;
+      _$KodiGUIPropertyValueImpl.fromJson;
 
   @override
   @JsonKey(name: 'currentcontrol')
@@ -306,10 +325,13 @@ abstract class _KodiGUIPropertyValue implements KodiGUIPropertyValue {
   @override
   @JsonKey(name: 'stereoscopicmode')
   KodiGUIStereoscopyMode get stereoscopicMode;
+
+  /// Create a copy of KodiGUIPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGUIPropertyValueCopyWith<_$_KodiGUIPropertyValue> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGUIPropertyValueImplCopyWith<_$KodiGUIPropertyValueImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 KodiGUIPropertyValueCurrentProtocol
@@ -321,8 +343,12 @@ KodiGUIPropertyValueCurrentProtocol
 mixin _$KodiGUIPropertyValueCurrentProtocol {
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGUIPropertyValueCurrentProtocol to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGUIPropertyValueCurrentProtocol
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGUIPropertyValueCurrentProtocolCopyWith<
           KodiGUIPropertyValueCurrentProtocol>
       get copyWith => throw _privateConstructorUsedError;
@@ -350,6 +376,8 @@ class _$KodiGUIPropertyValueCurrentProtocolCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGUIPropertyValueCurrentProtocol
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -365,33 +393,35 @@ class _$KodiGUIPropertyValueCurrentProtocolCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiGUIPropertyValueCurrentProtocolCopyWith<$Res>
+abstract class _$$KodiGUIPropertyValueCurrentProtocolImplCopyWith<$Res>
     implements $KodiGUIPropertyValueCurrentProtocolCopyWith<$Res> {
-  factory _$$_KodiGUIPropertyValueCurrentProtocolCopyWith(
-          _$_KodiGUIPropertyValueCurrentProtocol value,
-          $Res Function(_$_KodiGUIPropertyValueCurrentProtocol) then) =
-      __$$_KodiGUIPropertyValueCurrentProtocolCopyWithImpl<$Res>;
+  factory _$$KodiGUIPropertyValueCurrentProtocolImplCopyWith(
+          _$KodiGUIPropertyValueCurrentProtocolImpl value,
+          $Res Function(_$KodiGUIPropertyValueCurrentProtocolImpl) then) =
+      __$$KodiGUIPropertyValueCurrentProtocolImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String label});
 }
 
 /// @nodoc
-class __$$_KodiGUIPropertyValueCurrentProtocolCopyWithImpl<$Res>
+class __$$KodiGUIPropertyValueCurrentProtocolImplCopyWithImpl<$Res>
     extends _$KodiGUIPropertyValueCurrentProtocolCopyWithImpl<$Res,
-        _$_KodiGUIPropertyValueCurrentProtocol>
-    implements _$$_KodiGUIPropertyValueCurrentProtocolCopyWith<$Res> {
-  __$$_KodiGUIPropertyValueCurrentProtocolCopyWithImpl(
-      _$_KodiGUIPropertyValueCurrentProtocol _value,
-      $Res Function(_$_KodiGUIPropertyValueCurrentProtocol) _then)
+        _$KodiGUIPropertyValueCurrentProtocolImpl>
+    implements _$$KodiGUIPropertyValueCurrentProtocolImplCopyWith<$Res> {
+  __$$KodiGUIPropertyValueCurrentProtocolImplCopyWithImpl(
+      _$KodiGUIPropertyValueCurrentProtocolImpl _value,
+      $Res Function(_$KodiGUIPropertyValueCurrentProtocolImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGUIPropertyValueCurrentProtocol
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? label = null,
   }) {
-    return _then(_$_KodiGUIPropertyValueCurrentProtocol(
+    return _then(_$KodiGUIPropertyValueCurrentProtocolImpl(
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -402,13 +432,13 @@ class __$$_KodiGUIPropertyValueCurrentProtocolCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGUIPropertyValueCurrentProtocol
+class _$KodiGUIPropertyValueCurrentProtocolImpl
     implements _KodiGUIPropertyValueCurrentProtocol {
-  const _$_KodiGUIPropertyValueCurrentProtocol({required this.label});
+  const _$KodiGUIPropertyValueCurrentProtocolImpl({required this.label});
 
-  factory _$_KodiGUIPropertyValueCurrentProtocol.fromJson(
+  factory _$KodiGUIPropertyValueCurrentProtocolImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiGUIPropertyValueCurrentProtocolFromJson(json);
+      _$$KodiGUIPropertyValueCurrentProtocolImplFromJson(json);
 
   @override
   final String label;
@@ -419,28 +449,30 @@ class _$_KodiGUIPropertyValueCurrentProtocol
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGUIPropertyValueCurrentProtocol &&
+            other is _$KodiGUIPropertyValueCurrentProtocolImpl &&
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGUIPropertyValueCurrentProtocol
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGUIPropertyValueCurrentProtocolCopyWith<
-          _$_KodiGUIPropertyValueCurrentProtocol>
-      get copyWith => __$$_KodiGUIPropertyValueCurrentProtocolCopyWithImpl<
-          _$_KodiGUIPropertyValueCurrentProtocol>(this, _$identity);
+  _$$KodiGUIPropertyValueCurrentProtocolImplCopyWith<
+          _$KodiGUIPropertyValueCurrentProtocolImpl>
+      get copyWith => __$$KodiGUIPropertyValueCurrentProtocolImplCopyWithImpl<
+          _$KodiGUIPropertyValueCurrentProtocolImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGUIPropertyValueCurrentProtocolToJson(
+    return _$$KodiGUIPropertyValueCurrentProtocolImplToJson(
       this,
     );
   }
@@ -449,18 +481,22 @@ class _$_KodiGUIPropertyValueCurrentProtocol
 abstract class _KodiGUIPropertyValueCurrentProtocol
     implements KodiGUIPropertyValueCurrentProtocol {
   const factory _KodiGUIPropertyValueCurrentProtocol(
-      {required final String label}) = _$_KodiGUIPropertyValueCurrentProtocol;
+          {required final String label}) =
+      _$KodiGUIPropertyValueCurrentProtocolImpl;
 
   factory _KodiGUIPropertyValueCurrentProtocol.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiGUIPropertyValueCurrentProtocol.fromJson;
+      _$KodiGUIPropertyValueCurrentProtocolImpl.fromJson;
 
   @override
   String get label;
+
+  /// Create a copy of KodiGUIPropertyValueCurrentProtocol
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGUIPropertyValueCurrentProtocolCopyWith<
-          _$_KodiGUIPropertyValueCurrentProtocol>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGUIPropertyValueCurrentProtocolImplCopyWith<
+          _$KodiGUIPropertyValueCurrentProtocolImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -474,8 +510,12 @@ mixin _$KodiGUIPropertyValueCurrentWindow {
   int get id => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGUIPropertyValueCurrentWindow to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGUIPropertyValueCurrentWindow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGUIPropertyValueCurrentWindowCopyWith<KodiGUIPropertyValueCurrentWindow>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -502,6 +542,8 @@ class _$KodiGUIPropertyValueCurrentWindowCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGUIPropertyValueCurrentWindow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -522,34 +564,36 @@ class _$KodiGUIPropertyValueCurrentWindowCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiGUIPropertyValueCurrentWindowCopyWith<$Res>
+abstract class _$$KodiGUIPropertyValueCurrentWindowImplCopyWith<$Res>
     implements $KodiGUIPropertyValueCurrentWindowCopyWith<$Res> {
-  factory _$$_KodiGUIPropertyValueCurrentWindowCopyWith(
-          _$_KodiGUIPropertyValueCurrentWindow value,
-          $Res Function(_$_KodiGUIPropertyValueCurrentWindow) then) =
-      __$$_KodiGUIPropertyValueCurrentWindowCopyWithImpl<$Res>;
+  factory _$$KodiGUIPropertyValueCurrentWindowImplCopyWith(
+          _$KodiGUIPropertyValueCurrentWindowImpl value,
+          $Res Function(_$KodiGUIPropertyValueCurrentWindowImpl) then) =
+      __$$KodiGUIPropertyValueCurrentWindowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int id, String label});
 }
 
 /// @nodoc
-class __$$_KodiGUIPropertyValueCurrentWindowCopyWithImpl<$Res>
+class __$$KodiGUIPropertyValueCurrentWindowImplCopyWithImpl<$Res>
     extends _$KodiGUIPropertyValueCurrentWindowCopyWithImpl<$Res,
-        _$_KodiGUIPropertyValueCurrentWindow>
-    implements _$$_KodiGUIPropertyValueCurrentWindowCopyWith<$Res> {
-  __$$_KodiGUIPropertyValueCurrentWindowCopyWithImpl(
-      _$_KodiGUIPropertyValueCurrentWindow _value,
-      $Res Function(_$_KodiGUIPropertyValueCurrentWindow) _then)
+        _$KodiGUIPropertyValueCurrentWindowImpl>
+    implements _$$KodiGUIPropertyValueCurrentWindowImplCopyWith<$Res> {
+  __$$KodiGUIPropertyValueCurrentWindowImplCopyWithImpl(
+      _$KodiGUIPropertyValueCurrentWindowImpl _value,
+      $Res Function(_$KodiGUIPropertyValueCurrentWindowImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGUIPropertyValueCurrentWindow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiGUIPropertyValueCurrentWindow(
+    return _then(_$KodiGUIPropertyValueCurrentWindowImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -564,14 +608,14 @@ class __$$_KodiGUIPropertyValueCurrentWindowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGUIPropertyValueCurrentWindow
+class _$KodiGUIPropertyValueCurrentWindowImpl
     implements _KodiGUIPropertyValueCurrentWindow {
-  const _$_KodiGUIPropertyValueCurrentWindow(
+  const _$KodiGUIPropertyValueCurrentWindowImpl(
       {required this.id, required this.label});
 
-  factory _$_KodiGUIPropertyValueCurrentWindow.fromJson(
+  factory _$KodiGUIPropertyValueCurrentWindowImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiGUIPropertyValueCurrentWindowFromJson(json);
+      _$$KodiGUIPropertyValueCurrentWindowImplFromJson(json);
 
   @override
   final int id;
@@ -584,29 +628,31 @@ class _$_KodiGUIPropertyValueCurrentWindow
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGUIPropertyValueCurrentWindow &&
+            other is _$KodiGUIPropertyValueCurrentWindowImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGUIPropertyValueCurrentWindow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGUIPropertyValueCurrentWindowCopyWith<
-          _$_KodiGUIPropertyValueCurrentWindow>
-      get copyWith => __$$_KodiGUIPropertyValueCurrentWindowCopyWithImpl<
-          _$_KodiGUIPropertyValueCurrentWindow>(this, _$identity);
+  _$$KodiGUIPropertyValueCurrentWindowImplCopyWith<
+          _$KodiGUIPropertyValueCurrentWindowImpl>
+      get copyWith => __$$KodiGUIPropertyValueCurrentWindowImplCopyWithImpl<
+          _$KodiGUIPropertyValueCurrentWindowImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGUIPropertyValueCurrentWindowToJson(
+    return _$$KodiGUIPropertyValueCurrentWindowImplToJson(
       this,
     );
   }
@@ -616,20 +662,23 @@ abstract class _KodiGUIPropertyValueCurrentWindow
     implements KodiGUIPropertyValueCurrentWindow {
   const factory _KodiGUIPropertyValueCurrentWindow(
       {required final int id,
-      required final String label}) = _$_KodiGUIPropertyValueCurrentWindow;
+      required final String label}) = _$KodiGUIPropertyValueCurrentWindowImpl;
 
   factory _KodiGUIPropertyValueCurrentWindow.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiGUIPropertyValueCurrentWindow.fromJson;
+      _$KodiGUIPropertyValueCurrentWindowImpl.fromJson;
 
   @override
   int get id;
   @override
   String get label;
+
+  /// Create a copy of KodiGUIPropertyValueCurrentWindow
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGUIPropertyValueCurrentWindowCopyWith<
-          _$_KodiGUIPropertyValueCurrentWindow>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGUIPropertyValueCurrentWindowImplCopyWith<
+          _$KodiGUIPropertyValueCurrentWindowImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -643,8 +692,12 @@ mixin _$KodiGUIPropertyValueSkin {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGUIPropertyValueSkin to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGUIPropertyValueSkin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGUIPropertyValueSkinCopyWith<KodiGUIPropertyValueSkin> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -669,6 +722,8 @@ class _$KodiGUIPropertyValueSkinCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGUIPropertyValueSkin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -689,33 +744,36 @@ class _$KodiGUIPropertyValueSkinCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiGUIPropertyValueSkinCopyWith<$Res>
+abstract class _$$KodiGUIPropertyValueSkinImplCopyWith<$Res>
     implements $KodiGUIPropertyValueSkinCopyWith<$Res> {
-  factory _$$_KodiGUIPropertyValueSkinCopyWith(
-          _$_KodiGUIPropertyValueSkin value,
-          $Res Function(_$_KodiGUIPropertyValueSkin) then) =
-      __$$_KodiGUIPropertyValueSkinCopyWithImpl<$Res>;
+  factory _$$KodiGUIPropertyValueSkinImplCopyWith(
+          _$KodiGUIPropertyValueSkinImpl value,
+          $Res Function(_$KodiGUIPropertyValueSkinImpl) then) =
+      __$$KodiGUIPropertyValueSkinImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String name});
 }
 
 /// @nodoc
-class __$$_KodiGUIPropertyValueSkinCopyWithImpl<$Res>
+class __$$KodiGUIPropertyValueSkinImplCopyWithImpl<$Res>
     extends _$KodiGUIPropertyValueSkinCopyWithImpl<$Res,
-        _$_KodiGUIPropertyValueSkin>
-    implements _$$_KodiGUIPropertyValueSkinCopyWith<$Res> {
-  __$$_KodiGUIPropertyValueSkinCopyWithImpl(_$_KodiGUIPropertyValueSkin _value,
-      $Res Function(_$_KodiGUIPropertyValueSkin) _then)
+        _$KodiGUIPropertyValueSkinImpl>
+    implements _$$KodiGUIPropertyValueSkinImplCopyWith<$Res> {
+  __$$KodiGUIPropertyValueSkinImplCopyWithImpl(
+      _$KodiGUIPropertyValueSkinImpl _value,
+      $Res Function(_$KodiGUIPropertyValueSkinImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGUIPropertyValueSkin
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? name = null,
   }) {
-    return _then(_$_KodiGUIPropertyValueSkin(
+    return _then(_$KodiGUIPropertyValueSkinImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -730,11 +788,11 @@ class __$$_KodiGUIPropertyValueSkinCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGUIPropertyValueSkin implements _KodiGUIPropertyValueSkin {
-  const _$_KodiGUIPropertyValueSkin({required this.id, required this.name});
+class _$KodiGUIPropertyValueSkinImpl implements _KodiGUIPropertyValueSkin {
+  const _$KodiGUIPropertyValueSkinImpl({required this.id, required this.name});
 
-  factory _$_KodiGUIPropertyValueSkin.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiGUIPropertyValueSkinFromJson(json);
+  factory _$KodiGUIPropertyValueSkinImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiGUIPropertyValueSkinImplFromJson(json);
 
   @override
   final String id;
@@ -747,28 +805,30 @@ class _$_KodiGUIPropertyValueSkin implements _KodiGUIPropertyValueSkin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGUIPropertyValueSkin &&
+            other is _$KodiGUIPropertyValueSkinImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGUIPropertyValueSkin
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGUIPropertyValueSkinCopyWith<_$_KodiGUIPropertyValueSkin>
-      get copyWith => __$$_KodiGUIPropertyValueSkinCopyWithImpl<
-          _$_KodiGUIPropertyValueSkin>(this, _$identity);
+  _$$KodiGUIPropertyValueSkinImplCopyWith<_$KodiGUIPropertyValueSkinImpl>
+      get copyWith => __$$KodiGUIPropertyValueSkinImplCopyWithImpl<
+          _$KodiGUIPropertyValueSkinImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGUIPropertyValueSkinToJson(
+    return _$$KodiGUIPropertyValueSkinImplToJson(
       this,
     );
   }
@@ -777,18 +837,21 @@ class _$_KodiGUIPropertyValueSkin implements _KodiGUIPropertyValueSkin {
 abstract class _KodiGUIPropertyValueSkin implements KodiGUIPropertyValueSkin {
   const factory _KodiGUIPropertyValueSkin(
       {required final String id,
-      required final String name}) = _$_KodiGUIPropertyValueSkin;
+      required final String name}) = _$KodiGUIPropertyValueSkinImpl;
 
   factory _KodiGUIPropertyValueSkin.fromJson(Map<String, dynamic> json) =
-      _$_KodiGUIPropertyValueSkin.fromJson;
+      _$KodiGUIPropertyValueSkinImpl.fromJson;
 
   @override
   String get id;
   @override
   String get name;
+
+  /// Create a copy of KodiGUIPropertyValueSkin
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGUIPropertyValueSkinCopyWith<_$_KodiGUIPropertyValueSkin>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGUIPropertyValueSkinImplCopyWith<_$KodiGUIPropertyValueSkinImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -802,8 +865,12 @@ mixin _$KodiGUIPropertyValueStereoscopicMode {
   String get label => throw _privateConstructorUsedError;
   KodiGUIStereoscopicMode get mode => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGUIPropertyValueStereoscopicMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGUIPropertyValueStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGUIPropertyValueStereoscopicModeCopyWith<
           KodiGUIPropertyValueStereoscopicMode>
       get copyWith => throw _privateConstructorUsedError;
@@ -831,6 +898,8 @@ class _$KodiGUIPropertyValueStereoscopicModeCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGUIPropertyValueStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -851,34 +920,36 @@ class _$KodiGUIPropertyValueStereoscopicModeCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiGUIPropertyValueStereoscopicModeCopyWith<$Res>
+abstract class _$$KodiGUIPropertyValueStereoscopicModeImplCopyWith<$Res>
     implements $KodiGUIPropertyValueStereoscopicModeCopyWith<$Res> {
-  factory _$$_KodiGUIPropertyValueStereoscopicModeCopyWith(
-          _$_KodiGUIPropertyValueStereoscopicMode value,
-          $Res Function(_$_KodiGUIPropertyValueStereoscopicMode) then) =
-      __$$_KodiGUIPropertyValueStereoscopicModeCopyWithImpl<$Res>;
+  factory _$$KodiGUIPropertyValueStereoscopicModeImplCopyWith(
+          _$KodiGUIPropertyValueStereoscopicModeImpl value,
+          $Res Function(_$KodiGUIPropertyValueStereoscopicModeImpl) then) =
+      __$$KodiGUIPropertyValueStereoscopicModeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String label, KodiGUIStereoscopicMode mode});
 }
 
 /// @nodoc
-class __$$_KodiGUIPropertyValueStereoscopicModeCopyWithImpl<$Res>
+class __$$KodiGUIPropertyValueStereoscopicModeImplCopyWithImpl<$Res>
     extends _$KodiGUIPropertyValueStereoscopicModeCopyWithImpl<$Res,
-        _$_KodiGUIPropertyValueStereoscopicMode>
-    implements _$$_KodiGUIPropertyValueStereoscopicModeCopyWith<$Res> {
-  __$$_KodiGUIPropertyValueStereoscopicModeCopyWithImpl(
-      _$_KodiGUIPropertyValueStereoscopicMode _value,
-      $Res Function(_$_KodiGUIPropertyValueStereoscopicMode) _then)
+        _$KodiGUIPropertyValueStereoscopicModeImpl>
+    implements _$$KodiGUIPropertyValueStereoscopicModeImplCopyWith<$Res> {
+  __$$KodiGUIPropertyValueStereoscopicModeImplCopyWithImpl(
+      _$KodiGUIPropertyValueStereoscopicModeImpl _value,
+      $Res Function(_$KodiGUIPropertyValueStereoscopicModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGUIPropertyValueStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? label = null,
     Object? mode = null,
   }) {
-    return _then(_$_KodiGUIPropertyValueStereoscopicMode(
+    return _then(_$KodiGUIPropertyValueStereoscopicModeImpl(
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -893,14 +964,14 @@ class __$$_KodiGUIPropertyValueStereoscopicModeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGUIPropertyValueStereoscopicMode
+class _$KodiGUIPropertyValueStereoscopicModeImpl
     implements _KodiGUIPropertyValueStereoscopicMode {
-  const _$_KodiGUIPropertyValueStereoscopicMode(
+  const _$KodiGUIPropertyValueStereoscopicModeImpl(
       {required this.label, required this.mode});
 
-  factory _$_KodiGUIPropertyValueStereoscopicMode.fromJson(
+  factory _$KodiGUIPropertyValueStereoscopicModeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiGUIPropertyValueStereoscopicModeFromJson(json);
+      _$$KodiGUIPropertyValueStereoscopicModeImplFromJson(json);
 
   @override
   final String label;
@@ -913,29 +984,31 @@ class _$_KodiGUIPropertyValueStereoscopicMode
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGUIPropertyValueStereoscopicMode &&
+            other is _$KodiGUIPropertyValueStereoscopicModeImpl &&
             (identical(other.label, label) || other.label == label) &&
             (identical(other.mode, mode) || other.mode == mode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, label, mode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGUIPropertyValueStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGUIPropertyValueStereoscopicModeCopyWith<
-          _$_KodiGUIPropertyValueStereoscopicMode>
-      get copyWith => __$$_KodiGUIPropertyValueStereoscopicModeCopyWithImpl<
-          _$_KodiGUIPropertyValueStereoscopicMode>(this, _$identity);
+  _$$KodiGUIPropertyValueStereoscopicModeImplCopyWith<
+          _$KodiGUIPropertyValueStereoscopicModeImpl>
+      get copyWith => __$$KodiGUIPropertyValueStereoscopicModeImplCopyWithImpl<
+          _$KodiGUIPropertyValueStereoscopicModeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGUIPropertyValueStereoscopicModeToJson(
+    return _$$KodiGUIPropertyValueStereoscopicModeImplToJson(
       this,
     );
   }
@@ -946,19 +1019,22 @@ abstract class _KodiGUIPropertyValueStereoscopicMode
   const factory _KodiGUIPropertyValueStereoscopicMode(
           {required final String label,
           required final KodiGUIStereoscopicMode mode}) =
-      _$_KodiGUIPropertyValueStereoscopicMode;
+      _$KodiGUIPropertyValueStereoscopicModeImpl;
 
   factory _KodiGUIPropertyValueStereoscopicMode.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiGUIPropertyValueStereoscopicMode.fromJson;
+      _$KodiGUIPropertyValueStereoscopicModeImpl.fromJson;
 
   @override
   String get label;
   @override
   KodiGUIStereoscopicMode get mode;
+
+  /// Create a copy of KodiGUIPropertyValueStereoscopicMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGUIPropertyValueStereoscopicModeCopyWith<
-          _$_KodiGUIPropertyValueStereoscopicMode>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGUIPropertyValueStereoscopicModeImplCopyWith<
+          _$KodiGUIPropertyValueStereoscopicModeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

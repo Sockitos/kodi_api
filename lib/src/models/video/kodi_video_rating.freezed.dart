@@ -12,7 +12,7 @@ part of 'kodi_video_rating.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiVideoRating _$KodiVideoRatingFromJson(Map<String, dynamic> json) {
   return _KodiVideoRating.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$KodiVideoRating {
   double get rating => throw _privateConstructorUsedError;
   int get votes => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiVideoRating to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiVideoRating
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiVideoRatingCopyWith<KodiVideoRating> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$KodiVideoRatingCopyWithImpl<$Res, $Val extends KodiVideoRating>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiVideoRating
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -76,11 +82,11 @@ class _$KodiVideoRatingCopyWithImpl<$Res, $Val extends KodiVideoRating>
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoRatingCopyWith<$Res>
+abstract class _$$KodiVideoRatingImplCopyWith<$Res>
     implements $KodiVideoRatingCopyWith<$Res> {
-  factory _$$_KodiVideoRatingCopyWith(
-          _$_KodiVideoRating value, $Res Function(_$_KodiVideoRating) then) =
-      __$$_KodiVideoRatingCopyWithImpl<$Res>;
+  factory _$$KodiVideoRatingImplCopyWith(_$KodiVideoRatingImpl value,
+          $Res Function(_$KodiVideoRatingImpl) then) =
+      __$$KodiVideoRatingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,13 +94,15 @@ abstract class _$$_KodiVideoRatingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiVideoRatingCopyWithImpl<$Res>
-    extends _$KodiVideoRatingCopyWithImpl<$Res, _$_KodiVideoRating>
-    implements _$$_KodiVideoRatingCopyWith<$Res> {
-  __$$_KodiVideoRatingCopyWithImpl(
-      _$_KodiVideoRating _value, $Res Function(_$_KodiVideoRating) _then)
+class __$$KodiVideoRatingImplCopyWithImpl<$Res>
+    extends _$KodiVideoRatingCopyWithImpl<$Res, _$KodiVideoRatingImpl>
+    implements _$$KodiVideoRatingImplCopyWith<$Res> {
+  __$$KodiVideoRatingImplCopyWithImpl(
+      _$KodiVideoRatingImpl _value, $Res Function(_$KodiVideoRatingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoRating
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,7 +110,7 @@ class __$$_KodiVideoRatingCopyWithImpl<$Res>
     Object? rating = null,
     Object? votes = null,
   }) {
-    return _then(_$_KodiVideoRating(
+    return _then(_$KodiVideoRatingImpl(
       defaultt: null == defaultt
           ? _value.defaultt
           : defaultt // ignore: cast_nullable_to_non_nullable
@@ -121,14 +129,14 @@ class __$$_KodiVideoRatingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoRating implements _KodiVideoRating {
-  const _$_KodiVideoRating(
+class _$KodiVideoRatingImpl implements _KodiVideoRating {
+  const _$KodiVideoRatingImpl(
       {@JsonKey(name: 'default') this.defaultt = false,
       required this.rating,
       this.votes = 0});
 
-  factory _$_KodiVideoRating.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiVideoRatingFromJson(json);
+  factory _$KodiVideoRatingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiVideoRatingImplFromJson(json);
 
   @override
   @JsonKey(name: 'default')
@@ -145,29 +153,32 @@ class _$_KodiVideoRating implements _KodiVideoRating {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoRating &&
+            other is _$KodiVideoRatingImpl &&
             (identical(other.defaultt, defaultt) ||
                 other.defaultt == defaultt) &&
             (identical(other.rating, rating) || other.rating == rating) &&
             (identical(other.votes, votes) || other.votes == votes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, defaultt, rating, votes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoRating
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoRatingCopyWith<_$_KodiVideoRating> get copyWith =>
-      __$$_KodiVideoRatingCopyWithImpl<_$_KodiVideoRating>(this, _$identity);
+  _$$KodiVideoRatingImplCopyWith<_$KodiVideoRatingImpl> get copyWith =>
+      __$$KodiVideoRatingImplCopyWithImpl<_$KodiVideoRatingImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoRatingToJson(
+    return _$$KodiVideoRatingImplToJson(
       this,
     );
   }
@@ -177,10 +188,10 @@ abstract class _KodiVideoRating implements KodiVideoRating {
   const factory _KodiVideoRating(
       {@JsonKey(name: 'default') final bool defaultt,
       required final double rating,
-      final int votes}) = _$_KodiVideoRating;
+      final int votes}) = _$KodiVideoRatingImpl;
 
   factory _KodiVideoRating.fromJson(Map<String, dynamic> json) =
-      _$_KodiVideoRating.fromJson;
+      _$KodiVideoRatingImpl.fromJson;
 
   @override
   @JsonKey(name: 'default')
@@ -189,8 +200,11 @@ abstract class _KodiVideoRating implements KodiVideoRating {
   double get rating;
   @override
   int get votes;
+
+  /// Create a copy of KodiVideoRating
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiVideoRatingCopyWith<_$_KodiVideoRating> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoRatingImplCopyWith<_$KodiVideoRatingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

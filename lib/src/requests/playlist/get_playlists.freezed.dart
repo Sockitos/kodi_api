@@ -12,7 +12,7 @@ part of 'get_playlists.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetPlaylists _$GetPlaylistsFromJson(Map<String, dynamic> json) {
   return _GetPlaylists.fromJson(json);
@@ -20,6 +20,7 @@ GetPlaylists _$GetPlaylistsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetPlaylists {
+  /// Serializes this GetPlaylists to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -39,31 +40,37 @@ class _$GetPlaylistsCopyWithImpl<$Res, $Val extends GetPlaylists>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of GetPlaylists
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_GetPlaylistsCopyWith<$Res> {
-  factory _$$_GetPlaylistsCopyWith(
-          _$_GetPlaylists value, $Res Function(_$_GetPlaylists) then) =
-      __$$_GetPlaylistsCopyWithImpl<$Res>;
+abstract class _$$GetPlaylistsImplCopyWith<$Res> {
+  factory _$$GetPlaylistsImplCopyWith(
+          _$GetPlaylistsImpl value, $Res Function(_$GetPlaylistsImpl) then) =
+      __$$GetPlaylistsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetPlaylistsCopyWithImpl<$Res>
-    extends _$GetPlaylistsCopyWithImpl<$Res, _$_GetPlaylists>
-    implements _$$_GetPlaylistsCopyWith<$Res> {
-  __$$_GetPlaylistsCopyWithImpl(
-      _$_GetPlaylists _value, $Res Function(_$_GetPlaylists) _then)
+class __$$GetPlaylistsImplCopyWithImpl<$Res>
+    extends _$GetPlaylistsCopyWithImpl<$Res, _$GetPlaylistsImpl>
+    implements _$$GetPlaylistsImplCopyWith<$Res> {
+  __$$GetPlaylistsImplCopyWithImpl(
+      _$GetPlaylistsImpl _value, $Res Function(_$GetPlaylistsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GetPlaylists
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetPlaylists extends _GetPlaylists {
-  const _$_GetPlaylists() : super._();
+class _$GetPlaylistsImpl extends _GetPlaylists {
+  const _$GetPlaylistsImpl() : super._();
 
-  factory _$_GetPlaylists.fromJson(Map<String, dynamic> json) =>
-      _$$_GetPlaylistsFromJson(json);
+  factory _$GetPlaylistsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetPlaylistsImplFromJson(json);
 
   @override
   String toString() {
@@ -71,29 +78,29 @@ class _$_GetPlaylists extends _GetPlaylists {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GetPlaylists);
+        (other.runtimeType == runtimeType && other is _$GetPlaylistsImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPlaylistsToJson(
+    return _$$GetPlaylistsImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetPlaylists extends GetPlaylists {
-  const factory _GetPlaylists() = _$_GetPlaylists;
+  const factory _GetPlaylists() = _$GetPlaylistsImpl;
   const _GetPlaylists._() : super._();
 
   factory _GetPlaylists.fromJson(Map<String, dynamic> json) =
-      _$_GetPlaylists.fromJson;
+      _$GetPlaylistsImpl.fromJson;
 }
 
 KodiPlaylistGetPlaylistsResponse _$KodiPlaylistGetPlaylistsResponseFromJson(
@@ -107,8 +114,12 @@ mixin _$KodiPlaylistGetPlaylistsResponse {
   int get playlistId => throw _privateConstructorUsedError;
   KodiPlaylistType get type => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlaylistGetPlaylistsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlaylistGetPlaylistsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlaylistGetPlaylistsResponseCopyWith<KodiPlaylistGetPlaylistsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -136,6 +147,8 @@ class _$KodiPlaylistGetPlaylistsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlaylistGetPlaylistsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,12 +169,12 @@ class _$KodiPlaylistGetPlaylistsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlaylistGetPlaylistsResponseCopyWith<$Res>
+abstract class _$$KodiPlaylistGetPlaylistsResponseImplCopyWith<$Res>
     implements $KodiPlaylistGetPlaylistsResponseCopyWith<$Res> {
-  factory _$$_KodiPlaylistGetPlaylistsResponseCopyWith(
-          _$_KodiPlaylistGetPlaylistsResponse value,
-          $Res Function(_$_KodiPlaylistGetPlaylistsResponse) then) =
-      __$$_KodiPlaylistGetPlaylistsResponseCopyWithImpl<$Res>;
+  factory _$$KodiPlaylistGetPlaylistsResponseImplCopyWith(
+          _$KodiPlaylistGetPlaylistsResponseImpl value,
+          $Res Function(_$KodiPlaylistGetPlaylistsResponseImpl) then) =
+      __$$KodiPlaylistGetPlaylistsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -169,22 +182,24 @@ abstract class _$$_KodiPlaylistGetPlaylistsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlaylistGetPlaylistsResponseCopyWithImpl<$Res>
+class __$$KodiPlaylistGetPlaylistsResponseImplCopyWithImpl<$Res>
     extends _$KodiPlaylistGetPlaylistsResponseCopyWithImpl<$Res,
-        _$_KodiPlaylistGetPlaylistsResponse>
-    implements _$$_KodiPlaylistGetPlaylistsResponseCopyWith<$Res> {
-  __$$_KodiPlaylistGetPlaylistsResponseCopyWithImpl(
-      _$_KodiPlaylistGetPlaylistsResponse _value,
-      $Res Function(_$_KodiPlaylistGetPlaylistsResponse) _then)
+        _$KodiPlaylistGetPlaylistsResponseImpl>
+    implements _$$KodiPlaylistGetPlaylistsResponseImplCopyWith<$Res> {
+  __$$KodiPlaylistGetPlaylistsResponseImplCopyWithImpl(
+      _$KodiPlaylistGetPlaylistsResponseImpl _value,
+      $Res Function(_$KodiPlaylistGetPlaylistsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistGetPlaylistsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playlistId = null,
     Object? type = null,
   }) {
-    return _then(_$_KodiPlaylistGetPlaylistsResponse(
+    return _then(_$KodiPlaylistGetPlaylistsResponseImpl(
       playlistId: null == playlistId
           ? _value.playlistId
           : playlistId // ignore: cast_nullable_to_non_nullable
@@ -199,15 +214,15 @@ class __$$_KodiPlaylistGetPlaylistsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlaylistGetPlaylistsResponse
+class _$KodiPlaylistGetPlaylistsResponseImpl
     implements _KodiPlaylistGetPlaylistsResponse {
-  const _$_KodiPlaylistGetPlaylistsResponse(
+  const _$KodiPlaylistGetPlaylistsResponseImpl(
       {@JsonKey(name: 'playlistid') required this.playlistId,
       required this.type});
 
-  factory _$_KodiPlaylistGetPlaylistsResponse.fromJson(
+  factory _$KodiPlaylistGetPlaylistsResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlaylistGetPlaylistsResponseFromJson(json);
+      _$$KodiPlaylistGetPlaylistsResponseImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistid')
@@ -221,30 +236,32 @@ class _$_KodiPlaylistGetPlaylistsResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlaylistGetPlaylistsResponse &&
+            other is _$KodiPlaylistGetPlaylistsResponseImpl &&
             (identical(other.playlistId, playlistId) ||
                 other.playlistId == playlistId) &&
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playlistId, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistGetPlaylistsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlaylistGetPlaylistsResponseCopyWith<
-          _$_KodiPlaylistGetPlaylistsResponse>
-      get copyWith => __$$_KodiPlaylistGetPlaylistsResponseCopyWithImpl<
-          _$_KodiPlaylistGetPlaylistsResponse>(this, _$identity);
+  _$$KodiPlaylistGetPlaylistsResponseImplCopyWith<
+          _$KodiPlaylistGetPlaylistsResponseImpl>
+      get copyWith => __$$KodiPlaylistGetPlaylistsResponseImplCopyWithImpl<
+          _$KodiPlaylistGetPlaylistsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlaylistGetPlaylistsResponseToJson(
+    return _$$KodiPlaylistGetPlaylistsResponseImplToJson(
       this,
     );
   }
@@ -255,19 +272,23 @@ abstract class _KodiPlaylistGetPlaylistsResponse
   const factory _KodiPlaylistGetPlaylistsResponse(
           {@JsonKey(name: 'playlistid') required final int playlistId,
           required final KodiPlaylistType type}) =
-      _$_KodiPlaylistGetPlaylistsResponse;
+      _$KodiPlaylistGetPlaylistsResponseImpl;
 
   factory _KodiPlaylistGetPlaylistsResponse.fromJson(
-      Map<String, dynamic> json) = _$_KodiPlaylistGetPlaylistsResponse.fromJson;
+          Map<String, dynamic> json) =
+      _$KodiPlaylistGetPlaylistsResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'playlistid')
   int get playlistId;
   @override
   KodiPlaylistType get type;
+
+  /// Create a copy of KodiPlaylistGetPlaylistsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlaylistGetPlaylistsResponseCopyWith<
-          _$_KodiPlaylistGetPlaylistsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistGetPlaylistsResponseImplCopyWith<
+          _$KodiPlaylistGetPlaylistsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

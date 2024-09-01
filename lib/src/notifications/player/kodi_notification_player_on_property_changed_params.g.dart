@@ -6,26 +6,26 @@ part of 'kodi_notification_player_on_property_changed_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationPlayerOnPropertyChangedParams
-    _$$_KodiNotificationPlayerOnPropertyChangedParamsFromJson(
+_$KodiNotificationPlayerOnPropertyChangedParamsImpl
+    _$$KodiNotificationPlayerOnPropertyChangedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnPropertyChangedParams(
+        _$KodiNotificationPlayerOnPropertyChangedParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationPlayerOnPropertyChangedParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnPropertyChangedParamsToJson(
-        _$_KodiNotificationPlayerOnPropertyChangedParams instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnPropertyChangedParamsImplToJson(
+        _$KodiNotificationPlayerOnPropertyChangedParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationPlayerOnPropertyChangedParamsData
-    _$$_KodiNotificationPlayerOnPropertyChangedParamsDataFromJson(
+_$KodiNotificationPlayerOnPropertyChangedParamsDataImpl
+    _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnPropertyChangedParamsData(
+        _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl(
           player: KodiPlayerNotificationsPlayer.fromJson(
               json['player'] as Map<String, dynamic>),
           property: json['property'] == null
@@ -35,8 +35,8 @@ _$_KodiNotificationPlayerOnPropertyChangedParamsData
         );
 
 Map<String, dynamic>
-    _$$_KodiNotificationPlayerOnPropertyChangedParamsDataToJson(
-        _$_KodiNotificationPlayerOnPropertyChangedParamsData instance) {
+    _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplToJson(
+        _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl instance) {
   final val = <String, dynamic>{
     'player': instance.player.toJson(),
   };

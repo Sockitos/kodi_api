@@ -12,7 +12,7 @@ part of 'kodi_audio_details_album.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAudioDetailsAlbum _$KodiAudioDetailsAlbumFromJson(
     Map<String, dynamic> json) {
@@ -89,8 +89,12 @@ mixin _$KodiAudioDetailsAlbum {
   String? get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAudioDetailsAlbum to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAudioDetailsAlbum
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAudioDetailsAlbumCopyWith<KodiAudioDetailsAlbum> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -156,6 +160,8 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAudioDetailsAlbum
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -349,6 +355,8 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiAudioDetailsAlbum
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -363,11 +371,12 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioDetailsAlbumCopyWith<$Res>
+abstract class _$$KodiAudioDetailsAlbumImplCopyWith<$Res>
     implements $KodiAudioDetailsAlbumCopyWith<$Res> {
-  factory _$$_KodiAudioDetailsAlbumCopyWith(_$_KodiAudioDetailsAlbum value,
-          $Res Function(_$_KodiAudioDetailsAlbum) then) =
-      __$$_KodiAudioDetailsAlbumCopyWithImpl<$Res>;
+  factory _$$KodiAudioDetailsAlbumImplCopyWith(
+          _$KodiAudioDetailsAlbumImpl value,
+          $Res Function(_$KodiAudioDetailsAlbumImpl) then) =
+      __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -416,13 +425,16 @@ abstract class _$$_KodiAudioDetailsAlbumCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAudioDetailsAlbumCopyWithImpl<$Res>
-    extends _$KodiAudioDetailsAlbumCopyWithImpl<$Res, _$_KodiAudioDetailsAlbum>
-    implements _$$_KodiAudioDetailsAlbumCopyWith<$Res> {
-  __$$_KodiAudioDetailsAlbumCopyWithImpl(_$_KodiAudioDetailsAlbum _value,
-      $Res Function(_$_KodiAudioDetailsAlbum) _then)
+class __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>
+    extends _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
+        _$KodiAudioDetailsAlbumImpl>
+    implements _$$KodiAudioDetailsAlbumImplCopyWith<$Res> {
+  __$$KodiAudioDetailsAlbumImplCopyWithImpl(_$KodiAudioDetailsAlbumImpl _value,
+      $Res Function(_$KodiAudioDetailsAlbumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioDetailsAlbum
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -464,7 +476,7 @@ class __$$_KodiAudioDetailsAlbumCopyWithImpl<$Res>
     Object? thumbnail = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiAudioDetailsAlbum(
+    return _then(_$KodiAudioDetailsAlbumImpl(
       albumDuration: freezed == albumDuration
           ? _value.albumDuration
           : albumDuration // ignore: cast_nullable_to_non_nullable
@@ -620,8 +632,8 @@ class __$$_KodiAudioDetailsAlbumCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiAudioDetailsAlbum implements _KodiAudioDetailsAlbum {
-  const _$_KodiAudioDetailsAlbum(
+class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
+  const _$KodiAudioDetailsAlbumImpl(
       {@JsonKey(name: 'albumduration') this.albumDuration,
       @JsonKey(name: 'albumid') required this.albumId,
       @JsonKey(name: 'albumlabel') this.albumLabel,
@@ -672,8 +684,8 @@ class _$_KodiAudioDetailsAlbum implements _KodiAudioDetailsAlbum {
         _musicBrainzAlbumArtistId = musicBrainzAlbumArtistId,
         _genre = genre;
 
-  factory _$_KodiAudioDetailsAlbum.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAudioDetailsAlbumFromJson(json);
+  factory _$KodiAudioDetailsAlbumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAudioDetailsAlbumImplFromJson(json);
 
   @override
   @JsonKey(name: 'albumduration')
@@ -856,10 +868,10 @@ class _$_KodiAudioDetailsAlbum implements _KodiAudioDetailsAlbum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioDetailsAlbum &&
+            other is _$KodiAudioDetailsAlbumImpl &&
             (identical(other.albumDuration, albumDuration) ||
                 other.albumDuration == albumDuration) &&
             (identical(other.albumId, albumId) || other.albumId == albumId) &&
@@ -921,7 +933,7 @@ class _$_KodiAudioDetailsAlbum implements _KodiAudioDetailsAlbum {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -964,16 +976,18 @@ class _$_KodiAudioDetailsAlbum implements _KodiAudioDetailsAlbum {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioDetailsAlbum
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioDetailsAlbumCopyWith<_$_KodiAudioDetailsAlbum> get copyWith =>
-      __$$_KodiAudioDetailsAlbumCopyWithImpl<_$_KodiAudioDetailsAlbum>(
-          this, _$identity);
+  _$$KodiAudioDetailsAlbumImplCopyWith<_$KodiAudioDetailsAlbumImpl>
+      get copyWith => __$$KodiAudioDetailsAlbumImplCopyWithImpl<
+          _$KodiAudioDetailsAlbumImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioDetailsAlbumToJson(
+    return _$$KodiAudioDetailsAlbumImplToJson(
       this,
     );
   }
@@ -1021,10 +1035,10 @@ abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
       final List<String>? genre,
       final String? fanart,
       final String? thumbnail,
-      required final String label}) = _$_KodiAudioDetailsAlbum;
+      required final String label}) = _$KodiAudioDetailsAlbumImpl;
 
   factory _KodiAudioDetailsAlbum.fromJson(Map<String, dynamic> json) =
-      _$_KodiAudioDetailsAlbum.fromJson;
+      _$KodiAudioDetailsAlbumImpl.fromJson;
 
   @override
   @JsonKey(name: 'albumduration')
@@ -1127,8 +1141,11 @@ abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
   String? get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiAudioDetailsAlbum
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAudioDetailsAlbumCopyWith<_$_KodiAudioDetailsAlbum> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioDetailsAlbumImplCopyWith<_$KodiAudioDetailsAlbumImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

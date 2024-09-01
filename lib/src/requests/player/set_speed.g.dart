@@ -6,12 +6,13 @@ part of 'set_speed.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetSpeed _$$_SetSpeedFromJson(Map<String, dynamic> json) => _$_SetSpeed(
-      json['playerid'] as int,
+_$SetSpeedImpl _$$SetSpeedImplFromJson(Map<String, dynamic> json) =>
+    _$SetSpeedImpl(
+      (json['playerid'] as num).toInt(),
       const SetSpeedSpeedConverter().fromJson(json['speed']),
     );
 
-Map<String, dynamic> _$$_SetSpeedToJson(_$_SetSpeed instance) {
+Map<String, dynamic> _$$SetSpeedImplToJson(_$SetSpeedImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };
@@ -26,23 +27,27 @@ Map<String, dynamic> _$$_SetSpeedToJson(_$_SetSpeed instance) {
   return val;
 }
 
-_$_KodiPlayerSpeed _$$_KodiPlayerSpeedFromJson(Map<String, dynamic> json) =>
-    _$_KodiPlayerSpeed(
-      speed: json['speed'] as int,
+_$KodiPlayerSpeedImpl _$$KodiPlayerSpeedImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiPlayerSpeedImpl(
+      speed: (json['speed'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_KodiPlayerSpeedToJson(_$_KodiPlayerSpeed instance) =>
+Map<String, dynamic> _$$KodiPlayerSpeedImplToJson(
+        _$KodiPlayerSpeedImpl instance) =>
     <String, dynamic>{
       'speed': instance.speed,
     };
 
-_$_SetSpeedSpeedAbs _$$_SetSpeedSpeedAbsFromJson(Map<String, dynamic> json) =>
-    _$_SetSpeedSpeedAbs(
+_$SetSpeedSpeedAbsImpl _$$SetSpeedSpeedAbsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetSpeedSpeedAbsImpl(
       $enumDecode(_$KodiPlayerSpeedStepEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetSpeedSpeedAbsToJson(_$_SetSpeedSpeedAbs instance) =>
+Map<String, dynamic> _$$SetSpeedSpeedAbsImplToJson(
+        _$SetSpeedSpeedAbsImpl instance) =>
     <String, dynamic>{
       'value': _$KodiPlayerSpeedStepEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -64,14 +69,15 @@ const _$KodiPlayerSpeedStepEnumMap = {
   KodiPlayerSpeedStep.xPlus32: 'xPlus32',
 };
 
-_$_SetSpeedSpeedEnum _$$_SetSpeedSpeedEnumFromJson(Map<String, dynamic> json) =>
-    _$_SetSpeedSpeedEnum(
+_$SetSpeedSpeedEnumImpl _$$SetSpeedSpeedEnumImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetSpeedSpeedEnumImpl(
       $enumDecode(_$KodiGlobalIncrementDecrementEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetSpeedSpeedEnumToJson(
-        _$_SetSpeedSpeedEnum instance) =>
+Map<String, dynamic> _$$SetSpeedSpeedEnumImplToJson(
+        _$SetSpeedSpeedEnumImpl instance) =>
     <String, dynamic>{
       'value': _$KodiGlobalIncrementDecrementEnumMap[instance.value]!,
       'runtimeType': instance.$type,

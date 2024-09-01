@@ -12,7 +12,7 @@ part of 'delete_timer.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DeleteTimer _$DeleteTimerFromJson(Map<String, dynamic> json) {
   return _DeleteTimer.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$DeleteTimer {
   @JsonKey(name: 'timerid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this DeleteTimer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeleteTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DeleteTimerCopyWith<DeleteTimer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$DeleteTimerCopyWithImpl<$Res, $Val extends DeleteTimer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DeleteTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,30 +69,32 @@ class _$DeleteTimerCopyWithImpl<$Res, $Val extends DeleteTimer>
 }
 
 /// @nodoc
-abstract class _$$_DeleteTimerCopyWith<$Res>
+abstract class _$$DeleteTimerImplCopyWith<$Res>
     implements $DeleteTimerCopyWith<$Res> {
-  factory _$$_DeleteTimerCopyWith(
-          _$_DeleteTimer value, $Res Function(_$_DeleteTimer) then) =
-      __$$_DeleteTimerCopyWithImpl<$Res>;
+  factory _$$DeleteTimerImplCopyWith(
+          _$DeleteTimerImpl value, $Res Function(_$DeleteTimerImpl) then) =
+      __$$DeleteTimerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'timerid') int id});
 }
 
 /// @nodoc
-class __$$_DeleteTimerCopyWithImpl<$Res>
-    extends _$DeleteTimerCopyWithImpl<$Res, _$_DeleteTimer>
-    implements _$$_DeleteTimerCopyWith<$Res> {
-  __$$_DeleteTimerCopyWithImpl(
-      _$_DeleteTimer _value, $Res Function(_$_DeleteTimer) _then)
+class __$$DeleteTimerImplCopyWithImpl<$Res>
+    extends _$DeleteTimerCopyWithImpl<$Res, _$DeleteTimerImpl>
+    implements _$$DeleteTimerImplCopyWith<$Res> {
+  __$$DeleteTimerImplCopyWithImpl(
+      _$DeleteTimerImpl _value, $Res Function(_$DeleteTimerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeleteTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_DeleteTimer(
+    return _then(_$DeleteTimerImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -97,11 +105,11 @@ class __$$_DeleteTimerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DeleteTimer extends _DeleteTimer {
-  const _$_DeleteTimer(@JsonKey(name: 'timerid') this.id) : super._();
+class _$DeleteTimerImpl extends _DeleteTimer {
+  const _$DeleteTimerImpl(@JsonKey(name: 'timerid') this.id) : super._();
 
-  factory _$_DeleteTimer.fromJson(Map<String, dynamic> json) =>
-      _$$_DeleteTimerFromJson(json);
+  factory _$DeleteTimerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteTimerImplFromJson(json);
 
   @override
   @JsonKey(name: 'timerid')
@@ -113,26 +121,28 @@ class _$_DeleteTimer extends _DeleteTimer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteTimer &&
+            other is _$DeleteTimerImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeleteTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeleteTimerCopyWith<_$_DeleteTimer> get copyWith =>
-      __$$_DeleteTimerCopyWithImpl<_$_DeleteTimer>(this, _$identity);
+  _$$DeleteTimerImplCopyWith<_$DeleteTimerImpl> get copyWith =>
+      __$$DeleteTimerImplCopyWithImpl<_$DeleteTimerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeleteTimerToJson(
+    return _$$DeleteTimerImplToJson(
       this,
     );
   }
@@ -140,17 +150,20 @@ class _$_DeleteTimer extends _DeleteTimer {
 
 abstract class _DeleteTimer extends DeleteTimer {
   const factory _DeleteTimer(@JsonKey(name: 'timerid') final int id) =
-      _$_DeleteTimer;
+      _$DeleteTimerImpl;
   const _DeleteTimer._() : super._();
 
   factory _DeleteTimer.fromJson(Map<String, dynamic> json) =
-      _$_DeleteTimer.fromJson;
+      _$DeleteTimerImpl.fromJson;
 
   @override
   @JsonKey(name: 'timerid')
   int get id;
+
+  /// Create a copy of DeleteTimer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_DeleteTimerCopyWith<_$_DeleteTimer> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DeleteTimerImplCopyWith<_$DeleteTimerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

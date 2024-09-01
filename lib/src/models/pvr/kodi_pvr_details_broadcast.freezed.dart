@@ -12,7 +12,7 @@ part of 'kodi_pvr_details_broadcast.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsBroadcast _$KodiPVRDetailsBroadcastFromJson(
     Map<String, dynamic> json) {
@@ -77,8 +77,12 @@ mixin _$KodiPVRDetailsBroadcast {
   int get year => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsBroadcast to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsBroadcast
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsBroadcastCopyWith<KodiPVRDetailsBroadcast> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -137,6 +141,8 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsBroadcast
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -317,11 +323,12 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsBroadcastCopyWith<$Res>
+abstract class _$$KodiPVRDetailsBroadcastImplCopyWith<$Res>
     implements $KodiPVRDetailsBroadcastCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsBroadcastCopyWith(_$_KodiPVRDetailsBroadcast value,
-          $Res Function(_$_KodiPVRDetailsBroadcast) then) =
-      __$$_KodiPVRDetailsBroadcastCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsBroadcastImplCopyWith(
+          _$KodiPVRDetailsBroadcastImpl value,
+          $Res Function(_$KodiPVRDetailsBroadcastImpl) then) =
+      __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -362,14 +369,17 @@ abstract class _$$_KodiPVRDetailsBroadcastCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsBroadcastCopyWithImpl<$Res>
+class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
     extends _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
-        _$_KodiPVRDetailsBroadcast>
-    implements _$$_KodiPVRDetailsBroadcastCopyWith<$Res> {
-  __$$_KodiPVRDetailsBroadcastCopyWithImpl(_$_KodiPVRDetailsBroadcast _value,
-      $Res Function(_$_KodiPVRDetailsBroadcast) _then)
+        _$KodiPVRDetailsBroadcastImpl>
+    implements _$$KodiPVRDetailsBroadcastImplCopyWith<$Res> {
+  __$$KodiPVRDetailsBroadcastImplCopyWithImpl(
+      _$KodiPVRDetailsBroadcastImpl _value,
+      $Res Function(_$KodiPVRDetailsBroadcastImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsBroadcast
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -408,7 +418,7 @@ class __$$_KodiPVRDetailsBroadcastCopyWithImpl<$Res>
     Object? year = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsBroadcast(
+    return _then(_$KodiPVRDetailsBroadcastImpl(
       broadcastId: null == broadcastId
           ? _value.broadcastId
           : broadcastId // ignore: cast_nullable_to_non_nullable
@@ -552,8 +562,8 @@ class __$$_KodiPVRDetailsBroadcastCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiPVRDetailsBroadcast implements _KodiPVRDetailsBroadcast {
-  const _$_KodiPVRDetailsBroadcast(
+class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
+  const _$KodiPVRDetailsBroadcastImpl(
       {@JsonKey(name: 'broadcastid') required this.broadcastId,
       required this.cast,
       @JsonKey(name: 'clientid') required this.clientId,
@@ -589,8 +599,8 @@ class _$_KodiPVRDetailsBroadcast implements _KodiPVRDetailsBroadcast {
       required this.year,
       required this.label});
 
-  factory _$_KodiPVRDetailsBroadcast.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsBroadcastFromJson(json);
+  factory _$KodiPVRDetailsBroadcastImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRDetailsBroadcastImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -688,10 +698,10 @@ class _$_KodiPVRDetailsBroadcast implements _KodiPVRDetailsBroadcast {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsBroadcast &&
+            other is _$KodiPVRDetailsBroadcastImpl &&
             (identical(other.broadcastId, broadcastId) ||
                 other.broadcastId == broadcastId) &&
             (identical(other.cast, cast) || other.cast == cast) &&
@@ -752,7 +762,7 @@ class _$_KodiPVRDetailsBroadcast implements _KodiPVRDetailsBroadcast {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -792,17 +802,18 @@ class _$_KodiPVRDetailsBroadcast implements _KodiPVRDetailsBroadcast {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsBroadcast
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsBroadcastCopyWith<_$_KodiPVRDetailsBroadcast>
-      get copyWith =>
-          __$$_KodiPVRDetailsBroadcastCopyWithImpl<_$_KodiPVRDetailsBroadcast>(
-              this, _$identity);
+  _$$KodiPVRDetailsBroadcastImplCopyWith<_$KodiPVRDetailsBroadcastImpl>
+      get copyWith => __$$KodiPVRDetailsBroadcastImplCopyWithImpl<
+          _$KodiPVRDetailsBroadcastImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsBroadcastToJson(
+    return _$$KodiPVRDetailsBroadcastImplToJson(
       this,
     );
   }
@@ -844,10 +855,10 @@ abstract class _KodiPVRDetailsBroadcast implements KodiPVRDetailsBroadcast {
       @JsonKey(name: 'wasactive') required final bool wasActive,
       required final String writer,
       required final int year,
-      required final String label}) = _$_KodiPVRDetailsBroadcast;
+      required final String label}) = _$KodiPVRDetailsBroadcastImpl;
 
   factory _KodiPVRDetailsBroadcast.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRDetailsBroadcast.fromJson;
+      _$KodiPVRDetailsBroadcastImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -938,8 +949,11 @@ abstract class _KodiPVRDetailsBroadcast implements KodiPVRDetailsBroadcast {
   int get year;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsBroadcast
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsBroadcastCopyWith<_$_KodiPVRDetailsBroadcast>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsBroadcastImplCopyWith<_$KodiPVRDetailsBroadcastImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

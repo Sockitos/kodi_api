@@ -12,7 +12,7 @@ part of 'get_addon_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetAddonDetails _$GetAddonDetailsFromJson(Map<String, dynamic> json) {
   return _GetAddonDetails.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$GetAddonDetails {
   String get id => throw _privateConstructorUsedError;
   Set<KodiAddonFields>? get properties => throw _privateConstructorUsedError;
 
+  /// Serializes this GetAddonDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetAddonDetailsCopyWith<GetAddonDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GetAddonDetailsCopyWithImpl<$Res, $Val extends GetAddonDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,11 +76,11 @@ class _$GetAddonDetailsCopyWithImpl<$Res, $Val extends GetAddonDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetAddonDetailsCopyWith<$Res>
+abstract class _$$GetAddonDetailsImplCopyWith<$Res>
     implements $GetAddonDetailsCopyWith<$Res> {
-  factory _$$_GetAddonDetailsCopyWith(
-          _$_GetAddonDetails value, $Res Function(_$_GetAddonDetails) then) =
-      __$$_GetAddonDetailsCopyWithImpl<$Res>;
+  factory _$$GetAddonDetailsImplCopyWith(_$GetAddonDetailsImpl value,
+          $Res Function(_$GetAddonDetailsImpl) then) =
+      __$$GetAddonDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -82,20 +88,22 @@ abstract class _$$_GetAddonDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetAddonDetailsCopyWithImpl<$Res>
-    extends _$GetAddonDetailsCopyWithImpl<$Res, _$_GetAddonDetails>
-    implements _$$_GetAddonDetailsCopyWith<$Res> {
-  __$$_GetAddonDetailsCopyWithImpl(
-      _$_GetAddonDetails _value, $Res Function(_$_GetAddonDetails) _then)
+class __$$GetAddonDetailsImplCopyWithImpl<$Res>
+    extends _$GetAddonDetailsCopyWithImpl<$Res, _$GetAddonDetailsImpl>
+    implements _$$GetAddonDetailsImplCopyWith<$Res> {
+  __$$GetAddonDetailsImplCopyWithImpl(
+      _$GetAddonDetailsImpl _value, $Res Function(_$GetAddonDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetAddonDetails(
+    return _then(_$GetAddonDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -110,14 +118,14 @@ class __$$_GetAddonDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetAddonDetails extends _GetAddonDetails {
-  const _$_GetAddonDetails(@JsonKey(name: 'addonid') this.id,
+class _$GetAddonDetailsImpl extends _GetAddonDetails {
+  const _$GetAddonDetailsImpl(@JsonKey(name: 'addonid') this.id,
       {final Set<KodiAddonFields>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetAddonDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetAddonDetailsFromJson(json);
+  factory _$GetAddonDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetAddonDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'addonid')
@@ -138,29 +146,32 @@ class _$_GetAddonDetails extends _GetAddonDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAddonDetails &&
+            other is _$GetAddonDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAddonDetailsCopyWith<_$_GetAddonDetails> get copyWith =>
-      __$$_GetAddonDetailsCopyWithImpl<_$_GetAddonDetails>(this, _$identity);
+  _$$GetAddonDetailsImplCopyWith<_$GetAddonDetailsImpl> get copyWith =>
+      __$$GetAddonDetailsImplCopyWithImpl<_$GetAddonDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetAddonDetailsToJson(
+    return _$$GetAddonDetailsImplToJson(
       this,
     );
   }
@@ -168,20 +179,23 @@ class _$_GetAddonDetails extends _GetAddonDetails {
 
 abstract class _GetAddonDetails extends GetAddonDetails {
   const factory _GetAddonDetails(@JsonKey(name: 'addonid') final String id,
-      {final Set<KodiAddonFields>? properties}) = _$_GetAddonDetails;
+      {final Set<KodiAddonFields>? properties}) = _$GetAddonDetailsImpl;
   const _GetAddonDetails._() : super._();
 
   factory _GetAddonDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetAddonDetails.fromJson;
+      _$GetAddonDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'addonid')
   String get id;
   @override
   Set<KodiAddonFields>? get properties;
+
+  /// Create a copy of GetAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetAddonDetailsCopyWith<_$_GetAddonDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetAddonDetailsImplCopyWith<_$GetAddonDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -195,8 +209,12 @@ mixin _$GetAddonDetailsResponse {
   KodiAddonDetails get addon => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetAddonDetailsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetAddonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetAddonDetailsResponseCopyWith<GetAddonDetailsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -224,6 +242,8 @@ class _$GetAddonDetailsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetAddonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,6 +262,8 @@ class _$GetAddonDetailsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetAddonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiAddonDetailsCopyWith<$Res> get addon {
@@ -250,6 +272,8 @@ class _$GetAddonDetailsResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of GetAddonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -260,11 +284,12 @@ class _$GetAddonDetailsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetAddonDetailsResponseCopyWith<$Res>
+abstract class _$$GetAddonDetailsResponseImplCopyWith<$Res>
     implements $GetAddonDetailsResponseCopyWith<$Res> {
-  factory _$$_GetAddonDetailsResponseCopyWith(_$_GetAddonDetailsResponse value,
-          $Res Function(_$_GetAddonDetailsResponse) then) =
-      __$$_GetAddonDetailsResponseCopyWithImpl<$Res>;
+  factory _$$GetAddonDetailsResponseImplCopyWith(
+          _$GetAddonDetailsResponseImpl value,
+          $Res Function(_$GetAddonDetailsResponseImpl) then) =
+      __$$GetAddonDetailsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiAddonDetails addon, KodiListLimitsReturned limits});
@@ -276,21 +301,24 @@ abstract class _$$_GetAddonDetailsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetAddonDetailsResponseCopyWithImpl<$Res>
+class __$$GetAddonDetailsResponseImplCopyWithImpl<$Res>
     extends _$GetAddonDetailsResponseCopyWithImpl<$Res,
-        _$_GetAddonDetailsResponse>
-    implements _$$_GetAddonDetailsResponseCopyWith<$Res> {
-  __$$_GetAddonDetailsResponseCopyWithImpl(_$_GetAddonDetailsResponse _value,
-      $Res Function(_$_GetAddonDetailsResponse) _then)
+        _$GetAddonDetailsResponseImpl>
+    implements _$$GetAddonDetailsResponseImplCopyWith<$Res> {
+  __$$GetAddonDetailsResponseImplCopyWithImpl(
+      _$GetAddonDetailsResponseImpl _value,
+      $Res Function(_$GetAddonDetailsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetAddonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? addon = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetAddonDetailsResponse(
+    return _then(_$GetAddonDetailsResponseImpl(
       addon: null == addon
           ? _value.addon
           : addon // ignore: cast_nullable_to_non_nullable
@@ -305,11 +333,12 @@ class __$$_GetAddonDetailsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetAddonDetailsResponse implements _GetAddonDetailsResponse {
-  const _$_GetAddonDetailsResponse({required this.addon, required this.limits});
+class _$GetAddonDetailsResponseImpl implements _GetAddonDetailsResponse {
+  const _$GetAddonDetailsResponseImpl(
+      {required this.addon, required this.limits});
 
-  factory _$_GetAddonDetailsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetAddonDetailsResponseFromJson(json);
+  factory _$GetAddonDetailsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetAddonDetailsResponseImplFromJson(json);
 
   @override
   final KodiAddonDetails addon;
@@ -322,29 +351,30 @@ class _$_GetAddonDetailsResponse implements _GetAddonDetailsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAddonDetailsResponse &&
+            other is _$GetAddonDetailsResponseImpl &&
             (identical(other.addon, addon) || other.addon == addon) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, addon, limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetAddonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAddonDetailsResponseCopyWith<_$_GetAddonDetailsResponse>
-      get copyWith =>
-          __$$_GetAddonDetailsResponseCopyWithImpl<_$_GetAddonDetailsResponse>(
-              this, _$identity);
+  _$$GetAddonDetailsResponseImplCopyWith<_$GetAddonDetailsResponseImpl>
+      get copyWith => __$$GetAddonDetailsResponseImplCopyWithImpl<
+          _$GetAddonDetailsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetAddonDetailsResponseToJson(
+    return _$$GetAddonDetailsResponseImplToJson(
       this,
     );
   }
@@ -354,17 +384,20 @@ abstract class _GetAddonDetailsResponse implements GetAddonDetailsResponse {
   const factory _GetAddonDetailsResponse(
           {required final KodiAddonDetails addon,
           required final KodiListLimitsReturned limits}) =
-      _$_GetAddonDetailsResponse;
+      _$GetAddonDetailsResponseImpl;
 
   factory _GetAddonDetailsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetAddonDetailsResponse.fromJson;
+      _$GetAddonDetailsResponseImpl.fromJson;
 
   @override
   KodiAddonDetails get addon;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetAddonDetailsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetAddonDetailsResponseCopyWith<_$_GetAddonDetailsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetAddonDetailsResponseImplCopyWith<_$GetAddonDetailsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

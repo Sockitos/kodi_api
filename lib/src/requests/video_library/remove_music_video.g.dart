@@ -6,12 +6,14 @@ part of 'remove_music_video.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RemoveMusicVideo _$$_RemoveMusicVideoFromJson(Map<String, dynamic> json) =>
-    _$_RemoveMusicVideo(
-      json['musicvideoid'] as int,
+_$RemoveMusicVideoImpl _$$RemoveMusicVideoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RemoveMusicVideoImpl(
+      (json['musicvideoid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_RemoveMusicVideoToJson(_$_RemoveMusicVideo instance) =>
+Map<String, dynamic> _$$RemoveMusicVideoImplToJson(
+        _$RemoveMusicVideoImpl instance) =>
     <String, dynamic>{
       'musicvideoid': instance.id,
     };
