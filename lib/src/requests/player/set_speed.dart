@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:kodi_api/src/models/models.dart';
+import 'package:kodi_api/src/models/global/kodi_global_increment_decrement.dart';
 import 'package:kodi_api/src/requests/kodi_request.dart';
 import 'package:kodi_api/src/requests/kodi_response.dart';
 

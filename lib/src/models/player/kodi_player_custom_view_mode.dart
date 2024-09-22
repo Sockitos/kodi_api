@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_positional_boolean_parameters
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'kodi_player_custom_view_mode.freezed.dart';
