@@ -20,6 +20,7 @@ ExecuteAddon _$ExecuteAddonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ExecuteAddon {
+  @JsonKey(name: 'addonid')
   String get id => throw _privateConstructorUsedError;
   @KodiAddonsExecuteAddonParamsConverter()
   KodiAddonsExecuteAddonParams? get params =>
@@ -43,7 +44,7 @@ abstract class $ExecuteAddonCopyWith<$Res> {
       _$ExecuteAddonCopyWithImpl<$Res, ExecuteAddon>;
   @useResult
   $Res call(
-      {String id,
+      {@JsonKey(name: 'addonid') String id,
       @KodiAddonsExecuteAddonParamsConverter()
       KodiAddonsExecuteAddonParams? params,
       bool wait});
@@ -110,7 +111,7 @@ abstract class _$$ExecuteAddonImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id,
+      {@JsonKey(name: 'addonid') String id,
       @KodiAddonsExecuteAddonParamsConverter()
       KodiAddonsExecuteAddonParams? params,
       bool wait});
@@ -156,7 +157,7 @@ class __$$ExecuteAddonImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ExecuteAddonImpl extends _ExecuteAddon {
-  const _$ExecuteAddonImpl(this.id,
+  const _$ExecuteAddonImpl(@JsonKey(name: 'addonid') this.id,
       {@KodiAddonsExecuteAddonParamsConverter() this.params, this.wait = false})
       : super._();
 
@@ -164,6 +165,7 @@ class _$ExecuteAddonImpl extends _ExecuteAddon {
       _$$ExecuteAddonImplFromJson(json);
 
   @override
+  @JsonKey(name: 'addonid')
   final String id;
   @override
   @KodiAddonsExecuteAddonParamsConverter()
@@ -208,7 +210,7 @@ class _$ExecuteAddonImpl extends _ExecuteAddon {
 }
 
 abstract class _ExecuteAddon extends ExecuteAddon {
-  const factory _ExecuteAddon(final String id,
+  const factory _ExecuteAddon(@JsonKey(name: 'addonid') final String id,
       {@KodiAddonsExecuteAddonParamsConverter()
       final KodiAddonsExecuteAddonParams? params,
       final bool wait}) = _$ExecuteAddonImpl;
@@ -218,6 +220,7 @@ abstract class _ExecuteAddon extends ExecuteAddon {
       _$ExecuteAddonImpl.fromJson;
 
   @override
+  @JsonKey(name: 'addonid')
   String get id;
   @override
   @KodiAddonsExecuteAddonParamsConverter()

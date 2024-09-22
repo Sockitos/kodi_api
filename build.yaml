@@ -8,6 +8,7 @@ targets:
             - lib/src/models/**.dart
             - lib/src/notifications/**.dart
             - lib/src/requests/**.dart
+            - lib/src/utils/kodi_bool_string.dart
         options:
           explicit_to_json: true
           include_if_null: false
@@ -20,3 +21,4 @@ targets:
             - lib/src/models/**.dart
             - lib/src/notifications/**.dart
             - lib/src/requests/**.dart
+            - lib/src/utils/kodi_bool_string.dart

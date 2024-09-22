@@ -8,7 +8,7 @@ part of 'execute_addon.dart';
 
 _$ExecuteAddonImpl _$$ExecuteAddonImplFromJson(Map<String, dynamic> json) =>
     _$ExecuteAddonImpl(
-      json['id'] as String,
+      json['addonid'] as String,
       params: const KodiAddonsExecuteAddonParamsConverter()
           .fromJson(json['params']),
       wait: json['wait'] as bool? ?? false,
@@ -16,7 +16,7 @@ _$ExecuteAddonImpl _$$ExecuteAddonImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$ExecuteAddonImplToJson(_$ExecuteAddonImpl instance) {
   final val = <String, dynamic>{
-    'id': instance.id,
+    'addonid': instance.id,
   };
 
   void writeNotNull(String key, dynamic value) {

@@ -207,7 +207,7 @@ GetAddonDetailsResponse _$GetAddonDetailsResponseFromJson(
 /// @nodoc
 mixin _$GetAddonDetailsResponse {
   KodiAddonDetails get addon => throw _privateConstructorUsedError;
-  KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
+  KodiListLimitsReturned? get limits => throw _privateConstructorUsedError;
 
   /// Serializes this GetAddonDetailsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -225,10 +225,10 @@ abstract class $GetAddonDetailsResponseCopyWith<$Res> {
           $Res Function(GetAddonDetailsResponse) then) =
       _$GetAddonDetailsResponseCopyWithImpl<$Res, GetAddonDetailsResponse>;
   @useResult
-  $Res call({KodiAddonDetails addon, KodiListLimitsReturned limits});
+  $Res call({KodiAddonDetails addon, KodiListLimitsReturned? limits});
 
   $KodiAddonDetailsCopyWith<$Res> get addon;
-  $KodiListLimitsReturnedCopyWith<$Res> get limits;
+  $KodiListLimitsReturnedCopyWith<$Res>? get limits;
 }
 
 /// @nodoc
@@ -248,17 +248,17 @@ class _$GetAddonDetailsResponseCopyWithImpl<$Res,
   @override
   $Res call({
     Object? addon = null,
-    Object? limits = null,
+    Object? limits = freezed,
   }) {
     return _then(_value.copyWith(
       addon: null == addon
           ? _value.addon
           : addon // ignore: cast_nullable_to_non_nullable
               as KodiAddonDetails,
-      limits: null == limits
+      limits: freezed == limits
           ? _value.limits
           : limits // ignore: cast_nullable_to_non_nullable
-              as KodiListLimitsReturned,
+              as KodiListLimitsReturned?,
     ) as $Val);
   }
 
@@ -276,8 +276,12 @@ class _$GetAddonDetailsResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiListLimitsReturnedCopyWith<$Res> get limits {
-    return $KodiListLimitsReturnedCopyWith<$Res>(_value.limits, (value) {
+  $KodiListLimitsReturnedCopyWith<$Res>? get limits {
+    if (_value.limits == null) {
+      return null;
+    }
+
+    return $KodiListLimitsReturnedCopyWith<$Res>(_value.limits!, (value) {
       return _then(_value.copyWith(limits: value) as $Val);
     });
   }
@@ -292,12 +296,12 @@ abstract class _$$GetAddonDetailsResponseImplCopyWith<$Res>
       __$$GetAddonDetailsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({KodiAddonDetails addon, KodiListLimitsReturned limits});
+  $Res call({KodiAddonDetails addon, KodiListLimitsReturned? limits});
 
   @override
   $KodiAddonDetailsCopyWith<$Res> get addon;
   @override
-  $KodiListLimitsReturnedCopyWith<$Res> get limits;
+  $KodiListLimitsReturnedCopyWith<$Res>? get limits;
 }
 
 /// @nodoc
@@ -316,17 +320,17 @@ class __$$GetAddonDetailsResponseImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? addon = null,
-    Object? limits = null,
+    Object? limits = freezed,
   }) {
     return _then(_$GetAddonDetailsResponseImpl(
       addon: null == addon
           ? _value.addon
           : addon // ignore: cast_nullable_to_non_nullable
               as KodiAddonDetails,
-      limits: null == limits
+      limits: freezed == limits
           ? _value.limits
           : limits // ignore: cast_nullable_to_non_nullable
-              as KodiListLimitsReturned,
+              as KodiListLimitsReturned?,
     ));
   }
 }
@@ -334,8 +338,7 @@ class __$$GetAddonDetailsResponseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$GetAddonDetailsResponseImpl implements _GetAddonDetailsResponse {
-  const _$GetAddonDetailsResponseImpl(
-      {required this.addon, required this.limits});
+  const _$GetAddonDetailsResponseImpl({required this.addon, this.limits});
 
   factory _$GetAddonDetailsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetAddonDetailsResponseImplFromJson(json);
@@ -343,7 +346,7 @@ class _$GetAddonDetailsResponseImpl implements _GetAddonDetailsResponse {
   @override
   final KodiAddonDetails addon;
   @override
-  final KodiListLimitsReturned limits;
+  final KodiListLimitsReturned? limits;
 
   @override
   String toString() {
@@ -382,9 +385,8 @@ class _$GetAddonDetailsResponseImpl implements _GetAddonDetailsResponse {
 
 abstract class _GetAddonDetailsResponse implements GetAddonDetailsResponse {
   const factory _GetAddonDetailsResponse(
-          {required final KodiAddonDetails addon,
-          required final KodiListLimitsReturned limits}) =
-      _$GetAddonDetailsResponseImpl;
+      {required final KodiAddonDetails addon,
+      final KodiListLimitsReturned? limits}) = _$GetAddonDetailsResponseImpl;
 
   factory _GetAddonDetailsResponse.fromJson(Map<String, dynamic> json) =
       _$GetAddonDetailsResponseImpl.fromJson;
@@ -392,7 +394,7 @@ abstract class _GetAddonDetailsResponse implements GetAddonDetailsResponse {
   @override
   KodiAddonDetails get addon;
   @override
-  KodiListLimitsReturned get limits;
+  KodiListLimitsReturned? get limits;
 
   /// Create a copy of GetAddonDetailsResponse
   /// with the given fields replaced by the non-null parameter values.

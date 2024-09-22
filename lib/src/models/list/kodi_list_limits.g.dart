@@ -8,7 +8,7 @@ part of 'kodi_list_limits.dart';
 
 _$KodiListLimitsImpl _$$KodiListLimitsImplFromJson(Map<String, dynamic> json) =>
     _$KodiListLimitsImpl(
-      end: (json['end'] as num).toInt(),
+      end: (json['end'] as num?)?.toInt() ?? -1,
       start: (json['start'] as num?)?.toInt() ?? 0,
     );
 

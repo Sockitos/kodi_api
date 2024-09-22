@@ -55,13 +55,24 @@ _$GetAddonDetailsResponseImpl _$$GetAddonDetailsResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$GetAddonDetailsResponseImpl(
       addon: KodiAddonDetails.fromJson(json['addon'] as Map<String, dynamic>),
-      limits: KodiListLimitsReturned.fromJson(
-          json['limits'] as Map<String, dynamic>),
+      limits: json['limits'] == null
+          ? null
+          : KodiListLimitsReturned.fromJson(
+              json['limits'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$GetAddonDetailsResponseImplToJson(
-        _$GetAddonDetailsResponseImpl instance) =>
-    <String, dynamic>{
-      'addon': instance.addon.toJson(),
-      'limits': instance.limits.toJson(),
-    };
+    _$GetAddonDetailsResponseImpl instance) {
+  final val = <String, dynamic>{
+    'addon': instance.addon.toJson(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('limits', instance.limits?.toJson());
+  return val;
+}

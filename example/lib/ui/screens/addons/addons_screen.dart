@@ -1,33 +1,34 @@
-import 'package:example/providers/service_providers.dart';
+import 'package:example/ui/screens/addons/components/execute_addon.dart';
+import 'package:example/ui/screens/addons/components/get_addon_details.dart';
+import 'package:example/ui/screens/addons/components/get_addons.dart';
+import 'package:example/ui/screens/addons/components/set_addon_enabled.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:kodi_api/kodi_api.dart';
 
-class AddonsScreen extends ConsumerWidget {
+class AddonsScreen extends StatelessWidget {
   const AddonsScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final kodiAPI = ref.watch(kodiAPIProvider);
-
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 3,
         centerTitle: true,
         title: const Text('Addons'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const SizedBox(height: 16),
-          ElevatedButton(
-            onPressed: () async {
-              final request = Addons.executeAddon('1');
-              final response = await kodiAPI.sendRequest<dynamic>(request);
-            },
-            child: const Text('Execute Addon'),
-          ),
-        ],
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ExecuteAddon(),
+            SizedBox(height: 16),
+            GetAddonDetails(),
+            SizedBox(height: 16),
+            GetAddons(),
+            SizedBox(height: 16),
+            SetAddonEnabled(),
+          ],
+        ),
       ),
     );
   }

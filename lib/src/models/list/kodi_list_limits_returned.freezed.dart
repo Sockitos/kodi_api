@@ -133,14 +133,19 @@ class __$$KodiListLimitsReturnedImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiListLimitsReturnedImpl implements _KodiListLimitsReturned {
   const _$KodiListLimitsReturnedImpl(
-      {required this.end, required this.start, required this.total});
+      {this.end = -1, this.start = 0, required this.total})
+      : assert(end >= 0),
+        assert(start >= 0),
+        assert(total >= 0);
 
   factory _$KodiListLimitsReturnedImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiListLimitsReturnedImplFromJson(json);
 
   @override
+  @JsonKey()
   final int end;
   @override
+  @JsonKey()
   final int start;
   @override
   final int total;
@@ -183,8 +188,8 @@ class _$KodiListLimitsReturnedImpl implements _KodiListLimitsReturned {
 
 abstract class _KodiListLimitsReturned implements KodiListLimitsReturned {
   const factory _KodiListLimitsReturned(
-      {required final int end,
-      required final int start,
+      {final int end,
+      final int start,
       required final int total}) = _$KodiListLimitsReturnedImpl;
 
   factory _KodiListLimitsReturned.fromJson(Map<String, dynamic> json) =

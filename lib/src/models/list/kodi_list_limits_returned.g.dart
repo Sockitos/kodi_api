@@ -9,8 +9,8 @@ part of 'kodi_list_limits_returned.dart';
 _$KodiListLimitsReturnedImpl _$$KodiListLimitsReturnedImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiListLimitsReturnedImpl(
-      end: (json['end'] as num).toInt(),
-      start: (json['start'] as num).toInt(),
+      end: (json['end'] as num?)?.toInt() ?? -1,
+      start: (json['start'] as num?)?.toInt() ?? 0,
       total: (json['total'] as num).toInt(),
     );
 
