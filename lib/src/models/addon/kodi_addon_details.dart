@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kodi_api/src/models/addon/kodi_addon_type.dart';
-import 'package:kodi_api/src/utils/kodi_bool_string.dart';
+import 'package:kodi_api/src/models/utils/kodi_bool_string.dart';
 
 part 'kodi_addon_details.freezed.dart';
 part 'kodi_addon_details.g.dart';

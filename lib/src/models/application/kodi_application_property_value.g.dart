@@ -9,9 +9,9 @@ part of 'kodi_application_property_value.dart';
 _$KodiApplicationPropertyValueImpl _$$KodiApplicationPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiApplicationPropertyValueImpl(
-      language: json['language'] as String?,
-      muted: json['muted'] as bool?,
-      name: json['name'] as String?,
+      language: json['language'] as String? ?? '',
+      muted: json['muted'] as bool? ?? false,
+      name: json['name'] as String? ?? '',
       sortTokens: (json['sorttokens'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toSet(),
@@ -19,12 +19,16 @@ _$KodiApplicationPropertyValueImpl _$$KodiApplicationPropertyValueImplFromJson(
           ? null
           : KodiApplicationPropertyValueVersion.fromJson(
               json['version'] as Map<String, dynamic>),
-      volume: (json['volume'] as num?)?.toInt(),
+      volume: (json['volume'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$KodiApplicationPropertyValueImplToJson(
     _$KodiApplicationPropertyValueImpl instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'language': instance.language,
+    'muted': instance.muted,
+    'name': instance.name,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -32,12 +36,9 @@ Map<String, dynamic> _$$KodiApplicationPropertyValueImplToJson(
     }
   }
 
-  writeNotNull('language', instance.language);
-  writeNotNull('muted', instance.muted);
-  writeNotNull('name', instance.name);
   writeNotNull('sorttokens', instance.sortTokens?.toList());
   writeNotNull('version', instance.version?.toJson());
-  writeNotNull('volume', instance.volume);
+  val['volume'] = instance.volume;
   return val;
 }
 
@@ -47,10 +48,10 @@ _$KodiApplicationPropertyValueVersionImpl
         _$KodiApplicationPropertyValueVersionImpl(
           major: (json['major'] as num).toInt(),
           minor: (json['minor'] as num).toInt(),
-          revision: json['revision'] as String,
+          revision: const KodiStringIntConverter().fromJson(json['revision']),
           tag: $enumDecode(
               _$KodiApplicationPropertyValueVersionTagEnumMap, json['tag']),
-          tagVersion: json['tagversion'] as String?,
+          tagVersion: json['tagversion'] as String? ?? '',
         );
 
 Map<String, dynamic> _$$KodiApplicationPropertyValueVersionImplToJson(
@@ -58,8 +59,6 @@ Map<String, dynamic> _$$KodiApplicationPropertyValueVersionImplToJson(
   final val = <String, dynamic>{
     'major': instance.major,
     'minor': instance.minor,
-    'revision': instance.revision,
-    'tag': _$KodiApplicationPropertyValueVersionTagEnumMap[instance.tag]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -68,12 +67,15 @@ Map<String, dynamic> _$$KodiApplicationPropertyValueVersionImplToJson(
     }
   }
 
-  writeNotNull('tagversion', instance.tagVersion);
+  writeNotNull(
+      'revision', const KodiStringIntConverter().toJson(instance.revision));
+  val['tag'] = _$KodiApplicationPropertyValueVersionTagEnumMap[instance.tag]!;
+  val['tagversion'] = instance.tagVersion;
   return val;
 }
 
 const _$KodiApplicationPropertyValueVersionTagEnumMap = {
-  KodiApplicationPropertyValueVersionTag.prealpha: 'preAlpha',
+  KodiApplicationPropertyValueVersionTag.preAlpha: 'prealpha',
   KodiApplicationPropertyValueVersionTag.alpha: 'alpha',
   KodiApplicationPropertyValueVersionTag.beta: 'beta',
   KodiApplicationPropertyValueVersionTag.releaseCandidate: 'releasecandidate',

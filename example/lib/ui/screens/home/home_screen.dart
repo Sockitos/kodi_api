@@ -1,4 +1,5 @@
 import 'package:example/ui/screens/addons/addons_screen.dart';
+import 'package:example/ui/screens/application/application_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Addons',
+              ),
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const ApplicationScreen(),
+                  ),
+                ),
+                label: 'Application',
               ),
             ],
           ),

@@ -299,7 +299,9 @@ class __$$SetVolumeValueIntImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SetVolumeValueIntImpl implements _SetVolumeValueInt {
   const _$SetVolumeValueIntImpl(this.volume, {final String? $type})
-      : $type = $type ?? 'abs';
+      : assert(volume >= 0),
+        assert(volume <= 100),
+        $type = $type ?? 'abs';
 
   factory _$SetVolumeValueIntImpl.fromJson(Map<String, dynamic> json) =>
       _$$SetVolumeValueIntImplFromJson(json);

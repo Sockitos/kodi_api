@@ -21,14 +21,14 @@ KodiApplicationPropertyValue _$KodiApplicationPropertyValueFromJson(
 
 /// @nodoc
 mixin _$KodiApplicationPropertyValue {
-  String? get language => throw _privateConstructorUsedError;
-  bool? get muted => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
+  String get language => throw _privateConstructorUsedError;
+  bool get muted => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'sorttokens')
   Set<String>? get sortTokens => throw _privateConstructorUsedError;
   KodiApplicationPropertyValueVersion? get version =>
       throw _privateConstructorUsedError;
-  int? get volume => throw _privateConstructorUsedError;
+  int get volume => throw _privateConstructorUsedError;
 
   /// Serializes this KodiApplicationPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,12 +49,12 @@ abstract class $KodiApplicationPropertyValueCopyWith<$Res> {
           KodiApplicationPropertyValue>;
   @useResult
   $Res call(
-      {String? language,
-      bool? muted,
-      String? name,
+      {String language,
+      bool muted,
+      String name,
       @JsonKey(name: 'sorttokens') Set<String>? sortTokens,
       KodiApplicationPropertyValueVersion? version,
-      int? volume});
+      int volume});
 
   $KodiApplicationPropertyValueVersionCopyWith<$Res>? get version;
 }
@@ -75,26 +75,26 @@ class _$KodiApplicationPropertyValueCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? language = freezed,
-    Object? muted = freezed,
-    Object? name = freezed,
+    Object? language = null,
+    Object? muted = null,
+    Object? name = null,
     Object? sortTokens = freezed,
     Object? version = freezed,
-    Object? volume = freezed,
+    Object? volume = null,
   }) {
     return _then(_value.copyWith(
-      language: freezed == language
+      language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as String?,
-      muted: freezed == muted
+              as String,
+      muted: null == muted
           ? _value.muted
           : muted // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      name: freezed == name
+              as bool,
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       sortTokens: freezed == sortTokens
           ? _value.sortTokens
           : sortTokens // ignore: cast_nullable_to_non_nullable
@@ -103,10 +103,10 @@ class _$KodiApplicationPropertyValueCopyWithImpl<$Res,
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as KodiApplicationPropertyValueVersion?,
-      volume: freezed == volume
+      volume: null == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
     ) as $Val);
   }
 
@@ -136,12 +136,12 @@ abstract class _$$KodiApplicationPropertyValueImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? language,
-      bool? muted,
-      String? name,
+      {String language,
+      bool muted,
+      String name,
       @JsonKey(name: 'sorttokens') Set<String>? sortTokens,
       KodiApplicationPropertyValueVersion? version,
-      int? volume});
+      int volume});
 
   @override
   $KodiApplicationPropertyValueVersionCopyWith<$Res>? get version;
@@ -162,26 +162,26 @@ class __$$KodiApplicationPropertyValueImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? language = freezed,
-    Object? muted = freezed,
-    Object? name = freezed,
+    Object? language = null,
+    Object? muted = null,
+    Object? name = null,
     Object? sortTokens = freezed,
     Object? version = freezed,
-    Object? volume = freezed,
+    Object? volume = null,
   }) {
     return _then(_$KodiApplicationPropertyValueImpl(
-      language: freezed == language
+      language: null == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
-              as String?,
-      muted: freezed == muted
+              as String,
+      muted: null == muted
           ? _value.muted
           : muted // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      name: freezed == name
+              as bool,
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       sortTokens: freezed == sortTokens
           ? _value._sortTokens
           : sortTokens // ignore: cast_nullable_to_non_nullable
@@ -190,10 +190,10 @@ class __$$KodiApplicationPropertyValueImplCopyWithImpl<$Res>
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as KodiApplicationPropertyValueVersion?,
-      volume: freezed == volume
+      volume: null == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
     ));
   }
 }
@@ -203,24 +203,32 @@ class __$$KodiApplicationPropertyValueImplCopyWithImpl<$Res>
 class _$KodiApplicationPropertyValueImpl
     implements _KodiApplicationPropertyValue {
   const _$KodiApplicationPropertyValueImpl(
-      {this.language,
-      this.muted,
-      this.name,
+      {this.language = '',
+      this.muted = false,
+      this.name = '',
       @JsonKey(name: 'sorttokens') final Set<String>? sortTokens,
       this.version,
-      this.volume})
-      : _sortTokens = sortTokens;
+      this.volume = 0})
+      : assert(language.length >= 1),
+        assert(name.length == 0 || name.length >= 1),
+        assert((sortTokens?.length ?? 1) >= 1),
+        assert(volume >= 0),
+        assert(volume <= 100),
+        _sortTokens = sortTokens;
 
   factory _$KodiApplicationPropertyValueImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$KodiApplicationPropertyValueImplFromJson(json);
 
   @override
-  final String? language;
+  @JsonKey()
+  final String language;
   @override
-  final bool? muted;
+  @JsonKey()
+  final bool muted;
   @override
-  final String? name;
+  @JsonKey()
+  final String name;
   final Set<String>? _sortTokens;
   @override
   @JsonKey(name: 'sorttokens')
@@ -235,7 +243,8 @@ class _$KodiApplicationPropertyValueImpl
   @override
   final KodiApplicationPropertyValueVersion? version;
   @override
-  final int? volume;
+  @JsonKey()
+  final int volume;
 
   @override
   String toString() {
@@ -283,29 +292,29 @@ class _$KodiApplicationPropertyValueImpl
 abstract class _KodiApplicationPropertyValue
     implements KodiApplicationPropertyValue {
   const factory _KodiApplicationPropertyValue(
-      {final String? language,
-      final bool? muted,
-      final String? name,
+      {final String language,
+      final bool muted,
+      final String name,
       @JsonKey(name: 'sorttokens') final Set<String>? sortTokens,
       final KodiApplicationPropertyValueVersion? version,
-      final int? volume}) = _$KodiApplicationPropertyValueImpl;
+      final int volume}) = _$KodiApplicationPropertyValueImpl;
 
   factory _KodiApplicationPropertyValue.fromJson(Map<String, dynamic> json) =
       _$KodiApplicationPropertyValueImpl.fromJson;
 
   @override
-  String? get language;
+  String get language;
   @override
-  bool? get muted;
+  bool get muted;
   @override
-  String? get name;
+  String get name;
   @override
   @JsonKey(name: 'sorttokens')
   Set<String>? get sortTokens;
   @override
   KodiApplicationPropertyValueVersion? get version;
   @override
-  int? get volume;
+  int get volume;
 
   /// Create a copy of KodiApplicationPropertyValue
   /// with the given fields replaced by the non-null parameter values.
@@ -325,11 +334,12 @@ KodiApplicationPropertyValueVersion
 mixin _$KodiApplicationPropertyValueVersion {
   int get major => throw _privateConstructorUsedError;
   int get minor => throw _privateConstructorUsedError;
-  String get revision => throw _privateConstructorUsedError;
+  @KodiStringIntConverter()
+  KodiStringInt? get revision => throw _privateConstructorUsedError;
   KodiApplicationPropertyValueVersionTag get tag =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'tagversion')
-  String? get tagVersion => throw _privateConstructorUsedError;
+  String get tagVersion => throw _privateConstructorUsedError;
 
   /// Serializes this KodiApplicationPropertyValueVersion to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -353,9 +363,11 @@ abstract class $KodiApplicationPropertyValueVersionCopyWith<$Res> {
   $Res call(
       {int major,
       int minor,
-      String revision,
+      @KodiStringIntConverter() KodiStringInt? revision,
       KodiApplicationPropertyValueVersionTag tag,
-      @JsonKey(name: 'tagversion') String? tagVersion});
+      @JsonKey(name: 'tagversion') String tagVersion});
+
+  $KodiStringIntCopyWith<$Res>? get revision;
 }
 
 /// @nodoc
@@ -376,9 +388,9 @@ class _$KodiApplicationPropertyValueVersionCopyWithImpl<$Res,
   $Res call({
     Object? major = null,
     Object? minor = null,
-    Object? revision = null,
+    Object? revision = freezed,
     Object? tag = null,
-    Object? tagVersion = freezed,
+    Object? tagVersion = null,
   }) {
     return _then(_value.copyWith(
       major: null == major
@@ -389,19 +401,33 @@ class _$KodiApplicationPropertyValueVersionCopyWithImpl<$Res,
           ? _value.minor
           : minor // ignore: cast_nullable_to_non_nullable
               as int,
-      revision: null == revision
+      revision: freezed == revision
           ? _value.revision
           : revision // ignore: cast_nullable_to_non_nullable
-              as String,
+              as KodiStringInt?,
       tag: null == tag
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as KodiApplicationPropertyValueVersionTag,
-      tagVersion: freezed == tagVersion
+      tagVersion: null == tagVersion
           ? _value.tagVersion
           : tagVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
+  }
+
+  /// Create a copy of KodiApplicationPropertyValueVersion
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $KodiStringIntCopyWith<$Res>? get revision {
+    if (_value.revision == null) {
+      return null;
+    }
+
+    return $KodiStringIntCopyWith<$Res>(_value.revision!, (value) {
+      return _then(_value.copyWith(revision: value) as $Val);
+    });
   }
 }
 
@@ -417,9 +443,12 @@ abstract class _$$KodiApplicationPropertyValueVersionImplCopyWith<$Res>
   $Res call(
       {int major,
       int minor,
-      String revision,
+      @KodiStringIntConverter() KodiStringInt? revision,
       KodiApplicationPropertyValueVersionTag tag,
-      @JsonKey(name: 'tagversion') String? tagVersion});
+      @JsonKey(name: 'tagversion') String tagVersion});
+
+  @override
+  $KodiStringIntCopyWith<$Res>? get revision;
 }
 
 /// @nodoc
@@ -439,9 +468,9 @@ class __$$KodiApplicationPropertyValueVersionImplCopyWithImpl<$Res>
   $Res call({
     Object? major = null,
     Object? minor = null,
-    Object? revision = null,
+    Object? revision = freezed,
     Object? tag = null,
-    Object? tagVersion = freezed,
+    Object? tagVersion = null,
   }) {
     return _then(_$KodiApplicationPropertyValueVersionImpl(
       major: null == major
@@ -452,18 +481,18 @@ class __$$KodiApplicationPropertyValueVersionImplCopyWithImpl<$Res>
           ? _value.minor
           : minor // ignore: cast_nullable_to_non_nullable
               as int,
-      revision: null == revision
+      revision: freezed == revision
           ? _value.revision
           : revision // ignore: cast_nullable_to_non_nullable
-              as String,
+              as KodiStringInt?,
       tag: null == tag
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as KodiApplicationPropertyValueVersionTag,
-      tagVersion: freezed == tagVersion
+      tagVersion: null == tagVersion
           ? _value.tagVersion
           : tagVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -475,9 +504,11 @@ class _$KodiApplicationPropertyValueVersionImpl
   const _$KodiApplicationPropertyValueVersionImpl(
       {required this.major,
       required this.minor,
-      required this.revision,
+      @KodiStringIntConverter() this.revision,
       required this.tag,
-      @JsonKey(name: 'tagversion') this.tagVersion});
+      @JsonKey(name: 'tagversion') this.tagVersion = ''})
+      : assert(major >= 0),
+        assert(minor >= 0);
 
   factory _$KodiApplicationPropertyValueVersionImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -488,12 +519,13 @@ class _$KodiApplicationPropertyValueVersionImpl
   @override
   final int minor;
   @override
-  final String revision;
+  @KodiStringIntConverter()
+  final KodiStringInt? revision;
   @override
   final KodiApplicationPropertyValueVersionTag tag;
   @override
   @JsonKey(name: 'tagversion')
-  final String? tagVersion;
+  final String tagVersion;
 
   @override
   String toString() {
@@ -542,9 +574,9 @@ abstract class _KodiApplicationPropertyValueVersion
   const factory _KodiApplicationPropertyValueVersion(
           {required final int major,
           required final int minor,
-          required final String revision,
+          @KodiStringIntConverter() final KodiStringInt? revision,
           required final KodiApplicationPropertyValueVersionTag tag,
-          @JsonKey(name: 'tagversion') final String? tagVersion}) =
+          @JsonKey(name: 'tagversion') final String tagVersion}) =
       _$KodiApplicationPropertyValueVersionImpl;
 
   factory _KodiApplicationPropertyValueVersion.fromJson(
@@ -556,12 +588,13 @@ abstract class _KodiApplicationPropertyValueVersion
   @override
   int get minor;
   @override
-  String get revision;
+  @KodiStringIntConverter()
+  KodiStringInt? get revision;
   @override
   KodiApplicationPropertyValueVersionTag get tag;
   @override
   @JsonKey(name: 'tagversion')
-  String? get tagVersion;
+  String get tagVersion;
 
   /// Create a copy of KodiApplicationPropertyValueVersion
   /// with the given fields replaced by the non-null parameter values.

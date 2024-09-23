@@ -17,9 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 KodiBoolString _$KodiBoolStringFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
     case 'string':
-      return _KodiBoolStringBool.fromJson(json);
+      return _KodiBoolStringString.fromJson(json);
     case 'bool':
-      return _KodiBoolStringEnumerator.fromJson(json);
+      return _KodiBoolStringBool.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'KodiBoolString',
@@ -51,20 +51,20 @@ mixin _$KodiBoolString {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_KodiBoolStringBool value) string,
-    required TResult Function(_KodiBoolStringEnumerator value) bool,
+    required TResult Function(_KodiBoolStringString value) string,
+    required TResult Function(_KodiBoolStringBool value) bool,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_KodiBoolStringBool value)? string,
-    TResult? Function(_KodiBoolStringEnumerator value)? bool,
+    TResult? Function(_KodiBoolStringString value)? string,
+    TResult? Function(_KodiBoolStringBool value)? bool,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_KodiBoolStringBool value)? string,
-    TResult Function(_KodiBoolStringEnumerator value)? bool,
+    TResult Function(_KodiBoolStringString value)? string,
+    TResult Function(_KodiBoolStringBool value)? bool,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -95,20 +95,20 @@ class _$KodiBoolStringCopyWithImpl<$Res, $Val extends KodiBoolString>
 }
 
 /// @nodoc
-abstract class _$$KodiBoolStringBoolImplCopyWith<$Res> {
-  factory _$$KodiBoolStringBoolImplCopyWith(_$KodiBoolStringBoolImpl value,
-          $Res Function(_$KodiBoolStringBoolImpl) then) =
-      __$$KodiBoolStringBoolImplCopyWithImpl<$Res>;
+abstract class _$$KodiBoolStringStringImplCopyWith<$Res> {
+  factory _$$KodiBoolStringStringImplCopyWith(_$KodiBoolStringStringImpl value,
+          $Res Function(_$KodiBoolStringStringImpl) then) =
+      __$$KodiBoolStringStringImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$KodiBoolStringBoolImplCopyWithImpl<$Res>
-    extends _$KodiBoolStringCopyWithImpl<$Res, _$KodiBoolStringBoolImpl>
-    implements _$$KodiBoolStringBoolImplCopyWith<$Res> {
-  __$$KodiBoolStringBoolImplCopyWithImpl(_$KodiBoolStringBoolImpl _value,
-      $Res Function(_$KodiBoolStringBoolImpl) _then)
+class __$$KodiBoolStringStringImplCopyWithImpl<$Res>
+    extends _$KodiBoolStringCopyWithImpl<$Res, _$KodiBoolStringStringImpl>
+    implements _$$KodiBoolStringStringImplCopyWith<$Res> {
+  __$$KodiBoolStringStringImplCopyWithImpl(_$KodiBoolStringStringImpl _value,
+      $Res Function(_$KodiBoolStringStringImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of KodiBoolString
@@ -118,7 +118,7 @@ class __$$KodiBoolStringBoolImplCopyWithImpl<$Res>
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$KodiBoolStringBoolImpl(
+    return _then(_$KodiBoolStringStringImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -129,12 +129,12 @@ class __$$KodiBoolStringBoolImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
-  const _$KodiBoolStringBoolImpl(this.value, {final String? $type})
+class _$KodiBoolStringStringImpl implements _KodiBoolStringString {
+  const _$KodiBoolStringStringImpl(this.value, {final String? $type})
       : $type = $type ?? 'string';
 
-  factory _$KodiBoolStringBoolImpl.fromJson(Map<String, dynamic> json) =>
-      _$$KodiBoolStringBoolImplFromJson(json);
+  factory _$KodiBoolStringStringImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiBoolStringStringImplFromJson(json);
 
   @override
   final String value;
@@ -151,7 +151,7 @@ class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiBoolStringBoolImpl &&
+            other is _$KodiBoolStringStringImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
@@ -164,9 +164,10 @@ class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiBoolStringBoolImplCopyWith<_$KodiBoolStringBoolImpl> get copyWith =>
-      __$$KodiBoolStringBoolImplCopyWithImpl<_$KodiBoolStringBoolImpl>(
-          this, _$identity);
+  _$$KodiBoolStringStringImplCopyWith<_$KodiBoolStringStringImpl>
+      get copyWith =>
+          __$$KodiBoolStringStringImplCopyWithImpl<_$KodiBoolStringStringImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -202,8 +203,8 @@ class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_KodiBoolStringBool value) string,
-    required TResult Function(_KodiBoolStringEnumerator value) bool,
+    required TResult Function(_KodiBoolStringString value) string,
+    required TResult Function(_KodiBoolStringBool value) bool,
   }) {
     return string(this);
   }
@@ -211,8 +212,8 @@ class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_KodiBoolStringBool value)? string,
-    TResult? Function(_KodiBoolStringEnumerator value)? bool,
+    TResult? Function(_KodiBoolStringString value)? string,
+    TResult? Function(_KodiBoolStringBool value)? bool,
   }) {
     return string?.call(this);
   }
@@ -220,8 +221,8 @@ class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_KodiBoolStringBool value)? string,
-    TResult Function(_KodiBoolStringEnumerator value)? bool,
+    TResult Function(_KodiBoolStringString value)? string,
+    TResult Function(_KodiBoolStringBool value)? bool,
     required TResult orElse(),
   }) {
     if (string != null) {
@@ -232,18 +233,18 @@ class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiBoolStringBoolImplToJson(
+    return _$$KodiBoolStringStringImplToJson(
       this,
     );
   }
 }
 
-abstract class _KodiBoolStringBool implements KodiBoolString {
-  const factory _KodiBoolStringBool(final String value) =
-      _$KodiBoolStringBoolImpl;
+abstract class _KodiBoolStringString implements KodiBoolString {
+  const factory _KodiBoolStringString(final String value) =
+      _$KodiBoolStringStringImpl;
 
-  factory _KodiBoolStringBool.fromJson(Map<String, dynamic> json) =
-      _$KodiBoolStringBoolImpl.fromJson;
+  factory _KodiBoolStringString.fromJson(Map<String, dynamic> json) =
+      _$KodiBoolStringStringImpl.fromJson;
 
   @override
   String get value;
@@ -251,27 +252,25 @@ abstract class _KodiBoolStringBool implements KodiBoolString {
   /// Create a copy of KodiBoolString
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$KodiBoolStringBoolImplCopyWith<_$KodiBoolStringBoolImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$KodiBoolStringStringImplCopyWith<_$KodiBoolStringStringImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiBoolStringEnumeratorImplCopyWith<$Res> {
-  factory _$$KodiBoolStringEnumeratorImplCopyWith(
-          _$KodiBoolStringEnumeratorImpl value,
-          $Res Function(_$KodiBoolStringEnumeratorImpl) then) =
-      __$$KodiBoolStringEnumeratorImplCopyWithImpl<$Res>;
+abstract class _$$KodiBoolStringBoolImplCopyWith<$Res> {
+  factory _$$KodiBoolStringBoolImplCopyWith(_$KodiBoolStringBoolImpl value,
+          $Res Function(_$KodiBoolStringBoolImpl) then) =
+      __$$KodiBoolStringBoolImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool value});
 }
 
 /// @nodoc
-class __$$KodiBoolStringEnumeratorImplCopyWithImpl<$Res>
-    extends _$KodiBoolStringCopyWithImpl<$Res, _$KodiBoolStringEnumeratorImpl>
-    implements _$$KodiBoolStringEnumeratorImplCopyWith<$Res> {
-  __$$KodiBoolStringEnumeratorImplCopyWithImpl(
-      _$KodiBoolStringEnumeratorImpl _value,
-      $Res Function(_$KodiBoolStringEnumeratorImpl) _then)
+class __$$KodiBoolStringBoolImplCopyWithImpl<$Res>
+    extends _$KodiBoolStringCopyWithImpl<$Res, _$KodiBoolStringBoolImpl>
+    implements _$$KodiBoolStringBoolImplCopyWith<$Res> {
+  __$$KodiBoolStringBoolImplCopyWithImpl(_$KodiBoolStringBoolImpl _value,
+      $Res Function(_$KodiBoolStringBoolImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of KodiBoolString
@@ -281,7 +280,7 @@ class __$$KodiBoolStringEnumeratorImplCopyWithImpl<$Res>
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$KodiBoolStringEnumeratorImpl(
+    return _then(_$KodiBoolStringBoolImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -292,12 +291,12 @@ class __$$KodiBoolStringEnumeratorImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiBoolStringEnumeratorImpl implements _KodiBoolStringEnumerator {
-  const _$KodiBoolStringEnumeratorImpl(this.value, {final String? $type})
+class _$KodiBoolStringBoolImpl implements _KodiBoolStringBool {
+  const _$KodiBoolStringBoolImpl(this.value, {final String? $type})
       : $type = $type ?? 'bool';
 
-  factory _$KodiBoolStringEnumeratorImpl.fromJson(Map<String, dynamic> json) =>
-      _$$KodiBoolStringEnumeratorImplFromJson(json);
+  factory _$KodiBoolStringBoolImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiBoolStringBoolImplFromJson(json);
 
   @override
   final bool value;
@@ -314,7 +313,7 @@ class _$KodiBoolStringEnumeratorImpl implements _KodiBoolStringEnumerator {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiBoolStringEnumeratorImpl &&
+            other is _$KodiBoolStringBoolImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
@@ -327,9 +326,9 @@ class _$KodiBoolStringEnumeratorImpl implements _KodiBoolStringEnumerator {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiBoolStringEnumeratorImplCopyWith<_$KodiBoolStringEnumeratorImpl>
-      get copyWith => __$$KodiBoolStringEnumeratorImplCopyWithImpl<
-          _$KodiBoolStringEnumeratorImpl>(this, _$identity);
+  _$$KodiBoolStringBoolImplCopyWith<_$KodiBoolStringBoolImpl> get copyWith =>
+      __$$KodiBoolStringBoolImplCopyWithImpl<_$KodiBoolStringBoolImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -365,8 +364,8 @@ class _$KodiBoolStringEnumeratorImpl implements _KodiBoolStringEnumerator {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_KodiBoolStringBool value) string,
-    required TResult Function(_KodiBoolStringEnumerator value) bool,
+    required TResult Function(_KodiBoolStringString value) string,
+    required TResult Function(_KodiBoolStringBool value) bool,
   }) {
     return bool(this);
   }
@@ -374,8 +373,8 @@ class _$KodiBoolStringEnumeratorImpl implements _KodiBoolStringEnumerator {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_KodiBoolStringBool value)? string,
-    TResult? Function(_KodiBoolStringEnumerator value)? bool,
+    TResult? Function(_KodiBoolStringString value)? string,
+    TResult? Function(_KodiBoolStringBool value)? bool,
   }) {
     return bool?.call(this);
   }
@@ -383,8 +382,8 @@ class _$KodiBoolStringEnumeratorImpl implements _KodiBoolStringEnumerator {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_KodiBoolStringBool value)? string,
-    TResult Function(_KodiBoolStringEnumerator value)? bool,
+    TResult Function(_KodiBoolStringString value)? string,
+    TResult Function(_KodiBoolStringBool value)? bool,
     required TResult orElse(),
   }) {
     if (bool != null) {
@@ -395,18 +394,18 @@ class _$KodiBoolStringEnumeratorImpl implements _KodiBoolStringEnumerator {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiBoolStringEnumeratorImplToJson(
+    return _$$KodiBoolStringBoolImplToJson(
       this,
     );
   }
 }
 
-abstract class _KodiBoolStringEnumerator implements KodiBoolString {
-  const factory _KodiBoolStringEnumerator(final bool value) =
-      _$KodiBoolStringEnumeratorImpl;
+abstract class _KodiBoolStringBool implements KodiBoolString {
+  const factory _KodiBoolStringBool(final bool value) =
+      _$KodiBoolStringBoolImpl;
 
-  factory _KodiBoolStringEnumerator.fromJson(Map<String, dynamic> json) =
-      _$KodiBoolStringEnumeratorImpl.fromJson;
+  factory _KodiBoolStringBool.fromJson(Map<String, dynamic> json) =
+      _$KodiBoolStringBoolImpl.fromJson;
 
   @override
   bool get value;
@@ -414,6 +413,6 @@ abstract class _KodiBoolStringEnumerator implements KodiBoolString {
   /// Create a copy of KodiBoolString
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$KodiBoolStringEnumeratorImplCopyWith<_$KodiBoolStringEnumeratorImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$KodiBoolStringBoolImplCopyWith<_$KodiBoolStringBoolImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

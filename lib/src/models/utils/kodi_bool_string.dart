@@ -7,11 +7,11 @@ part 'kodi_bool_string.g.dart';
 class KodiBoolString with _$KodiBoolString {
   const factory KodiBoolString.string(
     String value,
-  ) = _KodiBoolStringBool;
+  ) = _KodiBoolStringString;
 
   const factory KodiBoolString.bool(
     bool value,
-  ) = _KodiBoolStringEnumerator;
+  ) = _KodiBoolStringBool;
 
   factory KodiBoolString.fromJson(Map<String, dynamic> json) =>
       _$KodiBoolStringFromJson(json);
