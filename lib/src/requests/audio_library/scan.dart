@@ -6,14 +6,14 @@ part 'scan.freezed.dart';
 part 'scan.g.dart';
 
 typedef ScanBuilder = Scan Function({
-  String? directory,
+  String directory,
   bool showDialogs,
 });
 
 @freezed
 class Scan with _$Scan implements KodiRequest<void> {
   const factory Scan({
-    @Default('') String? directory,
+    @Default('') String directory,
     @JsonKey(name: 'showdialogs') @Default(true) bool showDialogs,
   }) = _Scan;
 

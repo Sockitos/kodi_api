@@ -9,7 +9,7 @@ part of 'get_recently_added_songs.dart';
 _$GetRecentlyAddedSongsImpl _$$GetRecentlyAddedSongsImplFromJson(
         Map<String, dynamic> json) =>
     _$GetRecentlyAddedSongsImpl(
-      albumLimit: (json['albumlimit'] as num?)?.toInt() ?? -1,
+      albumLimit: (json['albumlimit'] as num?)?.toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiAudioFieldsSongEnumMap, e))
           .toSet(),

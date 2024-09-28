@@ -11,16 +11,8 @@ _$ScanImpl _$$ScanImplFromJson(Map<String, dynamic> json) => _$ScanImpl(
       showDialogs: json['showdialogs'] as bool? ?? true,
     );
 
-Map<String, dynamic> _$$ScanImplToJson(_$ScanImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('directory', instance.directory);
-  val['showdialogs'] = instance.showDialogs;
-  return val;
-}
+Map<String, dynamic> _$$ScanImplToJson(_$ScanImpl instance) =>
+    <String, dynamic>{
+      'directory': instance.directory,
+      'showdialogs': instance.showDialogs,
+    };

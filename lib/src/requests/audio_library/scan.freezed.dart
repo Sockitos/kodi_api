@@ -20,7 +20,7 @@ Scan _$ScanFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Scan {
-  String? get directory => throw _privateConstructorUsedError;
+  String get directory => throw _privateConstructorUsedError;
   @JsonKey(name: 'showdialogs')
   bool get showDialogs => throw _privateConstructorUsedError;
 
@@ -38,8 +38,7 @@ abstract class $ScanCopyWith<$Res> {
   factory $ScanCopyWith(Scan value, $Res Function(Scan) then) =
       _$ScanCopyWithImpl<$Res, Scan>;
   @useResult
-  $Res call(
-      {String? directory, @JsonKey(name: 'showdialogs') bool showDialogs});
+  $Res call({String directory, @JsonKey(name: 'showdialogs') bool showDialogs});
 }
 
 /// @nodoc
@@ -57,14 +56,14 @@ class _$ScanCopyWithImpl<$Res, $Val extends Scan>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? directory = freezed,
+    Object? directory = null,
     Object? showDialogs = null,
   }) {
     return _then(_value.copyWith(
-      directory: freezed == directory
+      directory: null == directory
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       showDialogs: null == showDialogs
           ? _value.showDialogs
           : showDialogs // ignore: cast_nullable_to_non_nullable
@@ -80,8 +79,7 @@ abstract class _$$ScanImplCopyWith<$Res> implements $ScanCopyWith<$Res> {
       __$$ScanImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? directory, @JsonKey(name: 'showdialogs') bool showDialogs});
+  $Res call({String directory, @JsonKey(name: 'showdialogs') bool showDialogs});
 }
 
 /// @nodoc
@@ -96,14 +94,14 @@ class __$$ScanImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? directory = freezed,
+    Object? directory = null,
     Object? showDialogs = null,
   }) {
     return _then(_$ScanImpl(
-      directory: freezed == directory
+      directory: null == directory
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       showDialogs: null == showDialogs
           ? _value.showDialogs
           : showDialogs // ignore: cast_nullable_to_non_nullable
@@ -125,7 +123,7 @@ class _$ScanImpl extends _Scan {
 
   @override
   @JsonKey()
-  final String? directory;
+  final String directory;
   @override
   @JsonKey(name: 'showdialogs')
   final bool showDialogs;
@@ -168,14 +166,14 @@ class _$ScanImpl extends _Scan {
 
 abstract class _Scan extends Scan {
   const factory _Scan(
-      {final String? directory,
+      {final String directory,
       @JsonKey(name: 'showdialogs') final bool showDialogs}) = _$ScanImpl;
   const _Scan._() : super._();
 
   factory _Scan.fromJson(Map<String, dynamic> json) = _$ScanImpl.fromJson;
 
   @override
-  String? get directory;
+  String get directory;
   @override
   @JsonKey(name: 'showdialogs')
   bool get showDialogs;

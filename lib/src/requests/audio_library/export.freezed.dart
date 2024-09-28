@@ -122,8 +122,7 @@ class __$$ExportImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable()
 class _$ExportImpl extends _Export {
   const _$ExportImpl(
       {@KodiAudioLibraryExportOptionsConverter() required this.options})
@@ -318,11 +317,11 @@ class __$$KodiAudioLibraryExportOptionsPathImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiAudioLibraryExportOptionsPathImpl
-    extends _KodiAudioLibraryExportOptionsPath {
+    implements _KodiAudioLibraryExportOptionsPath {
   const _$KodiAudioLibraryExportOptionsPathImpl(this.path,
       {final String? $type})
-      : $type = $type ?? 'path',
-        super._();
+      : assert(path.length >= 1),
+        $type = $type ?? 'path';
 
   factory _$KodiAudioLibraryExportOptionsPathImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -436,10 +435,9 @@ class _$KodiAudioLibraryExportOptionsPathImpl
 }
 
 abstract class _KodiAudioLibraryExportOptionsPath
-    extends KodiAudioLibraryExportOptions {
+    implements KodiAudioLibraryExportOptions {
   const factory _KodiAudioLibraryExportOptionsPath(final String path) =
       _$KodiAudioLibraryExportOptionsPathImpl;
-  const _KodiAudioLibraryExportOptionsPath._() : super._();
 
   factory _KodiAudioLibraryExportOptionsPath.fromJson(
           Map<String, dynamic> json) =
@@ -502,11 +500,10 @@ class __$$KodiAudioLibraryExportOptionsImagesOverwriteImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiAudioLibraryExportOptionsImagesOverwriteImpl
-    extends _KodiAudioLibraryExportOptionsImagesOverwrite {
+    implements _KodiAudioLibraryExportOptionsImagesOverwrite {
   const _$KodiAudioLibraryExportOptionsImagesOverwriteImpl(
       {this.images = false, this.overwrite = false, final String? $type})
-      : $type = $type ?? 'imagesOverwrite',
-        super._();
+      : $type = $type ?? 'imagesOverwrite';
 
   factory _$KodiAudioLibraryExportOptionsImagesOverwriteImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -628,11 +625,10 @@ class _$KodiAudioLibraryExportOptionsImagesOverwriteImpl
 }
 
 abstract class _KodiAudioLibraryExportOptionsImagesOverwrite
-    extends KodiAudioLibraryExportOptions {
+    implements KodiAudioLibraryExportOptions {
   const factory _KodiAudioLibraryExportOptionsImagesOverwrite(
           {final bool images, final bool overwrite}) =
       _$KodiAudioLibraryExportOptionsImagesOverwriteImpl;
-  const _KodiAudioLibraryExportOptionsImagesOverwrite._() : super._();
 
   factory _KodiAudioLibraryExportOptionsImagesOverwrite.fromJson(
           Map<String, dynamic> json) =

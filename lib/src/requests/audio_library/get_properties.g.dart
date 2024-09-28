@@ -21,15 +21,15 @@ Map<String, dynamic> _$$GetPropertiesImplToJson(_$GetPropertiesImpl instance) =>
     };
 
 const _$KodiAudioPropertyNameEnumMap = {
-  KodiAudioPropertyName.albumsLastAdded: 'albumslastadded',
-  KodiAudioPropertyName.albumsModified: 'albumsmodified',
-  KodiAudioPropertyName.artistLinksUpdated: 'artistlinksupdated',
-  KodiAudioPropertyName.artistsLastAdded: 'artistslastadded',
-  KodiAudioPropertyName.artistsModified: 'artistsmodified',
-  KodiAudioPropertyName.genresLastAdded: 'genreslastadded',
-  KodiAudioPropertyName.libraryLastCleaned: 'librarylastcleaned',
-  KodiAudioPropertyName.libraryLastUpdated: 'librarylastupdated',
   KodiAudioPropertyName.missingArtistId: 'missingartistid',
+  KodiAudioPropertyName.libraryLastUpdated: 'librarylastupdated',
+  KodiAudioPropertyName.libraryLastCleaned: 'librarylastcleaned',
+  KodiAudioPropertyName.artistLinksUpdated: 'artistlinksupdated',
   KodiAudioPropertyName.songsLastAdded: 'songslastadded',
+  KodiAudioPropertyName.albumsLastAdded: 'albumslastadded',
+  KodiAudioPropertyName.artistsLastAdded: 'artistslastadded',
+  KodiAudioPropertyName.genresLastAdded: 'genreslastadded',
   KodiAudioPropertyName.songsModified: 'songsmodified',
+  KodiAudioPropertyName.albumsModified: 'albumsmodified',
+  KodiAudioPropertyName.artistsModified: 'artistsmodified',
 };

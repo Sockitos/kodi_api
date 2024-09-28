@@ -9,81 +9,84 @@ part of 'kodi_audio_details_song.dart';
 _$KodiAudioDetailsSongImpl _$$KodiAudioDetailsSongImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiAudioDetailsSongImpl(
-      album: json['album'] as String?,
+      album: json['album'] as String? ?? '',
       albumArtist: (json['albumartist'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       albumArtistId: (json['albumartistid'] as List<dynamic>?)
           ?.map((e) => (e as num).toInt())
           .toList(),
-      albumId: (json['albumid'] as num?)?.toInt(),
+      albumId: (json['albumid'] as num?)?.toInt() ?? -1,
       albumReleaseType: $enumDecodeNullable(
-          _$KodiAudioAlbumReleaseTypeEnumMap, json['albumreleasetype']),
+              _$KodiAudioAlbumReleaseTypeEnumMap, json['albumreleasetype']) ??
+          KodiAudioAlbumReleaseType.album,
       bitrate: (json['bitrate'] as num?)?.toInt(),
       bpm: (json['bpm'] as num?)?.toInt(),
       channels: (json['channels'] as num?)?.toInt(),
-      comment: json['comment'] as String?,
+      comment: json['comment'] as String? ?? '',
       contributors: (json['contributors'] as List<dynamic>?)
           ?.map(
               (e) => KodiAudioContributors.fromJson(e as Map<String, dynamic>))
           .toList(),
-      disc: (json['disc'] as num?)?.toInt(),
-      discTitle: json['disctitle'] as String?,
-      displayComposer: json['displaycomposer'] as String?,
-      displayConductor: json['displayconductor'] as String?,
-      displayLyricist: json['displaylyricist'] as String?,
-      displayOrchestra: json['displayorchestra'] as String?,
-      duration: (json['duration'] as num?)?.toInt(),
-      file: json['file'] as String?,
+      disc: (json['disc'] as num?)?.toInt() ?? 0,
+      discTitle: json['disctitle'] as String? ?? '',
+      displayComposer: json['displaycomposer'] as String? ?? '',
+      displayConductor: json['displayconductor'] as String? ?? '',
+      displayLyricist: json['displaylyricist'] as String? ?? '',
+      displayOrchestra: json['displayorchestra'] as String? ?? '',
+      duration: (json['duration'] as num?)?.toInt() ?? 0,
+      file: json['file'] as String? ?? '',
       genreId: (json['genreid'] as List<dynamic>?)
           ?.map((e) => (e as num).toInt())
           .toList(),
       lastPlayed: const DateTimeConverter().fromJson(json['lastplayed']),
-      lyrics: json['lyrics'] as String?,
+      lyrics: json['lyrics'] as String? ?? '',
       mood: (json['mood'] as List<dynamic>?)?.map((e) => e as String).toList(),
       musicBrainzArtistId: (json['musicbrainzartistid'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      musicBrainzTrackId: json['musicbrainztrackid'] as String?,
-      playCount: (json['playcount'] as num?)?.toInt(),
+      musicBrainzTrackId: json['musicbrainztrackid'] as String? ?? '',
+      playCount: (json['playcount'] as num?)?.toInt() ?? 0,
       sampleRate: (json['samplerate'] as num?)?.toInt(),
       songId: (json['songid'] as num).toInt(),
       sourceId: (json['sourceid'] as List<dynamic>?)
           ?.map((e) => (e as num).toInt())
           .toList(),
-      track: (json['track'] as num?)?.toInt(),
+      track: (json['track'] as num?)?.toInt() ?? 0,
       artist:
           (json['artist'] as List<dynamic>?)?.map((e) => e as String).toList(),
       artistId: (json['artistid'] as List<dynamic>?)
           ?.map((e) => (e as num).toInt())
           .toList(),
-      displayArtist: json['displayartist'] as String?,
+      displayArtist: json['displayartist'] as String? ?? '',
       musicBrainzAlbumArtistId:
           (json['musicbrainzalbumartistid'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList(),
       originalDate: const DateTimeConverter().fromJson(json['originaldate']),
-      rating: (json['rating'] as num?)?.toDouble(),
+      rating: (json['rating'] as num?)?.toDouble() ?? 0.0,
       releaseDate: const DateTimeConverter().fromJson(json['releasedate']),
-      sortArtist: json['sortartist'] as String?,
-      title: json['title'] as String?,
-      userRating: (json['userrating'] as num?)?.toInt(),
-      votes: (json['votes'] as num?)?.toInt(),
-      year: (json['year'] as num?)?.toInt(),
+      sortArtist: json['sortartist'] as String? ?? '',
+      title: json['title'] as String? ?? '',
+      userRating: (json['userrating'] as num?)?.toInt() ?? 0,
+      votes: (json['votes'] as num?)?.toInt() ?? 0,
+      year: (json['year'] as num?)?.toInt() ?? 0,
       art: json['art'] == null
           ? null
           : KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
       dateAdded: const DateTimeConverter().fromJson(json['dateadded']),
       genre:
           (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      fanart: json['fanart'] as String?,
-      thumbnail: json['thumbnail'] as String?,
+      fanart: json['fanart'] as String? ?? '',
+      thumbnail: json['thumbnail'] as String? ?? '',
       label: json['label'] as String,
     );
 
 Map<String, dynamic> _$$KodiAudioDetailsSongImplToJson(
     _$KodiAudioDetailsSongImpl instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'album': instance.album,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -91,58 +94,57 @@ Map<String, dynamic> _$$KodiAudioDetailsSongImplToJson(
     }
   }
 
-  writeNotNull('album', instance.album);
   writeNotNull('albumartist', instance.albumArtist);
   writeNotNull('albumartistid', instance.albumArtistId);
-  writeNotNull('albumid', instance.albumId);
-  writeNotNull('albumreleasetype',
-      _$KodiAudioAlbumReleaseTypeEnumMap[instance.albumReleaseType]);
+  val['albumid'] = instance.albumId;
+  val['albumreleasetype'] =
+      _$KodiAudioAlbumReleaseTypeEnumMap[instance.albumReleaseType]!;
   writeNotNull('bitrate', instance.bitrate);
   writeNotNull('bpm', instance.bpm);
   writeNotNull('channels', instance.channels);
-  writeNotNull('comment', instance.comment);
+  val['comment'] = instance.comment;
   writeNotNull(
       'contributors', instance.contributors?.map((e) => e.toJson()).toList());
-  writeNotNull('disc', instance.disc);
-  writeNotNull('disctitle', instance.discTitle);
-  writeNotNull('displaycomposer', instance.displayComposer);
-  writeNotNull('displayconductor', instance.displayConductor);
-  writeNotNull('displaylyricist', instance.displayLyricist);
-  writeNotNull('displayorchestra', instance.displayOrchestra);
-  writeNotNull('duration', instance.duration);
-  writeNotNull('file', instance.file);
+  val['disc'] = instance.disc;
+  val['disctitle'] = instance.discTitle;
+  val['displaycomposer'] = instance.displayComposer;
+  val['displayconductor'] = instance.displayConductor;
+  val['displaylyricist'] = instance.displayLyricist;
+  val['displayorchestra'] = instance.displayOrchestra;
+  val['duration'] = instance.duration;
+  val['file'] = instance.file;
   writeNotNull('genreid', instance.genreId);
   writeNotNull(
       'lastplayed', const DateTimeConverter().toJson(instance.lastPlayed));
-  writeNotNull('lyrics', instance.lyrics);
+  val['lyrics'] = instance.lyrics;
   writeNotNull('mood', instance.mood);
   writeNotNull('musicbrainzartistid', instance.musicBrainzArtistId);
-  writeNotNull('musicbrainztrackid', instance.musicBrainzTrackId);
-  writeNotNull('playcount', instance.playCount);
+  val['musicbrainztrackid'] = instance.musicBrainzTrackId;
+  val['playcount'] = instance.playCount;
   writeNotNull('samplerate', instance.sampleRate);
   val['songid'] = instance.songId;
   writeNotNull('sourceid', instance.sourceId);
-  writeNotNull('track', instance.track);
+  val['track'] = instance.track;
   writeNotNull('artist', instance.artist);
   writeNotNull('artistid', instance.artistId);
-  writeNotNull('displayartist', instance.displayArtist);
+  val['displayartist'] = instance.displayArtist;
   writeNotNull('musicbrainzalbumartistid', instance.musicBrainzAlbumArtistId);
   writeNotNull(
       'originaldate', const DateTimeConverter().toJson(instance.originalDate));
-  writeNotNull('rating', instance.rating);
+  val['rating'] = instance.rating;
   writeNotNull(
       'releasedate', const DateTimeConverter().toJson(instance.releaseDate));
-  writeNotNull('sortartist', instance.sortArtist);
-  writeNotNull('title', instance.title);
-  writeNotNull('userrating', instance.userRating);
-  writeNotNull('votes', instance.votes);
-  writeNotNull('year', instance.year);
+  val['sortartist'] = instance.sortArtist;
+  val['title'] = instance.title;
+  val['userrating'] = instance.userRating;
+  val['votes'] = instance.votes;
+  val['year'] = instance.year;
   writeNotNull('art', instance.art?.toJson());
   writeNotNull(
       'dateadded', const DateTimeConverter().toJson(instance.dateAdded));
   writeNotNull('genre', instance.genre);
-  writeNotNull('fanart', instance.fanart);
-  writeNotNull('thumbnail', instance.thumbnail);
+  val['fanart'] = instance.fanart;
+  val['thumbnail'] = instance.thumbnail;
   val['label'] = instance.label;
   return val;
 }

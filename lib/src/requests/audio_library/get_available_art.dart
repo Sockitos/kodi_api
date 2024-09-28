@@ -8,7 +8,7 @@ part 'get_available_art.g.dart';
 
 typedef GetAvailableArtBuilder = GetAvailableArt Function(
   KodiAudioLibraryGetAvailableArtItem item, {
-  String? artType,
+  String artType,
 });
 
 @freezed
@@ -18,7 +18,7 @@ class GetAvailableArt
   const factory GetAvailableArt(
     @KodiAudioLibraryGetAvailableArtItemConverter()
     KodiAudioLibraryGetAvailableArtItem item, {
-    @JsonKey(name: 'arttype') @Default('') String? artType,
+    @JsonKey(name: 'arttype') @Default('') String artType,
   }) = _GetAvailableArt;
 
   const GetAvailableArt._();

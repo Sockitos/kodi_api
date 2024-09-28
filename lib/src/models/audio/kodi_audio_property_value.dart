@@ -13,7 +13,7 @@ class KodiAudioPropertyValue with _$KodiAudioPropertyValue {
     @JsonKey(name: 'artistlinksupdated') DateTime? artistLinksUpdated,
     @JsonKey(name: 'artistslastadded') DateTime? artistsLastAdded,
     @JsonKey(name: 'artistsmodified') DateTime? artistsModified,
-    @JsonKey(name: 'genreslastadded') String? genresLastAdded,
+    @JsonKey(name: 'genreslastadded') DateTime? genresLastAdded,
     @JsonKey(name: 'librarylastcleaned') DateTime? libraryLastCleaned,
     @JsonKey(name: 'librarylastupdated') DateTime? libraryLastUpdated,
     @JsonKey(name: 'missingartistid') int? missingArtistId,

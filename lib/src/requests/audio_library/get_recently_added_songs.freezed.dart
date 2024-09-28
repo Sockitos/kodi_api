@@ -189,7 +189,7 @@ class __$$GetRecentlyAddedSongsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GetRecentlyAddedSongsImpl extends _GetRecentlyAddedSongs {
   const _$GetRecentlyAddedSongsImpl(
-      {@JsonKey(name: 'albumlimit') this.albumLimit = -1,
+      {@JsonKey(name: 'albumlimit') this.albumLimit,
       final Set<KodiAudioFieldsSong>? properties,
       this.limits,
       this.sort})

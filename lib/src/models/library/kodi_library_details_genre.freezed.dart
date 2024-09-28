@@ -25,8 +25,8 @@ mixin _$KodiLibraryDetailsGenre {
   int get genreId => throw _privateConstructorUsedError;
   @JsonKey(name: 'sourceid')
   List<int>? get sourceId => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiLibraryDetailsGenre to a JSON map.
@@ -48,8 +48,8 @@ abstract class $KodiLibraryDetailsGenreCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'genreid') int genreId,
       @JsonKey(name: 'sourceid') List<int>? sourceId,
-      String? thumbnail,
-      String? title,
+      String thumbnail,
+      String title,
       String label});
 }
 
@@ -71,8 +71,8 @@ class _$KodiLibraryDetailsGenreCopyWithImpl<$Res,
   $Res call({
     Object? genreId = null,
     Object? sourceId = freezed,
-    Object? thumbnail = freezed,
-    Object? title = freezed,
+    Object? thumbnail = null,
+    Object? title = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -84,14 +84,14 @@ class _$KodiLibraryDetailsGenreCopyWithImpl<$Res,
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
               as List<int>?,
-      thumbnail: freezed == thumbnail
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -112,8 +112,8 @@ abstract class _$$KodiLibraryDetailsGenreImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'genreid') int genreId,
       @JsonKey(name: 'sourceid') List<int>? sourceId,
-      String? thumbnail,
-      String? title,
+      String thumbnail,
+      String title,
       String label});
 }
 
@@ -134,8 +134,8 @@ class __$$KodiLibraryDetailsGenreImplCopyWithImpl<$Res>
   $Res call({
     Object? genreId = null,
     Object? sourceId = freezed,
-    Object? thumbnail = freezed,
-    Object? title = freezed,
+    Object? thumbnail = null,
+    Object? title = null,
     Object? label = null,
   }) {
     return _then(_$KodiLibraryDetailsGenreImpl(
@@ -147,14 +147,14 @@ class __$$KodiLibraryDetailsGenreImplCopyWithImpl<$Res>
           ? _value._sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
               as List<int>?,
-      thumbnail: freezed == thumbnail
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -169,8 +169,8 @@ class _$KodiLibraryDetailsGenreImpl implements _KodiLibraryDetailsGenre {
   const _$KodiLibraryDetailsGenreImpl(
       {@JsonKey(name: 'genreid') required this.genreId,
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
-      this.thumbnail,
-      this.title,
+      this.thumbnail = '',
+      this.title = '',
       required this.label})
       : _sourceId = sourceId;
 
@@ -192,9 +192,11 @@ class _$KodiLibraryDetailsGenreImpl implements _KodiLibraryDetailsGenre {
   }
 
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final String label;
 
@@ -242,8 +244,8 @@ abstract class _KodiLibraryDetailsGenre implements KodiLibraryDetailsGenre {
   const factory _KodiLibraryDetailsGenre(
       {@JsonKey(name: 'genreid') required final int genreId,
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
-      final String? thumbnail,
-      final String? title,
+      final String thumbnail,
+      final String title,
       required final String label}) = _$KodiLibraryDetailsGenreImpl;
 
   factory _KodiLibraryDetailsGenre.fromJson(Map<String, dynamic> json) =
@@ -256,9 +258,9 @@ abstract class _KodiLibraryDetailsGenre implements KodiLibraryDetailsGenre {
   @JsonKey(name: 'sourceid')
   List<int>? get sourceId;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
-  String? get title;
+  String get title;
   @override
   String get label;
 

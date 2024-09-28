@@ -10,7 +10,7 @@ _$KodiAudioDetailsGenresImpl _$$KodiAudioDetailsGenresImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiAudioDetailsGenresImpl(
       genreId: (json['genreid'] as num).toInt(),
-      title: json['title'] as String,
+      title: json['title'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$KodiAudioDetailsGenresImplToJson(

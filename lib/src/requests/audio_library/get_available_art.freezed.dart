@@ -24,7 +24,7 @@ mixin _$GetAvailableArt {
   KodiAudioLibraryGetAvailableArtItem get item =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'arttype')
-  String? get artType => throw _privateConstructorUsedError;
+  String get artType => throw _privateConstructorUsedError;
 
   /// Serializes this GetAvailableArt to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $GetAvailableArtCopyWith<$Res> {
   $Res call(
       {@KodiAudioLibraryGetAvailableArtItemConverter()
       KodiAudioLibraryGetAvailableArtItem item,
-      @JsonKey(name: 'arttype') String? artType});
+      @JsonKey(name: 'arttype') String artType});
 
   $KodiAudioLibraryGetAvailableArtItemCopyWith<$Res> get item;
 }
@@ -66,17 +66,17 @@ class _$GetAvailableArtCopyWithImpl<$Res, $Val extends GetAvailableArt>
   @override
   $Res call({
     Object? item = null,
-    Object? artType = freezed,
+    Object? artType = null,
   }) {
     return _then(_value.copyWith(
       item: null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as KodiAudioLibraryGetAvailableArtItem,
-      artType: freezed == artType
+      artType: null == artType
           ? _value.artType
           : artType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 
@@ -103,7 +103,7 @@ abstract class _$$GetAvailableArtImplCopyWith<$Res>
   $Res call(
       {@KodiAudioLibraryGetAvailableArtItemConverter()
       KodiAudioLibraryGetAvailableArtItem item,
-      @JsonKey(name: 'arttype') String? artType});
+      @JsonKey(name: 'arttype') String artType});
 
   @override
   $KodiAudioLibraryGetAvailableArtItemCopyWith<$Res> get item;
@@ -123,17 +123,17 @@ class __$$GetAvailableArtImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? item = null,
-    Object? artType = freezed,
+    Object? artType = null,
   }) {
     return _then(_$GetAvailableArtImpl(
       null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as KodiAudioLibraryGetAvailableArtItem,
-      artType: freezed == artType
+      artType: null == artType
           ? _value.artType
           : artType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -154,7 +154,7 @@ class _$GetAvailableArtImpl extends _GetAvailableArt {
   final KodiAudioLibraryGetAvailableArtItem item;
   @override
   @JsonKey(name: 'arttype')
-  final String? artType;
+  final String artType;
 
   @override
   String toString() {
@@ -193,10 +193,9 @@ class _$GetAvailableArtImpl extends _GetAvailableArt {
 
 abstract class _GetAvailableArt extends GetAvailableArt {
   const factory _GetAvailableArt(
-          @KodiAudioLibraryGetAvailableArtItemConverter()
-          final KodiAudioLibraryGetAvailableArtItem item,
-          {@JsonKey(name: 'arttype') final String? artType}) =
-      _$GetAvailableArtImpl;
+      @KodiAudioLibraryGetAvailableArtItemConverter()
+      final KodiAudioLibraryGetAvailableArtItem item,
+      {@JsonKey(name: 'arttype') final String artType}) = _$GetAvailableArtImpl;
   const _GetAvailableArt._() : super._();
 
   factory _GetAvailableArt.fromJson(Map<String, dynamic> json) =
@@ -207,7 +206,7 @@ abstract class _GetAvailableArt extends GetAvailableArt {
   KodiAudioLibraryGetAvailableArtItem get item;
   @override
   @JsonKey(name: 'arttype')
-  String? get artType;
+  String get artType;
 
   /// Create a copy of GetAvailableArt
   /// with the given fields replaced by the non-null parameter values.

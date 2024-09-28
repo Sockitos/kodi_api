@@ -15,21 +15,12 @@ _$GetAvailableArtImpl _$$GetAvailableArtImplFromJson(
     );
 
 Map<String, dynamic> _$$GetAvailableArtImplToJson(
-    _$GetAvailableArtImpl instance) {
-  final val = <String, dynamic>{
-    'item': const KodiAudioLibraryGetAvailableArtItemConverter()
-        .toJson(instance.item),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('arttype', instance.artType);
-  return val;
-}
+        _$GetAvailableArtImpl instance) =>
+    <String, dynamic>{
+      'item': const KodiAudioLibraryGetAvailableArtItemConverter()
+          .toJson(instance.item),
+      'arttype': instance.artType,
+    };
 
 _$KodiAudioLibraryAvailableArtImpl _$$KodiAudioLibraryAvailableArtImplFromJson(
         Map<String, dynamic> json) =>

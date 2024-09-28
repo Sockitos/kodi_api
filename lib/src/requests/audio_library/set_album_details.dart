@@ -51,11 +51,11 @@ class SetAlbumDetails with _$SetAlbumDetails implements KodiRequest<void> {
     int? votes,
     @JsonKey(name: 'musicbrainzalbumid') String? musicBrainzAlbumId,
     @JsonKey(name: 'musicbrainzreleasegroupid')
-        String? musicBrainzReleaseGroupId,
+    String? musicBrainzReleaseGroupId,
     @JsonKey(name: 'sortartist') String? sortArtist,
     @JsonKey(name: 'displayartist') String? displayArtist,
     @JsonKey(name: 'musicbrainzalbumartistid')
-        List<String>? musicBrainzAlbumArtistIds,
+    List<String>? musicBrainzAlbumArtistIds,
     KodiMediaArtworkSet? art,
     @JsonKey(name: 'isboxset') bool? isBoxSet,
     @JsonKey(name: 'releasedate') DateTime? releaseDate,

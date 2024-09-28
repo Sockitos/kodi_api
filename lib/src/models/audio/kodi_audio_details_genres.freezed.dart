@@ -123,7 +123,7 @@ class __$$KodiAudioDetailsGenresImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiAudioDetailsGenresImpl implements _KodiAudioDetailsGenres {
   const _$KodiAudioDetailsGenresImpl(
-      {@JsonKey(name: 'genreid') required this.genreId, required this.title});
+      {@JsonKey(name: 'genreid') required this.genreId, this.title = ''});
 
   factory _$KodiAudioDetailsGenresImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiAudioDetailsGenresImplFromJson(json);
@@ -132,6 +132,7 @@ class _$KodiAudioDetailsGenresImpl implements _KodiAudioDetailsGenres {
   @JsonKey(name: 'genreid')
   final int genreId;
   @override
+  @JsonKey()
   final String title;
 
   @override
@@ -172,7 +173,7 @@ class _$KodiAudioDetailsGenresImpl implements _KodiAudioDetailsGenres {
 abstract class _KodiAudioDetailsGenres implements KodiAudioDetailsGenres {
   const factory _KodiAudioDetailsGenres(
       {@JsonKey(name: 'genreid') required final int genreId,
-      required final String title}) = _$KodiAudioDetailsGenresImpl;
+      final String title}) = _$KodiAudioDetailsGenresImpl;
 
   factory _KodiAudioDetailsGenres.fromJson(Map<String, dynamic> json) =
       _$KodiAudioDetailsGenresImpl.fromJson;

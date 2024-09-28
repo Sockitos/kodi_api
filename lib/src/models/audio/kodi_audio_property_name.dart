@@ -1,26 +1,26 @@
 import 'package:json_annotation/json_annotation.dart';
 
 enum KodiAudioPropertyName {
-  @JsonValue('albumslastadded')
-  albumsLastAdded,
-  @JsonValue('albumsmodified')
-  albumsModified,
-  @JsonValue('artistlinksupdated')
-  artistLinksUpdated,
-  @JsonValue('artistslastadded')
-  artistsLastAdded,
-  @JsonValue('artistsmodified')
-  artistsModified,
-  @JsonValue('genreslastadded')
-  genresLastAdded,
-  @JsonValue('librarylastcleaned')
-  libraryLastCleaned,
-  @JsonValue('librarylastupdated')
-  libraryLastUpdated,
   @JsonValue('missingartistid')
   missingArtistId,
+  @JsonValue('librarylastupdated')
+  libraryLastUpdated,
+  @JsonValue('librarylastcleaned')
+  libraryLastCleaned,
+  @JsonValue('artistlinksupdated')
+  artistLinksUpdated,
   @JsonValue('songslastadded')
   songsLastAdded,
+  @JsonValue('albumslastadded')
+  albumsLastAdded,
+  @JsonValue('artistslastadded')
+  artistsLastAdded,
+  @JsonValue('genreslastadded')
+  genresLastAdded,
   @JsonValue('songsmodified')
   songsModified,
+  @JsonValue('albumsmodified')
+  albumsModified,
+  @JsonValue('artistsmodified')
+  artistsModified,
 }

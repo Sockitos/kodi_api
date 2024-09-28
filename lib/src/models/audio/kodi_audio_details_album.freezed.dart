@@ -22,31 +22,31 @@ KodiAudioDetailsAlbum _$KodiAudioDetailsAlbumFromJson(
 /// @nodoc
 mixin _$KodiAudioDetailsAlbum {
   @JsonKey(name: 'albumduration')
-  int? get albumDuration => throw _privateConstructorUsedError;
+  int get albumDuration => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumid')
   int get albumId => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumlabel')
-  String? get albumLabel => throw _privateConstructorUsedError;
+  String get albumLabel => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumstatus')
-  String? get albumStatus => throw _privateConstructorUsedError;
+  String get albumStatus => throw _privateConstructorUsedError;
   @JsonKey(name: 'compilation')
-  bool? get compilation => throw _privateConstructorUsedError;
+  bool get compilation => throw _privateConstructorUsedError;
   @JsonKey(name: 'description')
-  String? get description => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   @JsonKey(name: 'isboxset')
-  bool? get isBoxset => throw _privateConstructorUsedError;
+  bool get isBoxset => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastplayed')
-  String? get lastPlayed => throw _privateConstructorUsedError;
+  String get lastPlayed => throw _privateConstructorUsedError;
   @JsonKey(name: 'mood')
   List<String>? get mood => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicbrainzalbumid')
-  String? get musicBrainzAlbumId => throw _privateConstructorUsedError;
+  String get musicBrainzAlbumId => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicbrainzreleasegroupid')
-  String? get musicBrainzReleaseGroupId => throw _privateConstructorUsedError;
+  String get musicBrainzReleaseGroupId => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'releasetype')
-  KodiAudioAlbumReleaseType? get releasetype =>
+  KodiAudioAlbumReleaseType get releasetype =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'songgenres')
   List<KodiAudioDetailsGenres>? get songGenres =>
@@ -58,35 +58,35 @@ mixin _$KodiAudioDetailsAlbum {
   @JsonKey(name: 'theme')
   List<String>? get theme => throw _privateConstructorUsedError;
   @JsonKey(name: 'totaldiscs')
-  int? get totaldiscs => throw _privateConstructorUsedError;
+  int get totalDiscs => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
-  String? get type => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
   List<String>? get artist => throw _privateConstructorUsedError;
   @JsonKey(name: 'artistid')
   List<int>? get artistId => throw _privateConstructorUsedError;
   @JsonKey(name: 'displayartist')
-  String? get displayArtist => throw _privateConstructorUsedError;
+  String get displayArtist => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicbrainzalbumartistid')
   List<String>? get musicBrainzAlbumArtistId =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'originaldate')
   DateTime? get originalDate => throw _privateConstructorUsedError;
-  double? get rating => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
   @JsonKey(name: 'releasedate')
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'sortartist')
-  String? get sortArtist => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get sortArtist => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'userrating')
-  int? get userRating => throw _privateConstructorUsedError;
-  int? get votes => throw _privateConstructorUsedError;
-  int? get year => throw _privateConstructorUsedError;
+  int get userRating => throw _privateConstructorUsedError;
+  int get votes => throw _privateConstructorUsedError;
+  int get year => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded => throw _privateConstructorUsedError;
   List<String>? get genre => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiAudioDetailsAlbum to a JSON map.
@@ -106,44 +106,44 @@ abstract class $KodiAudioDetailsAlbumCopyWith<$Res> {
       _$KodiAudioDetailsAlbumCopyWithImpl<$Res, KodiAudioDetailsAlbum>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'albumduration') int? albumDuration,
+      {@JsonKey(name: 'albumduration') int albumDuration,
       @JsonKey(name: 'albumid') int albumId,
-      @JsonKey(name: 'albumlabel') String? albumLabel,
-      @JsonKey(name: 'albumstatus') String? albumStatus,
-      @JsonKey(name: 'compilation') bool? compilation,
-      @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'isboxset') bool? isBoxset,
-      @JsonKey(name: 'lastplayed') String? lastPlayed,
+      @JsonKey(name: 'albumlabel') String albumLabel,
+      @JsonKey(name: 'albumstatus') String albumStatus,
+      @JsonKey(name: 'compilation') bool compilation,
+      @JsonKey(name: 'description') String description,
+      @JsonKey(name: 'isboxset') bool isBoxset,
+      @JsonKey(name: 'lastplayed') String lastPlayed,
       @JsonKey(name: 'mood') List<String>? mood,
-      @JsonKey(name: 'musicbrainzalbumid') String? musicBrainzAlbumId,
+      @JsonKey(name: 'musicbrainzalbumid') String musicBrainzAlbumId,
       @JsonKey(name: 'musicbrainzreleasegroupid')
-      String? musicBrainzReleaseGroupId,
-      @JsonKey(name: 'playcount') int? playCount,
-      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType? releasetype,
+      String musicBrainzReleaseGroupId,
+      @JsonKey(name: 'playcount') int playCount,
+      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType releasetype,
       @JsonKey(name: 'songgenres') List<KodiAudioDetailsGenres>? songGenres,
       @JsonKey(name: 'sourceid') List<int>? sourceId,
       @JsonKey(name: 'style') List<String>? style,
       @JsonKey(name: 'theme') List<String>? theme,
-      @JsonKey(name: 'totaldiscs') int? totaldiscs,
-      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'totaldiscs') int totalDiscs,
+      @JsonKey(name: 'type') String type,
       List<String>? artist,
       @JsonKey(name: 'artistid') List<int>? artistId,
-      @JsonKey(name: 'displayartist') String? displayArtist,
+      @JsonKey(name: 'displayartist') String displayArtist,
       @JsonKey(name: 'musicbrainzalbumartistid')
       List<String>? musicBrainzAlbumArtistId,
       @JsonKey(name: 'originaldate') DateTime? originalDate,
-      double? rating,
+      double rating,
       @JsonKey(name: 'releasedate') DateTime? releaseDate,
-      @JsonKey(name: 'sortartist') String? sortArtist,
-      String? title,
-      @JsonKey(name: 'userrating') int? userRating,
-      int? votes,
-      int? year,
+      @JsonKey(name: 'sortartist') String sortArtist,
+      String title,
+      @JsonKey(name: 'userrating') int userRating,
+      int votes,
+      int year,
       KodiMediaArtwork? art,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
       List<String>? genre,
-      String? fanart,
-      String? thumbnail,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiMediaArtworkCopyWith<$Res>? get art;
@@ -165,97 +165,97 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? albumDuration = freezed,
+    Object? albumDuration = null,
     Object? albumId = null,
-    Object? albumLabel = freezed,
-    Object? albumStatus = freezed,
-    Object? compilation = freezed,
-    Object? description = freezed,
-    Object? isBoxset = freezed,
-    Object? lastPlayed = freezed,
+    Object? albumLabel = null,
+    Object? albumStatus = null,
+    Object? compilation = null,
+    Object? description = null,
+    Object? isBoxset = null,
+    Object? lastPlayed = null,
     Object? mood = freezed,
-    Object? musicBrainzAlbumId = freezed,
-    Object? musicBrainzReleaseGroupId = freezed,
-    Object? playCount = freezed,
-    Object? releasetype = freezed,
+    Object? musicBrainzAlbumId = null,
+    Object? musicBrainzReleaseGroupId = null,
+    Object? playCount = null,
+    Object? releasetype = null,
     Object? songGenres = freezed,
     Object? sourceId = freezed,
     Object? style = freezed,
     Object? theme = freezed,
-    Object? totaldiscs = freezed,
-    Object? type = freezed,
+    Object? totalDiscs = null,
+    Object? type = null,
     Object? artist = freezed,
     Object? artistId = freezed,
-    Object? displayArtist = freezed,
+    Object? displayArtist = null,
     Object? musicBrainzAlbumArtistId = freezed,
     Object? originalDate = freezed,
-    Object? rating = freezed,
+    Object? rating = null,
     Object? releaseDate = freezed,
-    Object? sortArtist = freezed,
-    Object? title = freezed,
-    Object? userRating = freezed,
-    Object? votes = freezed,
-    Object? year = freezed,
+    Object? sortArtist = null,
+    Object? title = null,
+    Object? userRating = null,
+    Object? votes = null,
+    Object? year = null,
     Object? art = freezed,
     Object? dateAdded = freezed,
     Object? genre = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
-      albumDuration: freezed == albumDuration
+      albumDuration: null == albumDuration
           ? _value.albumDuration
           : albumDuration // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       albumId: null == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
               as int,
-      albumLabel: freezed == albumLabel
+      albumLabel: null == albumLabel
           ? _value.albumLabel
           : albumLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      albumStatus: freezed == albumStatus
+              as String,
+      albumStatus: null == albumStatus
           ? _value.albumStatus
           : albumStatus // ignore: cast_nullable_to_non_nullable
-              as String?,
-      compilation: freezed == compilation
+              as String,
+      compilation: null == compilation
           ? _value.compilation
           : compilation // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
+              as bool,
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isBoxset: freezed == isBoxset
+              as String,
+      isBoxset: null == isBoxset
           ? _value.isBoxset
           : isBoxset // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      lastPlayed: freezed == lastPlayed
+              as bool,
+      lastPlayed: null == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       mood: freezed == mood
           ? _value.mood
           : mood // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      musicBrainzAlbumId: freezed == musicBrainzAlbumId
+      musicBrainzAlbumId: null == musicBrainzAlbumId
           ? _value.musicBrainzAlbumId
           : musicBrainzAlbumId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      musicBrainzReleaseGroupId: freezed == musicBrainzReleaseGroupId
+              as String,
+      musicBrainzReleaseGroupId: null == musicBrainzReleaseGroupId
           ? _value.musicBrainzReleaseGroupId
           : musicBrainzReleaseGroupId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      playCount: freezed == playCount
+              as String,
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      releasetype: freezed == releasetype
+              as int,
+      releasetype: null == releasetype
           ? _value.releasetype
           : releasetype // ignore: cast_nullable_to_non_nullable
-              as KodiAudioAlbumReleaseType?,
+              as KodiAudioAlbumReleaseType,
       songGenres: freezed == songGenres
           ? _value.songGenres
           : songGenres // ignore: cast_nullable_to_non_nullable
@@ -272,14 +272,14 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      totaldiscs: freezed == totaldiscs
-          ? _value.totaldiscs
-          : totaldiscs // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
+      totalDiscs: null == totalDiscs
+          ? _value.totalDiscs
+          : totalDiscs // ignore: cast_nullable_to_non_nullable
+              as int,
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       artist: freezed == artist
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -288,10 +288,10 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
               as List<int>?,
-      displayArtist: freezed == displayArtist
+      displayArtist: null == displayArtist
           ? _value.displayArtist
           : displayArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       musicBrainzAlbumArtistId: freezed == musicBrainzAlbumArtistId
           ? _value.musicBrainzAlbumArtistId
           : musicBrainzAlbumArtistId // ignore: cast_nullable_to_non_nullable
@@ -300,34 +300,34 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
           ? _value.originalDate
           : originalDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      rating: freezed == rating
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      sortArtist: freezed == sortArtist
+      sortArtist: null == sortArtist
           ? _value.sortArtist
           : sortArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userRating: freezed == userRating
+              as String,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      votes: freezed == votes
+              as int,
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as int?,
-      year: freezed == year
+              as int,
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
@@ -340,14 +340,14 @@ class _$KodiAudioDetailsAlbumCopyWithImpl<$Res,
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      fanart: freezed == fanart
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -380,44 +380,44 @@ abstract class _$$KodiAudioDetailsAlbumImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'albumduration') int? albumDuration,
+      {@JsonKey(name: 'albumduration') int albumDuration,
       @JsonKey(name: 'albumid') int albumId,
-      @JsonKey(name: 'albumlabel') String? albumLabel,
-      @JsonKey(name: 'albumstatus') String? albumStatus,
-      @JsonKey(name: 'compilation') bool? compilation,
-      @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'isboxset') bool? isBoxset,
-      @JsonKey(name: 'lastplayed') String? lastPlayed,
+      @JsonKey(name: 'albumlabel') String albumLabel,
+      @JsonKey(name: 'albumstatus') String albumStatus,
+      @JsonKey(name: 'compilation') bool compilation,
+      @JsonKey(name: 'description') String description,
+      @JsonKey(name: 'isboxset') bool isBoxset,
+      @JsonKey(name: 'lastplayed') String lastPlayed,
       @JsonKey(name: 'mood') List<String>? mood,
-      @JsonKey(name: 'musicbrainzalbumid') String? musicBrainzAlbumId,
+      @JsonKey(name: 'musicbrainzalbumid') String musicBrainzAlbumId,
       @JsonKey(name: 'musicbrainzreleasegroupid')
-      String? musicBrainzReleaseGroupId,
-      @JsonKey(name: 'playcount') int? playCount,
-      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType? releasetype,
+      String musicBrainzReleaseGroupId,
+      @JsonKey(name: 'playcount') int playCount,
+      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType releasetype,
       @JsonKey(name: 'songgenres') List<KodiAudioDetailsGenres>? songGenres,
       @JsonKey(name: 'sourceid') List<int>? sourceId,
       @JsonKey(name: 'style') List<String>? style,
       @JsonKey(name: 'theme') List<String>? theme,
-      @JsonKey(name: 'totaldiscs') int? totaldiscs,
-      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'totaldiscs') int totalDiscs,
+      @JsonKey(name: 'type') String type,
       List<String>? artist,
       @JsonKey(name: 'artistid') List<int>? artistId,
-      @JsonKey(name: 'displayartist') String? displayArtist,
+      @JsonKey(name: 'displayartist') String displayArtist,
       @JsonKey(name: 'musicbrainzalbumartistid')
       List<String>? musicBrainzAlbumArtistId,
       @JsonKey(name: 'originaldate') DateTime? originalDate,
-      double? rating,
+      double rating,
       @JsonKey(name: 'releasedate') DateTime? releaseDate,
-      @JsonKey(name: 'sortartist') String? sortArtist,
-      String? title,
-      @JsonKey(name: 'userrating') int? userRating,
-      int? votes,
-      int? year,
+      @JsonKey(name: 'sortartist') String sortArtist,
+      String title,
+      @JsonKey(name: 'userrating') int userRating,
+      int votes,
+      int year,
       KodiMediaArtwork? art,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
       List<String>? genre,
-      String? fanart,
-      String? thumbnail,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -438,97 +438,97 @@ class __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? albumDuration = freezed,
+    Object? albumDuration = null,
     Object? albumId = null,
-    Object? albumLabel = freezed,
-    Object? albumStatus = freezed,
-    Object? compilation = freezed,
-    Object? description = freezed,
-    Object? isBoxset = freezed,
-    Object? lastPlayed = freezed,
+    Object? albumLabel = null,
+    Object? albumStatus = null,
+    Object? compilation = null,
+    Object? description = null,
+    Object? isBoxset = null,
+    Object? lastPlayed = null,
     Object? mood = freezed,
-    Object? musicBrainzAlbumId = freezed,
-    Object? musicBrainzReleaseGroupId = freezed,
-    Object? playCount = freezed,
-    Object? releasetype = freezed,
+    Object? musicBrainzAlbumId = null,
+    Object? musicBrainzReleaseGroupId = null,
+    Object? playCount = null,
+    Object? releasetype = null,
     Object? songGenres = freezed,
     Object? sourceId = freezed,
     Object? style = freezed,
     Object? theme = freezed,
-    Object? totaldiscs = freezed,
-    Object? type = freezed,
+    Object? totalDiscs = null,
+    Object? type = null,
     Object? artist = freezed,
     Object? artistId = freezed,
-    Object? displayArtist = freezed,
+    Object? displayArtist = null,
     Object? musicBrainzAlbumArtistId = freezed,
     Object? originalDate = freezed,
-    Object? rating = freezed,
+    Object? rating = null,
     Object? releaseDate = freezed,
-    Object? sortArtist = freezed,
-    Object? title = freezed,
-    Object? userRating = freezed,
-    Object? votes = freezed,
-    Object? year = freezed,
+    Object? sortArtist = null,
+    Object? title = null,
+    Object? userRating = null,
+    Object? votes = null,
+    Object? year = null,
     Object? art = freezed,
     Object? dateAdded = freezed,
     Object? genre = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_$KodiAudioDetailsAlbumImpl(
-      albumDuration: freezed == albumDuration
+      albumDuration: null == albumDuration
           ? _value.albumDuration
           : albumDuration // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       albumId: null == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
               as int,
-      albumLabel: freezed == albumLabel
+      albumLabel: null == albumLabel
           ? _value.albumLabel
           : albumLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      albumStatus: freezed == albumStatus
+              as String,
+      albumStatus: null == albumStatus
           ? _value.albumStatus
           : albumStatus // ignore: cast_nullable_to_non_nullable
-              as String?,
-      compilation: freezed == compilation
+              as String,
+      compilation: null == compilation
           ? _value.compilation
           : compilation // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
+              as bool,
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isBoxset: freezed == isBoxset
+              as String,
+      isBoxset: null == isBoxset
           ? _value.isBoxset
           : isBoxset // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      lastPlayed: freezed == lastPlayed
+              as bool,
+      lastPlayed: null == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       mood: freezed == mood
           ? _value._mood
           : mood // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      musicBrainzAlbumId: freezed == musicBrainzAlbumId
+      musicBrainzAlbumId: null == musicBrainzAlbumId
           ? _value.musicBrainzAlbumId
           : musicBrainzAlbumId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      musicBrainzReleaseGroupId: freezed == musicBrainzReleaseGroupId
+              as String,
+      musicBrainzReleaseGroupId: null == musicBrainzReleaseGroupId
           ? _value.musicBrainzReleaseGroupId
           : musicBrainzReleaseGroupId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      playCount: freezed == playCount
+              as String,
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      releasetype: freezed == releasetype
+              as int,
+      releasetype: null == releasetype
           ? _value.releasetype
           : releasetype // ignore: cast_nullable_to_non_nullable
-              as KodiAudioAlbumReleaseType?,
+              as KodiAudioAlbumReleaseType,
       songGenres: freezed == songGenres
           ? _value._songGenres
           : songGenres // ignore: cast_nullable_to_non_nullable
@@ -545,14 +545,14 @@ class __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>
           ? _value._theme
           : theme // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      totaldiscs: freezed == totaldiscs
-          ? _value.totaldiscs
-          : totaldiscs // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
+      totalDiscs: null == totalDiscs
+          ? _value.totalDiscs
+          : totalDiscs // ignore: cast_nullable_to_non_nullable
+              as int,
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       artist: freezed == artist
           ? _value._artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -561,10 +561,10 @@ class __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>
           ? _value._artistId
           : artistId // ignore: cast_nullable_to_non_nullable
               as List<int>?,
-      displayArtist: freezed == displayArtist
+      displayArtist: null == displayArtist
           ? _value.displayArtist
           : displayArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       musicBrainzAlbumArtistId: freezed == musicBrainzAlbumArtistId
           ? _value._musicBrainzAlbumArtistId
           : musicBrainzAlbumArtistId // ignore: cast_nullable_to_non_nullable
@@ -573,34 +573,34 @@ class __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>
           ? _value.originalDate
           : originalDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      rating: freezed == rating
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      sortArtist: freezed == sortArtist
+      sortArtist: null == sortArtist
           ? _value.sortArtist
           : sortArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userRating: freezed == userRating
+              as String,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      votes: freezed == votes
+              as int,
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as int?,
-      year: freezed == year
+              as int,
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
@@ -613,14 +613,14 @@ class __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>
           ? _value._genre
           : genre // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      fanart: freezed == fanart
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -634,45 +634,46 @@ class __$$KodiAudioDetailsAlbumImplCopyWithImpl<$Res>
 @JsonSerializable(converters: [DateTimeConverter()])
 class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
   const _$KodiAudioDetailsAlbumImpl(
-      {@JsonKey(name: 'albumduration') this.albumDuration,
+      {@JsonKey(name: 'albumduration') this.albumDuration = 0,
       @JsonKey(name: 'albumid') required this.albumId,
-      @JsonKey(name: 'albumlabel') this.albumLabel,
-      @JsonKey(name: 'albumstatus') this.albumStatus,
-      @JsonKey(name: 'compilation') this.compilation,
-      @JsonKey(name: 'description') this.description,
-      @JsonKey(name: 'isboxset') this.isBoxset,
-      @JsonKey(name: 'lastplayed') this.lastPlayed,
+      @JsonKey(name: 'albumlabel') this.albumLabel = '',
+      @JsonKey(name: 'albumstatus') this.albumStatus = '',
+      @JsonKey(name: 'compilation') this.compilation = false,
+      @JsonKey(name: 'description') this.description = '',
+      @JsonKey(name: 'isboxset') this.isBoxset = false,
+      @JsonKey(name: 'lastplayed') this.lastPlayed = '',
       @JsonKey(name: 'mood') final List<String>? mood,
-      @JsonKey(name: 'musicbrainzalbumid') this.musicBrainzAlbumId,
+      @JsonKey(name: 'musicbrainzalbumid') this.musicBrainzAlbumId = '',
       @JsonKey(name: 'musicbrainzreleasegroupid')
-      this.musicBrainzReleaseGroupId,
-      @JsonKey(name: 'playcount') this.playCount,
-      @JsonKey(name: 'releasetype') this.releasetype,
+      this.musicBrainzReleaseGroupId = '',
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      @JsonKey(name: 'releasetype')
+      this.releasetype = KodiAudioAlbumReleaseType.album,
       @JsonKey(name: 'songgenres')
       final List<KodiAudioDetailsGenres>? songGenres,
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
       @JsonKey(name: 'style') final List<String>? style,
       @JsonKey(name: 'theme') final List<String>? theme,
-      @JsonKey(name: 'totaldiscs') this.totaldiscs,
-      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'totaldiscs') this.totalDiscs = 0,
+      @JsonKey(name: 'type') this.type = '',
       final List<String>? artist,
       @JsonKey(name: 'artistid') final List<int>? artistId,
-      @JsonKey(name: 'displayartist') this.displayArtist,
+      @JsonKey(name: 'displayartist') this.displayArtist = '',
       @JsonKey(name: 'musicbrainzalbumartistid')
       final List<String>? musicBrainzAlbumArtistId,
       @JsonKey(name: 'originaldate') this.originalDate,
-      this.rating,
+      this.rating = 0.0,
       @JsonKey(name: 'releasedate') this.releaseDate,
-      @JsonKey(name: 'sortartist') this.sortArtist,
-      this.title,
-      @JsonKey(name: 'userrating') this.userRating,
-      this.votes,
-      this.year,
+      @JsonKey(name: 'sortartist') this.sortArtist = '',
+      this.title = '',
+      @JsonKey(name: 'userrating') this.userRating = 0,
+      this.votes = 0,
+      this.year = 0,
       this.art,
       @JsonKey(name: 'dateadded') this.dateAdded,
       final List<String>? genre,
-      this.fanart,
-      this.thumbnail,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label})
       : _mood = mood,
         _songGenres = songGenres,
@@ -689,28 +690,28 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
 
   @override
   @JsonKey(name: 'albumduration')
-  final int? albumDuration;
+  final int albumDuration;
   @override
   @JsonKey(name: 'albumid')
   final int albumId;
   @override
   @JsonKey(name: 'albumlabel')
-  final String? albumLabel;
+  final String albumLabel;
   @override
   @JsonKey(name: 'albumstatus')
-  final String? albumStatus;
+  final String albumStatus;
   @override
   @JsonKey(name: 'compilation')
-  final bool? compilation;
+  final bool compilation;
   @override
   @JsonKey(name: 'description')
-  final String? description;
+  final String description;
   @override
   @JsonKey(name: 'isboxset')
-  final bool? isBoxset;
+  final bool isBoxset;
   @override
   @JsonKey(name: 'lastplayed')
-  final String? lastPlayed;
+  final String lastPlayed;
   final List<String>? _mood;
   @override
   @JsonKey(name: 'mood')
@@ -724,16 +725,16 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
 
   @override
   @JsonKey(name: 'musicbrainzalbumid')
-  final String? musicBrainzAlbumId;
+  final String musicBrainzAlbumId;
   @override
   @JsonKey(name: 'musicbrainzreleasegroupid')
-  final String? musicBrainzReleaseGroupId;
+  final String musicBrainzReleaseGroupId;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
   @JsonKey(name: 'releasetype')
-  final KodiAudioAlbumReleaseType? releasetype;
+  final KodiAudioAlbumReleaseType releasetype;
   final List<KodiAudioDetailsGenres>? _songGenres;
   @override
   @JsonKey(name: 'songgenres')
@@ -780,10 +781,10 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
 
   @override
   @JsonKey(name: 'totaldiscs')
-  final int? totaldiscs;
+  final int totalDiscs;
   @override
   @JsonKey(name: 'type')
-  final String? type;
+  final String type;
   final List<String>? _artist;
   @override
   List<String>? get artist {
@@ -807,7 +808,7 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
 
   @override
   @JsonKey(name: 'displayartist')
-  final String? displayArtist;
+  final String displayArtist;
   final List<String>? _musicBrainzAlbumArtistId;
   @override
   @JsonKey(name: 'musicbrainzalbumartistid')
@@ -824,22 +825,26 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
   @JsonKey(name: 'originaldate')
   final DateTime? originalDate;
   @override
-  final double? rating;
+  @JsonKey()
+  final double rating;
   @override
   @JsonKey(name: 'releasedate')
   final DateTime? releaseDate;
   @override
   @JsonKey(name: 'sortartist')
-  final String? sortArtist;
+  final String sortArtist;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   @JsonKey(name: 'userrating')
-  final int? userRating;
+  final int userRating;
   @override
-  final int? votes;
+  @JsonKey()
+  final int votes;
   @override
-  final int? year;
+  @JsonKey()
+  final int year;
   @override
   final KodiMediaArtwork? art;
   @override
@@ -856,15 +861,17 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
   }
 
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
   @override
   String toString() {
-    return 'KodiAudioDetailsAlbum(albumDuration: $albumDuration, albumId: $albumId, albumLabel: $albumLabel, albumStatus: $albumStatus, compilation: $compilation, description: $description, isBoxset: $isBoxset, lastPlayed: $lastPlayed, mood: $mood, musicBrainzAlbumId: $musicBrainzAlbumId, musicBrainzReleaseGroupId: $musicBrainzReleaseGroupId, playCount: $playCount, releasetype: $releasetype, songGenres: $songGenres, sourceId: $sourceId, style: $style, theme: $theme, totaldiscs: $totaldiscs, type: $type, artist: $artist, artistId: $artistId, displayArtist: $displayArtist, musicBrainzAlbumArtistId: $musicBrainzAlbumArtistId, originalDate: $originalDate, rating: $rating, releaseDate: $releaseDate, sortArtist: $sortArtist, title: $title, userRating: $userRating, votes: $votes, year: $year, art: $art, dateAdded: $dateAdded, genre: $genre, fanart: $fanart, thumbnail: $thumbnail, label: $label)';
+    return 'KodiAudioDetailsAlbum(albumDuration: $albumDuration, albumId: $albumId, albumLabel: $albumLabel, albumStatus: $albumStatus, compilation: $compilation, description: $description, isBoxset: $isBoxset, lastPlayed: $lastPlayed, mood: $mood, musicBrainzAlbumId: $musicBrainzAlbumId, musicBrainzReleaseGroupId: $musicBrainzReleaseGroupId, playCount: $playCount, releasetype: $releasetype, songGenres: $songGenres, sourceId: $sourceId, style: $style, theme: $theme, totalDiscs: $totalDiscs, type: $type, artist: $artist, artistId: $artistId, displayArtist: $displayArtist, musicBrainzAlbumArtistId: $musicBrainzAlbumArtistId, originalDate: $originalDate, rating: $rating, releaseDate: $releaseDate, sortArtist: $sortArtist, title: $title, userRating: $userRating, votes: $votes, year: $year, art: $art, dateAdded: $dateAdded, genre: $genre, fanart: $fanart, thumbnail: $thumbnail, label: $label)';
   }
 
   @override
@@ -902,8 +909,8 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
             const DeepCollectionEquality().equals(other._sourceId, _sourceId) &&
             const DeepCollectionEquality().equals(other._style, _style) &&
             const DeepCollectionEquality().equals(other._theme, _theme) &&
-            (identical(other.totaldiscs, totaldiscs) ||
-                other.totaldiscs == totaldiscs) &&
+            (identical(other.totalDiscs, totalDiscs) ||
+                other.totalDiscs == totalDiscs) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._artist, _artist) &&
             const DeepCollectionEquality().equals(other._artistId, _artistId) &&
@@ -954,7 +961,7 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
         const DeepCollectionEquality().hash(_sourceId),
         const DeepCollectionEquality().hash(_style),
         const DeepCollectionEquality().hash(_theme),
-        totaldiscs,
+        totalDiscs,
         type,
         const DeepCollectionEquality().hash(_artist),
         const DeepCollectionEquality().hash(_artistId),
@@ -995,46 +1002,45 @@ class _$KodiAudioDetailsAlbumImpl implements _KodiAudioDetailsAlbum {
 
 abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
   const factory _KodiAudioDetailsAlbum(
-      {@JsonKey(name: 'albumduration') final int? albumDuration,
+      {@JsonKey(name: 'albumduration') final int albumDuration,
       @JsonKey(name: 'albumid') required final int albumId,
-      @JsonKey(name: 'albumlabel') final String? albumLabel,
-      @JsonKey(name: 'albumstatus') final String? albumStatus,
-      @JsonKey(name: 'compilation') final bool? compilation,
-      @JsonKey(name: 'description') final String? description,
-      @JsonKey(name: 'isboxset') final bool? isBoxset,
-      @JsonKey(name: 'lastplayed') final String? lastPlayed,
+      @JsonKey(name: 'albumlabel') final String albumLabel,
+      @JsonKey(name: 'albumstatus') final String albumStatus,
+      @JsonKey(name: 'compilation') final bool compilation,
+      @JsonKey(name: 'description') final String description,
+      @JsonKey(name: 'isboxset') final bool isBoxset,
+      @JsonKey(name: 'lastplayed') final String lastPlayed,
       @JsonKey(name: 'mood') final List<String>? mood,
-      @JsonKey(name: 'musicbrainzalbumid') final String? musicBrainzAlbumId,
+      @JsonKey(name: 'musicbrainzalbumid') final String musicBrainzAlbumId,
       @JsonKey(name: 'musicbrainzreleasegroupid')
-      final String? musicBrainzReleaseGroupId,
-      @JsonKey(name: 'playcount') final int? playCount,
-      @JsonKey(name: 'releasetype')
-      final KodiAudioAlbumReleaseType? releasetype,
+      final String musicBrainzReleaseGroupId,
+      @JsonKey(name: 'playcount') final int playCount,
+      @JsonKey(name: 'releasetype') final KodiAudioAlbumReleaseType releasetype,
       @JsonKey(name: 'songgenres')
       final List<KodiAudioDetailsGenres>? songGenres,
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
       @JsonKey(name: 'style') final List<String>? style,
       @JsonKey(name: 'theme') final List<String>? theme,
-      @JsonKey(name: 'totaldiscs') final int? totaldiscs,
-      @JsonKey(name: 'type') final String? type,
+      @JsonKey(name: 'totaldiscs') final int totalDiscs,
+      @JsonKey(name: 'type') final String type,
       final List<String>? artist,
       @JsonKey(name: 'artistid') final List<int>? artistId,
-      @JsonKey(name: 'displayartist') final String? displayArtist,
+      @JsonKey(name: 'displayartist') final String displayArtist,
       @JsonKey(name: 'musicbrainzalbumartistid')
       final List<String>? musicBrainzAlbumArtistId,
       @JsonKey(name: 'originaldate') final DateTime? originalDate,
-      final double? rating,
+      final double rating,
       @JsonKey(name: 'releasedate') final DateTime? releaseDate,
-      @JsonKey(name: 'sortartist') final String? sortArtist,
-      final String? title,
-      @JsonKey(name: 'userrating') final int? userRating,
-      final int? votes,
-      final int? year,
+      @JsonKey(name: 'sortartist') final String sortArtist,
+      final String title,
+      @JsonKey(name: 'userrating') final int userRating,
+      final int votes,
+      final int year,
       final KodiMediaArtwork? art,
       @JsonKey(name: 'dateadded') final DateTime? dateAdded,
       final List<String>? genre,
-      final String? fanart,
-      final String? thumbnail,
+      final String fanart,
+      final String thumbnail,
       required final String label}) = _$KodiAudioDetailsAlbumImpl;
 
   factory _KodiAudioDetailsAlbum.fromJson(Map<String, dynamic> json) =
@@ -1042,43 +1048,43 @@ abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
 
   @override
   @JsonKey(name: 'albumduration')
-  int? get albumDuration;
+  int get albumDuration;
   @override
   @JsonKey(name: 'albumid')
   int get albumId;
   @override
   @JsonKey(name: 'albumlabel')
-  String? get albumLabel;
+  String get albumLabel;
   @override
   @JsonKey(name: 'albumstatus')
-  String? get albumStatus;
+  String get albumStatus;
   @override
   @JsonKey(name: 'compilation')
-  bool? get compilation;
+  bool get compilation;
   @override
   @JsonKey(name: 'description')
-  String? get description;
+  String get description;
   @override
   @JsonKey(name: 'isboxset')
-  bool? get isBoxset;
+  bool get isBoxset;
   @override
   @JsonKey(name: 'lastplayed')
-  String? get lastPlayed;
+  String get lastPlayed;
   @override
   @JsonKey(name: 'mood')
   List<String>? get mood;
   @override
   @JsonKey(name: 'musicbrainzalbumid')
-  String? get musicBrainzAlbumId;
+  String get musicBrainzAlbumId;
   @override
   @JsonKey(name: 'musicbrainzreleasegroupid')
-  String? get musicBrainzReleaseGroupId;
+  String get musicBrainzReleaseGroupId;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
   @JsonKey(name: 'releasetype')
-  KodiAudioAlbumReleaseType? get releasetype;
+  KodiAudioAlbumReleaseType get releasetype;
   @override
   @JsonKey(name: 'songgenres')
   List<KodiAudioDetailsGenres>? get songGenres;
@@ -1093,10 +1099,10 @@ abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
   List<String>? get theme;
   @override
   @JsonKey(name: 'totaldiscs')
-  int? get totaldiscs;
+  int get totalDiscs;
   @override
   @JsonKey(name: 'type')
-  String? get type;
+  String get type;
   @override
   List<String>? get artist;
   @override
@@ -1104,7 +1110,7 @@ abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
   List<int>? get artistId;
   @override
   @JsonKey(name: 'displayartist')
-  String? get displayArtist;
+  String get displayArtist;
   @override
   @JsonKey(name: 'musicbrainzalbumartistid')
   List<String>? get musicBrainzAlbumArtistId;
@@ -1112,22 +1118,22 @@ abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
   @JsonKey(name: 'originaldate')
   DateTime? get originalDate;
   @override
-  double? get rating;
+  double get rating;
   @override
   @JsonKey(name: 'releasedate')
   DateTime? get releaseDate;
   @override
   @JsonKey(name: 'sortartist')
-  String? get sortArtist;
+  String get sortArtist;
   @override
-  String? get title;
+  String get title;
   @override
   @JsonKey(name: 'userrating')
-  int? get userRating;
+  int get userRating;
   @override
-  int? get votes;
+  int get votes;
   @override
-  int? get year;
+  int get year;
   @override
   KodiMediaArtwork? get art;
   @override
@@ -1136,9 +1142,9 @@ abstract class _KodiAudioDetailsAlbum implements KodiAudioDetailsAlbum {
   @override
   List<String>? get genre;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
 

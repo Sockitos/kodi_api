@@ -13,8 +13,8 @@ _$KodiLibraryDetailsGenreImpl _$$KodiLibraryDetailsGenreImplFromJson(
       sourceId: (json['sourceid'] as List<dynamic>?)
           ?.map((e) => (e as num).toInt())
           .toList(),
-      thumbnail: json['thumbnail'] as String?,
-      title: json['title'] as String?,
+      thumbnail: json['thumbnail'] as String? ?? '',
+      title: json['title'] as String? ?? '',
       label: json['label'] as String,
     );
 
@@ -31,8 +31,8 @@ Map<String, dynamic> _$$KodiLibraryDetailsGenreImplToJson(
   }
 
   writeNotNull('sourceid', instance.sourceId);
-  writeNotNull('thumbnail', instance.thumbnail);
-  writeNotNull('title', instance.title);
+  val['thumbnail'] = instance.thumbnail;
+  val['title'] = instance.title;
   val['label'] = instance.label;
   return val;
 }

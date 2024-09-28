@@ -19,7 +19,8 @@ _$KodiAudioPropertyValueImpl _$$KodiAudioPropertyValueImplFromJson(
           const DateTimeConverter().fromJson(json['artistslastadded']),
       artistsModified:
           const DateTimeConverter().fromJson(json['artistsmodified']),
-      genresLastAdded: json['genreslastadded'] as String?,
+      genresLastAdded:
+          const DateTimeConverter().fromJson(json['genreslastadded']),
       libraryLastCleaned:
           const DateTimeConverter().fromJson(json['librarylastcleaned']),
       libraryLastUpdated:
@@ -50,7 +51,8 @@ Map<String, dynamic> _$$KodiAudioPropertyValueImplToJson(
       const DateTimeConverter().toJson(instance.artistsLastAdded));
   writeNotNull('artistsmodified',
       const DateTimeConverter().toJson(instance.artistsModified));
-  writeNotNull('genreslastadded', instance.genresLastAdded);
+  writeNotNull('genreslastadded',
+      const DateTimeConverter().toJson(instance.genresLastAdded));
   writeNotNull('librarylastcleaned',
       const DateTimeConverter().toJson(instance.libraryLastCleaned));
   writeNotNull('librarylastupdated',

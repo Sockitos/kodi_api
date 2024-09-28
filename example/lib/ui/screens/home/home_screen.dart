@@ -1,5 +1,6 @@
 import 'package:example/ui/screens/addons/addons_screen.dart';
 import 'package:example/ui/screens/application/application_screen.dart';
+import 'package:example/ui/screens/audio_library/audio_library_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,20 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Application',
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const AudioLibraryScreen(),
+                  ),
+                ),
+                label: 'Audio Library',
               ),
             ],
           ),

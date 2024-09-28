@@ -32,7 +32,7 @@ mixin _$KodiAudioPropertyValue {
   @JsonKey(name: 'artistsmodified')
   DateTime? get artistsModified => throw _privateConstructorUsedError;
   @JsonKey(name: 'genreslastadded')
-  String? get genresLastAdded => throw _privateConstructorUsedError;
+  DateTime? get genresLastAdded => throw _privateConstructorUsedError;
   @JsonKey(name: 'librarylastcleaned')
   DateTime? get libraryLastCleaned => throw _privateConstructorUsedError;
   @JsonKey(name: 'librarylastupdated')
@@ -66,7 +66,7 @@ abstract class $KodiAudioPropertyValueCopyWith<$Res> {
       @JsonKey(name: 'artistlinksupdated') DateTime? artistLinksUpdated,
       @JsonKey(name: 'artistslastadded') DateTime? artistsLastAdded,
       @JsonKey(name: 'artistsmodified') DateTime? artistsModified,
-      @JsonKey(name: 'genreslastadded') String? genresLastAdded,
+      @JsonKey(name: 'genreslastadded') DateTime? genresLastAdded,
       @JsonKey(name: 'librarylastcleaned') DateTime? libraryLastCleaned,
       @JsonKey(name: 'librarylastupdated') DateTime? libraryLastUpdated,
       @JsonKey(name: 'missingartistid') int? missingArtistId,
@@ -126,7 +126,7 @@ class _$KodiAudioPropertyValueCopyWithImpl<$Res,
       genresLastAdded: freezed == genresLastAdded
           ? _value.genresLastAdded
           : genresLastAdded // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       libraryLastCleaned: freezed == libraryLastCleaned
           ? _value.libraryLastCleaned
           : libraryLastCleaned // ignore: cast_nullable_to_non_nullable
@@ -166,7 +166,7 @@ abstract class _$$KodiAudioPropertyValueImplCopyWith<$Res>
       @JsonKey(name: 'artistlinksupdated') DateTime? artistLinksUpdated,
       @JsonKey(name: 'artistslastadded') DateTime? artistsLastAdded,
       @JsonKey(name: 'artistsmodified') DateTime? artistsModified,
-      @JsonKey(name: 'genreslastadded') String? genresLastAdded,
+      @JsonKey(name: 'genreslastadded') DateTime? genresLastAdded,
       @JsonKey(name: 'librarylastcleaned') DateTime? libraryLastCleaned,
       @JsonKey(name: 'librarylastupdated') DateTime? libraryLastUpdated,
       @JsonKey(name: 'missingartistid') int? missingArtistId,
@@ -225,7 +225,7 @@ class __$$KodiAudioPropertyValueImplCopyWithImpl<$Res>
       genresLastAdded: freezed == genresLastAdded
           ? _value.genresLastAdded
           : genresLastAdded // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       libraryLastCleaned: freezed == libraryLastCleaned
           ? _value.libraryLastCleaned
           : libraryLastCleaned // ignore: cast_nullable_to_non_nullable
@@ -287,7 +287,7 @@ class _$KodiAudioPropertyValueImpl implements _KodiAudioPropertyValue {
   final DateTime? artistsModified;
   @override
   @JsonKey(name: 'genreslastadded')
-  final String? genresLastAdded;
+  final DateTime? genresLastAdded;
   @override
   @JsonKey(name: 'librarylastcleaned')
   final DateTime? libraryLastCleaned;
@@ -378,7 +378,7 @@ abstract class _KodiAudioPropertyValue implements KodiAudioPropertyValue {
       @JsonKey(name: 'artistlinksupdated') final DateTime? artistLinksUpdated,
       @JsonKey(name: 'artistslastadded') final DateTime? artistsLastAdded,
       @JsonKey(name: 'artistsmodified') final DateTime? artistsModified,
-      @JsonKey(name: 'genreslastadded') final String? genresLastAdded,
+      @JsonKey(name: 'genreslastadded') final DateTime? genresLastAdded,
       @JsonKey(name: 'librarylastcleaned') final DateTime? libraryLastCleaned,
       @JsonKey(name: 'librarylastupdated') final DateTime? libraryLastUpdated,
       @JsonKey(name: 'missingartistid') final int? missingArtistId,
@@ -406,7 +406,7 @@ abstract class _KodiAudioPropertyValue implements KodiAudioPropertyValue {
   DateTime? get artistsModified;
   @override
   @JsonKey(name: 'genreslastadded')
-  String? get genresLastAdded;
+  DateTime? get genresLastAdded;
   @override
   @JsonKey(name: 'librarylastcleaned')
   DateTime? get libraryLastCleaned;

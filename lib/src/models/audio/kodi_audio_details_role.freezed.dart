@@ -22,7 +22,7 @@ KodiAudioDetailsRole _$KodiAudioDetailsRoleFromJson(Map<String, dynamic> json) {
 mixin _$KodiAudioDetailsRole {
   @JsonKey(name: 'roleid')
   int get roleid => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiAudioDetailsRole to a JSON map.
@@ -41,7 +41,7 @@ abstract class $KodiAudioDetailsRoleCopyWith<$Res> {
           $Res Function(KodiAudioDetailsRole) then) =
       _$KodiAudioDetailsRoleCopyWithImpl<$Res, KodiAudioDetailsRole>;
   @useResult
-  $Res call({@JsonKey(name: 'roleid') int roleid, String? title, String label});
+  $Res call({@JsonKey(name: 'roleid') int roleid, String title, String label});
 }
 
 /// @nodoc
@@ -61,7 +61,7 @@ class _$KodiAudioDetailsRoleCopyWithImpl<$Res,
   @override
   $Res call({
     Object? roleid = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -69,10 +69,10 @@ class _$KodiAudioDetailsRoleCopyWithImpl<$Res,
           ? _value.roleid
           : roleid // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -89,7 +89,7 @@ abstract class _$$KodiAudioDetailsRoleImplCopyWith<$Res>
       __$$KodiAudioDetailsRoleImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'roleid') int roleid, String? title, String label});
+  $Res call({@JsonKey(name: 'roleid') int roleid, String title, String label});
 }
 
 /// @nodoc
@@ -106,7 +106,7 @@ class __$$KodiAudioDetailsRoleImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? roleid = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? label = null,
   }) {
     return _then(_$KodiAudioDetailsRoleImpl(
@@ -114,10 +114,10 @@ class __$$KodiAudioDetailsRoleImplCopyWithImpl<$Res>
           ? _value.roleid
           : roleid // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -131,7 +131,7 @@ class __$$KodiAudioDetailsRoleImplCopyWithImpl<$Res>
 class _$KodiAudioDetailsRoleImpl implements _KodiAudioDetailsRole {
   const _$KodiAudioDetailsRoleImpl(
       {@JsonKey(name: 'roleid') required this.roleid,
-      this.title,
+      this.title = '',
       required this.label});
 
   factory _$KodiAudioDetailsRoleImpl.fromJson(Map<String, dynamic> json) =>
@@ -141,7 +141,8 @@ class _$KodiAudioDetailsRoleImpl implements _KodiAudioDetailsRole {
   @JsonKey(name: 'roleid')
   final int roleid;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final String label;
 
@@ -185,7 +186,7 @@ class _$KodiAudioDetailsRoleImpl implements _KodiAudioDetailsRole {
 abstract class _KodiAudioDetailsRole implements KodiAudioDetailsRole {
   const factory _KodiAudioDetailsRole(
       {@JsonKey(name: 'roleid') required final int roleid,
-      final String? title,
+      final String title,
       required final String label}) = _$KodiAudioDetailsRoleImpl;
 
   factory _KodiAudioDetailsRole.fromJson(Map<String, dynamic> json) =
@@ -195,7 +196,7 @@ abstract class _KodiAudioDetailsRole implements KodiAudioDetailsRole {
   @JsonKey(name: 'roleid')
   int get roleid;
   @override
-  String? get title;
+  String get title;
   @override
   String get label;
 
