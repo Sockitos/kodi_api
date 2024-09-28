@@ -1,6 +1,7 @@
 import 'package:example/ui/screens/addons/addons_screen.dart';
 import 'package:example/ui/screens/application/application_screen.dart';
 import 'package:example/ui/screens/audio_library/audio_library_screen.dart';
+import 'package:example/ui/screens/favourites/favourites_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +52,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Audio Library',
+              ),
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const FavouritesScreen(),
+                  ),
+                ),
+                label: 'Favourites',
               ),
             ],
           ),
