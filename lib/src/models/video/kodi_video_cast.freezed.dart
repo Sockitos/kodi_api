@@ -23,7 +23,7 @@ mixin _$KodiVideoCast {
   String get name => throw _privateConstructorUsedError;
   int get order => throw _privateConstructorUsedError;
   String get role => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
 
   /// Serializes this KodiVideoCast to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -41,7 +41,7 @@ abstract class $KodiVideoCastCopyWith<$Res> {
           KodiVideoCast value, $Res Function(KodiVideoCast) then) =
       _$KodiVideoCastCopyWithImpl<$Res, KodiVideoCast>;
   @useResult
-  $Res call({String name, int order, String role, String? thumbnail});
+  $Res call({String name, int order, String role, String thumbnail});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$KodiVideoCastCopyWithImpl<$Res, $Val extends KodiVideoCast>
     Object? name = null,
     Object? order = null,
     Object? role = null,
-    Object? thumbnail = freezed,
+    Object? thumbnail = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -77,10 +77,10 @@ class _$KodiVideoCastCopyWithImpl<$Res, $Val extends KodiVideoCast>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: freezed == thumbnail
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -93,7 +93,7 @@ abstract class _$$KodiVideoCastImplCopyWith<$Res>
       __$$KodiVideoCastImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, int order, String role, String? thumbnail});
+  $Res call({String name, int order, String role, String thumbnail});
 }
 
 /// @nodoc
@@ -112,7 +112,7 @@ class __$$KodiVideoCastImplCopyWithImpl<$Res>
     Object? name = null,
     Object? order = null,
     Object? role = null,
-    Object? thumbnail = freezed,
+    Object? thumbnail = null,
   }) {
     return _then(_$KodiVideoCastImpl(
       name: null == name
@@ -127,10 +127,10 @@ class __$$KodiVideoCastImplCopyWithImpl<$Res>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: freezed == thumbnail
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -142,7 +142,7 @@ class _$KodiVideoCastImpl implements _KodiVideoCast {
       {required this.name,
       required this.order,
       required this.role,
-      this.thumbnail});
+      this.thumbnail = ''});
 
   factory _$KodiVideoCastImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiVideoCastImplFromJson(json);
@@ -154,7 +154,8 @@ class _$KodiVideoCastImpl implements _KodiVideoCast {
   @override
   final String role;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
 
   @override
   String toString() {
@@ -198,7 +199,7 @@ abstract class _KodiVideoCast implements KodiVideoCast {
       {required final String name,
       required final int order,
       required final String role,
-      final String? thumbnail}) = _$KodiVideoCastImpl;
+      final String thumbnail}) = _$KodiVideoCastImpl;
 
   factory _KodiVideoCast.fromJson(Map<String, dynamic> json) =
       _$KodiVideoCastImpl.fromJson;
@@ -210,7 +211,7 @@ abstract class _KodiVideoCast implements KodiVideoCast {
   @override
   String get role;
   @override
-  String? get thumbnail;
+  String get thumbnail;
 
   /// Create a copy of KodiVideoCast
   /// with the given fields replaced by the non-null parameter values.

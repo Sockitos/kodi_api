@@ -26,9 +26,9 @@ mixin _$KodiListItemFile {
   @JsonKey(name: 'lastmodified')
   DateTime? get lastModified => throw _privateConstructorUsedError;
   @JsonKey(name: 'mimetype')
-  String? get mimeType => throw _privateConstructorUsedError;
-  int? get size => throw _privateConstructorUsedError;
-  String? get album => throw _privateConstructorUsedError;
+  String get mimeType => throw _privateConstructorUsedError;
+  int get size => throw _privateConstructorUsedError;
+  String get album => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumartist')
   List<String>? get albumArtist => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumartistid')
@@ -36,136 +36,136 @@ mixin _$KodiListItemFile {
   @JsonKey(name: 'albumid')
   int? get albumId => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumlabel')
-  String? get albumLabel => throw _privateConstructorUsedError;
+  String get albumLabel => throw _privateConstructorUsedError;
   @JsonKey(name: 'albumreleasetype')
-  KodiAudioAlbumReleaseType? get albumReleaseType =>
+  KodiAudioAlbumReleaseType get albumReleaseType =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'albumstatus')
-  String? get albumStatus => throw _privateConstructorUsedError;
-  int? get bitrate => throw _privateConstructorUsedError;
-  int? get bpm => throw _privateConstructorUsedError;
+  String get albumStatus => throw _privateConstructorUsedError;
+  int get bitrate => throw _privateConstructorUsedError;
+  int get bpm => throw _privateConstructorUsedError;
   KodiVideoCast? get cast => throw _privateConstructorUsedError;
-  int? get channels => throw _privateConstructorUsedError;
-  String? get comment => throw _privateConstructorUsedError;
-  bool? get compilation => throw _privateConstructorUsedError;
+  int get channels => throw _privateConstructorUsedError;
+  String get comment => throw _privateConstructorUsedError;
+  bool get compilation => throw _privateConstructorUsedError;
   KodiAudioContributors? get contributors => throw _privateConstructorUsedError;
   List<String>? get country => throw _privateConstructorUsedError;
   @JsonKey(name: 'customproperties')
   Map<String, dynamic>? get customProperties =>
       throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  int? get disc => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  int get disc => throw _privateConstructorUsedError;
   @JsonKey(name: 'disctitle')
-  String? get discTitle => throw _privateConstructorUsedError;
+  String get discTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'displaycomposer')
-  String? get displayComposer => throw _privateConstructorUsedError;
+  String get displayComposer => throw _privateConstructorUsedError;
   @JsonKey(name: 'displayconductor')
-  String? get displayConductor => throw _privateConstructorUsedError;
+  String get displayConductor => throw _privateConstructorUsedError;
   @JsonKey(name: 'displaylyricist')
-  String? get displayLyricist => throw _privateConstructorUsedError;
+  String get displayLyricist => throw _privateConstructorUsedError;
   @JsonKey(name: 'displayorchestra')
-  String? get displayOrchestra => throw _privateConstructorUsedError;
-  int? get duration => throw _privateConstructorUsedError;
-  String? get dynpath => throw _privateConstructorUsedError;
-  int? get episode => throw _privateConstructorUsedError;
+  String get displayOrchestra => throw _privateConstructorUsedError;
+  int get duration => throw _privateConstructorUsedError;
+  String get dynpath => throw _privateConstructorUsedError;
+  int get episode => throw _privateConstructorUsedError;
   @JsonKey(name: 'episodeguide')
-  String? get episodeGuide => throw _privateConstructorUsedError;
+  String get episodeGuide => throw _privateConstructorUsedError;
   @JsonKey(name: 'firstaired')
   DateTime? get firstAired => throw _privateConstructorUsedError;
   int? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'imdbnumber')
-  String? get imdbNumber => throw _privateConstructorUsedError;
+  String get imdbNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'isboxset')
-  bool? get isBoxset => throw _privateConstructorUsedError;
-  String? get lyrics => throw _privateConstructorUsedError;
+  bool get isBoxset => throw _privateConstructorUsedError;
+  String get lyrics => throw _privateConstructorUsedError;
   @JsonKey(name: 'mediapath')
-  String? get mediaPath => throw _privateConstructorUsedError;
+  String get mediaPath => throw _privateConstructorUsedError;
   List<String>? get mood => throw _privateConstructorUsedError;
-  String? get mpaa => throw _privateConstructorUsedError;
+  String get mpaa => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicbrainzartistid')
   List<String>? get musicBrainzArtistId => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicbrainztrackid')
-  String? get musicBrainzTrackId => throw _privateConstructorUsedError;
+  String get musicBrainzTrackId => throw _privateConstructorUsedError;
   @JsonKey(name: 'originaldate')
   DateTime? get originalDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'originaltitle')
-  String? get originalTitle => throw _privateConstructorUsedError;
+  String get originalTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'plotoutline')
-  String? get plotOutline => throw _privateConstructorUsedError;
-  String? get premiered => throw _privateConstructorUsedError;
+  String get plotOutline => throw _privateConstructorUsedError;
+  String get premiered => throw _privateConstructorUsedError;
   @JsonKey(name: 'productioncode')
-  String? get productionCode => throw _privateConstructorUsedError;
+  String get productionCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'releasedate')
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'releasetype')
-  KodiAudioAlbumReleaseType? get releaseType =>
+  KodiAudioAlbumReleaseType get releaseType =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'samplerate')
-  int? get sampleRate => throw _privateConstructorUsedError;
-  int? get season => throw _privateConstructorUsedError;
-  String? get set => throw _privateConstructorUsedError;
+  int get sampleRate => throw _privateConstructorUsedError;
+  int get season => throw _privateConstructorUsedError;
+  String get set => throw _privateConstructorUsedError;
   @JsonKey(name: 'setid')
   int? get setId => throw _privateConstructorUsedError;
   @JsonKey(name: 'showlink')
   List<String>? get showLink => throw _privateConstructorUsedError;
   @JsonKey(name: 'showtitle')
-  String? get showTitle => throw _privateConstructorUsedError;
+  String get showTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'sorttitle')
-  String? get sortTitle => throw _privateConstructorUsedError;
+  String get sortTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'specialsortepisode')
-  int? get specialSortEpisode => throw _privateConstructorUsedError;
+  int get specialSortEpisode => throw _privateConstructorUsedError;
   @JsonKey(name: 'specialsortseason')
-  int? get specialSortSeason => throw _privateConstructorUsedError;
+  int get specialSortSeason => throw _privateConstructorUsedError;
   List<String>? get studio => throw _privateConstructorUsedError;
   List<String>? get style => throw _privateConstructorUsedError;
   List<String>? get tag => throw _privateConstructorUsedError;
-  String? get tagline => throw _privateConstructorUsedError;
+  String get tagline => throw _privateConstructorUsedError;
   List<String>? get theme => throw _privateConstructorUsedError;
-  int? get top250 => throw _privateConstructorUsedError;
+  int get top250 => throw _privateConstructorUsedError;
   @JsonKey(name: 'totaldiscs')
-  int? get totalDiscs => throw _privateConstructorUsedError;
-  int? get track => throw _privateConstructorUsedError;
-  String? get trailer => throw _privateConstructorUsedError;
+  int get totalDiscs => throw _privateConstructorUsedError;
+  int get track => throw _privateConstructorUsedError;
+  String get trailer => throw _privateConstructorUsedError;
   @JsonKey(name: 'tvshowid')
   int? get tvShowId => throw _privateConstructorUsedError;
   KodiItemBaseType get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'uniqueid')
   Map<String, dynamic>? get uniqueId => throw _privateConstructorUsedError;
-  int? get votes => throw _privateConstructorUsedError;
+  String get votes => throw _privateConstructorUsedError;
   @JsonKey(name: 'watchedepisodes')
-  int? get watchedEpisodes => throw _privateConstructorUsedError;
+  int get watchedEpisodes => throw _privateConstructorUsedError;
   List<String>? get writer => throw _privateConstructorUsedError;
   List<String>? get director => throw _privateConstructorUsedError;
   KodiVideoResume? get resume => throw _privateConstructorUsedError;
-  int? get runtime => throw _privateConstructorUsedError;
+  int get runtime => throw _privateConstructorUsedError;
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails => throw _privateConstructorUsedError;
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed => throw _privateConstructorUsedError;
-  String? get plot => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get plot => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
   List<String>? get artist => throw _privateConstructorUsedError;
   @JsonKey(name: 'artistid')
   List<int>? get artistId => throw _privateConstructorUsedError;
   @JsonKey(name: 'displayartist')
-  String? get displayArtist => throw _privateConstructorUsedError;
+  String get displayArtist => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicbrainzalbumartistid')
   List<String>? get musicBrainzAlbumArtistId =>
       throw _privateConstructorUsedError;
-  double? get rating => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
   @JsonKey(name: 'sortartist')
-  String? get sortArtist => throw _privateConstructorUsedError;
+  String get sortArtist => throw _privateConstructorUsedError;
   @JsonKey(name: 'userrating')
-  int? get userRating => throw _privateConstructorUsedError;
-  int? get year => throw _privateConstructorUsedError;
+  int get userRating => throw _privateConstructorUsedError;
+  int get year => throw _privateConstructorUsedError;
   List<String>? get genre => throw _privateConstructorUsedError;
 
   /// Serializes this KodiListItemFile to a JSON map.
@@ -188,99 +188,99 @@ abstract class $KodiListItemFileCopyWith<$Res> {
       {String? file,
       @JsonKey(name: 'filetype') KodiFileType? fileType,
       @JsonKey(name: 'lastmodified') DateTime? lastModified,
-      @JsonKey(name: 'mimetype') String? mimeType,
-      int? size,
-      String? album,
+      @JsonKey(name: 'mimetype') String mimeType,
+      int size,
+      String album,
       @JsonKey(name: 'albumartist') List<String>? albumArtist,
       @JsonKey(name: 'albumartistid') List<int>? albumArtistId,
       @JsonKey(name: 'albumid') int? albumId,
-      @JsonKey(name: 'albumlabel') String? albumLabel,
+      @JsonKey(name: 'albumlabel') String albumLabel,
       @JsonKey(name: 'albumreleasetype')
-      KodiAudioAlbumReleaseType? albumReleaseType,
-      @JsonKey(name: 'albumstatus') String? albumStatus,
-      int? bitrate,
-      int? bpm,
+      KodiAudioAlbumReleaseType albumReleaseType,
+      @JsonKey(name: 'albumstatus') String albumStatus,
+      int bitrate,
+      int bpm,
       KodiVideoCast? cast,
-      int? channels,
-      String? comment,
-      bool? compilation,
+      int channels,
+      String comment,
+      bool compilation,
       KodiAudioContributors? contributors,
       List<String>? country,
       @JsonKey(name: 'customproperties') Map<String, dynamic>? customProperties,
-      String? description,
-      int? disc,
-      @JsonKey(name: 'disctitle') String? discTitle,
-      @JsonKey(name: 'displaycomposer') String? displayComposer,
-      @JsonKey(name: 'displayconductor') String? displayConductor,
-      @JsonKey(name: 'displaylyricist') String? displayLyricist,
-      @JsonKey(name: 'displayorchestra') String? displayOrchestra,
-      int? duration,
-      String? dynpath,
-      int? episode,
-      @JsonKey(name: 'episodeguide') String? episodeGuide,
+      String description,
+      int disc,
+      @JsonKey(name: 'disctitle') String discTitle,
+      @JsonKey(name: 'displaycomposer') String displayComposer,
+      @JsonKey(name: 'displayconductor') String displayConductor,
+      @JsonKey(name: 'displaylyricist') String displayLyricist,
+      @JsonKey(name: 'displayorchestra') String displayOrchestra,
+      int duration,
+      String dynpath,
+      int episode,
+      @JsonKey(name: 'episodeguide') String episodeGuide,
       @JsonKey(name: 'firstaired') DateTime? firstAired,
       int? id,
-      @JsonKey(name: 'imdbnumber') String? imdbNumber,
-      @JsonKey(name: 'isboxset') bool? isBoxset,
-      String? lyrics,
-      @JsonKey(name: 'mediapath') String? mediaPath,
+      @JsonKey(name: 'imdbnumber') String imdbNumber,
+      @JsonKey(name: 'isboxset') bool isBoxset,
+      String lyrics,
+      @JsonKey(name: 'mediapath') String mediaPath,
       List<String>? mood,
-      String? mpaa,
+      String mpaa,
       @JsonKey(name: 'musicbrainzartistid') List<String>? musicBrainzArtistId,
-      @JsonKey(name: 'musicbrainztrackid') String? musicBrainzTrackId,
+      @JsonKey(name: 'musicbrainztrackid') String musicBrainzTrackId,
       @JsonKey(name: 'originaldate') DateTime? originalDate,
-      @JsonKey(name: 'originaltitle') String? originalTitle,
-      @JsonKey(name: 'plotoutline') String? plotOutline,
-      String? premiered,
-      @JsonKey(name: 'productioncode') String? productionCode,
+      @JsonKey(name: 'originaltitle') String originalTitle,
+      @JsonKey(name: 'plotoutline') String plotOutline,
+      String premiered,
+      @JsonKey(name: 'productioncode') String productionCode,
       @JsonKey(name: 'releasedate') DateTime? releaseDate,
-      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType? releaseType,
-      @JsonKey(name: 'samplerate') int? sampleRate,
-      int? season,
-      String? set,
+      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType releaseType,
+      @JsonKey(name: 'samplerate') int sampleRate,
+      int season,
+      String set,
       @JsonKey(name: 'setid') int? setId,
       @JsonKey(name: 'showlink') List<String>? showLink,
-      @JsonKey(name: 'showtitle') String? showTitle,
-      @JsonKey(name: 'sorttitle') String? sortTitle,
-      @JsonKey(name: 'specialsortepisode') int? specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') int? specialSortSeason,
+      @JsonKey(name: 'showtitle') String showTitle,
+      @JsonKey(name: 'sorttitle') String sortTitle,
+      @JsonKey(name: 'specialsortepisode') int specialSortEpisode,
+      @JsonKey(name: 'specialsortseason') int specialSortSeason,
       List<String>? studio,
       List<String>? style,
       List<String>? tag,
-      String? tagline,
+      String tagline,
       List<String>? theme,
-      int? top250,
-      @JsonKey(name: 'totaldiscs') int? totalDiscs,
-      int? track,
-      String? trailer,
+      int top250,
+      @JsonKey(name: 'totaldiscs') int totalDiscs,
+      int track,
+      String trailer,
       @JsonKey(name: 'tvshowid') int? tvShowId,
       KodiItemBaseType type,
       @JsonKey(name: 'uniqueid') Map<String, dynamic>? uniqueId,
-      int? votes,
-      @JsonKey(name: 'watchedepisodes') int? watchedEpisodes,
+      String votes,
+      @JsonKey(name: 'watchedepisodes') int watchedEpisodes,
       List<String>? writer,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label,
       List<String>? artist,
       @JsonKey(name: 'artistid') List<int>? artistId,
-      @JsonKey(name: 'displayartist') String? displayArtist,
+      @JsonKey(name: 'displayartist') String displayArtist,
       @JsonKey(name: 'musicbrainzalbumartistid')
       List<String>? musicBrainzAlbumArtistId,
-      double? rating,
-      @JsonKey(name: 'sortartist') String? sortArtist,
-      @JsonKey(name: 'userrating') int? userRating,
-      int? year,
+      double rating,
+      @JsonKey(name: 'sortartist') String sortArtist,
+      @JsonKey(name: 'userrating') int userRating,
+      int year,
       List<String>? genre});
 
   $KodiVideoCastCopyWith<$Res>? get cast;
@@ -308,97 +308,97 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
     Object? file = freezed,
     Object? fileType = freezed,
     Object? lastModified = freezed,
-    Object? mimeType = freezed,
-    Object? size = freezed,
-    Object? album = freezed,
+    Object? mimeType = null,
+    Object? size = null,
+    Object? album = null,
     Object? albumArtist = freezed,
     Object? albumArtistId = freezed,
     Object? albumId = freezed,
-    Object? albumLabel = freezed,
-    Object? albumReleaseType = freezed,
-    Object? albumStatus = freezed,
-    Object? bitrate = freezed,
-    Object? bpm = freezed,
+    Object? albumLabel = null,
+    Object? albumReleaseType = null,
+    Object? albumStatus = null,
+    Object? bitrate = null,
+    Object? bpm = null,
     Object? cast = freezed,
-    Object? channels = freezed,
-    Object? comment = freezed,
-    Object? compilation = freezed,
+    Object? channels = null,
+    Object? comment = null,
+    Object? compilation = null,
     Object? contributors = freezed,
     Object? country = freezed,
     Object? customProperties = freezed,
-    Object? description = freezed,
-    Object? disc = freezed,
-    Object? discTitle = freezed,
-    Object? displayComposer = freezed,
-    Object? displayConductor = freezed,
-    Object? displayLyricist = freezed,
-    Object? displayOrchestra = freezed,
-    Object? duration = freezed,
-    Object? dynpath = freezed,
-    Object? episode = freezed,
-    Object? episodeGuide = freezed,
+    Object? description = null,
+    Object? disc = null,
+    Object? discTitle = null,
+    Object? displayComposer = null,
+    Object? displayConductor = null,
+    Object? displayLyricist = null,
+    Object? displayOrchestra = null,
+    Object? duration = null,
+    Object? dynpath = null,
+    Object? episode = null,
+    Object? episodeGuide = null,
     Object? firstAired = freezed,
     Object? id = freezed,
-    Object? imdbNumber = freezed,
-    Object? isBoxset = freezed,
-    Object? lyrics = freezed,
-    Object? mediaPath = freezed,
+    Object? imdbNumber = null,
+    Object? isBoxset = null,
+    Object? lyrics = null,
+    Object? mediaPath = null,
     Object? mood = freezed,
-    Object? mpaa = freezed,
+    Object? mpaa = null,
     Object? musicBrainzArtistId = freezed,
-    Object? musicBrainzTrackId = freezed,
+    Object? musicBrainzTrackId = null,
     Object? originalDate = freezed,
-    Object? originalTitle = freezed,
-    Object? plotOutline = freezed,
-    Object? premiered = freezed,
-    Object? productionCode = freezed,
+    Object? originalTitle = null,
+    Object? plotOutline = null,
+    Object? premiered = null,
+    Object? productionCode = null,
     Object? releaseDate = freezed,
-    Object? releaseType = freezed,
-    Object? sampleRate = freezed,
-    Object? season = freezed,
-    Object? set = freezed,
+    Object? releaseType = null,
+    Object? sampleRate = null,
+    Object? season = null,
+    Object? set = null,
     Object? setId = freezed,
     Object? showLink = freezed,
-    Object? showTitle = freezed,
-    Object? sortTitle = freezed,
-    Object? specialSortEpisode = freezed,
-    Object? specialSortSeason = freezed,
+    Object? showTitle = null,
+    Object? sortTitle = null,
+    Object? specialSortEpisode = null,
+    Object? specialSortSeason = null,
     Object? studio = freezed,
     Object? style = freezed,
     Object? tag = freezed,
-    Object? tagline = freezed,
+    Object? tagline = null,
     Object? theme = freezed,
-    Object? top250 = freezed,
-    Object? totalDiscs = freezed,
-    Object? track = freezed,
-    Object? trailer = freezed,
+    Object? top250 = null,
+    Object? totalDiscs = null,
+    Object? track = null,
+    Object? trailer = null,
     Object? tvShowId = freezed,
     Object? type = null,
     Object? uniqueId = freezed,
-    Object? votes = freezed,
-    Object? watchedEpisodes = freezed,
+    Object? votes = null,
+    Object? watchedEpisodes = null,
     Object? writer = freezed,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
     Object? artist = freezed,
     Object? artistId = freezed,
-    Object? displayArtist = freezed,
+    Object? displayArtist = null,
     Object? musicBrainzAlbumArtistId = freezed,
-    Object? rating = freezed,
-    Object? sortArtist = freezed,
-    Object? userRating = freezed,
-    Object? year = freezed,
+    Object? rating = null,
+    Object? sortArtist = null,
+    Object? userRating = null,
+    Object? year = null,
     Object? genre = freezed,
   }) {
     return _then(_value.copyWith(
@@ -414,18 +414,18 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      mimeType: freezed == mimeType
+      mimeType: null == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      size: freezed == size
+              as String,
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      album: freezed == album
+              as int,
+      album: null == album
           ? _value.album
           : album // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       albumArtist: freezed == albumArtist
           ? _value.albumArtist
           : albumArtist // ignore: cast_nullable_to_non_nullable
@@ -438,42 +438,42 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
               as int?,
-      albumLabel: freezed == albumLabel
+      albumLabel: null == albumLabel
           ? _value.albumLabel
           : albumLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      albumReleaseType: freezed == albumReleaseType
+              as String,
+      albumReleaseType: null == albumReleaseType
           ? _value.albumReleaseType
           : albumReleaseType // ignore: cast_nullable_to_non_nullable
-              as KodiAudioAlbumReleaseType?,
-      albumStatus: freezed == albumStatus
+              as KodiAudioAlbumReleaseType,
+      albumStatus: null == albumStatus
           ? _value.albumStatus
           : albumStatus // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bitrate: freezed == bitrate
+              as String,
+      bitrate: null == bitrate
           ? _value.bitrate
           : bitrate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      bpm: freezed == bpm
+              as int,
+      bpm: null == bpm
           ? _value.bpm
           : bpm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       cast: freezed == cast
           ? _value.cast
           : cast // ignore: cast_nullable_to_non_nullable
               as KodiVideoCast?,
-      channels: freezed == channels
+      channels: null == channels
           ? _value.channels
           : channels // ignore: cast_nullable_to_non_nullable
-              as int?,
-      comment: freezed == comment
+              as int,
+      comment: null == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String?,
-      compilation: freezed == compilation
+              as String,
+      compilation: null == compilation
           ? _value.compilation
           : compilation // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       contributors: freezed == contributors
           ? _value.contributors
           : contributors // ignore: cast_nullable_to_non_nullable
@@ -486,50 +486,50 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.customProperties
           : customProperties // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      description: freezed == description
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disc: freezed == disc
+              as String,
+      disc: null == disc
           ? _value.disc
           : disc // ignore: cast_nullable_to_non_nullable
-              as int?,
-      discTitle: freezed == discTitle
+              as int,
+      discTitle: null == discTitle
           ? _value.discTitle
           : discTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayComposer: freezed == displayComposer
+              as String,
+      displayComposer: null == displayComposer
           ? _value.displayComposer
           : displayComposer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayConductor: freezed == displayConductor
+              as String,
+      displayConductor: null == displayConductor
           ? _value.displayConductor
           : displayConductor // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayLyricist: freezed == displayLyricist
+              as String,
+      displayLyricist: null == displayLyricist
           ? _value.displayLyricist
           : displayLyricist // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayOrchestra: freezed == displayOrchestra
+              as String,
+      displayOrchestra: null == displayOrchestra
           ? _value.displayOrchestra
           : displayOrchestra // ignore: cast_nullable_to_non_nullable
-              as String?,
-      duration: freezed == duration
+              as String,
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dynpath: freezed == dynpath
+              as int,
+      dynpath: null == dynpath
           ? _value.dynpath
           : dynpath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      episode: freezed == episode
+              as String,
+      episode: null == episode
           ? _value.episode
           : episode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      episodeGuide: freezed == episodeGuide
+              as int,
+      episodeGuide: null == episodeGuide
           ? _value.episodeGuide
           : episodeGuide // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       firstAired: freezed == firstAired
           ? _value.firstAired
           : firstAired // ignore: cast_nullable_to_non_nullable
@@ -538,78 +538,78 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      imdbNumber: freezed == imdbNumber
+      imdbNumber: null == imdbNumber
           ? _value.imdbNumber
           : imdbNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isBoxset: freezed == isBoxset
+              as String,
+      isBoxset: null == isBoxset
           ? _value.isBoxset
           : isBoxset // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      lyrics: freezed == lyrics
+              as bool,
+      lyrics: null == lyrics
           ? _value.lyrics
           : lyrics // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaPath: freezed == mediaPath
+              as String,
+      mediaPath: null == mediaPath
           ? _value.mediaPath
           : mediaPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       mood: freezed == mood
           ? _value.mood
           : mood // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mpaa: freezed == mpaa
+      mpaa: null == mpaa
           ? _value.mpaa
           : mpaa // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       musicBrainzArtistId: freezed == musicBrainzArtistId
           ? _value.musicBrainzArtistId
           : musicBrainzArtistId // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      musicBrainzTrackId: freezed == musicBrainzTrackId
+      musicBrainzTrackId: null == musicBrainzTrackId
           ? _value.musicBrainzTrackId
           : musicBrainzTrackId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       originalDate: freezed == originalDate
           ? _value.originalDate
           : originalDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      originalTitle: freezed == originalTitle
+      originalTitle: null == originalTitle
           ? _value.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plotOutline: freezed == plotOutline
+              as String,
+      plotOutline: null == plotOutline
           ? _value.plotOutline
           : plotOutline // ignore: cast_nullable_to_non_nullable
-              as String?,
-      premiered: freezed == premiered
+              as String,
+      premiered: null == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productionCode: freezed == productionCode
+              as String,
+      productionCode: null == productionCode
           ? _value.productionCode
           : productionCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      releaseType: freezed == releaseType
+      releaseType: null == releaseType
           ? _value.releaseType
           : releaseType // ignore: cast_nullable_to_non_nullable
-              as KodiAudioAlbumReleaseType?,
-      sampleRate: freezed == sampleRate
+              as KodiAudioAlbumReleaseType,
+      sampleRate: null == sampleRate
           ? _value.sampleRate
           : sampleRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
+              as int,
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
-      set: freezed == set
+              as int,
+      set: null == set
           ? _value.set
           : set // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       setId: freezed == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
@@ -618,22 +618,22 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.showLink
           : showLink // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      showTitle: freezed == showTitle
+      showTitle: null == showTitle
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sortTitle: freezed == sortTitle
+              as String,
+      sortTitle: null == sortTitle
           ? _value.sortTitle
           : sortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      specialSortEpisode: freezed == specialSortEpisode
+              as String,
+      specialSortEpisode: null == specialSortEpisode
           ? _value.specialSortEpisode
           : specialSortEpisode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      specialSortSeason: freezed == specialSortSeason
+              as int,
+      specialSortSeason: null == specialSortSeason
           ? _value.specialSortSeason
           : specialSortSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       studio: freezed == studio
           ? _value.studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -646,30 +646,30 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      tagline: freezed == tagline
+      tagline: null == tagline
           ? _value.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       theme: freezed == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      top250: freezed == top250
+      top250: null == top250
           ? _value.top250
           : top250 // ignore: cast_nullable_to_non_nullable
-              as int?,
-      totalDiscs: freezed == totalDiscs
+              as int,
+      totalDiscs: null == totalDiscs
           ? _value.totalDiscs
           : totalDiscs // ignore: cast_nullable_to_non_nullable
-              as int?,
-      track: freezed == track
+              as int,
+      track: null == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
-              as int?,
-      trailer: freezed == trailer
+              as int,
+      trailer: null == trailer
           ? _value.trailer
           : trailer // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       tvShowId: freezed == tvShowId
           ? _value.tvShowId
           : tvShowId // ignore: cast_nullable_to_non_nullable
@@ -682,14 +682,14 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      votes: freezed == votes
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as int?,
-      watchedEpisodes: freezed == watchedEpisodes
+              as String,
+      watchedEpisodes: null == watchedEpisodes
           ? _value.watchedEpisodes
           : watchedEpisodes // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       writer: freezed == writer
           ? _value.writer
           : writer // ignore: cast_nullable_to_non_nullable
@@ -702,10 +702,10 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -718,30 +718,30 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -754,30 +754,30 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
               as List<int>?,
-      displayArtist: freezed == displayArtist
+      displayArtist: null == displayArtist
           ? _value.displayArtist
           : displayArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       musicBrainzAlbumArtistId: freezed == musicBrainzAlbumArtistId
           ? _value.musicBrainzAlbumArtistId
           : musicBrainzAlbumArtistId // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      rating: freezed == rating
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
-      sortArtist: freezed == sortArtist
+              as double,
+      sortArtist: null == sortArtist
           ? _value.sortArtist
           : sortArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userRating: freezed == userRating
+              as String,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      year: freezed == year
+              as int,
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       genre: freezed == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
@@ -868,99 +868,99 @@ abstract class _$$KodiListItemFileImplCopyWith<$Res>
       {String? file,
       @JsonKey(name: 'filetype') KodiFileType? fileType,
       @JsonKey(name: 'lastmodified') DateTime? lastModified,
-      @JsonKey(name: 'mimetype') String? mimeType,
-      int? size,
-      String? album,
+      @JsonKey(name: 'mimetype') String mimeType,
+      int size,
+      String album,
       @JsonKey(name: 'albumartist') List<String>? albumArtist,
       @JsonKey(name: 'albumartistid') List<int>? albumArtistId,
       @JsonKey(name: 'albumid') int? albumId,
-      @JsonKey(name: 'albumlabel') String? albumLabel,
+      @JsonKey(name: 'albumlabel') String albumLabel,
       @JsonKey(name: 'albumreleasetype')
-      KodiAudioAlbumReleaseType? albumReleaseType,
-      @JsonKey(name: 'albumstatus') String? albumStatus,
-      int? bitrate,
-      int? bpm,
+      KodiAudioAlbumReleaseType albumReleaseType,
+      @JsonKey(name: 'albumstatus') String albumStatus,
+      int bitrate,
+      int bpm,
       KodiVideoCast? cast,
-      int? channels,
-      String? comment,
-      bool? compilation,
+      int channels,
+      String comment,
+      bool compilation,
       KodiAudioContributors? contributors,
       List<String>? country,
       @JsonKey(name: 'customproperties') Map<String, dynamic>? customProperties,
-      String? description,
-      int? disc,
-      @JsonKey(name: 'disctitle') String? discTitle,
-      @JsonKey(name: 'displaycomposer') String? displayComposer,
-      @JsonKey(name: 'displayconductor') String? displayConductor,
-      @JsonKey(name: 'displaylyricist') String? displayLyricist,
-      @JsonKey(name: 'displayorchestra') String? displayOrchestra,
-      int? duration,
-      String? dynpath,
-      int? episode,
-      @JsonKey(name: 'episodeguide') String? episodeGuide,
+      String description,
+      int disc,
+      @JsonKey(name: 'disctitle') String discTitle,
+      @JsonKey(name: 'displaycomposer') String displayComposer,
+      @JsonKey(name: 'displayconductor') String displayConductor,
+      @JsonKey(name: 'displaylyricist') String displayLyricist,
+      @JsonKey(name: 'displayorchestra') String displayOrchestra,
+      int duration,
+      String dynpath,
+      int episode,
+      @JsonKey(name: 'episodeguide') String episodeGuide,
       @JsonKey(name: 'firstaired') DateTime? firstAired,
       int? id,
-      @JsonKey(name: 'imdbnumber') String? imdbNumber,
-      @JsonKey(name: 'isboxset') bool? isBoxset,
-      String? lyrics,
-      @JsonKey(name: 'mediapath') String? mediaPath,
+      @JsonKey(name: 'imdbnumber') String imdbNumber,
+      @JsonKey(name: 'isboxset') bool isBoxset,
+      String lyrics,
+      @JsonKey(name: 'mediapath') String mediaPath,
       List<String>? mood,
-      String? mpaa,
+      String mpaa,
       @JsonKey(name: 'musicbrainzartistid') List<String>? musicBrainzArtistId,
-      @JsonKey(name: 'musicbrainztrackid') String? musicBrainzTrackId,
+      @JsonKey(name: 'musicbrainztrackid') String musicBrainzTrackId,
       @JsonKey(name: 'originaldate') DateTime? originalDate,
-      @JsonKey(name: 'originaltitle') String? originalTitle,
-      @JsonKey(name: 'plotoutline') String? plotOutline,
-      String? premiered,
-      @JsonKey(name: 'productioncode') String? productionCode,
+      @JsonKey(name: 'originaltitle') String originalTitle,
+      @JsonKey(name: 'plotoutline') String plotOutline,
+      String premiered,
+      @JsonKey(name: 'productioncode') String productionCode,
       @JsonKey(name: 'releasedate') DateTime? releaseDate,
-      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType? releaseType,
-      @JsonKey(name: 'samplerate') int? sampleRate,
-      int? season,
-      String? set,
+      @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType releaseType,
+      @JsonKey(name: 'samplerate') int sampleRate,
+      int season,
+      String set,
       @JsonKey(name: 'setid') int? setId,
       @JsonKey(name: 'showlink') List<String>? showLink,
-      @JsonKey(name: 'showtitle') String? showTitle,
-      @JsonKey(name: 'sorttitle') String? sortTitle,
-      @JsonKey(name: 'specialsortepisode') int? specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') int? specialSortSeason,
+      @JsonKey(name: 'showtitle') String showTitle,
+      @JsonKey(name: 'sorttitle') String sortTitle,
+      @JsonKey(name: 'specialsortepisode') int specialSortEpisode,
+      @JsonKey(name: 'specialsortseason') int specialSortSeason,
       List<String>? studio,
       List<String>? style,
       List<String>? tag,
-      String? tagline,
+      String tagline,
       List<String>? theme,
-      int? top250,
-      @JsonKey(name: 'totaldiscs') int? totalDiscs,
-      int? track,
-      String? trailer,
+      int top250,
+      @JsonKey(name: 'totaldiscs') int totalDiscs,
+      int track,
+      String trailer,
       @JsonKey(name: 'tvshowid') int? tvShowId,
       KodiItemBaseType type,
       @JsonKey(name: 'uniqueid') Map<String, dynamic>? uniqueId,
-      int? votes,
-      @JsonKey(name: 'watchedepisodes') int? watchedEpisodes,
+      String votes,
+      @JsonKey(name: 'watchedepisodes') int watchedEpisodes,
       List<String>? writer,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label,
       List<String>? artist,
       @JsonKey(name: 'artistid') List<int>? artistId,
-      @JsonKey(name: 'displayartist') String? displayArtist,
+      @JsonKey(name: 'displayartist') String displayArtist,
       @JsonKey(name: 'musicbrainzalbumartistid')
       List<String>? musicBrainzAlbumArtistId,
-      double? rating,
-      @JsonKey(name: 'sortartist') String? sortArtist,
-      @JsonKey(name: 'userrating') int? userRating,
-      int? year,
+      double rating,
+      @JsonKey(name: 'sortartist') String sortArtist,
+      @JsonKey(name: 'userrating') int userRating,
+      int year,
       List<String>? genre});
 
   @override
@@ -991,97 +991,97 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
     Object? file = freezed,
     Object? fileType = freezed,
     Object? lastModified = freezed,
-    Object? mimeType = freezed,
-    Object? size = freezed,
-    Object? album = freezed,
+    Object? mimeType = null,
+    Object? size = null,
+    Object? album = null,
     Object? albumArtist = freezed,
     Object? albumArtistId = freezed,
     Object? albumId = freezed,
-    Object? albumLabel = freezed,
-    Object? albumReleaseType = freezed,
-    Object? albumStatus = freezed,
-    Object? bitrate = freezed,
-    Object? bpm = freezed,
+    Object? albumLabel = null,
+    Object? albumReleaseType = null,
+    Object? albumStatus = null,
+    Object? bitrate = null,
+    Object? bpm = null,
     Object? cast = freezed,
-    Object? channels = freezed,
-    Object? comment = freezed,
-    Object? compilation = freezed,
+    Object? channels = null,
+    Object? comment = null,
+    Object? compilation = null,
     Object? contributors = freezed,
     Object? country = freezed,
     Object? customProperties = freezed,
-    Object? description = freezed,
-    Object? disc = freezed,
-    Object? discTitle = freezed,
-    Object? displayComposer = freezed,
-    Object? displayConductor = freezed,
-    Object? displayLyricist = freezed,
-    Object? displayOrchestra = freezed,
-    Object? duration = freezed,
-    Object? dynpath = freezed,
-    Object? episode = freezed,
-    Object? episodeGuide = freezed,
+    Object? description = null,
+    Object? disc = null,
+    Object? discTitle = null,
+    Object? displayComposer = null,
+    Object? displayConductor = null,
+    Object? displayLyricist = null,
+    Object? displayOrchestra = null,
+    Object? duration = null,
+    Object? dynpath = null,
+    Object? episode = null,
+    Object? episodeGuide = null,
     Object? firstAired = freezed,
     Object? id = freezed,
-    Object? imdbNumber = freezed,
-    Object? isBoxset = freezed,
-    Object? lyrics = freezed,
-    Object? mediaPath = freezed,
+    Object? imdbNumber = null,
+    Object? isBoxset = null,
+    Object? lyrics = null,
+    Object? mediaPath = null,
     Object? mood = freezed,
-    Object? mpaa = freezed,
+    Object? mpaa = null,
     Object? musicBrainzArtistId = freezed,
-    Object? musicBrainzTrackId = freezed,
+    Object? musicBrainzTrackId = null,
     Object? originalDate = freezed,
-    Object? originalTitle = freezed,
-    Object? plotOutline = freezed,
-    Object? premiered = freezed,
-    Object? productionCode = freezed,
+    Object? originalTitle = null,
+    Object? plotOutline = null,
+    Object? premiered = null,
+    Object? productionCode = null,
     Object? releaseDate = freezed,
-    Object? releaseType = freezed,
-    Object? sampleRate = freezed,
-    Object? season = freezed,
-    Object? set = freezed,
+    Object? releaseType = null,
+    Object? sampleRate = null,
+    Object? season = null,
+    Object? set = null,
     Object? setId = freezed,
     Object? showLink = freezed,
-    Object? showTitle = freezed,
-    Object? sortTitle = freezed,
-    Object? specialSortEpisode = freezed,
-    Object? specialSortSeason = freezed,
+    Object? showTitle = null,
+    Object? sortTitle = null,
+    Object? specialSortEpisode = null,
+    Object? specialSortSeason = null,
     Object? studio = freezed,
     Object? style = freezed,
     Object? tag = freezed,
-    Object? tagline = freezed,
+    Object? tagline = null,
     Object? theme = freezed,
-    Object? top250 = freezed,
-    Object? totalDiscs = freezed,
-    Object? track = freezed,
-    Object? trailer = freezed,
+    Object? top250 = null,
+    Object? totalDiscs = null,
+    Object? track = null,
+    Object? trailer = null,
     Object? tvShowId = freezed,
     Object? type = null,
     Object? uniqueId = freezed,
-    Object? votes = freezed,
-    Object? watchedEpisodes = freezed,
+    Object? votes = null,
+    Object? watchedEpisodes = null,
     Object? writer = freezed,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
     Object? artist = freezed,
     Object? artistId = freezed,
-    Object? displayArtist = freezed,
+    Object? displayArtist = null,
     Object? musicBrainzAlbumArtistId = freezed,
-    Object? rating = freezed,
-    Object? sortArtist = freezed,
-    Object? userRating = freezed,
-    Object? year = freezed,
+    Object? rating = null,
+    Object? sortArtist = null,
+    Object? userRating = null,
+    Object? year = null,
     Object? genre = freezed,
   }) {
     return _then(_$KodiListItemFileImpl(
@@ -1097,18 +1097,18 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value.lastModified
           : lastModified // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      mimeType: freezed == mimeType
+      mimeType: null == mimeType
           ? _value.mimeType
           : mimeType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      size: freezed == size
+              as String,
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      album: freezed == album
+              as int,
+      album: null == album
           ? _value.album
           : album // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       albumArtist: freezed == albumArtist
           ? _value._albumArtist
           : albumArtist // ignore: cast_nullable_to_non_nullable
@@ -1121,42 +1121,42 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
               as int?,
-      albumLabel: freezed == albumLabel
+      albumLabel: null == albumLabel
           ? _value.albumLabel
           : albumLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      albumReleaseType: freezed == albumReleaseType
+              as String,
+      albumReleaseType: null == albumReleaseType
           ? _value.albumReleaseType
           : albumReleaseType // ignore: cast_nullable_to_non_nullable
-              as KodiAudioAlbumReleaseType?,
-      albumStatus: freezed == albumStatus
+              as KodiAudioAlbumReleaseType,
+      albumStatus: null == albumStatus
           ? _value.albumStatus
           : albumStatus // ignore: cast_nullable_to_non_nullable
-              as String?,
-      bitrate: freezed == bitrate
+              as String,
+      bitrate: null == bitrate
           ? _value.bitrate
           : bitrate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      bpm: freezed == bpm
+              as int,
+      bpm: null == bpm
           ? _value.bpm
           : bpm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       cast: freezed == cast
           ? _value.cast
           : cast // ignore: cast_nullable_to_non_nullable
               as KodiVideoCast?,
-      channels: freezed == channels
+      channels: null == channels
           ? _value.channels
           : channels // ignore: cast_nullable_to_non_nullable
-              as int?,
-      comment: freezed == comment
+              as int,
+      comment: null == comment
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
-              as String?,
-      compilation: freezed == compilation
+              as String,
+      compilation: null == compilation
           ? _value.compilation
           : compilation // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       contributors: freezed == contributors
           ? _value.contributors
           : contributors // ignore: cast_nullable_to_non_nullable
@@ -1169,50 +1169,50 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value._customProperties
           : customProperties // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      description: freezed == description
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disc: freezed == disc
+              as String,
+      disc: null == disc
           ? _value.disc
           : disc // ignore: cast_nullable_to_non_nullable
-              as int?,
-      discTitle: freezed == discTitle
+              as int,
+      discTitle: null == discTitle
           ? _value.discTitle
           : discTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayComposer: freezed == displayComposer
+              as String,
+      displayComposer: null == displayComposer
           ? _value.displayComposer
           : displayComposer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayConductor: freezed == displayConductor
+              as String,
+      displayConductor: null == displayConductor
           ? _value.displayConductor
           : displayConductor // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayLyricist: freezed == displayLyricist
+              as String,
+      displayLyricist: null == displayLyricist
           ? _value.displayLyricist
           : displayLyricist // ignore: cast_nullable_to_non_nullable
-              as String?,
-      displayOrchestra: freezed == displayOrchestra
+              as String,
+      displayOrchestra: null == displayOrchestra
           ? _value.displayOrchestra
           : displayOrchestra // ignore: cast_nullable_to_non_nullable
-              as String?,
-      duration: freezed == duration
+              as String,
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dynpath: freezed == dynpath
+              as int,
+      dynpath: null == dynpath
           ? _value.dynpath
           : dynpath // ignore: cast_nullable_to_non_nullable
-              as String?,
-      episode: freezed == episode
+              as String,
+      episode: null == episode
           ? _value.episode
           : episode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      episodeGuide: freezed == episodeGuide
+              as int,
+      episodeGuide: null == episodeGuide
           ? _value.episodeGuide
           : episodeGuide // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       firstAired: freezed == firstAired
           ? _value.firstAired
           : firstAired // ignore: cast_nullable_to_non_nullable
@@ -1221,78 +1221,78 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      imdbNumber: freezed == imdbNumber
+      imdbNumber: null == imdbNumber
           ? _value.imdbNumber
           : imdbNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isBoxset: freezed == isBoxset
+              as String,
+      isBoxset: null == isBoxset
           ? _value.isBoxset
           : isBoxset // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      lyrics: freezed == lyrics
+              as bool,
+      lyrics: null == lyrics
           ? _value.lyrics
           : lyrics // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaPath: freezed == mediaPath
+              as String,
+      mediaPath: null == mediaPath
           ? _value.mediaPath
           : mediaPath // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       mood: freezed == mood
           ? _value._mood
           : mood // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mpaa: freezed == mpaa
+      mpaa: null == mpaa
           ? _value.mpaa
           : mpaa // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       musicBrainzArtistId: freezed == musicBrainzArtistId
           ? _value._musicBrainzArtistId
           : musicBrainzArtistId // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      musicBrainzTrackId: freezed == musicBrainzTrackId
+      musicBrainzTrackId: null == musicBrainzTrackId
           ? _value.musicBrainzTrackId
           : musicBrainzTrackId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       originalDate: freezed == originalDate
           ? _value.originalDate
           : originalDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      originalTitle: freezed == originalTitle
+      originalTitle: null == originalTitle
           ? _value.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plotOutline: freezed == plotOutline
+              as String,
+      plotOutline: null == plotOutline
           ? _value.plotOutline
           : plotOutline // ignore: cast_nullable_to_non_nullable
-              as String?,
-      premiered: freezed == premiered
+              as String,
+      premiered: null == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productionCode: freezed == productionCode
+              as String,
+      productionCode: null == productionCode
           ? _value.productionCode
           : productionCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      releaseType: freezed == releaseType
+      releaseType: null == releaseType
           ? _value.releaseType
           : releaseType // ignore: cast_nullable_to_non_nullable
-              as KodiAudioAlbumReleaseType?,
-      sampleRate: freezed == sampleRate
+              as KodiAudioAlbumReleaseType,
+      sampleRate: null == sampleRate
           ? _value.sampleRate
           : sampleRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
+              as int,
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
-      set: freezed == set
+              as int,
+      set: null == set
           ? _value.set
           : set // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       setId: freezed == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
@@ -1301,22 +1301,22 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value._showLink
           : showLink // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      showTitle: freezed == showTitle
+      showTitle: null == showTitle
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      sortTitle: freezed == sortTitle
+              as String,
+      sortTitle: null == sortTitle
           ? _value.sortTitle
           : sortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      specialSortEpisode: freezed == specialSortEpisode
+              as String,
+      specialSortEpisode: null == specialSortEpisode
           ? _value.specialSortEpisode
           : specialSortEpisode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      specialSortSeason: freezed == specialSortSeason
+              as int,
+      specialSortSeason: null == specialSortSeason
           ? _value.specialSortSeason
           : specialSortSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       studio: freezed == studio
           ? _value._studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -1329,30 +1329,30 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value._tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      tagline: freezed == tagline
+      tagline: null == tagline
           ? _value.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       theme: freezed == theme
           ? _value._theme
           : theme // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      top250: freezed == top250
+      top250: null == top250
           ? _value.top250
           : top250 // ignore: cast_nullable_to_non_nullable
-              as int?,
-      totalDiscs: freezed == totalDiscs
+              as int,
+      totalDiscs: null == totalDiscs
           ? _value.totalDiscs
           : totalDiscs // ignore: cast_nullable_to_non_nullable
-              as int?,
-      track: freezed == track
+              as int,
+      track: null == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
-              as int?,
-      trailer: freezed == trailer
+              as int,
+      trailer: null == trailer
           ? _value.trailer
           : trailer // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       tvShowId: freezed == tvShowId
           ? _value.tvShowId
           : tvShowId // ignore: cast_nullable_to_non_nullable
@@ -1365,14 +1365,14 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value._uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      votes: freezed == votes
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as int?,
-      watchedEpisodes: freezed == watchedEpisodes
+              as String,
+      watchedEpisodes: null == watchedEpisodes
           ? _value.watchedEpisodes
           : watchedEpisodes // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       writer: freezed == writer
           ? _value._writer
           : writer // ignore: cast_nullable_to_non_nullable
@@ -1385,10 +1385,10 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -1401,30 +1401,30 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -1437,30 +1437,30 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           ? _value._artistId
           : artistId // ignore: cast_nullable_to_non_nullable
               as List<int>?,
-      displayArtist: freezed == displayArtist
+      displayArtist: null == displayArtist
           ? _value.displayArtist
           : displayArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       musicBrainzAlbumArtistId: freezed == musicBrainzAlbumArtistId
           ? _value._musicBrainzAlbumArtistId
           : musicBrainzAlbumArtistId // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      rating: freezed == rating
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
-      sortArtist: freezed == sortArtist
+              as double,
+      sortArtist: null == sortArtist
           ? _value.sortArtist
           : sortArtist // ignore: cast_nullable_to_non_nullable
-              as String?,
-      userRating: freezed == userRating
+              as String,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      year: freezed == year
+              as int,
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       genre: freezed == genre
           ? _value._genre
           : genre // ignore: cast_nullable_to_non_nullable
@@ -1477,100 +1477,102 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
       {this.file,
       @JsonKey(name: 'filetype') this.fileType,
       @JsonKey(name: 'lastmodified') this.lastModified,
-      @JsonKey(name: 'mimetype') this.mimeType,
-      this.size,
-      this.album,
+      @JsonKey(name: 'mimetype') this.mimeType = '',
+      this.size = 0,
+      this.album = '',
       @JsonKey(name: 'albumartist') final List<String>? albumArtist,
       @JsonKey(name: 'albumartistid') final List<int>? albumArtistId,
       @JsonKey(name: 'albumid') this.albumId,
-      @JsonKey(name: 'albumlabel') this.albumLabel,
-      @JsonKey(name: 'albumreleasetype') this.albumReleaseType,
-      @JsonKey(name: 'albumstatus') this.albumStatus,
-      this.bitrate,
-      this.bpm,
+      @JsonKey(name: 'albumlabel') this.albumLabel = '',
+      @JsonKey(name: 'albumreleasetype')
+      this.albumReleaseType = KodiAudioAlbumReleaseType.album,
+      @JsonKey(name: 'albumstatus') this.albumStatus = '',
+      this.bitrate = 0,
+      this.bpm = 0,
       this.cast,
-      this.channels,
-      this.comment,
-      this.compilation,
+      this.channels = 0,
+      this.comment = '',
+      this.compilation = false,
       this.contributors,
       final List<String>? country,
       @JsonKey(name: 'customproperties')
       final Map<String, dynamic>? customProperties,
-      this.description,
-      this.disc,
-      @JsonKey(name: 'disctitle') this.discTitle,
-      @JsonKey(name: 'displaycomposer') this.displayComposer,
-      @JsonKey(name: 'displayconductor') this.displayConductor,
-      @JsonKey(name: 'displaylyricist') this.displayLyricist,
-      @JsonKey(name: 'displayorchestra') this.displayOrchestra,
-      this.duration,
-      this.dynpath,
-      this.episode,
-      @JsonKey(name: 'episodeguide') this.episodeGuide,
+      this.description = '',
+      this.disc = 0,
+      @JsonKey(name: 'disctitle') this.discTitle = '',
+      @JsonKey(name: 'displaycomposer') this.displayComposer = '',
+      @JsonKey(name: 'displayconductor') this.displayConductor = '',
+      @JsonKey(name: 'displaylyricist') this.displayLyricist = '',
+      @JsonKey(name: 'displayorchestra') this.displayOrchestra = '',
+      this.duration = 0,
+      this.dynpath = '',
+      this.episode = 0,
+      @JsonKey(name: 'episodeguide') this.episodeGuide = '',
       @JsonKey(name: 'firstaired') this.firstAired,
       this.id,
-      @JsonKey(name: 'imdbnumber') this.imdbNumber,
-      @JsonKey(name: 'isboxset') this.isBoxset,
-      this.lyrics,
-      @JsonKey(name: 'mediapath') this.mediaPath,
+      @JsonKey(name: 'imdbnumber') this.imdbNumber = '',
+      @JsonKey(name: 'isboxset') this.isBoxset = false,
+      this.lyrics = '',
+      @JsonKey(name: 'mediapath') this.mediaPath = '',
       final List<String>? mood,
-      this.mpaa,
+      this.mpaa = '',
       @JsonKey(name: 'musicbrainzartistid')
       final List<String>? musicBrainzArtistId,
-      @JsonKey(name: 'musicbrainztrackid') this.musicBrainzTrackId,
+      @JsonKey(name: 'musicbrainztrackid') this.musicBrainzTrackId = '',
       @JsonKey(name: 'originaldate') this.originalDate,
-      @JsonKey(name: 'originaltitle') this.originalTitle,
-      @JsonKey(name: 'plotoutline') this.plotOutline,
-      this.premiered,
-      @JsonKey(name: 'productioncode') this.productionCode,
+      @JsonKey(name: 'originaltitle') this.originalTitle = '',
+      @JsonKey(name: 'plotoutline') this.plotOutline = '',
+      this.premiered = '',
+      @JsonKey(name: 'productioncode') this.productionCode = '',
       @JsonKey(name: 'releasedate') this.releaseDate,
-      @JsonKey(name: 'releasetype') this.releaseType,
-      @JsonKey(name: 'samplerate') this.sampleRate,
-      this.season,
-      this.set,
+      @JsonKey(name: 'releasetype')
+      this.releaseType = KodiAudioAlbumReleaseType.album,
+      @JsonKey(name: 'samplerate') this.sampleRate = 0,
+      this.season = 0,
+      this.set = '',
       @JsonKey(name: 'setid') this.setId,
       @JsonKey(name: 'showlink') final List<String>? showLink,
-      @JsonKey(name: 'showtitle') this.showTitle,
-      @JsonKey(name: 'sorttitle') this.sortTitle,
-      @JsonKey(name: 'specialsortepisode') this.specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') this.specialSortSeason,
+      @JsonKey(name: 'showtitle') this.showTitle = '',
+      @JsonKey(name: 'sorttitle') this.sortTitle = '',
+      @JsonKey(name: 'specialsortepisode') this.specialSortEpisode = 0,
+      @JsonKey(name: 'specialsortseason') this.specialSortSeason = 0,
       final List<String>? studio,
       final List<String>? style,
       final List<String>? tag,
-      this.tagline,
+      this.tagline = '',
       final List<String>? theme,
-      this.top250,
-      @JsonKey(name: 'totaldiscs') this.totalDiscs,
-      this.track,
-      this.trailer,
+      this.top250 = 0,
+      @JsonKey(name: 'totaldiscs') this.totalDiscs = 0,
+      this.track = 0,
+      this.trailer = '',
       @JsonKey(name: 'tvshowid') this.tvShowId,
-      required this.type,
+      this.type = KodiItemBaseType.unknown,
       @JsonKey(name: 'uniqueid') final Map<String, dynamic>? uniqueId,
-      this.votes,
-      @JsonKey(name: 'watchedepisodes') this.watchedEpisodes,
+      this.votes = '',
+      @JsonKey(name: 'watchedepisodes') this.watchedEpisodes = 0,
       final List<String>? writer,
       final List<String>? director,
       this.resume,
-      this.runtime,
+      this.runtime = 0,
       @JsonKey(name: 'streamdetails') this.streamDetails,
       @JsonKey(name: 'dateadded') this.dateAdded,
       @JsonKey(name: 'lastplayed') this.lastPlayed,
-      this.plot,
-      this.title,
+      this.plot = '',
+      this.title = '',
       this.art,
-      @JsonKey(name: 'playcount') this.playCount,
-      this.fanart,
-      this.thumbnail,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label,
       final List<String>? artist,
       @JsonKey(name: 'artistid') final List<int>? artistId,
-      @JsonKey(name: 'displayartist') this.displayArtist,
+      @JsonKey(name: 'displayartist') this.displayArtist = '',
       @JsonKey(name: 'musicbrainzalbumartistid')
       final List<String>? musicBrainzAlbumArtistId,
-      this.rating,
-      @JsonKey(name: 'sortartist') this.sortArtist,
-      @JsonKey(name: 'userrating') this.userRating,
-      this.year,
+      this.rating = 0.0,
+      @JsonKey(name: 'sortartist') this.sortArtist = '',
+      @JsonKey(name: 'userrating') this.userRating = 0,
+      this.year = 0,
       final List<String>? genre})
       : _albumArtist = albumArtist,
         _albumArtistId = albumArtistId,
@@ -1604,11 +1606,13 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   final DateTime? lastModified;
   @override
   @JsonKey(name: 'mimetype')
-  final String? mimeType;
+  final String mimeType;
   @override
-  final int? size;
+  @JsonKey()
+  final int size;
   @override
-  final String? album;
+  @JsonKey()
+  final String album;
   final List<String>? _albumArtist;
   @override
   @JsonKey(name: 'albumartist')
@@ -1636,25 +1640,30 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   final int? albumId;
   @override
   @JsonKey(name: 'albumlabel')
-  final String? albumLabel;
+  final String albumLabel;
   @override
   @JsonKey(name: 'albumreleasetype')
-  final KodiAudioAlbumReleaseType? albumReleaseType;
+  final KodiAudioAlbumReleaseType albumReleaseType;
   @override
   @JsonKey(name: 'albumstatus')
-  final String? albumStatus;
+  final String albumStatus;
   @override
-  final int? bitrate;
+  @JsonKey()
+  final int bitrate;
   @override
-  final int? bpm;
+  @JsonKey()
+  final int bpm;
   @override
   final KodiVideoCast? cast;
   @override
-  final int? channels;
+  @JsonKey()
+  final int channels;
   @override
-  final String? comment;
+  @JsonKey()
+  final String comment;
   @override
-  final bool? compilation;
+  @JsonKey()
+  final bool compilation;
   @override
   final KodiAudioContributors? contributors;
   final List<String>? _country;
@@ -1679,33 +1688,38 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   }
 
   @override
-  final String? description;
+  @JsonKey()
+  final String description;
   @override
-  final int? disc;
+  @JsonKey()
+  final int disc;
   @override
   @JsonKey(name: 'disctitle')
-  final String? discTitle;
+  final String discTitle;
   @override
   @JsonKey(name: 'displaycomposer')
-  final String? displayComposer;
+  final String displayComposer;
   @override
   @JsonKey(name: 'displayconductor')
-  final String? displayConductor;
+  final String displayConductor;
   @override
   @JsonKey(name: 'displaylyricist')
-  final String? displayLyricist;
+  final String displayLyricist;
   @override
   @JsonKey(name: 'displayorchestra')
-  final String? displayOrchestra;
+  final String displayOrchestra;
   @override
-  final int? duration;
+  @JsonKey()
+  final int duration;
   @override
-  final String? dynpath;
+  @JsonKey()
+  final String dynpath;
   @override
-  final int? episode;
+  @JsonKey()
+  final int episode;
   @override
   @JsonKey(name: 'episodeguide')
-  final String? episodeGuide;
+  final String episodeGuide;
   @override
   @JsonKey(name: 'firstaired')
   final DateTime? firstAired;
@@ -1713,15 +1727,16 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   final int? id;
   @override
   @JsonKey(name: 'imdbnumber')
-  final String? imdbNumber;
+  final String imdbNumber;
   @override
   @JsonKey(name: 'isboxset')
-  final bool? isBoxset;
+  final bool isBoxset;
   @override
-  final String? lyrics;
+  @JsonKey()
+  final String lyrics;
   @override
   @JsonKey(name: 'mediapath')
-  final String? mediaPath;
+  final String mediaPath;
   final List<String>? _mood;
   @override
   List<String>? get mood {
@@ -1733,7 +1748,8 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   }
 
   @override
-  final String? mpaa;
+  @JsonKey()
+  final String mpaa;
   final List<String>? _musicBrainzArtistId;
   @override
   @JsonKey(name: 'musicbrainzartistid')
@@ -1748,34 +1764,37 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
 
   @override
   @JsonKey(name: 'musicbrainztrackid')
-  final String? musicBrainzTrackId;
+  final String musicBrainzTrackId;
   @override
   @JsonKey(name: 'originaldate')
   final DateTime? originalDate;
   @override
   @JsonKey(name: 'originaltitle')
-  final String? originalTitle;
+  final String originalTitle;
   @override
   @JsonKey(name: 'plotoutline')
-  final String? plotOutline;
+  final String plotOutline;
   @override
-  final String? premiered;
+  @JsonKey()
+  final String premiered;
   @override
   @JsonKey(name: 'productioncode')
-  final String? productionCode;
+  final String productionCode;
   @override
   @JsonKey(name: 'releasedate')
   final DateTime? releaseDate;
   @override
   @JsonKey(name: 'releasetype')
-  final KodiAudioAlbumReleaseType? releaseType;
+  final KodiAudioAlbumReleaseType releaseType;
   @override
   @JsonKey(name: 'samplerate')
-  final int? sampleRate;
+  final int sampleRate;
   @override
-  final int? season;
+  @JsonKey()
+  final int season;
   @override
-  final String? set;
+  @JsonKey()
+  final String set;
   @override
   @JsonKey(name: 'setid')
   final int? setId;
@@ -1792,16 +1811,16 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
 
   @override
   @JsonKey(name: 'showtitle')
-  final String? showTitle;
+  final String showTitle;
   @override
   @JsonKey(name: 'sorttitle')
-  final String? sortTitle;
+  final String sortTitle;
   @override
   @JsonKey(name: 'specialsortepisode')
-  final int? specialSortEpisode;
+  final int specialSortEpisode;
   @override
   @JsonKey(name: 'specialsortseason')
-  final int? specialSortSeason;
+  final int specialSortSeason;
   final List<String>? _studio;
   @override
   List<String>? get studio {
@@ -1833,7 +1852,8 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   }
 
   @override
-  final String? tagline;
+  @JsonKey()
+  final String tagline;
   final List<String>? _theme;
   @override
   List<String>? get theme {
@@ -1845,18 +1865,22 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   }
 
   @override
-  final int? top250;
+  @JsonKey()
+  final int top250;
   @override
   @JsonKey(name: 'totaldiscs')
-  final int? totalDiscs;
+  final int totalDiscs;
   @override
-  final int? track;
+  @JsonKey()
+  final int track;
   @override
-  final String? trailer;
+  @JsonKey()
+  final String trailer;
   @override
   @JsonKey(name: 'tvshowid')
   final int? tvShowId;
   @override
+  @JsonKey()
   final KodiItemBaseType type;
   final Map<String, dynamic>? _uniqueId;
   @override
@@ -1870,10 +1894,11 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   }
 
   @override
-  final int? votes;
+  @JsonKey()
+  final String votes;
   @override
   @JsonKey(name: 'watchedepisodes')
-  final int? watchedEpisodes;
+  final int watchedEpisodes;
   final List<String>? _writer;
   @override
   List<String>? get writer {
@@ -1897,7 +1922,8 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   @override
   final KodiVideoResume? resume;
   @override
-  final int? runtime;
+  @JsonKey()
+  final int runtime;
   @override
   @JsonKey(name: 'streamdetails')
   final KodiVideoStreams? streamDetails;
@@ -1908,18 +1934,22 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   @JsonKey(name: 'lastplayed')
   final DateTime? lastPlayed;
   @override
-  final String? plot;
+  @JsonKey()
+  final String plot;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final KodiMediaArtwork? art;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
   final List<String>? _artist;
@@ -1945,7 +1975,7 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
 
   @override
   @JsonKey(name: 'displayartist')
-  final String? displayArtist;
+  final String displayArtist;
   final List<String>? _musicBrainzAlbumArtistId;
   @override
   @JsonKey(name: 'musicbrainzalbumartistid')
@@ -1959,15 +1989,17 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   }
 
   @override
-  final double? rating;
+  @JsonKey()
+  final double rating;
   @override
   @JsonKey(name: 'sortartist')
-  final String? sortArtist;
+  final String sortArtist;
   @override
   @JsonKey(name: 'userrating')
-  final int? userRating;
+  final int userRating;
   @override
-  final int? year;
+  @JsonKey()
+  final int year;
   final List<String>? _genre;
   @override
   List<String>? get genre {
@@ -2251,102 +2283,101 @@ abstract class _KodiListItemFile implements KodiListItemFile {
       {final String? file,
       @JsonKey(name: 'filetype') final KodiFileType? fileType,
       @JsonKey(name: 'lastmodified') final DateTime? lastModified,
-      @JsonKey(name: 'mimetype') final String? mimeType,
-      final int? size,
-      final String? album,
+      @JsonKey(name: 'mimetype') final String mimeType,
+      final int size,
+      final String album,
       @JsonKey(name: 'albumartist') final List<String>? albumArtist,
       @JsonKey(name: 'albumartistid') final List<int>? albumArtistId,
       @JsonKey(name: 'albumid') final int? albumId,
-      @JsonKey(name: 'albumlabel') final String? albumLabel,
+      @JsonKey(name: 'albumlabel') final String albumLabel,
       @JsonKey(name: 'albumreleasetype')
-      final KodiAudioAlbumReleaseType? albumReleaseType,
-      @JsonKey(name: 'albumstatus') final String? albumStatus,
-      final int? bitrate,
-      final int? bpm,
+      final KodiAudioAlbumReleaseType albumReleaseType,
+      @JsonKey(name: 'albumstatus') final String albumStatus,
+      final int bitrate,
+      final int bpm,
       final KodiVideoCast? cast,
-      final int? channels,
-      final String? comment,
-      final bool? compilation,
+      final int channels,
+      final String comment,
+      final bool compilation,
       final KodiAudioContributors? contributors,
       final List<String>? country,
       @JsonKey(name: 'customproperties')
       final Map<String, dynamic>? customProperties,
-      final String? description,
-      final int? disc,
-      @JsonKey(name: 'disctitle') final String? discTitle,
-      @JsonKey(name: 'displaycomposer') final String? displayComposer,
-      @JsonKey(name: 'displayconductor') final String? displayConductor,
-      @JsonKey(name: 'displaylyricist') final String? displayLyricist,
-      @JsonKey(name: 'displayorchestra') final String? displayOrchestra,
-      final int? duration,
-      final String? dynpath,
-      final int? episode,
-      @JsonKey(name: 'episodeguide') final String? episodeGuide,
+      final String description,
+      final int disc,
+      @JsonKey(name: 'disctitle') final String discTitle,
+      @JsonKey(name: 'displaycomposer') final String displayComposer,
+      @JsonKey(name: 'displayconductor') final String displayConductor,
+      @JsonKey(name: 'displaylyricist') final String displayLyricist,
+      @JsonKey(name: 'displayorchestra') final String displayOrchestra,
+      final int duration,
+      final String dynpath,
+      final int episode,
+      @JsonKey(name: 'episodeguide') final String episodeGuide,
       @JsonKey(name: 'firstaired') final DateTime? firstAired,
       final int? id,
-      @JsonKey(name: 'imdbnumber') final String? imdbNumber,
-      @JsonKey(name: 'isboxset') final bool? isBoxset,
-      final String? lyrics,
-      @JsonKey(name: 'mediapath') final String? mediaPath,
+      @JsonKey(name: 'imdbnumber') final String imdbNumber,
+      @JsonKey(name: 'isboxset') final bool isBoxset,
+      final String lyrics,
+      @JsonKey(name: 'mediapath') final String mediaPath,
       final List<String>? mood,
-      final String? mpaa,
+      final String mpaa,
       @JsonKey(name: 'musicbrainzartistid')
       final List<String>? musicBrainzArtistId,
-      @JsonKey(name: 'musicbrainztrackid') final String? musicBrainzTrackId,
+      @JsonKey(name: 'musicbrainztrackid') final String musicBrainzTrackId,
       @JsonKey(name: 'originaldate') final DateTime? originalDate,
-      @JsonKey(name: 'originaltitle') final String? originalTitle,
-      @JsonKey(name: 'plotoutline') final String? plotOutline,
-      final String? premiered,
-      @JsonKey(name: 'productioncode') final String? productionCode,
+      @JsonKey(name: 'originaltitle') final String originalTitle,
+      @JsonKey(name: 'plotoutline') final String plotOutline,
+      final String premiered,
+      @JsonKey(name: 'productioncode') final String productionCode,
       @JsonKey(name: 'releasedate') final DateTime? releaseDate,
-      @JsonKey(name: 'releasetype')
-      final KodiAudioAlbumReleaseType? releaseType,
-      @JsonKey(name: 'samplerate') final int? sampleRate,
-      final int? season,
-      final String? set,
+      @JsonKey(name: 'releasetype') final KodiAudioAlbumReleaseType releaseType,
+      @JsonKey(name: 'samplerate') final int sampleRate,
+      final int season,
+      final String set,
       @JsonKey(name: 'setid') final int? setId,
       @JsonKey(name: 'showlink') final List<String>? showLink,
-      @JsonKey(name: 'showtitle') final String? showTitle,
-      @JsonKey(name: 'sorttitle') final String? sortTitle,
-      @JsonKey(name: 'specialsortepisode') final int? specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') final int? specialSortSeason,
+      @JsonKey(name: 'showtitle') final String showTitle,
+      @JsonKey(name: 'sorttitle') final String sortTitle,
+      @JsonKey(name: 'specialsortepisode') final int specialSortEpisode,
+      @JsonKey(name: 'specialsortseason') final int specialSortSeason,
       final List<String>? studio,
       final List<String>? style,
       final List<String>? tag,
-      final String? tagline,
+      final String tagline,
       final List<String>? theme,
-      final int? top250,
-      @JsonKey(name: 'totaldiscs') final int? totalDiscs,
-      final int? track,
-      final String? trailer,
+      final int top250,
+      @JsonKey(name: 'totaldiscs') final int totalDiscs,
+      final int track,
+      final String trailer,
       @JsonKey(name: 'tvshowid') final int? tvShowId,
-      required final KodiItemBaseType type,
+      final KodiItemBaseType type,
       @JsonKey(name: 'uniqueid') final Map<String, dynamic>? uniqueId,
-      final int? votes,
-      @JsonKey(name: 'watchedepisodes') final int? watchedEpisodes,
+      final String votes,
+      @JsonKey(name: 'watchedepisodes') final int watchedEpisodes,
       final List<String>? writer,
       final List<String>? director,
       final KodiVideoResume? resume,
-      final int? runtime,
+      final int runtime,
       @JsonKey(name: 'streamdetails') final KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') final DateTime? dateAdded,
       @JsonKey(name: 'lastplayed') final DateTime? lastPlayed,
-      final String? plot,
-      final String? title,
+      final String plot,
+      final String title,
       final KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') final int? playCount,
-      final String? fanart,
-      final String? thumbnail,
+      @JsonKey(name: 'playcount') final int playCount,
+      final String fanart,
+      final String thumbnail,
       required final String label,
       final List<String>? artist,
       @JsonKey(name: 'artistid') final List<int>? artistId,
-      @JsonKey(name: 'displayartist') final String? displayArtist,
+      @JsonKey(name: 'displayartist') final String displayArtist,
       @JsonKey(name: 'musicbrainzalbumartistid')
       final List<String>? musicBrainzAlbumArtistId,
-      final double? rating,
-      @JsonKey(name: 'sortartist') final String? sortArtist,
-      @JsonKey(name: 'userrating') final int? userRating,
-      final int? year,
+      final double rating,
+      @JsonKey(name: 'sortartist') final String sortArtist,
+      @JsonKey(name: 'userrating') final int userRating,
+      final int year,
       final List<String>? genre}) = _$KodiListItemFileImpl;
 
   factory _KodiListItemFile.fromJson(Map<String, dynamic> json) =
@@ -2362,11 +2393,11 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   DateTime? get lastModified;
   @override
   @JsonKey(name: 'mimetype')
-  String? get mimeType;
+  String get mimeType;
   @override
-  int? get size;
+  int get size;
   @override
-  String? get album;
+  String get album;
   @override
   @JsonKey(name: 'albumartist')
   List<String>? get albumArtist;
@@ -2378,25 +2409,25 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   int? get albumId;
   @override
   @JsonKey(name: 'albumlabel')
-  String? get albumLabel;
+  String get albumLabel;
   @override
   @JsonKey(name: 'albumreleasetype')
-  KodiAudioAlbumReleaseType? get albumReleaseType;
+  KodiAudioAlbumReleaseType get albumReleaseType;
   @override
   @JsonKey(name: 'albumstatus')
-  String? get albumStatus;
+  String get albumStatus;
   @override
-  int? get bitrate;
+  int get bitrate;
   @override
-  int? get bpm;
+  int get bpm;
   @override
   KodiVideoCast? get cast;
   @override
-  int? get channels;
+  int get channels;
   @override
-  String? get comment;
+  String get comment;
   @override
-  bool? get compilation;
+  bool get compilation;
   @override
   KodiAudioContributors? get contributors;
   @override
@@ -2405,33 +2436,33 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   @JsonKey(name: 'customproperties')
   Map<String, dynamic>? get customProperties;
   @override
-  String? get description;
+  String get description;
   @override
-  int? get disc;
+  int get disc;
   @override
   @JsonKey(name: 'disctitle')
-  String? get discTitle;
+  String get discTitle;
   @override
   @JsonKey(name: 'displaycomposer')
-  String? get displayComposer;
+  String get displayComposer;
   @override
   @JsonKey(name: 'displayconductor')
-  String? get displayConductor;
+  String get displayConductor;
   @override
   @JsonKey(name: 'displaylyricist')
-  String? get displayLyricist;
+  String get displayLyricist;
   @override
   @JsonKey(name: 'displayorchestra')
-  String? get displayOrchestra;
+  String get displayOrchestra;
   @override
-  int? get duration;
+  int get duration;
   @override
-  String? get dynpath;
+  String get dynpath;
   @override
-  int? get episode;
+  int get episode;
   @override
   @JsonKey(name: 'episodeguide')
-  String? get episodeGuide;
+  String get episodeGuide;
   @override
   @JsonKey(name: 'firstaired')
   DateTime? get firstAired;
@@ -2439,52 +2470,52 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   int? get id;
   @override
   @JsonKey(name: 'imdbnumber')
-  String? get imdbNumber;
+  String get imdbNumber;
   @override
   @JsonKey(name: 'isboxset')
-  bool? get isBoxset;
+  bool get isBoxset;
   @override
-  String? get lyrics;
+  String get lyrics;
   @override
   @JsonKey(name: 'mediapath')
-  String? get mediaPath;
+  String get mediaPath;
   @override
   List<String>? get mood;
   @override
-  String? get mpaa;
+  String get mpaa;
   @override
   @JsonKey(name: 'musicbrainzartistid')
   List<String>? get musicBrainzArtistId;
   @override
   @JsonKey(name: 'musicbrainztrackid')
-  String? get musicBrainzTrackId;
+  String get musicBrainzTrackId;
   @override
   @JsonKey(name: 'originaldate')
   DateTime? get originalDate;
   @override
   @JsonKey(name: 'originaltitle')
-  String? get originalTitle;
+  String get originalTitle;
   @override
   @JsonKey(name: 'plotoutline')
-  String? get plotOutline;
+  String get plotOutline;
   @override
-  String? get premiered;
+  String get premiered;
   @override
   @JsonKey(name: 'productioncode')
-  String? get productionCode;
+  String get productionCode;
   @override
   @JsonKey(name: 'releasedate')
   DateTime? get releaseDate;
   @override
   @JsonKey(name: 'releasetype')
-  KodiAudioAlbumReleaseType? get releaseType;
+  KodiAudioAlbumReleaseType get releaseType;
   @override
   @JsonKey(name: 'samplerate')
-  int? get sampleRate;
+  int get sampleRate;
   @override
-  int? get season;
+  int get season;
   @override
-  String? get set;
+  String get set;
   @override
   @JsonKey(name: 'setid')
   int? get setId;
@@ -2493,16 +2524,16 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   List<String>? get showLink;
   @override
   @JsonKey(name: 'showtitle')
-  String? get showTitle;
+  String get showTitle;
   @override
   @JsonKey(name: 'sorttitle')
-  String? get sortTitle;
+  String get sortTitle;
   @override
   @JsonKey(name: 'specialsortepisode')
-  int? get specialSortEpisode;
+  int get specialSortEpisode;
   @override
   @JsonKey(name: 'specialsortseason')
-  int? get specialSortSeason;
+  int get specialSortSeason;
   @override
   List<String>? get studio;
   @override
@@ -2510,18 +2541,18 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   @override
   List<String>? get tag;
   @override
-  String? get tagline;
+  String get tagline;
   @override
   List<String>? get theme;
   @override
-  int? get top250;
+  int get top250;
   @override
   @JsonKey(name: 'totaldiscs')
-  int? get totalDiscs;
+  int get totalDiscs;
   @override
-  int? get track;
+  int get track;
   @override
-  String? get trailer;
+  String get trailer;
   @override
   @JsonKey(name: 'tvshowid')
   int? get tvShowId;
@@ -2531,10 +2562,10 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   @JsonKey(name: 'uniqueid')
   Map<String, dynamic>? get uniqueId;
   @override
-  int? get votes;
+  String get votes;
   @override
   @JsonKey(name: 'watchedepisodes')
-  int? get watchedEpisodes;
+  int get watchedEpisodes;
   @override
   List<String>? get writer;
   @override
@@ -2542,7 +2573,7 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   @override
   KodiVideoResume? get resume;
   @override
-  int? get runtime;
+  int get runtime;
   @override
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails;
@@ -2553,18 +2584,18 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed;
   @override
-  String? get plot;
+  String get plot;
   @override
-  String? get title;
+  String get title;
   @override
   KodiMediaArtwork? get art;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
   @override
@@ -2574,20 +2605,20 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   List<int>? get artistId;
   @override
   @JsonKey(name: 'displayartist')
-  String? get displayArtist;
+  String get displayArtist;
   @override
   @JsonKey(name: 'musicbrainzalbumartistid')
   List<String>? get musicBrainzAlbumArtistId;
   @override
-  double? get rating;
+  double get rating;
   @override
   @JsonKey(name: 'sortartist')
-  String? get sortArtist;
+  String get sortArtist;
   @override
   @JsonKey(name: 'userrating')
-  int? get userRating;
+  int get userRating;
   @override
-  int? get year;
+  int get year;
   @override
   List<String>? get genre;
 

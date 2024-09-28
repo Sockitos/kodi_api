@@ -2,6 +2,7 @@ export 'addon/addon_models.dart';
 export 'application/application_models.dart';
 export 'audio/audio_models.dart';
 export 'favourite/favourite_models.dart';
+export 'files/files_models.dart';
 export 'global/global_models.dart';
 export 'gui/gui_models.dart';
 export 'host/kodi_host.dart';

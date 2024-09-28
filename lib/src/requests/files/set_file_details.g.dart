@@ -11,7 +11,9 @@ _$SetFileDetailsImpl _$$SetFileDetailsImplFromJson(Map<String, dynamic> json) =>
       json['file'] as String,
       $enumDecode(_$KodiFilesMediaEnumMap, json['media']),
       playCount: (json['playcount'] as num?)?.toInt(),
-      lastPlayed: const DateTimeConverter().fromJson(json['lastplayed']),
+      lastPlayed: json['lastplayed'] == null
+          ? null
+          : DateTime.parse(json['lastplayed'] as String),
       resume: json['resume'] == null
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
@@ -31,8 +33,7 @@ Map<String, dynamic> _$$SetFileDetailsImplToJson(
   }
 
   writeNotNull('playcount', instance.playCount);
-  writeNotNull(
-      'lastplayed', const DateTimeConverter().toJson(instance.lastPlayed));
+  writeNotNull('lastplayed', instance.lastPlayed?.toIso8601String());
   writeNotNull('resume', instance.resume?.toJson());
   return val;
 }

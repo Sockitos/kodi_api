@@ -9,21 +9,13 @@ part of 'kodi_video_resume.dart';
 _$KodiVideoResumeImpl _$$KodiVideoResumeImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiVideoResumeImpl(
-      position: (json['position'] as num?)?.toDouble(),
-      total: (json['total'] as num?)?.toDouble(),
+      position: (json['position'] as num?)?.toDouble() ?? 0.0,
+      total: (json['total'] as num?)?.toDouble() ?? 0.0,
     );
 
 Map<String, dynamic> _$$KodiVideoResumeImplToJson(
-    _$KodiVideoResumeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('position', instance.position);
-  writeNotNull('total', instance.total);
-  return val;
-}
+        _$KodiVideoResumeImpl instance) =>
+    <String, dynamic>{
+      'position': instance.position,
+      'total': instance.total,
+    };

@@ -178,8 +178,7 @@ class __$$SetFileDetailsImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-@JsonSerializable(converters: [DateTimeConverter()])
+@JsonSerializable()
 class _$SetFileDetailsImpl extends _SetFileDetails {
   const _$SetFileDetailsImpl(this.file, this.media,
       {@JsonKey(name: 'playcount') this.playCount,
