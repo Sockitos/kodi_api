@@ -6,8 +6,8 @@ import 'package:example/ui/screens/gui/components/set_stereoscopic_mode.dart';
 import 'package:example/ui/screens/gui/components/show_notification.dart';
 import 'package:flutter/material.dart';
 
-class GuiScreen extends StatelessWidget {
-  const GuiScreen({super.key});
+class GUIScreen extends StatelessWidget {
+  const GUIScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

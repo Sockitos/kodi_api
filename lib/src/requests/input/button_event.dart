@@ -13,6 +13,7 @@ typedef ButtonEventBuilder = ButtonEvent Function(
 
 @freezed
 class ButtonEvent with _$ButtonEvent implements KodiRequest<void> {
+  @Assert('holdTime >= 0')
   const factory ButtonEvent(
     String button,
     KodiInputKeymapType keymap, {
