@@ -23,7 +23,7 @@ mixin _$ShowNotification {
   String get title => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
   @ShowNotificationImageConverter()
-  ShowNotificationImage? get image => throw _privateConstructorUsedError;
+  ShowNotificationImage get image => throw _privateConstructorUsedError;
   @JsonKey(name: 'displaytime')
   int get displayTime => throw _privateConstructorUsedError;
 
@@ -46,10 +46,10 @@ abstract class $ShowNotificationCopyWith<$Res> {
   $Res call(
       {String title,
       String message,
-      @ShowNotificationImageConverter() ShowNotificationImage? image,
+      @ShowNotificationImageConverter() ShowNotificationImage image,
       @JsonKey(name: 'displaytime') int displayTime});
 
-  $ShowNotificationImageCopyWith<$Res>? get image;
+  $ShowNotificationImageCopyWith<$Res> get image;
 }
 
 /// @nodoc
@@ -69,7 +69,7 @@ class _$ShowNotificationCopyWithImpl<$Res, $Val extends ShowNotification>
   $Res call({
     Object? title = null,
     Object? message = null,
-    Object? image = freezed,
+    Object? image = null,
     Object? displayTime = null,
   }) {
     return _then(_value.copyWith(
@@ -81,10 +81,10 @@ class _$ShowNotificationCopyWithImpl<$Res, $Val extends ShowNotification>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      image: freezed == image
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as ShowNotificationImage?,
+              as ShowNotificationImage,
       displayTime: null == displayTime
           ? _value.displayTime
           : displayTime // ignore: cast_nullable_to_non_nullable
@@ -96,12 +96,8 @@ class _$ShowNotificationCopyWithImpl<$Res, $Val extends ShowNotification>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $ShowNotificationImageCopyWith<$Res>? get image {
-    if (_value.image == null) {
-      return null;
-    }
-
-    return $ShowNotificationImageCopyWith<$Res>(_value.image!, (value) {
+  $ShowNotificationImageCopyWith<$Res> get image {
+    return $ShowNotificationImageCopyWith<$Res>(_value.image, (value) {
       return _then(_value.copyWith(image: value) as $Val);
     });
   }
@@ -118,11 +114,11 @@ abstract class _$$ShowNotificationImplCopyWith<$Res>
   $Res call(
       {String title,
       String message,
-      @ShowNotificationImageConverter() ShowNotificationImage? image,
+      @ShowNotificationImageConverter() ShowNotificationImage image,
       @JsonKey(name: 'displaytime') int displayTime});
 
   @override
-  $ShowNotificationImageCopyWith<$Res>? get image;
+  $ShowNotificationImageCopyWith<$Res> get image;
 }
 
 /// @nodoc
@@ -140,7 +136,7 @@ class __$$ShowNotificationImplCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? message = null,
-    Object? image = freezed,
+    Object? image = null,
     Object? displayTime = null,
   }) {
     return _then(_$ShowNotificationImpl(
@@ -152,10 +148,10 @@ class __$$ShowNotificationImplCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      image: freezed == image
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as ShowNotificationImage?,
+              as ShowNotificationImage,
       displayTime: null == displayTime
           ? _value.displayTime
           : displayTime // ignore: cast_nullable_to_non_nullable
@@ -168,7 +164,8 @@ class __$$ShowNotificationImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ShowNotificationImpl extends _ShowNotification {
   const _$ShowNotificationImpl(this.title, this.message,
-      {@ShowNotificationImageConverter() this.image,
+      {@ShowNotificationImageConverter()
+      this.image = const ShowNotificationImage.string(''),
       @JsonKey(name: 'displaytime') this.displayTime = 5000})
       : assert(displayTime >= 1500, 'displayTime has a minimum value of 1500'),
         super._();
@@ -181,8 +178,9 @@ class _$ShowNotificationImpl extends _ShowNotification {
   @override
   final String message;
   @override
+  @JsonKey()
   @ShowNotificationImageConverter()
-  final ShowNotificationImage? image;
+  final ShowNotificationImage image;
   @override
   @JsonKey(name: 'displaytime')
   final int displayTime;
@@ -228,7 +226,7 @@ class _$ShowNotificationImpl extends _ShowNotification {
 
 abstract class _ShowNotification extends ShowNotification {
   const factory _ShowNotification(final String title, final String message,
-          {@ShowNotificationImageConverter() final ShowNotificationImage? image,
+          {@ShowNotificationImageConverter() final ShowNotificationImage image,
           @JsonKey(name: 'displaytime') final int displayTime}) =
       _$ShowNotificationImpl;
   const _ShowNotification._() : super._();
@@ -242,7 +240,7 @@ abstract class _ShowNotification extends ShowNotification {
   String get message;
   @override
   @ShowNotificationImageConverter()
-  ShowNotificationImage? get image;
+  ShowNotificationImage get image;
   @override
   @JsonKey(name: 'displaytime')
   int get displayTime;

@@ -3,6 +3,7 @@ import 'package:example/ui/screens/application/application_screen.dart';
 import 'package:example/ui/screens/audio_library/audio_library_screen.dart';
 import 'package:example/ui/screens/favourites/favourites_screen.dart';
 import 'package:example/ui/screens/files/files_screen.dart';
+import 'package:example/ui/screens/gui/gui_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -75,6 +76,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Files',
+              ),
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const GuiScreen(),
+                  ),
+                ),
+                label: 'GUI',
               ),
             ],
           ),

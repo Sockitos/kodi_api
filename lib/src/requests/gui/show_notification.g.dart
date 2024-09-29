@@ -11,43 +11,21 @@ _$ShowNotificationImpl _$$ShowNotificationImplFromJson(
     _$ShowNotificationImpl(
       json['title'] as String,
       json['message'] as String,
-      image: _$JsonConverterFromJson<String, ShowNotificationImage>(
-          json['image'], const ShowNotificationImageConverter().fromJson),
+      image: json['image'] == null
+          ? const ShowNotificationImage.string('')
+          : const ShowNotificationImageConverter()
+              .fromJson(json['image'] as String),
       displayTime: (json['displaytime'] as num?)?.toInt() ?? 5000,
     );
 
 Map<String, dynamic> _$$ShowNotificationImplToJson(
-    _$ShowNotificationImpl instance) {
-  final val = <String, dynamic>{
-    'title': instance.title,
-    'message': instance.message,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull(
-      'image',
-      _$JsonConverterToJson<String, ShowNotificationImage>(
-          instance.image, const ShowNotificationImageConverter().toJson));
-  val['displaytime'] = instance.displayTime;
-  return val;
-}
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);
+        _$ShowNotificationImpl instance) =>
+    <String, dynamic>{
+      'title': instance.title,
+      'message': instance.message,
+      'image': const ShowNotificationImageConverter().toJson(instance.image),
+      'displaytime': instance.displayTime,
+    };
 
 _$ShowNotificationImageStringImpl _$$ShowNotificationImageStringImplFromJson(
         Map<String, dynamic> json) =>

@@ -232,7 +232,7 @@ class _$KodiGUIPropertyValueImpl implements _KodiGUIPropertyValue {
   const _$KodiGUIPropertyValueImpl(
       {@JsonKey(name: 'currentcontrol') required this.currentControl,
       @JsonKey(name: 'currentwindow') required this.currentWindow,
-      required this.fullscreen,
+      this.fullscreen = false,
       required this.skin,
       @JsonKey(name: 'stereoscopicmode') required this.stereoscopicMode});
 
@@ -246,6 +246,7 @@ class _$KodiGUIPropertyValueImpl implements _KodiGUIPropertyValue {
   @JsonKey(name: 'currentwindow')
   final KodiGUIPropertyValueCurrentWindow currentWindow;
   @override
+  @JsonKey()
   final bool fullscreen;
   @override
   final KodiGUIPropertyValueSkin skin;
@@ -303,7 +304,7 @@ abstract class _KodiGUIPropertyValue implements KodiGUIPropertyValue {
           required final KodiGUIPropertyValueCurrentProtocol currentControl,
           @JsonKey(name: 'currentwindow')
           required final KodiGUIPropertyValueCurrentWindow currentWindow,
-          required final bool fullscreen,
+          final bool fullscreen,
           required final KodiGUIPropertyValueSkin skin,
           @JsonKey(name: 'stereoscopicmode')
           required final KodiGUIStereoscopyMode stereoscopicMode}) =
@@ -789,7 +790,7 @@ class __$$KodiGUIPropertyValueSkinImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiGUIPropertyValueSkinImpl implements _KodiGUIPropertyValueSkin {
-  const _$KodiGUIPropertyValueSkinImpl({required this.id, required this.name});
+  const _$KodiGUIPropertyValueSkinImpl({required this.id, this.name = ''});
 
   factory _$KodiGUIPropertyValueSkinImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiGUIPropertyValueSkinImplFromJson(json);
@@ -797,6 +798,7 @@ class _$KodiGUIPropertyValueSkinImpl implements _KodiGUIPropertyValueSkin {
   @override
   final String id;
   @override
+  @JsonKey()
   final String name;
 
   @override
@@ -837,7 +839,7 @@ class _$KodiGUIPropertyValueSkinImpl implements _KodiGUIPropertyValueSkin {
 abstract class _KodiGUIPropertyValueSkin implements KodiGUIPropertyValueSkin {
   const factory _KodiGUIPropertyValueSkin(
       {required final String id,
-      required final String name}) = _$KodiGUIPropertyValueSkinImpl;
+      final String name}) = _$KodiGUIPropertyValueSkinImpl;
 
   factory _KodiGUIPropertyValueSkin.fromJson(Map<String, dynamic> json) =
       _$KodiGUIPropertyValueSkinImpl.fromJson;

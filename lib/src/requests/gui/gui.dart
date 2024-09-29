@@ -1,5 +1,5 @@
-import 'package:kodi_api/src/requests/application/get_properties.dart';
 import 'package:kodi_api/src/requests/gui/activate_window.dart';
+import 'package:kodi_api/src/requests/gui/get_properties.dart';
 import 'package:kodi_api/src/requests/gui/get_stereoscopic_modes.dart';
 import 'package:kodi_api/src/requests/gui/set_fullscreen.dart';
 import 'package:kodi_api/src/requests/gui/set_stereoscopic_mode.dart';

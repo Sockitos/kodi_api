@@ -13,7 +13,7 @@ _$KodiGUIPropertyValueImpl _$$KodiGUIPropertyValueImplFromJson(
           json['currentcontrol'] as Map<String, dynamic>),
       currentWindow: KodiGUIPropertyValueCurrentWindow.fromJson(
           json['currentwindow'] as Map<String, dynamic>),
-      fullscreen: json['fullscreen'] as bool,
+      fullscreen: json['fullscreen'] as bool? ?? false,
       skin: KodiGUIPropertyValueSkin.fromJson(
           json['skin'] as Map<String, dynamic>),
       stereoscopicMode: KodiGUIStereoscopyMode.fromJson(
@@ -62,7 +62,7 @@ _$KodiGUIPropertyValueSkinImpl _$$KodiGUIPropertyValueSkinImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiGUIPropertyValueSkinImpl(
       id: json['id'] as String,
-      name: json['name'] as String,
+      name: json['name'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$KodiGUIPropertyValueSkinImplToJson(
