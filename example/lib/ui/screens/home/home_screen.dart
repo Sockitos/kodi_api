@@ -5,6 +5,7 @@ import 'package:example/ui/screens/favourites/favourites_screen.dart';
 import 'package:example/ui/screens/files/files_screen.dart';
 import 'package:example/ui/screens/gui/gui_screen.dart';
 import 'package:example/ui/screens/input/input_screen.dart';
+import 'package:example/ui/screens/jsonrpc/jsonrpc_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -99,6 +100,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Input',
+              ),
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const JSONRPCScreen(),
+                  ),
+                ),
+                label: 'JSONRPC',
               ),
             ],
           ),

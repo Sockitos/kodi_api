@@ -136,7 +136,8 @@ class __$$ButtonEventImplCopyWithImpl<$Res>
 class _$ButtonEventImpl extends _ButtonEvent {
   const _$ButtonEventImpl(this.button, this.keymap,
       {@JsonKey(name: 'holdtime') this.holdTime = 0})
-      : super._();
+      : assert(holdTime >= 0),
+        super._();
 
   factory _$ButtonEventImpl.fromJson(Map<String, dynamic> json) =>
       _$$ButtonEventImplFromJson(json);
