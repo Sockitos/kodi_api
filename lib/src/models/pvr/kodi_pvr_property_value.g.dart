@@ -9,9 +9,9 @@ part of 'kodi_pvr_property_value.dart';
 _$KodiPVRPropertyValueImpl _$$KodiPVRPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPVRPropertyValueImpl(
-      available: json['available'] as bool,
-      recording: json['recording'] as bool,
-      scanning: json['scanning'] as bool,
+      available: json['available'] as bool? ?? false,
+      recording: json['recording'] as bool? ?? false,
+      scanning: json['scanning'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$KodiPVRPropertyValueImplToJson(

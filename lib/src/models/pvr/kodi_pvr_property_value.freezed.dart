@@ -129,18 +129,19 @@ class __$$KodiPVRPropertyValueImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiPVRPropertyValueImpl implements _KodiPVRPropertyValue {
   const _$KodiPVRPropertyValueImpl(
-      {required this.available,
-      required this.recording,
-      required this.scanning});
+      {this.available = false, this.recording = false, this.scanning = false});
 
   factory _$KodiPVRPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPVRPropertyValueImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool available;
   @override
+  @JsonKey()
   final bool recording;
   @override
+  @JsonKey()
   final bool scanning;
 
   @override
@@ -185,9 +186,9 @@ class _$KodiPVRPropertyValueImpl implements _KodiPVRPropertyValue {
 
 abstract class _KodiPVRPropertyValue implements KodiPVRPropertyValue {
   const factory _KodiPVRPropertyValue(
-      {required final bool available,
-      required final bool recording,
-      required final bool scanning}) = _$KodiPVRPropertyValueImpl;
+      {final bool available,
+      final bool recording,
+      final bool scanning}) = _$KodiPVRPropertyValueImpl;
 
   factory _KodiPVRPropertyValue.fromJson(Map<String, dynamic> json) =
       _$KodiPVRPropertyValueImpl.fromJson;

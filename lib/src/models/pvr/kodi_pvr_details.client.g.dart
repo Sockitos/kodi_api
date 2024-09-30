@@ -9,15 +9,15 @@ part of 'kodi_pvr_details.client.dart';
 _$KodiPVRDetailsClientImpl _$$KodiPVRDetailsClientImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPVRDetailsClientImpl(
-      addonId: json['addonid'] as String,
+      addonId: json['addonid'] as String? ?? '',
       clientId: (json['clientid'] as num).toInt(),
-      supportsChannelGroups: json['supportschannelgroups'] as bool,
-      supportsChannelScan: json['supportschannelscan'] as bool,
-      supportsEpg: json['supportsepg'] as bool,
-      supportsRadio: json['supportsradio'] as bool,
-      supportsRecordings: json['supportsrecordings'] as bool,
-      supportsTimers: json['supportstimers'] as bool,
-      supportsTv: json['supportstv'] as bool,
+      supportsChannelGroups: json['supportschannelgroups'] as bool? ?? false,
+      supportsChannelScan: json['supportschannelscan'] as bool? ?? false,
+      supportsEpg: json['supportsepg'] as bool? ?? false,
+      supportsRadio: json['supportsradio'] as bool? ?? false,
+      supportsRecordings: json['supportsrecordings'] as bool? ?? false,
+      supportsTimers: json['supportstimers'] as bool? ?? false,
+      supportsTv: json['supportstv'] as bool? ?? false,
       label: json['label'] as String,
     );
 

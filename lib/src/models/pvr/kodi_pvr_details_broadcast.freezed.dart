@@ -25,10 +25,10 @@ mixin _$KodiPVRDetailsBroadcast {
   int get broadcastId => throw _privateConstructorUsedError;
   String get cast => throw _privateConstructorUsedError;
   @JsonKey(name: 'clientid')
-  int get clientId => throw _privateConstructorUsedError;
+  int? get clientId => throw _privateConstructorUsedError;
   String get director => throw _privateConstructorUsedError;
   @JsonKey(name: 'endtime')
-  DateTime get endTime => throw _privateConstructorUsedError;
+  DateTime? get endTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'episodename')
   String get episodeName => throw _privateConstructorUsedError;
   @JsonKey(name: 'episodenum')
@@ -36,8 +36,8 @@ mixin _$KodiPVRDetailsBroadcast {
   @JsonKey(name: 'episodepart')
   int get episodePart => throw _privateConstructorUsedError;
   @JsonKey(name: 'firstaired')
-  DateTime get firstAired => throw _privateConstructorUsedError;
-  String get genre => throw _privateConstructorUsedError;
+  DateTime? get firstAired => throw _privateConstructorUsedError;
+  List<String>? get genre => throw _privateConstructorUsedError;
   @JsonKey(name: 'hasrecording')
   bool get hasRecording => throw _privateConstructorUsedError;
   @JsonKey(name: 'hasreminder')
@@ -47,11 +47,9 @@ mixin _$KodiPVRDetailsBroadcast {
   @JsonKey(name: 'hastimerrule')
   bool get hasTimerRule => throw _privateConstructorUsedError;
   @JsonKey(name: 'imdbnumber')
-  int get imdbNumber => throw _privateConstructorUsedError;
+  String get imdbNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'isactive')
   bool get isActive => throw _privateConstructorUsedError;
-  @JsonKey(name: 'isplayable')
-  bool get isPlayable => throw _privateConstructorUsedError;
   @JsonKey(name: 'isseries')
   bool get isSeries => throw _privateConstructorUsedError;
   @JsonKey(name: 'originaltitle')
@@ -68,7 +66,7 @@ mixin _$KodiPVRDetailsBroadcast {
   String get recording => throw _privateConstructorUsedError;
   int get runtime => throw _privateConstructorUsedError;
   @JsonKey(name: 'starttime')
-  DateTime get startTime => throw _privateConstructorUsedError;
+  DateTime? get startTime => throw _privateConstructorUsedError;
   String get thumbnail => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'wasactive')
@@ -96,21 +94,20 @@ abstract class $KodiPVRDetailsBroadcastCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'broadcastid') int broadcastId,
       String cast,
-      @JsonKey(name: 'clientid') int clientId,
+      @JsonKey(name: 'clientid') int? clientId,
       String director,
-      @JsonKey(name: 'endtime') DateTime endTime,
+      @JsonKey(name: 'endtime') DateTime? endTime,
       @JsonKey(name: 'episodename') String episodeName,
       @JsonKey(name: 'episodenum') int episodeNum,
       @JsonKey(name: 'episodepart') int episodePart,
-      @JsonKey(name: 'firstaired') DateTime firstAired,
-      String genre,
+      @JsonKey(name: 'firstaired') DateTime? firstAired,
+      List<String>? genre,
       @JsonKey(name: 'hasrecording') bool hasRecording,
       @JsonKey(name: 'hasreminder') bool hasReminder,
       @JsonKey(name: 'hastimer') bool hasTimer,
       @JsonKey(name: 'hastimerrule') bool hasTimerRule,
-      @JsonKey(name: 'imdbnumber') int imdbNumber,
+      @JsonKey(name: 'imdbnumber') String imdbNumber,
       @JsonKey(name: 'isactive') bool isActive,
-      @JsonKey(name: 'isplayable') bool isPlayable,
       @JsonKey(name: 'isseries') bool isSeries,
       @JsonKey(name: 'originaltitle') String originalTitle,
       @JsonKey(name: 'parentalrating') int parentalRating,
@@ -121,7 +118,7 @@ abstract class $KodiPVRDetailsBroadcastCopyWith<$Res> {
       int rating,
       String recording,
       int runtime,
-      @JsonKey(name: 'starttime') DateTime startTime,
+      @JsonKey(name: 'starttime') DateTime? startTime,
       String thumbnail,
       String title,
       @JsonKey(name: 'wasactive') bool wasActive,
@@ -148,21 +145,20 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
   $Res call({
     Object? broadcastId = null,
     Object? cast = null,
-    Object? clientId = null,
+    Object? clientId = freezed,
     Object? director = null,
-    Object? endTime = null,
+    Object? endTime = freezed,
     Object? episodeName = null,
     Object? episodeNum = null,
     Object? episodePart = null,
-    Object? firstAired = null,
-    Object? genre = null,
+    Object? firstAired = freezed,
+    Object? genre = freezed,
     Object? hasRecording = null,
     Object? hasReminder = null,
     Object? hasTimer = null,
     Object? hasTimerRule = null,
     Object? imdbNumber = null,
     Object? isActive = null,
-    Object? isPlayable = null,
     Object? isSeries = null,
     Object? originalTitle = null,
     Object? parentalRating = null,
@@ -173,7 +169,7 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
     Object? rating = null,
     Object? recording = null,
     Object? runtime = null,
-    Object? startTime = null,
+    Object? startTime = freezed,
     Object? thumbnail = null,
     Object? title = null,
     Object? wasActive = null,
@@ -190,18 +186,18 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
           ? _value.cast
           : cast // ignore: cast_nullable_to_non_nullable
               as String,
-      clientId: null == clientId
+      clientId: freezed == clientId
           ? _value.clientId
           : clientId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       director: null == director
           ? _value.director
           : director // ignore: cast_nullable_to_non_nullable
               as String,
-      endTime: null == endTime
+      endTime: freezed == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       episodeName: null == episodeName
           ? _value.episodeName
           : episodeName // ignore: cast_nullable_to_non_nullable
@@ -214,14 +210,14 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
           ? _value.episodePart
           : episodePart // ignore: cast_nullable_to_non_nullable
               as int,
-      firstAired: null == firstAired
+      firstAired: freezed == firstAired
           ? _value.firstAired
           : firstAired // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      genre: null == genre
+              as DateTime?,
+      genre: freezed == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<String>?,
       hasRecording: null == hasRecording
           ? _value.hasRecording
           : hasRecording // ignore: cast_nullable_to_non_nullable
@@ -241,14 +237,10 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
       imdbNumber: null == imdbNumber
           ? _value.imdbNumber
           : imdbNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPlayable: null == isPlayable
-          ? _value.isPlayable
-          : isPlayable // ignore: cast_nullable_to_non_nullable
               as bool,
       isSeries: null == isSeries
           ? _value.isSeries
@@ -290,10 +282,10 @@ class _$KodiPVRDetailsBroadcastCopyWithImpl<$Res,
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
               as int,
-      startTime: null == startTime
+      startTime: freezed == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
@@ -334,21 +326,20 @@ abstract class _$$KodiPVRDetailsBroadcastImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'broadcastid') int broadcastId,
       String cast,
-      @JsonKey(name: 'clientid') int clientId,
+      @JsonKey(name: 'clientid') int? clientId,
       String director,
-      @JsonKey(name: 'endtime') DateTime endTime,
+      @JsonKey(name: 'endtime') DateTime? endTime,
       @JsonKey(name: 'episodename') String episodeName,
       @JsonKey(name: 'episodenum') int episodeNum,
       @JsonKey(name: 'episodepart') int episodePart,
-      @JsonKey(name: 'firstaired') DateTime firstAired,
-      String genre,
+      @JsonKey(name: 'firstaired') DateTime? firstAired,
+      List<String>? genre,
       @JsonKey(name: 'hasrecording') bool hasRecording,
       @JsonKey(name: 'hasreminder') bool hasReminder,
       @JsonKey(name: 'hastimer') bool hasTimer,
       @JsonKey(name: 'hastimerrule') bool hasTimerRule,
-      @JsonKey(name: 'imdbnumber') int imdbNumber,
+      @JsonKey(name: 'imdbnumber') String imdbNumber,
       @JsonKey(name: 'isactive') bool isActive,
-      @JsonKey(name: 'isplayable') bool isPlayable,
       @JsonKey(name: 'isseries') bool isSeries,
       @JsonKey(name: 'originaltitle') String originalTitle,
       @JsonKey(name: 'parentalrating') int parentalRating,
@@ -359,7 +350,7 @@ abstract class _$$KodiPVRDetailsBroadcastImplCopyWith<$Res>
       int rating,
       String recording,
       int runtime,
-      @JsonKey(name: 'starttime') DateTime startTime,
+      @JsonKey(name: 'starttime') DateTime? startTime,
       String thumbnail,
       String title,
       @JsonKey(name: 'wasactive') bool wasActive,
@@ -385,21 +376,20 @@ class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
   $Res call({
     Object? broadcastId = null,
     Object? cast = null,
-    Object? clientId = null,
+    Object? clientId = freezed,
     Object? director = null,
-    Object? endTime = null,
+    Object? endTime = freezed,
     Object? episodeName = null,
     Object? episodeNum = null,
     Object? episodePart = null,
-    Object? firstAired = null,
-    Object? genre = null,
+    Object? firstAired = freezed,
+    Object? genre = freezed,
     Object? hasRecording = null,
     Object? hasReminder = null,
     Object? hasTimer = null,
     Object? hasTimerRule = null,
     Object? imdbNumber = null,
     Object? isActive = null,
-    Object? isPlayable = null,
     Object? isSeries = null,
     Object? originalTitle = null,
     Object? parentalRating = null,
@@ -410,7 +400,7 @@ class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
     Object? rating = null,
     Object? recording = null,
     Object? runtime = null,
-    Object? startTime = null,
+    Object? startTime = freezed,
     Object? thumbnail = null,
     Object? title = null,
     Object? wasActive = null,
@@ -427,18 +417,18 @@ class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
           ? _value.cast
           : cast // ignore: cast_nullable_to_non_nullable
               as String,
-      clientId: null == clientId
+      clientId: freezed == clientId
           ? _value.clientId
           : clientId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       director: null == director
           ? _value.director
           : director // ignore: cast_nullable_to_non_nullable
               as String,
-      endTime: null == endTime
+      endTime: freezed == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       episodeName: null == episodeName
           ? _value.episodeName
           : episodeName // ignore: cast_nullable_to_non_nullable
@@ -451,14 +441,14 @@ class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
           ? _value.episodePart
           : episodePart // ignore: cast_nullable_to_non_nullable
               as int,
-      firstAired: null == firstAired
+      firstAired: freezed == firstAired
           ? _value.firstAired
           : firstAired // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      genre: null == genre
-          ? _value.genre
+              as DateTime?,
+      genre: freezed == genre
+          ? _value._genre
           : genre // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<String>?,
       hasRecording: null == hasRecording
           ? _value.hasRecording
           : hasRecording // ignore: cast_nullable_to_non_nullable
@@ -478,14 +468,10 @@ class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
       imdbNumber: null == imdbNumber
           ? _value.imdbNumber
           : imdbNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPlayable: null == isPlayable
-          ? _value.isPlayable
-          : isPlayable // ignore: cast_nullable_to_non_nullable
               as bool,
       isSeries: null == isSeries
           ? _value.isSeries
@@ -527,10 +513,10 @@ class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
               as int,
-      startTime: null == startTime
+      startTime: freezed == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
@@ -565,39 +551,39 @@ class __$$KodiPVRDetailsBroadcastImplCopyWithImpl<$Res>
 class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
   const _$KodiPVRDetailsBroadcastImpl(
       {@JsonKey(name: 'broadcastid') required this.broadcastId,
-      required this.cast,
-      @JsonKey(name: 'clientid') required this.clientId,
-      required this.director,
-      @JsonKey(name: 'endtime') required this.endTime,
-      @JsonKey(name: 'episodename') required this.episodeName,
-      @JsonKey(name: 'episodenum') required this.episodeNum,
-      @JsonKey(name: 'episodepart') required this.episodePart,
-      @JsonKey(name: 'firstaired') required this.firstAired,
-      required this.genre,
-      @JsonKey(name: 'hasrecording') required this.hasRecording,
-      @JsonKey(name: 'hasreminder') required this.hasReminder,
-      @JsonKey(name: 'hastimer') required this.hasTimer,
-      @JsonKey(name: 'hastimerrule') required this.hasTimerRule,
-      @JsonKey(name: 'imdbnumber') required this.imdbNumber,
-      @JsonKey(name: 'isactive') required this.isActive,
-      @JsonKey(name: 'isplayable') required this.isPlayable,
-      @JsonKey(name: 'isseries') required this.isSeries,
-      @JsonKey(name: 'originaltitle') required this.originalTitle,
-      @JsonKey(name: 'parentalrating') required this.parentalRating,
-      required this.plot,
-      @JsonKey(name: 'plotoutline') required this.plotOutline,
-      required this.progress,
-      @JsonKey(name: 'progresspercentage') required this.progressPercentage,
-      required this.rating,
-      required this.recording,
-      required this.runtime,
-      @JsonKey(name: 'starttime') required this.startTime,
-      required this.thumbnail,
-      required this.title,
-      @JsonKey(name: 'wasactive') required this.wasActive,
-      required this.writer,
-      required this.year,
-      required this.label});
+      this.cast = '',
+      @JsonKey(name: 'clientid') this.clientId,
+      this.director = '',
+      @JsonKey(name: 'endtime') this.endTime,
+      @JsonKey(name: 'episodename') this.episodeName = '',
+      @JsonKey(name: 'episodenum') this.episodeNum = 0,
+      @JsonKey(name: 'episodepart') this.episodePart = 0,
+      @JsonKey(name: 'firstaired') this.firstAired,
+      final List<String>? genre,
+      @JsonKey(name: 'hasrecording') this.hasRecording = false,
+      @JsonKey(name: 'hasreminder') this.hasReminder = false,
+      @JsonKey(name: 'hastimer') this.hasTimer = false,
+      @JsonKey(name: 'hastimerrule') this.hasTimerRule = false,
+      @JsonKey(name: 'imdbnumber') this.imdbNumber = '',
+      @JsonKey(name: 'isactive') this.isActive = false,
+      @JsonKey(name: 'isseries') this.isSeries = false,
+      @JsonKey(name: 'originaltitle') this.originalTitle = '',
+      @JsonKey(name: 'parentalrating') this.parentalRating = 0,
+      this.plot = '',
+      @JsonKey(name: 'plotoutline') this.plotOutline = '',
+      this.progress = 0,
+      @JsonKey(name: 'progresspercentage') this.progressPercentage = 0.0,
+      this.rating = 0,
+      this.recording = '',
+      this.runtime = 0,
+      @JsonKey(name: 'starttime') this.startTime,
+      this.thumbnail = '',
+      this.title = '',
+      @JsonKey(name: 'wasactive') this.wasActive = false,
+      this.writer = '',
+      this.year = 0,
+      required this.label})
+      : _genre = genre;
 
   factory _$KodiPVRDetailsBroadcastImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPVRDetailsBroadcastImplFromJson(json);
@@ -606,15 +592,17 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
   @JsonKey(name: 'broadcastid')
   final int broadcastId;
   @override
+  @JsonKey()
   final String cast;
   @override
   @JsonKey(name: 'clientid')
-  final int clientId;
+  final int? clientId;
   @override
+  @JsonKey()
   final String director;
   @override
   @JsonKey(name: 'endtime')
-  final DateTime endTime;
+  final DateTime? endTime;
   @override
   @JsonKey(name: 'episodename')
   final String episodeName;
@@ -626,9 +614,17 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
   final int episodePart;
   @override
   @JsonKey(name: 'firstaired')
-  final DateTime firstAired;
+  final DateTime? firstAired;
+  final List<String>? _genre;
   @override
-  final String genre;
+  List<String>? get genre {
+    final value = _genre;
+    if (value == null) return null;
+    if (_genre is EqualUnmodifiableListView) return _genre;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'hasrecording')
   final bool hasRecording;
@@ -643,13 +639,10 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
   final bool hasTimerRule;
   @override
   @JsonKey(name: 'imdbnumber')
-  final int imdbNumber;
+  final String imdbNumber;
   @override
   @JsonKey(name: 'isactive')
   final bool isActive;
-  @override
-  @JsonKey(name: 'isplayable')
-  final bool isPlayable;
   @override
   @JsonKey(name: 'isseries')
   final bool isSeries;
@@ -660,41 +653,50 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
   @JsonKey(name: 'parentalrating')
   final int parentalRating;
   @override
+  @JsonKey()
   final String plot;
   @override
   @JsonKey(name: 'plotoutline')
   final String plotOutline;
   @override
+  @JsonKey()
   final int progress;
   @override
   @JsonKey(name: 'progresspercentage')
   final double progressPercentage;
   @override
+  @JsonKey()
   final int rating;
   @override
+  @JsonKey()
   final String recording;
   @override
+  @JsonKey()
   final int runtime;
   @override
   @JsonKey(name: 'starttime')
-  final DateTime startTime;
+  final DateTime? startTime;
   @override
+  @JsonKey()
   final String thumbnail;
   @override
+  @JsonKey()
   final String title;
   @override
   @JsonKey(name: 'wasactive')
   final bool wasActive;
   @override
+  @JsonKey()
   final String writer;
   @override
+  @JsonKey()
   final int year;
   @override
   final String label;
 
   @override
   String toString() {
-    return 'KodiPVRDetailsBroadcast(broadcastId: $broadcastId, cast: $cast, clientId: $clientId, director: $director, endTime: $endTime, episodeName: $episodeName, episodeNum: $episodeNum, episodePart: $episodePart, firstAired: $firstAired, genre: $genre, hasRecording: $hasRecording, hasReminder: $hasReminder, hasTimer: $hasTimer, hasTimerRule: $hasTimerRule, imdbNumber: $imdbNumber, isActive: $isActive, isPlayable: $isPlayable, isSeries: $isSeries, originalTitle: $originalTitle, parentalRating: $parentalRating, plot: $plot, plotOutline: $plotOutline, progress: $progress, progressPercentage: $progressPercentage, rating: $rating, recording: $recording, runtime: $runtime, startTime: $startTime, thumbnail: $thumbnail, title: $title, wasActive: $wasActive, writer: $writer, year: $year, label: $label)';
+    return 'KodiPVRDetailsBroadcast(broadcastId: $broadcastId, cast: $cast, clientId: $clientId, director: $director, endTime: $endTime, episodeName: $episodeName, episodeNum: $episodeNum, episodePart: $episodePart, firstAired: $firstAired, genre: $genre, hasRecording: $hasRecording, hasReminder: $hasReminder, hasTimer: $hasTimer, hasTimerRule: $hasTimerRule, imdbNumber: $imdbNumber, isActive: $isActive, isSeries: $isSeries, originalTitle: $originalTitle, parentalRating: $parentalRating, plot: $plot, plotOutline: $plotOutline, progress: $progress, progressPercentage: $progressPercentage, rating: $rating, recording: $recording, runtime: $runtime, startTime: $startTime, thumbnail: $thumbnail, title: $title, wasActive: $wasActive, writer: $writer, year: $year, label: $label)';
   }
 
   @override
@@ -718,7 +720,7 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
                 other.episodePart == episodePart) &&
             (identical(other.firstAired, firstAired) ||
                 other.firstAired == firstAired) &&
-            (identical(other.genre, genre) || other.genre == genre) &&
+            const DeepCollectionEquality().equals(other._genre, _genre) &&
             (identical(other.hasRecording, hasRecording) ||
                 other.hasRecording == hasRecording) &&
             (identical(other.hasReminder, hasReminder) ||
@@ -731,8 +733,6 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
                 other.imdbNumber == imdbNumber) &&
             (identical(other.isActive, isActive) ||
                 other.isActive == isActive) &&
-            (identical(other.isPlayable, isPlayable) ||
-                other.isPlayable == isPlayable) &&
             (identical(other.isSeries, isSeries) ||
                 other.isSeries == isSeries) &&
             (identical(other.originalTitle, originalTitle) ||
@@ -775,14 +775,13 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
         episodeNum,
         episodePart,
         firstAired,
-        genre,
+        const DeepCollectionEquality().hash(_genre),
         hasRecording,
         hasReminder,
         hasTimer,
         hasTimerRule,
         imdbNumber,
         isActive,
-        isPlayable,
         isSeries,
         originalTitle,
         parentalRating,
@@ -822,39 +821,37 @@ class _$KodiPVRDetailsBroadcastImpl implements _KodiPVRDetailsBroadcast {
 abstract class _KodiPVRDetailsBroadcast implements KodiPVRDetailsBroadcast {
   const factory _KodiPVRDetailsBroadcast(
       {@JsonKey(name: 'broadcastid') required final int broadcastId,
-      required final String cast,
-      @JsonKey(name: 'clientid') required final int clientId,
-      required final String director,
-      @JsonKey(name: 'endtime') required final DateTime endTime,
-      @JsonKey(name: 'episodename') required final String episodeName,
-      @JsonKey(name: 'episodenum') required final int episodeNum,
-      @JsonKey(name: 'episodepart') required final int episodePart,
-      @JsonKey(name: 'firstaired') required final DateTime firstAired,
-      required final String genre,
-      @JsonKey(name: 'hasrecording') required final bool hasRecording,
-      @JsonKey(name: 'hasreminder') required final bool hasReminder,
-      @JsonKey(name: 'hastimer') required final bool hasTimer,
-      @JsonKey(name: 'hastimerrule') required final bool hasTimerRule,
-      @JsonKey(name: 'imdbnumber') required final int imdbNumber,
-      @JsonKey(name: 'isactive') required final bool isActive,
-      @JsonKey(name: 'isplayable') required final bool isPlayable,
-      @JsonKey(name: 'isseries') required final bool isSeries,
-      @JsonKey(name: 'originaltitle') required final String originalTitle,
-      @JsonKey(name: 'parentalrating') required final int parentalRating,
-      required final String plot,
-      @JsonKey(name: 'plotoutline') required final String plotOutline,
-      required final int progress,
-      @JsonKey(name: 'progresspercentage')
-      required final double progressPercentage,
-      required final int rating,
-      required final String recording,
-      required final int runtime,
-      @JsonKey(name: 'starttime') required final DateTime startTime,
-      required final String thumbnail,
-      required final String title,
-      @JsonKey(name: 'wasactive') required final bool wasActive,
-      required final String writer,
-      required final int year,
+      final String cast,
+      @JsonKey(name: 'clientid') final int? clientId,
+      final String director,
+      @JsonKey(name: 'endtime') final DateTime? endTime,
+      @JsonKey(name: 'episodename') final String episodeName,
+      @JsonKey(name: 'episodenum') final int episodeNum,
+      @JsonKey(name: 'episodepart') final int episodePart,
+      @JsonKey(name: 'firstaired') final DateTime? firstAired,
+      final List<String>? genre,
+      @JsonKey(name: 'hasrecording') final bool hasRecording,
+      @JsonKey(name: 'hasreminder') final bool hasReminder,
+      @JsonKey(name: 'hastimer') final bool hasTimer,
+      @JsonKey(name: 'hastimerrule') final bool hasTimerRule,
+      @JsonKey(name: 'imdbnumber') final String imdbNumber,
+      @JsonKey(name: 'isactive') final bool isActive,
+      @JsonKey(name: 'isseries') final bool isSeries,
+      @JsonKey(name: 'originaltitle') final String originalTitle,
+      @JsonKey(name: 'parentalrating') final int parentalRating,
+      final String plot,
+      @JsonKey(name: 'plotoutline') final String plotOutline,
+      final int progress,
+      @JsonKey(name: 'progresspercentage') final double progressPercentage,
+      final int rating,
+      final String recording,
+      final int runtime,
+      @JsonKey(name: 'starttime') final DateTime? startTime,
+      final String thumbnail,
+      final String title,
+      @JsonKey(name: 'wasactive') final bool wasActive,
+      final String writer,
+      final int year,
       required final String label}) = _$KodiPVRDetailsBroadcastImpl;
 
   factory _KodiPVRDetailsBroadcast.fromJson(Map<String, dynamic> json) =
@@ -867,12 +864,12 @@ abstract class _KodiPVRDetailsBroadcast implements KodiPVRDetailsBroadcast {
   String get cast;
   @override
   @JsonKey(name: 'clientid')
-  int get clientId;
+  int? get clientId;
   @override
   String get director;
   @override
   @JsonKey(name: 'endtime')
-  DateTime get endTime;
+  DateTime? get endTime;
   @override
   @JsonKey(name: 'episodename')
   String get episodeName;
@@ -884,9 +881,9 @@ abstract class _KodiPVRDetailsBroadcast implements KodiPVRDetailsBroadcast {
   int get episodePart;
   @override
   @JsonKey(name: 'firstaired')
-  DateTime get firstAired;
+  DateTime? get firstAired;
   @override
-  String get genre;
+  List<String>? get genre;
   @override
   @JsonKey(name: 'hasrecording')
   bool get hasRecording;
@@ -901,13 +898,10 @@ abstract class _KodiPVRDetailsBroadcast implements KodiPVRDetailsBroadcast {
   bool get hasTimerRule;
   @override
   @JsonKey(name: 'imdbnumber')
-  int get imdbNumber;
+  String get imdbNumber;
   @override
   @JsonKey(name: 'isactive')
   bool get isActive;
-  @override
-  @JsonKey(name: 'isplayable')
-  bool get isPlayable;
   @override
   @JsonKey(name: 'isseries')
   bool get isSeries;
@@ -935,7 +929,7 @@ abstract class _KodiPVRDetailsBroadcast implements KodiPVRDetailsBroadcast {
   int get runtime;
   @override
   @JsonKey(name: 'starttime')
-  DateTime get startTime;
+  DateTime? get startTime;
   @override
   String get thumbnail;
   @override

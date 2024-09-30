@@ -22,10 +22,10 @@ KodiPVRDetailsChannel _$KodiPVRDetailsChannelFromJson(
 /// @nodoc
 mixin _$KodiPVRDetailsChannel {
   @JsonKey(name: 'broadcastnext')
-  KodiPVRDetailsBroadcast get broadcastNext =>
+  KodiPVRDetailsBroadcast? get broadcastNext =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'broadcastnow')
-  KodiPVRDetailsBroadcast get broadcastNow =>
+  KodiPVRDetailsBroadcast? get broadcastNow =>
       throw _privateConstructorUsedError;
   String get channel => throw _privateConstructorUsedError;
   @JsonKey(name: 'channelid')
@@ -49,7 +49,8 @@ mixin _$KodiPVRDetailsChannel {
   int get subChannelNumber => throw _privateConstructorUsedError;
   String get thumbnail => throw _privateConstructorUsedError;
   @JsonKey(name: 'uniqueid')
-  int get uniqueId => throw _privateConstructorUsedError;
+  int? get uniqueId => throw _privateConstructorUsedError;
+  String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiPVRDetailsChannel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -68,8 +69,8 @@ abstract class $KodiPVRDetailsChannelCopyWith<$Res> {
       _$KodiPVRDetailsChannelCopyWithImpl<$Res, KodiPVRDetailsChannel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'broadcastnext') KodiPVRDetailsBroadcast broadcastNext,
-      @JsonKey(name: 'broadcastnow') KodiPVRDetailsBroadcast broadcastNow,
+      {@JsonKey(name: 'broadcastnext') KodiPVRDetailsBroadcast? broadcastNext,
+      @JsonKey(name: 'broadcastnow') KodiPVRDetailsBroadcast? broadcastNow,
       String channel,
       @JsonKey(name: 'channelid') int channelId,
       @JsonKey(name: 'channelnumber') int channelNumber,
@@ -83,10 +84,11 @@ abstract class $KodiPVRDetailsChannelCopyWith<$Res> {
       bool locked,
       @JsonKey(name: 'subchannelnumber') int subChannelNumber,
       String thumbnail,
-      @JsonKey(name: 'uniqueid') int uniqueId});
+      @JsonKey(name: 'uniqueid') int? uniqueId,
+      String label});
 
-  $KodiPVRDetailsBroadcastCopyWith<$Res> get broadcastNext;
-  $KodiPVRDetailsBroadcastCopyWith<$Res> get broadcastNow;
+  $KodiPVRDetailsBroadcastCopyWith<$Res>? get broadcastNext;
+  $KodiPVRDetailsBroadcastCopyWith<$Res>? get broadcastNow;
 }
 
 /// @nodoc
@@ -105,8 +107,8 @@ class _$KodiPVRDetailsChannelCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? broadcastNext = null,
-    Object? broadcastNow = null,
+    Object? broadcastNext = freezed,
+    Object? broadcastNow = freezed,
     Object? channel = null,
     Object? channelId = null,
     Object? channelNumber = null,
@@ -120,17 +122,18 @@ class _$KodiPVRDetailsChannelCopyWithImpl<$Res,
     Object? locked = null,
     Object? subChannelNumber = null,
     Object? thumbnail = null,
-    Object? uniqueId = null,
+    Object? uniqueId = freezed,
+    Object? label = null,
   }) {
     return _then(_value.copyWith(
-      broadcastNext: null == broadcastNext
+      broadcastNext: freezed == broadcastNext
           ? _value.broadcastNext
           : broadcastNext // ignore: cast_nullable_to_non_nullable
-              as KodiPVRDetailsBroadcast,
-      broadcastNow: null == broadcastNow
+              as KodiPVRDetailsBroadcast?,
+      broadcastNow: freezed == broadcastNow
           ? _value.broadcastNow
           : broadcastNow // ignore: cast_nullable_to_non_nullable
-              as KodiPVRDetailsBroadcast,
+              as KodiPVRDetailsBroadcast?,
       channel: null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
@@ -183,10 +186,14 @@ class _$KodiPVRDetailsChannelCopyWithImpl<$Res,
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
-      uniqueId: null == uniqueId
+      uniqueId: freezed == uniqueId
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 
@@ -194,8 +201,12 @@ class _$KodiPVRDetailsChannelCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiPVRDetailsBroadcastCopyWith<$Res> get broadcastNext {
-    return $KodiPVRDetailsBroadcastCopyWith<$Res>(_value.broadcastNext,
+  $KodiPVRDetailsBroadcastCopyWith<$Res>? get broadcastNext {
+    if (_value.broadcastNext == null) {
+      return null;
+    }
+
+    return $KodiPVRDetailsBroadcastCopyWith<$Res>(_value.broadcastNext!,
         (value) {
       return _then(_value.copyWith(broadcastNext: value) as $Val);
     });
@@ -205,8 +216,13 @@ class _$KodiPVRDetailsChannelCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiPVRDetailsBroadcastCopyWith<$Res> get broadcastNow {
-    return $KodiPVRDetailsBroadcastCopyWith<$Res>(_value.broadcastNow, (value) {
+  $KodiPVRDetailsBroadcastCopyWith<$Res>? get broadcastNow {
+    if (_value.broadcastNow == null) {
+      return null;
+    }
+
+    return $KodiPVRDetailsBroadcastCopyWith<$Res>(_value.broadcastNow!,
+        (value) {
       return _then(_value.copyWith(broadcastNow: value) as $Val);
     });
   }
@@ -222,8 +238,8 @@ abstract class _$$KodiPVRDetailsChannelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'broadcastnext') KodiPVRDetailsBroadcast broadcastNext,
-      @JsonKey(name: 'broadcastnow') KodiPVRDetailsBroadcast broadcastNow,
+      {@JsonKey(name: 'broadcastnext') KodiPVRDetailsBroadcast? broadcastNext,
+      @JsonKey(name: 'broadcastnow') KodiPVRDetailsBroadcast? broadcastNow,
       String channel,
       @JsonKey(name: 'channelid') int channelId,
       @JsonKey(name: 'channelnumber') int channelNumber,
@@ -237,12 +253,13 @@ abstract class _$$KodiPVRDetailsChannelImplCopyWith<$Res>
       bool locked,
       @JsonKey(name: 'subchannelnumber') int subChannelNumber,
       String thumbnail,
-      @JsonKey(name: 'uniqueid') int uniqueId});
+      @JsonKey(name: 'uniqueid') int? uniqueId,
+      String label});
 
   @override
-  $KodiPVRDetailsBroadcastCopyWith<$Res> get broadcastNext;
+  $KodiPVRDetailsBroadcastCopyWith<$Res>? get broadcastNext;
   @override
-  $KodiPVRDetailsBroadcastCopyWith<$Res> get broadcastNow;
+  $KodiPVRDetailsBroadcastCopyWith<$Res>? get broadcastNow;
 }
 
 /// @nodoc
@@ -259,8 +276,8 @@ class __$$KodiPVRDetailsChannelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? broadcastNext = null,
-    Object? broadcastNow = null,
+    Object? broadcastNext = freezed,
+    Object? broadcastNow = freezed,
     Object? channel = null,
     Object? channelId = null,
     Object? channelNumber = null,
@@ -274,17 +291,18 @@ class __$$KodiPVRDetailsChannelImplCopyWithImpl<$Res>
     Object? locked = null,
     Object? subChannelNumber = null,
     Object? thumbnail = null,
-    Object? uniqueId = null,
+    Object? uniqueId = freezed,
+    Object? label = null,
   }) {
     return _then(_$KodiPVRDetailsChannelImpl(
-      broadcastNext: null == broadcastNext
+      broadcastNext: freezed == broadcastNext
           ? _value.broadcastNext
           : broadcastNext // ignore: cast_nullable_to_non_nullable
-              as KodiPVRDetailsBroadcast,
-      broadcastNow: null == broadcastNow
+              as KodiPVRDetailsBroadcast?,
+      broadcastNow: freezed == broadcastNow
           ? _value.broadcastNow
           : broadcastNow // ignore: cast_nullable_to_non_nullable
-              as KodiPVRDetailsBroadcast,
+              as KodiPVRDetailsBroadcast?,
       channel: null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
@@ -337,10 +355,14 @@ class __$$KodiPVRDetailsChannelImplCopyWithImpl<$Res>
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
-      uniqueId: null == uniqueId
+      uniqueId: freezed == uniqueId
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -349,33 +371,35 @@ class __$$KodiPVRDetailsChannelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiPVRDetailsChannelImpl implements _KodiPVRDetailsChannel {
   const _$KodiPVRDetailsChannelImpl(
-      {@JsonKey(name: 'broadcastnext') required this.broadcastNext,
-      @JsonKey(name: 'broadcastnow') required this.broadcastNow,
-      required this.channel,
+      {@JsonKey(name: 'broadcastnext') this.broadcastNext,
+      @JsonKey(name: 'broadcastnow') this.broadcastNow,
+      this.channel = '',
       @JsonKey(name: 'channelid') required this.channelId,
-      @JsonKey(name: 'channelnumber') required this.channelNumber,
-      @JsonKey(name: 'channeltype') required this.channelType,
-      @JsonKey(name: 'clientid') required this.clientId,
-      @JsonKey(name: 'hasarchive') required this.hasArchive,
-      required this.hidden,
-      required this.icon,
-      @JsonKey(name: 'isrecording') required this.isRecording,
-      @JsonKey(name: 'lastplayed') required this.lastPlayed,
-      required this.locked,
-      @JsonKey(name: 'subchannelnumber') required this.subChannelNumber,
-      required this.thumbnail,
-      @JsonKey(name: 'uniqueid') required this.uniqueId});
+      @JsonKey(name: 'channelnumber') this.channelNumber = 0,
+      @JsonKey(name: 'channeltype') this.channelType = KodiPVRChannelType.tv,
+      @JsonKey(name: 'clientid') this.clientId = -1,
+      @JsonKey(name: 'hasarchive') this.hasArchive = false,
+      this.hidden = false,
+      this.icon = '',
+      @JsonKey(name: 'isrecording') this.isRecording = false,
+      @JsonKey(name: 'lastplayed') this.lastPlayed = '',
+      this.locked = false,
+      @JsonKey(name: 'subchannelnumber') this.subChannelNumber = 0,
+      this.thumbnail = '',
+      @JsonKey(name: 'uniqueid') this.uniqueId,
+      required this.label});
 
   factory _$KodiPVRDetailsChannelImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPVRDetailsChannelImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastnext')
-  final KodiPVRDetailsBroadcast broadcastNext;
+  final KodiPVRDetailsBroadcast? broadcastNext;
   @override
   @JsonKey(name: 'broadcastnow')
-  final KodiPVRDetailsBroadcast broadcastNow;
+  final KodiPVRDetailsBroadcast? broadcastNow;
   @override
+  @JsonKey()
   final String channel;
   @override
   @JsonKey(name: 'channelid')
@@ -393,8 +417,10 @@ class _$KodiPVRDetailsChannelImpl implements _KodiPVRDetailsChannel {
   @JsonKey(name: 'hasarchive')
   final bool hasArchive;
   @override
+  @JsonKey()
   final bool hidden;
   @override
+  @JsonKey()
   final String icon;
   @override
   @JsonKey(name: 'isrecording')
@@ -403,19 +429,23 @@ class _$KodiPVRDetailsChannelImpl implements _KodiPVRDetailsChannel {
   @JsonKey(name: 'lastplayed')
   final String lastPlayed;
   @override
+  @JsonKey()
   final bool locked;
   @override
   @JsonKey(name: 'subchannelnumber')
   final int subChannelNumber;
   @override
+  @JsonKey()
   final String thumbnail;
   @override
   @JsonKey(name: 'uniqueid')
-  final int uniqueId;
+  final int? uniqueId;
+  @override
+  final String label;
 
   @override
   String toString() {
-    return 'KodiPVRDetailsChannel(broadcastNext: $broadcastNext, broadcastNow: $broadcastNow, channel: $channel, channelId: $channelId, channelNumber: $channelNumber, channelType: $channelType, clientId: $clientId, hasArchive: $hasArchive, hidden: $hidden, icon: $icon, isRecording: $isRecording, lastPlayed: $lastPlayed, locked: $locked, subChannelNumber: $subChannelNumber, thumbnail: $thumbnail, uniqueId: $uniqueId)';
+    return 'KodiPVRDetailsChannel(broadcastNext: $broadcastNext, broadcastNow: $broadcastNow, channel: $channel, channelId: $channelId, channelNumber: $channelNumber, channelType: $channelType, clientId: $clientId, hasArchive: $hasArchive, hidden: $hidden, icon: $icon, isRecording: $isRecording, lastPlayed: $lastPlayed, locked: $locked, subChannelNumber: $subChannelNumber, thumbnail: $thumbnail, uniqueId: $uniqueId, label: $label)';
   }
 
   @override
@@ -450,7 +480,8 @@ class _$KodiPVRDetailsChannelImpl implements _KodiPVRDetailsChannel {
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
             (identical(other.uniqueId, uniqueId) ||
-                other.uniqueId == uniqueId));
+                other.uniqueId == uniqueId) &&
+            (identical(other.label, label) || other.label == label));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -472,7 +503,8 @@ class _$KodiPVRDetailsChannelImpl implements _KodiPVRDetailsChannel {
       locked,
       subChannelNumber,
       thumbnail,
-      uniqueId);
+      uniqueId,
+      label);
 
   /// Create a copy of KodiPVRDetailsChannel
   /// with the given fields replaced by the non-null parameter values.
@@ -494,35 +526,34 @@ class _$KodiPVRDetailsChannelImpl implements _KodiPVRDetailsChannel {
 abstract class _KodiPVRDetailsChannel implements KodiPVRDetailsChannel {
   const factory _KodiPVRDetailsChannel(
       {@JsonKey(name: 'broadcastnext')
-      required final KodiPVRDetailsBroadcast broadcastNext,
+      final KodiPVRDetailsBroadcast? broadcastNext,
       @JsonKey(name: 'broadcastnow')
-      required final KodiPVRDetailsBroadcast broadcastNow,
-      required final String channel,
+      final KodiPVRDetailsBroadcast? broadcastNow,
+      final String channel,
       @JsonKey(name: 'channelid') required final int channelId,
-      @JsonKey(name: 'channelnumber') required final int channelNumber,
-      @JsonKey(name: 'channeltype')
-      required final KodiPVRChannelType channelType,
-      @JsonKey(name: 'clientid') required final int clientId,
-      @JsonKey(name: 'hasarchive') required final bool hasArchive,
-      required final bool hidden,
-      required final String icon,
-      @JsonKey(name: 'isrecording') required final bool isRecording,
-      @JsonKey(name: 'lastplayed') required final String lastPlayed,
-      required final bool locked,
-      @JsonKey(name: 'subchannelnumber') required final int subChannelNumber,
-      required final String thumbnail,
-      @JsonKey(name: 'uniqueid')
-      required final int uniqueId}) = _$KodiPVRDetailsChannelImpl;
+      @JsonKey(name: 'channelnumber') final int channelNumber,
+      @JsonKey(name: 'channeltype') final KodiPVRChannelType channelType,
+      @JsonKey(name: 'clientid') final int clientId,
+      @JsonKey(name: 'hasarchive') final bool hasArchive,
+      final bool hidden,
+      final String icon,
+      @JsonKey(name: 'isrecording') final bool isRecording,
+      @JsonKey(name: 'lastplayed') final String lastPlayed,
+      final bool locked,
+      @JsonKey(name: 'subchannelnumber') final int subChannelNumber,
+      final String thumbnail,
+      @JsonKey(name: 'uniqueid') final int? uniqueId,
+      required final String label}) = _$KodiPVRDetailsChannelImpl;
 
   factory _KodiPVRDetailsChannel.fromJson(Map<String, dynamic> json) =
       _$KodiPVRDetailsChannelImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastnext')
-  KodiPVRDetailsBroadcast get broadcastNext;
+  KodiPVRDetailsBroadcast? get broadcastNext;
   @override
   @JsonKey(name: 'broadcastnow')
-  KodiPVRDetailsBroadcast get broadcastNow;
+  KodiPVRDetailsBroadcast? get broadcastNow;
   @override
   String get channel;
   @override
@@ -559,7 +590,9 @@ abstract class _KodiPVRDetailsChannel implements KodiPVRDetailsChannel {
   String get thumbnail;
   @override
   @JsonKey(name: 'uniqueid')
-  int get uniqueId;
+  int? get uniqueId;
+  @override
+  String get label;
 
   /// Create a copy of KodiPVRDetailsChannel
   /// with the given fields replaced by the non-null parameter values.

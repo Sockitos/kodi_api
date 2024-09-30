@@ -20,6 +20,7 @@ GetChannels _$GetChannelsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetChannels {
+  @KodiPVRChannelGroupIdConverter()
   @JsonKey(name: 'channelgroupid')
   KodiPVRChannelGroupId get groupId => throw _privateConstructorUsedError;
   Set<KodiPVRFieldsChannel>? get properties =>
@@ -44,7 +45,9 @@ abstract class $GetChannelsCopyWith<$Res> {
       _$GetChannelsCopyWithImpl<$Res, GetChannels>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'channelgroupid') KodiPVRChannelGroupId groupId,
+      {@KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      KodiPVRChannelGroupId groupId,
       Set<KodiPVRFieldsChannel>? properties,
       KodiListLimits? limits,
       KodiListSort? sort});
@@ -142,7 +145,9 @@ abstract class _$$GetChannelsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'channelgroupid') KodiPVRChannelGroupId groupId,
+      {@KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      KodiPVRChannelGroupId groupId,
       Set<KodiPVRFieldsChannel>? properties,
       KodiListLimits? limits,
       KodiListSort? sort});
@@ -197,8 +202,13 @@ class __$$GetChannelsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$GetChannelsImpl extends _GetChannels {
-  const _$GetChannelsImpl(@JsonKey(name: 'channelgroupid') this.groupId,
-      {final Set<KodiPVRFieldsChannel>? properties, this.limits, this.sort})
+  const _$GetChannelsImpl(
+      @KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      this.groupId,
+      {final Set<KodiPVRFieldsChannel>? properties,
+      this.limits,
+      this.sort})
       : _properties = properties,
         super._();
 
@@ -206,6 +216,7 @@ class _$GetChannelsImpl extends _GetChannels {
       _$$GetChannelsImplFromJson(json);
 
   @override
+  @KodiPVRChannelGroupIdConverter()
   @JsonKey(name: 'channelgroupid')
   final KodiPVRChannelGroupId groupId;
   final Set<KodiPVRFieldsChannel>? _properties;
@@ -263,7 +274,9 @@ class _$GetChannelsImpl extends _GetChannels {
 
 abstract class _GetChannels extends GetChannels {
   const factory _GetChannels(
-      @JsonKey(name: 'channelgroupid') final KodiPVRChannelGroupId groupId,
+      @KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      final KodiPVRChannelGroupId groupId,
       {final Set<KodiPVRFieldsChannel>? properties,
       final KodiListLimits? limits,
       final KodiListSort? sort}) = _$GetChannelsImpl;
@@ -273,6 +286,7 @@ abstract class _GetChannels extends GetChannels {
       _$GetChannelsImpl.fromJson;
 
   @override
+  @KodiPVRChannelGroupIdConverter()
   @JsonKey(name: 'channelgroupid')
   KodiPVRChannelGroupId get groupId;
   @override

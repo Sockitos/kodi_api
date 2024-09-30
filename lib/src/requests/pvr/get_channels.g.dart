@@ -8,8 +8,7 @@ part of 'get_channels.dart';
 
 _$GetChannelsImpl _$$GetChannelsImplFromJson(Map<String, dynamic> json) =>
     _$GetChannelsImpl(
-      KodiPVRChannelGroupId.fromJson(
-          json['channelgroupid'] as Map<String, dynamic>),
+      const KodiPVRChannelGroupIdConverter().fromJson(json['channelgroupid']),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsChannelEnumMap, e))
           .toSet(),
@@ -22,9 +21,7 @@ _$GetChannelsImpl _$$GetChannelsImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$GetChannelsImplToJson(_$GetChannelsImpl instance) {
-  final val = <String, dynamic>{
-    'channelgroupid': instance.groupId.toJson(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -32,6 +29,8 @@ Map<String, dynamic> _$$GetChannelsImplToJson(_$GetChannelsImpl instance) {
     }
   }
 
+  writeNotNull('channelgroupid',
+      const KodiPVRChannelGroupIdConverter().toJson(instance.groupId));
   writeNotNull(
       'properties',
       instance.properties

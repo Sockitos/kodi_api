@@ -235,16 +235,16 @@ class __$$KodiPVRDetailsClientImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiPVRDetailsClientImpl implements _KodiPVRDetailsClient {
   const _$KodiPVRDetailsClientImpl(
-      {@JsonKey(name: 'addonid') required this.addonId,
+      {@JsonKey(name: 'addonid') this.addonId = '',
       @JsonKey(name: 'clientid') required this.clientId,
       @JsonKey(name: 'supportschannelgroups')
-      required this.supportsChannelGroups,
-      @JsonKey(name: 'supportschannelscan') required this.supportsChannelScan,
-      @JsonKey(name: 'supportsepg') required this.supportsEpg,
-      @JsonKey(name: 'supportsradio') required this.supportsRadio,
-      @JsonKey(name: 'supportsrecordings') required this.supportsRecordings,
-      @JsonKey(name: 'supportstimers') required this.supportsTimers,
-      @JsonKey(name: 'supportstv') required this.supportsTv,
+      this.supportsChannelGroups = false,
+      @JsonKey(name: 'supportschannelscan') this.supportsChannelScan = false,
+      @JsonKey(name: 'supportsepg') this.supportsEpg = false,
+      @JsonKey(name: 'supportsradio') this.supportsRadio = false,
+      @JsonKey(name: 'supportsrecordings') this.supportsRecordings = false,
+      @JsonKey(name: 'supportstimers') this.supportsTimers = false,
+      @JsonKey(name: 'supportstv') this.supportsTv = false,
       required this.label});
 
   factory _$KodiPVRDetailsClientImpl.fromJson(Map<String, dynamic> json) =>
@@ -345,18 +345,15 @@ class _$KodiPVRDetailsClientImpl implements _KodiPVRDetailsClient {
 
 abstract class _KodiPVRDetailsClient implements KodiPVRDetailsClient {
   const factory _KodiPVRDetailsClient(
-      {@JsonKey(name: 'addonid') required final String addonId,
+      {@JsonKey(name: 'addonid') final String addonId,
       @JsonKey(name: 'clientid') required final int clientId,
-      @JsonKey(name: 'supportschannelgroups')
-      required final bool supportsChannelGroups,
-      @JsonKey(name: 'supportschannelscan')
-      required final bool supportsChannelScan,
-      @JsonKey(name: 'supportsepg') required final bool supportsEpg,
-      @JsonKey(name: 'supportsradio') required final bool supportsRadio,
-      @JsonKey(name: 'supportsrecordings')
-      required final bool supportsRecordings,
-      @JsonKey(name: 'supportstimers') required final bool supportsTimers,
-      @JsonKey(name: 'supportstv') required final bool supportsTv,
+      @JsonKey(name: 'supportschannelgroups') final bool supportsChannelGroups,
+      @JsonKey(name: 'supportschannelscan') final bool supportsChannelScan,
+      @JsonKey(name: 'supportsepg') final bool supportsEpg,
+      @JsonKey(name: 'supportsradio') final bool supportsRadio,
+      @JsonKey(name: 'supportsrecordings') final bool supportsRecordings,
+      @JsonKey(name: 'supportstimers') final bool supportsTimers,
+      @JsonKey(name: 'supportstv') final bool supportsTv,
       required final String label}) = _$KodiPVRDetailsClientImpl;
 
   factory _KodiPVRDetailsClient.fromJson(Map<String, dynamic> json) =

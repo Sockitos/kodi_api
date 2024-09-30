@@ -9,47 +9,62 @@ part of 'kodi_pvr_details_channel.dart';
 _$KodiPVRDetailsChannelImpl _$$KodiPVRDetailsChannelImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPVRDetailsChannelImpl(
-      broadcastNext: KodiPVRDetailsBroadcast.fromJson(
-          json['broadcastnext'] as Map<String, dynamic>),
-      broadcastNow: KodiPVRDetailsBroadcast.fromJson(
-          json['broadcastnow'] as Map<String, dynamic>),
-      channel: json['channel'] as String,
+      broadcastNext: json['broadcastnext'] == null
+          ? null
+          : KodiPVRDetailsBroadcast.fromJson(
+              json['broadcastnext'] as Map<String, dynamic>),
+      broadcastNow: json['broadcastnow'] == null
+          ? null
+          : KodiPVRDetailsBroadcast.fromJson(
+              json['broadcastnow'] as Map<String, dynamic>),
+      channel: json['channel'] as String? ?? '',
       channelId: (json['channelid'] as num).toInt(),
-      channelNumber: (json['channelnumber'] as num).toInt(),
-      channelType:
-          $enumDecode(_$KodiPVRChannelTypeEnumMap, json['channeltype']),
-      clientId: (json['clientid'] as num).toInt(),
-      hasArchive: json['hasarchive'] as bool,
-      hidden: json['hidden'] as bool,
-      icon: json['icon'] as String,
-      isRecording: json['isrecording'] as bool,
-      lastPlayed: json['lastplayed'] as String,
-      locked: json['locked'] as bool,
-      subChannelNumber: (json['subchannelnumber'] as num).toInt(),
-      thumbnail: json['thumbnail'] as String,
-      uniqueId: (json['uniqueid'] as num).toInt(),
+      channelNumber: (json['channelnumber'] as num?)?.toInt() ?? 0,
+      channelType: $enumDecodeNullable(
+              _$KodiPVRChannelTypeEnumMap, json['channeltype']) ??
+          KodiPVRChannelType.tv,
+      clientId: (json['clientid'] as num?)?.toInt() ?? -1,
+      hasArchive: json['hasarchive'] as bool? ?? false,
+      hidden: json['hidden'] as bool? ?? false,
+      icon: json['icon'] as String? ?? '',
+      isRecording: json['isrecording'] as bool? ?? false,
+      lastPlayed: json['lastplayed'] as String? ?? '',
+      locked: json['locked'] as bool? ?? false,
+      subChannelNumber: (json['subchannelnumber'] as num?)?.toInt() ?? 0,
+      thumbnail: json['thumbnail'] as String? ?? '',
+      uniqueId: (json['uniqueid'] as num?)?.toInt(),
+      label: json['label'] as String,
     );
 
 Map<String, dynamic> _$$KodiPVRDetailsChannelImplToJson(
-        _$KodiPVRDetailsChannelImpl instance) =>
-    <String, dynamic>{
-      'broadcastnext': instance.broadcastNext.toJson(),
-      'broadcastnow': instance.broadcastNow.toJson(),
-      'channel': instance.channel,
-      'channelid': instance.channelId,
-      'channelnumber': instance.channelNumber,
-      'channeltype': _$KodiPVRChannelTypeEnumMap[instance.channelType]!,
-      'clientid': instance.clientId,
-      'hasarchive': instance.hasArchive,
-      'hidden': instance.hidden,
-      'icon': instance.icon,
-      'isrecording': instance.isRecording,
-      'lastplayed': instance.lastPlayed,
-      'locked': instance.locked,
-      'subchannelnumber': instance.subChannelNumber,
-      'thumbnail': instance.thumbnail,
-      'uniqueid': instance.uniqueId,
-    };
+    _$KodiPVRDetailsChannelImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('broadcastnext', instance.broadcastNext?.toJson());
+  writeNotNull('broadcastnow', instance.broadcastNow?.toJson());
+  val['channel'] = instance.channel;
+  val['channelid'] = instance.channelId;
+  val['channelnumber'] = instance.channelNumber;
+  val['channeltype'] = _$KodiPVRChannelTypeEnumMap[instance.channelType]!;
+  val['clientid'] = instance.clientId;
+  val['hasarchive'] = instance.hasArchive;
+  val['hidden'] = instance.hidden;
+  val['icon'] = instance.icon;
+  val['isrecording'] = instance.isRecording;
+  val['lastplayed'] = instance.lastPlayed;
+  val['locked'] = instance.locked;
+  val['subchannelnumber'] = instance.subChannelNumber;
+  val['thumbnail'] = instance.thumbnail;
+  writeNotNull('uniqueid', instance.uniqueId);
+  val['label'] = instance.label;
+  return val;
+}
 
 const _$KodiPVRChannelTypeEnumMap = {
   KodiPVRChannelType.tv: 'tv',

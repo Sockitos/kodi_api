@@ -9,16 +9,14 @@ part of 'record.dart';
 _$RecordImpl _$$RecordImplFromJson(Map<String, dynamic> json) => _$RecordImpl(
       record: json['record'] == null
           ? const KodiGlobalToggle.enumerator(KodiGlobalToggleEnum.toggle)
-          : KodiGlobalToggle.fromJson(json['record'] as Map<String, dynamic>),
+          : const KodiGlobalToggleConverter().fromJson(json['record']),
       channel: json['channel'] == null
-          ? const RecordChannel.enumerator(KodiPVRChannel.current)
-          : const RecordChannelConverter().fromJson(json['channel']),
+          ? const KodiRecordChannel.enumerator(KodiPVRChannel.current)
+          : const KodiRecordChannelConverter().fromJson(json['channel']),
     );
 
 Map<String, dynamic> _$$RecordImplToJson(_$RecordImpl instance) {
-  final val = <String, dynamic>{
-    'record': instance.record.toJson(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -27,33 +25,35 @@ Map<String, dynamic> _$$RecordImplToJson(_$RecordImpl instance) {
   }
 
   writeNotNull(
-      'channel', const RecordChannelConverter().toJson(instance.channel));
+      'record', const KodiGlobalToggleConverter().toJson(instance.record));
+  writeNotNull(
+      'channel', const KodiRecordChannelConverter().toJson(instance.channel));
   return val;
 }
 
-_$RecordChannelIntImpl _$$RecordChannelIntImplFromJson(
+_$KodiRecordChannelIntImpl _$$KodiRecordChannelIntImplFromJson(
         Map<String, dynamic> json) =>
-    _$RecordChannelIntImpl(
+    _$KodiRecordChannelIntImpl(
       (json['channel'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$RecordChannelIntImplToJson(
-        _$RecordChannelIntImpl instance) =>
+Map<String, dynamic> _$$KodiRecordChannelIntImplToJson(
+        _$KodiRecordChannelIntImpl instance) =>
     <String, dynamic>{
       'channel': instance.channel,
       'runtimeType': instance.$type,
     };
 
-_$RecordChannelEnumImpl _$$RecordChannelEnumImplFromJson(
+_$KodiRecordChannelEnumImpl _$$KodiRecordChannelEnumImplFromJson(
         Map<String, dynamic> json) =>
-    _$RecordChannelEnumImpl(
+    _$KodiRecordChannelEnumImpl(
       $enumDecode(_$KodiPVRChannelEnumMap, json['channel']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$RecordChannelEnumImplToJson(
-        _$RecordChannelEnumImpl instance) =>
+Map<String, dynamic> _$$KodiRecordChannelEnumImplToJson(
+        _$KodiRecordChannelEnumImpl instance) =>
     <String, dynamic>{
       'channel': _$KodiPVRChannelEnumMap[instance.channel]!,
       'runtimeType': instance.$type,
