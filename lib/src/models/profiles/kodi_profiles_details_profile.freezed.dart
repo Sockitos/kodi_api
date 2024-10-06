@@ -22,8 +22,8 @@ KodiProfilesDetailsProfile _$KodiProfilesDetailsProfileFromJson(
 /// @nodoc
 mixin _$KodiProfilesDetailsProfile {
   @JsonKey(name: 'lockmode')
-  int? get lockMode => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get lockMode => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiProfilesDetailsProfile to a JSON map.
@@ -44,8 +44,8 @@ abstract class $KodiProfilesDetailsProfileCopyWith<$Res> {
           KodiProfilesDetailsProfile>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'lockmode') int? lockMode,
-      String? thumbnail,
+      {@JsonKey(name: 'lockmode') int lockMode,
+      String thumbnail,
       String label});
 }
 
@@ -65,19 +65,19 @@ class _$KodiProfilesDetailsProfileCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lockMode = freezed,
-    Object? thumbnail = freezed,
+    Object? lockMode = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
-      lockMode: freezed == lockMode
+      lockMode: null == lockMode
           ? _value.lockMode
           : lockMode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      thumbnail: freezed == thumbnail
+              as int,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -96,8 +96,8 @@ abstract class _$$KodiProfilesDetailsProfileImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'lockmode') int? lockMode,
-      String? thumbnail,
+      {@JsonKey(name: 'lockmode') int lockMode,
+      String thumbnail,
       String label});
 }
 
@@ -116,19 +116,19 @@ class __$$KodiProfilesDetailsProfileImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? lockMode = freezed,
-    Object? thumbnail = freezed,
+    Object? lockMode = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_$KodiProfilesDetailsProfileImpl(
-      lockMode: freezed == lockMode
+      lockMode: null == lockMode
           ? _value.lockMode
           : lockMode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      thumbnail: freezed == thumbnail
+              as int,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -141,8 +141,8 @@ class __$$KodiProfilesDetailsProfileImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiProfilesDetailsProfileImpl implements _KodiProfilesDetailsProfile {
   const _$KodiProfilesDetailsProfileImpl(
-      {@JsonKey(name: 'lockmode') this.lockMode,
-      this.thumbnail,
+      {@JsonKey(name: 'lockmode') this.lockMode = 0,
+      this.thumbnail = '',
       required this.label});
 
   factory _$KodiProfilesDetailsProfileImpl.fromJson(
@@ -151,9 +151,10 @@ class _$KodiProfilesDetailsProfileImpl implements _KodiProfilesDetailsProfile {
 
   @override
   @JsonKey(name: 'lockmode')
-  final int? lockMode;
+  final int lockMode;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
@@ -198,8 +199,8 @@ class _$KodiProfilesDetailsProfileImpl implements _KodiProfilesDetailsProfile {
 abstract class _KodiProfilesDetailsProfile
     implements KodiProfilesDetailsProfile {
   const factory _KodiProfilesDetailsProfile(
-      {@JsonKey(name: 'lockmode') final int? lockMode,
-      final String? thumbnail,
+      {@JsonKey(name: 'lockmode') final int lockMode,
+      final String thumbnail,
       required final String label}) = _$KodiProfilesDetailsProfileImpl;
 
   factory _KodiProfilesDetailsProfile.fromJson(Map<String, dynamic> json) =
@@ -207,9 +208,9 @@ abstract class _KodiProfilesDetailsProfile
 
   @override
   @JsonKey(name: 'lockmode')
-  int? get lockMode;
+  int get lockMode;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
 

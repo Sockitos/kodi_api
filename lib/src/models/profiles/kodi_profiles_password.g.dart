@@ -11,7 +11,7 @@ _$KodiProfilesPasswordImpl _$$KodiProfilesPasswordImplFromJson(
     _$KodiProfilesPasswordImpl(
       encryption: $enumDecodeNullable(
               _$KodiProfilesPasswordEncryptionEnumMap, json['encryption']) ??
-          KodiProfilesPasswordEncryption.md5,
+          KodiProfilesPasswordEncryption.none,
       value: json['value'] as String,
     );
 
@@ -25,5 +25,4 @@ Map<String, dynamic> _$$KodiProfilesPasswordImplToJson(
 
 const _$KodiProfilesPasswordEncryptionEnumMap = {
   KodiProfilesPasswordEncryption.none: 'none',
-  KodiProfilesPasswordEncryption.md5: 'md5',
 };

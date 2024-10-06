@@ -119,7 +119,7 @@ class __$$KodiProfilesPasswordImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiProfilesPasswordImpl implements _KodiProfilesPassword {
   const _$KodiProfilesPasswordImpl(
-      {this.encryption = KodiProfilesPasswordEncryption.md5,
+      {this.encryption = KodiProfilesPasswordEncryption.none,
       required this.value});
 
   factory _$KodiProfilesPasswordImpl.fromJson(Map<String, dynamic> json) =>

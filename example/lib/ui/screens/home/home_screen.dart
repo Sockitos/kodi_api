@@ -8,6 +8,7 @@ import 'package:example/ui/screens/input/input_screen.dart';
 import 'package:example/ui/screens/jsonrpc/jsonrpc_screen.dart';
 import 'package:example/ui/screens/player/player_screen.dart';
 import 'package:example/ui/screens/playlist/playlist_screen.dart';
+import 'package:example/ui/screens/profiles/profiles_screen.dart';
 import 'package:example/ui/screens/pvr/pvr_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
@@ -147,6 +148,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Playlist',
+              ),
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const ProfilesScreen(),
+                  ),
+                ),
+                label: 'Profiles',
               ),
             ],
           ),
