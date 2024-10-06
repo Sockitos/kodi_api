@@ -13,6 +13,7 @@ import 'package:example/ui/screens/pvr/pvr_screen.dart';
 import 'package:example/ui/screens/settings/setttings_screen.dart';
 import 'package:example/ui/screens/system/system_screen.dart';
 import 'package:example/ui/screens/textures/textures_screen.dart';
+import 'package:example/ui/screens/xbmc/xbmc_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -195,6 +196,20 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Textures',
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const XBMCScreen(),
+                  ),
+                ),
+                label: 'XBMC',
               ),
             ],
           ),
