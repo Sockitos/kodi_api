@@ -6,23 +6,23 @@ part of 'kodi_video_details_movie_set.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoDetailsMovieSet _$$_KodiVideoDetailsMovieSetFromJson(
+_$KodiVideoDetailsMovieSetImpl _$$KodiVideoDetailsMovieSetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiVideoDetailsMovieSet(
+    _$KodiVideoDetailsMovieSetImpl(
       plot: json['plot'] as String?,
-      setId: json['setid'] as int,
+      setId: (json['setid'] as num).toInt(),
       title: json['title'] as String?,
       art: json['art'] == null
           ? null
           : KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       fanart: json['fanart'] as String?,
       thumbnail: json['thumbnail'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiVideoDetailsMovieSetToJson(
-    _$_KodiVideoDetailsMovieSet instance) {
+Map<String, dynamic> _$$KodiVideoDetailsMovieSetImplToJson(
+    _$KodiVideoDetailsMovieSetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

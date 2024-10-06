@@ -12,7 +12,7 @@ part of 'get_tv_shows.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetTVShows _$GetTVShowsFromJson(Map<String, dynamic> json) {
   return _GetTVShows.fromJson(json);
@@ -28,8 +28,12 @@ mixin _$GetTVShows {
   KodiVideoLibraryGetTvShowsFilter? get filter =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetTVShows to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetTVShowsCopyWith<GetTVShows> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$GetTVShowsCopyWithImpl<$Res, $Val extends GetTVShows>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -90,6 +96,8 @@ class _$GetTVShowsCopyWithImpl<$Res, $Val extends GetTVShows>
     ) as $Val);
   }
 
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -102,6 +110,8 @@ class _$GetTVShowsCopyWithImpl<$Res, $Val extends GetTVShows>
     });
   }
 
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -114,6 +124,8 @@ class _$GetTVShowsCopyWithImpl<$Res, $Val extends GetTVShows>
     });
   }
 
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoLibraryGetTvShowsFilterCopyWith<$Res>? get filter {
@@ -129,11 +141,11 @@ class _$GetTVShowsCopyWithImpl<$Res, $Val extends GetTVShows>
 }
 
 /// @nodoc
-abstract class _$$_GetTVShowsCopyWith<$Res>
+abstract class _$$GetTVShowsImplCopyWith<$Res>
     implements $GetTVShowsCopyWith<$Res> {
-  factory _$$_GetTVShowsCopyWith(
-          _$_GetTVShows value, $Res Function(_$_GetTVShows) then) =
-      __$$_GetTVShowsCopyWithImpl<$Res>;
+  factory _$$GetTVShowsImplCopyWith(
+          _$GetTVShowsImpl value, $Res Function(_$GetTVShowsImpl) then) =
+      __$$GetTVShowsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -152,13 +164,15 @@ abstract class _$$_GetTVShowsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTVShowsCopyWithImpl<$Res>
-    extends _$GetTVShowsCopyWithImpl<$Res, _$_GetTVShows>
-    implements _$$_GetTVShowsCopyWith<$Res> {
-  __$$_GetTVShowsCopyWithImpl(
-      _$_GetTVShows _value, $Res Function(_$_GetTVShows) _then)
+class __$$GetTVShowsImplCopyWithImpl<$Res>
+    extends _$GetTVShowsCopyWithImpl<$Res, _$GetTVShowsImpl>
+    implements _$$GetTVShowsImplCopyWith<$Res> {
+  __$$GetTVShowsImplCopyWithImpl(
+      _$GetTVShowsImpl _value, $Res Function(_$GetTVShowsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -167,7 +181,7 @@ class __$$_GetTVShowsCopyWithImpl<$Res>
     Object? sort = freezed,
     Object? filter = freezed,
   }) {
-    return _then(_$_GetTVShows(
+    return _then(_$GetTVShowsImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -190,8 +204,8 @@ class __$$_GetTVShowsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTVShows extends _GetTVShows {
-  const _$_GetTVShows(
+class _$GetTVShowsImpl extends _GetTVShows {
+  const _$GetTVShowsImpl(
       {final Set<KodiVideoFieldsTvShow>? properties,
       this.limits,
       this.sort,
@@ -199,8 +213,8 @@ class _$_GetTVShows extends _GetTVShows {
       : _properties = properties,
         super._();
 
-  factory _$_GetTVShows.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTVShowsFromJson(json);
+  factory _$GetTVShowsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTVShowsImplFromJson(json);
 
   final Set<KodiVideoFieldsTvShow>? _properties;
   @override
@@ -226,10 +240,10 @@ class _$_GetTVShows extends _GetTVShows {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTVShows &&
+            other is _$GetTVShowsImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
@@ -237,20 +251,22 @@ class _$_GetTVShows extends _GetTVShows {
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort, filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTVShowsCopyWith<_$_GetTVShows> get copyWith =>
-      __$$_GetTVShowsCopyWithImpl<_$_GetTVShows>(this, _$identity);
+  _$$GetTVShowsImplCopyWith<_$GetTVShowsImpl> get copyWith =>
+      __$$GetTVShowsImplCopyWithImpl<_$GetTVShowsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTVShowsToJson(
+    return _$$GetTVShowsImplToJson(
       this,
     );
   }
@@ -262,11 +278,11 @@ abstract class _GetTVShows extends GetTVShows {
       final KodiListLimits? limits,
       final KodiListSort? sort,
       @KodiVideoLibraryGetTvShowsFilterConverter()
-      final KodiVideoLibraryGetTvShowsFilter? filter}) = _$_GetTVShows;
+      final KodiVideoLibraryGetTvShowsFilter? filter}) = _$GetTVShowsImpl;
   const _GetTVShows._() : super._();
 
   factory _GetTVShows.fromJson(Map<String, dynamic> json) =
-      _$_GetTVShows.fromJson;
+      _$GetTVShowsImpl.fromJson;
 
   @override
   Set<KodiVideoFieldsTvShow>? get properties;
@@ -277,9 +293,12 @@ abstract class _GetTVShows extends GetTVShows {
   @override
   @KodiVideoLibraryGetTvShowsFilterConverter()
   KodiVideoLibraryGetTvShowsFilter? get filter;
+
+  /// Create a copy of GetTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetTVShowsCopyWith<_$_GetTVShows> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTVShowsImplCopyWith<_$GetTVShowsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -294,8 +313,12 @@ mixin _$GetTVShowsResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetTVShowsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetTVShowsResponseCopyWith<GetTVShowsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -323,6 +346,8 @@ class _$GetTVShowsResponseCopyWithImpl<$Res, $Val extends GetTVShowsResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -341,6 +366,8 @@ class _$GetTVShowsResponseCopyWithImpl<$Res, $Val extends GetTVShowsResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -351,11 +378,11 @@ class _$GetTVShowsResponseCopyWithImpl<$Res, $Val extends GetTVShowsResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetTVShowsResponseCopyWith<$Res>
+abstract class _$$GetTVShowsResponseImplCopyWith<$Res>
     implements $GetTVShowsResponseCopyWith<$Res> {
-  factory _$$_GetTVShowsResponseCopyWith(_$_GetTVShowsResponse value,
-          $Res Function(_$_GetTVShowsResponse) then) =
-      __$$_GetTVShowsResponseCopyWithImpl<$Res>;
+  factory _$$GetTVShowsResponseImplCopyWith(_$GetTVShowsResponseImpl value,
+          $Res Function(_$GetTVShowsResponseImpl) then) =
+      __$$GetTVShowsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -367,20 +394,22 @@ abstract class _$$_GetTVShowsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTVShowsResponseCopyWithImpl<$Res>
-    extends _$GetTVShowsResponseCopyWithImpl<$Res, _$_GetTVShowsResponse>
-    implements _$$_GetTVShowsResponseCopyWith<$Res> {
-  __$$_GetTVShowsResponseCopyWithImpl(
-      _$_GetTVShowsResponse _value, $Res Function(_$_GetTVShowsResponse) _then)
+class __$$GetTVShowsResponseImplCopyWithImpl<$Res>
+    extends _$GetTVShowsResponseCopyWithImpl<$Res, _$GetTVShowsResponseImpl>
+    implements _$$GetTVShowsResponseImplCopyWith<$Res> {
+  __$$GetTVShowsResponseImplCopyWithImpl(_$GetTVShowsResponseImpl _value,
+      $Res Function(_$GetTVShowsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tvShows = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetTVShowsResponse(
+    return _then(_$GetTVShowsResponseImpl(
       tvShows: null == tvShows
           ? _value._tvShows
           : tvShows // ignore: cast_nullable_to_non_nullable
@@ -395,15 +424,15 @@ class __$$_GetTVShowsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTVShowsResponse implements _GetTVShowsResponse {
-  const _$_GetTVShowsResponse(
+class _$GetTVShowsResponseImpl implements _GetTVShowsResponse {
+  const _$GetTVShowsResponseImpl(
       {@JsonKey(name: 'tvshows')
       required final List<KodiVideoDetailsTvShow> tvShows,
       required this.limits})
       : _tvShows = tvShows;
 
-  factory _$_GetTVShowsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTVShowsResponseFromJson(json);
+  factory _$GetTVShowsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTVShowsResponseImplFromJson(json);
 
   final List<KodiVideoDetailsTvShow> _tvShows;
   @override
@@ -423,29 +452,31 @@ class _$_GetTVShowsResponse implements _GetTVShowsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTVShowsResponse &&
+            other is _$GetTVShowsResponseImpl &&
             const DeepCollectionEquality().equals(other._tvShows, _tvShows) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_tvShows), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTVShowsResponseCopyWith<_$_GetTVShowsResponse> get copyWith =>
-      __$$_GetTVShowsResponseCopyWithImpl<_$_GetTVShowsResponse>(
+  _$$GetTVShowsResponseImplCopyWith<_$GetTVShowsResponseImpl> get copyWith =>
+      __$$GetTVShowsResponseImplCopyWithImpl<_$GetTVShowsResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTVShowsResponseToJson(
+    return _$$GetTVShowsResponseImplToJson(
       this,
     );
   }
@@ -455,19 +486,22 @@ abstract class _GetTVShowsResponse implements GetTVShowsResponse {
   const factory _GetTVShowsResponse(
       {@JsonKey(name: 'tvshows')
       required final List<KodiVideoDetailsTvShow> tvShows,
-      required final KodiListLimitsReturned limits}) = _$_GetTVShowsResponse;
+      required final KodiListLimitsReturned limits}) = _$GetTVShowsResponseImpl;
 
   factory _GetTVShowsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetTVShowsResponse.fromJson;
+      _$GetTVShowsResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'tvshows')
   List<KodiVideoDetailsTvShow> get tvShows;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetTVShowsResponseCopyWith<_$_GetTVShowsResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTVShowsResponseImplCopyWith<_$GetTVShowsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -579,6 +613,8 @@ mixin _$KodiVideoLibraryGetTvShowsFilter {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiVideoLibraryGetTvShowsFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -601,34 +637,39 @@ class _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWith(
-          _$_KodiVideoLibraryGetTvShowsFilterGenreId value,
-          $Res Function(_$_KodiVideoLibraryGetTvShowsFilterGenreId) then) =
-      __$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWith(
+          _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetTvShowsFilterGenreIdImpl) then) =
+      __$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'genreid') int genreId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetTvShowsFilterGenreId>
-    implements _$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWithImpl(
-      _$_KodiVideoLibraryGetTvShowsFilterGenreId _value,
-      $Res Function(_$_KodiVideoLibraryGetTvShowsFilterGenreId) _then)
+        _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl>
+    implements _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetTvShowsFilterGenreIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genreId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetTvShowsFilterGenreId(
+    return _then(_$KodiVideoLibraryGetTvShowsFilterGenreIdImpl(
       genreId: null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
@@ -639,15 +680,15 @@ class __$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetTvShowsFilterGenreId
+class _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl
     implements _KodiVideoLibraryGetTvShowsFilterGenreId {
-  const _$_KodiVideoLibraryGetTvShowsFilterGenreId(
+  const _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl(
       {@JsonKey(name: 'genreid') required this.genreId, final String? $type})
       : $type = $type ?? 'genreId';
 
-  factory _$_KodiVideoLibraryGetTvShowsFilterGenreId.fromJson(
+  factory _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetTvShowsFilterGenreIdFromJson(json);
+      _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'genreid')
@@ -662,24 +703,27 @@ class _$_KodiVideoLibraryGetTvShowsFilterGenreId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetTvShowsFilterGenreId &&
+            other is _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl &&
             (identical(other.genreId, genreId) || other.genreId == genreId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genreId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWith<
-          _$_KodiVideoLibraryGetTvShowsFilterGenreId>
-      get copyWith => __$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWithImpl<
-          _$_KodiVideoLibraryGetTvShowsFilterGenreId>(this, _$identity);
+  _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWith<
+          _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl>
+      get copyWith =>
+          __$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWithImpl<
+              _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -786,7 +830,7 @@ class _$_KodiVideoLibraryGetTvShowsFilterGenreId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetTvShowsFilterGenreIdToJson(
+    return _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplToJson(
       this,
     );
   }
@@ -796,46 +840,51 @@ abstract class _KodiVideoLibraryGetTvShowsFilterGenreId
     implements KodiVideoLibraryGetTvShowsFilter {
   const factory _KodiVideoLibraryGetTvShowsFilterGenreId(
           {@JsonKey(name: 'genreid') required final int genreId}) =
-      _$_KodiVideoLibraryGetTvShowsFilterGenreId;
+      _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl;
 
   factory _KodiVideoLibraryGetTvShowsFilterGenreId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetTvShowsFilterGenreId.fromJson;
+      _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl.fromJson;
 
   @JsonKey(name: 'genreid')
   int get genreId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetTvShowsFilterGenreIdCopyWith<
-          _$_KodiVideoLibraryGetTvShowsFilterGenreId>
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWith<
+          _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWith(
-          _$_KodiVideoLibraryGetTvShowsFilterGenre value,
-          $Res Function(_$_KodiVideoLibraryGetTvShowsFilterGenre) then) =
-      __$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWith(
+          _$KodiVideoLibraryGetTvShowsFilterGenreImpl value,
+          $Res Function(_$KodiVideoLibraryGetTvShowsFilterGenreImpl) then) =
+      __$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String genre});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetTvShowsFilterGenre>
-    implements _$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWithImpl(
-      _$_KodiVideoLibraryGetTvShowsFilterGenre _value,
-      $Res Function(_$_KodiVideoLibraryGetTvShowsFilterGenre) _then)
+        _$KodiVideoLibraryGetTvShowsFilterGenreImpl>
+    implements _$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWithImpl(
+      _$KodiVideoLibraryGetTvShowsFilterGenreImpl _value,
+      $Res Function(_$KodiVideoLibraryGetTvShowsFilterGenreImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genre = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetTvShowsFilterGenre(
+    return _then(_$KodiVideoLibraryGetTvShowsFilterGenreImpl(
       genre: null == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
@@ -846,15 +895,15 @@ class __$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetTvShowsFilterGenre
+class _$KodiVideoLibraryGetTvShowsFilterGenreImpl
     implements _KodiVideoLibraryGetTvShowsFilterGenre {
-  const _$_KodiVideoLibraryGetTvShowsFilterGenre(
+  const _$KodiVideoLibraryGetTvShowsFilterGenreImpl(
       {required this.genre, final String? $type})
       : $type = $type ?? 'genre';
 
-  factory _$_KodiVideoLibraryGetTvShowsFilterGenre.fromJson(
+  factory _$KodiVideoLibraryGetTvShowsFilterGenreImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetTvShowsFilterGenreFromJson(json);
+      _$$KodiVideoLibraryGetTvShowsFilterGenreImplFromJson(json);
 
   @override
   final String genre;
@@ -868,24 +917,26 @@ class _$_KodiVideoLibraryGetTvShowsFilterGenre
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetTvShowsFilterGenre &&
+            other is _$KodiVideoLibraryGetTvShowsFilterGenreImpl &&
             (identical(other.genre, genre) || other.genre == genre));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genre);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWith<
-          _$_KodiVideoLibraryGetTvShowsFilterGenre>
-      get copyWith => __$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWithImpl<
-          _$_KodiVideoLibraryGetTvShowsFilterGenre>(this, _$identity);
+  _$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWith<
+          _$KodiVideoLibraryGetTvShowsFilterGenreImpl>
+      get copyWith => __$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWithImpl<
+          _$KodiVideoLibraryGetTvShowsFilterGenreImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -992,7 +1043,7 @@ class _$_KodiVideoLibraryGetTvShowsFilterGenre
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetTvShowsFilterGenreToJson(
+    return _$$KodiVideoLibraryGetTvShowsFilterGenreImplToJson(
       this,
     );
   }
@@ -1001,45 +1052,51 @@ class _$_KodiVideoLibraryGetTvShowsFilterGenre
 abstract class _KodiVideoLibraryGetTvShowsFilterGenre
     implements KodiVideoLibraryGetTvShowsFilter {
   const factory _KodiVideoLibraryGetTvShowsFilterGenre(
-      {required final String genre}) = _$_KodiVideoLibraryGetTvShowsFilterGenre;
+          {required final String genre}) =
+      _$KodiVideoLibraryGetTvShowsFilterGenreImpl;
 
   factory _KodiVideoLibraryGetTvShowsFilterGenre.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetTvShowsFilterGenre.fromJson;
+      _$KodiVideoLibraryGetTvShowsFilterGenreImpl.fromJson;
 
   String get genre;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetTvShowsFilterGenreCopyWith<
-          _$_KodiVideoLibraryGetTvShowsFilterGenre>
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWith<
+          _$KodiVideoLibraryGetTvShowsFilterGenreImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGeTvShowsFilterYearCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGeTvShowsFilterYearCopyWith(
-          _$_KodiVideoLibraryGeTvShowsFilterYear value,
-          $Res Function(_$_KodiVideoLibraryGeTvShowsFilterYear) then) =
-      __$$_KodiVideoLibraryGeTvShowsFilterYearCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWith(
+          _$KodiVideoLibraryGeTvShowsFilterYearImpl value,
+          $Res Function(_$KodiVideoLibraryGeTvShowsFilterYearImpl) then) =
+      __$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int year});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGeTvShowsFilterYearCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGeTvShowsFilterYear>
-    implements _$$_KodiVideoLibraryGeTvShowsFilterYearCopyWith<$Res> {
-  __$$_KodiVideoLibraryGeTvShowsFilterYearCopyWithImpl(
-      _$_KodiVideoLibraryGeTvShowsFilterYear _value,
-      $Res Function(_$_KodiVideoLibraryGeTvShowsFilterYear) _then)
+        _$KodiVideoLibraryGeTvShowsFilterYearImpl>
+    implements _$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWithImpl(
+      _$KodiVideoLibraryGeTvShowsFilterYearImpl _value,
+      $Res Function(_$KodiVideoLibraryGeTvShowsFilterYearImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? year = null,
   }) {
-    return _then(_$_KodiVideoLibraryGeTvShowsFilterYear(
+    return _then(_$KodiVideoLibraryGeTvShowsFilterYearImpl(
       year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -1050,15 +1107,15 @@ class __$$_KodiVideoLibraryGeTvShowsFilterYearCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGeTvShowsFilterYear
+class _$KodiVideoLibraryGeTvShowsFilterYearImpl
     implements _KodiVideoLibraryGeTvShowsFilterYear {
-  const _$_KodiVideoLibraryGeTvShowsFilterYear(
+  const _$KodiVideoLibraryGeTvShowsFilterYearImpl(
       {required this.year, final String? $type})
       : $type = $type ?? 'year';
 
-  factory _$_KodiVideoLibraryGeTvShowsFilterYear.fromJson(
+  factory _$KodiVideoLibraryGeTvShowsFilterYearImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGeTvShowsFilterYearFromJson(json);
+      _$$KodiVideoLibraryGeTvShowsFilterYearImplFromJson(json);
 
   @override
   final int year;
@@ -1072,24 +1129,26 @@ class _$_KodiVideoLibraryGeTvShowsFilterYear
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGeTvShowsFilterYear &&
+            other is _$KodiVideoLibraryGeTvShowsFilterYearImpl &&
             (identical(other.year, year) || other.year == year));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, year);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGeTvShowsFilterYearCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterYear>
-      get copyWith => __$$_KodiVideoLibraryGeTvShowsFilterYearCopyWithImpl<
-          _$_KodiVideoLibraryGeTvShowsFilterYear>(this, _$identity);
+  _$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterYearImpl>
+      get copyWith => __$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWithImpl<
+          _$KodiVideoLibraryGeTvShowsFilterYearImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1196,7 +1255,7 @@ class _$_KodiVideoLibraryGeTvShowsFilterYear
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGeTvShowsFilterYearToJson(
+    return _$$KodiVideoLibraryGeTvShowsFilterYearImplToJson(
       this,
     );
   }
@@ -1205,45 +1264,50 @@ class _$_KodiVideoLibraryGeTvShowsFilterYear
 abstract class _KodiVideoLibraryGeTvShowsFilterYear
     implements KodiVideoLibraryGetTvShowsFilter {
   const factory _KodiVideoLibraryGeTvShowsFilterYear(
-      {required final int year}) = _$_KodiVideoLibraryGeTvShowsFilterYear;
+      {required final int year}) = _$KodiVideoLibraryGeTvShowsFilterYearImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterYear.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGeTvShowsFilterYear.fromJson;
+      _$KodiVideoLibraryGeTvShowsFilterYearImpl.fromJson;
 
   int get year;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGeTvShowsFilterYearCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterYear>
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterYearImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGeTvShowsFilterActorCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGeTvShowsFilterActorCopyWith(
-          _$_KodiVideoLibraryGeTvShowsFilterActor value,
-          $Res Function(_$_KodiVideoLibraryGeTvShowsFilterActor) then) =
-      __$$_KodiVideoLibraryGeTvShowsFilterActorCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWith(
+          _$KodiVideoLibraryGeTvShowsFilterActorImpl value,
+          $Res Function(_$KodiVideoLibraryGeTvShowsFilterActorImpl) then) =
+      __$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String actor});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGeTvShowsFilterActorCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGeTvShowsFilterActor>
-    implements _$$_KodiVideoLibraryGeTvShowsFilterActorCopyWith<$Res> {
-  __$$_KodiVideoLibraryGeTvShowsFilterActorCopyWithImpl(
-      _$_KodiVideoLibraryGeTvShowsFilterActor _value,
-      $Res Function(_$_KodiVideoLibraryGeTvShowsFilterActor) _then)
+        _$KodiVideoLibraryGeTvShowsFilterActorImpl>
+    implements _$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWithImpl(
+      _$KodiVideoLibraryGeTvShowsFilterActorImpl _value,
+      $Res Function(_$KodiVideoLibraryGeTvShowsFilterActorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? actor = null,
   }) {
-    return _then(_$_KodiVideoLibraryGeTvShowsFilterActor(
+    return _then(_$KodiVideoLibraryGeTvShowsFilterActorImpl(
       actor: null == actor
           ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
@@ -1254,15 +1318,15 @@ class __$$_KodiVideoLibraryGeTvShowsFilterActorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGeTvShowsFilterActor
+class _$KodiVideoLibraryGeTvShowsFilterActorImpl
     implements _KodiVideoLibraryGeTvShowsFilterActor {
-  const _$_KodiVideoLibraryGeTvShowsFilterActor(
+  const _$KodiVideoLibraryGeTvShowsFilterActorImpl(
       {required this.actor, final String? $type})
       : $type = $type ?? 'actor';
 
-  factory _$_KodiVideoLibraryGeTvShowsFilterActor.fromJson(
+  factory _$KodiVideoLibraryGeTvShowsFilterActorImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGeTvShowsFilterActorFromJson(json);
+      _$$KodiVideoLibraryGeTvShowsFilterActorImplFromJson(json);
 
   @override
   final String actor;
@@ -1276,24 +1340,26 @@ class _$_KodiVideoLibraryGeTvShowsFilterActor
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGeTvShowsFilterActor &&
+            other is _$KodiVideoLibraryGeTvShowsFilterActorImpl &&
             (identical(other.actor, actor) || other.actor == actor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, actor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGeTvShowsFilterActorCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterActor>
-      get copyWith => __$$_KodiVideoLibraryGeTvShowsFilterActorCopyWithImpl<
-          _$_KodiVideoLibraryGeTvShowsFilterActor>(this, _$identity);
+  _$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterActorImpl>
+      get copyWith => __$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWithImpl<
+          _$KodiVideoLibraryGeTvShowsFilterActorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1400,7 +1466,7 @@ class _$_KodiVideoLibraryGeTvShowsFilterActor
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGeTvShowsFilterActorToJson(
+    return _$$KodiVideoLibraryGeTvShowsFilterActorImplToJson(
       this,
     );
   }
@@ -1409,45 +1475,51 @@ class _$_KodiVideoLibraryGeTvShowsFilterActor
 abstract class _KodiVideoLibraryGeTvShowsFilterActor
     implements KodiVideoLibraryGetTvShowsFilter {
   const factory _KodiVideoLibraryGeTvShowsFilterActor(
-      {required final String actor}) = _$_KodiVideoLibraryGeTvShowsFilterActor;
+          {required final String actor}) =
+      _$KodiVideoLibraryGeTvShowsFilterActorImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterActor.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGeTvShowsFilterActor.fromJson;
+      _$KodiVideoLibraryGeTvShowsFilterActorImpl.fromJson;
 
   String get actor;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGeTvShowsFilterActorCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterActor>
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterActorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWith(
-          _$_KodiVideoLibraryGeTvShowsFilterStudio value,
-          $Res Function(_$_KodiVideoLibraryGeTvShowsFilterStudio) then) =
-      __$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWith(
+          _$KodiVideoLibraryGeTvShowsFilterStudioImpl value,
+          $Res Function(_$KodiVideoLibraryGeTvShowsFilterStudioImpl) then) =
+      __$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String studio});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGeTvShowsFilterStudio>
-    implements _$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWith<$Res> {
-  __$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWithImpl(
-      _$_KodiVideoLibraryGeTvShowsFilterStudio _value,
-      $Res Function(_$_KodiVideoLibraryGeTvShowsFilterStudio) _then)
+        _$KodiVideoLibraryGeTvShowsFilterStudioImpl>
+    implements _$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWithImpl(
+      _$KodiVideoLibraryGeTvShowsFilterStudioImpl _value,
+      $Res Function(_$KodiVideoLibraryGeTvShowsFilterStudioImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? studio = null,
   }) {
-    return _then(_$_KodiVideoLibraryGeTvShowsFilterStudio(
+    return _then(_$KodiVideoLibraryGeTvShowsFilterStudioImpl(
       studio: null == studio
           ? _value.studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -1458,15 +1530,15 @@ class __$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGeTvShowsFilterStudio
+class _$KodiVideoLibraryGeTvShowsFilterStudioImpl
     implements _KodiVideoLibraryGeTvShowsFilterStudio {
-  const _$_KodiVideoLibraryGeTvShowsFilterStudio(
+  const _$KodiVideoLibraryGeTvShowsFilterStudioImpl(
       {required this.studio, final String? $type})
       : $type = $type ?? 'studio';
 
-  factory _$_KodiVideoLibraryGeTvShowsFilterStudio.fromJson(
+  factory _$KodiVideoLibraryGeTvShowsFilterStudioImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGeTvShowsFilterStudioFromJson(json);
+      _$$KodiVideoLibraryGeTvShowsFilterStudioImplFromJson(json);
 
   @override
   final String studio;
@@ -1480,24 +1552,26 @@ class _$_KodiVideoLibraryGeTvShowsFilterStudio
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGeTvShowsFilterStudio &&
+            other is _$KodiVideoLibraryGeTvShowsFilterStudioImpl &&
             (identical(other.studio, studio) || other.studio == studio));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, studio);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterStudio>
-      get copyWith => __$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWithImpl<
-          _$_KodiVideoLibraryGeTvShowsFilterStudio>(this, _$identity);
+  _$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterStudioImpl>
+      get copyWith => __$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWithImpl<
+          _$KodiVideoLibraryGeTvShowsFilterStudioImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1604,7 +1678,7 @@ class _$_KodiVideoLibraryGeTvShowsFilterStudio
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGeTvShowsFilterStudioToJson(
+    return _$$KodiVideoLibraryGeTvShowsFilterStudioImplToJson(
       this,
     );
   }
@@ -1614,45 +1688,50 @@ abstract class _KodiVideoLibraryGeTvShowsFilterStudio
     implements KodiVideoLibraryGetTvShowsFilter {
   const factory _KodiVideoLibraryGeTvShowsFilterStudio(
           {required final String studio}) =
-      _$_KodiVideoLibraryGeTvShowsFilterStudio;
+      _$KodiVideoLibraryGeTvShowsFilterStudioImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterStudio.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGeTvShowsFilterStudio.fromJson;
+      _$KodiVideoLibraryGeTvShowsFilterStudioImpl.fromJson;
 
   String get studio;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGeTvShowsFilterStudioCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterStudio>
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterStudioImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGeTvShowsFilterTagCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGeTvShowsFilterTagCopyWith(
-          _$_KodiVideoLibraryGeTvShowsFilterTag value,
-          $Res Function(_$_KodiVideoLibraryGeTvShowsFilterTag) then) =
-      __$$_KodiVideoLibraryGeTvShowsFilterTagCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWith(
+          _$KodiVideoLibraryGeTvShowsFilterTagImpl value,
+          $Res Function(_$KodiVideoLibraryGeTvShowsFilterTagImpl) then) =
+      __$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String tag});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGeTvShowsFilterTagCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGeTvShowsFilterTag>
-    implements _$$_KodiVideoLibraryGeTvShowsFilterTagCopyWith<$Res> {
-  __$$_KodiVideoLibraryGeTvShowsFilterTagCopyWithImpl(
-      _$_KodiVideoLibraryGeTvShowsFilterTag _value,
-      $Res Function(_$_KodiVideoLibraryGeTvShowsFilterTag) _then)
+        _$KodiVideoLibraryGeTvShowsFilterTagImpl>
+    implements _$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWithImpl(
+      _$KodiVideoLibraryGeTvShowsFilterTagImpl _value,
+      $Res Function(_$KodiVideoLibraryGeTvShowsFilterTagImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tag = null,
   }) {
-    return _then(_$_KodiVideoLibraryGeTvShowsFilterTag(
+    return _then(_$KodiVideoLibraryGeTvShowsFilterTagImpl(
       tag: null == tag
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
@@ -1663,15 +1742,15 @@ class __$$_KodiVideoLibraryGeTvShowsFilterTagCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGeTvShowsFilterTag
+class _$KodiVideoLibraryGeTvShowsFilterTagImpl
     implements _KodiVideoLibraryGeTvShowsFilterTag {
-  const _$_KodiVideoLibraryGeTvShowsFilterTag(
+  const _$KodiVideoLibraryGeTvShowsFilterTagImpl(
       {required this.tag, final String? $type})
       : $type = $type ?? 'tag';
 
-  factory _$_KodiVideoLibraryGeTvShowsFilterTag.fromJson(
+  factory _$KodiVideoLibraryGeTvShowsFilterTagImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGeTvShowsFilterTagFromJson(json);
+      _$$KodiVideoLibraryGeTvShowsFilterTagImplFromJson(json);
 
   @override
   final String tag;
@@ -1685,24 +1764,26 @@ class _$_KodiVideoLibraryGeTvShowsFilterTag
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGeTvShowsFilterTag &&
+            other is _$KodiVideoLibraryGeTvShowsFilterTagImpl &&
             (identical(other.tag, tag) || other.tag == tag));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tag);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGeTvShowsFilterTagCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterTag>
-      get copyWith => __$$_KodiVideoLibraryGeTvShowsFilterTagCopyWithImpl<
-          _$_KodiVideoLibraryGeTvShowsFilterTag>(this, _$identity);
+  _$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterTagImpl>
+      get copyWith => __$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWithImpl<
+          _$KodiVideoLibraryGeTvShowsFilterTagImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1809,7 +1890,7 @@ class _$_KodiVideoLibraryGeTvShowsFilterTag
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGeTvShowsFilterTagToJson(
+    return _$$KodiVideoLibraryGeTvShowsFilterTagImplToJson(
       this,
     );
   }
@@ -1818,25 +1899,28 @@ class _$_KodiVideoLibraryGeTvShowsFilterTag
 abstract class _KodiVideoLibraryGeTvShowsFilterTag
     implements KodiVideoLibraryGetTvShowsFilter {
   const factory _KodiVideoLibraryGeTvShowsFilterTag(
-      {required final String tag}) = _$_KodiVideoLibraryGeTvShowsFilterTag;
+      {required final String tag}) = _$KodiVideoLibraryGeTvShowsFilterTagImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterTag.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGeTvShowsFilterTag.fromJson;
+      _$KodiVideoLibraryGeTvShowsFilterTagImpl.fromJson;
 
   String get tag;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGeTvShowsFilterTagCopyWith<
-          _$_KodiVideoLibraryGeTvShowsFilterTag>
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWith<
+          _$KodiVideoLibraryGeTvShowsFilterTagImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWith(
-          _$_KodiVideoLibraryGetTvShowsFilterFilter value,
-          $Res Function(_$_KodiVideoLibraryGetTvShowsFilterFilter) then) =
-      __$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWith(
+          _$KodiVideoLibraryGetTvShowsFilterFilterImpl value,
+          $Res Function(_$KodiVideoLibraryGetTvShowsFilterFilterImpl) then) =
+      __$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@KodiListFilterTvShowsConverter() KodiListFilterTvShows filter});
 
@@ -1844,21 +1928,23 @@ abstract class _$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetTvShowsFilterCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetTvShowsFilterFilter>
-    implements _$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWithImpl(
-      _$_KodiVideoLibraryGetTvShowsFilterFilter _value,
-      $Res Function(_$_KodiVideoLibraryGetTvShowsFilterFilter) _then)
+        _$KodiVideoLibraryGetTvShowsFilterFilterImpl>
+    implements _$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWithImpl(
+      _$KodiVideoLibraryGetTvShowsFilterFilterImpl _value,
+      $Res Function(_$KodiVideoLibraryGetTvShowsFilterFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? filter = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetTvShowsFilterFilter(
+    return _then(_$KodiVideoLibraryGetTvShowsFilterFilterImpl(
       null == filter
           ? _value.filter
           : filter // ignore: cast_nullable_to_non_nullable
@@ -1866,6 +1952,8 @@ class __$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterTvShowsCopyWith<$Res> get filter {
@@ -1877,16 +1965,16 @@ class __$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetTvShowsFilterFilter
+class _$KodiVideoLibraryGetTvShowsFilterFilterImpl
     implements _KodiVideoLibraryGetTvShowsFilterFilter {
-  const _$_KodiVideoLibraryGetTvShowsFilterFilter(
+  const _$KodiVideoLibraryGetTvShowsFilterFilterImpl(
       @KodiListFilterTvShowsConverter() this.filter,
       {final String? $type})
       : $type = $type ?? 'filter';
 
-  factory _$_KodiVideoLibraryGetTvShowsFilterFilter.fromJson(
+  factory _$KodiVideoLibraryGetTvShowsFilterFilterImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetTvShowsFilterFilterFromJson(json);
+      _$$KodiVideoLibraryGetTvShowsFilterFilterImplFromJson(json);
 
   @override
   @KodiListFilterTvShowsConverter()
@@ -1901,24 +1989,27 @@ class _$_KodiVideoLibraryGetTvShowsFilterFilter
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetTvShowsFilterFilter &&
+            other is _$KodiVideoLibraryGetTvShowsFilterFilterImpl &&
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWith<
-          _$_KodiVideoLibraryGetTvShowsFilterFilter>
-      get copyWith => __$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWithImpl<
-          _$_KodiVideoLibraryGetTvShowsFilterFilter>(this, _$identity);
+  _$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWith<
+          _$KodiVideoLibraryGetTvShowsFilterFilterImpl>
+      get copyWith =>
+          __$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWithImpl<
+              _$KodiVideoLibraryGetTvShowsFilterFilterImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2025,7 +2116,7 @@ class _$_KodiVideoLibraryGetTvShowsFilterFilter
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetTvShowsFilterFilterToJson(
+    return _$$KodiVideoLibraryGetTvShowsFilterFilterImplToJson(
       this,
     );
   }
@@ -2036,16 +2127,19 @@ abstract class _KodiVideoLibraryGetTvShowsFilterFilter
   const factory _KodiVideoLibraryGetTvShowsFilterFilter(
           @KodiListFilterTvShowsConverter()
           final KodiListFilterTvShows filter) =
-      _$_KodiVideoLibraryGetTvShowsFilterFilter;
+      _$KodiVideoLibraryGetTvShowsFilterFilterImpl;
 
   factory _KodiVideoLibraryGetTvShowsFilterFilter.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetTvShowsFilterFilter.fromJson;
+      _$KodiVideoLibraryGetTvShowsFilterFilterImpl.fromJson;
 
   @KodiListFilterTvShowsConverter()
   KodiListFilterTvShows get filter;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetTvShowsFilterFilterCopyWith<
-          _$_KodiVideoLibraryGetTvShowsFilterFilter>
+
+  /// Create a copy of KodiVideoLibraryGetTvShowsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetTvShowsFilterFilterImplCopyWith<
+          _$KodiVideoLibraryGetTvShowsFilterFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

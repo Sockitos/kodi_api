@@ -12,7 +12,7 @@ part of 'seek.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Seek _$SeekFromJson(Map<String, dynamic> json) {
   return _Seek.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$Seek {
   @KodiPlayerSeekValueConverter()
   KodiPlayerSeekValue get value => throw _privateConstructorUsedError;
 
+  /// Serializes this Seek to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Seek
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SeekCopyWith<Seek> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -52,6 +56,8 @@ class _$SeekCopyWithImpl<$Res, $Val extends Seek>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Seek
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,6 +76,8 @@ class _$SeekCopyWithImpl<$Res, $Val extends Seek>
     ) as $Val);
   }
 
+  /// Create a copy of Seek
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerSeekValueCopyWith<$Res> get value {
@@ -80,9 +88,10 @@ class _$SeekCopyWithImpl<$Res, $Val extends Seek>
 }
 
 /// @nodoc
-abstract class _$$_SeekCopyWith<$Res> implements $SeekCopyWith<$Res> {
-  factory _$$_SeekCopyWith(_$_Seek value, $Res Function(_$_Seek) then) =
-      __$$_SeekCopyWithImpl<$Res>;
+abstract class _$$SeekImplCopyWith<$Res> implements $SeekCopyWith<$Res> {
+  factory _$$SeekImplCopyWith(
+          _$SeekImpl value, $Res Function(_$SeekImpl) then) =
+      __$$SeekImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,18 +103,21 @@ abstract class _$$_SeekCopyWith<$Res> implements $SeekCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SeekCopyWithImpl<$Res> extends _$SeekCopyWithImpl<$Res, _$_Seek>
-    implements _$$_SeekCopyWith<$Res> {
-  __$$_SeekCopyWithImpl(_$_Seek _value, $Res Function(_$_Seek) _then)
+class __$$SeekImplCopyWithImpl<$Res>
+    extends _$SeekCopyWithImpl<$Res, _$SeekImpl>
+    implements _$$SeekImplCopyWith<$Res> {
+  __$$SeekImplCopyWithImpl(_$SeekImpl _value, $Res Function(_$SeekImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Seek
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? value = null,
   }) {
-    return _then(_$_Seek(
+    return _then(_$SeekImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -120,12 +132,13 @@ class __$$_SeekCopyWithImpl<$Res> extends _$SeekCopyWithImpl<$Res, _$_Seek>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Seek extends _Seek {
-  const _$_Seek(@JsonKey(name: 'playerid') this.id,
+class _$SeekImpl extends _Seek {
+  const _$SeekImpl(@JsonKey(name: 'playerid') this.id,
       @KodiPlayerSeekValueConverter() this.value)
       : super._();
 
-  factory _$_Seek.fromJson(Map<String, dynamic> json) => _$$_SeekFromJson(json);
+  factory _$SeekImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SeekImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -140,27 +153,29 @@ class _$_Seek extends _Seek {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Seek &&
+            other is _$SeekImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Seek
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SeekCopyWith<_$_Seek> get copyWith =>
-      __$$_SeekCopyWithImpl<_$_Seek>(this, _$identity);
+  _$$SeekImplCopyWith<_$SeekImpl> get copyWith =>
+      __$$SeekImplCopyWithImpl<_$SeekImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SeekToJson(
+    return _$$SeekImplToJson(
       this,
     );
   }
@@ -169,10 +184,10 @@ class _$_Seek extends _Seek {
 abstract class _Seek extends Seek {
   const factory _Seek(@JsonKey(name: 'playerid') final int id,
           @KodiPlayerSeekValueConverter() final KodiPlayerSeekValue value) =
-      _$_Seek;
+      _$SeekImpl;
   const _Seek._() : super._();
 
-  factory _Seek.fromJson(Map<String, dynamic> json) = _$_Seek.fromJson;
+  factory _Seek.fromJson(Map<String, dynamic> json) = _$SeekImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -180,9 +195,13 @@ abstract class _Seek extends Seek {
   @override
   @KodiPlayerSeekValueConverter()
   KodiPlayerSeekValue get value;
+
+  /// Create a copy of Seek
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SeekCopyWith<_$_Seek> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SeekImplCopyWith<_$SeekImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 KodiPlayerSeekResponse _$KodiPlayerSeekResponseFromJson(
@@ -197,8 +216,12 @@ mixin _$KodiPlayerSeekResponse {
   @JsonKey(name: 'totaltime')
   KodiGlobalTime get totalTime => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerSeekResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerSeekResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerSeekResponseCopyWith<KodiPlayerSeekResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -229,6 +252,8 @@ class _$KodiPlayerSeekResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerSeekResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -252,6 +277,8 @@ class _$KodiPlayerSeekResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPlayerSeekResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res> get time {
@@ -260,6 +287,8 @@ class _$KodiPlayerSeekResponseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerSeekResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res> get totalTime {
@@ -270,11 +299,12 @@ class _$KodiPlayerSeekResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerSeekResponseCopyWith<$Res>
+abstract class _$$KodiPlayerSeekResponseImplCopyWith<$Res>
     implements $KodiPlayerSeekResponseCopyWith<$Res> {
-  factory _$$_KodiPlayerSeekResponseCopyWith(_$_KodiPlayerSeekResponse value,
-          $Res Function(_$_KodiPlayerSeekResponse) then) =
-      __$$_KodiPlayerSeekResponseCopyWithImpl<$Res>;
+  factory _$$KodiPlayerSeekResponseImplCopyWith(
+          _$KodiPlayerSeekResponseImpl value,
+          $Res Function(_$KodiPlayerSeekResponseImpl) then) =
+      __$$KodiPlayerSeekResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -289,14 +319,17 @@ abstract class _$$_KodiPlayerSeekResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerSeekResponseCopyWithImpl<$Res>
+class __$$KodiPlayerSeekResponseImplCopyWithImpl<$Res>
     extends _$KodiPlayerSeekResponseCopyWithImpl<$Res,
-        _$_KodiPlayerSeekResponse>
-    implements _$$_KodiPlayerSeekResponseCopyWith<$Res> {
-  __$$_KodiPlayerSeekResponseCopyWithImpl(_$_KodiPlayerSeekResponse _value,
-      $Res Function(_$_KodiPlayerSeekResponse) _then)
+        _$KodiPlayerSeekResponseImpl>
+    implements _$$KodiPlayerSeekResponseImplCopyWith<$Res> {
+  __$$KodiPlayerSeekResponseImplCopyWithImpl(
+      _$KodiPlayerSeekResponseImpl _value,
+      $Res Function(_$KodiPlayerSeekResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerSeekResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,7 +337,7 @@ class __$$_KodiPlayerSeekResponseCopyWithImpl<$Res>
     Object? time = null,
     Object? totalTime = null,
   }) {
-    return _then(_$_KodiPlayerSeekResponse(
+    return _then(_$KodiPlayerSeekResponseImpl(
       percentage: null == percentage
           ? _value.percentage
           : percentage // ignore: cast_nullable_to_non_nullable
@@ -323,14 +356,14 @@ class __$$_KodiPlayerSeekResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerSeekResponse implements _KodiPlayerSeekResponse {
-  const _$_KodiPlayerSeekResponse(
+class _$KodiPlayerSeekResponseImpl implements _KodiPlayerSeekResponse {
+  const _$KodiPlayerSeekResponseImpl(
       {required this.percentage,
       required this.time,
       @JsonKey(name: 'totaltime') required this.totalTime});
 
-  factory _$_KodiPlayerSeekResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerSeekResponseFromJson(json);
+  factory _$KodiPlayerSeekResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerSeekResponseImplFromJson(json);
 
   @override
   final double percentage;
@@ -346,10 +379,10 @@ class _$_KodiPlayerSeekResponse implements _KodiPlayerSeekResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerSeekResponse &&
+            other is _$KodiPlayerSeekResponseImpl &&
             (identical(other.percentage, percentage) ||
                 other.percentage == percentage) &&
             (identical(other.time, time) || other.time == time) &&
@@ -357,20 +390,22 @@ class _$_KodiPlayerSeekResponse implements _KodiPlayerSeekResponse {
                 other.totalTime == totalTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, percentage, time, totalTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerSeekResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerSeekResponseCopyWith<_$_KodiPlayerSeekResponse> get copyWith =>
-      __$$_KodiPlayerSeekResponseCopyWithImpl<_$_KodiPlayerSeekResponse>(
-          this, _$identity);
+  _$$KodiPlayerSeekResponseImplCopyWith<_$KodiPlayerSeekResponseImpl>
+      get copyWith => __$$KodiPlayerSeekResponseImplCopyWithImpl<
+          _$KodiPlayerSeekResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerSeekResponseToJson(
+    return _$$KodiPlayerSeekResponseImplToJson(
       this,
     );
   }
@@ -381,10 +416,10 @@ abstract class _KodiPlayerSeekResponse implements KodiPlayerSeekResponse {
       {required final double percentage,
       required final KodiGlobalTime time,
       @JsonKey(name: 'totaltime')
-      required final KodiGlobalTime totalTime}) = _$_KodiPlayerSeekResponse;
+      required final KodiGlobalTime totalTime}) = _$KodiPlayerSeekResponseImpl;
 
   factory _KodiPlayerSeekResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerSeekResponse.fromJson;
+      _$KodiPlayerSeekResponseImpl.fromJson;
 
   @override
   double get percentage;
@@ -393,10 +428,13 @@ abstract class _KodiPlayerSeekResponse implements KodiPlayerSeekResponse {
   @override
   @JsonKey(name: 'totaltime')
   KodiGlobalTime get totalTime;
+
+  /// Create a copy of KodiPlayerSeekResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerSeekResponseCopyWith<_$_KodiPlayerSeekResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerSeekResponseImplCopyWith<_$KodiPlayerSeekResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 KodiPlayerSeekValue _$KodiPlayerSeekValueFromJson(Map<String, dynamic> json) {
@@ -468,6 +506,8 @@ mixin _$KodiPlayerSeekValue {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiPlayerSeekValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -487,35 +527,40 @@ class _$KodiPlayerSeekValueCopyWithImpl<$Res, $Val extends KodiPlayerSeekValue>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$KodiPlayerSeekValuePercentageCopyWith<$Res> {
-  factory _$$KodiPlayerSeekValuePercentageCopyWith(
-          _$KodiPlayerSeekValuePercentage value,
-          $Res Function(_$KodiPlayerSeekValuePercentage) then) =
-      __$$KodiPlayerSeekValuePercentageCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerSeekValuePercentageImplCopyWith<$Res> {
+  factory _$$KodiPlayerSeekValuePercentageImplCopyWith(
+          _$KodiPlayerSeekValuePercentageImpl value,
+          $Res Function(_$KodiPlayerSeekValuePercentageImpl) then) =
+      __$$KodiPlayerSeekValuePercentageImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double percentage});
 }
 
 /// @nodoc
-class __$$KodiPlayerSeekValuePercentageCopyWithImpl<$Res>
+class __$$KodiPlayerSeekValuePercentageImplCopyWithImpl<$Res>
     extends _$KodiPlayerSeekValueCopyWithImpl<$Res,
-        _$KodiPlayerSeekValuePercentage>
-    implements _$$KodiPlayerSeekValuePercentageCopyWith<$Res> {
-  __$$KodiPlayerSeekValuePercentageCopyWithImpl(
-      _$KodiPlayerSeekValuePercentage _value,
-      $Res Function(_$KodiPlayerSeekValuePercentage) _then)
+        _$KodiPlayerSeekValuePercentageImpl>
+    implements _$$KodiPlayerSeekValuePercentageImplCopyWith<$Res> {
+  __$$KodiPlayerSeekValuePercentageImplCopyWithImpl(
+      _$KodiPlayerSeekValuePercentageImpl _value,
+      $Res Function(_$KodiPlayerSeekValuePercentageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? percentage = null,
   }) {
-    return _then(_$KodiPlayerSeekValuePercentage(
-      percentage: null == percentage
+    return _then(_$KodiPlayerSeekValuePercentageImpl(
+      null == percentage
           ? _value.percentage
           : percentage // ignore: cast_nullable_to_non_nullable
               as double,
@@ -525,13 +570,15 @@ class __$$KodiPlayerSeekValuePercentageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlayerSeekValuePercentage implements KodiPlayerSeekValuePercentage {
-  const _$KodiPlayerSeekValuePercentage(
-      {required this.percentage, final String? $type})
+class _$KodiPlayerSeekValuePercentageImpl
+    implements KodiPlayerSeekValuePercentage {
+  const _$KodiPlayerSeekValuePercentageImpl(this.percentage,
+      {final String? $type})
       : $type = $type ?? 'percentage';
 
-  factory _$KodiPlayerSeekValuePercentage.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlayerSeekValuePercentageFromJson(json);
+  factory _$KodiPlayerSeekValuePercentageImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPlayerSeekValuePercentageImplFromJson(json);
 
   @override
   final double percentage;
@@ -545,24 +592,27 @@ class _$KodiPlayerSeekValuePercentage implements KodiPlayerSeekValuePercentage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlayerSeekValuePercentage &&
+            other is _$KodiPlayerSeekValuePercentageImpl &&
             (identical(other.percentage, percentage) ||
                 other.percentage == percentage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, percentage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlayerSeekValuePercentageCopyWith<_$KodiPlayerSeekValuePercentage>
-      get copyWith => __$$KodiPlayerSeekValuePercentageCopyWithImpl<
-          _$KodiPlayerSeekValuePercentage>(this, _$identity);
+  _$$KodiPlayerSeekValuePercentageImplCopyWith<
+          _$KodiPlayerSeekValuePercentageImpl>
+      get copyWith => __$$KodiPlayerSeekValuePercentageImplCopyWithImpl<
+          _$KodiPlayerSeekValuePercentageImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -640,30 +690,35 @@ class _$KodiPlayerSeekValuePercentage implements KodiPlayerSeekValuePercentage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlayerSeekValuePercentageToJson(
+    return _$$KodiPlayerSeekValuePercentageImplToJson(
       this,
     );
   }
 }
 
 abstract class KodiPlayerSeekValuePercentage implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValuePercentage(
-      {required final double percentage}) = _$KodiPlayerSeekValuePercentage;
+  const factory KodiPlayerSeekValuePercentage(final double percentage) =
+      _$KodiPlayerSeekValuePercentageImpl;
 
   factory KodiPlayerSeekValuePercentage.fromJson(Map<String, dynamic> json) =
-      _$KodiPlayerSeekValuePercentage.fromJson;
+      _$KodiPlayerSeekValuePercentageImpl.fromJson;
 
   double get percentage;
-  @JsonKey(ignore: true)
-  _$$KodiPlayerSeekValuePercentageCopyWith<_$KodiPlayerSeekValuePercentage>
+
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerSeekValuePercentageImplCopyWith<
+          _$KodiPlayerSeekValuePercentageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlayerSeekValueTimeCopyWith<$Res> {
-  factory _$$KodiPlayerSeekValueTimeCopyWith(_$KodiPlayerSeekValueTime value,
-          $Res Function(_$KodiPlayerSeekValueTime) then) =
-      __$$KodiPlayerSeekValueTimeCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerSeekValueTimeImplCopyWith<$Res> {
+  factory _$$KodiPlayerSeekValueTimeImplCopyWith(
+          _$KodiPlayerSeekValueTimeImpl value,
+          $Res Function(_$KodiPlayerSeekValueTimeImpl) then) =
+      __$$KodiPlayerSeekValueTimeImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerPositionTime time});
 
@@ -671,26 +726,32 @@ abstract class _$$KodiPlayerSeekValueTimeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$KodiPlayerSeekValueTimeCopyWithImpl<$Res>
-    extends _$KodiPlayerSeekValueCopyWithImpl<$Res, _$KodiPlayerSeekValueTime>
-    implements _$$KodiPlayerSeekValueTimeCopyWith<$Res> {
-  __$$KodiPlayerSeekValueTimeCopyWithImpl(_$KodiPlayerSeekValueTime _value,
-      $Res Function(_$KodiPlayerSeekValueTime) _then)
+class __$$KodiPlayerSeekValueTimeImplCopyWithImpl<$Res>
+    extends _$KodiPlayerSeekValueCopyWithImpl<$Res,
+        _$KodiPlayerSeekValueTimeImpl>
+    implements _$$KodiPlayerSeekValueTimeImplCopyWith<$Res> {
+  __$$KodiPlayerSeekValueTimeImplCopyWithImpl(
+      _$KodiPlayerSeekValueTimeImpl _value,
+      $Res Function(_$KodiPlayerSeekValueTimeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? time = null,
   }) {
-    return _then(_$KodiPlayerSeekValueTime(
-      time: null == time
+    return _then(_$KodiPlayerSeekValueTimeImpl(
+      null == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as KodiPlayerPositionTime,
     ));
   }
 
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerPositionTimeCopyWith<$Res> get time {
@@ -702,12 +763,12 @@ class __$$KodiPlayerSeekValueTimeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlayerSeekValueTime implements KodiPlayerSeekValueTime {
-  const _$KodiPlayerSeekValueTime({required this.time, final String? $type})
+class _$KodiPlayerSeekValueTimeImpl implements KodiPlayerSeekValueTime {
+  const _$KodiPlayerSeekValueTimeImpl(this.time, {final String? $type})
       : $type = $type ?? 'time';
 
-  factory _$KodiPlayerSeekValueTime.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlayerSeekValueTimeFromJson(json);
+  factory _$KodiPlayerSeekValueTimeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerSeekValueTimeImplFromJson(json);
 
   @override
   final KodiPlayerPositionTime time;
@@ -721,23 +782,25 @@ class _$KodiPlayerSeekValueTime implements KodiPlayerSeekValueTime {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlayerSeekValueTime &&
+            other is _$KodiPlayerSeekValueTimeImpl &&
             (identical(other.time, time) || other.time == time));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, time);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlayerSeekValueTimeCopyWith<_$KodiPlayerSeekValueTime> get copyWith =>
-      __$$KodiPlayerSeekValueTimeCopyWithImpl<_$KodiPlayerSeekValueTime>(
-          this, _$identity);
+  _$$KodiPlayerSeekValueTimeImplCopyWith<_$KodiPlayerSeekValueTimeImpl>
+      get copyWith => __$$KodiPlayerSeekValueTimeImplCopyWithImpl<
+          _$KodiPlayerSeekValueTimeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -815,49 +878,57 @@ class _$KodiPlayerSeekValueTime implements KodiPlayerSeekValueTime {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlayerSeekValueTimeToJson(
+    return _$$KodiPlayerSeekValueTimeImplToJson(
       this,
     );
   }
 }
 
 abstract class KodiPlayerSeekValueTime implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValueTime(
-      {required final KodiPlayerPositionTime time}) = _$KodiPlayerSeekValueTime;
+  const factory KodiPlayerSeekValueTime(final KodiPlayerPositionTime time) =
+      _$KodiPlayerSeekValueTimeImpl;
 
   factory KodiPlayerSeekValueTime.fromJson(Map<String, dynamic> json) =
-      _$KodiPlayerSeekValueTime.fromJson;
+      _$KodiPlayerSeekValueTimeImpl.fromJson;
 
   KodiPlayerPositionTime get time;
-  @JsonKey(ignore: true)
-  _$$KodiPlayerSeekValueTimeCopyWith<_$KodiPlayerSeekValueTime> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerSeekValueTimeImplCopyWith<_$KodiPlayerSeekValueTimeImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlayerSeekValueStepCopyWith<$Res> {
-  factory _$$KodiPlayerSeekValueStepCopyWith(_$KodiPlayerSeekValueStep value,
-          $Res Function(_$KodiPlayerSeekValueStep) then) =
-      __$$KodiPlayerSeekValueStepCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerSeekValueStepImplCopyWith<$Res> {
+  factory _$$KodiPlayerSeekValueStepImplCopyWith(
+          _$KodiPlayerSeekValueStepImpl value,
+          $Res Function(_$KodiPlayerSeekValueStepImpl) then) =
+      __$$KodiPlayerSeekValueStepImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerSeekStep step});
 }
 
 /// @nodoc
-class __$$KodiPlayerSeekValueStepCopyWithImpl<$Res>
-    extends _$KodiPlayerSeekValueCopyWithImpl<$Res, _$KodiPlayerSeekValueStep>
-    implements _$$KodiPlayerSeekValueStepCopyWith<$Res> {
-  __$$KodiPlayerSeekValueStepCopyWithImpl(_$KodiPlayerSeekValueStep _value,
-      $Res Function(_$KodiPlayerSeekValueStep) _then)
+class __$$KodiPlayerSeekValueStepImplCopyWithImpl<$Res>
+    extends _$KodiPlayerSeekValueCopyWithImpl<$Res,
+        _$KodiPlayerSeekValueStepImpl>
+    implements _$$KodiPlayerSeekValueStepImplCopyWith<$Res> {
+  __$$KodiPlayerSeekValueStepImplCopyWithImpl(
+      _$KodiPlayerSeekValueStepImpl _value,
+      $Res Function(_$KodiPlayerSeekValueStepImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? step = null,
   }) {
-    return _then(_$KodiPlayerSeekValueStep(
-      step: null == step
+    return _then(_$KodiPlayerSeekValueStepImpl(
+      null == step
           ? _value.step
           : step // ignore: cast_nullable_to_non_nullable
               as KodiPlayerSeekStep,
@@ -867,12 +938,12 @@ class __$$KodiPlayerSeekValueStepCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlayerSeekValueStep implements KodiPlayerSeekValueStep {
-  const _$KodiPlayerSeekValueStep({required this.step, final String? $type})
+class _$KodiPlayerSeekValueStepImpl implements KodiPlayerSeekValueStep {
+  const _$KodiPlayerSeekValueStepImpl(this.step, {final String? $type})
       : $type = $type ?? 'step';
 
-  factory _$KodiPlayerSeekValueStep.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlayerSeekValueStepFromJson(json);
+  factory _$KodiPlayerSeekValueStepImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerSeekValueStepImplFromJson(json);
 
   @override
   final KodiPlayerSeekStep step;
@@ -886,23 +957,25 @@ class _$KodiPlayerSeekValueStep implements KodiPlayerSeekValueStep {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlayerSeekValueStep &&
+            other is _$KodiPlayerSeekValueStepImpl &&
             (identical(other.step, step) || other.step == step));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, step);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlayerSeekValueStepCopyWith<_$KodiPlayerSeekValueStep> get copyWith =>
-      __$$KodiPlayerSeekValueStepCopyWithImpl<_$KodiPlayerSeekValueStep>(
-          this, _$identity);
+  _$$KodiPlayerSeekValueStepImplCopyWith<_$KodiPlayerSeekValueStepImpl>
+      get copyWith => __$$KodiPlayerSeekValueStepImplCopyWithImpl<
+          _$KodiPlayerSeekValueStepImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -980,52 +1053,57 @@ class _$KodiPlayerSeekValueStep implements KodiPlayerSeekValueStep {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlayerSeekValueStepToJson(
+    return _$$KodiPlayerSeekValueStepImplToJson(
       this,
     );
   }
 }
 
 abstract class KodiPlayerSeekValueStep implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValueStep(
-      {required final KodiPlayerSeekStep step}) = _$KodiPlayerSeekValueStep;
+  const factory KodiPlayerSeekValueStep(final KodiPlayerSeekStep step) =
+      _$KodiPlayerSeekValueStepImpl;
 
   factory KodiPlayerSeekValueStep.fromJson(Map<String, dynamic> json) =
-      _$KodiPlayerSeekValueStep.fromJson;
+      _$KodiPlayerSeekValueStepImpl.fromJson;
 
   KodiPlayerSeekStep get step;
-  @JsonKey(ignore: true)
-  _$$KodiPlayerSeekValueStepCopyWith<_$KodiPlayerSeekValueStep> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerSeekValueStepImplCopyWith<_$KodiPlayerSeekValueStepImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiPlayerSeekValueSecondsCopyWith<$Res> {
-  factory _$$KodiPlayerSeekValueSecondsCopyWith(
-          _$KodiPlayerSeekValueSeconds value,
-          $Res Function(_$KodiPlayerSeekValueSeconds) then) =
-      __$$KodiPlayerSeekValueSecondsCopyWithImpl<$Res>;
+abstract class _$$KodiPlayerSeekValueSecondsImplCopyWith<$Res> {
+  factory _$$KodiPlayerSeekValueSecondsImplCopyWith(
+          _$KodiPlayerSeekValueSecondsImpl value,
+          $Res Function(_$KodiPlayerSeekValueSecondsImpl) then) =
+      __$$KodiPlayerSeekValueSecondsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int seconds});
 }
 
 /// @nodoc
-class __$$KodiPlayerSeekValueSecondsCopyWithImpl<$Res>
+class __$$KodiPlayerSeekValueSecondsImplCopyWithImpl<$Res>
     extends _$KodiPlayerSeekValueCopyWithImpl<$Res,
-        _$KodiPlayerSeekValueSeconds>
-    implements _$$KodiPlayerSeekValueSecondsCopyWith<$Res> {
-  __$$KodiPlayerSeekValueSecondsCopyWithImpl(
-      _$KodiPlayerSeekValueSeconds _value,
-      $Res Function(_$KodiPlayerSeekValueSeconds) _then)
+        _$KodiPlayerSeekValueSecondsImpl>
+    implements _$$KodiPlayerSeekValueSecondsImplCopyWith<$Res> {
+  __$$KodiPlayerSeekValueSecondsImplCopyWithImpl(
+      _$KodiPlayerSeekValueSecondsImpl _value,
+      $Res Function(_$KodiPlayerSeekValueSecondsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? seconds = null,
   }) {
-    return _then(_$KodiPlayerSeekValueSeconds(
-      seconds: null == seconds
+    return _then(_$KodiPlayerSeekValueSecondsImpl(
+      null == seconds
           ? _value.seconds
           : seconds // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1035,13 +1113,13 @@ class __$$KodiPlayerSeekValueSecondsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiPlayerSeekValueSeconds implements KodiPlayerSeekValueSeconds {
-  const _$KodiPlayerSeekValueSeconds(
-      {required this.seconds, final String? $type})
+class _$KodiPlayerSeekValueSecondsImpl implements KodiPlayerSeekValueSeconds {
+  const _$KodiPlayerSeekValueSecondsImpl(this.seconds, {final String? $type})
       : $type = $type ?? 'seconds';
 
-  factory _$KodiPlayerSeekValueSeconds.fromJson(Map<String, dynamic> json) =>
-      _$$KodiPlayerSeekValueSecondsFromJson(json);
+  factory _$KodiPlayerSeekValueSecondsImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPlayerSeekValueSecondsImplFromJson(json);
 
   @override
   final int seconds;
@@ -1055,23 +1133,25 @@ class _$KodiPlayerSeekValueSeconds implements KodiPlayerSeekValueSeconds {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiPlayerSeekValueSeconds &&
+            other is _$KodiPlayerSeekValueSecondsImpl &&
             (identical(other.seconds, seconds) || other.seconds == seconds));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, seconds);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiPlayerSeekValueSecondsCopyWith<_$KodiPlayerSeekValueSeconds>
-      get copyWith => __$$KodiPlayerSeekValueSecondsCopyWithImpl<
-          _$KodiPlayerSeekValueSeconds>(this, _$identity);
+  _$$KodiPlayerSeekValueSecondsImplCopyWith<_$KodiPlayerSeekValueSecondsImpl>
+      get copyWith => __$$KodiPlayerSeekValueSecondsImplCopyWithImpl<
+          _$KodiPlayerSeekValueSecondsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1149,21 +1229,24 @@ class _$KodiPlayerSeekValueSeconds implements KodiPlayerSeekValueSeconds {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiPlayerSeekValueSecondsToJson(
+    return _$$KodiPlayerSeekValueSecondsImplToJson(
       this,
     );
   }
 }
 
 abstract class KodiPlayerSeekValueSeconds implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValueSeconds({required final int seconds}) =
-      _$KodiPlayerSeekValueSeconds;
+  const factory KodiPlayerSeekValueSeconds(final int seconds) =
+      _$KodiPlayerSeekValueSecondsImpl;
 
   factory KodiPlayerSeekValueSeconds.fromJson(Map<String, dynamic> json) =
-      _$KodiPlayerSeekValueSeconds.fromJson;
+      _$KodiPlayerSeekValueSecondsImpl.fromJson;
 
   int get seconds;
-  @JsonKey(ignore: true)
-  _$$KodiPlayerSeekValueSecondsCopyWith<_$KodiPlayerSeekValueSeconds>
+
+  /// Create a copy of KodiPlayerSeekValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerSeekValueSecondsImplCopyWith<_$KodiPlayerSeekValueSecondsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

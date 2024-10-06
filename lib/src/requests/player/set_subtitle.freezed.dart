@@ -12,7 +12,7 @@ part of 'set_subtitle.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetSubtitle _$SetSubtitleFromJson(Map<String, dynamic> json) {
   return _SetSubtitle.fromJson(json);
@@ -26,8 +26,12 @@ mixin _$SetSubtitle {
   SetSubtitleSubtitle get subtitle => throw _privateConstructorUsedError;
   bool get enable => throw _privateConstructorUsedError;
 
+  /// Serializes this SetSubtitle to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetSubtitleCopyWith<SetSubtitle> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$SetSubtitleCopyWithImpl<$Res, $Val extends SetSubtitle>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$SetSubtitleCopyWithImpl<$Res, $Val extends SetSubtitle>
     ) as $Val);
   }
 
+  /// Create a copy of SetSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SetSubtitleSubtitleCopyWith<$Res> get subtitle {
@@ -89,11 +97,11 @@ class _$SetSubtitleCopyWithImpl<$Res, $Val extends SetSubtitle>
 }
 
 /// @nodoc
-abstract class _$$_SetSubtitleCopyWith<$Res>
+abstract class _$$SetSubtitleImplCopyWith<$Res>
     implements $SetSubtitleCopyWith<$Res> {
-  factory _$$_SetSubtitleCopyWith(
-          _$_SetSubtitle value, $Res Function(_$_SetSubtitle) then) =
-      __$$_SetSubtitleCopyWithImpl<$Res>;
+  factory _$$SetSubtitleImplCopyWith(
+          _$SetSubtitleImpl value, $Res Function(_$SetSubtitleImpl) then) =
+      __$$SetSubtitleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -106,13 +114,15 @@ abstract class _$$_SetSubtitleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetSubtitleCopyWithImpl<$Res>
-    extends _$SetSubtitleCopyWithImpl<$Res, _$_SetSubtitle>
-    implements _$$_SetSubtitleCopyWith<$Res> {
-  __$$_SetSubtitleCopyWithImpl(
-      _$_SetSubtitle _value, $Res Function(_$_SetSubtitle) _then)
+class __$$SetSubtitleImplCopyWithImpl<$Res>
+    extends _$SetSubtitleCopyWithImpl<$Res, _$SetSubtitleImpl>
+    implements _$$SetSubtitleImplCopyWith<$Res> {
+  __$$SetSubtitleImplCopyWithImpl(
+      _$SetSubtitleImpl _value, $Res Function(_$SetSubtitleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -120,7 +130,7 @@ class __$$_SetSubtitleCopyWithImpl<$Res>
     Object? subtitle = null,
     Object? enable = null,
   }) {
-    return _then(_$_SetSubtitle(
+    return _then(_$SetSubtitleImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -139,14 +149,14 @@ class __$$_SetSubtitleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetSubtitle extends _SetSubtitle {
-  const _$_SetSubtitle(@JsonKey(name: 'playerid') this.id,
+class _$SetSubtitleImpl extends _SetSubtitle {
+  const _$SetSubtitleImpl(@JsonKey(name: 'playerid') this.id,
       @SetSubtitleSubtitleConverter() this.subtitle,
-      {this.enable = true})
+      {this.enable = false})
       : super._();
 
-  factory _$_SetSubtitle.fromJson(Map<String, dynamic> json) =>
-      _$$_SetSubtitleFromJson(json);
+  factory _$SetSubtitleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSubtitleImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -164,29 +174,31 @@ class _$_SetSubtitle extends _SetSubtitle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSubtitle &&
+            other is _$SetSubtitleImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.subtitle, subtitle) ||
                 other.subtitle == subtitle) &&
             (identical(other.enable, enable) || other.enable == enable));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, subtitle, enable);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetSubtitleCopyWith<_$_SetSubtitle> get copyWith =>
-      __$$_SetSubtitleCopyWithImpl<_$_SetSubtitle>(this, _$identity);
+  _$$SetSubtitleImplCopyWith<_$SetSubtitleImpl> get copyWith =>
+      __$$SetSubtitleImplCopyWithImpl<_$SetSubtitleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetSubtitleToJson(
+    return _$$SetSubtitleImplToJson(
       this,
     );
   }
@@ -195,11 +207,11 @@ class _$_SetSubtitle extends _SetSubtitle {
 abstract class _SetSubtitle extends SetSubtitle {
   const factory _SetSubtitle(@JsonKey(name: 'playerid') final int id,
       @SetSubtitleSubtitleConverter() final SetSubtitleSubtitle subtitle,
-      {final bool enable}) = _$_SetSubtitle;
+      {final bool enable}) = _$SetSubtitleImpl;
   const _SetSubtitle._() : super._();
 
   factory _SetSubtitle.fromJson(Map<String, dynamic> json) =
-      _$_SetSubtitle.fromJson;
+      _$SetSubtitleImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -209,9 +221,12 @@ abstract class _SetSubtitle extends SetSubtitle {
   SetSubtitleSubtitle get subtitle;
   @override
   bool get enable;
+
+  /// Create a copy of SetSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetSubtitleCopyWith<_$_SetSubtitle> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetSubtitleImplCopyWith<_$SetSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -269,6 +284,8 @@ mixin _$SetSubtitleSubtitle {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SetSubtitleSubtitle to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -288,31 +305,39 @@ class _$SetSubtitleSubtitleCopyWithImpl<$Res, $Val extends SetSubtitleSubtitle>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SetSubtitleSubtitle
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SetSubtitleSubtitleEnumCopyWith<$Res> {
-  factory _$$_SetSubtitleSubtitleEnumCopyWith(_$_SetSubtitleSubtitleEnum value,
-          $Res Function(_$_SetSubtitleSubtitleEnum) then) =
-      __$$_SetSubtitleSubtitleEnumCopyWithImpl<$Res>;
+abstract class _$$SetSubtitleSubtitleEnumImplCopyWith<$Res> {
+  factory _$$SetSubtitleSubtitleEnumImplCopyWith(
+          _$SetSubtitleSubtitleEnumImpl value,
+          $Res Function(_$SetSubtitleSubtitleEnumImpl) then) =
+      __$$SetSubtitleSubtitleEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerGoToOnOff value});
 }
 
 /// @nodoc
-class __$$_SetSubtitleSubtitleEnumCopyWithImpl<$Res>
-    extends _$SetSubtitleSubtitleCopyWithImpl<$Res, _$_SetSubtitleSubtitleEnum>
-    implements _$$_SetSubtitleSubtitleEnumCopyWith<$Res> {
-  __$$_SetSubtitleSubtitleEnumCopyWithImpl(_$_SetSubtitleSubtitleEnum _value,
-      $Res Function(_$_SetSubtitleSubtitleEnum) _then)
+class __$$SetSubtitleSubtitleEnumImplCopyWithImpl<$Res>
+    extends _$SetSubtitleSubtitleCopyWithImpl<$Res,
+        _$SetSubtitleSubtitleEnumImpl>
+    implements _$$SetSubtitleSubtitleEnumImplCopyWith<$Res> {
+  __$$SetSubtitleSubtitleEnumImplCopyWithImpl(
+      _$SetSubtitleSubtitleEnumImpl _value,
+      $Res Function(_$SetSubtitleSubtitleEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSubtitleSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetSubtitleSubtitleEnum(
+    return _then(_$SetSubtitleSubtitleEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -323,12 +348,12 @@ class __$$_SetSubtitleSubtitleEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetSubtitleSubtitleEnum implements _SetSubtitleSubtitleEnum {
-  const _$_SetSubtitleSubtitleEnum(this.value, {final String? $type})
+class _$SetSubtitleSubtitleEnumImpl implements _SetSubtitleSubtitleEnum {
+  const _$SetSubtitleSubtitleEnumImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_SetSubtitleSubtitleEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_SetSubtitleSubtitleEnumFromJson(json);
+  factory _$SetSubtitleSubtitleEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSubtitleSubtitleEnumImplFromJson(json);
 
   @override
   final KodiPlayerGoToOnOff value;
@@ -342,24 +367,25 @@ class _$_SetSubtitleSubtitleEnum implements _SetSubtitleSubtitleEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSubtitleSubtitleEnum &&
+            other is _$SetSubtitleSubtitleEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSubtitleSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetSubtitleSubtitleEnumCopyWith<_$_SetSubtitleSubtitleEnum>
-      get copyWith =>
-          __$$_SetSubtitleSubtitleEnumCopyWithImpl<_$_SetSubtitleSubtitleEnum>(
-              this, _$identity);
+  _$$SetSubtitleSubtitleEnumImplCopyWith<_$SetSubtitleSubtitleEnumImpl>
+      get copyWith => __$$SetSubtitleSubtitleEnumImplCopyWithImpl<
+          _$SetSubtitleSubtitleEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -425,7 +451,7 @@ class _$_SetSubtitleSubtitleEnum implements _SetSubtitleSubtitleEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetSubtitleSubtitleEnumToJson(
+    return _$$SetSubtitleSubtitleEnumImplToJson(
       this,
     );
   }
@@ -433,42 +459,49 @@ class _$_SetSubtitleSubtitleEnum implements _SetSubtitleSubtitleEnum {
 
 abstract class _SetSubtitleSubtitleEnum implements SetSubtitleSubtitle {
   const factory _SetSubtitleSubtitleEnum(final KodiPlayerGoToOnOff value) =
-      _$_SetSubtitleSubtitleEnum;
+      _$SetSubtitleSubtitleEnumImpl;
 
   factory _SetSubtitleSubtitleEnum.fromJson(Map<String, dynamic> json) =
-      _$_SetSubtitleSubtitleEnum.fromJson;
+      _$SetSubtitleSubtitleEnumImpl.fromJson;
 
   @override
   KodiPlayerGoToOnOff get value;
-  @JsonKey(ignore: true)
-  _$$_SetSubtitleSubtitleEnumCopyWith<_$_SetSubtitleSubtitleEnum>
+
+  /// Create a copy of SetSubtitleSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetSubtitleSubtitleEnumImplCopyWith<_$SetSubtitleSubtitleEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SetSubtitleSubtitleIndexCopyWith<$Res> {
-  factory _$$_SetSubtitleSubtitleIndexCopyWith(
-          _$_SetSubtitleSubtitleIndex value,
-          $Res Function(_$_SetSubtitleSubtitleIndex) then) =
-      __$$_SetSubtitleSubtitleIndexCopyWithImpl<$Res>;
+abstract class _$$SetSubtitleSubtitleIndexImplCopyWith<$Res> {
+  factory _$$SetSubtitleSubtitleIndexImplCopyWith(
+          _$SetSubtitleSubtitleIndexImpl value,
+          $Res Function(_$SetSubtitleSubtitleIndexImpl) then) =
+      __$$SetSubtitleSubtitleIndexImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int value});
 }
 
 /// @nodoc
-class __$$_SetSubtitleSubtitleIndexCopyWithImpl<$Res>
-    extends _$SetSubtitleSubtitleCopyWithImpl<$Res, _$_SetSubtitleSubtitleIndex>
-    implements _$$_SetSubtitleSubtitleIndexCopyWith<$Res> {
-  __$$_SetSubtitleSubtitleIndexCopyWithImpl(_$_SetSubtitleSubtitleIndex _value,
-      $Res Function(_$_SetSubtitleSubtitleIndex) _then)
+class __$$SetSubtitleSubtitleIndexImplCopyWithImpl<$Res>
+    extends _$SetSubtitleSubtitleCopyWithImpl<$Res,
+        _$SetSubtitleSubtitleIndexImpl>
+    implements _$$SetSubtitleSubtitleIndexImplCopyWith<$Res> {
+  __$$SetSubtitleSubtitleIndexImplCopyWithImpl(
+      _$SetSubtitleSubtitleIndexImpl _value,
+      $Res Function(_$SetSubtitleSubtitleIndexImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSubtitleSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetSubtitleSubtitleIndex(
+    return _then(_$SetSubtitleSubtitleIndexImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -479,12 +512,12 @@ class __$$_SetSubtitleSubtitleIndexCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetSubtitleSubtitleIndex implements _SetSubtitleSubtitleIndex {
-  const _$_SetSubtitleSubtitleIndex(this.value, {final String? $type})
+class _$SetSubtitleSubtitleIndexImpl implements _SetSubtitleSubtitleIndex {
+  const _$SetSubtitleSubtitleIndexImpl(this.value, {final String? $type})
       : $type = $type ?? 'index';
 
-  factory _$_SetSubtitleSubtitleIndex.fromJson(Map<String, dynamic> json) =>
-      _$$_SetSubtitleSubtitleIndexFromJson(json);
+  factory _$SetSubtitleSubtitleIndexImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSubtitleSubtitleIndexImplFromJson(json);
 
   @override
   final int value;
@@ -498,23 +531,25 @@ class _$_SetSubtitleSubtitleIndex implements _SetSubtitleSubtitleIndex {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSubtitleSubtitleIndex &&
+            other is _$SetSubtitleSubtitleIndexImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSubtitleSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetSubtitleSubtitleIndexCopyWith<_$_SetSubtitleSubtitleIndex>
-      get copyWith => __$$_SetSubtitleSubtitleIndexCopyWithImpl<
-          _$_SetSubtitleSubtitleIndex>(this, _$identity);
+  _$$SetSubtitleSubtitleIndexImplCopyWith<_$SetSubtitleSubtitleIndexImpl>
+      get copyWith => __$$SetSubtitleSubtitleIndexImplCopyWithImpl<
+          _$SetSubtitleSubtitleIndexImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -580,7 +615,7 @@ class _$_SetSubtitleSubtitleIndex implements _SetSubtitleSubtitleIndex {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetSubtitleSubtitleIndexToJson(
+    return _$$SetSubtitleSubtitleIndexImplToJson(
       this,
     );
   }
@@ -588,14 +623,17 @@ class _$_SetSubtitleSubtitleIndex implements _SetSubtitleSubtitleIndex {
 
 abstract class _SetSubtitleSubtitleIndex implements SetSubtitleSubtitle {
   const factory _SetSubtitleSubtitleIndex(final int value) =
-      _$_SetSubtitleSubtitleIndex;
+      _$SetSubtitleSubtitleIndexImpl;
 
   factory _SetSubtitleSubtitleIndex.fromJson(Map<String, dynamic> json) =
-      _$_SetSubtitleSubtitleIndex.fromJson;
+      _$SetSubtitleSubtitleIndexImpl.fromJson;
 
   @override
   int get value;
-  @JsonKey(ignore: true)
-  _$$_SetSubtitleSubtitleIndexCopyWith<_$_SetSubtitleSubtitleIndex>
+
+  /// Create a copy of SetSubtitleSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetSubtitleSubtitleIndexImplCopyWith<_$SetSubtitleSubtitleIndexImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

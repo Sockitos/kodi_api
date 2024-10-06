@@ -9,7 +9,9 @@ enum KodiPVRTimerState {
   completed,
   aborted,
   cancelled,
+  @JsonValue('conflict_ok')
   conflictOk,
+  @JsonValue('conflict_notok')
   conflictNotok,
   error,
   disabled,

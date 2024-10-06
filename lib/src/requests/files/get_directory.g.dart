@@ -6,8 +6,8 @@ part of 'get_directory.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetDirectory _$$_GetDirectoryFromJson(Map<String, dynamic> json) =>
-    _$_GetDirectory(
+_$GetDirectoryImpl _$$GetDirectoryImplFromJson(Map<String, dynamic> json) =>
+    _$GetDirectoryImpl(
       json['directory'] as String,
       media: $enumDecodeNullable(_$KodiFilesMediaEnumMap, json['media']) ??
           KodiFilesMedia.files,
@@ -22,7 +22,7 @@ _$_GetDirectory _$$_GetDirectoryFromJson(Map<String, dynamic> json) =>
           : KodiListLimits.fromJson(json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetDirectoryToJson(_$_GetDirectory instance) {
+Map<String, dynamic> _$$GetDirectoryImplToJson(_$GetDirectoryImpl instance) {
   final val = <String, dynamic>{
     'directory': instance.directory,
     'media': _$KodiFilesMediaEnumMap[instance.media]!,
@@ -140,9 +140,9 @@ const _$KodiListFieldsFilesEnumMap = {
   KodiListFieldsFiles.albumDuration: 'albumduration',
 };
 
-_$_GetDirectoryResponse _$$_GetDirectoryResponseFromJson(
+_$GetDirectoryResponseImpl _$$GetDirectoryResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetDirectoryResponse(
+    _$GetDirectoryResponseImpl(
       files: (json['files'] as List<dynamic>)
           .map((e) => KodiListItemFile.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -150,8 +150,8 @@ _$_GetDirectoryResponse _$$_GetDirectoryResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetDirectoryResponseToJson(
-        _$_GetDirectoryResponse instance) =>
+Map<String, dynamic> _$$GetDirectoryResponseImplToJson(
+        _$GetDirectoryResponseImpl instance) =>
     <String, dynamic>{
       'files': instance.files.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

@@ -12,7 +12,7 @@ part of 'get_movie_sets.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetMovieSets _$GetMovieSetsFromJson(Map<String, dynamic> json) {
   return _GetMovieSets.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetMovieSets {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetMovieSets to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetMovieSets
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetMovieSetsCopyWith<GetMovieSets> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$GetMovieSetsCopyWithImpl<$Res, $Val extends GetMovieSets>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetMovieSets
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$GetMovieSetsCopyWithImpl<$Res, $Val extends GetMovieSets>
     ) as $Val);
   }
 
+  /// Create a copy of GetMovieSets
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -91,6 +99,8 @@ class _$GetMovieSetsCopyWithImpl<$Res, $Val extends GetMovieSets>
     });
   }
 
+  /// Create a copy of GetMovieSets
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -105,11 +115,11 @@ class _$GetMovieSetsCopyWithImpl<$Res, $Val extends GetMovieSets>
 }
 
 /// @nodoc
-abstract class _$$_GetMovieSetsCopyWith<$Res>
+abstract class _$$GetMovieSetsImplCopyWith<$Res>
     implements $GetMovieSetsCopyWith<$Res> {
-  factory _$$_GetMovieSetsCopyWith(
-          _$_GetMovieSets value, $Res Function(_$_GetMovieSets) then) =
-      __$$_GetMovieSetsCopyWithImpl<$Res>;
+  factory _$$GetMovieSetsImplCopyWith(
+          _$GetMovieSetsImpl value, $Res Function(_$GetMovieSetsImpl) then) =
+      __$$GetMovieSetsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,13 +134,15 @@ abstract class _$$_GetMovieSetsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetMovieSetsCopyWithImpl<$Res>
-    extends _$GetMovieSetsCopyWithImpl<$Res, _$_GetMovieSets>
-    implements _$$_GetMovieSetsCopyWith<$Res> {
-  __$$_GetMovieSetsCopyWithImpl(
-      _$_GetMovieSets _value, $Res Function(_$_GetMovieSets) _then)
+class __$$GetMovieSetsImplCopyWithImpl<$Res>
+    extends _$GetMovieSetsCopyWithImpl<$Res, _$GetMovieSetsImpl>
+    implements _$$GetMovieSetsImplCopyWith<$Res> {
+  __$$GetMovieSetsImplCopyWithImpl(
+      _$GetMovieSetsImpl _value, $Res Function(_$GetMovieSetsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetMovieSets
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,7 +150,7 @@ class __$$_GetMovieSetsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetMovieSets(
+    return _then(_$GetMovieSetsImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -157,14 +169,14 @@ class __$$_GetMovieSetsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetMovieSets extends _GetMovieSets {
-  const _$_GetMovieSets(
+class _$GetMovieSetsImpl extends _GetMovieSets {
+  const _$GetMovieSetsImpl(
       {final Set<KodiVideoFieldsMovieSet>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetMovieSets.fromJson(Map<String, dynamic> json) =>
-      _$$_GetMovieSetsFromJson(json);
+  factory _$GetMovieSetsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetMovieSetsImplFromJson(json);
 
   final Set<KodiVideoFieldsMovieSet>? _properties;
   @override
@@ -187,30 +199,32 @@ class _$_GetMovieSets extends _GetMovieSets {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetMovieSets &&
+            other is _$GetMovieSetsImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetMovieSets
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetMovieSetsCopyWith<_$_GetMovieSets> get copyWith =>
-      __$$_GetMovieSetsCopyWithImpl<_$_GetMovieSets>(this, _$identity);
+  _$$GetMovieSetsImplCopyWith<_$GetMovieSetsImpl> get copyWith =>
+      __$$GetMovieSetsImplCopyWithImpl<_$GetMovieSetsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetMovieSetsToJson(
+    return _$$GetMovieSetsImplToJson(
       this,
     );
   }
@@ -220,11 +234,11 @@ abstract class _GetMovieSets extends GetMovieSets {
   const factory _GetMovieSets(
       {final Set<KodiVideoFieldsMovieSet>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetMovieSets;
+      final KodiListSort? sort}) = _$GetMovieSetsImpl;
   const _GetMovieSets._() : super._();
 
   factory _GetMovieSets.fromJson(Map<String, dynamic> json) =
-      _$_GetMovieSets.fromJson;
+      _$GetMovieSetsImpl.fromJson;
 
   @override
   Set<KodiVideoFieldsMovieSet>? get properties;
@@ -232,9 +246,12 @@ abstract class _GetMovieSets extends GetMovieSets {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetMovieSets
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetMovieSetsCopyWith<_$_GetMovieSets> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetMovieSetsImplCopyWith<_$GetMovieSetsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -247,8 +264,12 @@ mixin _$GetMovieSetsResponse {
   List<KodiVideoDetailsMovieSet> get sets => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetMovieSetsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetMovieSetsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetMovieSetsResponseCopyWith<GetMovieSetsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -276,6 +297,8 @@ class _$GetMovieSetsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetMovieSetsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,6 +317,8 @@ class _$GetMovieSetsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetMovieSetsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -304,11 +329,11 @@ class _$GetMovieSetsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetMovieSetsResponseCopyWith<$Res>
+abstract class _$$GetMovieSetsResponseImplCopyWith<$Res>
     implements $GetMovieSetsResponseCopyWith<$Res> {
-  factory _$$_GetMovieSetsResponseCopyWith(_$_GetMovieSetsResponse value,
-          $Res Function(_$_GetMovieSetsResponse) then) =
-      __$$_GetMovieSetsResponseCopyWithImpl<$Res>;
+  factory _$$GetMovieSetsResponseImplCopyWith(_$GetMovieSetsResponseImpl value,
+          $Res Function(_$GetMovieSetsResponseImpl) then) =
+      __$$GetMovieSetsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -319,20 +344,22 @@ abstract class _$$_GetMovieSetsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetMovieSetsResponseCopyWithImpl<$Res>
-    extends _$GetMovieSetsResponseCopyWithImpl<$Res, _$_GetMovieSetsResponse>
-    implements _$$_GetMovieSetsResponseCopyWith<$Res> {
-  __$$_GetMovieSetsResponseCopyWithImpl(_$_GetMovieSetsResponse _value,
-      $Res Function(_$_GetMovieSetsResponse) _then)
+class __$$GetMovieSetsResponseImplCopyWithImpl<$Res>
+    extends _$GetMovieSetsResponseCopyWithImpl<$Res, _$GetMovieSetsResponseImpl>
+    implements _$$GetMovieSetsResponseImplCopyWith<$Res> {
+  __$$GetMovieSetsResponseImplCopyWithImpl(_$GetMovieSetsResponseImpl _value,
+      $Res Function(_$GetMovieSetsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetMovieSetsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sets = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetMovieSetsResponse(
+    return _then(_$GetMovieSetsResponseImpl(
       sets: null == sets
           ? _value._sets
           : sets // ignore: cast_nullable_to_non_nullable
@@ -347,14 +374,14 @@ class __$$_GetMovieSetsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetMovieSetsResponse implements _GetMovieSetsResponse {
-  const _$_GetMovieSetsResponse(
+class _$GetMovieSetsResponseImpl implements _GetMovieSetsResponse {
+  const _$GetMovieSetsResponseImpl(
       {required final List<KodiVideoDetailsMovieSet> sets,
       required this.limits})
       : _sets = sets;
 
-  factory _$_GetMovieSetsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetMovieSetsResponseFromJson(json);
+  factory _$GetMovieSetsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetMovieSetsResponseImplFromJson(json);
 
   final List<KodiVideoDetailsMovieSet> _sets;
   @override
@@ -373,29 +400,32 @@ class _$_GetMovieSetsResponse implements _GetMovieSetsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetMovieSetsResponse &&
+            other is _$GetMovieSetsResponseImpl &&
             const DeepCollectionEquality().equals(other._sets, _sets) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_sets), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetMovieSetsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetMovieSetsResponseCopyWith<_$_GetMovieSetsResponse> get copyWith =>
-      __$$_GetMovieSetsResponseCopyWithImpl<_$_GetMovieSetsResponse>(
-          this, _$identity);
+  _$$GetMovieSetsResponseImplCopyWith<_$GetMovieSetsResponseImpl>
+      get copyWith =>
+          __$$GetMovieSetsResponseImplCopyWithImpl<_$GetMovieSetsResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetMovieSetsResponseToJson(
+    return _$$GetMovieSetsResponseImplToJson(
       this,
     );
   }
@@ -403,18 +433,22 @@ class _$_GetMovieSetsResponse implements _GetMovieSetsResponse {
 
 abstract class _GetMovieSetsResponse implements GetMovieSetsResponse {
   const factory _GetMovieSetsResponse(
-      {required final List<KodiVideoDetailsMovieSet> sets,
-      required final KodiListLimitsReturned limits}) = _$_GetMovieSetsResponse;
+          {required final List<KodiVideoDetailsMovieSet> sets,
+          required final KodiListLimitsReturned limits}) =
+      _$GetMovieSetsResponseImpl;
 
   factory _GetMovieSetsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetMovieSetsResponse.fromJson;
+      _$GetMovieSetsResponseImpl.fromJson;
 
   @override
   List<KodiVideoDetailsMovieSet> get sets;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetMovieSetsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetMovieSetsResponseCopyWith<_$_GetMovieSetsResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetMovieSetsResponseImplCopyWith<_$GetMovieSetsResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

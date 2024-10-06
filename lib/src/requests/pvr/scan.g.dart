@@ -6,10 +6,11 @@ part of 'scan.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Scan _$$_ScanFromJson(Map<String, dynamic> json) => _$_Scan(
-      json['clientid'] as int,
+_$ScanImpl _$$ScanImplFromJson(Map<String, dynamic> json) => _$ScanImpl(
+      (json['clientid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_ScanToJson(_$_Scan instance) => <String, dynamic>{
+Map<String, dynamic> _$$ScanImplToJson(_$ScanImpl instance) =>
+    <String, dynamic>{
       'clientid': instance.id,
     };

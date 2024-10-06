@@ -11,7 +11,7 @@ class KodiGUIPropertyValue with _$KodiGUIPropertyValue {
     required KodiGUIPropertyValueCurrentProtocol currentControl,
     @JsonKey(name: 'currentwindow')
     required KodiGUIPropertyValueCurrentWindow currentWindow,
-    required bool fullscreen,
+    @Default(false) bool fullscreen,
     required KodiGUIPropertyValueSkin skin,
     @JsonKey(name: 'stereoscopicmode')
     required KodiGUIStereoscopyMode stereoscopicMode,
@@ -52,7 +52,7 @@ class KodiGUIPropertyValueCurrentWindow
 class KodiGUIPropertyValueSkin with _$KodiGUIPropertyValueSkin {
   const factory KodiGUIPropertyValueSkin({
     required String id,
-    required String name,
+    @Default('') String name,
   }) = _KodiGUIPropertyValueSkin;
 
   factory KodiGUIPropertyValueSkin.fromJson(Map<String, dynamic> json) =>

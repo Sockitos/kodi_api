@@ -12,7 +12,7 @@ part of 'kodi_list_sort.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListSort _$KodiListSortFromJson(Map<String, dynamic> json) {
   return _KodiListSort.fromJson(json);
@@ -27,8 +27,12 @@ mixin _$KodiListSort {
   @JsonKey(name: 'useartistsortname')
   bool get userArtistSortName => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListSort to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListSort
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListSortCopyWith<KodiListSort> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$KodiListSortCopyWithImpl<$Res, $Val extends KodiListSort>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListSort
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,11 +92,11 @@ class _$KodiListSortCopyWithImpl<$Res, $Val extends KodiListSort>
 }
 
 /// @nodoc
-abstract class _$$_KodiListSortCopyWith<$Res>
+abstract class _$$KodiListSortImplCopyWith<$Res>
     implements $KodiListSortCopyWith<$Res> {
-  factory _$$_KodiListSortCopyWith(
-          _$_KodiListSort value, $Res Function(_$_KodiListSort) then) =
-      __$$_KodiListSortCopyWithImpl<$Res>;
+  factory _$$KodiListSortImplCopyWith(
+          _$KodiListSortImpl value, $Res Function(_$KodiListSortImpl) then) =
+      __$$KodiListSortImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,13 +107,15 @@ abstract class _$$_KodiListSortCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiListSortCopyWithImpl<$Res>
-    extends _$KodiListSortCopyWithImpl<$Res, _$_KodiListSort>
-    implements _$$_KodiListSortCopyWith<$Res> {
-  __$$_KodiListSortCopyWithImpl(
-      _$_KodiListSort _value, $Res Function(_$_KodiListSort) _then)
+class __$$KodiListSortImplCopyWithImpl<$Res>
+    extends _$KodiListSortCopyWithImpl<$Res, _$KodiListSortImpl>
+    implements _$$KodiListSortImplCopyWith<$Res> {
+  __$$KodiListSortImplCopyWithImpl(
+      _$KodiListSortImpl _value, $Res Function(_$KodiListSortImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListSort
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -116,7 +124,7 @@ class __$$_KodiListSortCopyWithImpl<$Res>
     Object? order = null,
     Object? userArtistSortName = null,
   }) {
-    return _then(_$_KodiListSort(
+    return _then(_$KodiListSortImpl(
       ignoreArticle: null == ignoreArticle
           ? _value.ignoreArticle
           : ignoreArticle // ignore: cast_nullable_to_non_nullable
@@ -139,15 +147,15 @@ class __$$_KodiListSortCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListSort implements _KodiListSort {
-  const _$_KodiListSort(
+class _$KodiListSortImpl implements _KodiListSort {
+  const _$KodiListSortImpl(
       {@JsonKey(name: 'ignorearticle') this.ignoreArticle = false,
       this.method = KodiListSortValue.none,
       this.order = KodiListSortOrder.ascending,
       @JsonKey(name: 'useartistsortname') this.userArtistSortName = false});
 
-  factory _$_KodiListSort.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListSortFromJson(json);
+  factory _$KodiListSortImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListSortImplFromJson(json);
 
   @override
   @JsonKey(name: 'ignorearticle')
@@ -168,10 +176,10 @@ class _$_KodiListSort implements _KodiListSort {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListSort &&
+            other is _$KodiListSortImpl &&
             (identical(other.ignoreArticle, ignoreArticle) ||
                 other.ignoreArticle == ignoreArticle) &&
             (identical(other.method, method) || other.method == method) &&
@@ -180,20 +188,22 @@ class _$_KodiListSort implements _KodiListSort {
                 other.userArtistSortName == userArtistSortName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, ignoreArticle, method, order, userArtistSortName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListSort
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListSortCopyWith<_$_KodiListSort> get copyWith =>
-      __$$_KodiListSortCopyWithImpl<_$_KodiListSort>(this, _$identity);
+  _$$KodiListSortImplCopyWith<_$KodiListSortImpl> get copyWith =>
+      __$$KodiListSortImplCopyWithImpl<_$KodiListSortImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListSortToJson(
+    return _$$KodiListSortImplToJson(
       this,
     );
   }
@@ -205,10 +215,10 @@ abstract class _KodiListSort implements KodiListSort {
           final KodiListSortValue method,
           final KodiListSortOrder order,
           @JsonKey(name: 'useartistsortname') final bool userArtistSortName}) =
-      _$_KodiListSort;
+      _$KodiListSortImpl;
 
   factory _KodiListSort.fromJson(Map<String, dynamic> json) =
-      _$_KodiListSort.fromJson;
+      _$KodiListSortImpl.fromJson;
 
   @override
   @JsonKey(name: 'ignorearticle')
@@ -220,8 +230,11 @@ abstract class _KodiListSort implements KodiListSort {
   @override
   @JsonKey(name: 'useartistsortname')
   bool get userArtistSortName;
+
+  /// Create a copy of KodiListSort
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListSortCopyWith<_$_KodiListSort> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListSortImplCopyWith<_$KodiListSortImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'kodi_player_video_stream.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerVideoStream _$KodiPlayerVideoStreamFromJson(
     Map<String, dynamic> json) {
@@ -28,8 +28,12 @@ mixin _$KodiPlayerVideoStream {
   String get name => throw _privateConstructorUsedError;
   int get width => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerVideoStream to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerVideoStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerVideoStreamCopyWith<KodiPlayerVideoStream> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$KodiPlayerVideoStreamCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerVideoStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -100,11 +106,12 @@ class _$KodiPlayerVideoStreamCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerVideoStreamCopyWith<$Res>
+abstract class _$$KodiPlayerVideoStreamImplCopyWith<$Res>
     implements $KodiPlayerVideoStreamCopyWith<$Res> {
-  factory _$$_KodiPlayerVideoStreamCopyWith(_$_KodiPlayerVideoStream value,
-          $Res Function(_$_KodiPlayerVideoStream) then) =
-      __$$_KodiPlayerVideoStreamCopyWithImpl<$Res>;
+  factory _$$KodiPlayerVideoStreamImplCopyWith(
+          _$KodiPlayerVideoStreamImpl value,
+          $Res Function(_$KodiPlayerVideoStreamImpl) then) =
+      __$$KodiPlayerVideoStreamImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -117,13 +124,16 @@ abstract class _$$_KodiPlayerVideoStreamCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerVideoStreamCopyWithImpl<$Res>
-    extends _$KodiPlayerVideoStreamCopyWithImpl<$Res, _$_KodiPlayerVideoStream>
-    implements _$$_KodiPlayerVideoStreamCopyWith<$Res> {
-  __$$_KodiPlayerVideoStreamCopyWithImpl(_$_KodiPlayerVideoStream _value,
-      $Res Function(_$_KodiPlayerVideoStream) _then)
+class __$$KodiPlayerVideoStreamImplCopyWithImpl<$Res>
+    extends _$KodiPlayerVideoStreamCopyWithImpl<$Res,
+        _$KodiPlayerVideoStreamImpl>
+    implements _$$KodiPlayerVideoStreamImplCopyWith<$Res> {
+  __$$KodiPlayerVideoStreamImplCopyWithImpl(_$KodiPlayerVideoStreamImpl _value,
+      $Res Function(_$KodiPlayerVideoStreamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerVideoStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,7 +144,7 @@ class __$$_KodiPlayerVideoStreamCopyWithImpl<$Res>
     Object? name = null,
     Object? width = null,
   }) {
-    return _then(_$_KodiPlayerVideoStream(
+    return _then(_$KodiPlayerVideoStreamImpl(
       codec: null == codec
           ? _value.codec
           : codec // ignore: cast_nullable_to_non_nullable
@@ -165,8 +175,8 @@ class __$$_KodiPlayerVideoStreamCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerVideoStream implements _KodiPlayerVideoStream {
-  const _$_KodiPlayerVideoStream(
+class _$KodiPlayerVideoStreamImpl implements _KodiPlayerVideoStream {
+  const _$KodiPlayerVideoStreamImpl(
       {required this.codec,
       required this.height,
       required this.index,
@@ -174,8 +184,8 @@ class _$_KodiPlayerVideoStream implements _KodiPlayerVideoStream {
       required this.name,
       required this.width});
 
-  factory _$_KodiPlayerVideoStream.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerVideoStreamFromJson(json);
+  factory _$KodiPlayerVideoStreamImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerVideoStreamImplFromJson(json);
 
   @override
   final String codec;
@@ -196,10 +206,10 @@ class _$_KodiPlayerVideoStream implements _KodiPlayerVideoStream {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerVideoStream &&
+            other is _$KodiPlayerVideoStreamImpl &&
             (identical(other.codec, codec) || other.codec == codec) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.index, index) || other.index == index) &&
@@ -209,21 +219,23 @@ class _$_KodiPlayerVideoStream implements _KodiPlayerVideoStream {
             (identical(other.width, width) || other.width == width));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, codec, height, index, language, name, width);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerVideoStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerVideoStreamCopyWith<_$_KodiPlayerVideoStream> get copyWith =>
-      __$$_KodiPlayerVideoStreamCopyWithImpl<_$_KodiPlayerVideoStream>(
-          this, _$identity);
+  _$$KodiPlayerVideoStreamImplCopyWith<_$KodiPlayerVideoStreamImpl>
+      get copyWith => __$$KodiPlayerVideoStreamImplCopyWithImpl<
+          _$KodiPlayerVideoStreamImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerVideoStreamToJson(
+    return _$$KodiPlayerVideoStreamImplToJson(
       this,
     );
   }
@@ -236,10 +248,10 @@ abstract class _KodiPlayerVideoStream implements KodiPlayerVideoStream {
       required final int index,
       required final String language,
       required final String name,
-      required final int width}) = _$_KodiPlayerVideoStream;
+      required final int width}) = _$KodiPlayerVideoStreamImpl;
 
   factory _KodiPlayerVideoStream.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerVideoStream.fromJson;
+      _$KodiPlayerVideoStreamImpl.fromJson;
 
   @override
   String get codec;
@@ -253,8 +265,11 @@ abstract class _KodiPlayerVideoStream implements KodiPlayerVideoStream {
   String get name;
   @override
   int get width;
+
+  /// Create a copy of KodiPlayerVideoStream
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerVideoStreamCopyWith<_$_KodiPlayerVideoStream> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerVideoStreamImplCopyWith<_$KodiPlayerVideoStreamImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

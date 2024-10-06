@@ -6,10 +6,10 @@ part of 'kodi_notification_audio_library_on_scan_started_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationAudioLibraryOnScanStartedParams
-    _$$_KodiNotificationAudioLibraryOnScanStartedParamsFromJson(
+_$KodiNotificationAudioLibraryOnScanStartedParamsImpl
+    _$$KodiNotificationAudioLibraryOnScanStartedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnScanStartedParams(
+        _$KodiNotificationAudioLibraryOnScanStartedParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,9 @@ _$_KodiNotificationAudioLibraryOnScanStartedParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnScanStartedParamsToJson(
-    _$_KodiNotificationAudioLibraryOnScanStartedParams instance) {
+Map<String, dynamic>
+    _$$KodiNotificationAudioLibraryOnScanStartedParamsImplToJson(
+        _$KodiNotificationAudioLibraryOnScanStartedParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,16 +34,16 @@ Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnScanStartedParamsToJson(
   return val;
 }
 
-_$_KodiNotificationAudioLibraryOnScanStartedParamsData
-    _$$_KodiNotificationAudioLibraryOnScanStartedParamsDataFromJson(
+_$KodiNotificationAudioLibraryOnScanStartedParamsDataImpl
+    _$$KodiNotificationAudioLibraryOnScanStartedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnScanStartedParamsData(
+        _$KodiNotificationAudioLibraryOnScanStartedParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic>
-    _$$_KodiNotificationAudioLibraryOnScanStartedParamsDataToJson(
-            _$_KodiNotificationAudioLibraryOnScanStartedParamsData instance) =>
-        <String, dynamic>{
-          'test': instance.test,
-        };
+Map<String,
+    dynamic> _$$KodiNotificationAudioLibraryOnScanStartedParamsDataImplToJson(
+        _$KodiNotificationAudioLibraryOnScanStartedParamsDataImpl instance) =>
+    <String, dynamic>{
+      'test': instance.test,
+    };

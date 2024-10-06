@@ -12,25 +12,25 @@ class KodiSettingDetailsControl with _$KodiSettingDetailsControl {
   }) = _KodiSettingDetailsControlToggle;
 
   const factory KodiSettingDetailsControl.spinner({
-    @JsonKey(name: 'formatlabel') String? formatLabel,
-    @JsonKey(name: 'minimumlabel') String? minimumLabel,
+    @JsonKey(name: 'formatlabel') @Default('') String formatLabel,
+    @JsonKey(name: 'minimumlabel') @Default('') String minimumLabel,
     required KodiSettingDetailsControlSpinnerType type,
     required bool delayed,
     required String format,
   }) = _KodiSettingDetailsControlSpinner;
 
   const factory KodiSettingDetailsControl.edit({
-    bool? hidden,
+    required bool hidden,
     required KodiSettingDetailsControlEditType type,
     @JsonKey(name: 'verifynewvalue') required bool verifyNewValue,
-    String? heading,
+    @Default('') String heading,
     required bool delayed,
     required String format,
   }) = _KodiSettingDetailsControlEdit;
 
   const factory KodiSettingDetailsControl.button({
     required KodiSettingDetailsControlButtonType type,
-    String? heading,
+    @Default('') String heading,
     required bool delayed,
     required String format,
   }) = _KodiSettingDetailsControlButton;
@@ -38,7 +38,7 @@ class KodiSettingDetailsControl with _$KodiSettingDetailsControl {
   const factory KodiSettingDetailsControl.list({
     @JsonKey(name: 'multiselect') required bool multiSelect,
     required KodiSettingDetailsControlListType type,
-    String? heading,
+    @Default('') String heading,
     required bool delayed,
     required String format,
   }) = _KodiSettingDetailsControlList;
@@ -47,7 +47,7 @@ class KodiSettingDetailsControl with _$KodiSettingDetailsControl {
     @JsonKey(name: 'formatlabel') required String formatLabel,
     required bool popup,
     required KodiSettingDetailsControlSliderType type,
-    String? heading,
+    @Default('') String heading,
     required bool delayed,
     required String format,
   }) = _KodiSettingDetailsControlSlider;

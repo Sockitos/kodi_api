@@ -12,7 +12,7 @@ part of 'get_available_art_types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetAvailableArtTypes _$GetAvailableArtTypesFromJson(Map<String, dynamic> json) {
   return _GetAvailableArtTypes.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$GetAvailableArtTypes {
   KodiVideoLibraryGetAvailableArtTypesItem get item =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetAvailableArtTypes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetAvailableArtTypes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetAvailableArtTypesCopyWith<GetAvailableArtTypes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$GetAvailableArtTypesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetAvailableArtTypes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$GetAvailableArtTypesCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetAvailableArtTypes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoLibraryGetAvailableArtTypesItemCopyWith<$Res> get item {
@@ -78,11 +86,11 @@ class _$GetAvailableArtTypesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetAvailableArtTypesCopyWith<$Res>
+abstract class _$$GetAvailableArtTypesImplCopyWith<$Res>
     implements $GetAvailableArtTypesCopyWith<$Res> {
-  factory _$$_GetAvailableArtTypesCopyWith(_$_GetAvailableArtTypes value,
-          $Res Function(_$_GetAvailableArtTypes) then) =
-      __$$_GetAvailableArtTypesCopyWithImpl<$Res>;
+  factory _$$GetAvailableArtTypesImplCopyWith(_$GetAvailableArtTypesImpl value,
+          $Res Function(_$GetAvailableArtTypesImpl) then) =
+      __$$GetAvailableArtTypesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,19 +102,21 @@ abstract class _$$_GetAvailableArtTypesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetAvailableArtTypesCopyWithImpl<$Res>
-    extends _$GetAvailableArtTypesCopyWithImpl<$Res, _$_GetAvailableArtTypes>
-    implements _$$_GetAvailableArtTypesCopyWith<$Res> {
-  __$$_GetAvailableArtTypesCopyWithImpl(_$_GetAvailableArtTypes _value,
-      $Res Function(_$_GetAvailableArtTypes) _then)
+class __$$GetAvailableArtTypesImplCopyWithImpl<$Res>
+    extends _$GetAvailableArtTypesCopyWithImpl<$Res, _$GetAvailableArtTypesImpl>
+    implements _$$GetAvailableArtTypesImplCopyWith<$Res> {
+  __$$GetAvailableArtTypesImplCopyWithImpl(_$GetAvailableArtTypesImpl _value,
+      $Res Function(_$GetAvailableArtTypesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetAvailableArtTypes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? item = null,
   }) {
-    return _then(_$_GetAvailableArtTypes(
+    return _then(_$GetAvailableArtTypesImpl(
       null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
@@ -117,13 +127,13 @@ class __$$_GetAvailableArtTypesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetAvailableArtTypes extends _GetAvailableArtTypes {
-  const _$_GetAvailableArtTypes(
+class _$GetAvailableArtTypesImpl extends _GetAvailableArtTypes {
+  const _$GetAvailableArtTypesImpl(
       @KodiVideoLibraryGetAvailableArtTypesItemConverter() this.item)
       : super._();
 
-  factory _$_GetAvailableArtTypes.fromJson(Map<String, dynamic> json) =>
-      _$$_GetAvailableArtTypesFromJson(json);
+  factory _$GetAvailableArtTypesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetAvailableArtTypesImplFromJson(json);
 
   @override
   @KodiVideoLibraryGetAvailableArtTypesItemConverter()
@@ -135,27 +145,30 @@ class _$_GetAvailableArtTypes extends _GetAvailableArtTypes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAvailableArtTypes &&
+            other is _$GetAvailableArtTypesImpl &&
             (identical(other.item, item) || other.item == item));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, item);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetAvailableArtTypes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAvailableArtTypesCopyWith<_$_GetAvailableArtTypes> get copyWith =>
-      __$$_GetAvailableArtTypesCopyWithImpl<_$_GetAvailableArtTypes>(
-          this, _$identity);
+  _$$GetAvailableArtTypesImplCopyWith<_$GetAvailableArtTypesImpl>
+      get copyWith =>
+          __$$GetAvailableArtTypesImplCopyWithImpl<_$GetAvailableArtTypesImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetAvailableArtTypesToJson(
+    return _$$GetAvailableArtTypesImplToJson(
       this,
     );
   }
@@ -165,19 +178,22 @@ abstract class _GetAvailableArtTypes extends GetAvailableArtTypes {
   const factory _GetAvailableArtTypes(
           @KodiVideoLibraryGetAvailableArtTypesItemConverter()
           final KodiVideoLibraryGetAvailableArtTypesItem item) =
-      _$_GetAvailableArtTypes;
+      _$GetAvailableArtTypesImpl;
   const _GetAvailableArtTypes._() : super._();
 
   factory _GetAvailableArtTypes.fromJson(Map<String, dynamic> json) =
-      _$_GetAvailableArtTypes.fromJson;
+      _$GetAvailableArtTypesImpl.fromJson;
 
   @override
   @KodiVideoLibraryGetAvailableArtTypesItemConverter()
   KodiVideoLibraryGetAvailableArtTypesItem get item;
+
+  /// Create a copy of GetAvailableArtTypes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetAvailableArtTypesCopyWith<_$_GetAvailableArtTypes> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetAvailableArtTypesImplCopyWith<_$GetAvailableArtTypesImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 KodiVideoLibraryGetAvailableArtTypesItem
@@ -298,6 +314,8 @@ mixin _$KodiVideoLibraryGetAvailableArtTypesItem {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiVideoLibraryGetAvailableArtTypesItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -321,37 +339,45 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWith<
+abstract class _$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWith<
     $Res> {
-  factory _$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWith(
-          _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId value,
-          $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId)
+  factory _$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWith(
+          _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl)
               then) =
-      __$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWithImpl<$Res>;
+      __$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWithImpl<
+          $Res>;
   @useResult
   $Res call({@JsonKey(name: 'episodeid') int episodeId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWithImpl<
+        $Res>
     extends _$KodiVideoLibraryGetAvailableArtTypesItemCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId>
+        _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl>
     implements
-        _$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWithImpl(
-      _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId _value,
-      $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId) _then)
+        _$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? episodeId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId(
+    return _then(_$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl(
       null == episodeId
           ? _value.episodeId
           : episodeId // ignore: cast_nullable_to_non_nullable
@@ -362,16 +388,16 @@ class __$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId
+class _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl
     implements _KodiVideoLibraryGetAvailableArtTypesItemEpisodeId {
-  const _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId(
+  const _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl(
       @JsonKey(name: 'episodeid') this.episodeId,
       {final String? $type})
       : $type = $type ?? 'episodeId';
 
-  factory _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId.fromJson(
+  factory _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdFromJson(json);
+      _$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'episodeid')
@@ -386,26 +412,28 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId &&
+            other is _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl &&
             (identical(other.episodeId, episodeId) ||
                 other.episodeId == episodeId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, episodeId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId>
+  _$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl>
       get copyWith =>
-          __$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWithImpl<
-                  _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId>(
+          __$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWithImpl<
+                  _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl>(
               this, _$identity);
 
   @override
@@ -523,7 +551,7 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdToJson(
+    return _$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplToJson(
       this,
     );
   }
@@ -533,49 +561,56 @@ abstract class _KodiVideoLibraryGetAvailableArtTypesItemEpisodeId
     implements KodiVideoLibraryGetAvailableArtTypesItem {
   const factory _KodiVideoLibraryGetAvailableArtTypesItemEpisodeId(
           @JsonKey(name: 'episodeid') final int episodeId) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId;
+      _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl;
 
   factory _KodiVideoLibraryGetAvailableArtTypesItemEpisodeId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId.fromJson;
+      _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl.fromJson;
 
   @JsonKey(name: 'episodeid')
   int get episodeId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemEpisodeId>
+
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWith<
+abstract class _$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWith<
     $Res> {
-  factory _$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWith(
-          _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId value,
-          $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId)
+  factory _$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWith(
+          _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl)
               then) =
-      __$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWithImpl<$Res>;
+      __$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWithImpl<
+          $Res>;
   @useResult
   $Res call({@JsonKey(name: 'tvshowid') int tvShowId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetAvailableArtTypesItemCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId>
+        _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl>
     implements
-        _$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWithImpl(
-      _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId _value,
-      $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId) _then)
+        _$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tvShowId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId(
+    return _then(_$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl(
       null == tvShowId
           ? _value.tvShowId
           : tvShowId // ignore: cast_nullable_to_non_nullable
@@ -586,16 +621,16 @@ class __$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId
+class _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl
     implements _KodiVideoLibraryGetAvailableArtTypesItemTvShowId {
-  const _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId(
+  const _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl(
       @JsonKey(name: 'tvshowid') this.tvShowId,
       {final String? $type})
       : $type = $type ?? 'tvShowId';
 
-  factory _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId.fromJson(
+  factory _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdFromJson(json);
+      _$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'tvshowid')
@@ -610,26 +645,28 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId &&
+            other is _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl &&
             (identical(other.tvShowId, tvShowId) ||
                 other.tvShowId == tvShowId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tvShowId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId>
+  _$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl>
       get copyWith =>
-          __$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWithImpl<
-                  _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId>(
+          __$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWithImpl<
+                  _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl>(
               this, _$identity);
 
   @override
@@ -747,7 +784,7 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdToJson(
+    return _$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplToJson(
       this,
     );
   }
@@ -757,49 +794,56 @@ abstract class _KodiVideoLibraryGetAvailableArtTypesItemTvShowId
     implements KodiVideoLibraryGetAvailableArtTypesItem {
   const factory _KodiVideoLibraryGetAvailableArtTypesItemTvShowId(
           @JsonKey(name: 'tvshowid') final int tvShowId) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId;
+      _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl;
 
   factory _KodiVideoLibraryGetAvailableArtTypesItemTvShowId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId.fromJson;
+      _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl.fromJson;
 
   @JsonKey(name: 'tvshowid')
   int get tvShowId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemTvShowIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemTvShowId>
+
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWith<
+abstract class _$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWith<
     $Res> {
-  factory _$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWith(
-          _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId value,
-          $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId)
+  factory _$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWith(
+          _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl)
               then) =
-      __$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWithImpl<$Res>;
+      __$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWithImpl<
+          $Res>;
   @useResult
   $Res call({@JsonKey(name: 'seasonid') int seasonId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetAvailableArtTypesItemCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId>
+        _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl>
     implements
-        _$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWithImpl(
-      _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId _value,
-      $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId) _then)
+        _$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? seasonId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId(
+    return _then(_$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl(
       null == seasonId
           ? _value.seasonId
           : seasonId // ignore: cast_nullable_to_non_nullable
@@ -810,16 +854,16 @@ class __$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId
+class _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl
     implements _KodiVideoLibraryGetAvailableArtTypesItemSeasonId {
-  const _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId(
+  const _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl(
       @JsonKey(name: 'seasonid') this.seasonId,
       {final String? $type})
       : $type = $type ?? 'seasonId';
 
-  factory _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId.fromJson(
+  factory _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdFromJson(json);
+      _$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'seasonid')
@@ -834,26 +878,28 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId &&
+            other is _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl &&
             (identical(other.seasonId, seasonId) ||
                 other.seasonId == seasonId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, seasonId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId>
+  _$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl>
       get copyWith =>
-          __$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWithImpl<
-                  _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId>(
+          __$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWithImpl<
+                  _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl>(
               this, _$identity);
 
   @override
@@ -971,7 +1017,7 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdToJson(
+    return _$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplToJson(
       this,
     );
   }
@@ -981,49 +1027,55 @@ abstract class _KodiVideoLibraryGetAvailableArtTypesItemSeasonId
     implements KodiVideoLibraryGetAvailableArtTypesItem {
   const factory _KodiVideoLibraryGetAvailableArtTypesItemSeasonId(
           @JsonKey(name: 'seasonid') final int seasonId) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId;
+      _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl;
 
   factory _KodiVideoLibraryGetAvailableArtTypesItemSeasonId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId.fromJson;
+      _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl.fromJson;
 
   @JsonKey(name: 'seasonid')
   int get seasonId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemSeasonIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemSeasonId>
+
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWith<
+abstract class _$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWith<
     $Res> {
-  factory _$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWith(
-          _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId value,
-          $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemMovieId)
+  factory _$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWith(
+          _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl)
               then) =
-      __$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWithImpl<$Res>;
+      __$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'movieid') int movieId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetAvailableArtTypesItemCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId>
+        _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl>
     implements
-        _$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWithImpl(
-      _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId _value,
-      $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemMovieId) _then)
+        _$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? movieId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetAvailableArtTypesItemMovieId(
+    return _then(_$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl(
       null == movieId
           ? _value.movieId
           : movieId // ignore: cast_nullable_to_non_nullable
@@ -1034,16 +1086,16 @@ class __$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId
+class _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl
     implements _KodiVideoLibraryGetAvailableArtTypesItemMovieId {
-  const _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId(
+  const _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl(
       @JsonKey(name: 'movieid') this.movieId,
       {final String? $type})
       : $type = $type ?? 'movieId';
 
-  factory _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId.fromJson(
+  factory _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdFromJson(json);
+      _$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'movieid')
@@ -1058,25 +1110,27 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId &&
+            other is _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl &&
             (identical(other.movieId, movieId) || other.movieId == movieId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, movieId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId>
+  _$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl>
       get copyWith =>
-          __$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWithImpl<
-                  _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId>(
+          __$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWithImpl<
+                  _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl>(
               this, _$identity);
 
   @override
@@ -1194,7 +1248,7 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdToJson(
+    return _$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplToJson(
       this,
     );
   }
@@ -1204,47 +1258,54 @@ abstract class _KodiVideoLibraryGetAvailableArtTypesItemMovieId
     implements KodiVideoLibraryGetAvailableArtTypesItem {
   const factory _KodiVideoLibraryGetAvailableArtTypesItemMovieId(
           @JsonKey(name: 'movieid') final int movieId) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId;
+      _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl;
 
   factory _KodiVideoLibraryGetAvailableArtTypesItemMovieId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId.fromJson;
+      _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl.fromJson;
 
   @JsonKey(name: 'movieid')
   int get movieId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemMovieIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemMovieId>
+
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWith(
-          _$_KodiVideoLibraryGetAvailableArtTypesItemSetId value,
-          $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemSetId)
+abstract class _$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWith<
+    $Res> {
+  factory _$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWith(
+          _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl value,
+          $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl)
               then) =
-      __$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWithImpl<$Res>;
+      __$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'setid') int setId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWithImpl<$Res>
+class __$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryGetAvailableArtTypesItemCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetAvailableArtTypesItemSetId>
-    implements _$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWithImpl(
-      _$_KodiVideoLibraryGetAvailableArtTypesItemSetId _value,
-      $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemSetId) _then)
+        _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl>
+    implements
+        _$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWith<$Res> {
+  __$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? setId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetAvailableArtTypesItemSetId(
+    return _then(_$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl(
       null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
@@ -1255,16 +1316,16 @@ class __$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetAvailableArtTypesItemSetId
+class _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl
     implements _KodiVideoLibraryGetAvailableArtTypesItemSetId {
-  const _$_KodiVideoLibraryGetAvailableArtTypesItemSetId(
+  const _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl(
       @JsonKey(name: 'setid') this.setId,
       {final String? $type})
       : $type = $type ?? 'setId';
 
-  factory _$_KodiVideoLibraryGetAvailableArtTypesItemSetId.fromJson(
+  factory _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdFromJson(json);
+      _$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'setid')
@@ -1279,25 +1340,27 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemSetId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetAvailableArtTypesItemSetId &&
+            other is _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl &&
             (identical(other.setId, setId) || other.setId == setId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, setId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemSetId>
+  _$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl>
       get copyWith =>
-          __$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWithImpl<
-                  _$_KodiVideoLibraryGetAvailableArtTypesItemSetId>(
+          __$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWithImpl<
+                  _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl>(
               this, _$identity);
 
   @override
@@ -1415,7 +1478,7 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemSetId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdToJson(
+    return _$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplToJson(
       this,
     );
   }
@@ -1425,52 +1488,59 @@ abstract class _KodiVideoLibraryGetAvailableArtTypesItemSetId
     implements KodiVideoLibraryGetAvailableArtTypesItem {
   const factory _KodiVideoLibraryGetAvailableArtTypesItemSetId(
           @JsonKey(name: 'setid') final int setId) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemSetId;
+      _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl;
 
   factory _KodiVideoLibraryGetAvailableArtTypesItemSetId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemSetId.fromJson;
+      _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl.fromJson;
 
   @JsonKey(name: 'setid')
   int get setId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemSetIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemSetId>
+
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetAvailableArtTypesItemSetIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWith<
+abstract class _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWith<
     $Res> {
-  factory _$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWith(
-          _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId value,
-          $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId)
+  factory _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWith(
+          _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl value,
+          $Res Function(
+                  _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl)
               then) =
-      __$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWithImpl<
+      __$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWithImpl<
           $Res>;
   @useResult
   $Res call({int musicVideoId});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWithImpl<
+class __$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWithImpl<
         $Res>
     extends _$KodiVideoLibraryGetAvailableArtTypesItemCopyWithImpl<$Res,
-        _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId>
+        _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl>
     implements
-        _$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWith<$Res> {
-  __$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWithImpl(
-      _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId _value,
-      $Res Function(_$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId)
+        _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWith<
+            $Res> {
+  __$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWithImpl(
+      _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl _value,
+      $Res Function(_$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl)
           _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? musicVideoId = null,
   }) {
-    return _then(_$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId(
+    return _then(_$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl(
       musicVideoId: null == musicVideoId
           ? _value.musicVideoId
           : musicVideoId // ignore: cast_nullable_to_non_nullable
@@ -1481,15 +1551,15 @@ class __$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWithImpl<
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId
+class _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
     implements _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId {
-  const _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId(
+  const _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl(
       {required this.musicVideoId, final String? $type})
       : $type = $type ?? 'musicVideoId';
 
-  factory _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId.fromJson(
+  factory _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdFromJson(json);
+      _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplFromJson(json);
 
   @override
   final int musicVideoId;
@@ -1503,26 +1573,29 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId &&
+            other
+                is _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl &&
             (identical(other.musicVideoId, musicVideoId) ||
                 other.musicVideoId == musicVideoId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, musicVideoId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId>
+  _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl>
       get copyWith =>
-          __$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWithImpl<
-                  _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId>(
+          __$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWithImpl<
+                  _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl>(
               this, _$identity);
 
   @override
@@ -1640,7 +1713,7 @@ class _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdToJson(
+    return _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplToJson(
       this,
     );
   }
@@ -1650,15 +1723,18 @@ abstract class _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId
     implements KodiVideoLibraryGetAvailableArtTypesItem {
   const factory _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId(
           {required final int musicVideoId}) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId;
+      _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl;
 
   factory _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId.fromJson;
+      _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl.fromJson;
 
   int get musicVideoId;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdCopyWith<
-          _$_KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId>
+
+  /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWith<
+          _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

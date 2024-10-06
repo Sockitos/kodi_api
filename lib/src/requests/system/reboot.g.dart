@@ -6,7 +6,7 @@ part of 'reboot.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Reboot _$$_RebootFromJson(Map<String, dynamic> json) => _$_Reboot();
+_$RebootImpl _$$RebootImplFromJson(Map<String, dynamic> json) => _$RebootImpl();
 
-Map<String, dynamic> _$$_RebootToJson(_$_Reboot instance) =>
+Map<String, dynamic> _$$RebootImplToJson(_$RebootImpl instance) =>
     <String, dynamic>{};

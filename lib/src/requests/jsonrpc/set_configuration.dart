@@ -36,14 +36,14 @@ class KodiJSONRPCSetConfigurationNotifications
     with _$KodiJSONRPCSetConfigurationNotifications {
   const factory KodiJSONRPCSetConfigurationNotifications({
     bool? application,
-    bool? audioLibrary,
+    @JsonKey(name: 'audiolibrary') bool? audioLibrary,
     bool? gui,
     bool? input,
     bool? other,
     bool? player,
     bool? playlist,
     bool? system,
-    bool? videoLibrary,
+    @JsonKey(name: 'videolibrary') bool? videoLibrary,
   }) = _KodiJSONRPCSetConfigurationNotifications;
 
   factory KodiJSONRPCSetConfigurationNotifications.fromJson(

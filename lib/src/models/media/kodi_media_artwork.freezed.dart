@@ -12,7 +12,7 @@ part of 'kodi_media_artwork.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiMediaArtwork _$KodiMediaArtworkFromJson(Map<String, dynamic> json) {
   return _KodiMediaArtwork.fromJson(json);
@@ -20,13 +20,17 @@ KodiMediaArtwork _$KodiMediaArtworkFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$KodiMediaArtwork {
-  String? get banner => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get poster => throw _privateConstructorUsedError;
-  String? get thumb => throw _privateConstructorUsedError;
+  String get banner => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get poster => throw _privateConstructorUsedError;
+  String get thumb => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiMediaArtwork to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiMediaArtwork
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiMediaArtworkCopyWith<KodiMediaArtwork> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -37,7 +41,7 @@ abstract class $KodiMediaArtworkCopyWith<$Res> {
           KodiMediaArtwork value, $Res Function(KodiMediaArtwork) then) =
       _$KodiMediaArtworkCopyWithImpl<$Res, KodiMediaArtwork>;
   @useResult
-  $Res call({String? banner, String? fanart, String? poster, String? thumb});
+  $Res call({String banner, String fanart, String poster, String thumb});
 }
 
 /// @nodoc
@@ -50,100 +54,108 @@ class _$KodiMediaArtworkCopyWithImpl<$Res, $Val extends KodiMediaArtwork>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiMediaArtwork
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? banner = freezed,
-    Object? fanart = freezed,
-    Object? poster = freezed,
-    Object? thumb = freezed,
+    Object? banner = null,
+    Object? fanart = null,
+    Object? poster = null,
+    Object? thumb = null,
   }) {
     return _then(_value.copyWith(
-      banner: freezed == banner
+      banner: null == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fanart: freezed == fanart
+              as String,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      poster: freezed == poster
+              as String,
+      poster: null == poster
           ? _value.poster
           : poster // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumb: freezed == thumb
+              as String,
+      thumb: null == thumb
           ? _value.thumb
           : thumb // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_KodiMediaArtworkCopyWith<$Res>
+abstract class _$$KodiMediaArtworkImplCopyWith<$Res>
     implements $KodiMediaArtworkCopyWith<$Res> {
-  factory _$$_KodiMediaArtworkCopyWith(
-          _$_KodiMediaArtwork value, $Res Function(_$_KodiMediaArtwork) then) =
-      __$$_KodiMediaArtworkCopyWithImpl<$Res>;
+  factory _$$KodiMediaArtworkImplCopyWith(_$KodiMediaArtworkImpl value,
+          $Res Function(_$KodiMediaArtworkImpl) then) =
+      __$$KodiMediaArtworkImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? banner, String? fanart, String? poster, String? thumb});
+  $Res call({String banner, String fanart, String poster, String thumb});
 }
 
 /// @nodoc
-class __$$_KodiMediaArtworkCopyWithImpl<$Res>
-    extends _$KodiMediaArtworkCopyWithImpl<$Res, _$_KodiMediaArtwork>
-    implements _$$_KodiMediaArtworkCopyWith<$Res> {
-  __$$_KodiMediaArtworkCopyWithImpl(
-      _$_KodiMediaArtwork _value, $Res Function(_$_KodiMediaArtwork) _then)
+class __$$KodiMediaArtworkImplCopyWithImpl<$Res>
+    extends _$KodiMediaArtworkCopyWithImpl<$Res, _$KodiMediaArtworkImpl>
+    implements _$$KodiMediaArtworkImplCopyWith<$Res> {
+  __$$KodiMediaArtworkImplCopyWithImpl(_$KodiMediaArtworkImpl _value,
+      $Res Function(_$KodiMediaArtworkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiMediaArtwork
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? banner = freezed,
-    Object? fanart = freezed,
-    Object? poster = freezed,
-    Object? thumb = freezed,
+    Object? banner = null,
+    Object? fanart = null,
+    Object? poster = null,
+    Object? thumb = null,
   }) {
-    return _then(_$_KodiMediaArtwork(
-      banner: freezed == banner
+    return _then(_$KodiMediaArtworkImpl(
+      banner: null == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fanart: freezed == fanart
+              as String,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      poster: freezed == poster
+              as String,
+      poster: null == poster
           ? _value.poster
           : poster // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumb: freezed == thumb
+              as String,
+      thumb: null == thumb
           ? _value.thumb
           : thumb // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiMediaArtwork implements _KodiMediaArtwork {
-  const _$_KodiMediaArtwork(
-      {this.banner, this.fanart, this.poster, this.thumb});
+class _$KodiMediaArtworkImpl implements _KodiMediaArtwork {
+  const _$KodiMediaArtworkImpl(
+      {this.banner = '', this.fanart = '', this.poster = '', this.thumb = ''});
 
-  factory _$_KodiMediaArtwork.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiMediaArtworkFromJson(json);
+  factory _$KodiMediaArtworkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiMediaArtworkImplFromJson(json);
 
   @override
-  final String? banner;
+  @JsonKey()
+  final String banner;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? poster;
+  @JsonKey()
+  final String poster;
   @override
-  final String? thumb;
+  @JsonKey()
+  final String thumb;
 
   @override
   String toString() {
@@ -151,29 +163,32 @@ class _$_KodiMediaArtwork implements _KodiMediaArtwork {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiMediaArtwork &&
+            other is _$KodiMediaArtworkImpl &&
             (identical(other.banner, banner) || other.banner == banner) &&
             (identical(other.fanart, fanart) || other.fanart == fanart) &&
             (identical(other.poster, poster) || other.poster == poster) &&
             (identical(other.thumb, thumb) || other.thumb == thumb));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, banner, fanart, poster, thumb);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiMediaArtwork
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiMediaArtworkCopyWith<_$_KodiMediaArtwork> get copyWith =>
-      __$$_KodiMediaArtworkCopyWithImpl<_$_KodiMediaArtwork>(this, _$identity);
+  _$$KodiMediaArtworkImplCopyWith<_$KodiMediaArtworkImpl> get copyWith =>
+      __$$KodiMediaArtworkImplCopyWithImpl<_$KodiMediaArtworkImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiMediaArtworkToJson(
+    return _$$KodiMediaArtworkImplToJson(
       this,
     );
   }
@@ -181,24 +196,27 @@ class _$_KodiMediaArtwork implements _KodiMediaArtwork {
 
 abstract class _KodiMediaArtwork implements KodiMediaArtwork {
   const factory _KodiMediaArtwork(
-      {final String? banner,
-      final String? fanart,
-      final String? poster,
-      final String? thumb}) = _$_KodiMediaArtwork;
+      {final String banner,
+      final String fanart,
+      final String poster,
+      final String thumb}) = _$KodiMediaArtworkImpl;
 
   factory _KodiMediaArtwork.fromJson(Map<String, dynamic> json) =
-      _$_KodiMediaArtwork.fromJson;
+      _$KodiMediaArtworkImpl.fromJson;
 
   @override
-  String? get banner;
+  String get banner;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get poster;
+  String get poster;
   @override
-  String? get thumb;
+  String get thumb;
+
+  /// Create a copy of KodiMediaArtwork
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiMediaArtworkCopyWith<_$_KodiMediaArtwork> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiMediaArtworkImplCopyWith<_$KodiMediaArtworkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

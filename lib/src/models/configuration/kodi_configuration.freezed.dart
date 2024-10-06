@@ -12,7 +12,7 @@ part of 'kodi_configuration.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiConfiguration _$KodiConfigurationFromJson(Map<String, dynamic> json) {
   return _KodiConfiguration.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$KodiConfiguration {
   KodiConfigurationNotifications get notifications =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiConfiguration to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiConfiguration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiConfigurationCopyWith<KodiConfiguration> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$KodiConfigurationCopyWithImpl<$Res, $Val extends KodiConfiguration>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,6 +69,8 @@ class _$KodiConfigurationCopyWithImpl<$Res, $Val extends KodiConfiguration>
     ) as $Val);
   }
 
+  /// Create a copy of KodiConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiConfigurationNotificationsCopyWith<$Res> get notifications {
@@ -74,11 +82,11 @@ class _$KodiConfigurationCopyWithImpl<$Res, $Val extends KodiConfiguration>
 }
 
 /// @nodoc
-abstract class _$$_KodiConfigurationCopyWith<$Res>
+abstract class _$$KodiConfigurationImplCopyWith<$Res>
     implements $KodiConfigurationCopyWith<$Res> {
-  factory _$$_KodiConfigurationCopyWith(_$_KodiConfiguration value,
-          $Res Function(_$_KodiConfiguration) then) =
-      __$$_KodiConfigurationCopyWithImpl<$Res>;
+  factory _$$KodiConfigurationImplCopyWith(_$KodiConfigurationImpl value,
+          $Res Function(_$KodiConfigurationImpl) then) =
+      __$$KodiConfigurationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiConfigurationNotifications notifications});
@@ -88,19 +96,21 @@ abstract class _$$_KodiConfigurationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiConfigurationCopyWithImpl<$Res>
-    extends _$KodiConfigurationCopyWithImpl<$Res, _$_KodiConfiguration>
-    implements _$$_KodiConfigurationCopyWith<$Res> {
-  __$$_KodiConfigurationCopyWithImpl(
-      _$_KodiConfiguration _value, $Res Function(_$_KodiConfiguration) _then)
+class __$$KodiConfigurationImplCopyWithImpl<$Res>
+    extends _$KodiConfigurationCopyWithImpl<$Res, _$KodiConfigurationImpl>
+    implements _$$KodiConfigurationImplCopyWith<$Res> {
+  __$$KodiConfigurationImplCopyWithImpl(_$KodiConfigurationImpl _value,
+      $Res Function(_$KodiConfigurationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? notifications = null,
   }) {
-    return _then(_$_KodiConfiguration(
+    return _then(_$KodiConfigurationImpl(
       notifications: null == notifications
           ? _value.notifications
           : notifications // ignore: cast_nullable_to_non_nullable
@@ -111,11 +121,11 @@ class __$$_KodiConfigurationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiConfiguration implements _KodiConfiguration {
-  const _$_KodiConfiguration({required this.notifications});
+class _$KodiConfigurationImpl implements _KodiConfiguration {
+  const _$KodiConfigurationImpl({required this.notifications});
 
-  factory _$_KodiConfiguration.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiConfigurationFromJson(json);
+  factory _$KodiConfigurationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiConfigurationImplFromJson(json);
 
   @override
   final KodiConfigurationNotifications notifications;
@@ -126,28 +136,30 @@ class _$_KodiConfiguration implements _KodiConfiguration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiConfiguration &&
+            other is _$KodiConfigurationImpl &&
             (identical(other.notifications, notifications) ||
                 other.notifications == notifications));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, notifications);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiConfiguration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiConfigurationCopyWith<_$_KodiConfiguration> get copyWith =>
-      __$$_KodiConfigurationCopyWithImpl<_$_KodiConfiguration>(
+  _$$KodiConfigurationImplCopyWith<_$KodiConfigurationImpl> get copyWith =>
+      __$$KodiConfigurationImplCopyWithImpl<_$KodiConfigurationImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiConfigurationToJson(
+    return _$$KodiConfigurationImplToJson(
       this,
     );
   }
@@ -156,15 +168,18 @@ class _$_KodiConfiguration implements _KodiConfiguration {
 abstract class _KodiConfiguration implements KodiConfiguration {
   const factory _KodiConfiguration(
           {required final KodiConfigurationNotifications notifications}) =
-      _$_KodiConfiguration;
+      _$KodiConfigurationImpl;
 
   factory _KodiConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_KodiConfiguration.fromJson;
+      _$KodiConfigurationImpl.fromJson;
 
   @override
   KodiConfigurationNotifications get notifications;
+
+  /// Create a copy of KodiConfiguration
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiConfigurationCopyWith<_$_KodiConfiguration> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiConfigurationImplCopyWith<_$KodiConfigurationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

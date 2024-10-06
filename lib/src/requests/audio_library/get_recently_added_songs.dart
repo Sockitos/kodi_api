@@ -22,7 +22,7 @@ class GetRecentlyAddedSongs
     with _$GetRecentlyAddedSongs
     implements KodiRequest<GetRecentlyAddedSongsResponse> {
   const factory GetRecentlyAddedSongs({
-    @JsonKey(name: 'albumlimit') @Default(-1) int? albumLimit,
+    @JsonKey(name: 'albumlimit') int? albumLimit,
     Set<KodiAudioFieldsSong>? properties,
     KodiListLimits? limits,
     KodiListSort? sort,

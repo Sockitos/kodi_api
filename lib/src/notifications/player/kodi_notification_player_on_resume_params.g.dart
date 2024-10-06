@@ -6,17 +6,17 @@ part of 'kodi_notification_player_on_resume_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationPlayerOnResumeParams
-    _$$_KodiNotificationPlayerOnResumeParamsFromJson(
+_$KodiNotificationPlayerOnResumeParamsImpl
+    _$$KodiNotificationPlayerOnResumeParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnResumeParams(
+        _$KodiNotificationPlayerOnResumeParamsImpl(
           sender: json['sender'] as String,
           data: KodiPlayerNotificationsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnResumeParamsToJson(
-        _$_KodiNotificationPlayerOnResumeParams instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnResumeParamsImplToJson(
+        _$KodiNotificationPlayerOnResumeParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),

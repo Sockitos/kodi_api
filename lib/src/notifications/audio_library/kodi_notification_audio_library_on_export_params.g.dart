@@ -6,10 +6,10 @@ part of 'kodi_notification_audio_library_on_export_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationAudioLibraryOnExportParams
-    _$$_KodiNotificationAudioLibraryOnExportParamsFromJson(
+_$KodiNotificationAudioLibraryOnExportParamsImpl
+    _$$KodiNotificationAudioLibraryOnExportParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnExportParams(
+        _$KodiNotificationAudioLibraryOnExportParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,8 @@ _$_KodiNotificationAudioLibraryOnExportParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnExportParamsToJson(
-    _$_KodiNotificationAudioLibraryOnExportParams instance) {
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnExportParamsImplToJson(
+    _$KodiNotificationAudioLibraryOnExportParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,16 +33,17 @@ Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnExportParamsToJson(
   return val;
 }
 
-_$_KodiNotificationAudioLibraryOnExportParamsData
-    _$$_KodiNotificationAudioLibraryOnExportParamsDataFromJson(
+_$KodiNotificationAudioLibraryOnExportParamsDataImpl
+    _$$KodiNotificationAudioLibraryOnExportParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnExportParamsData(
-          failCount: json['failcount'] as int?,
+        _$KodiNotificationAudioLibraryOnExportParamsDataImpl(
+          failCount: (json['failcount'] as num?)?.toInt(),
           file: json['file'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnExportParamsDataToJson(
-    _$_KodiNotificationAudioLibraryOnExportParamsData instance) {
+Map<String, dynamic>
+    _$$KodiNotificationAudioLibraryOnExportParamsDataImplToJson(
+        _$KodiNotificationAudioLibraryOnExportParamsDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

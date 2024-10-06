@@ -12,7 +12,7 @@ part of 'kodi_notification_system_on_restart_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationSystemOnRestartParams
     _$KodiNotificationSystemOnRestartParamsFromJson(Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiNotificationSystemOnRestartParams {
   KodiNotificationSystemOnRestartParamsData? get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnRestartParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnRestartParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnRestartParamsCopyWith<
           KodiNotificationSystemOnRestartParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -56,6 +60,8 @@ class _$KodiNotificationSystemOnRestartParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnRestartParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,6 +80,8 @@ class _$KodiNotificationSystemOnRestartParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationSystemOnRestartParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationSystemOnRestartParamsDataCopyWith<$Res>? get data {
@@ -89,12 +97,12 @@ class _$KodiNotificationSystemOnRestartParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnRestartParamsCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnRestartParamsImplCopyWith<$Res>
     implements $KodiNotificationSystemOnRestartParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnRestartParamsCopyWith(
-          _$_KodiNotificationSystemOnRestartParams value,
-          $Res Function(_$_KodiNotificationSystemOnRestartParams) then) =
-      __$$_KodiNotificationSystemOnRestartParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnRestartParamsImplCopyWith(
+          _$KodiNotificationSystemOnRestartParamsImpl value,
+          $Res Function(_$KodiNotificationSystemOnRestartParamsImpl) then) =
+      __$$KodiNotificationSystemOnRestartParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiNotificationSystemOnRestartParamsData? data});
@@ -104,22 +112,24 @@ abstract class _$$_KodiNotificationSystemOnRestartParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnRestartParamsCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnRestartParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnRestartParamsCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnRestartParams>
-    implements _$$_KodiNotificationSystemOnRestartParamsCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnRestartParamsCopyWithImpl(
-      _$_KodiNotificationSystemOnRestartParams _value,
-      $Res Function(_$_KodiNotificationSystemOnRestartParams) _then)
+        _$KodiNotificationSystemOnRestartParamsImpl>
+    implements _$$KodiNotificationSystemOnRestartParamsImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnRestartParamsImplCopyWithImpl(
+      _$KodiNotificationSystemOnRestartParamsImpl _value,
+      $Res Function(_$KodiNotificationSystemOnRestartParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnRestartParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = freezed,
   }) {
-    return _then(_$_KodiNotificationSystemOnRestartParams(
+    return _then(_$KodiNotificationSystemOnRestartParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -134,14 +144,14 @@ class __$$_KodiNotificationSystemOnRestartParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnRestartParams
+class _$KodiNotificationSystemOnRestartParamsImpl
     implements _KodiNotificationSystemOnRestartParams {
-  const _$_KodiNotificationSystemOnRestartParams(
+  const _$KodiNotificationSystemOnRestartParamsImpl(
       {required this.sender, this.data});
 
-  factory _$_KodiNotificationSystemOnRestartParams.fromJson(
+  factory _$KodiNotificationSystemOnRestartParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnRestartParamsFromJson(json);
+      _$$KodiNotificationSystemOnRestartParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -154,29 +164,31 @@ class _$_KodiNotificationSystemOnRestartParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnRestartParams &&
+            other is _$KodiNotificationSystemOnRestartParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnRestartParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnRestartParamsCopyWith<
-          _$_KodiNotificationSystemOnRestartParams>
-      get copyWith => __$$_KodiNotificationSystemOnRestartParamsCopyWithImpl<
-          _$_KodiNotificationSystemOnRestartParams>(this, _$identity);
+  _$$KodiNotificationSystemOnRestartParamsImplCopyWith<
+          _$KodiNotificationSystemOnRestartParamsImpl>
+      get copyWith => __$$KodiNotificationSystemOnRestartParamsImplCopyWithImpl<
+          _$KodiNotificationSystemOnRestartParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnRestartParamsToJson(
+    return _$$KodiNotificationSystemOnRestartParamsImplToJson(
       this,
     );
   }
@@ -187,20 +199,23 @@ abstract class _KodiNotificationSystemOnRestartParams
   const factory _KodiNotificationSystemOnRestartParams(
           {required final String sender,
           final KodiNotificationSystemOnRestartParamsData? data}) =
-      _$_KodiNotificationSystemOnRestartParams;
+      _$KodiNotificationSystemOnRestartParamsImpl;
 
   factory _KodiNotificationSystemOnRestartParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnRestartParams.fromJson;
+      _$KodiNotificationSystemOnRestartParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationSystemOnRestartParamsData? get data;
+
+  /// Create a copy of KodiNotificationSystemOnRestartParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnRestartParamsCopyWith<
-          _$_KodiNotificationSystemOnRestartParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnRestartParamsImplCopyWith<
+          _$KodiNotificationSystemOnRestartParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -214,8 +229,12 @@ KodiNotificationSystemOnRestartParamsData
 mixin _$KodiNotificationSystemOnRestartParamsData {
   String get test => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnRestartParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnRestartParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnRestartParamsDataCopyWith<
           KodiNotificationSystemOnRestartParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -244,6 +263,8 @@ class _$KodiNotificationSystemOnRestartParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnRestartParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -259,33 +280,35 @@ class _$KodiNotificationSystemOnRestartParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnRestartParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnRestartParamsDataImplCopyWith<$Res>
     implements $KodiNotificationSystemOnRestartParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnRestartParamsDataCopyWith(
-          _$_KodiNotificationSystemOnRestartParamsData value,
-          $Res Function(_$_KodiNotificationSystemOnRestartParamsData) then) =
-      __$$_KodiNotificationSystemOnRestartParamsDataCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnRestartParamsDataImplCopyWith(
+          _$KodiNotificationSystemOnRestartParamsDataImpl value,
+          $Res Function(_$KodiNotificationSystemOnRestartParamsDataImpl) then) =
+      __$$KodiNotificationSystemOnRestartParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String test});
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnRestartParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnRestartParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnRestartParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnRestartParamsData>
-    implements _$$_KodiNotificationSystemOnRestartParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnRestartParamsDataCopyWithImpl(
-      _$_KodiNotificationSystemOnRestartParamsData _value,
-      $Res Function(_$_KodiNotificationSystemOnRestartParamsData) _then)
+        _$KodiNotificationSystemOnRestartParamsDataImpl>
+    implements _$$KodiNotificationSystemOnRestartParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnRestartParamsDataImplCopyWithImpl(
+      _$KodiNotificationSystemOnRestartParamsDataImpl _value,
+      $Res Function(_$KodiNotificationSystemOnRestartParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnRestartParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? test = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnRestartParamsData(
+    return _then(_$KodiNotificationSystemOnRestartParamsDataImpl(
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -296,13 +319,13 @@ class __$$_KodiNotificationSystemOnRestartParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnRestartParamsData
+class _$KodiNotificationSystemOnRestartParamsDataImpl
     implements _KodiNotificationSystemOnRestartParamsData {
-  const _$_KodiNotificationSystemOnRestartParamsData({required this.test});
+  const _$KodiNotificationSystemOnRestartParamsDataImpl({required this.test});
 
-  factory _$_KodiNotificationSystemOnRestartParamsData.fromJson(
+  factory _$KodiNotificationSystemOnRestartParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnRestartParamsDataFromJson(json);
+      _$$KodiNotificationSystemOnRestartParamsDataImplFromJson(json);
 
   @override
   final String test;
@@ -313,29 +336,32 @@ class _$_KodiNotificationSystemOnRestartParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnRestartParamsData &&
+            other is _$KodiNotificationSystemOnRestartParamsDataImpl &&
             (identical(other.test, test) || other.test == test));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, test);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnRestartParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnRestartParamsDataCopyWith<
-          _$_KodiNotificationSystemOnRestartParamsData>
+  _$$KodiNotificationSystemOnRestartParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnRestartParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationSystemOnRestartParamsDataCopyWithImpl<
-              _$_KodiNotificationSystemOnRestartParamsData>(this, _$identity);
+          __$$KodiNotificationSystemOnRestartParamsDataImplCopyWithImpl<
+                  _$KodiNotificationSystemOnRestartParamsDataImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnRestartParamsDataToJson(
+    return _$$KodiNotificationSystemOnRestartParamsDataImplToJson(
       this,
     );
   }
@@ -345,17 +371,20 @@ abstract class _KodiNotificationSystemOnRestartParamsData
     implements KodiNotificationSystemOnRestartParamsData {
   const factory _KodiNotificationSystemOnRestartParamsData(
           {required final String test}) =
-      _$_KodiNotificationSystemOnRestartParamsData;
+      _$KodiNotificationSystemOnRestartParamsDataImpl;
 
   factory _KodiNotificationSystemOnRestartParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnRestartParamsData.fromJson;
+      _$KodiNotificationSystemOnRestartParamsDataImpl.fromJson;
 
   @override
   String get test;
+
+  /// Create a copy of KodiNotificationSystemOnRestartParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnRestartParamsDataCopyWith<
-          _$_KodiNotificationSystemOnRestartParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnRestartParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnRestartParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

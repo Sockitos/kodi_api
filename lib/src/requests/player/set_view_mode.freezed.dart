@@ -12,7 +12,7 @@ part of 'set_view_mode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetViewMode _$SetViewModeFromJson(Map<String, dynamic> json) {
   return _SetViewMode.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$SetViewMode {
   @SetViewModeViewModeConverter()
   SetViewModeViewMode get viewMode => throw _privateConstructorUsedError;
 
+  /// Serializes this SetViewMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetViewModeCopyWith<SetViewMode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$SetViewModeCopyWithImpl<$Res, $Val extends SetViewMode>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,6 +73,8 @@ class _$SetViewModeCopyWithImpl<$Res, $Val extends SetViewMode>
     ) as $Val);
   }
 
+  /// Create a copy of SetViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SetViewModeViewModeCopyWith<$Res> get viewMode {
@@ -77,11 +85,11 @@ class _$SetViewModeCopyWithImpl<$Res, $Val extends SetViewMode>
 }
 
 /// @nodoc
-abstract class _$$_SetViewModeCopyWith<$Res>
+abstract class _$$SetViewModeImplCopyWith<$Res>
     implements $SetViewModeCopyWith<$Res> {
-  factory _$$_SetViewModeCopyWith(
-          _$_SetViewMode value, $Res Function(_$_SetViewMode) then) =
-      __$$_SetViewModeCopyWithImpl<$Res>;
+  factory _$$SetViewModeImplCopyWith(
+          _$SetViewModeImpl value, $Res Function(_$SetViewModeImpl) then) =
+      __$$SetViewModeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,19 +102,21 @@ abstract class _$$_SetViewModeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetViewModeCopyWithImpl<$Res>
-    extends _$SetViewModeCopyWithImpl<$Res, _$_SetViewMode>
-    implements _$$_SetViewModeCopyWith<$Res> {
-  __$$_SetViewModeCopyWithImpl(
-      _$_SetViewMode _value, $Res Function(_$_SetViewMode) _then)
+class __$$SetViewModeImplCopyWithImpl<$Res>
+    extends _$SetViewModeCopyWithImpl<$Res, _$SetViewModeImpl>
+    implements _$$SetViewModeImplCopyWith<$Res> {
+  __$$SetViewModeImplCopyWithImpl(
+      _$SetViewModeImpl _value, $Res Function(_$SetViewModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? viewMode = null,
   }) {
-    return _then(_$_SetViewMode(
+    return _then(_$SetViewModeImpl(
       null == viewMode
           ? _value.viewMode
           : viewMode // ignore: cast_nullable_to_non_nullable
@@ -117,13 +127,13 @@ class __$$_SetViewModeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetViewMode extends _SetViewMode {
-  const _$_SetViewMode(
+class _$SetViewModeImpl extends _SetViewMode {
+  const _$SetViewModeImpl(
       @JsonKey(name: 'viewmode') @SetViewModeViewModeConverter() this.viewMode)
       : super._();
 
-  factory _$_SetViewMode.fromJson(Map<String, dynamic> json) =>
-      _$$_SetViewModeFromJson(json);
+  factory _$SetViewModeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetViewModeImplFromJson(json);
 
   @override
   @JsonKey(name: 'viewmode')
@@ -136,27 +146,29 @@ class _$_SetViewMode extends _SetViewMode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetViewMode &&
+            other is _$SetViewModeImpl &&
             (identical(other.viewMode, viewMode) ||
                 other.viewMode == viewMode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, viewMode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetViewModeCopyWith<_$_SetViewMode> get copyWith =>
-      __$$_SetViewModeCopyWithImpl<_$_SetViewMode>(this, _$identity);
+  _$$SetViewModeImplCopyWith<_$SetViewModeImpl> get copyWith =>
+      __$$SetViewModeImplCopyWithImpl<_$SetViewModeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetViewModeToJson(
+    return _$$SetViewModeImplToJson(
       this,
     );
   }
@@ -166,19 +178,22 @@ abstract class _SetViewMode extends SetViewMode {
   const factory _SetViewMode(
       @JsonKey(name: 'viewmode')
       @SetViewModeViewModeConverter()
-      final SetViewModeViewMode viewMode) = _$_SetViewMode;
+      final SetViewModeViewMode viewMode) = _$SetViewModeImpl;
   const _SetViewMode._() : super._();
 
   factory _SetViewMode.fromJson(Map<String, dynamic> json) =
-      _$_SetViewMode.fromJson;
+      _$SetViewModeImpl.fromJson;
 
   @override
   @JsonKey(name: 'viewmode')
   @SetViewModeViewModeConverter()
   SetViewModeViewMode get viewMode;
+
+  /// Create a copy of SetViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetViewModeCopyWith<_$_SetViewMode> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetViewModeImplCopyWith<_$SetViewModeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -235,6 +250,8 @@ mixin _$SetViewModeViewMode {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SetViewModeViewMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -254,14 +271,17 @@ class _$SetViewModeViewModeCopyWithImpl<$Res, $Val extends SetViewModeViewMode>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SetViewModeViewModeCustomCopyWith<$Res> {
-  factory _$$_SetViewModeViewModeCustomCopyWith(
-          _$_SetViewModeViewModeCustom value,
-          $Res Function(_$_SetViewModeViewModeCustom) then) =
-      __$$_SetViewModeViewModeCustomCopyWithImpl<$Res>;
+abstract class _$$SetViewModeViewModeCustomImplCopyWith<$Res> {
+  factory _$$SetViewModeViewModeCustomImplCopyWith(
+          _$SetViewModeViewModeCustomImpl value,
+          $Res Function(_$SetViewModeViewModeCustomImpl) then) =
+      __$$SetViewModeViewModeCustomImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerCustomViewMode viewMode});
 
@@ -269,21 +289,23 @@ abstract class _$$_SetViewModeViewModeCustomCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SetViewModeViewModeCustomCopyWithImpl<$Res>
+class __$$SetViewModeViewModeCustomImplCopyWithImpl<$Res>
     extends _$SetViewModeViewModeCopyWithImpl<$Res,
-        _$_SetViewModeViewModeCustom>
-    implements _$$_SetViewModeViewModeCustomCopyWith<$Res> {
-  __$$_SetViewModeViewModeCustomCopyWithImpl(
-      _$_SetViewModeViewModeCustom _value,
-      $Res Function(_$_SetViewModeViewModeCustom) _then)
+        _$SetViewModeViewModeCustomImpl>
+    implements _$$SetViewModeViewModeCustomImplCopyWith<$Res> {
+  __$$SetViewModeViewModeCustomImplCopyWithImpl(
+      _$SetViewModeViewModeCustomImpl _value,
+      $Res Function(_$SetViewModeViewModeCustomImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? viewMode = null,
   }) {
-    return _then(_$_SetViewModeViewModeCustom(
+    return _then(_$SetViewModeViewModeCustomImpl(
       null == viewMode
           ? _value.viewMode
           : viewMode // ignore: cast_nullable_to_non_nullable
@@ -291,6 +313,8 @@ class __$$_SetViewModeViewModeCustomCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerCustomViewModeCopyWith<$Res> get viewMode {
@@ -302,12 +326,12 @@ class __$$_SetViewModeViewModeCustomCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetViewModeViewModeCustom implements _SetViewModeViewModeCustom {
-  const _$_SetViewModeViewModeCustom(this.viewMode, {final String? $type})
+class _$SetViewModeViewModeCustomImpl implements _SetViewModeViewModeCustom {
+  const _$SetViewModeViewModeCustomImpl(this.viewMode, {final String? $type})
       : $type = $type ?? 'custom';
 
-  factory _$_SetViewModeViewModeCustom.fromJson(Map<String, dynamic> json) =>
-      _$$_SetViewModeViewModeCustomFromJson(json);
+  factory _$SetViewModeViewModeCustomImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetViewModeViewModeCustomImplFromJson(json);
 
   @override
   final KodiPlayerCustomViewMode viewMode;
@@ -321,24 +345,26 @@ class _$_SetViewModeViewModeCustom implements _SetViewModeViewModeCustom {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetViewModeViewModeCustom &&
+            other is _$SetViewModeViewModeCustomImpl &&
             (identical(other.viewMode, viewMode) ||
                 other.viewMode == viewMode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, viewMode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetViewModeViewModeCustomCopyWith<_$_SetViewModeViewModeCustom>
-      get copyWith => __$$_SetViewModeViewModeCustomCopyWithImpl<
-          _$_SetViewModeViewModeCustom>(this, _$identity);
+  _$$SetViewModeViewModeCustomImplCopyWith<_$SetViewModeViewModeCustomImpl>
+      get copyWith => __$$SetViewModeViewModeCustomImplCopyWithImpl<
+          _$SetViewModeViewModeCustomImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -404,7 +430,7 @@ class _$_SetViewModeViewModeCustom implements _SetViewModeViewModeCustom {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetViewModeViewModeCustomToJson(
+    return _$$SetViewModeViewModeCustomImplToJson(
       this,
     );
   }
@@ -412,40 +438,49 @@ class _$_SetViewModeViewModeCustom implements _SetViewModeViewModeCustom {
 
 abstract class _SetViewModeViewModeCustom implements SetViewModeViewMode {
   const factory _SetViewModeViewModeCustom(
-      final KodiPlayerCustomViewMode viewMode) = _$_SetViewModeViewModeCustom;
+          final KodiPlayerCustomViewMode viewMode) =
+      _$SetViewModeViewModeCustomImpl;
 
   factory _SetViewModeViewModeCustom.fromJson(Map<String, dynamic> json) =
-      _$_SetViewModeViewModeCustom.fromJson;
+      _$SetViewModeViewModeCustomImpl.fromJson;
 
   KodiPlayerCustomViewMode get viewMode;
-  @JsonKey(ignore: true)
-  _$$_SetViewModeViewModeCustomCopyWith<_$_SetViewModeViewModeCustom>
+
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetViewModeViewModeCustomImplCopyWith<_$SetViewModeViewModeCustomImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SetViewModeViewModeEnumCopyWith<$Res> {
-  factory _$$_SetViewModeViewModeEnumCopyWith(_$_SetViewModeViewModeEnum value,
-          $Res Function(_$_SetViewModeViewModeEnum) then) =
-      __$$_SetViewModeViewModeEnumCopyWithImpl<$Res>;
+abstract class _$$SetViewModeViewModeEnumImplCopyWith<$Res> {
+  factory _$$SetViewModeViewModeEnumImplCopyWith(
+          _$SetViewModeViewModeEnumImpl value,
+          $Res Function(_$SetViewModeViewModeEnumImpl) then) =
+      __$$SetViewModeViewModeEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerViewMode viewModeEnum});
 }
 
 /// @nodoc
-class __$$_SetViewModeViewModeEnumCopyWithImpl<$Res>
-    extends _$SetViewModeViewModeCopyWithImpl<$Res, _$_SetViewModeViewModeEnum>
-    implements _$$_SetViewModeViewModeEnumCopyWith<$Res> {
-  __$$_SetViewModeViewModeEnumCopyWithImpl(_$_SetViewModeViewModeEnum _value,
-      $Res Function(_$_SetViewModeViewModeEnum) _then)
+class __$$SetViewModeViewModeEnumImplCopyWithImpl<$Res>
+    extends _$SetViewModeViewModeCopyWithImpl<$Res,
+        _$SetViewModeViewModeEnumImpl>
+    implements _$$SetViewModeViewModeEnumImplCopyWith<$Res> {
+  __$$SetViewModeViewModeEnumImplCopyWithImpl(
+      _$SetViewModeViewModeEnumImpl _value,
+      $Res Function(_$SetViewModeViewModeEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? viewModeEnum = null,
   }) {
-    return _then(_$_SetViewModeViewModeEnum(
+    return _then(_$SetViewModeViewModeEnumImpl(
       null == viewModeEnum
           ? _value.viewModeEnum
           : viewModeEnum // ignore: cast_nullable_to_non_nullable
@@ -456,12 +491,12 @@ class __$$_SetViewModeViewModeEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetViewModeViewModeEnum implements _SetViewModeViewModeEnum {
-  const _$_SetViewModeViewModeEnum(this.viewModeEnum, {final String? $type})
+class _$SetViewModeViewModeEnumImpl implements _SetViewModeViewModeEnum {
+  const _$SetViewModeViewModeEnumImpl(this.viewModeEnum, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_SetViewModeViewModeEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_SetViewModeViewModeEnumFromJson(json);
+  factory _$SetViewModeViewModeEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetViewModeViewModeEnumImplFromJson(json);
 
   @override
   final KodiPlayerViewMode viewModeEnum;
@@ -475,25 +510,26 @@ class _$_SetViewModeViewModeEnum implements _SetViewModeViewModeEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetViewModeViewModeEnum &&
+            other is _$SetViewModeViewModeEnumImpl &&
             (identical(other.viewModeEnum, viewModeEnum) ||
                 other.viewModeEnum == viewModeEnum));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, viewModeEnum);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetViewModeViewModeEnumCopyWith<_$_SetViewModeViewModeEnum>
-      get copyWith =>
-          __$$_SetViewModeViewModeEnumCopyWithImpl<_$_SetViewModeViewModeEnum>(
-              this, _$identity);
+  _$$SetViewModeViewModeEnumImplCopyWith<_$SetViewModeViewModeEnumImpl>
+      get copyWith => __$$SetViewModeViewModeEnumImplCopyWithImpl<
+          _$SetViewModeViewModeEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -559,7 +595,7 @@ class _$_SetViewModeViewModeEnum implements _SetViewModeViewModeEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetViewModeViewModeEnumToJson(
+    return _$$SetViewModeViewModeEnumImplToJson(
       this,
     );
   }
@@ -567,13 +603,16 @@ class _$_SetViewModeViewModeEnum implements _SetViewModeViewModeEnum {
 
 abstract class _SetViewModeViewModeEnum implements SetViewModeViewMode {
   const factory _SetViewModeViewModeEnum(
-      final KodiPlayerViewMode viewModeEnum) = _$_SetViewModeViewModeEnum;
+      final KodiPlayerViewMode viewModeEnum) = _$SetViewModeViewModeEnumImpl;
 
   factory _SetViewModeViewModeEnum.fromJson(Map<String, dynamic> json) =
-      _$_SetViewModeViewModeEnum.fromJson;
+      _$SetViewModeViewModeEnumImpl.fromJson;
 
   KodiPlayerViewMode get viewModeEnum;
-  @JsonKey(ignore: true)
-  _$$_SetViewModeViewModeEnumCopyWith<_$_SetViewModeViewModeEnum>
+
+  /// Create a copy of SetViewModeViewMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetViewModeViewModeEnumImplCopyWith<_$SetViewModeViewModeEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

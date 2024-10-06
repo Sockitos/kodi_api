@@ -30,6 +30,8 @@ class SetVolume with _$SetVolume implements KodiRequest<void> {
 
 @freezed
 class SetVolumeValue with _$SetVolumeValue {
+  @Assert('volume >= 0')
+  @Assert('volume <= 100')
   const factory SetVolumeValue.abs(
     int volume,
   ) = _SetVolumeValueInt;

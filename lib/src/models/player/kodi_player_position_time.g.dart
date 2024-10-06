@@ -6,17 +6,17 @@ part of 'kodi_player_position_time.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerPositionTime _$$_KodiPlayerPositionTimeFromJson(
+_$KodiPlayerPositionTimeImpl _$$KodiPlayerPositionTimeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerPositionTime(
-      hours: json['hours'] as int,
-      milliseconds: json['milliseconds'] as int,
-      minutes: json['minutes'] as int,
-      seconds: json['seconds'] as int,
+    _$KodiPlayerPositionTimeImpl(
+      hours: (json['hours'] as num?)?.toInt() ?? 0,
+      milliseconds: (json['milliseconds'] as num?)?.toInt() ?? 0,
+      minutes: (json['minutes'] as num?)?.toInt() ?? 0,
+      seconds: (json['seconds'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$_KodiPlayerPositionTimeToJson(
-        _$_KodiPlayerPositionTime instance) =>
+Map<String, dynamic> _$$KodiPlayerPositionTimeImplToJson(
+        _$KodiPlayerPositionTimeImpl instance) =>
     <String, dynamic>{
       'hours': instance.hours,
       'milliseconds': instance.milliseconds,

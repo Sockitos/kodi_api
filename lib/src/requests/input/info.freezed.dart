@@ -12,7 +12,7 @@ part of 'info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Info _$InfoFromJson(Map<String, dynamic> json) {
   return _Info.fromJson(json);
@@ -20,6 +20,7 @@ Info _$InfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Info {
+  /// Serializes this Info to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,27 +39,36 @@ class _$InfoCopyWithImpl<$Res, $Val extends Info>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_InfoCopyWith<$Res> {
-  factory _$$_InfoCopyWith(_$_Info value, $Res Function(_$_Info) then) =
-      __$$_InfoCopyWithImpl<$Res>;
+abstract class _$$InfoImplCopyWith<$Res> {
+  factory _$$InfoImplCopyWith(
+          _$InfoImpl value, $Res Function(_$InfoImpl) then) =
+      __$$InfoImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InfoCopyWithImpl<$Res> extends _$InfoCopyWithImpl<$Res, _$_Info>
-    implements _$$_InfoCopyWith<$Res> {
-  __$$_InfoCopyWithImpl(_$_Info _value, $Res Function(_$_Info) _then)
+class __$$InfoImplCopyWithImpl<$Res>
+    extends _$InfoCopyWithImpl<$Res, _$InfoImpl>
+    implements _$$InfoImplCopyWith<$Res> {
+  __$$InfoImplCopyWithImpl(_$InfoImpl _value, $Res Function(_$InfoImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Info
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Info extends _Info {
-  const _$_Info() : super._();
+class _$InfoImpl extends _Info {
+  const _$InfoImpl() : super._();
 
-  factory _$_Info.fromJson(Map<String, dynamic> json) => _$$_InfoFromJson(json);
+  factory _$InfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InfoImplFromJson(json);
 
   @override
   String toString() {
@@ -66,26 +76,26 @@ class _$_Info extends _Info {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Info);
+        (other.runtimeType == runtimeType && other is _$InfoImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InfoToJson(
+    return _$$InfoImplToJson(
       this,
     );
   }
 }
 
 abstract class _Info extends Info {
-  const factory _Info() = _$_Info;
+  const factory _Info() = _$InfoImpl;
   const _Info._() : super._();
 
-  factory _Info.fromJson(Map<String, dynamic> json) = _$_Info.fromJson;
+  factory _Info.fromJson(Map<String, dynamic> json) = _$InfoImpl.fromJson;
 }

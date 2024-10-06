@@ -6,23 +6,23 @@ part of 'kodi_player_audio_stream.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerAudioStream _$$_KodiPlayerAudioStreamFromJson(
+_$KodiPlayerAudioStreamImpl _$$KodiPlayerAudioStreamImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerAudioStream(
-      bitrate: json['bitrate'] as int,
-      channels: json['channels'] as int,
+    _$KodiPlayerAudioStreamImpl(
+      bitrate: (json['bitrate'] as num).toInt(),
+      channels: (json['channels'] as num).toInt(),
       codec: json['codec'] as String,
-      index: json['index'] as int,
+      index: (json['index'] as num).toInt(),
       isDefault: json['isdefault'] as bool,
       isImpaired: json['isimpaired'] as bool,
       isOriginal: json['isoriginal'] as bool,
       language: json['language'] as String,
       name: json['name'] as String,
-      sampleRate: json['samplerate'] as int,
+      sampleRate: (json['samplerate'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_KodiPlayerAudioStreamToJson(
-        _$_KodiPlayerAudioStream instance) =>
+Map<String, dynamic> _$$KodiPlayerAudioStreamImplToJson(
+        _$KodiPlayerAudioStreamImpl instance) =>
     <String, dynamic>{
       'bitrate': instance.bitrate,
       'channels': instance.channels,

@@ -6,22 +6,22 @@ part of 'kodi_gui_property_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiGUIPropertyValue _$$_KodiGUIPropertyValueFromJson(
+_$KodiGUIPropertyValueImpl _$$KodiGUIPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiGUIPropertyValue(
+    _$KodiGUIPropertyValueImpl(
       currentControl: KodiGUIPropertyValueCurrentProtocol.fromJson(
           json['currentcontrol'] as Map<String, dynamic>),
       currentWindow: KodiGUIPropertyValueCurrentWindow.fromJson(
           json['currentwindow'] as Map<String, dynamic>),
-      fullscreen: json['fullscreen'] as bool,
+      fullscreen: json['fullscreen'] as bool? ?? false,
       skin: KodiGUIPropertyValueSkin.fromJson(
           json['skin'] as Map<String, dynamic>),
       stereoscopicMode: KodiGUIStereoscopyMode.fromJson(
           json['stereoscopicmode'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiGUIPropertyValueToJson(
-        _$_KodiGUIPropertyValue instance) =>
+Map<String, dynamic> _$$KodiGUIPropertyValueImplToJson(
+        _$KodiGUIPropertyValueImpl instance) =>
     <String, dynamic>{
       'currentcontrol': instance.currentControl.toJson(),
       'currentwindow': instance.currentWindow.toJson(),
@@ -30,57 +30,58 @@ Map<String, dynamic> _$$_KodiGUIPropertyValueToJson(
       'stereoscopicmode': instance.stereoscopicMode.toJson(),
     };
 
-_$_KodiGUIPropertyValueCurrentProtocol
-    _$$_KodiGUIPropertyValueCurrentProtocolFromJson(
+_$KodiGUIPropertyValueCurrentProtocolImpl
+    _$$KodiGUIPropertyValueCurrentProtocolImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiGUIPropertyValueCurrentProtocol(
+        _$KodiGUIPropertyValueCurrentProtocolImpl(
           label: json['label'] as String,
         );
 
-Map<String, dynamic> _$$_KodiGUIPropertyValueCurrentProtocolToJson(
-        _$_KodiGUIPropertyValueCurrentProtocol instance) =>
+Map<String, dynamic> _$$KodiGUIPropertyValueCurrentProtocolImplToJson(
+        _$KodiGUIPropertyValueCurrentProtocolImpl instance) =>
     <String, dynamic>{
       'label': instance.label,
     };
 
-_$_KodiGUIPropertyValueCurrentWindow
-    _$$_KodiGUIPropertyValueCurrentWindowFromJson(Map<String, dynamic> json) =>
-        _$_KodiGUIPropertyValueCurrentWindow(
-          id: json['id'] as int,
+_$KodiGUIPropertyValueCurrentWindowImpl
+    _$$KodiGUIPropertyValueCurrentWindowImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiGUIPropertyValueCurrentWindowImpl(
+          id: (json['id'] as num).toInt(),
           label: json['label'] as String,
         );
 
-Map<String, dynamic> _$$_KodiGUIPropertyValueCurrentWindowToJson(
-        _$_KodiGUIPropertyValueCurrentWindow instance) =>
+Map<String, dynamic> _$$KodiGUIPropertyValueCurrentWindowImplToJson(
+        _$KodiGUIPropertyValueCurrentWindowImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'label': instance.label,
     };
 
-_$_KodiGUIPropertyValueSkin _$$_KodiGUIPropertyValueSkinFromJson(
+_$KodiGUIPropertyValueSkinImpl _$$KodiGUIPropertyValueSkinImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiGUIPropertyValueSkin(
+    _$KodiGUIPropertyValueSkinImpl(
       id: json['id'] as String,
-      name: json['name'] as String,
+      name: json['name'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_KodiGUIPropertyValueSkinToJson(
-        _$_KodiGUIPropertyValueSkin instance) =>
+Map<String, dynamic> _$$KodiGUIPropertyValueSkinImplToJson(
+        _$KodiGUIPropertyValueSkinImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
     };
 
-_$_KodiGUIPropertyValueStereoscopicMode
-    _$$_KodiGUIPropertyValueStereoscopicModeFromJson(
+_$KodiGUIPropertyValueStereoscopicModeImpl
+    _$$KodiGUIPropertyValueStereoscopicModeImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiGUIPropertyValueStereoscopicMode(
+        _$KodiGUIPropertyValueStereoscopicModeImpl(
           label: json['label'] as String,
           mode: $enumDecode(_$KodiGUIStereoscopicModeEnumMap, json['mode']),
         );
 
-Map<String, dynamic> _$$_KodiGUIPropertyValueStereoscopicModeToJson(
-        _$_KodiGUIPropertyValueStereoscopicMode instance) =>
+Map<String, dynamic> _$$KodiGUIPropertyValueStereoscopicModeImplToJson(
+        _$KodiGUIPropertyValueStereoscopicModeImpl instance) =>
     <String, dynamic>{
       'label': instance.label,
       'mode': _$KodiGUIStereoscopicModeEnumMap[instance.mode]!,

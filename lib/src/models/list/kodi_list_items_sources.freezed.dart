@@ -12,7 +12,7 @@ part of 'kodi_list_items_sources.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListItemsSources _$KodiListItemsSourcesFromJson(Map<String, dynamic> json) {
   return _KodiListItemsSources.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$KodiListItemsSources {
   String get file => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListItemsSources to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListItemsSources
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListItemsSourcesCopyWith<KodiListItemsSources> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$KodiListItemsSourcesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListItemsSources
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,31 +75,33 @@ class _$KodiListItemsSourcesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiListItemsSourcesCopyWith<$Res>
+abstract class _$$KodiListItemsSourcesImplCopyWith<$Res>
     implements $KodiListItemsSourcesCopyWith<$Res> {
-  factory _$$_KodiListItemsSourcesCopyWith(_$_KodiListItemsSources value,
-          $Res Function(_$_KodiListItemsSources) then) =
-      __$$_KodiListItemsSourcesCopyWithImpl<$Res>;
+  factory _$$KodiListItemsSourcesImplCopyWith(_$KodiListItemsSourcesImpl value,
+          $Res Function(_$KodiListItemsSourcesImpl) then) =
+      __$$KodiListItemsSourcesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String file, String label});
 }
 
 /// @nodoc
-class __$$_KodiListItemsSourcesCopyWithImpl<$Res>
-    extends _$KodiListItemsSourcesCopyWithImpl<$Res, _$_KodiListItemsSources>
-    implements _$$_KodiListItemsSourcesCopyWith<$Res> {
-  __$$_KodiListItemsSourcesCopyWithImpl(_$_KodiListItemsSources _value,
-      $Res Function(_$_KodiListItemsSources) _then)
+class __$$KodiListItemsSourcesImplCopyWithImpl<$Res>
+    extends _$KodiListItemsSourcesCopyWithImpl<$Res, _$KodiListItemsSourcesImpl>
+    implements _$$KodiListItemsSourcesImplCopyWith<$Res> {
+  __$$KodiListItemsSourcesImplCopyWithImpl(_$KodiListItemsSourcesImpl _value,
+      $Res Function(_$KodiListItemsSourcesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListItemsSources
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? file = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiListItemsSources(
+    return _then(_$KodiListItemsSourcesImpl(
       file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
@@ -108,11 +116,11 @@ class __$$_KodiListItemsSourcesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListItemsSources implements _KodiListItemsSources {
-  const _$_KodiListItemsSources({required this.file, required this.label});
+class _$KodiListItemsSourcesImpl implements _KodiListItemsSources {
+  const _$KodiListItemsSourcesImpl({required this.file, required this.label});
 
-  factory _$_KodiListItemsSources.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListItemsSourcesFromJson(json);
+  factory _$KodiListItemsSourcesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListItemsSourcesImplFromJson(json);
 
   @override
   final String file;
@@ -125,28 +133,31 @@ class _$_KodiListItemsSources implements _KodiListItemsSources {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListItemsSources &&
+            other is _$KodiListItemsSourcesImpl &&
             (identical(other.file, file) || other.file == file) &&
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, file, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListItemsSources
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListItemsSourcesCopyWith<_$_KodiListItemsSources> get copyWith =>
-      __$$_KodiListItemsSourcesCopyWithImpl<_$_KodiListItemsSources>(
-          this, _$identity);
+  _$$KodiListItemsSourcesImplCopyWith<_$KodiListItemsSourcesImpl>
+      get copyWith =>
+          __$$KodiListItemsSourcesImplCopyWithImpl<_$KodiListItemsSourcesImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListItemsSourcesToJson(
+    return _$$KodiListItemsSourcesImplToJson(
       this,
     );
   }
@@ -155,17 +166,20 @@ class _$_KodiListItemsSources implements _KodiListItemsSources {
 abstract class _KodiListItemsSources implements KodiListItemsSources {
   const factory _KodiListItemsSources(
       {required final String file,
-      required final String label}) = _$_KodiListItemsSources;
+      required final String label}) = _$KodiListItemsSourcesImpl;
 
   factory _KodiListItemsSources.fromJson(Map<String, dynamic> json) =
-      _$_KodiListItemsSources.fromJson;
+      _$KodiListItemsSourcesImpl.fromJson;
 
   @override
   String get file;
   @override
   String get label;
+
+  /// Create a copy of KodiListItemsSources
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListItemsSourcesCopyWith<_$_KodiListItemsSources> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListItemsSourcesImplCopyWith<_$KodiListItemsSourcesImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

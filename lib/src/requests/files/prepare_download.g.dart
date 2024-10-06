@@ -6,27 +6,29 @@ part of 'prepare_download.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PrepareDownload _$$_PrepareDownloadFromJson(Map<String, dynamic> json) =>
-    _$_PrepareDownload(
+_$PrepareDownloadImpl _$$PrepareDownloadImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PrepareDownloadImpl(
       json['path'] as String,
     );
 
-Map<String, dynamic> _$$_PrepareDownloadToJson(_$_PrepareDownload instance) =>
+Map<String, dynamic> _$$PrepareDownloadImplToJson(
+        _$PrepareDownloadImpl instance) =>
     <String, dynamic>{
       'path': instance.path,
     };
 
-_$_PrepareDownloadResponse _$$_PrepareDownloadResponseFromJson(
+_$PrepareDownloadResponseImpl _$$PrepareDownloadResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PrepareDownloadResponse(
+    _$PrepareDownloadResponseImpl(
       details: json['details'] as Map<String, dynamic>,
       mode: $enumDecode(_$KodiFilesPrepareDownloadModeEnumMap, json['mode']),
       protocol: $enumDecode(
           _$KodiFilesPrepareDownloadProtocolEnumMap, json['protocol']),
     );
 
-Map<String, dynamic> _$$_PrepareDownloadResponseToJson(
-        _$_PrepareDownloadResponse instance) =>
+Map<String, dynamic> _$$PrepareDownloadResponseImplToJson(
+        _$PrepareDownloadResponseImpl instance) =>
     <String, dynamic>{
       'details': instance.details,
       'mode': _$KodiFilesPrepareDownloadModeEnumMap[instance.mode]!,

@@ -12,7 +12,7 @@ part of 'get_profiles.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetProfiles _$GetProfilesFromJson(Map<String, dynamic> json) {
   return _GetProfiles.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetProfiles {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetProfiles to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetProfiles
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetProfilesCopyWith<GetProfiles> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$GetProfilesCopyWithImpl<$Res, $Val extends GetProfiles>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetProfiles
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$GetProfilesCopyWithImpl<$Res, $Val extends GetProfiles>
     ) as $Val);
   }
 
+  /// Create a copy of GetProfiles
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -91,6 +99,8 @@ class _$GetProfilesCopyWithImpl<$Res, $Val extends GetProfiles>
     });
   }
 
+  /// Create a copy of GetProfiles
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -105,11 +115,11 @@ class _$GetProfilesCopyWithImpl<$Res, $Val extends GetProfiles>
 }
 
 /// @nodoc
-abstract class _$$_GetProfilesCopyWith<$Res>
+abstract class _$$GetProfilesImplCopyWith<$Res>
     implements $GetProfilesCopyWith<$Res> {
-  factory _$$_GetProfilesCopyWith(
-          _$_GetProfiles value, $Res Function(_$_GetProfiles) then) =
-      __$$_GetProfilesCopyWithImpl<$Res>;
+  factory _$$GetProfilesImplCopyWith(
+          _$GetProfilesImpl value, $Res Function(_$GetProfilesImpl) then) =
+      __$$GetProfilesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,13 +134,15 @@ abstract class _$$_GetProfilesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetProfilesCopyWithImpl<$Res>
-    extends _$GetProfilesCopyWithImpl<$Res, _$_GetProfiles>
-    implements _$$_GetProfilesCopyWith<$Res> {
-  __$$_GetProfilesCopyWithImpl(
-      _$_GetProfiles _value, $Res Function(_$_GetProfiles) _then)
+class __$$GetProfilesImplCopyWithImpl<$Res>
+    extends _$GetProfilesCopyWithImpl<$Res, _$GetProfilesImpl>
+    implements _$$GetProfilesImplCopyWith<$Res> {
+  __$$GetProfilesImplCopyWithImpl(
+      _$GetProfilesImpl _value, $Res Function(_$GetProfilesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetProfiles
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,7 +150,7 @@ class __$$_GetProfilesCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetProfiles(
+    return _then(_$GetProfilesImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -157,16 +169,16 @@ class __$$_GetProfilesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetProfiles extends _GetProfiles {
-  const _$_GetProfiles(
+class _$GetProfilesImpl extends _GetProfiles {
+  const _$GetProfilesImpl(
       {final Set<KodiProfilesFieldsProfile>? properties,
       this.limits,
       this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetProfiles.fromJson(Map<String, dynamic> json) =>
-      _$$_GetProfilesFromJson(json);
+  factory _$GetProfilesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetProfilesImplFromJson(json);
 
   final Set<KodiProfilesFieldsProfile>? _properties;
   @override
@@ -189,30 +201,32 @@ class _$_GetProfiles extends _GetProfiles {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetProfiles &&
+            other is _$GetProfilesImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetProfiles
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetProfilesCopyWith<_$_GetProfiles> get copyWith =>
-      __$$_GetProfilesCopyWithImpl<_$_GetProfiles>(this, _$identity);
+  _$$GetProfilesImplCopyWith<_$GetProfilesImpl> get copyWith =>
+      __$$GetProfilesImplCopyWithImpl<_$GetProfilesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetProfilesToJson(
+    return _$$GetProfilesImplToJson(
       this,
     );
   }
@@ -222,11 +236,11 @@ abstract class _GetProfiles extends GetProfiles {
   const factory _GetProfiles(
       {final Set<KodiProfilesFieldsProfile>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetProfiles;
+      final KodiListSort? sort}) = _$GetProfilesImpl;
   const _GetProfiles._() : super._();
 
   factory _GetProfiles.fromJson(Map<String, dynamic> json) =
-      _$_GetProfiles.fromJson;
+      _$GetProfilesImpl.fromJson;
 
   @override
   Set<KodiProfilesFieldsProfile>? get properties;
@@ -234,9 +248,12 @@ abstract class _GetProfiles extends GetProfiles {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetProfiles
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetProfilesCopyWith<_$_GetProfiles> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetProfilesImplCopyWith<_$GetProfilesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -251,8 +268,12 @@ mixin _$KodiProfilesGetProfilesResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiProfilesGetProfilesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiProfilesGetProfilesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiProfilesGetProfilesResponseCopyWith<KodiProfilesGetProfilesResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -283,6 +304,8 @@ class _$KodiProfilesGetProfilesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiProfilesGetProfilesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -301,6 +324,8 @@ class _$KodiProfilesGetProfilesResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiProfilesGetProfilesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -311,12 +336,12 @@ class _$KodiProfilesGetProfilesResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiProfilesGetProfilesResponseCopyWith<$Res>
+abstract class _$$KodiProfilesGetProfilesResponseImplCopyWith<$Res>
     implements $KodiProfilesGetProfilesResponseCopyWith<$Res> {
-  factory _$$_KodiProfilesGetProfilesResponseCopyWith(
-          _$_KodiProfilesGetProfilesResponse value,
-          $Res Function(_$_KodiProfilesGetProfilesResponse) then) =
-      __$$_KodiProfilesGetProfilesResponseCopyWithImpl<$Res>;
+  factory _$$KodiProfilesGetProfilesResponseImplCopyWith(
+          _$KodiProfilesGetProfilesResponseImpl value,
+          $Res Function(_$KodiProfilesGetProfilesResponseImpl) then) =
+      __$$KodiProfilesGetProfilesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -328,22 +353,24 @@ abstract class _$$_KodiProfilesGetProfilesResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiProfilesGetProfilesResponseCopyWithImpl<$Res>
+class __$$KodiProfilesGetProfilesResponseImplCopyWithImpl<$Res>
     extends _$KodiProfilesGetProfilesResponseCopyWithImpl<$Res,
-        _$_KodiProfilesGetProfilesResponse>
-    implements _$$_KodiProfilesGetProfilesResponseCopyWith<$Res> {
-  __$$_KodiProfilesGetProfilesResponseCopyWithImpl(
-      _$_KodiProfilesGetProfilesResponse _value,
-      $Res Function(_$_KodiProfilesGetProfilesResponse) _then)
+        _$KodiProfilesGetProfilesResponseImpl>
+    implements _$$KodiProfilesGetProfilesResponseImplCopyWith<$Res> {
+  __$$KodiProfilesGetProfilesResponseImplCopyWithImpl(
+      _$KodiProfilesGetProfilesResponseImpl _value,
+      $Res Function(_$KodiProfilesGetProfilesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiProfilesGetProfilesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? profiles = null,
     Object? limits = null,
   }) {
-    return _then(_$_KodiProfilesGetProfilesResponse(
+    return _then(_$KodiProfilesGetProfilesResponseImpl(
       profiles: null == profiles
           ? _value._profiles
           : profiles // ignore: cast_nullable_to_non_nullable
@@ -358,16 +385,16 @@ class __$$_KodiProfilesGetProfilesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiProfilesGetProfilesResponse
+class _$KodiProfilesGetProfilesResponseImpl
     implements _KodiProfilesGetProfilesResponse {
-  const _$_KodiProfilesGetProfilesResponse(
+  const _$KodiProfilesGetProfilesResponseImpl(
       {required final List<KodiProfilesDetailsProfile> profiles,
       required this.limits})
       : _profiles = profiles;
 
-  factory _$_KodiProfilesGetProfilesResponse.fromJson(
+  factory _$KodiProfilesGetProfilesResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiProfilesGetProfilesResponseFromJson(json);
+      _$$KodiProfilesGetProfilesResponseImplFromJson(json);
 
   final List<KodiProfilesDetailsProfile> _profiles;
   @override
@@ -386,30 +413,32 @@ class _$_KodiProfilesGetProfilesResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiProfilesGetProfilesResponse &&
+            other is _$KodiProfilesGetProfilesResponseImpl &&
             const DeepCollectionEquality().equals(other._profiles, _profiles) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_profiles), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiProfilesGetProfilesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiProfilesGetProfilesResponseCopyWith<
-          _$_KodiProfilesGetProfilesResponse>
-      get copyWith => __$$_KodiProfilesGetProfilesResponseCopyWithImpl<
-          _$_KodiProfilesGetProfilesResponse>(this, _$identity);
+  _$$KodiProfilesGetProfilesResponseImplCopyWith<
+          _$KodiProfilesGetProfilesResponseImpl>
+      get copyWith => __$$KodiProfilesGetProfilesResponseImplCopyWithImpl<
+          _$KodiProfilesGetProfilesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiProfilesGetProfilesResponseToJson(
+    return _$$KodiProfilesGetProfilesResponseImplToJson(
       this,
     );
   }
@@ -420,18 +449,21 @@ abstract class _KodiProfilesGetProfilesResponse
   const factory _KodiProfilesGetProfilesResponse(
           {required final List<KodiProfilesDetailsProfile> profiles,
           required final KodiListLimitsReturned limits}) =
-      _$_KodiProfilesGetProfilesResponse;
+      _$KodiProfilesGetProfilesResponseImpl;
 
   factory _KodiProfilesGetProfilesResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiProfilesGetProfilesResponse.fromJson;
+      _$KodiProfilesGetProfilesResponseImpl.fromJson;
 
   @override
   List<KodiProfilesDetailsProfile> get profiles;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of KodiProfilesGetProfilesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiProfilesGetProfilesResponseCopyWith<
-          _$_KodiProfilesGetProfilesResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiProfilesGetProfilesResponseImplCopyWith<
+          _$KodiProfilesGetProfilesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,8 +6,8 @@ part of 'get_settings.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSettings _$$_GetSettingsFromJson(Map<String, dynamic> json) =>
-    _$_GetSettings(
+_$GetSettingsImpl _$$GetSettingsImplFromJson(Map<String, dynamic> json) =>
+    _$GetSettingsImpl(
       level: $enumDecodeNullable(_$KodiSettingLevelEnumMap, json['level']) ??
           KodiSettingLevel.standard,
       filter: json['filter'] == null
@@ -16,7 +16,7 @@ _$_GetSettings _$$_GetSettingsFromJson(Map<String, dynamic> json) =>
               json['filter'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSettingsToJson(_$_GetSettings instance) {
+Map<String, dynamic> _$$GetSettingsImplToJson(_$GetSettingsImpl instance) {
   final val = <String, dynamic>{
     'level': _$KodiSettingLevelEnumMap[instance.level]!,
   };
@@ -38,15 +38,15 @@ const _$KodiSettingLevelEnumMap = {
   KodiSettingLevel.expert: 'expert',
 };
 
-_$_KodiGetSettingsFilter _$$_KodiGetSettingsFilterFromJson(
+_$KodiGetSettingsFilterImpl _$$KodiGetSettingsFilterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiGetSettingsFilter(
+    _$KodiGetSettingsFilterImpl(
       category: json['category'] as String,
       section: json['section'] as String,
     );
 
-Map<String, dynamic> _$$_KodiGetSettingsFilterToJson(
-        _$_KodiGetSettingsFilter instance) =>
+Map<String, dynamic> _$$KodiGetSettingsFilterImplToJson(
+        _$KodiGetSettingsFilterImpl instance) =>
     <String, dynamic>{
       'category': instance.category,
       'section': instance.section,

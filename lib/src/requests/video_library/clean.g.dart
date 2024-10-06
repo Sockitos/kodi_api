@@ -6,7 +6,7 @@ part of 'clean.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Clean _$$_CleanFromJson(Map<String, dynamic> json) => _$_Clean(
+_$CleanImpl _$$CleanImplFromJson(Map<String, dynamic> json) => _$CleanImpl(
       showDialogs: json['showdialogs'] as bool? ?? true,
       content: $enumDecodeNullable(
               _$KodiVideoLibraryContentTypeEnumMap, json['content']) ??
@@ -14,7 +14,7 @@ _$_Clean _$$_CleanFromJson(Map<String, dynamic> json) => _$_Clean(
       directory: json['directory'] as String?,
     );
 
-Map<String, dynamic> _$$_CleanToJson(_$_Clean instance) {
+Map<String, dynamic> _$$CleanImplToJson(_$CleanImpl instance) {
   final val = <String, dynamic>{
     'showdialogs': instance.showDialogs,
     'content': _$KodiVideoLibraryContentTypeEnumMap[instance.content]!,

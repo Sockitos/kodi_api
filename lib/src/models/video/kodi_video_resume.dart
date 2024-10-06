@@ -6,8 +6,8 @@ part 'kodi_video_resume.g.dart';
 @freezed
 class KodiVideoResume with _$KodiVideoResume {
   const factory KodiVideoResume({
-    double? position,
-    double? total,
+    @Default(0.0) double position,
+    @Default(0.0) double total,
   }) = _KodiVideoResume;
 
   factory KodiVideoResume.fromJson(Map<String, dynamic> json) =>

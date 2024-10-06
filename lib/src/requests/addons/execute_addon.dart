@@ -14,9 +14,9 @@ typedef ExecuteAddonBuilder = ExecuteAddon Function(
 @freezed
 class ExecuteAddon with _$ExecuteAddon implements KodiRequest<void> {
   const factory ExecuteAddon(
-    String id, {
+    @JsonKey(name: 'addonid') String id, {
     @KodiAddonsExecuteAddonParamsConverter()
-        KodiAddonsExecuteAddonParams? params,
+    KodiAddonsExecuteAddonParams? params,
     @Default(false) bool wait,
   }) = _ExecuteAddon;
 

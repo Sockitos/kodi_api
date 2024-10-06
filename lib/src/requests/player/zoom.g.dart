@@ -6,12 +6,12 @@ part of 'zoom.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Zoom _$$_ZoomFromJson(Map<String, dynamic> json) => _$_Zoom(
-      json['playerid'] as int,
+_$ZoomImpl _$$ZoomImplFromJson(Map<String, dynamic> json) => _$ZoomImpl(
+      (json['playerid'] as num).toInt(),
       const ZoomZoomConverter().fromJson(json['zoom']),
     );
 
-Map<String, dynamic> _$$_ZoomToJson(_$_Zoom instance) {
+Map<String, dynamic> _$$ZoomImplToJson(_$ZoomImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };
@@ -26,13 +26,13 @@ Map<String, dynamic> _$$_ZoomToJson(_$_Zoom instance) {
   return val;
 }
 
-_$_ZoomZoomEnum _$$_ZoomZoomEnumFromJson(Map<String, dynamic> json) =>
-    _$_ZoomZoomEnum(
+_$ZoomZoomEnumImpl _$$ZoomZoomEnumImplFromJson(Map<String, dynamic> json) =>
+    _$ZoomZoomEnumImpl(
       $enumDecode(_$ZoomZoomEnumEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_ZoomZoomEnumToJson(_$_ZoomZoomEnum instance) =>
+Map<String, dynamic> _$$ZoomZoomEnumImplToJson(_$ZoomZoomEnumImpl instance) =>
     <String, dynamic>{
       'value': _$ZoomZoomEnumEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -43,13 +43,13 @@ const _$ZoomZoomEnumEnumMap = {
   ZoomZoomEnum.out: 'out',
 };
 
-_$_ZoomZoomAbs _$$_ZoomZoomAbsFromJson(Map<String, dynamic> json) =>
-    _$_ZoomZoomAbs(
-      json['value'] as int,
+_$ZoomZoomAbsImpl _$$ZoomZoomAbsImplFromJson(Map<String, dynamic> json) =>
+    _$ZoomZoomAbsImpl(
+      (json['value'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_ZoomZoomAbsToJson(_$_ZoomZoomAbs instance) =>
+Map<String, dynamic> _$$ZoomZoomAbsImplToJson(_$ZoomZoomAbsImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

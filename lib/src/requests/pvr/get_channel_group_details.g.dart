@@ -6,9 +6,9 @@ part of 'get_channel_group_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetChannelGroupDetails _$$_GetChannelGroupDetailsFromJson(
+_$GetChannelGroupDetailsImpl _$$GetChannelGroupDetailsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetChannelGroupDetails(
+    _$GetChannelGroupDetailsImpl(
       const KodiPVRChannelGroupIdConverter().fromJson(json['channelgroupid']),
       channels: json['channels'] == null
           ? null
@@ -16,8 +16,8 @@ _$_GetChannelGroupDetails _$$_GetChannelGroupDetailsFromJson(
               json['channels'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetChannelGroupDetailsToJson(
-    _$_GetChannelGroupDetails instance) {
+Map<String, dynamic> _$$GetChannelGroupDetailsImplToJson(
+    _$GetChannelGroupDetailsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -32,10 +32,10 @@ Map<String, dynamic> _$$_GetChannelGroupDetailsToJson(
   return val;
 }
 
-_$_KodiPVRGetChannelGroupDetailsChannels
-    _$$_KodiPVRGetChannelGroupDetailsChannelsFromJson(
+_$KodiPVRGetChannelGroupDetailsChannelsImpl
+    _$$KodiPVRGetChannelGroupDetailsChannelsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPVRGetChannelGroupDetailsChannels(
+        _$KodiPVRGetChannelGroupDetailsChannelsImpl(
           limits: json['limits'] == null
               ? null
               : KodiListLimits.fromJson(json['limits'] as Map<String, dynamic>),
@@ -44,8 +44,8 @@ _$_KodiPVRGetChannelGroupDetailsChannels
               .toSet(),
         );
 
-Map<String, dynamic> _$$_KodiPVRGetChannelGroupDetailsChannelsToJson(
-    _$_KodiPVRGetChannelGroupDetailsChannels instance) {
+Map<String, dynamic> _$$KodiPVRGetChannelGroupDetailsChannelsImplToJson(
+    _$KodiPVRGetChannelGroupDetailsChannelsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

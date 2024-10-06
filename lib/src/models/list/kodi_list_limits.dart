@@ -5,10 +5,10 @@ part 'kodi_list_limits.g.dart';
 
 @freezed
 class KodiListLimits with _$KodiListLimits {
-  @Assert('start >= 0')
   @Assert('end >= 0')
+  @Assert('start >= 0')
   const factory KodiListLimits({
-    required int end,
+    @Default(-1) int end,
     @Default(0) int start,
   }) = _KodiListLimits;
 

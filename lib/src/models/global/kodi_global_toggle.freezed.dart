@@ -12,7 +12,7 @@ part of 'kodi_global_toggle.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiGlobalToggle _$KodiGlobalToggleFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -68,6 +68,8 @@ mixin _$KodiGlobalToggle {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiGlobalToggle to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -87,31 +89,36 @@ class _$KodiGlobalToggleCopyWithImpl<$Res, $Val extends KodiGlobalToggle>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiGlobalToggle
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiGlobalToggleBoolCopyWith<$Res> {
-  factory _$$_KodiGlobalToggleBoolCopyWith(_$_KodiGlobalToggleBool value,
-          $Res Function(_$_KodiGlobalToggleBool) then) =
-      __$$_KodiGlobalToggleBoolCopyWithImpl<$Res>;
+abstract class _$$KodiGlobalToggleBoolImplCopyWith<$Res> {
+  factory _$$KodiGlobalToggleBoolImplCopyWith(_$KodiGlobalToggleBoolImpl value,
+          $Res Function(_$KodiGlobalToggleBoolImpl) then) =
+      __$$KodiGlobalToggleBoolImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool value});
 }
 
 /// @nodoc
-class __$$_KodiGlobalToggleBoolCopyWithImpl<$Res>
-    extends _$KodiGlobalToggleCopyWithImpl<$Res, _$_KodiGlobalToggleBool>
-    implements _$$_KodiGlobalToggleBoolCopyWith<$Res> {
-  __$$_KodiGlobalToggleBoolCopyWithImpl(_$_KodiGlobalToggleBool _value,
-      $Res Function(_$_KodiGlobalToggleBool) _then)
+class __$$KodiGlobalToggleBoolImplCopyWithImpl<$Res>
+    extends _$KodiGlobalToggleCopyWithImpl<$Res, _$KodiGlobalToggleBoolImpl>
+    implements _$$KodiGlobalToggleBoolImplCopyWith<$Res> {
+  __$$KodiGlobalToggleBoolImplCopyWithImpl(_$KodiGlobalToggleBoolImpl _value,
+      $Res Function(_$KodiGlobalToggleBoolImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGlobalToggle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiGlobalToggleBool(
+    return _then(_$KodiGlobalToggleBoolImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -122,12 +129,12 @@ class __$$_KodiGlobalToggleBoolCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGlobalToggleBool implements _KodiGlobalToggleBool {
-  const _$_KodiGlobalToggleBool(this.value, {final String? $type})
+class _$KodiGlobalToggleBoolImpl implements _KodiGlobalToggleBool {
+  const _$KodiGlobalToggleBoolImpl(this.value, {final String? $type})
       : $type = $type ?? 'bool';
 
-  factory _$_KodiGlobalToggleBool.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiGlobalToggleBoolFromJson(json);
+  factory _$KodiGlobalToggleBoolImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiGlobalToggleBoolImplFromJson(json);
 
   @override
   final bool value;
@@ -141,23 +148,26 @@ class _$_KodiGlobalToggleBool implements _KodiGlobalToggleBool {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGlobalToggleBool &&
+            other is _$KodiGlobalToggleBoolImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGlobalToggle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGlobalToggleBoolCopyWith<_$_KodiGlobalToggleBool> get copyWith =>
-      __$$_KodiGlobalToggleBoolCopyWithImpl<_$_KodiGlobalToggleBool>(
-          this, _$identity);
+  _$$KodiGlobalToggleBoolImplCopyWith<_$KodiGlobalToggleBoolImpl>
+      get copyWith =>
+          __$$KodiGlobalToggleBoolImplCopyWithImpl<_$KodiGlobalToggleBoolImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -223,7 +233,7 @@ class _$_KodiGlobalToggleBool implements _KodiGlobalToggleBool {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGlobalToggleBoolToJson(
+    return _$$KodiGlobalToggleBoolImplToJson(
       this,
     );
   }
@@ -231,43 +241,49 @@ class _$_KodiGlobalToggleBool implements _KodiGlobalToggleBool {
 
 abstract class _KodiGlobalToggleBool implements KodiGlobalToggle {
   const factory _KodiGlobalToggleBool(final bool value) =
-      _$_KodiGlobalToggleBool;
+      _$KodiGlobalToggleBoolImpl;
 
   factory _KodiGlobalToggleBool.fromJson(Map<String, dynamic> json) =
-      _$_KodiGlobalToggleBool.fromJson;
+      _$KodiGlobalToggleBoolImpl.fromJson;
 
   @override
   bool get value;
-  @JsonKey(ignore: true)
-  _$$_KodiGlobalToggleBoolCopyWith<_$_KodiGlobalToggleBool> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiGlobalToggle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGlobalToggleBoolImplCopyWith<_$KodiGlobalToggleBoolImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiGlobalToggleEnumeratorCopyWith<$Res> {
-  factory _$$_KodiGlobalToggleEnumeratorCopyWith(
-          _$_KodiGlobalToggleEnumerator value,
-          $Res Function(_$_KodiGlobalToggleEnumerator) then) =
-      __$$_KodiGlobalToggleEnumeratorCopyWithImpl<$Res>;
+abstract class _$$KodiGlobalToggleEnumeratorImplCopyWith<$Res> {
+  factory _$$KodiGlobalToggleEnumeratorImplCopyWith(
+          _$KodiGlobalToggleEnumeratorImpl value,
+          $Res Function(_$KodiGlobalToggleEnumeratorImpl) then) =
+      __$$KodiGlobalToggleEnumeratorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiGlobalToggleEnum value});
 }
 
 /// @nodoc
-class __$$_KodiGlobalToggleEnumeratorCopyWithImpl<$Res>
-    extends _$KodiGlobalToggleCopyWithImpl<$Res, _$_KodiGlobalToggleEnumerator>
-    implements _$$_KodiGlobalToggleEnumeratorCopyWith<$Res> {
-  __$$_KodiGlobalToggleEnumeratorCopyWithImpl(
-      _$_KodiGlobalToggleEnumerator _value,
-      $Res Function(_$_KodiGlobalToggleEnumerator) _then)
+class __$$KodiGlobalToggleEnumeratorImplCopyWithImpl<$Res>
+    extends _$KodiGlobalToggleCopyWithImpl<$Res,
+        _$KodiGlobalToggleEnumeratorImpl>
+    implements _$$KodiGlobalToggleEnumeratorImplCopyWith<$Res> {
+  __$$KodiGlobalToggleEnumeratorImplCopyWithImpl(
+      _$KodiGlobalToggleEnumeratorImpl _value,
+      $Res Function(_$KodiGlobalToggleEnumeratorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGlobalToggle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiGlobalToggleEnumerator(
+    return _then(_$KodiGlobalToggleEnumeratorImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -278,12 +294,13 @@ class __$$_KodiGlobalToggleEnumeratorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGlobalToggleEnumerator implements _KodiGlobalToggleEnumerator {
-  const _$_KodiGlobalToggleEnumerator(this.value, {final String? $type})
+class _$KodiGlobalToggleEnumeratorImpl implements _KodiGlobalToggleEnumerator {
+  const _$KodiGlobalToggleEnumeratorImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_KodiGlobalToggleEnumerator.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiGlobalToggleEnumeratorFromJson(json);
+  factory _$KodiGlobalToggleEnumeratorImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiGlobalToggleEnumeratorImplFromJson(json);
 
   @override
   final KodiGlobalToggleEnum value;
@@ -297,23 +314,25 @@ class _$_KodiGlobalToggleEnumerator implements _KodiGlobalToggleEnumerator {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGlobalToggleEnumerator &&
+            other is _$KodiGlobalToggleEnumeratorImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGlobalToggle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGlobalToggleEnumeratorCopyWith<_$_KodiGlobalToggleEnumerator>
-      get copyWith => __$$_KodiGlobalToggleEnumeratorCopyWithImpl<
-          _$_KodiGlobalToggleEnumerator>(this, _$identity);
+  _$$KodiGlobalToggleEnumeratorImplCopyWith<_$KodiGlobalToggleEnumeratorImpl>
+      get copyWith => __$$KodiGlobalToggleEnumeratorImplCopyWithImpl<
+          _$KodiGlobalToggleEnumeratorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -379,7 +398,7 @@ class _$_KodiGlobalToggleEnumerator implements _KodiGlobalToggleEnumerator {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGlobalToggleEnumeratorToJson(
+    return _$$KodiGlobalToggleEnumeratorImplToJson(
       this,
     );
   }
@@ -387,14 +406,17 @@ class _$_KodiGlobalToggleEnumerator implements _KodiGlobalToggleEnumerator {
 
 abstract class _KodiGlobalToggleEnumerator implements KodiGlobalToggle {
   const factory _KodiGlobalToggleEnumerator(final KodiGlobalToggleEnum value) =
-      _$_KodiGlobalToggleEnumerator;
+      _$KodiGlobalToggleEnumeratorImpl;
 
   factory _KodiGlobalToggleEnumerator.fromJson(Map<String, dynamic> json) =
-      _$_KodiGlobalToggleEnumerator.fromJson;
+      _$KodiGlobalToggleEnumeratorImpl.fromJson;
 
   @override
   KodiGlobalToggleEnum get value;
-  @JsonKey(ignore: true)
-  _$$_KodiGlobalToggleEnumeratorCopyWith<_$_KodiGlobalToggleEnumerator>
+
+  /// Create a copy of KodiGlobalToggle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGlobalToggleEnumeratorImplCopyWith<_$KodiGlobalToggleEnumeratorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

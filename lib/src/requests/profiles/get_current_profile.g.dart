@@ -6,15 +6,16 @@ part of 'get_current_profile.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetCurrentProfile _$$_GetCurrentProfileFromJson(Map<String, dynamic> json) =>
-    _$_GetCurrentProfile(
+_$GetCurrentProfileImpl _$$GetCurrentProfileImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetCurrentProfileImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiProfilesFieldsProfileEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetCurrentProfileToJson(
-    _$_GetCurrentProfile instance) {
+Map<String, dynamic> _$$GetCurrentProfileImplToJson(
+    _$GetCurrentProfileImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

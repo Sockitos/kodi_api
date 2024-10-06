@@ -12,7 +12,7 @@ part of 'go_to.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GoTo _$GoToFromJson(Map<String, dynamic> json) {
   return _GoTo.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GoTo {
   @GoToToConverter()
   GoToTo get to => throw _privateConstructorUsedError;
 
+  /// Serializes this GoTo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GoToCopyWith<GoTo> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -50,6 +54,8 @@ class _$GoToCopyWithImpl<$Res, $Val extends GoTo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$GoToCopyWithImpl<$Res, $Val extends GoTo>
     ) as $Val);
   }
 
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GoToToCopyWith<$Res> get to {
@@ -78,9 +86,10 @@ class _$GoToCopyWithImpl<$Res, $Val extends GoTo>
 }
 
 /// @nodoc
-abstract class _$$_GoToCopyWith<$Res> implements $GoToCopyWith<$Res> {
-  factory _$$_GoToCopyWith(_$_GoTo value, $Res Function(_$_GoTo) then) =
-      __$$_GoToCopyWithImpl<$Res>;
+abstract class _$$GoToImplCopyWith<$Res> implements $GoToCopyWith<$Res> {
+  factory _$$GoToImplCopyWith(
+          _$GoToImpl value, $Res Function(_$GoToImpl) then) =
+      __$$GoToImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'playerid') int id, @GoToToConverter() GoToTo to});
@@ -90,18 +99,21 @@ abstract class _$$_GoToCopyWith<$Res> implements $GoToCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GoToCopyWithImpl<$Res> extends _$GoToCopyWithImpl<$Res, _$_GoTo>
-    implements _$$_GoToCopyWith<$Res> {
-  __$$_GoToCopyWithImpl(_$_GoTo _value, $Res Function(_$_GoTo) _then)
+class __$$GoToImplCopyWithImpl<$Res>
+    extends _$GoToCopyWithImpl<$Res, _$GoToImpl>
+    implements _$$GoToImplCopyWith<$Res> {
+  __$$GoToImplCopyWithImpl(_$GoToImpl _value, $Res Function(_$GoToImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? to = null,
   }) {
-    return _then(_$_GoTo(
+    return _then(_$GoToImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -116,11 +128,13 @@ class __$$_GoToCopyWithImpl<$Res> extends _$GoToCopyWithImpl<$Res, _$_GoTo>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GoTo extends _GoTo {
-  const _$_GoTo(@JsonKey(name: 'playerid') this.id, @GoToToConverter() this.to)
+class _$GoToImpl extends _GoTo {
+  const _$GoToImpl(
+      @JsonKey(name: 'playerid') this.id, @GoToToConverter() this.to)
       : super._();
 
-  factory _$_GoTo.fromJson(Map<String, dynamic> json) => _$$_GoToFromJson(json);
+  factory _$GoToImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoToImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -135,27 +149,29 @@ class _$_GoTo extends _GoTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GoTo &&
+            other is _$GoToImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.to, to) || other.to == to));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, to);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GoToCopyWith<_$_GoTo> get copyWith =>
-      __$$_GoToCopyWithImpl<_$_GoTo>(this, _$identity);
+  _$$GoToImplCopyWith<_$GoToImpl> get copyWith =>
+      __$$GoToImplCopyWithImpl<_$GoToImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoToToJson(
+    return _$$GoToImplToJson(
       this,
     );
   }
@@ -163,10 +179,10 @@ class _$_GoTo extends _GoTo {
 
 abstract class _GoTo extends GoTo {
   const factory _GoTo(@JsonKey(name: 'playerid') final int id,
-      @GoToToConverter() final GoToTo to) = _$_GoTo;
+      @GoToToConverter() final GoToTo to) = _$GoToImpl;
   const _GoTo._() : super._();
 
-  factory _GoTo.fromJson(Map<String, dynamic> json) = _$_GoTo.fromJson;
+  factory _GoTo.fromJson(Map<String, dynamic> json) = _$GoToImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -174,17 +190,21 @@ abstract class _GoTo extends GoTo {
   @override
   @GoToToConverter()
   GoToTo get to;
+
+  /// Create a copy of GoTo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GoToCopyWith<_$_GoTo> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GoToImplCopyWith<_$GoToImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GoToTo _$GoToToFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
-    case 'abs':
-      return _GoToToAbs.fromJson(json);
     case 'enumerator':
       return _GoToToEnum.fromJson(json);
+    case 'playlistPos':
+      return _GoToToPlaylistPos.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'GoToTo',
@@ -197,42 +217,44 @@ mixin _$GoToTo {
   Object get value => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int value) abs,
     required TResult Function(KodiPlayerGoToTo value) enumerator,
+    required TResult Function(int value) playlistPos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int value)? abs,
     TResult? Function(KodiPlayerGoToTo value)? enumerator,
+    TResult? Function(int value)? playlistPos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int value)? abs,
     TResult Function(KodiPlayerGoToTo value)? enumerator,
+    TResult Function(int value)? playlistPos,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GoToToAbs value) abs,
     required TResult Function(_GoToToEnum value) enumerator,
+    required TResult Function(_GoToToPlaylistPos value) playlistPos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GoToToAbs value)? abs,
     TResult? Function(_GoToToEnum value)? enumerator,
+    TResult? Function(_GoToToPlaylistPos value)? playlistPos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GoToToAbs value)? abs,
     TResult Function(_GoToToEnum value)? enumerator,
+    TResult Function(_GoToToPlaylistPos value)? playlistPos,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this GoToTo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -251,183 +273,36 @@ class _$GoToToCopyWithImpl<$Res, $Val extends GoToTo>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_GoToToAbsCopyWith<$Res> {
-  factory _$$_GoToToAbsCopyWith(
-          _$_GoToToAbs value, $Res Function(_$_GoToToAbs) then) =
-      __$$_GoToToAbsCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int value});
-}
-
-/// @nodoc
-class __$$_GoToToAbsCopyWithImpl<$Res>
-    extends _$GoToToCopyWithImpl<$Res, _$_GoToToAbs>
-    implements _$$_GoToToAbsCopyWith<$Res> {
-  __$$_GoToToAbsCopyWithImpl(
-      _$_GoToToAbs _value, $Res Function(_$_GoToToAbs) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? value = null,
-  }) {
-    return _then(_$_GoToToAbs(
-      null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_GoToToAbs implements _GoToToAbs {
-  const _$_GoToToAbs(this.value, {final String? $type})
-      : $type = $type ?? 'abs';
-
-  factory _$_GoToToAbs.fromJson(Map<String, dynamic> json) =>
-      _$$_GoToToAbsFromJson(json);
-
-  @override
-  final int value;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
-
-  @override
-  String toString() {
-    return 'GoToTo.abs(value: $value)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_GoToToAbs &&
-            (identical(other.value, value) || other.value == value));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, value);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_GoToToAbsCopyWith<_$_GoToToAbs> get copyWith =>
-      __$$_GoToToAbsCopyWithImpl<_$_GoToToAbs>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(int value) abs,
-    required TResult Function(KodiPlayerGoToTo value) enumerator,
-  }) {
-    return abs(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int value)? abs,
-    TResult? Function(KodiPlayerGoToTo value)? enumerator,
-  }) {
-    return abs?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int value)? abs,
-    TResult Function(KodiPlayerGoToTo value)? enumerator,
-    required TResult orElse(),
-  }) {
-    if (abs != null) {
-      return abs(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_GoToToAbs value) abs,
-    required TResult Function(_GoToToEnum value) enumerator,
-  }) {
-    return abs(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GoToToAbs value)? abs,
-    TResult? Function(_GoToToEnum value)? enumerator,
-  }) {
-    return abs?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GoToToAbs value)? abs,
-    TResult Function(_GoToToEnum value)? enumerator,
-    required TResult orElse(),
-  }) {
-    if (abs != null) {
-      return abs(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_GoToToAbsToJson(
-      this,
-    );
-  }
-}
-
-abstract class _GoToToAbs implements GoToTo {
-  const factory _GoToToAbs(final int value) = _$_GoToToAbs;
-
-  factory _GoToToAbs.fromJson(Map<String, dynamic> json) =
-      _$_GoToToAbs.fromJson;
-
-  @override
-  int get value;
-  @JsonKey(ignore: true)
-  _$$_GoToToAbsCopyWith<_$_GoToToAbs> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$_GoToToEnumCopyWith<$Res> {
-  factory _$$_GoToToEnumCopyWith(
-          _$_GoToToEnum value, $Res Function(_$_GoToToEnum) then) =
-      __$$_GoToToEnumCopyWithImpl<$Res>;
+abstract class _$$GoToToEnumImplCopyWith<$Res> {
+  factory _$$GoToToEnumImplCopyWith(
+          _$GoToToEnumImpl value, $Res Function(_$GoToToEnumImpl) then) =
+      __$$GoToToEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerGoToTo value});
 }
 
 /// @nodoc
-class __$$_GoToToEnumCopyWithImpl<$Res>
-    extends _$GoToToCopyWithImpl<$Res, _$_GoToToEnum>
-    implements _$$_GoToToEnumCopyWith<$Res> {
-  __$$_GoToToEnumCopyWithImpl(
-      _$_GoToToEnum _value, $Res Function(_$_GoToToEnum) _then)
+class __$$GoToToEnumImplCopyWithImpl<$Res>
+    extends _$GoToToCopyWithImpl<$Res, _$GoToToEnumImpl>
+    implements _$$GoToToEnumImplCopyWith<$Res> {
+  __$$GoToToEnumImplCopyWithImpl(
+      _$GoToToEnumImpl _value, $Res Function(_$GoToToEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_GoToToEnum(
+    return _then(_$GoToToEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -438,12 +313,12 @@ class __$$_GoToToEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GoToToEnum implements _GoToToEnum {
-  const _$_GoToToEnum(this.value, {final String? $type})
+class _$GoToToEnumImpl implements _GoToToEnum {
+  const _$GoToToEnumImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_GoToToEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_GoToToEnumFromJson(json);
+  factory _$GoToToEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoToToEnumImplFromJson(json);
 
   @override
   final KodiPlayerGoToTo value;
@@ -457,28 +332,30 @@ class _$_GoToToEnum implements _GoToToEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GoToToEnum &&
+            other is _$GoToToEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GoToToEnumCopyWith<_$_GoToToEnum> get copyWith =>
-      __$$_GoToToEnumCopyWithImpl<_$_GoToToEnum>(this, _$identity);
+  _$$GoToToEnumImplCopyWith<_$GoToToEnumImpl> get copyWith =>
+      __$$GoToToEnumImplCopyWithImpl<_$GoToToEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int value) abs,
     required TResult Function(KodiPlayerGoToTo value) enumerator,
+    required TResult Function(int value) playlistPos,
   }) {
     return enumerator(value);
   }
@@ -486,8 +363,8 @@ class _$_GoToToEnum implements _GoToToEnum {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int value)? abs,
     TResult? Function(KodiPlayerGoToTo value)? enumerator,
+    TResult? Function(int value)? playlistPos,
   }) {
     return enumerator?.call(value);
   }
@@ -495,8 +372,8 @@ class _$_GoToToEnum implements _GoToToEnum {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int value)? abs,
     TResult Function(KodiPlayerGoToTo value)? enumerator,
+    TResult Function(int value)? playlistPos,
     required TResult orElse(),
   }) {
     if (enumerator != null) {
@@ -508,8 +385,8 @@ class _$_GoToToEnum implements _GoToToEnum {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GoToToAbs value) abs,
     required TResult Function(_GoToToEnum value) enumerator,
+    required TResult Function(_GoToToPlaylistPos value) playlistPos,
   }) {
     return enumerator(this);
   }
@@ -517,8 +394,8 @@ class _$_GoToToEnum implements _GoToToEnum {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GoToToAbs value)? abs,
     TResult? Function(_GoToToEnum value)? enumerator,
+    TResult? Function(_GoToToPlaylistPos value)? playlistPos,
   }) {
     return enumerator?.call(this);
   }
@@ -526,8 +403,8 @@ class _$_GoToToEnum implements _GoToToEnum {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GoToToAbs value)? abs,
     TResult Function(_GoToToEnum value)? enumerator,
+    TResult Function(_GoToToPlaylistPos value)? playlistPos,
     required TResult orElse(),
   }) {
     if (enumerator != null) {
@@ -538,21 +415,184 @@ class _$_GoToToEnum implements _GoToToEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoToToEnumToJson(
+    return _$$GoToToEnumImplToJson(
       this,
     );
   }
 }
 
 abstract class _GoToToEnum implements GoToTo {
-  const factory _GoToToEnum(final KodiPlayerGoToTo value) = _$_GoToToEnum;
+  const factory _GoToToEnum(final KodiPlayerGoToTo value) = _$GoToToEnumImpl;
 
   factory _GoToToEnum.fromJson(Map<String, dynamic> json) =
-      _$_GoToToEnum.fromJson;
+      _$GoToToEnumImpl.fromJson;
 
   @override
   KodiPlayerGoToTo get value;
-  @JsonKey(ignore: true)
-  _$$_GoToToEnumCopyWith<_$_GoToToEnum> get copyWith =>
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GoToToEnumImplCopyWith<_$GoToToEnumImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GoToToPlaylistPosImplCopyWith<$Res> {
+  factory _$$GoToToPlaylistPosImplCopyWith(_$GoToToPlaylistPosImpl value,
+          $Res Function(_$GoToToPlaylistPosImpl) then) =
+      __$$GoToToPlaylistPosImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int value});
+}
+
+/// @nodoc
+class __$$GoToToPlaylistPosImplCopyWithImpl<$Res>
+    extends _$GoToToCopyWithImpl<$Res, _$GoToToPlaylistPosImpl>
+    implements _$$GoToToPlaylistPosImplCopyWith<$Res> {
+  __$$GoToToPlaylistPosImplCopyWithImpl(_$GoToToPlaylistPosImpl _value,
+      $Res Function(_$GoToToPlaylistPosImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$GoToToPlaylistPosImpl(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GoToToPlaylistPosImpl implements _GoToToPlaylistPos {
+  const _$GoToToPlaylistPosImpl(this.value, {final String? $type})
+      : $type = $type ?? 'playlistPos';
+
+  factory _$GoToToPlaylistPosImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoToToPlaylistPosImplFromJson(json);
+
+  @override
+  final int value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'GoToTo.playlistPos(value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GoToToPlaylistPosImpl &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GoToToPlaylistPosImplCopyWith<_$GoToToPlaylistPosImpl> get copyWith =>
+      __$$GoToToPlaylistPosImplCopyWithImpl<_$GoToToPlaylistPosImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(KodiPlayerGoToTo value) enumerator,
+    required TResult Function(int value) playlistPos,
+  }) {
+    return playlistPos(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(KodiPlayerGoToTo value)? enumerator,
+    TResult? Function(int value)? playlistPos,
+  }) {
+    return playlistPos?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(KodiPlayerGoToTo value)? enumerator,
+    TResult Function(int value)? playlistPos,
+    required TResult orElse(),
+  }) {
+    if (playlistPos != null) {
+      return playlistPos(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GoToToEnum value) enumerator,
+    required TResult Function(_GoToToPlaylistPos value) playlistPos,
+  }) {
+    return playlistPos(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GoToToEnum value)? enumerator,
+    TResult? Function(_GoToToPlaylistPos value)? playlistPos,
+  }) {
+    return playlistPos?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GoToToEnum value)? enumerator,
+    TResult Function(_GoToToPlaylistPos value)? playlistPos,
+    required TResult orElse(),
+  }) {
+    if (playlistPos != null) {
+      return playlistPos(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GoToToPlaylistPosImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _GoToToPlaylistPos implements GoToTo {
+  const factory _GoToToPlaylistPos(final int value) = _$GoToToPlaylistPosImpl;
+
+  factory _GoToToPlaylistPos.fromJson(Map<String, dynamic> json) =
+      _$GoToToPlaylistPosImpl.fromJson;
+
+  @override
+  int get value;
+
+  /// Create a copy of GoToTo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GoToToPlaylistPosImplCopyWith<_$GoToToPlaylistPosImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

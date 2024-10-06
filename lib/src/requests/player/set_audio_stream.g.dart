@@ -6,13 +6,14 @@ part of 'set_audio_stream.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetAudioStream _$$_SetAudioStreamFromJson(Map<String, dynamic> json) =>
-    _$_SetAudioStream(
-      json['playerid'] as int,
+_$SetAudioStreamImpl _$$SetAudioStreamImplFromJson(Map<String, dynamic> json) =>
+    _$SetAudioStreamImpl(
+      (json['playerid'] as num).toInt(),
       const SetAudioStreamStreamConverter().fromJson(json['stream']),
     );
 
-Map<String, dynamic> _$$_SetAudioStreamToJson(_$_SetAudioStream instance) {
+Map<String, dynamic> _$$SetAudioStreamImplToJson(
+    _$SetAudioStreamImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };
@@ -28,15 +29,15 @@ Map<String, dynamic> _$$_SetAudioStreamToJson(_$_SetAudioStream instance) {
   return val;
 }
 
-_$_SetAudioStreamStreamEnum _$$_SetAudioStreamStreamEnumFromJson(
+_$SetAudioStreamStreamEnumImpl _$$SetAudioStreamStreamEnumImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetAudioStreamStreamEnum(
+    _$SetAudioStreamStreamEnumImpl(
       $enumDecode(_$KodiSetAudioStreamEnumEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetAudioStreamStreamEnumToJson(
-        _$_SetAudioStreamStreamEnum instance) =>
+Map<String, dynamic> _$$SetAudioStreamStreamEnumImplToJson(
+        _$SetAudioStreamStreamEnumImpl instance) =>
     <String, dynamic>{
       'value': _$KodiSetAudioStreamEnumEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -47,15 +48,15 @@ const _$KodiSetAudioStreamEnumEnumMap = {
   KodiSetAudioStreamEnum.next: 'next',
 };
 
-_$_SetAudioStreamStreamInt _$$_SetAudioStreamStreamIntFromJson(
+_$SetAudioStreamStreamIntImpl _$$SetAudioStreamStreamIntImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetAudioStreamStreamInt(
-      json['value'] as int,
+    _$SetAudioStreamStreamIntImpl(
+      (json['value'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetAudioStreamStreamIntToJson(
-        _$_SetAudioStreamStreamInt instance) =>
+Map<String, dynamic> _$$SetAudioStreamStreamIntImplToJson(
+        _$SetAudioStreamStreamIntImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

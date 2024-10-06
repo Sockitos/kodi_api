@@ -12,7 +12,7 @@ part of 'reboot.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Reboot _$RebootFromJson(Map<String, dynamic> json) {
   return _Reboot.fromJson(json);
@@ -20,6 +20,7 @@ Reboot _$RebootFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Reboot {
+  /// Serializes this Reboot to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,29 +39,37 @@ class _$RebootCopyWithImpl<$Res, $Val extends Reboot>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Reboot
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_RebootCopyWith<$Res> {
-  factory _$$_RebootCopyWith(_$_Reboot value, $Res Function(_$_Reboot) then) =
-      __$$_RebootCopyWithImpl<$Res>;
+abstract class _$$RebootImplCopyWith<$Res> {
+  factory _$$RebootImplCopyWith(
+          _$RebootImpl value, $Res Function(_$RebootImpl) then) =
+      __$$RebootImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RebootCopyWithImpl<$Res>
-    extends _$RebootCopyWithImpl<$Res, _$_Reboot>
-    implements _$$_RebootCopyWith<$Res> {
-  __$$_RebootCopyWithImpl(_$_Reboot _value, $Res Function(_$_Reboot) _then)
+class __$$RebootImplCopyWithImpl<$Res>
+    extends _$RebootCopyWithImpl<$Res, _$RebootImpl>
+    implements _$$RebootImplCopyWith<$Res> {
+  __$$RebootImplCopyWithImpl(
+      _$RebootImpl _value, $Res Function(_$RebootImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Reboot
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Reboot extends _Reboot {
-  const _$_Reboot() : super._();
+class _$RebootImpl extends _Reboot {
+  const _$RebootImpl() : super._();
 
-  factory _$_Reboot.fromJson(Map<String, dynamic> json) =>
-      _$$_RebootFromJson(json);
+  factory _$RebootImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RebootImplFromJson(json);
 
   @override
   String toString() {
@@ -68,26 +77,26 @@ class _$_Reboot extends _Reboot {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Reboot);
+        (other.runtimeType == runtimeType && other is _$RebootImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RebootToJson(
+    return _$$RebootImplToJson(
       this,
     );
   }
 }
 
 abstract class _Reboot extends Reboot {
-  const factory _Reboot() = _$_Reboot;
+  const factory _Reboot() = _$RebootImpl;
   const _Reboot._() : super._();
 
-  factory _Reboot.fromJson(Map<String, dynamic> json) = _$_Reboot.fromJson;
+  factory _Reboot.fromJson(Map<String, dynamic> json) = _$RebootImpl.fromJson;
 }

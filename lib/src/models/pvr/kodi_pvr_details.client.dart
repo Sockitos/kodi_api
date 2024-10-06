@@ -6,15 +6,21 @@ part 'kodi_pvr_details.client.g.dart';
 @freezed
 class KodiPVRDetailsClient with _$KodiPVRDetailsClient {
   const factory KodiPVRDetailsClient({
-    @JsonKey(name: 'addonid') required String addonId,
+    @JsonKey(name: 'addonid') @Default('') String addonId,
     @JsonKey(name: 'clientid') required int clientId,
-    @JsonKey(name: 'supportschannelgroups') required bool supportsChannelGroups,
-    @JsonKey(name: 'supportschannelscan') required bool supportsChannelScan,
-    @JsonKey(name: 'supportsepg') required bool supportsEpg,
-    @JsonKey(name: 'supportsradio') required bool supportsRadio,
-    @JsonKey(name: 'supportsrecordings') required bool supportsRecordings,
-    @JsonKey(name: 'supportstimers') required bool supportsTimers,
-    @JsonKey(name: 'supportstv') required bool supportsTv,
+    @JsonKey(name: 'supportschannelgroups')
+    @Default(false)
+    bool supportsChannelGroups,
+    @JsonKey(name: 'supportschannelscan')
+    @Default(false)
+    bool supportsChannelScan,
+    @JsonKey(name: 'supportsepg') @Default(false) bool supportsEpg,
+    @JsonKey(name: 'supportsradio') @Default(false) bool supportsRadio,
+    @JsonKey(name: 'supportsrecordings')
+    @Default(false)
+    bool supportsRecordings,
+    @JsonKey(name: 'supportstimers') @Default(false) bool supportsTimers,
+    @JsonKey(name: 'supportstv') @Default(false) bool supportsTv,
     required String label,
   }) = _KodiPVRDetailsClient;
 

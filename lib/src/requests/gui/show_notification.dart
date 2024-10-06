@@ -8,7 +8,7 @@ part 'show_notification.g.dart';
 typedef ShowNotificationBuilder = ShowNotification Function(
   String title,
   String message, {
-  ShowNotificationImage? image,
+  ShowNotificationImage image,
   int displayTime,
 });
 
@@ -21,7 +21,9 @@ class ShowNotification with _$ShowNotification implements KodiRequest<void> {
   const factory ShowNotification(
     String title,
     String message, {
-    @ShowNotificationImageConverter() ShowNotificationImage? image,
+    @ShowNotificationImageConverter()
+    @Default(ShowNotificationImage.string(''))
+    ShowNotificationImage image,
     @JsonKey(name: 'displaytime') @Default(5000) int displayTime,
   }) = _ShowNotification;
 

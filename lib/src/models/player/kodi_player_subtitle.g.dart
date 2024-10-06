@@ -6,10 +6,10 @@ part of 'kodi_player_subtitle.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerSubtitle _$$_KodiPlayerSubtitleFromJson(
+_$KodiPlayerSubtitleImpl _$$KodiPlayerSubtitleImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerSubtitle(
-      index: json['index'] as int,
+    _$KodiPlayerSubtitleImpl(
+      index: (json['index'] as num).toInt(),
       isDefault: json['isdefault'] as bool,
       isForced: json['isforced'] as bool,
       isImpaired: json['isimpaired'] as bool,
@@ -17,8 +17,8 @@ _$_KodiPlayerSubtitle _$$_KodiPlayerSubtitleFromJson(
       name: json['name'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPlayerSubtitleToJson(
-        _$_KodiPlayerSubtitle instance) =>
+Map<String, dynamic> _$$KodiPlayerSubtitleImplToJson(
+        _$KodiPlayerSubtitleImpl instance) =>
     <String, dynamic>{
       'index': instance.index,
       'isdefault': instance.isDefault,

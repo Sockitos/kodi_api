@@ -12,7 +12,7 @@ part of 'get_setting_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSettingValue _$GetSettingValueFromJson(Map<String, dynamic> json) {
   return _GetSettingValue.fromJson(json);
@@ -22,8 +22,12 @@ GetSettingValue _$GetSettingValueFromJson(Map<String, dynamic> json) {
 mixin _$GetSettingValue {
   String get setting => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSettingValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSettingValueCopyWith<GetSettingValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$GetSettingValueCopyWithImpl<$Res, $Val extends GetSettingValue>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,30 +68,32 @@ class _$GetSettingValueCopyWithImpl<$Res, $Val extends GetSettingValue>
 }
 
 /// @nodoc
-abstract class _$$_GetSettingValueCopyWith<$Res>
+abstract class _$$GetSettingValueImplCopyWith<$Res>
     implements $GetSettingValueCopyWith<$Res> {
-  factory _$$_GetSettingValueCopyWith(
-          _$_GetSettingValue value, $Res Function(_$_GetSettingValue) then) =
-      __$$_GetSettingValueCopyWithImpl<$Res>;
+  factory _$$GetSettingValueImplCopyWith(_$GetSettingValueImpl value,
+          $Res Function(_$GetSettingValueImpl) then) =
+      __$$GetSettingValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String setting});
 }
 
 /// @nodoc
-class __$$_GetSettingValueCopyWithImpl<$Res>
-    extends _$GetSettingValueCopyWithImpl<$Res, _$_GetSettingValue>
-    implements _$$_GetSettingValueCopyWith<$Res> {
-  __$$_GetSettingValueCopyWithImpl(
-      _$_GetSettingValue _value, $Res Function(_$_GetSettingValue) _then)
+class __$$GetSettingValueImplCopyWithImpl<$Res>
+    extends _$GetSettingValueCopyWithImpl<$Res, _$GetSettingValueImpl>
+    implements _$$GetSettingValueImplCopyWith<$Res> {
+  __$$GetSettingValueImplCopyWithImpl(
+      _$GetSettingValueImpl _value, $Res Function(_$GetSettingValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? setting = null,
   }) {
-    return _then(_$_GetSettingValue(
+    return _then(_$GetSettingValueImpl(
       null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -96,11 +104,11 @@ class __$$_GetSettingValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSettingValue extends _GetSettingValue {
-  const _$_GetSettingValue(this.setting) : super._();
+class _$GetSettingValueImpl extends _GetSettingValue {
+  const _$GetSettingValueImpl(this.setting) : super._();
 
-  factory _$_GetSettingValue.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSettingValueFromJson(json);
+  factory _$GetSettingValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSettingValueImplFromJson(json);
 
   @override
   final String setting;
@@ -111,42 +119,48 @@ class _$_GetSettingValue extends _GetSettingValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSettingValue &&
+            other is _$GetSettingValueImpl &&
             (identical(other.setting, setting) || other.setting == setting));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, setting);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSettingValueCopyWith<_$_GetSettingValue> get copyWith =>
-      __$$_GetSettingValueCopyWithImpl<_$_GetSettingValue>(this, _$identity);
+  _$$GetSettingValueImplCopyWith<_$GetSettingValueImpl> get copyWith =>
+      __$$GetSettingValueImplCopyWithImpl<_$GetSettingValueImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSettingValueToJson(
+    return _$$GetSettingValueImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetSettingValue extends GetSettingValue {
-  const factory _GetSettingValue(final String setting) = _$_GetSettingValue;
+  const factory _GetSettingValue(final String setting) = _$GetSettingValueImpl;
   const _GetSettingValue._() : super._();
 
   factory _GetSettingValue.fromJson(Map<String, dynamic> json) =
-      _$_GetSettingValue.fromJson;
+      _$GetSettingValueImpl.fromJson;
 
   @override
   String get setting;
+
+  /// Create a copy of GetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSettingValueCopyWith<_$_GetSettingValue> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSettingValueImplCopyWith<_$GetSettingValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

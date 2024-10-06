@@ -6,15 +6,15 @@ part of 'get_properties.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetProperties _$$_GetPropertiesFromJson(Map<String, dynamic> json) =>
-    _$_GetProperties(
-      json['playerid'] as int,
+_$GetPropertiesImpl _$$GetPropertiesImplFromJson(Map<String, dynamic> json) =>
+    _$GetPropertiesImpl(
+      (json['playerid'] as num).toInt(),
       (json['properties'] as List<dynamic>)
           .map((e) => $enumDecode(_$KodiPlayerPropertyNameEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetPropertiesToJson(_$_GetProperties instance) =>
+Map<String, dynamic> _$$GetPropertiesImplToJson(_$GetPropertiesImpl instance) =>
     <String, dynamic>{
       'playerid': instance.id,
       'properties': instance.properties

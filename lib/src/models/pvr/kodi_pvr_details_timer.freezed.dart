@@ -12,7 +12,7 @@ part of 'kodi_pvr_details_timer.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsTimer _$KodiPVRDetailsTimerFromJson(Map<String, dynamic> json) {
   return _KodiPVRDetailsTimer.fromJson(json);
@@ -32,14 +32,14 @@ mixin _$KodiPVRDetailsTimer {
   @JsonKey(name: 'endmargin')
   int get endMargin => throw _privateConstructorUsedError;
   @JsonKey(name: 'endtime')
-  DateTime get endTime => throw _privateConstructorUsedError;
+  DateTime? get endTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'epgsearchrequired')
   String get epgSearchRequired => throw _privateConstructorUsedError;
   @JsonKey(name: 'epguid')
   int get epgUid => throw _privateConstructorUsedError;
   String get file => throw _privateConstructorUsedError;
   @JsonKey(name: 'firstday')
-  DateTime get firstDay => throw _privateConstructorUsedError;
+  DateTime? get firstDay => throw _privateConstructorUsedError;
   @JsonKey(name: 'fulltextepgsearch')
   bool get fullTextEpgSearch => throw _privateConstructorUsedError;
   @JsonKey(name: 'ismanual')
@@ -66,17 +66,21 @@ mixin _$KodiPVRDetailsTimer {
   @JsonKey(name: 'startmargin')
   int get startMargin => throw _privateConstructorUsedError;
   @JsonKey(name: 'starttime')
-  DateTime get startTime => throw _privateConstructorUsedError;
+  DateTime? get startTime => throw _privateConstructorUsedError;
   KodiPVRTimerState get state => throw _privateConstructorUsedError;
   String get summary => throw _privateConstructorUsedError;
   @JsonKey(name: 'timerid')
   int get timerId => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  Set<KodiGlobalWeekday> get weekdays => throw _privateConstructorUsedError;
+  Set<KodiGlobalWeekday>? get weekdays => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsTimer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsTimerCopyWith<KodiPVRDetailsTimer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -94,11 +98,11 @@ abstract class $KodiPVRDetailsTimerCopyWith<$Res> {
       String directory,
       @JsonKey(name: 'endanytime') bool endAnyTime,
       @JsonKey(name: 'endmargin') int endMargin,
-      @JsonKey(name: 'endtime') DateTime endTime,
+      @JsonKey(name: 'endtime') DateTime? endTime,
       @JsonKey(name: 'epgsearchrequired') String epgSearchRequired,
       @JsonKey(name: 'epguid') int epgUid,
       String file,
-      @JsonKey(name: 'firstday') DateTime firstDay,
+      @JsonKey(name: 'firstday') DateTime? firstDay,
       @JsonKey(name: 'fulltextepgsearch') bool fullTextEpgSearch,
       @JsonKey(name: 'ismanual') bool isManual,
       @JsonKey(name: 'isradio') bool isRadio,
@@ -113,12 +117,12 @@ abstract class $KodiPVRDetailsTimerCopyWith<$Res> {
       int runtime,
       @JsonKey(name: 'startanytime') bool startAnyTime,
       @JsonKey(name: 'startmargin') int startMargin,
-      @JsonKey(name: 'starttime') DateTime startTime,
+      @JsonKey(name: 'starttime') DateTime? startTime,
       KodiPVRTimerState state,
       String summary,
       @JsonKey(name: 'timerid') int timerId,
       String title,
-      Set<KodiGlobalWeekday> weekdays,
+      Set<KodiGlobalWeekday>? weekdays,
       String label});
 }
 
@@ -132,6 +136,8 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,11 +147,11 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
     Object? directory = null,
     Object? endAnyTime = null,
     Object? endMargin = null,
-    Object? endTime = null,
+    Object? endTime = freezed,
     Object? epgSearchRequired = null,
     Object? epgUid = null,
     Object? file = null,
-    Object? firstDay = null,
+    Object? firstDay = freezed,
     Object? fullTextEpgSearch = null,
     Object? isManual = null,
     Object? isRadio = null,
@@ -160,12 +166,12 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
     Object? runtime = null,
     Object? startAnyTime = null,
     Object? startMargin = null,
-    Object? startTime = null,
+    Object? startTime = freezed,
     Object? state = null,
     Object? summary = null,
     Object? timerId = null,
     Object? title = null,
-    Object? weekdays = null,
+    Object? weekdays = freezed,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -193,10 +199,10 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
           ? _value.endMargin
           : endMargin // ignore: cast_nullable_to_non_nullable
               as int,
-      endTime: null == endTime
+      endTime: freezed == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       epgSearchRequired: null == epgSearchRequired
           ? _value.epgSearchRequired
           : epgSearchRequired // ignore: cast_nullable_to_non_nullable
@@ -209,10 +215,10 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String,
-      firstDay: null == firstDay
+      firstDay: freezed == firstDay
           ? _value.firstDay
           : firstDay // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       fullTextEpgSearch: null == fullTextEpgSearch
           ? _value.fullTextEpgSearch
           : fullTextEpgSearch // ignore: cast_nullable_to_non_nullable
@@ -269,10 +275,10 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
           ? _value.startMargin
           : startMargin // ignore: cast_nullable_to_non_nullable
               as int,
-      startTime: null == startTime
+      startTime: freezed == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       state: null == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
@@ -289,10 +295,10 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      weekdays: null == weekdays
+      weekdays: freezed == weekdays
           ? _value.weekdays
           : weekdays // ignore: cast_nullable_to_non_nullable
-              as Set<KodiGlobalWeekday>,
+              as Set<KodiGlobalWeekday>?,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -302,11 +308,11 @@ class _$KodiPVRDetailsTimerCopyWithImpl<$Res, $Val extends KodiPVRDetailsTimer>
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsTimerCopyWith<$Res>
+abstract class _$$KodiPVRDetailsTimerImplCopyWith<$Res>
     implements $KodiPVRDetailsTimerCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsTimerCopyWith(_$_KodiPVRDetailsTimer value,
-          $Res Function(_$_KodiPVRDetailsTimer) then) =
-      __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsTimerImplCopyWith(_$KodiPVRDetailsTimerImpl value,
+          $Res Function(_$KodiPVRDetailsTimerImpl) then) =
+      __$$KodiPVRDetailsTimerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -316,11 +322,11 @@ abstract class _$$_KodiPVRDetailsTimerCopyWith<$Res>
       String directory,
       @JsonKey(name: 'endanytime') bool endAnyTime,
       @JsonKey(name: 'endmargin') int endMargin,
-      @JsonKey(name: 'endtime') DateTime endTime,
+      @JsonKey(name: 'endtime') DateTime? endTime,
       @JsonKey(name: 'epgsearchrequired') String epgSearchRequired,
       @JsonKey(name: 'epguid') int epgUid,
       String file,
-      @JsonKey(name: 'firstday') DateTime firstDay,
+      @JsonKey(name: 'firstday') DateTime? firstDay,
       @JsonKey(name: 'fulltextepgsearch') bool fullTextEpgSearch,
       @JsonKey(name: 'ismanual') bool isManual,
       @JsonKey(name: 'isradio') bool isRadio,
@@ -335,23 +341,25 @@ abstract class _$$_KodiPVRDetailsTimerCopyWith<$Res>
       int runtime,
       @JsonKey(name: 'startanytime') bool startAnyTime,
       @JsonKey(name: 'startmargin') int startMargin,
-      @JsonKey(name: 'starttime') DateTime startTime,
+      @JsonKey(name: 'starttime') DateTime? startTime,
       KodiPVRTimerState state,
       String summary,
       @JsonKey(name: 'timerid') int timerId,
       String title,
-      Set<KodiGlobalWeekday> weekdays,
+      Set<KodiGlobalWeekday>? weekdays,
       String label});
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
-    extends _$KodiPVRDetailsTimerCopyWithImpl<$Res, _$_KodiPVRDetailsTimer>
-    implements _$$_KodiPVRDetailsTimerCopyWith<$Res> {
-  __$$_KodiPVRDetailsTimerCopyWithImpl(_$_KodiPVRDetailsTimer _value,
-      $Res Function(_$_KodiPVRDetailsTimer) _then)
+class __$$KodiPVRDetailsTimerImplCopyWithImpl<$Res>
+    extends _$KodiPVRDetailsTimerCopyWithImpl<$Res, _$KodiPVRDetailsTimerImpl>
+    implements _$$KodiPVRDetailsTimerImplCopyWith<$Res> {
+  __$$KodiPVRDetailsTimerImplCopyWithImpl(_$KodiPVRDetailsTimerImpl _value,
+      $Res Function(_$KodiPVRDetailsTimerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -361,11 +369,11 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
     Object? directory = null,
     Object? endAnyTime = null,
     Object? endMargin = null,
-    Object? endTime = null,
+    Object? endTime = freezed,
     Object? epgSearchRequired = null,
     Object? epgUid = null,
     Object? file = null,
-    Object? firstDay = null,
+    Object? firstDay = freezed,
     Object? fullTextEpgSearch = null,
     Object? isManual = null,
     Object? isRadio = null,
@@ -380,15 +388,15 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
     Object? runtime = null,
     Object? startAnyTime = null,
     Object? startMargin = null,
-    Object? startTime = null,
+    Object? startTime = freezed,
     Object? state = null,
     Object? summary = null,
     Object? timerId = null,
     Object? title = null,
-    Object? weekdays = null,
+    Object? weekdays = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsTimer(
+    return _then(_$KodiPVRDetailsTimerImpl(
       broadcastId: null == broadcastId
           ? _value.broadcastId
           : broadcastId // ignore: cast_nullable_to_non_nullable
@@ -413,10 +421,10 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
           ? _value.endMargin
           : endMargin // ignore: cast_nullable_to_non_nullable
               as int,
-      endTime: null == endTime
+      endTime: freezed == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       epgSearchRequired: null == epgSearchRequired
           ? _value.epgSearchRequired
           : epgSearchRequired // ignore: cast_nullable_to_non_nullable
@@ -429,10 +437,10 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String,
-      firstDay: null == firstDay
+      firstDay: freezed == firstDay
           ? _value.firstDay
           : firstDay // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       fullTextEpgSearch: null == fullTextEpgSearch
           ? _value.fullTextEpgSearch
           : fullTextEpgSearch // ignore: cast_nullable_to_non_nullable
@@ -489,10 +497,10 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
           ? _value.startMargin
           : startMargin // ignore: cast_nullable_to_non_nullable
               as int,
-      startTime: null == startTime
+      startTime: freezed == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       state: null == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
@@ -509,10 +517,10 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      weekdays: null == weekdays
+      weekdays: freezed == weekdays
           ? _value._weekdays
           : weekdays // ignore: cast_nullable_to_non_nullable
-              as Set<KodiGlobalWeekday>,
+              as Set<KodiGlobalWeekday>?,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -524,45 +532,45 @@ class __$$_KodiPVRDetailsTimerCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
-  const _$_KodiPVRDetailsTimer(
-      {@JsonKey(name: 'broadcastid') required this.broadcastId,
-      @JsonKey(name: 'channelid') required this.channelId,
-      @JsonKey(name: 'clientid') required this.clientId,
-      required this.directory,
-      @JsonKey(name: 'endanytime') required this.endAnyTime,
-      @JsonKey(name: 'endmargin') required this.endMargin,
-      @JsonKey(name: 'endtime') required this.endTime,
-      @JsonKey(name: 'epgsearchrequired') required this.epgSearchRequired,
-      @JsonKey(name: 'epguid') required this.epgUid,
-      required this.file,
-      @JsonKey(name: 'firstday') required this.firstDay,
-      @JsonKey(name: 'fulltextepgsearch') required this.fullTextEpgSearch,
-      @JsonKey(name: 'ismanual') required this.isManual,
-      @JsonKey(name: 'isradio') required this.isRadio,
-      @JsonKey(name: 'isreadonly') required this.isReadOnly,
-      @JsonKey(name: 'isreminder') required this.isReminder,
-      @JsonKey(name: 'istimerrule') required this.isTimerRule,
-      required this.lifetime,
-      @JsonKey(name: 'maxrecordings') required this.maxRecordings,
+class _$KodiPVRDetailsTimerImpl implements _KodiPVRDetailsTimer {
+  const _$KodiPVRDetailsTimerImpl(
+      {@JsonKey(name: 'broadcastid') this.broadcastId = -1,
+      @JsonKey(name: 'channelid') this.channelId = -1,
+      @JsonKey(name: 'clientid') this.clientId = -1,
+      this.directory = '',
+      @JsonKey(name: 'endanytime') this.endAnyTime = false,
+      @JsonKey(name: 'endmargin') this.endMargin = 0,
+      @JsonKey(name: 'endtime') this.endTime,
+      @JsonKey(name: 'epgsearchrequired') this.epgSearchRequired = '',
+      @JsonKey(name: 'epguid') this.epgUid = 0,
+      this.file = '',
+      @JsonKey(name: 'firstday') this.firstDay,
+      @JsonKey(name: 'fulltextepgsearch') this.fullTextEpgSearch = false,
+      @JsonKey(name: 'ismanual') this.isManual = false,
+      @JsonKey(name: 'isradio') this.isRadio = false,
+      @JsonKey(name: 'isreadonly') this.isReadOnly = false,
+      @JsonKey(name: 'isreminder') this.isReminder = false,
+      @JsonKey(name: 'istimerrule') this.isTimerRule = false,
+      this.lifetime = 0,
+      @JsonKey(name: 'maxrecordings') this.maxRecordings = 0,
       @JsonKey(name: 'preventduplicateepisodes')
-      required this.preventDuplicateEpisodes,
-      required this.priority,
-      @JsonKey(name: 'recordinggroup') required this.recordingGroup,
-      required this.runtime,
-      @JsonKey(name: 'startanytime') required this.startAnyTime,
-      @JsonKey(name: 'startmargin') required this.startMargin,
-      @JsonKey(name: 'starttime') required this.startTime,
-      required this.state,
-      required this.summary,
+      this.preventDuplicateEpisodes = 0,
+      this.priority = 0,
+      @JsonKey(name: 'recordinggroup') this.recordingGroup = 0,
+      this.runtime = 0,
+      @JsonKey(name: 'startanytime') this.startAnyTime = false,
+      @JsonKey(name: 'startmargin') this.startMargin = 0,
+      @JsonKey(name: 'starttime') this.startTime,
+      this.state = KodiPVRTimerState.unknown,
+      this.summary = '',
       @JsonKey(name: 'timerid') required this.timerId,
-      required this.title,
-      required final Set<KodiGlobalWeekday> weekdays,
+      this.title = '',
+      final Set<KodiGlobalWeekday>? weekdays,
       required this.label})
       : _weekdays = weekdays;
 
-  factory _$_KodiPVRDetailsTimer.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsTimerFromJson(json);
+  factory _$KodiPVRDetailsTimerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRDetailsTimerImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -574,6 +582,7 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   @JsonKey(name: 'clientid')
   final int clientId;
   @override
+  @JsonKey()
   final String directory;
   @override
   @JsonKey(name: 'endanytime')
@@ -583,7 +592,7 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   final int endMargin;
   @override
   @JsonKey(name: 'endtime')
-  final DateTime endTime;
+  final DateTime? endTime;
   @override
   @JsonKey(name: 'epgsearchrequired')
   final String epgSearchRequired;
@@ -591,10 +600,11 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   @JsonKey(name: 'epguid')
   final int epgUid;
   @override
+  @JsonKey()
   final String file;
   @override
   @JsonKey(name: 'firstday')
-  final DateTime firstDay;
+  final DateTime? firstDay;
   @override
   @JsonKey(name: 'fulltextepgsearch')
   final bool fullTextEpgSearch;
@@ -614,6 +624,7 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   @JsonKey(name: 'istimerrule')
   final bool isTimerRule;
   @override
+  @JsonKey()
   final int lifetime;
   @override
   @JsonKey(name: 'maxrecordings')
@@ -622,11 +633,13 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   @JsonKey(name: 'preventduplicateepisodes')
   final int preventDuplicateEpisodes;
   @override
+  @JsonKey()
   final int priority;
   @override
   @JsonKey(name: 'recordinggroup')
   final int recordingGroup;
   @override
+  @JsonKey()
   final int runtime;
   @override
   @JsonKey(name: 'startanytime')
@@ -636,22 +649,27 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   final int startMargin;
   @override
   @JsonKey(name: 'starttime')
-  final DateTime startTime;
+  final DateTime? startTime;
   @override
+  @JsonKey()
   final KodiPVRTimerState state;
   @override
+  @JsonKey()
   final String summary;
   @override
   @JsonKey(name: 'timerid')
   final int timerId;
   @override
+  @JsonKey()
   final String title;
-  final Set<KodiGlobalWeekday> _weekdays;
+  final Set<KodiGlobalWeekday>? _weekdays;
   @override
-  Set<KodiGlobalWeekday> get weekdays {
+  Set<KodiGlobalWeekday>? get weekdays {
+    final value = _weekdays;
+    if (value == null) return null;
     if (_weekdays is EqualUnmodifiableSetView) return _weekdays;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableSetView(_weekdays);
+    return EqualUnmodifiableSetView(value);
   }
 
   @override
@@ -663,10 +681,10 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsTimer &&
+            other is _$KodiPVRDetailsTimerImpl &&
             (identical(other.broadcastId, broadcastId) ||
                 other.broadcastId == broadcastId) &&
             (identical(other.channelId, channelId) ||
@@ -723,7 +741,7 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -761,16 +779,18 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsTimerCopyWith<_$_KodiPVRDetailsTimer> get copyWith =>
-      __$$_KodiPVRDetailsTimerCopyWithImpl<_$_KodiPVRDetailsTimer>(
+  _$$KodiPVRDetailsTimerImplCopyWith<_$KodiPVRDetailsTimerImpl> get copyWith =>
+      __$$KodiPVRDetailsTimerImplCopyWithImpl<_$KodiPVRDetailsTimerImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsTimerToJson(
+    return _$$KodiPVRDetailsTimerImplToJson(
       this,
     );
   }
@@ -778,43 +798,42 @@ class _$_KodiPVRDetailsTimer implements _KodiPVRDetailsTimer {
 
 abstract class _KodiPVRDetailsTimer implements KodiPVRDetailsTimer {
   const factory _KodiPVRDetailsTimer(
-      {@JsonKey(name: 'broadcastid') required final int broadcastId,
-      @JsonKey(name: 'channelid') required final int channelId,
-      @JsonKey(name: 'clientid') required final int clientId,
-      required final String directory,
-      @JsonKey(name: 'endanytime') required final bool endAnyTime,
-      @JsonKey(name: 'endmargin') required final int endMargin,
-      @JsonKey(name: 'endtime') required final DateTime endTime,
-      @JsonKey(name: 'epgsearchrequired')
-      required final String epgSearchRequired,
-      @JsonKey(name: 'epguid') required final int epgUid,
-      required final String file,
-      @JsonKey(name: 'firstday') required final DateTime firstDay,
-      @JsonKey(name: 'fulltextepgsearch') required final bool fullTextEpgSearch,
-      @JsonKey(name: 'ismanual') required final bool isManual,
-      @JsonKey(name: 'isradio') required final bool isRadio,
-      @JsonKey(name: 'isreadonly') required final bool isReadOnly,
-      @JsonKey(name: 'isreminder') required final bool isReminder,
-      @JsonKey(name: 'istimerrule') required final bool isTimerRule,
-      required final int lifetime,
-      @JsonKey(name: 'maxrecordings') required final int maxRecordings,
+      {@JsonKey(name: 'broadcastid') final int broadcastId,
+      @JsonKey(name: 'channelid') final int channelId,
+      @JsonKey(name: 'clientid') final int clientId,
+      final String directory,
+      @JsonKey(name: 'endanytime') final bool endAnyTime,
+      @JsonKey(name: 'endmargin') final int endMargin,
+      @JsonKey(name: 'endtime') final DateTime? endTime,
+      @JsonKey(name: 'epgsearchrequired') final String epgSearchRequired,
+      @JsonKey(name: 'epguid') final int epgUid,
+      final String file,
+      @JsonKey(name: 'firstday') final DateTime? firstDay,
+      @JsonKey(name: 'fulltextepgsearch') final bool fullTextEpgSearch,
+      @JsonKey(name: 'ismanual') final bool isManual,
+      @JsonKey(name: 'isradio') final bool isRadio,
+      @JsonKey(name: 'isreadonly') final bool isReadOnly,
+      @JsonKey(name: 'isreminder') final bool isReminder,
+      @JsonKey(name: 'istimerrule') final bool isTimerRule,
+      final int lifetime,
+      @JsonKey(name: 'maxrecordings') final int maxRecordings,
       @JsonKey(name: 'preventduplicateepisodes')
-      required final int preventDuplicateEpisodes,
-      required final int priority,
-      @JsonKey(name: 'recordinggroup') required final int recordingGroup,
-      required final int runtime,
-      @JsonKey(name: 'startanytime') required final bool startAnyTime,
-      @JsonKey(name: 'startmargin') required final int startMargin,
-      @JsonKey(name: 'starttime') required final DateTime startTime,
-      required final KodiPVRTimerState state,
-      required final String summary,
+      final int preventDuplicateEpisodes,
+      final int priority,
+      @JsonKey(name: 'recordinggroup') final int recordingGroup,
+      final int runtime,
+      @JsonKey(name: 'startanytime') final bool startAnyTime,
+      @JsonKey(name: 'startmargin') final int startMargin,
+      @JsonKey(name: 'starttime') final DateTime? startTime,
+      final KodiPVRTimerState state,
+      final String summary,
       @JsonKey(name: 'timerid') required final int timerId,
-      required final String title,
-      required final Set<KodiGlobalWeekday> weekdays,
-      required final String label}) = _$_KodiPVRDetailsTimer;
+      final String title,
+      final Set<KodiGlobalWeekday>? weekdays,
+      required final String label}) = _$KodiPVRDetailsTimerImpl;
 
   factory _KodiPVRDetailsTimer.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRDetailsTimer.fromJson;
+      _$KodiPVRDetailsTimerImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -835,7 +854,7 @@ abstract class _KodiPVRDetailsTimer implements KodiPVRDetailsTimer {
   int get endMargin;
   @override
   @JsonKey(name: 'endtime')
-  DateTime get endTime;
+  DateTime? get endTime;
   @override
   @JsonKey(name: 'epgsearchrequired')
   String get epgSearchRequired;
@@ -846,7 +865,7 @@ abstract class _KodiPVRDetailsTimer implements KodiPVRDetailsTimer {
   String get file;
   @override
   @JsonKey(name: 'firstday')
-  DateTime get firstDay;
+  DateTime? get firstDay;
   @override
   @JsonKey(name: 'fulltextepgsearch')
   bool get fullTextEpgSearch;
@@ -888,7 +907,7 @@ abstract class _KodiPVRDetailsTimer implements KodiPVRDetailsTimer {
   int get startMargin;
   @override
   @JsonKey(name: 'starttime')
-  DateTime get startTime;
+  DateTime? get startTime;
   @override
   KodiPVRTimerState get state;
   @override
@@ -899,11 +918,14 @@ abstract class _KodiPVRDetailsTimer implements KodiPVRDetailsTimer {
   @override
   String get title;
   @override
-  Set<KodiGlobalWeekday> get weekdays;
+  Set<KodiGlobalWeekday>? get weekdays;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsTimer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsTimerCopyWith<_$_KodiPVRDetailsTimer> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsTimerImplCopyWith<_$KodiPVRDetailsTimerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

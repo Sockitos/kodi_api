@@ -6,17 +6,17 @@ part of 'kodi_list_filter_rule_albums.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterRuleAlbums _$$_KodiListFilterRuleAlbumsFromJson(
+_$KodiListFilterRuleAlbumsImpl _$$KodiListFilterRuleAlbumsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterRuleAlbums(
+    _$KodiListFilterRuleAlbumsImpl(
       field: $enumDecode(_$KodiListFilterFieldsAlbumsEnumMap, json['field']),
       operator: $enumDecode(_$KodiListFilterOperatorsEnumMap, json['operator']),
       value: const KodiListFilterRuleAlbumsValueConverter()
           .fromJson(json['value']),
     );
 
-Map<String, dynamic> _$$_KodiListFilterRuleAlbumsToJson(
-    _$_KodiListFilterRuleAlbums instance) {
+Map<String, dynamic> _$$KodiListFilterRuleAlbumsImplToJson(
+    _$KodiListFilterRuleAlbumsImpl instance) {
   final val = <String, dynamic>{
     'field': _$KodiListFilterFieldsAlbumsEnumMap[instance.field]!,
     'operator': _$KodiListFilterOperatorsEnumMap[instance.operator]!,
@@ -83,30 +83,31 @@ const _$KodiListFilterOperatorsEnumMap = {
   KodiListFilterOperators.between: 'between',
 };
 
-_$_KodiListFilterRuleAlbumsValueSingle
-    _$$_KodiListFilterRuleAlbumsValueSingleFromJson(
+_$KodiListFilterRuleAlbumsValueSingleImpl
+    _$$KodiListFilterRuleAlbumsValueSingleImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleAlbumsValueSingle(
+        _$KodiListFilterRuleAlbumsValueSingleImpl(
           json['value'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleAlbumsValueSingleToJson(
-        _$_KodiListFilterRuleAlbumsValueSingle instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleAlbumsValueSingleImplToJson(
+        _$KodiListFilterRuleAlbumsValueSingleImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterRuleAlbumsValueGroup
-    _$$_KodiListFilterRuleAlbumsValueGroupFromJson(Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleAlbumsValueGroup(
+_$KodiListFilterRuleAlbumsValueGroupImpl
+    _$$KodiListFilterRuleAlbumsValueGroupImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiListFilterRuleAlbumsValueGroupImpl(
           (json['value'] as List<dynamic>).map((e) => e as String).toList(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleAlbumsValueGroupToJson(
-        _$_KodiListFilterRuleAlbumsValueGroup instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleAlbumsValueGroupImplToJson(
+        _$KodiListFilterRuleAlbumsValueGroupImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

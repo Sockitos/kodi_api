@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kodi_api/src/models/addon/kodi_addon_type.dart';
+import 'package:kodi_api/src/models/utils/kodi_bool_string.dart';
 
 part 'kodi_addon_details.freezed.dart';
 part 'kodi_addon_details.g.dart';
@@ -8,24 +9,23 @@ part 'kodi_addon_details.g.dart';
 class KodiAddonDetails with _$KodiAddonDetails {
   const factory KodiAddonDetails({
     @JsonKey(name: 'addonid') required String addonId,
-    String? author,
-    bool? broken,
+    @Default('') String author,
+    @KodiBoolStringConverter() KodiBoolString? broken,
     List<KodiAddonDetailsDependencies>? dependencies,
-    bool? deprecated,
-    String? description,
-    String? disclaimer,
-    bool? enabled,
+    @KodiBoolStringConverter() KodiBoolString? deprecated,
+    @Default('') String description,
+    @Default('') String disclaimer,
+    @Default(false) bool enabled,
     @JsonKey(name: 'extrainfo') List<KodiAddonDetailsExtraInfo>? extraInfo,
-    String? fanart,
-    bool? installed,
-    String? name,
-    String? path,
-    int? rating,
-    String? summary,
-    String? thumbnail,
+    @Default('') String fanart,
+    @Default(false) bool installed,
+    @Default('') String name,
+    @Default('') String path,
+    @Default(0) int rating,
+    @Default('') String summary,
+    @Default('') String thumbnail,
     required KodiAddonType type,
-    String? version,
-    String? label,
+    @Default('') String version,
   }) = _KodiAddonDetails;
 
   factory KodiAddonDetails.fromJson(Map<String, dynamic> json) =>
@@ -36,7 +36,6 @@ class KodiAddonDetails with _$KodiAddonDetails {
 class KodiAddonDetailsDependencies with _$KodiAddonDetailsDependencies {
   const factory KodiAddonDetailsDependencies({
     @JsonKey(name: 'addonid') required String addonId,
-    @JsonKey(name: 'minversion') required String minVersion,
     required bool optional,
     required String version,
   }) = _KodiAddonDetailsDependencies;

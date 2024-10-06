@@ -12,7 +12,7 @@ part of 'kodi_favourite_details_favourite.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiFavouriteDetailsFavourite _$KodiFavouriteDetailsFavouriteFromJson(
     Map<String, dynamic> json) {
@@ -21,16 +21,20 @@ KodiFavouriteDetailsFavourite _$KodiFavouriteDetailsFavouriteFromJson(
 
 /// @nodoc
 mixin _$KodiFavouriteDetailsFavourite {
-  String? get path => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  String get path => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   KodiFavouriteType get type => throw _privateConstructorUsedError;
-  String? get window => throw _privateConstructorUsedError;
+  String get window => throw _privateConstructorUsedError;
   @JsonKey(name: 'windowparameter')
-  String? get windowParameter => throw _privateConstructorUsedError;
+  String get windowParameter => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiFavouriteDetailsFavourite to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiFavouriteDetailsFavouriteCopyWith<KodiFavouriteDetailsFavourite>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -44,12 +48,12 @@ abstract class $KodiFavouriteDetailsFavouriteCopyWith<$Res> {
           KodiFavouriteDetailsFavourite>;
   @useResult
   $Res call(
-      {String? path,
-      String? thumbnail,
+      {String path,
+      String thumbnail,
       String title,
       KodiFavouriteType type,
-      String? window,
-      @JsonKey(name: 'windowparameter') String? windowParameter});
+      String window,
+      @JsonKey(name: 'windowparameter') String windowParameter});
 }
 
 /// @nodoc
@@ -63,25 +67,27 @@ class _$KodiFavouriteDetailsFavouriteCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? path = freezed,
-    Object? thumbnail = freezed,
+    Object? path = null,
+    Object? thumbnail = null,
     Object? title = null,
     Object? type = null,
-    Object? window = freezed,
-    Object? windowParameter = freezed,
+    Object? window = null,
+    Object? windowParameter = null,
   }) {
     return _then(_value.copyWith(
-      path: freezed == path
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -90,65 +96,67 @@ class _$KodiFavouriteDetailsFavouriteCopyWithImpl<$Res,
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiFavouriteType,
-      window: freezed == window
+      window: null == window
           ? _value.window
           : window // ignore: cast_nullable_to_non_nullable
-              as String?,
-      windowParameter: freezed == windowParameter
+              as String,
+      windowParameter: null == windowParameter
           ? _value.windowParameter
           : windowParameter // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_KodiFavouriteDetailsFavouriteCopyWith<$Res>
+abstract class _$$KodiFavouriteDetailsFavouriteImplCopyWith<$Res>
     implements $KodiFavouriteDetailsFavouriteCopyWith<$Res> {
-  factory _$$_KodiFavouriteDetailsFavouriteCopyWith(
-          _$_KodiFavouriteDetailsFavourite value,
-          $Res Function(_$_KodiFavouriteDetailsFavourite) then) =
-      __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<$Res>;
+  factory _$$KodiFavouriteDetailsFavouriteImplCopyWith(
+          _$KodiFavouriteDetailsFavouriteImpl value,
+          $Res Function(_$KodiFavouriteDetailsFavouriteImpl) then) =
+      __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {String? path,
-      String? thumbnail,
+      {String path,
+      String thumbnail,
       String title,
       KodiFavouriteType type,
-      String? window,
-      @JsonKey(name: 'windowparameter') String? windowParameter});
+      String window,
+      @JsonKey(name: 'windowparameter') String windowParameter});
 }
 
 /// @nodoc
-class __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<$Res>
+class __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl<$Res>
     extends _$KodiFavouriteDetailsFavouriteCopyWithImpl<$Res,
-        _$_KodiFavouriteDetailsFavourite>
-    implements _$$_KodiFavouriteDetailsFavouriteCopyWith<$Res> {
-  __$$_KodiFavouriteDetailsFavouriteCopyWithImpl(
-      _$_KodiFavouriteDetailsFavourite _value,
-      $Res Function(_$_KodiFavouriteDetailsFavourite) _then)
+        _$KodiFavouriteDetailsFavouriteImpl>
+    implements _$$KodiFavouriteDetailsFavouriteImplCopyWith<$Res> {
+  __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl(
+      _$KodiFavouriteDetailsFavouriteImpl _value,
+      $Res Function(_$KodiFavouriteDetailsFavouriteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? path = freezed,
-    Object? thumbnail = freezed,
+    Object? path = null,
+    Object? thumbnail = null,
     Object? title = null,
     Object? type = null,
-    Object? window = freezed,
-    Object? windowParameter = freezed,
+    Object? window = null,
+    Object? windowParameter = null,
   }) {
-    return _then(_$_KodiFavouriteDetailsFavourite(
-      path: freezed == path
+    return _then(_$KodiFavouriteDetailsFavouriteImpl(
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -157,47 +165,50 @@ class __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiFavouriteType,
-      window: freezed == window
+      window: null == window
           ? _value.window
           : window // ignore: cast_nullable_to_non_nullable
-              as String?,
-      windowParameter: freezed == windowParameter
+              as String,
+      windowParameter: null == windowParameter
           ? _value.windowParameter
           : windowParameter // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiFavouriteDetailsFavourite
+class _$KodiFavouriteDetailsFavouriteImpl
     implements _KodiFavouriteDetailsFavourite {
-  const _$_KodiFavouriteDetailsFavourite(
-      {this.path,
-      this.thumbnail,
+  const _$KodiFavouriteDetailsFavouriteImpl(
+      {this.path = '',
+      this.thumbnail = '',
       required this.title,
       required this.type,
-      this.window,
-      @JsonKey(name: 'windowparameter') this.windowParameter});
+      this.window = '',
+      @JsonKey(name: 'windowparameter') this.windowParameter = ''});
 
-  factory _$_KodiFavouriteDetailsFavourite.fromJson(
+  factory _$KodiFavouriteDetailsFavouriteImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiFavouriteDetailsFavouriteFromJson(json);
+      _$$KodiFavouriteDetailsFavouriteImplFromJson(json);
 
   @override
-  final String? path;
+  @JsonKey()
+  final String path;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String title;
   @override
   final KodiFavouriteType type;
   @override
-  final String? window;
+  @JsonKey()
+  final String window;
   @override
   @JsonKey(name: 'windowparameter')
-  final String? windowParameter;
+  final String windowParameter;
 
   @override
   String toString() {
@@ -205,10 +216,10 @@ class _$_KodiFavouriteDetailsFavourite
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiFavouriteDetailsFavourite &&
+            other is _$KodiFavouriteDetailsFavouriteImpl &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
@@ -219,21 +230,24 @@ class _$_KodiFavouriteDetailsFavourite
                 other.windowParameter == windowParameter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, path, thumbnail, title, type, window, windowParameter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiFavouriteDetailsFavouriteCopyWith<_$_KodiFavouriteDetailsFavourite>
-      get copyWith => __$$_KodiFavouriteDetailsFavouriteCopyWithImpl<
-          _$_KodiFavouriteDetailsFavourite>(this, _$identity);
+  _$$KodiFavouriteDetailsFavouriteImplCopyWith<
+          _$KodiFavouriteDetailsFavouriteImpl>
+      get copyWith => __$$KodiFavouriteDetailsFavouriteImplCopyWithImpl<
+          _$KodiFavouriteDetailsFavouriteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiFavouriteDetailsFavouriteToJson(
+    return _$$KodiFavouriteDetailsFavouriteImplToJson(
       this,
     );
   }
@@ -242,32 +256,36 @@ class _$_KodiFavouriteDetailsFavourite
 abstract class _KodiFavouriteDetailsFavourite
     implements KodiFavouriteDetailsFavourite {
   const factory _KodiFavouriteDetailsFavourite(
-          {final String? path,
-          final String? thumbnail,
+          {final String path,
+          final String thumbnail,
           required final String title,
           required final KodiFavouriteType type,
-          final String? window,
-          @JsonKey(name: 'windowparameter') final String? windowParameter}) =
-      _$_KodiFavouriteDetailsFavourite;
+          final String window,
+          @JsonKey(name: 'windowparameter') final String windowParameter}) =
+      _$KodiFavouriteDetailsFavouriteImpl;
 
   factory _KodiFavouriteDetailsFavourite.fromJson(Map<String, dynamic> json) =
-      _$_KodiFavouriteDetailsFavourite.fromJson;
+      _$KodiFavouriteDetailsFavouriteImpl.fromJson;
 
   @override
-  String? get path;
+  String get path;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get title;
   @override
   KodiFavouriteType get type;
   @override
-  String? get window;
+  String get window;
   @override
   @JsonKey(name: 'windowparameter')
-  String? get windowParameter;
+  String get windowParameter;
+
+  /// Create a copy of KodiFavouriteDetailsFavourite
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiFavouriteDetailsFavouriteCopyWith<_$_KodiFavouriteDetailsFavourite>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiFavouriteDetailsFavouriteImplCopyWith<
+          _$KodiFavouriteDetailsFavouriteImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

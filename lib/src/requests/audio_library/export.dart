@@ -11,7 +11,6 @@ typedef ExportBuilder = Export Function({
 
 @freezed
 class Export with _$Export implements KodiRequest<void> {
-  @JsonSerializable(explicitToJson: true)
   const factory Export({
     @KodiAudioLibraryExportOptionsConverter()
     required KodiAudioLibraryExportOptions options,
@@ -30,6 +29,7 @@ class Export with _$Export implements KodiRequest<void> {
 
 @Freezed()
 class KodiAudioLibraryExportOptions with _$KodiAudioLibraryExportOptions {
+  @Assert('path.length >= 1')
   const factory KodiAudioLibraryExportOptions.path(
     String path,
   ) = _KodiAudioLibraryExportOptionsPath;
@@ -39,21 +39,8 @@ class KodiAudioLibraryExportOptions with _$KodiAudioLibraryExportOptions {
     @Default(false) bool overwrite,
   }) = _KodiAudioLibraryExportOptionsImagesOverwrite;
 
-  const KodiAudioLibraryExportOptions._();
-
   factory KodiAudioLibraryExportOptions.fromJson(Map<String, dynamic> json) =>
       _$KodiAudioLibraryExportOptionsFromJson(json);
-
-  @override
-  Map<String, dynamic> toJson() => when(
-        path: (path) => <String, dynamic>{
-          'path': path,
-        },
-        imagesOverwrite: (images, overwrite) => <String, dynamic>{
-          'images': images,
-          'overwrite': overwrite,
-        },
-      );
 }
 
 class KodiAudioLibraryExportOptionsConverter

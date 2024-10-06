@@ -9,7 +9,7 @@ part 'get_categories.g.dart';
 
 typedef GetCategoriesBuilder = GetCategories Function({
   KodiSettingLevel level,
-  String? section,
+  String section,
   Set<KodiSettingsGetCategoriesProperties>? properties,
 });
 
@@ -19,7 +19,7 @@ class GetCategories
     implements KodiRequest<KodiSettingsGetCategoriesResponse> {
   const factory GetCategories({
     @Default(KodiSettingLevel.standard) KodiSettingLevel level,
-    String? section,
+    @Default('') String section,
     Set<KodiSettingsGetCategoriesProperties>? properties,
   }) = _GetCategories;
 

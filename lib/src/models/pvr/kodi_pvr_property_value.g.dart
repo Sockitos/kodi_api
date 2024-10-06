@@ -6,16 +6,16 @@ part of 'kodi_pvr_property_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRPropertyValue _$$_KodiPVRPropertyValueFromJson(
+_$KodiPVRPropertyValueImpl _$$KodiPVRPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRPropertyValue(
-      available: json['available'] as bool,
-      recording: json['recording'] as bool,
-      scanning: json['scanning'] as bool,
+    _$KodiPVRPropertyValueImpl(
+      available: json['available'] as bool? ?? false,
+      recording: json['recording'] as bool? ?? false,
+      scanning: json['scanning'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_KodiPVRPropertyValueToJson(
-        _$_KodiPVRPropertyValue instance) =>
+Map<String, dynamic> _$$KodiPVRPropertyValueImplToJson(
+        _$KodiPVRPropertyValueImpl instance) =>
     <String, dynamic>{
       'available': instance.available,
       'recording': instance.recording,

@@ -6,11 +6,12 @@ part of 'set_tv_show_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetTVShowDetails _$$_SetTVShowDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetTVShowDetails(
-      json['tvshowid'] as int,
+_$SetTVShowDetailsImpl _$$SetTVShowDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetTVShowDetailsImpl(
+      (json['tvshowid'] as num).toInt(),
       title: json['title'] as String?,
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       studios:
           (json['studio'] as List<dynamic>?)?.map((e) => e as String).toList(),
       plot: json['plot'] as String?,
@@ -35,7 +36,7 @@ _$_SetTVShowDetails _$$_SetTVShowDetailsFromJson(Map<String, dynamic> json) =>
       art: json['art'] == null
           ? null
           : KodiMediaArtworkSet.fromJson(json['art'] as Map<String, dynamic>),
-      userRating: json['userrating'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
       ratings: (json['ratings'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, KodiVideoRating.fromJson(e as Map<String, dynamic>)),
@@ -43,7 +44,7 @@ _$_SetTVShowDetails _$$_SetTVShowDetailsFromJson(Map<String, dynamic> json) =>
       dateAdded: json['dateadded'] == null
           ? null
           : DateTime.parse(json['dateadded'] as String),
-      runtime: json['runtime'] as int?,
+      runtime: (json['runtime'] as num?)?.toInt(),
       status: $enumDecodeNullable(
           _$KodiVideoLibrarySetTvShowDetailsStatusEnumMap, json['status']),
       uniqueId: (json['uniqueid'] as Map<String, dynamic>?)?.map(
@@ -51,7 +52,8 @@ _$_SetTVShowDetails _$$_SetTVShowDetailsFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$$_SetTVShowDetailsToJson(_$_SetTVShowDetails instance) {
+Map<String, dynamic> _$$SetTVShowDetailsImplToJson(
+    _$SetTVShowDetailsImpl instance) {
   final val = <String, dynamic>{
     'tvshowid': instance.id,
   };

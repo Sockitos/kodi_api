@@ -6,42 +6,42 @@ part of 'kodi_notifications_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationsItemUnknown _$$_KodiNotificationsItemUnknownFromJson(
+_$KodiNotificationsItemUnknownImpl _$$KodiNotificationsItemUnknownImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemUnknown(
+    _$KodiNotificationsItemUnknownImpl(
       $type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiNotificationsItemUnknownToJson(
-        _$_KodiNotificationsItemUnknown instance) =>
+Map<String, dynamic> _$$KodiNotificationsItemUnknownImplToJson(
+        _$KodiNotificationsItemUnknownImpl instance) =>
     <String, dynamic>{
       'type': instance.$type,
     };
 
-_$_KodiNotificationsItemIdType _$$_KodiNotificationsItemIdTypeFromJson(
+_$KodiNotificationsItemIdTypeImpl _$$KodiNotificationsItemIdTypeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemIdType(
-      id: json['id'] as int,
+    _$KodiNotificationsItemIdTypeImpl(
+      id: (json['id'] as num).toInt(),
       $type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiNotificationsItemIdTypeToJson(
-        _$_KodiNotificationsItemIdType instance) =>
+Map<String, dynamic> _$$KodiNotificationsItemIdTypeImplToJson(
+        _$KodiNotificationsItemIdTypeImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.$type,
     };
 
-_$_KodiNotificationsItemMovie _$$_KodiNotificationsItemMovieFromJson(
+_$KodiNotificationsItemMovieImpl _$$KodiNotificationsItemMovieImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemMovie(
+    _$KodiNotificationsItemMovieImpl(
       title: json['title'] as String,
-      year: json['year'] as int?,
+      year: (json['year'] as num?)?.toInt(),
       $type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiNotificationsItemMovieToJson(
-    _$_KodiNotificationsItemMovie instance) {
+Map<String, dynamic> _$$KodiNotificationsItemMovieImplToJson(
+    _$KodiNotificationsItemMovieImpl instance) {
   final val = <String, dynamic>{
     'title': instance.title,
   };
@@ -57,18 +57,18 @@ Map<String, dynamic> _$$_KodiNotificationsItemMovieToJson(
   return val;
 }
 
-_$_KodiNotificationsItemEpisode _$$_KodiNotificationsItemEpisodeFromJson(
+_$KodiNotificationsItemEpisodeImpl _$$KodiNotificationsItemEpisodeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemEpisode(
-      episode: json['episode'] as int?,
-      season: json['season'] as int?,
+    _$KodiNotificationsItemEpisodeImpl(
+      episode: (json['episode'] as num?)?.toInt(),
+      season: (json['season'] as num?)?.toInt(),
       showTitle: json['showtitle'] as String?,
       title: json['title'] as String,
       $type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiNotificationsItemEpisodeToJson(
-    _$_KodiNotificationsItemEpisode instance) {
+Map<String, dynamic> _$$KodiNotificationsItemEpisodeImplToJson(
+    _$KodiNotificationsItemEpisodeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -85,17 +85,17 @@ Map<String, dynamic> _$$_KodiNotificationsItemEpisodeToJson(
   return val;
 }
 
-_$_KodiNotificationsItemMusicVideo _$$_KodiNotificationsItemMusicVideoFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemMusicVideo(
-      album: json['album'] as String?,
-      artist: json['artist'] as String?,
-      title: json['title'] as String,
-      $type: json['type'] as String?,
-    );
+_$KodiNotificationsItemMusicVideoImpl
+    _$$KodiNotificationsItemMusicVideoImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationsItemMusicVideoImpl(
+          album: json['album'] as String?,
+          artist: json['artist'] as String?,
+          title: json['title'] as String,
+          $type: json['type'] as String?,
+        );
 
-Map<String, dynamic> _$$_KodiNotificationsItemMusicVideoToJson(
-    _$_KodiNotificationsItemMusicVideo instance) {
+Map<String, dynamic> _$$KodiNotificationsItemMusicVideoImplToJson(
+    _$KodiNotificationsItemMusicVideoImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -111,18 +111,18 @@ Map<String, dynamic> _$$_KodiNotificationsItemMusicVideoToJson(
   return val;
 }
 
-_$_KodiNotificationsItemSong _$$_KodiNotificationsItemSongFromJson(
+_$KodiNotificationsItemSongImpl _$$KodiNotificationsItemSongImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemSong(
+    _$KodiNotificationsItemSongImpl(
       album: json['album'] as String?,
       artist: json['artist'] as String?,
       title: json['title'] as String,
-      track: json['track'] as int?,
+      track: (json['track'] as num?)?.toInt(),
       $type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiNotificationsItemSongToJson(
-    _$_KodiNotificationsItemSong instance) {
+Map<String, dynamic> _$$KodiNotificationsItemSongImplToJson(
+    _$KodiNotificationsItemSongImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -139,32 +139,32 @@ Map<String, dynamic> _$$_KodiNotificationsItemSongToJson(
   return val;
 }
 
-_$_KodiNotificationsItemPicture _$$_KodiNotificationsItemPictureFromJson(
+_$KodiNotificationsItemPictureImpl _$$KodiNotificationsItemPictureImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemPicture(
+    _$KodiNotificationsItemPictureImpl(
       file: json['file'] as String,
       $type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiNotificationsItemPictureToJson(
-        _$_KodiNotificationsItemPicture instance) =>
+Map<String, dynamic> _$$KodiNotificationsItemPictureImplToJson(
+        _$KodiNotificationsItemPictureImpl instance) =>
     <String, dynamic>{
       'file': instance.file,
       'type': instance.$type,
     };
 
-_$_KodiNotificationsItemChannel _$$_KodiNotificationsItemChannelFromJson(
+_$KodiNotificationsItemChannelImpl _$$KodiNotificationsItemChannelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiNotificationsItemChannel(
+    _$KodiNotificationsItemChannelImpl(
       channelType:
           $enumDecode(_$KodiPVRChannelTypeEnumMap, json['channeltype']),
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       $type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiNotificationsItemChannelToJson(
-        _$_KodiNotificationsItemChannel instance) =>
+Map<String, dynamic> _$$KodiNotificationsItemChannelImplToJson(
+        _$KodiNotificationsItemChannelImpl instance) =>
     <String, dynamic>{
       'channeltype': _$KodiPVRChannelTypeEnumMap[instance.channelType]!,
       'id': instance.id,

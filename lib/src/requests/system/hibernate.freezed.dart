@@ -12,7 +12,7 @@ part of 'hibernate.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Hibernate _$HibernateFromJson(Map<String, dynamic> json) {
   return _Hibernate.fromJson(json);
@@ -20,6 +20,7 @@ Hibernate _$HibernateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Hibernate {
+  /// Serializes this Hibernate to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,31 +39,37 @@ class _$HibernateCopyWithImpl<$Res, $Val extends Hibernate>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Hibernate
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_HibernateCopyWith<$Res> {
-  factory _$$_HibernateCopyWith(
-          _$_Hibernate value, $Res Function(_$_Hibernate) then) =
-      __$$_HibernateCopyWithImpl<$Res>;
+abstract class _$$HibernateImplCopyWith<$Res> {
+  factory _$$HibernateImplCopyWith(
+          _$HibernateImpl value, $Res Function(_$HibernateImpl) then) =
+      __$$HibernateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_HibernateCopyWithImpl<$Res>
-    extends _$HibernateCopyWithImpl<$Res, _$_Hibernate>
-    implements _$$_HibernateCopyWith<$Res> {
-  __$$_HibernateCopyWithImpl(
-      _$_Hibernate _value, $Res Function(_$_Hibernate) _then)
+class __$$HibernateImplCopyWithImpl<$Res>
+    extends _$HibernateCopyWithImpl<$Res, _$HibernateImpl>
+    implements _$$HibernateImplCopyWith<$Res> {
+  __$$HibernateImplCopyWithImpl(
+      _$HibernateImpl _value, $Res Function(_$HibernateImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Hibernate
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Hibernate extends _Hibernate {
-  const _$_Hibernate() : super._();
+class _$HibernateImpl extends _Hibernate {
+  const _$HibernateImpl() : super._();
 
-  factory _$_Hibernate.fromJson(Map<String, dynamic> json) =>
-      _$$_HibernateFromJson(json);
+  factory _$HibernateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HibernateImplFromJson(json);
 
   @override
   String toString() {
@@ -70,27 +77,27 @@ class _$_Hibernate extends _Hibernate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Hibernate);
+        (other.runtimeType == runtimeType && other is _$HibernateImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HibernateToJson(
+    return _$$HibernateImplToJson(
       this,
     );
   }
 }
 
 abstract class _Hibernate extends Hibernate {
-  const factory _Hibernate() = _$_Hibernate;
+  const factory _Hibernate() = _$HibernateImpl;
   const _Hibernate._() : super._();
 
   factory _Hibernate.fromJson(Map<String, dynamic> json) =
-      _$_Hibernate.fromJson;
+      _$HibernateImpl.fromJson;
 }

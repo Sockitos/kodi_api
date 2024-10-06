@@ -12,7 +12,7 @@ part of 'get_settings.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSettings _$GetSettingsFromJson(Map<String, dynamic> json) {
   return _GetSettings.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$GetSettings {
   KodiSettingLevel get level => throw _privateConstructorUsedError;
   KodiGetSettingsFilter? get filter => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSettings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSettingsCopyWith<GetSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GetSettingsCopyWithImpl<$Res, $Val extends GetSettings>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$GetSettingsCopyWithImpl<$Res, $Val extends GetSettings>
     ) as $Val);
   }
 
+  /// Create a copy of GetSettings
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGetSettingsFilterCopyWith<$Res>? get filter {
@@ -82,11 +90,11 @@ class _$GetSettingsCopyWithImpl<$Res, $Val extends GetSettings>
 }
 
 /// @nodoc
-abstract class _$$_GetSettingsCopyWith<$Res>
+abstract class _$$GetSettingsImplCopyWith<$Res>
     implements $GetSettingsCopyWith<$Res> {
-  factory _$$_GetSettingsCopyWith(
-          _$_GetSettings value, $Res Function(_$_GetSettings) then) =
-      __$$_GetSettingsCopyWithImpl<$Res>;
+  factory _$$GetSettingsImplCopyWith(
+          _$GetSettingsImpl value, $Res Function(_$GetSettingsImpl) then) =
+      __$$GetSettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiSettingLevel level, KodiGetSettingsFilter? filter});
@@ -96,20 +104,22 @@ abstract class _$$_GetSettingsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSettingsCopyWithImpl<$Res>
-    extends _$GetSettingsCopyWithImpl<$Res, _$_GetSettings>
-    implements _$$_GetSettingsCopyWith<$Res> {
-  __$$_GetSettingsCopyWithImpl(
-      _$_GetSettings _value, $Res Function(_$_GetSettings) _then)
+class __$$GetSettingsImplCopyWithImpl<$Res>
+    extends _$GetSettingsCopyWithImpl<$Res, _$GetSettingsImpl>
+    implements _$$GetSettingsImplCopyWith<$Res> {
+  __$$GetSettingsImplCopyWithImpl(
+      _$GetSettingsImpl _value, $Res Function(_$GetSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSettings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? level = null,
     Object? filter = freezed,
   }) {
-    return _then(_$_GetSettings(
+    return _then(_$GetSettingsImpl(
       level: null == level
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
@@ -124,12 +134,12 @@ class __$$_GetSettingsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSettings extends _GetSettings {
-  const _$_GetSettings({this.level = KodiSettingLevel.standard, this.filter})
+class _$GetSettingsImpl extends _GetSettings {
+  const _$GetSettingsImpl({this.level = KodiSettingLevel.standard, this.filter})
       : super._();
 
-  factory _$_GetSettings.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSettingsFromJson(json);
+  factory _$GetSettingsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSettingsImplFromJson(json);
 
   @override
   @JsonKey()
@@ -143,27 +153,29 @@ class _$_GetSettings extends _GetSettings {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSettings &&
+            other is _$GetSettingsImpl &&
             (identical(other.level, level) || other.level == level) &&
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, level, filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSettings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSettingsCopyWith<_$_GetSettings> get copyWith =>
-      __$$_GetSettingsCopyWithImpl<_$_GetSettings>(this, _$identity);
+  _$$GetSettingsImplCopyWith<_$GetSettingsImpl> get copyWith =>
+      __$$GetSettingsImplCopyWithImpl<_$GetSettingsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSettingsToJson(
+    return _$$GetSettingsImplToJson(
       this,
     );
   }
@@ -172,19 +184,22 @@ class _$_GetSettings extends _GetSettings {
 abstract class _GetSettings extends GetSettings {
   const factory _GetSettings(
       {final KodiSettingLevel level,
-      final KodiGetSettingsFilter? filter}) = _$_GetSettings;
+      final KodiGetSettingsFilter? filter}) = _$GetSettingsImpl;
   const _GetSettings._() : super._();
 
   factory _GetSettings.fromJson(Map<String, dynamic> json) =
-      _$_GetSettings.fromJson;
+      _$GetSettingsImpl.fromJson;
 
   @override
   KodiSettingLevel get level;
   @override
   KodiGetSettingsFilter? get filter;
+
+  /// Create a copy of GetSettings
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSettingsCopyWith<_$_GetSettings> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSettingsImplCopyWith<_$GetSettingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -198,8 +213,12 @@ mixin _$KodiGetSettingsFilter {
   String get category => throw _privateConstructorUsedError;
   String get section => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGetSettingsFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGetSettingsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGetSettingsFilterCopyWith<KodiGetSettingsFilter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -224,6 +243,8 @@ class _$KodiGetSettingsFilterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGetSettingsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,31 +265,35 @@ class _$KodiGetSettingsFilterCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiGetSettingsFilterCopyWith<$Res>
+abstract class _$$KodiGetSettingsFilterImplCopyWith<$Res>
     implements $KodiGetSettingsFilterCopyWith<$Res> {
-  factory _$$_KodiGetSettingsFilterCopyWith(_$_KodiGetSettingsFilter value,
-          $Res Function(_$_KodiGetSettingsFilter) then) =
-      __$$_KodiGetSettingsFilterCopyWithImpl<$Res>;
+  factory _$$KodiGetSettingsFilterImplCopyWith(
+          _$KodiGetSettingsFilterImpl value,
+          $Res Function(_$KodiGetSettingsFilterImpl) then) =
+      __$$KodiGetSettingsFilterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String category, String section});
 }
 
 /// @nodoc
-class __$$_KodiGetSettingsFilterCopyWithImpl<$Res>
-    extends _$KodiGetSettingsFilterCopyWithImpl<$Res, _$_KodiGetSettingsFilter>
-    implements _$$_KodiGetSettingsFilterCopyWith<$Res> {
-  __$$_KodiGetSettingsFilterCopyWithImpl(_$_KodiGetSettingsFilter _value,
-      $Res Function(_$_KodiGetSettingsFilter) _then)
+class __$$KodiGetSettingsFilterImplCopyWithImpl<$Res>
+    extends _$KodiGetSettingsFilterCopyWithImpl<$Res,
+        _$KodiGetSettingsFilterImpl>
+    implements _$$KodiGetSettingsFilterImplCopyWith<$Res> {
+  __$$KodiGetSettingsFilterImplCopyWithImpl(_$KodiGetSettingsFilterImpl _value,
+      $Res Function(_$KodiGetSettingsFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGetSettingsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? category = null,
     Object? section = null,
   }) {
-    return _then(_$_KodiGetSettingsFilter(
+    return _then(_$KodiGetSettingsFilterImpl(
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -283,12 +308,12 @@ class __$$_KodiGetSettingsFilterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGetSettingsFilter implements _KodiGetSettingsFilter {
-  const _$_KodiGetSettingsFilter(
+class _$KodiGetSettingsFilterImpl implements _KodiGetSettingsFilter {
+  const _$KodiGetSettingsFilterImpl(
       {required this.category, required this.section});
 
-  factory _$_KodiGetSettingsFilter.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiGetSettingsFilterFromJson(json);
+  factory _$KodiGetSettingsFilterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiGetSettingsFilterImplFromJson(json);
 
   @override
   final String category;
@@ -301,29 +326,31 @@ class _$_KodiGetSettingsFilter implements _KodiGetSettingsFilter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGetSettingsFilter &&
+            other is _$KodiGetSettingsFilterImpl &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.section, section) || other.section == section));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, category, section);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGetSettingsFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGetSettingsFilterCopyWith<_$_KodiGetSettingsFilter> get copyWith =>
-      __$$_KodiGetSettingsFilterCopyWithImpl<_$_KodiGetSettingsFilter>(
-          this, _$identity);
+  _$$KodiGetSettingsFilterImplCopyWith<_$KodiGetSettingsFilterImpl>
+      get copyWith => __$$KodiGetSettingsFilterImplCopyWithImpl<
+          _$KodiGetSettingsFilterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGetSettingsFilterToJson(
+    return _$$KodiGetSettingsFilterImplToJson(
       this,
     );
   }
@@ -332,17 +359,20 @@ class _$_KodiGetSettingsFilter implements _KodiGetSettingsFilter {
 abstract class _KodiGetSettingsFilter implements KodiGetSettingsFilter {
   const factory _KodiGetSettingsFilter(
       {required final String category,
-      required final String section}) = _$_KodiGetSettingsFilter;
+      required final String section}) = _$KodiGetSettingsFilterImpl;
 
   factory _KodiGetSettingsFilter.fromJson(Map<String, dynamic> json) =
-      _$_KodiGetSettingsFilter.fromJson;
+      _$KodiGetSettingsFilterImpl.fromJson;
 
   @override
   String get category;
   @override
   String get section;
+
+  /// Create a copy of KodiGetSettingsFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGetSettingsFilterCopyWith<_$_KodiGetSettingsFilter> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGetSettingsFilterImplCopyWith<_$KodiGetSettingsFilterImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

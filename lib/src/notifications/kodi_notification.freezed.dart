@@ -12,7 +12,7 @@ part of 'kodi_notification.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotification _$KodiNotificationFromJson(Map<String, dynamic> json) {
   switch (json['method']) {
@@ -689,8 +689,13 @@ mixin _$KodiNotification {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiNotification to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationCopyWith<KodiNotification> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -714,6 +719,8 @@ class _$KodiNotificationCopyWithImpl<$Res, $Val extends KodiNotification>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -734,12 +741,13 @@ class _$KodiNotificationCopyWithImpl<$Res, $Val extends KodiNotification>
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationApplicationOnVolumeChangedCopyWith<$Res>
+abstract class _$$KodiNotificationApplicationOnVolumeChangedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationApplicationOnVolumeChangedCopyWith(
-          _$_KodiNotificationApplicationOnVolumeChanged value,
-          $Res Function(_$_KodiNotificationApplicationOnVolumeChanged) then) =
-      __$$_KodiNotificationApplicationOnVolumeChangedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationApplicationOnVolumeChangedImplCopyWith(
+          _$KodiNotificationApplicationOnVolumeChangedImpl value,
+          $Res Function(_$KodiNotificationApplicationOnVolumeChangedImpl)
+              then) =
+      __$$KodiNotificationApplicationOnVolumeChangedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -751,15 +759,17 @@ abstract class _$$_KodiNotificationApplicationOnVolumeChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationApplicationOnVolumeChangedCopyWithImpl<$Res>
+class __$$KodiNotificationApplicationOnVolumeChangedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationApplicationOnVolumeChanged>
-    implements _$$_KodiNotificationApplicationOnVolumeChangedCopyWith<$Res> {
-  __$$_KodiNotificationApplicationOnVolumeChangedCopyWithImpl(
-      _$_KodiNotificationApplicationOnVolumeChanged _value,
-      $Res Function(_$_KodiNotificationApplicationOnVolumeChanged) _then)
+        _$KodiNotificationApplicationOnVolumeChangedImpl>
+    implements _$$KodiNotificationApplicationOnVolumeChangedImplCopyWith<$Res> {
+  __$$KodiNotificationApplicationOnVolumeChangedImplCopyWithImpl(
+      _$KodiNotificationApplicationOnVolumeChangedImpl _value,
+      $Res Function(_$KodiNotificationApplicationOnVolumeChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -767,7 +777,7 @@ class __$$_KodiNotificationApplicationOnVolumeChangedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationApplicationOnVolumeChanged(
+    return _then(_$KodiNotificationApplicationOnVolumeChangedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -783,6 +793,8 @@ class __$$_KodiNotificationApplicationOnVolumeChangedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationApplicationOnVolumeChangedParamsCopyWith<$Res> get params {
@@ -795,14 +807,14 @@ class __$$_KodiNotificationApplicationOnVolumeChangedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationApplicationOnVolumeChanged
+class _$KodiNotificationApplicationOnVolumeChangedImpl
     implements _KodiNotificationApplicationOnVolumeChanged {
-  const _$_KodiNotificationApplicationOnVolumeChanged(
+  const _$KodiNotificationApplicationOnVolumeChangedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationApplicationOnVolumeChanged.fromJson(
+  factory _$KodiNotificationApplicationOnVolumeChangedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationApplicationOnVolumeChangedFromJson(json);
+      _$$KodiNotificationApplicationOnVolumeChangedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -817,27 +829,30 @@ class _$_KodiNotificationApplicationOnVolumeChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationApplicationOnVolumeChanged &&
+            other is _$KodiNotificationApplicationOnVolumeChangedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationApplicationOnVolumeChangedCopyWith<
-          _$_KodiNotificationApplicationOnVolumeChanged>
+  _$$KodiNotificationApplicationOnVolumeChangedImplCopyWith<
+          _$KodiNotificationApplicationOnVolumeChangedImpl>
       get copyWith =>
-          __$$_KodiNotificationApplicationOnVolumeChangedCopyWithImpl<
-              _$_KodiNotificationApplicationOnVolumeChanged>(this, _$identity);
+          __$$KodiNotificationApplicationOnVolumeChangedImplCopyWithImpl<
+                  _$KodiNotificationApplicationOnVolumeChangedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1448,7 +1463,7 @@ class _$_KodiNotificationApplicationOnVolumeChanged
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationApplicationOnVolumeChangedToJson(
+    return _$$KodiNotificationApplicationOnVolumeChangedImplToJson(
       this,
     );
   }
@@ -1460,11 +1475,11 @@ abstract class _KodiNotificationApplicationOnVolumeChanged
       {required final String jsonrpc,
       required final String method,
       required final KodiNotificationApplicationOnVolumeChangedParams
-          params}) = _$_KodiNotificationApplicationOnVolumeChanged;
+          params}) = _$KodiNotificationApplicationOnVolumeChangedImpl;
 
   factory _KodiNotificationApplicationOnVolumeChanged.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationApplicationOnVolumeChanged.fromJson;
+      _$KodiNotificationApplicationOnVolumeChangedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -1472,20 +1487,24 @@ abstract class _KodiNotificationApplicationOnVolumeChanged
   String get method;
   @override
   KodiNotificationApplicationOnVolumeChangedParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationApplicationOnVolumeChangedCopyWith<
-          _$_KodiNotificationApplicationOnVolumeChanged>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationApplicationOnVolumeChangedImplCopyWith<
+          _$KodiNotificationApplicationOnVolumeChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWith(
-          _$_KodiNotificationAudioLibraryOnCleanFinished value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnCleanFinished) then) =
-      __$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWith(
+          _$KodiNotificationAudioLibraryOnCleanFinishedImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnCleanFinishedImpl)
+              then) =
+      __$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1495,15 +1514,18 @@ abstract class _$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnCleanFinished>
-    implements _$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnCleanFinished _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnCleanFinished) _then)
+        _$KodiNotificationAudioLibraryOnCleanFinishedImpl>
+    implements
+        _$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnCleanFinishedImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnCleanFinishedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1511,7 +1533,7 @@ class __$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnCleanFinished(
+    return _then(_$KodiNotificationAudioLibraryOnCleanFinishedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -1527,6 +1549,8 @@ class __$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -1538,14 +1562,14 @@ class __$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnCleanFinished
+class _$KodiNotificationAudioLibraryOnCleanFinishedImpl
     implements _KodiNotificationAudioLibraryOnCleanFinished {
-  const _$_KodiNotificationAudioLibraryOnCleanFinished(
+  const _$KodiNotificationAudioLibraryOnCleanFinishedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationAudioLibraryOnCleanFinished.fromJson(
+  factory _$KodiNotificationAudioLibraryOnCleanFinishedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnCleanFinishedFromJson(json);
+      _$$KodiNotificationAudioLibraryOnCleanFinishedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -1560,27 +1584,30 @@ class _$_KodiNotificationAudioLibraryOnCleanFinished
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnCleanFinished &&
+            other is _$KodiNotificationAudioLibraryOnCleanFinishedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWith<
-          _$_KodiNotificationAudioLibraryOnCleanFinished>
+  _$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnCleanFinishedImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWithImpl<
-              _$_KodiNotificationAudioLibraryOnCleanFinished>(this, _$identity);
+          __$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnCleanFinishedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2191,7 +2218,7 @@ class _$_KodiNotificationAudioLibraryOnCleanFinished
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnCleanFinishedToJson(
+    return _$$KodiNotificationAudioLibraryOnCleanFinishedImplToJson(
       this,
     );
   }
@@ -2203,11 +2230,11 @@ abstract class _KodiNotificationAudioLibraryOnCleanFinished
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationAudioLibraryOnCleanFinished;
+      _$KodiNotificationAudioLibraryOnCleanFinishedImpl;
 
   factory _KodiNotificationAudioLibraryOnCleanFinished.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnCleanFinished.fromJson;
+      _$KodiNotificationAudioLibraryOnCleanFinishedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -2215,20 +2242,24 @@ abstract class _KodiNotificationAudioLibraryOnCleanFinished
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnCleanFinishedCopyWith<
-          _$_KodiNotificationAudioLibraryOnCleanFinished>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnCleanFinishedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnCleanFinishedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnCleanStartedCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnCleanStartedCopyWith(
-          _$_KodiNotificationAudioLibraryOnCleanStarted value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnCleanStarted) then) =
-      __$$_KodiNotificationAudioLibraryOnCleanStartedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWith(
+          _$KodiNotificationAudioLibraryOnCleanStartedImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnCleanStartedImpl)
+              then) =
+      __$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2238,15 +2269,17 @@ abstract class _$$_KodiNotificationAudioLibraryOnCleanStartedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnCleanStartedCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnCleanStarted>
-    implements _$$_KodiNotificationAudioLibraryOnCleanStartedCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnCleanStartedCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnCleanStarted _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnCleanStarted) _then)
+        _$KodiNotificationAudioLibraryOnCleanStartedImpl>
+    implements _$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnCleanStartedImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnCleanStartedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2254,7 +2287,7 @@ class __$$_KodiNotificationAudioLibraryOnCleanStartedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnCleanStarted(
+    return _then(_$KodiNotificationAudioLibraryOnCleanStartedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -2270,6 +2303,8 @@ class __$$_KodiNotificationAudioLibraryOnCleanStartedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -2281,14 +2316,14 @@ class __$$_KodiNotificationAudioLibraryOnCleanStartedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnCleanStarted
+class _$KodiNotificationAudioLibraryOnCleanStartedImpl
     implements _KodiNotificationAudioLibraryOnCleanStarted {
-  const _$_KodiNotificationAudioLibraryOnCleanStarted(
+  const _$KodiNotificationAudioLibraryOnCleanStartedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationAudioLibraryOnCleanStarted.fromJson(
+  factory _$KodiNotificationAudioLibraryOnCleanStartedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnCleanStartedFromJson(json);
+      _$$KodiNotificationAudioLibraryOnCleanStartedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -2303,27 +2338,30 @@ class _$_KodiNotificationAudioLibraryOnCleanStarted
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnCleanStarted &&
+            other is _$KodiNotificationAudioLibraryOnCleanStartedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnCleanStartedCopyWith<
-          _$_KodiNotificationAudioLibraryOnCleanStarted>
+  _$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnCleanStartedImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnCleanStartedCopyWithImpl<
-              _$_KodiNotificationAudioLibraryOnCleanStarted>(this, _$identity);
+          __$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnCleanStartedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2934,7 +2972,7 @@ class _$_KodiNotificationAudioLibraryOnCleanStarted
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnCleanStartedToJson(
+    return _$$KodiNotificationAudioLibraryOnCleanStartedImplToJson(
       this,
     );
   }
@@ -2946,11 +2984,11 @@ abstract class _KodiNotificationAudioLibraryOnCleanStarted
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationAudioLibraryOnCleanStarted;
+      _$KodiNotificationAudioLibraryOnCleanStartedImpl;
 
   factory _KodiNotificationAudioLibraryOnCleanStarted.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnCleanStarted.fromJson;
+      _$KodiNotificationAudioLibraryOnCleanStartedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -2958,20 +2996,23 @@ abstract class _KodiNotificationAudioLibraryOnCleanStarted
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnCleanStartedCopyWith<
-          _$_KodiNotificationAudioLibraryOnCleanStarted>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnCleanStartedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnCleanStartedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnExportCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnExportImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnExportCopyWith(
-          _$_KodiNotificationAudioLibraryOnExport value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnExport) then) =
-      __$$_KodiNotificationAudioLibraryOnExportCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnExportImplCopyWith(
+          _$KodiNotificationAudioLibraryOnExportImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnExportImpl) then) =
+      __$$KodiNotificationAudioLibraryOnExportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2983,15 +3024,17 @@ abstract class _$$_KodiNotificationAudioLibraryOnExportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnExportCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnExportImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnExport>
-    implements _$$_KodiNotificationAudioLibraryOnExportCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnExportCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnExport _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnExport) _then)
+        _$KodiNotificationAudioLibraryOnExportImpl>
+    implements _$$KodiNotificationAudioLibraryOnExportImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnExportImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnExportImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnExportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2999,7 +3042,7 @@ class __$$_KodiNotificationAudioLibraryOnExportCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnExport(
+    return _then(_$KodiNotificationAudioLibraryOnExportImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -3015,6 +3058,8 @@ class __$$_KodiNotificationAudioLibraryOnExportCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationAudioLibraryOnExportParamsCopyWith<$Res> get params {
@@ -3027,14 +3072,14 @@ class __$$_KodiNotificationAudioLibraryOnExportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnExport
+class _$KodiNotificationAudioLibraryOnExportImpl
     implements _KodiNotificationAudioLibraryOnExport {
-  const _$_KodiNotificationAudioLibraryOnExport(
+  const _$KodiNotificationAudioLibraryOnExportImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationAudioLibraryOnExport.fromJson(
+  factory _$KodiNotificationAudioLibraryOnExportImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnExportFromJson(json);
+      _$$KodiNotificationAudioLibraryOnExportImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -3049,26 +3094,28 @@ class _$_KodiNotificationAudioLibraryOnExport
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnExport &&
+            other is _$KodiNotificationAudioLibraryOnExportImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnExportCopyWith<
-          _$_KodiNotificationAudioLibraryOnExport>
-      get copyWith => __$$_KodiNotificationAudioLibraryOnExportCopyWithImpl<
-          _$_KodiNotificationAudioLibraryOnExport>(this, _$identity);
+  _$$KodiNotificationAudioLibraryOnExportImplCopyWith<
+          _$KodiNotificationAudioLibraryOnExportImpl>
+      get copyWith => __$$KodiNotificationAudioLibraryOnExportImplCopyWithImpl<
+          _$KodiNotificationAudioLibraryOnExportImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3679,7 +3726,7 @@ class _$_KodiNotificationAudioLibraryOnExport
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnExportToJson(
+    return _$$KodiNotificationAudioLibraryOnExportImplToJson(
       this,
     );
   }
@@ -3691,11 +3738,11 @@ abstract class _KodiNotificationAudioLibraryOnExport
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationAudioLibraryOnExportParams params}) =
-      _$_KodiNotificationAudioLibraryOnExport;
+      _$KodiNotificationAudioLibraryOnExportImpl;
 
   factory _KodiNotificationAudioLibraryOnExport.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnExport.fromJson;
+      _$KodiNotificationAudioLibraryOnExportImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -3703,20 +3750,23 @@ abstract class _KodiNotificationAudioLibraryOnExport
   String get method;
   @override
   KodiNotificationAudioLibraryOnExportParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnExportCopyWith<
-          _$_KodiNotificationAudioLibraryOnExport>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnExportImplCopyWith<
+          _$KodiNotificationAudioLibraryOnExportImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnRemoveCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnRemoveImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnRemoveCopyWith(
-          _$_KodiNotificationAudioLibraryOnRemove value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnRemove) then) =
-      __$$_KodiNotificationAudioLibraryOnRemoveCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnRemoveImplCopyWith(
+          _$KodiNotificationAudioLibraryOnRemoveImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnRemoveImpl) then) =
+      __$$KodiNotificationAudioLibraryOnRemoveImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3728,15 +3778,17 @@ abstract class _$$_KodiNotificationAudioLibraryOnRemoveCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnRemoveCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnRemoveImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnRemove>
-    implements _$$_KodiNotificationAudioLibraryOnRemoveCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnRemoveCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnRemove _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnRemove) _then)
+        _$KodiNotificationAudioLibraryOnRemoveImpl>
+    implements _$$KodiNotificationAudioLibraryOnRemoveImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnRemoveImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnRemoveImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnRemoveImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3744,7 +3796,7 @@ class __$$_KodiNotificationAudioLibraryOnRemoveCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnRemove(
+    return _then(_$KodiNotificationAudioLibraryOnRemoveImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -3760,6 +3812,8 @@ class __$$_KodiNotificationAudioLibraryOnRemoveCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationAudioLibraryOnRemoveParamsCopyWith<$Res> get params {
@@ -3772,14 +3826,14 @@ class __$$_KodiNotificationAudioLibraryOnRemoveCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnRemove
+class _$KodiNotificationAudioLibraryOnRemoveImpl
     implements _KodiNotificationAudioLibraryOnRemove {
-  const _$_KodiNotificationAudioLibraryOnRemove(
+  const _$KodiNotificationAudioLibraryOnRemoveImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationAudioLibraryOnRemove.fromJson(
+  factory _$KodiNotificationAudioLibraryOnRemoveImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnRemoveFromJson(json);
+      _$$KodiNotificationAudioLibraryOnRemoveImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -3794,26 +3848,28 @@ class _$_KodiNotificationAudioLibraryOnRemove
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnRemove &&
+            other is _$KodiNotificationAudioLibraryOnRemoveImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnRemoveCopyWith<
-          _$_KodiNotificationAudioLibraryOnRemove>
-      get copyWith => __$$_KodiNotificationAudioLibraryOnRemoveCopyWithImpl<
-          _$_KodiNotificationAudioLibraryOnRemove>(this, _$identity);
+  _$$KodiNotificationAudioLibraryOnRemoveImplCopyWith<
+          _$KodiNotificationAudioLibraryOnRemoveImpl>
+      get copyWith => __$$KodiNotificationAudioLibraryOnRemoveImplCopyWithImpl<
+          _$KodiNotificationAudioLibraryOnRemoveImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4424,7 +4480,7 @@ class _$_KodiNotificationAudioLibraryOnRemove
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnRemoveToJson(
+    return _$$KodiNotificationAudioLibraryOnRemoveImplToJson(
       this,
     );
   }
@@ -4436,11 +4492,11 @@ abstract class _KodiNotificationAudioLibraryOnRemove
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationAudioLibraryOnRemoveParams params}) =
-      _$_KodiNotificationAudioLibraryOnRemove;
+      _$KodiNotificationAudioLibraryOnRemoveImpl;
 
   factory _KodiNotificationAudioLibraryOnRemove.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnRemove.fromJson;
+      _$KodiNotificationAudioLibraryOnRemoveImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -4448,20 +4504,24 @@ abstract class _KodiNotificationAudioLibraryOnRemove
   String get method;
   @override
   KodiNotificationAudioLibraryOnRemoveParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnRemoveCopyWith<
-          _$_KodiNotificationAudioLibraryOnRemove>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnRemoveImplCopyWith<
+          _$KodiNotificationAudioLibraryOnRemoveImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnScanFinishedCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnScanFinishedCopyWith(
-          _$_KodiNotificationAudioLibraryOnScanFinished value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnScanFinished) then) =
-      __$$_KodiNotificationAudioLibraryOnScanFinishedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWith(
+          _$KodiNotificationAudioLibraryOnScanFinishedImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnScanFinishedImpl)
+              then) =
+      __$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4471,15 +4531,17 @@ abstract class _$$_KodiNotificationAudioLibraryOnScanFinishedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnScanFinishedCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnScanFinished>
-    implements _$$_KodiNotificationAudioLibraryOnScanFinishedCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnScanFinishedCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnScanFinished _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnScanFinished) _then)
+        _$KodiNotificationAudioLibraryOnScanFinishedImpl>
+    implements _$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnScanFinishedImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnScanFinishedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4487,7 +4549,7 @@ class __$$_KodiNotificationAudioLibraryOnScanFinishedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnScanFinished(
+    return _then(_$KodiNotificationAudioLibraryOnScanFinishedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -4503,6 +4565,8 @@ class __$$_KodiNotificationAudioLibraryOnScanFinishedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -4514,14 +4578,14 @@ class __$$_KodiNotificationAudioLibraryOnScanFinishedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnScanFinished
+class _$KodiNotificationAudioLibraryOnScanFinishedImpl
     implements _KodiNotificationAudioLibraryOnScanFinished {
-  const _$_KodiNotificationAudioLibraryOnScanFinished(
+  const _$KodiNotificationAudioLibraryOnScanFinishedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationAudioLibraryOnScanFinished.fromJson(
+  factory _$KodiNotificationAudioLibraryOnScanFinishedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnScanFinishedFromJson(json);
+      _$$KodiNotificationAudioLibraryOnScanFinishedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -4536,27 +4600,30 @@ class _$_KodiNotificationAudioLibraryOnScanFinished
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnScanFinished &&
+            other is _$KodiNotificationAudioLibraryOnScanFinishedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnScanFinishedCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanFinished>
+  _$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanFinishedImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnScanFinishedCopyWithImpl<
-              _$_KodiNotificationAudioLibraryOnScanFinished>(this, _$identity);
+          __$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnScanFinishedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5167,7 +5234,7 @@ class _$_KodiNotificationAudioLibraryOnScanFinished
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnScanFinishedToJson(
+    return _$$KodiNotificationAudioLibraryOnScanFinishedImplToJson(
       this,
     );
   }
@@ -5179,11 +5246,11 @@ abstract class _KodiNotificationAudioLibraryOnScanFinished
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationAudioLibraryOnScanFinished;
+      _$KodiNotificationAudioLibraryOnScanFinishedImpl;
 
   factory _KodiNotificationAudioLibraryOnScanFinished.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnScanFinished.fromJson;
+      _$KodiNotificationAudioLibraryOnScanFinishedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -5191,20 +5258,23 @@ abstract class _KodiNotificationAudioLibraryOnScanFinished
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnScanFinishedCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanFinished>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnScanFinishedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanFinishedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnScanStartedCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnScanStartedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnScanStartedCopyWith(
-          _$_KodiNotificationAudioLibraryOnScanStarted value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnScanStarted) then) =
-      __$$_KodiNotificationAudioLibraryOnScanStartedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnScanStartedImplCopyWith(
+          _$KodiNotificationAudioLibraryOnScanStartedImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnScanStartedImpl) then) =
+      __$$KodiNotificationAudioLibraryOnScanStartedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5214,15 +5284,17 @@ abstract class _$$_KodiNotificationAudioLibraryOnScanStartedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnScanStartedCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnScanStartedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnScanStarted>
-    implements _$$_KodiNotificationAudioLibraryOnScanStartedCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnScanStartedCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnScanStarted _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnScanStarted) _then)
+        _$KodiNotificationAudioLibraryOnScanStartedImpl>
+    implements _$$KodiNotificationAudioLibraryOnScanStartedImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnScanStartedImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnScanStartedImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnScanStartedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5230,7 +5302,7 @@ class __$$_KodiNotificationAudioLibraryOnScanStartedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnScanStarted(
+    return _then(_$KodiNotificationAudioLibraryOnScanStartedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -5246,6 +5318,8 @@ class __$$_KodiNotificationAudioLibraryOnScanStartedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -5257,14 +5331,14 @@ class __$$_KodiNotificationAudioLibraryOnScanStartedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnScanStarted
+class _$KodiNotificationAudioLibraryOnScanStartedImpl
     implements _KodiNotificationAudioLibraryOnScanStarted {
-  const _$_KodiNotificationAudioLibraryOnScanStarted(
+  const _$KodiNotificationAudioLibraryOnScanStartedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationAudioLibraryOnScanStarted.fromJson(
+  factory _$KodiNotificationAudioLibraryOnScanStartedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnScanStartedFromJson(json);
+      _$$KodiNotificationAudioLibraryOnScanStartedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -5279,27 +5353,30 @@ class _$_KodiNotificationAudioLibraryOnScanStarted
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnScanStarted &&
+            other is _$KodiNotificationAudioLibraryOnScanStartedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnScanStartedCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanStarted>
+  _$$KodiNotificationAudioLibraryOnScanStartedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanStartedImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnScanStartedCopyWithImpl<
-              _$_KodiNotificationAudioLibraryOnScanStarted>(this, _$identity);
+          __$$KodiNotificationAudioLibraryOnScanStartedImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnScanStartedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5910,7 +5987,7 @@ class _$_KodiNotificationAudioLibraryOnScanStarted
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnScanStartedToJson(
+    return _$$KodiNotificationAudioLibraryOnScanStartedImplToJson(
       this,
     );
   }
@@ -5922,11 +5999,11 @@ abstract class _KodiNotificationAudioLibraryOnScanStarted
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationAudioLibraryOnScanStarted;
+      _$KodiNotificationAudioLibraryOnScanStartedImpl;
 
   factory _KodiNotificationAudioLibraryOnScanStarted.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnScanStarted.fromJson;
+      _$KodiNotificationAudioLibraryOnScanStartedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -5934,20 +6011,23 @@ abstract class _KodiNotificationAudioLibraryOnScanStarted
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnScanStartedCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanStarted>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnScanStartedImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanStartedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnUpdateCopyWith<$Res>
+abstract class _$$KodiNotificationAudioLibraryOnUpdateImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnUpdateCopyWith(
-          _$_KodiNotificationAudioLibraryOnUpdate value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnUpdate) then) =
-      __$$_KodiNotificationAudioLibraryOnUpdateCopyWithImpl<$Res>;
+  factory _$$KodiNotificationAudioLibraryOnUpdateImplCopyWith(
+          _$KodiNotificationAudioLibraryOnUpdateImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnUpdateImpl) then) =
+      __$$KodiNotificationAudioLibraryOnUpdateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5959,15 +6039,17 @@ abstract class _$$_KodiNotificationAudioLibraryOnUpdateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnUpdateCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnUpdateImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnUpdate>
-    implements _$$_KodiNotificationAudioLibraryOnUpdateCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnUpdateCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnUpdate _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnUpdate) _then)
+        _$KodiNotificationAudioLibraryOnUpdateImpl>
+    implements _$$KodiNotificationAudioLibraryOnUpdateImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnUpdateImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnUpdateImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnUpdateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5975,7 +6057,7 @@ class __$$_KodiNotificationAudioLibraryOnUpdateCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnUpdate(
+    return _then(_$KodiNotificationAudioLibraryOnUpdateImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -5991,6 +6073,8 @@ class __$$_KodiNotificationAudioLibraryOnUpdateCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationAudioLibraryOnUpdateParamsCopyWith<$Res> get params {
@@ -6003,14 +6087,14 @@ class __$$_KodiNotificationAudioLibraryOnUpdateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnUpdate
+class _$KodiNotificationAudioLibraryOnUpdateImpl
     implements _KodiNotificationAudioLibraryOnUpdate {
-  const _$_KodiNotificationAudioLibraryOnUpdate(
+  const _$KodiNotificationAudioLibraryOnUpdateImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationAudioLibraryOnUpdate.fromJson(
+  factory _$KodiNotificationAudioLibraryOnUpdateImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnUpdateFromJson(json);
+      _$$KodiNotificationAudioLibraryOnUpdateImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -6025,26 +6109,28 @@ class _$_KodiNotificationAudioLibraryOnUpdate
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnUpdate &&
+            other is _$KodiNotificationAudioLibraryOnUpdateImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnUpdateCopyWith<
-          _$_KodiNotificationAudioLibraryOnUpdate>
-      get copyWith => __$$_KodiNotificationAudioLibraryOnUpdateCopyWithImpl<
-          _$_KodiNotificationAudioLibraryOnUpdate>(this, _$identity);
+  _$$KodiNotificationAudioLibraryOnUpdateImplCopyWith<
+          _$KodiNotificationAudioLibraryOnUpdateImpl>
+      get copyWith => __$$KodiNotificationAudioLibraryOnUpdateImplCopyWithImpl<
+          _$KodiNotificationAudioLibraryOnUpdateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6655,7 +6741,7 @@ class _$_KodiNotificationAudioLibraryOnUpdate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnUpdateToJson(
+    return _$$KodiNotificationAudioLibraryOnUpdateImplToJson(
       this,
     );
   }
@@ -6667,11 +6753,11 @@ abstract class _KodiNotificationAudioLibraryOnUpdate
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationAudioLibraryOnUpdateParams params}) =
-      _$_KodiNotificationAudioLibraryOnUpdate;
+      _$KodiNotificationAudioLibraryOnUpdateImpl;
 
   factory _KodiNotificationAudioLibraryOnUpdate.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnUpdate.fromJson;
+      _$KodiNotificationAudioLibraryOnUpdateImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -6679,20 +6765,23 @@ abstract class _KodiNotificationAudioLibraryOnUpdate
   String get method;
   @override
   KodiNotificationAudioLibraryOnUpdateParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnUpdateCopyWith<
-          _$_KodiNotificationAudioLibraryOnUpdate>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnUpdateImplCopyWith<
+          _$KodiNotificationAudioLibraryOnUpdateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationGUIOnDPMSActivatedCopyWith<$Res>
+abstract class _$$KodiNotificationGUIOnDPMSActivatedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationGUIOnDPMSActivatedCopyWith(
-          _$_KodiNotificationGUIOnDPMSActivated value,
-          $Res Function(_$_KodiNotificationGUIOnDPMSActivated) then) =
-      __$$_KodiNotificationGUIOnDPMSActivatedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationGUIOnDPMSActivatedImplCopyWith(
+          _$KodiNotificationGUIOnDPMSActivatedImpl value,
+          $Res Function(_$KodiNotificationGUIOnDPMSActivatedImpl) then) =
+      __$$KodiNotificationGUIOnDPMSActivatedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6702,15 +6791,17 @@ abstract class _$$_KodiNotificationGUIOnDPMSActivatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationGUIOnDPMSActivatedCopyWithImpl<$Res>
+class __$$KodiNotificationGUIOnDPMSActivatedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationGUIOnDPMSActivated>
-    implements _$$_KodiNotificationGUIOnDPMSActivatedCopyWith<$Res> {
-  __$$_KodiNotificationGUIOnDPMSActivatedCopyWithImpl(
-      _$_KodiNotificationGUIOnDPMSActivated _value,
-      $Res Function(_$_KodiNotificationGUIOnDPMSActivated) _then)
+        _$KodiNotificationGUIOnDPMSActivatedImpl>
+    implements _$$KodiNotificationGUIOnDPMSActivatedImplCopyWith<$Res> {
+  __$$KodiNotificationGUIOnDPMSActivatedImplCopyWithImpl(
+      _$KodiNotificationGUIOnDPMSActivatedImpl _value,
+      $Res Function(_$KodiNotificationGUIOnDPMSActivatedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6718,7 +6809,7 @@ class __$$_KodiNotificationGUIOnDPMSActivatedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationGUIOnDPMSActivated(
+    return _then(_$KodiNotificationGUIOnDPMSActivatedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -6734,6 +6825,8 @@ class __$$_KodiNotificationGUIOnDPMSActivatedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -6745,14 +6838,14 @@ class __$$_KodiNotificationGUIOnDPMSActivatedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationGUIOnDPMSActivated
+class _$KodiNotificationGUIOnDPMSActivatedImpl
     implements _KodiNotificationGUIOnDPMSActivated {
-  const _$_KodiNotificationGUIOnDPMSActivated(
+  const _$KodiNotificationGUIOnDPMSActivatedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationGUIOnDPMSActivated.fromJson(
+  factory _$KodiNotificationGUIOnDPMSActivatedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationGUIOnDPMSActivatedFromJson(json);
+      _$$KodiNotificationGUIOnDPMSActivatedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -6767,26 +6860,28 @@ class _$_KodiNotificationGUIOnDPMSActivated
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationGUIOnDPMSActivated &&
+            other is _$KodiNotificationGUIOnDPMSActivatedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationGUIOnDPMSActivatedCopyWith<
-          _$_KodiNotificationGUIOnDPMSActivated>
-      get copyWith => __$$_KodiNotificationGUIOnDPMSActivatedCopyWithImpl<
-          _$_KodiNotificationGUIOnDPMSActivated>(this, _$identity);
+  _$$KodiNotificationGUIOnDPMSActivatedImplCopyWith<
+          _$KodiNotificationGUIOnDPMSActivatedImpl>
+      get copyWith => __$$KodiNotificationGUIOnDPMSActivatedImplCopyWithImpl<
+          _$KodiNotificationGUIOnDPMSActivatedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7397,7 +7492,7 @@ class _$_KodiNotificationGUIOnDPMSActivated
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationGUIOnDPMSActivatedToJson(
+    return _$$KodiNotificationGUIOnDPMSActivatedImplToJson(
       this,
     );
   }
@@ -7408,11 +7503,11 @@ abstract class _KodiNotificationGUIOnDPMSActivated implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationGUIOnDPMSActivated;
+      _$KodiNotificationGUIOnDPMSActivatedImpl;
 
   factory _KodiNotificationGUIOnDPMSActivated.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationGUIOnDPMSActivated.fromJson;
+      _$KodiNotificationGUIOnDPMSActivatedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -7420,20 +7515,23 @@ abstract class _KodiNotificationGUIOnDPMSActivated implements KodiNotification {
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationGUIOnDPMSActivatedCopyWith<
-          _$_KodiNotificationGUIOnDPMSActivated>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationGUIOnDPMSActivatedImplCopyWith<
+          _$KodiNotificationGUIOnDPMSActivatedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationGUIOnDPMSDeactivatedCopyWith<$Res>
+abstract class _$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationGUIOnDPMSDeactivatedCopyWith(
-          _$_KodiNotificationGUIOnDPMSDeactivated value,
-          $Res Function(_$_KodiNotificationGUIOnDPMSDeactivated) then) =
-      __$$_KodiNotificationGUIOnDPMSDeactivatedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWith(
+          _$KodiNotificationGUIOnDPMSDeactivatedImpl value,
+          $Res Function(_$KodiNotificationGUIOnDPMSDeactivatedImpl) then) =
+      __$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7443,15 +7541,17 @@ abstract class _$$_KodiNotificationGUIOnDPMSDeactivatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationGUIOnDPMSDeactivatedCopyWithImpl<$Res>
+class __$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationGUIOnDPMSDeactivated>
-    implements _$$_KodiNotificationGUIOnDPMSDeactivatedCopyWith<$Res> {
-  __$$_KodiNotificationGUIOnDPMSDeactivatedCopyWithImpl(
-      _$_KodiNotificationGUIOnDPMSDeactivated _value,
-      $Res Function(_$_KodiNotificationGUIOnDPMSDeactivated) _then)
+        _$KodiNotificationGUIOnDPMSDeactivatedImpl>
+    implements _$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWith<$Res> {
+  __$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWithImpl(
+      _$KodiNotificationGUIOnDPMSDeactivatedImpl _value,
+      $Res Function(_$KodiNotificationGUIOnDPMSDeactivatedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7459,7 +7559,7 @@ class __$$_KodiNotificationGUIOnDPMSDeactivatedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationGUIOnDPMSDeactivated(
+    return _then(_$KodiNotificationGUIOnDPMSDeactivatedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -7475,6 +7575,8 @@ class __$$_KodiNotificationGUIOnDPMSDeactivatedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -7486,14 +7588,14 @@ class __$$_KodiNotificationGUIOnDPMSDeactivatedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationGUIOnDPMSDeactivated
+class _$KodiNotificationGUIOnDPMSDeactivatedImpl
     implements _KodiNotificationGUIOnDPMSDeactivated {
-  const _$_KodiNotificationGUIOnDPMSDeactivated(
+  const _$KodiNotificationGUIOnDPMSDeactivatedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationGUIOnDPMSDeactivated.fromJson(
+  factory _$KodiNotificationGUIOnDPMSDeactivatedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationGUIOnDPMSDeactivatedFromJson(json);
+      _$$KodiNotificationGUIOnDPMSDeactivatedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -7508,26 +7610,28 @@ class _$_KodiNotificationGUIOnDPMSDeactivated
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationGUIOnDPMSDeactivated &&
+            other is _$KodiNotificationGUIOnDPMSDeactivatedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationGUIOnDPMSDeactivatedCopyWith<
-          _$_KodiNotificationGUIOnDPMSDeactivated>
-      get copyWith => __$$_KodiNotificationGUIOnDPMSDeactivatedCopyWithImpl<
-          _$_KodiNotificationGUIOnDPMSDeactivated>(this, _$identity);
+  _$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWith<
+          _$KodiNotificationGUIOnDPMSDeactivatedImpl>
+      get copyWith => __$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWithImpl<
+          _$KodiNotificationGUIOnDPMSDeactivatedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8138,7 +8242,7 @@ class _$_KodiNotificationGUIOnDPMSDeactivated
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationGUIOnDPMSDeactivatedToJson(
+    return _$$KodiNotificationGUIOnDPMSDeactivatedImplToJson(
       this,
     );
   }
@@ -8150,11 +8254,11 @@ abstract class _KodiNotificationGUIOnDPMSDeactivated
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationGUIOnDPMSDeactivated;
+      _$KodiNotificationGUIOnDPMSDeactivatedImpl;
 
   factory _KodiNotificationGUIOnDPMSDeactivated.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationGUIOnDPMSDeactivated.fromJson;
+      _$KodiNotificationGUIOnDPMSDeactivatedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -8162,20 +8266,23 @@ abstract class _KodiNotificationGUIOnDPMSDeactivated
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationGUIOnDPMSDeactivatedCopyWith<
-          _$_KodiNotificationGUIOnDPMSDeactivated>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationGUIOnDPMSDeactivatedImplCopyWith<
+          _$KodiNotificationGUIOnDPMSDeactivatedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationGUIOnScreensaverActivatedCopyWith<$Res>
+abstract class _$$KodiNotificationGUIOnScreensaverActivatedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationGUIOnScreensaverActivatedCopyWith(
-          _$_KodiNotificationGUIOnScreensaverActivated value,
-          $Res Function(_$_KodiNotificationGUIOnScreensaverActivated) then) =
-      __$$_KodiNotificationGUIOnScreensaverActivatedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationGUIOnScreensaverActivatedImplCopyWith(
+          _$KodiNotificationGUIOnScreensaverActivatedImpl value,
+          $Res Function(_$KodiNotificationGUIOnScreensaverActivatedImpl) then) =
+      __$$KodiNotificationGUIOnScreensaverActivatedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8185,15 +8292,17 @@ abstract class _$$_KodiNotificationGUIOnScreensaverActivatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationGUIOnScreensaverActivatedCopyWithImpl<$Res>
+class __$$KodiNotificationGUIOnScreensaverActivatedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationGUIOnScreensaverActivated>
-    implements _$$_KodiNotificationGUIOnScreensaverActivatedCopyWith<$Res> {
-  __$$_KodiNotificationGUIOnScreensaverActivatedCopyWithImpl(
-      _$_KodiNotificationGUIOnScreensaverActivated _value,
-      $Res Function(_$_KodiNotificationGUIOnScreensaverActivated) _then)
+        _$KodiNotificationGUIOnScreensaverActivatedImpl>
+    implements _$$KodiNotificationGUIOnScreensaverActivatedImplCopyWith<$Res> {
+  __$$KodiNotificationGUIOnScreensaverActivatedImplCopyWithImpl(
+      _$KodiNotificationGUIOnScreensaverActivatedImpl _value,
+      $Res Function(_$KodiNotificationGUIOnScreensaverActivatedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8201,7 +8310,7 @@ class __$$_KodiNotificationGUIOnScreensaverActivatedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationGUIOnScreensaverActivated(
+    return _then(_$KodiNotificationGUIOnScreensaverActivatedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -8217,6 +8326,8 @@ class __$$_KodiNotificationGUIOnScreensaverActivatedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -8228,14 +8339,14 @@ class __$$_KodiNotificationGUIOnScreensaverActivatedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationGUIOnScreensaverActivated
+class _$KodiNotificationGUIOnScreensaverActivatedImpl
     implements _KodiNotificationGUIOnScreensaverActivated {
-  const _$_KodiNotificationGUIOnScreensaverActivated(
+  const _$KodiNotificationGUIOnScreensaverActivatedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationGUIOnScreensaverActivated.fromJson(
+  factory _$KodiNotificationGUIOnScreensaverActivatedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationGUIOnScreensaverActivatedFromJson(json);
+      _$$KodiNotificationGUIOnScreensaverActivatedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -8250,27 +8361,30 @@ class _$_KodiNotificationGUIOnScreensaverActivated
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationGUIOnScreensaverActivated &&
+            other is _$KodiNotificationGUIOnScreensaverActivatedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationGUIOnScreensaverActivatedCopyWith<
-          _$_KodiNotificationGUIOnScreensaverActivated>
+  _$$KodiNotificationGUIOnScreensaverActivatedImplCopyWith<
+          _$KodiNotificationGUIOnScreensaverActivatedImpl>
       get copyWith =>
-          __$$_KodiNotificationGUIOnScreensaverActivatedCopyWithImpl<
-              _$_KodiNotificationGUIOnScreensaverActivated>(this, _$identity);
+          __$$KodiNotificationGUIOnScreensaverActivatedImplCopyWithImpl<
+                  _$KodiNotificationGUIOnScreensaverActivatedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8881,7 +8995,7 @@ class _$_KodiNotificationGUIOnScreensaverActivated
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationGUIOnScreensaverActivatedToJson(
+    return _$$KodiNotificationGUIOnScreensaverActivatedImplToJson(
       this,
     );
   }
@@ -8893,11 +9007,11 @@ abstract class _KodiNotificationGUIOnScreensaverActivated
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationGUIOnScreensaverActivated;
+      _$KodiNotificationGUIOnScreensaverActivatedImpl;
 
   factory _KodiNotificationGUIOnScreensaverActivated.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationGUIOnScreensaverActivated.fromJson;
+      _$KodiNotificationGUIOnScreensaverActivatedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -8905,20 +9019,24 @@ abstract class _KodiNotificationGUIOnScreensaverActivated
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationGUIOnScreensaverActivatedCopyWith<
-          _$_KodiNotificationGUIOnScreensaverActivated>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationGUIOnScreensaverActivatedImplCopyWith<
+          _$KodiNotificationGUIOnScreensaverActivatedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWith<$Res>
+abstract class _$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWith(
-          _$_KodiNotificationGUIOnScreensaverDeactivated value,
-          $Res Function(_$_KodiNotificationGUIOnScreensaverDeactivated) then) =
-      __$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWith(
+          _$KodiNotificationGUIOnScreensaverDeactivatedImpl value,
+          $Res Function(_$KodiNotificationGUIOnScreensaverDeactivatedImpl)
+              then) =
+      __$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8930,15 +9048,18 @@ abstract class _$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWithImpl<$Res>
+class __$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationGUIOnScreensaverDeactivated>
-    implements _$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWith<$Res> {
-  __$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWithImpl(
-      _$_KodiNotificationGUIOnScreensaverDeactivated _value,
-      $Res Function(_$_KodiNotificationGUIOnScreensaverDeactivated) _then)
+        _$KodiNotificationGUIOnScreensaverDeactivatedImpl>
+    implements
+        _$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWith<$Res> {
+  __$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWithImpl(
+      _$KodiNotificationGUIOnScreensaverDeactivatedImpl _value,
+      $Res Function(_$KodiNotificationGUIOnScreensaverDeactivatedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8946,7 +9067,7 @@ class __$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationGUIOnScreensaverDeactivated(
+    return _then(_$KodiNotificationGUIOnScreensaverDeactivatedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -8962,6 +9083,8 @@ class __$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGUIOnScreensaverDeactivatedParamsCopyWith<$Res> get params {
@@ -8974,14 +9097,14 @@ class __$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationGUIOnScreensaverDeactivated
+class _$KodiNotificationGUIOnScreensaverDeactivatedImpl
     implements _KodiNotificationGUIOnScreensaverDeactivated {
-  const _$_KodiNotificationGUIOnScreensaverDeactivated(
+  const _$KodiNotificationGUIOnScreensaverDeactivatedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationGUIOnScreensaverDeactivated.fromJson(
+  factory _$KodiNotificationGUIOnScreensaverDeactivatedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationGUIOnScreensaverDeactivatedFromJson(json);
+      _$$KodiNotificationGUIOnScreensaverDeactivatedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -8996,27 +9119,30 @@ class _$_KodiNotificationGUIOnScreensaverDeactivated
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationGUIOnScreensaverDeactivated &&
+            other is _$KodiNotificationGUIOnScreensaverDeactivatedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWith<
-          _$_KodiNotificationGUIOnScreensaverDeactivated>
+  _$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWith<
+          _$KodiNotificationGUIOnScreensaverDeactivatedImpl>
       get copyWith =>
-          __$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWithImpl<
-              _$_KodiNotificationGUIOnScreensaverDeactivated>(this, _$identity);
+          __$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWithImpl<
+                  _$KodiNotificationGUIOnScreensaverDeactivatedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -9627,7 +9753,7 @@ class _$_KodiNotificationGUIOnScreensaverDeactivated
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationGUIOnScreensaverDeactivatedToJson(
+    return _$$KodiNotificationGUIOnScreensaverDeactivatedImplToJson(
       this,
     );
   }
@@ -9639,11 +9765,11 @@ abstract class _KodiNotificationGUIOnScreensaverDeactivated
       {required final String jsonrpc,
       required final String method,
       required final KodiNotificationGUIOnScreensaverDeactivatedParams
-          params}) = _$_KodiNotificationGUIOnScreensaverDeactivated;
+          params}) = _$KodiNotificationGUIOnScreensaverDeactivatedImpl;
 
   factory _KodiNotificationGUIOnScreensaverDeactivated.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationGUIOnScreensaverDeactivated.fromJson;
+      _$KodiNotificationGUIOnScreensaverDeactivatedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -9651,20 +9777,23 @@ abstract class _KodiNotificationGUIOnScreensaverDeactivated
   String get method;
   @override
   KodiNotificationGUIOnScreensaverDeactivatedParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationGUIOnScreensaverDeactivatedCopyWith<
-          _$_KodiNotificationGUIOnScreensaverDeactivated>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationGUIOnScreensaverDeactivatedImplCopyWith<
+          _$KodiNotificationGUIOnScreensaverDeactivatedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationInputOnInputFinishedCopyWith<$Res>
+abstract class _$$KodiNotificationInputOnInputFinishedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationInputOnInputFinishedCopyWith(
-          _$_KodiNotificationInputOnInputFinished value,
-          $Res Function(_$_KodiNotificationInputOnInputFinished) then) =
-      __$$_KodiNotificationInputOnInputFinishedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationInputOnInputFinishedImplCopyWith(
+          _$KodiNotificationInputOnInputFinishedImpl value,
+          $Res Function(_$KodiNotificationInputOnInputFinishedImpl) then) =
+      __$$KodiNotificationInputOnInputFinishedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9674,15 +9803,17 @@ abstract class _$$_KodiNotificationInputOnInputFinishedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationInputOnInputFinishedCopyWithImpl<$Res>
+class __$$KodiNotificationInputOnInputFinishedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationInputOnInputFinished>
-    implements _$$_KodiNotificationInputOnInputFinishedCopyWith<$Res> {
-  __$$_KodiNotificationInputOnInputFinishedCopyWithImpl(
-      _$_KodiNotificationInputOnInputFinished _value,
-      $Res Function(_$_KodiNotificationInputOnInputFinished) _then)
+        _$KodiNotificationInputOnInputFinishedImpl>
+    implements _$$KodiNotificationInputOnInputFinishedImplCopyWith<$Res> {
+  __$$KodiNotificationInputOnInputFinishedImplCopyWithImpl(
+      _$KodiNotificationInputOnInputFinishedImpl _value,
+      $Res Function(_$KodiNotificationInputOnInputFinishedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9690,7 +9821,7 @@ class __$$_KodiNotificationInputOnInputFinishedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationInputOnInputFinished(
+    return _then(_$KodiNotificationInputOnInputFinishedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -9706,6 +9837,8 @@ class __$$_KodiNotificationInputOnInputFinishedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -9717,14 +9850,14 @@ class __$$_KodiNotificationInputOnInputFinishedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationInputOnInputFinished
+class _$KodiNotificationInputOnInputFinishedImpl
     implements _KodiNotificationInputOnInputFinished {
-  const _$_KodiNotificationInputOnInputFinished(
+  const _$KodiNotificationInputOnInputFinishedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationInputOnInputFinished.fromJson(
+  factory _$KodiNotificationInputOnInputFinishedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationInputOnInputFinishedFromJson(json);
+      _$$KodiNotificationInputOnInputFinishedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -9739,26 +9872,28 @@ class _$_KodiNotificationInputOnInputFinished
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationInputOnInputFinished &&
+            other is _$KodiNotificationInputOnInputFinishedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationInputOnInputFinishedCopyWith<
-          _$_KodiNotificationInputOnInputFinished>
-      get copyWith => __$$_KodiNotificationInputOnInputFinishedCopyWithImpl<
-          _$_KodiNotificationInputOnInputFinished>(this, _$identity);
+  _$$KodiNotificationInputOnInputFinishedImplCopyWith<
+          _$KodiNotificationInputOnInputFinishedImpl>
+      get copyWith => __$$KodiNotificationInputOnInputFinishedImplCopyWithImpl<
+          _$KodiNotificationInputOnInputFinishedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -10369,7 +10504,7 @@ class _$_KodiNotificationInputOnInputFinished
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationInputOnInputFinishedToJson(
+    return _$$KodiNotificationInputOnInputFinishedImplToJson(
       this,
     );
   }
@@ -10381,11 +10516,11 @@ abstract class _KodiNotificationInputOnInputFinished
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationInputOnInputFinished;
+      _$KodiNotificationInputOnInputFinishedImpl;
 
   factory _KodiNotificationInputOnInputFinished.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationInputOnInputFinished.fromJson;
+      _$KodiNotificationInputOnInputFinishedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -10393,20 +10528,23 @@ abstract class _KodiNotificationInputOnInputFinished
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationInputOnInputFinishedCopyWith<
-          _$_KodiNotificationInputOnInputFinished>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationInputOnInputFinishedImplCopyWith<
+          _$KodiNotificationInputOnInputFinishedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationInputOnInputRequestedCopyWith<$Res>
+abstract class _$$KodiNotificationInputOnInputRequestedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationInputOnInputRequestedCopyWith(
-          _$_KodiNotificationInputOnInputRequested value,
-          $Res Function(_$_KodiNotificationInputOnInputRequested) then) =
-      __$$_KodiNotificationInputOnInputRequestedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationInputOnInputRequestedImplCopyWith(
+          _$KodiNotificationInputOnInputRequestedImpl value,
+          $Res Function(_$KodiNotificationInputOnInputRequestedImpl) then) =
+      __$$KodiNotificationInputOnInputRequestedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -10418,15 +10556,17 @@ abstract class _$$_KodiNotificationInputOnInputRequestedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationInputOnInputRequestedCopyWithImpl<$Res>
+class __$$KodiNotificationInputOnInputRequestedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationInputOnInputRequested>
-    implements _$$_KodiNotificationInputOnInputRequestedCopyWith<$Res> {
-  __$$_KodiNotificationInputOnInputRequestedCopyWithImpl(
-      _$_KodiNotificationInputOnInputRequested _value,
-      $Res Function(_$_KodiNotificationInputOnInputRequested) _then)
+        _$KodiNotificationInputOnInputRequestedImpl>
+    implements _$$KodiNotificationInputOnInputRequestedImplCopyWith<$Res> {
+  __$$KodiNotificationInputOnInputRequestedImplCopyWithImpl(
+      _$KodiNotificationInputOnInputRequestedImpl _value,
+      $Res Function(_$KodiNotificationInputOnInputRequestedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10434,7 +10574,7 @@ class __$$_KodiNotificationInputOnInputRequestedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationInputOnInputRequested(
+    return _then(_$KodiNotificationInputOnInputRequestedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -10450,6 +10590,8 @@ class __$$_KodiNotificationInputOnInputRequestedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationInputOnInputRequestedParamsCopyWith<$Res> get params {
@@ -10462,14 +10604,14 @@ class __$$_KodiNotificationInputOnInputRequestedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationInputOnInputRequested
+class _$KodiNotificationInputOnInputRequestedImpl
     implements _KodiNotificationInputOnInputRequested {
-  const _$_KodiNotificationInputOnInputRequested(
+  const _$KodiNotificationInputOnInputRequestedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationInputOnInputRequested.fromJson(
+  factory _$KodiNotificationInputOnInputRequestedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationInputOnInputRequestedFromJson(json);
+      _$$KodiNotificationInputOnInputRequestedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -10484,26 +10626,28 @@ class _$_KodiNotificationInputOnInputRequested
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationInputOnInputRequested &&
+            other is _$KodiNotificationInputOnInputRequestedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationInputOnInputRequestedCopyWith<
-          _$_KodiNotificationInputOnInputRequested>
-      get copyWith => __$$_KodiNotificationInputOnInputRequestedCopyWithImpl<
-          _$_KodiNotificationInputOnInputRequested>(this, _$identity);
+  _$$KodiNotificationInputOnInputRequestedImplCopyWith<
+          _$KodiNotificationInputOnInputRequestedImpl>
+      get copyWith => __$$KodiNotificationInputOnInputRequestedImplCopyWithImpl<
+          _$KodiNotificationInputOnInputRequestedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11114,7 +11258,7 @@ class _$_KodiNotificationInputOnInputRequested
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationInputOnInputRequestedToJson(
+    return _$$KodiNotificationInputOnInputRequestedImplToJson(
       this,
     );
   }
@@ -11126,11 +11270,11 @@ abstract class _KodiNotificationInputOnInputRequested
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationInputOnInputRequestedParams params}) =
-      _$_KodiNotificationInputOnInputRequested;
+      _$KodiNotificationInputOnInputRequestedImpl;
 
   factory _KodiNotificationInputOnInputRequested.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationInputOnInputRequested.fromJson;
+      _$KodiNotificationInputOnInputRequestedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -11138,20 +11282,23 @@ abstract class _KodiNotificationInputOnInputRequested
   String get method;
   @override
   KodiNotificationInputOnInputRequestedParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationInputOnInputRequestedCopyWith<
-          _$_KodiNotificationInputOnInputRequested>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationInputOnInputRequestedImplCopyWith<
+          _$KodiNotificationInputOnInputRequestedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnAVChangeCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnAVChangeImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnAVChangeCopyWith(
-          _$_KodiNotificationPlayerOnAVChange value,
-          $Res Function(_$_KodiNotificationPlayerOnAVChange) then) =
-      __$$_KodiNotificationPlayerOnAVChangeCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnAVChangeImplCopyWith(
+          _$KodiNotificationPlayerOnAVChangeImpl value,
+          $Res Function(_$KodiNotificationPlayerOnAVChangeImpl) then) =
+      __$$KodiNotificationPlayerOnAVChangeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -11163,15 +11310,17 @@ abstract class _$$_KodiNotificationPlayerOnAVChangeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnAVChangeCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnAVChangeImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnAVChange>
-    implements _$$_KodiNotificationPlayerOnAVChangeCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnAVChangeCopyWithImpl(
-      _$_KodiNotificationPlayerOnAVChange _value,
-      $Res Function(_$_KodiNotificationPlayerOnAVChange) _then)
+        _$KodiNotificationPlayerOnAVChangeImpl>
+    implements _$$KodiNotificationPlayerOnAVChangeImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnAVChangeImplCopyWithImpl(
+      _$KodiNotificationPlayerOnAVChangeImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnAVChangeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11179,7 +11328,7 @@ class __$$_KodiNotificationPlayerOnAVChangeCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnAVChange(
+    return _then(_$KodiNotificationPlayerOnAVChangeImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -11195,6 +11344,8 @@ class __$$_KodiNotificationPlayerOnAVChangeCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnAVChangeParamsCopyWith<$Res> get params {
@@ -11207,14 +11358,14 @@ class __$$_KodiNotificationPlayerOnAVChangeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnAVChange
+class _$KodiNotificationPlayerOnAVChangeImpl
     implements _KodiNotificationPlayerOnAVChange {
-  const _$_KodiNotificationPlayerOnAVChange(
+  const _$KodiNotificationPlayerOnAVChangeImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnAVChange.fromJson(
+  factory _$KodiNotificationPlayerOnAVChangeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnAVChangeFromJson(json);
+      _$$KodiNotificationPlayerOnAVChangeImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -11229,26 +11380,28 @@ class _$_KodiNotificationPlayerOnAVChange
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnAVChange &&
+            other is _$KodiNotificationPlayerOnAVChangeImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnAVChangeCopyWith<
-          _$_KodiNotificationPlayerOnAVChange>
-      get copyWith => __$$_KodiNotificationPlayerOnAVChangeCopyWithImpl<
-          _$_KodiNotificationPlayerOnAVChange>(this, _$identity);
+  _$$KodiNotificationPlayerOnAVChangeImplCopyWith<
+          _$KodiNotificationPlayerOnAVChangeImpl>
+      get copyWith => __$$KodiNotificationPlayerOnAVChangeImplCopyWithImpl<
+          _$KodiNotificationPlayerOnAVChangeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11859,7 +12012,7 @@ class _$_KodiNotificationPlayerOnAVChange
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnAVChangeToJson(
+    return _$$KodiNotificationPlayerOnAVChangeImplToJson(
       this,
     );
   }
@@ -11870,10 +12023,11 @@ abstract class _KodiNotificationPlayerOnAVChange implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnAVChangeParams params}) =
-      _$_KodiNotificationPlayerOnAVChange;
+      _$KodiNotificationPlayerOnAVChangeImpl;
 
   factory _KodiNotificationPlayerOnAVChange.fromJson(
-      Map<String, dynamic> json) = _$_KodiNotificationPlayerOnAVChange.fromJson;
+          Map<String, dynamic> json) =
+      _$KodiNotificationPlayerOnAVChangeImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -11881,20 +12035,23 @@ abstract class _KodiNotificationPlayerOnAVChange implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlayerOnAVChangeParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnAVChangeCopyWith<
-          _$_KodiNotificationPlayerOnAVChange>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnAVChangeImplCopyWith<
+          _$KodiNotificationPlayerOnAVChangeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnAVStartCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnAVStartImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnAVStartCopyWith(
-          _$_KodiNotificationPlayerOnAVStart value,
-          $Res Function(_$_KodiNotificationPlayerOnAVStart) then) =
-      __$$_KodiNotificationPlayerOnAVStartCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnAVStartImplCopyWith(
+          _$KodiNotificationPlayerOnAVStartImpl value,
+          $Res Function(_$KodiNotificationPlayerOnAVStartImpl) then) =
+      __$$KodiNotificationPlayerOnAVStartImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -11906,15 +12063,17 @@ abstract class _$$_KodiNotificationPlayerOnAVStartCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnAVStartCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnAVStartImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnAVStart>
-    implements _$$_KodiNotificationPlayerOnAVStartCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnAVStartCopyWithImpl(
-      _$_KodiNotificationPlayerOnAVStart _value,
-      $Res Function(_$_KodiNotificationPlayerOnAVStart) _then)
+        _$KodiNotificationPlayerOnAVStartImpl>
+    implements _$$KodiNotificationPlayerOnAVStartImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnAVStartImplCopyWithImpl(
+      _$KodiNotificationPlayerOnAVStartImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnAVStartImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11922,7 +12081,7 @@ class __$$_KodiNotificationPlayerOnAVStartCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnAVStart(
+    return _then(_$KodiNotificationPlayerOnAVStartImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -11938,6 +12097,8 @@ class __$$_KodiNotificationPlayerOnAVStartCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnAVStartParamsCopyWith<$Res> get params {
@@ -11950,14 +12111,14 @@ class __$$_KodiNotificationPlayerOnAVStartCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnAVStart
+class _$KodiNotificationPlayerOnAVStartImpl
     implements _KodiNotificationPlayerOnAVStart {
-  const _$_KodiNotificationPlayerOnAVStart(
+  const _$KodiNotificationPlayerOnAVStartImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnAVStart.fromJson(
+  factory _$KodiNotificationPlayerOnAVStartImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnAVStartFromJson(json);
+      _$$KodiNotificationPlayerOnAVStartImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -11972,26 +12133,28 @@ class _$_KodiNotificationPlayerOnAVStart
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnAVStart &&
+            other is _$KodiNotificationPlayerOnAVStartImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnAVStartCopyWith<
-          _$_KodiNotificationPlayerOnAVStart>
-      get copyWith => __$$_KodiNotificationPlayerOnAVStartCopyWithImpl<
-          _$_KodiNotificationPlayerOnAVStart>(this, _$identity);
+  _$$KodiNotificationPlayerOnAVStartImplCopyWith<
+          _$KodiNotificationPlayerOnAVStartImpl>
+      get copyWith => __$$KodiNotificationPlayerOnAVStartImplCopyWithImpl<
+          _$KodiNotificationPlayerOnAVStartImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -12602,7 +12765,7 @@ class _$_KodiNotificationPlayerOnAVStart
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnAVStartToJson(
+    return _$$KodiNotificationPlayerOnAVStartImplToJson(
       this,
     );
   }
@@ -12613,10 +12776,10 @@ abstract class _KodiNotificationPlayerOnAVStart implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnAVStartParams params}) =
-      _$_KodiNotificationPlayerOnAVStart;
+      _$KodiNotificationPlayerOnAVStartImpl;
 
   factory _KodiNotificationPlayerOnAVStart.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnAVStart.fromJson;
+      _$KodiNotificationPlayerOnAVStartImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -12624,20 +12787,23 @@ abstract class _KodiNotificationPlayerOnAVStart implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlayerOnAVStartParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnAVStartCopyWith<
-          _$_KodiNotificationPlayerOnAVStart>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnAVStartImplCopyWith<
+          _$KodiNotificationPlayerOnAVStartImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnPauseCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnPauseImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnPauseCopyWith(
-          _$_KodiNotificationPlayerOnPause value,
-          $Res Function(_$_KodiNotificationPlayerOnPause) then) =
-      __$$_KodiNotificationPlayerOnPauseCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnPauseImplCopyWith(
+          _$KodiNotificationPlayerOnPauseImpl value,
+          $Res Function(_$KodiNotificationPlayerOnPauseImpl) then) =
+      __$$KodiNotificationPlayerOnPauseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -12649,15 +12815,17 @@ abstract class _$$_KodiNotificationPlayerOnPauseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnPauseCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnPauseImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnPause>
-    implements _$$_KodiNotificationPlayerOnPauseCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnPauseCopyWithImpl(
-      _$_KodiNotificationPlayerOnPause _value,
-      $Res Function(_$_KodiNotificationPlayerOnPause) _then)
+        _$KodiNotificationPlayerOnPauseImpl>
+    implements _$$KodiNotificationPlayerOnPauseImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnPauseImplCopyWithImpl(
+      _$KodiNotificationPlayerOnPauseImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnPauseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12665,7 +12833,7 @@ class __$$_KodiNotificationPlayerOnPauseCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnPause(
+    return _then(_$KodiNotificationPlayerOnPauseImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -12681,6 +12849,8 @@ class __$$_KodiNotificationPlayerOnPauseCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnPauseParamsCopyWith<$Res> get params {
@@ -12693,14 +12863,14 @@ class __$$_KodiNotificationPlayerOnPauseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnPause
+class _$KodiNotificationPlayerOnPauseImpl
     implements _KodiNotificationPlayerOnPause {
-  const _$_KodiNotificationPlayerOnPause(
+  const _$KodiNotificationPlayerOnPauseImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnPause.fromJson(
+  factory _$KodiNotificationPlayerOnPauseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnPauseFromJson(json);
+      _$$KodiNotificationPlayerOnPauseImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -12715,25 +12885,28 @@ class _$_KodiNotificationPlayerOnPause
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnPause &&
+            other is _$KodiNotificationPlayerOnPauseImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnPauseCopyWith<_$_KodiNotificationPlayerOnPause>
-      get copyWith => __$$_KodiNotificationPlayerOnPauseCopyWithImpl<
-          _$_KodiNotificationPlayerOnPause>(this, _$identity);
+  _$$KodiNotificationPlayerOnPauseImplCopyWith<
+          _$KodiNotificationPlayerOnPauseImpl>
+      get copyWith => __$$KodiNotificationPlayerOnPauseImplCopyWithImpl<
+          _$KodiNotificationPlayerOnPauseImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -13344,7 +13517,7 @@ class _$_KodiNotificationPlayerOnPause
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnPauseToJson(
+    return _$$KodiNotificationPlayerOnPauseImplToJson(
       this,
     );
   }
@@ -13355,10 +13528,10 @@ abstract class _KodiNotificationPlayerOnPause implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnPauseParams params}) =
-      _$_KodiNotificationPlayerOnPause;
+      _$KodiNotificationPlayerOnPauseImpl;
 
   factory _KodiNotificationPlayerOnPause.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnPause.fromJson;
+      _$KodiNotificationPlayerOnPauseImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -13366,19 +13539,23 @@ abstract class _KodiNotificationPlayerOnPause implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlayerOnPauseParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnPauseCopyWith<_$_KodiNotificationPlayerOnPause>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnPauseImplCopyWith<
+          _$KodiNotificationPlayerOnPauseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnPlayCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnPlayImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnPlayCopyWith(
-          _$_KodiNotificationPlayerOnPlay value,
-          $Res Function(_$_KodiNotificationPlayerOnPlay) then) =
-      __$$_KodiNotificationPlayerOnPlayCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnPlayImplCopyWith(
+          _$KodiNotificationPlayerOnPlayImpl value,
+          $Res Function(_$KodiNotificationPlayerOnPlayImpl) then) =
+      __$$KodiNotificationPlayerOnPlayImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -13390,15 +13567,17 @@ abstract class _$$_KodiNotificationPlayerOnPlayCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnPlayCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnPlayImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnPlay>
-    implements _$$_KodiNotificationPlayerOnPlayCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnPlayCopyWithImpl(
-      _$_KodiNotificationPlayerOnPlay _value,
-      $Res Function(_$_KodiNotificationPlayerOnPlay) _then)
+        _$KodiNotificationPlayerOnPlayImpl>
+    implements _$$KodiNotificationPlayerOnPlayImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnPlayImplCopyWithImpl(
+      _$KodiNotificationPlayerOnPlayImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnPlayImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13406,7 +13585,7 @@ class __$$_KodiNotificationPlayerOnPlayCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnPlay(
+    return _then(_$KodiNotificationPlayerOnPlayImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -13422,6 +13601,8 @@ class __$$_KodiNotificationPlayerOnPlayCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnPlayParamsCopyWith<$Res> get params {
@@ -13434,12 +13615,14 @@ class __$$_KodiNotificationPlayerOnPlayCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnPlay implements _KodiNotificationPlayerOnPlay {
-  const _$_KodiNotificationPlayerOnPlay(
+class _$KodiNotificationPlayerOnPlayImpl
+    implements _KodiNotificationPlayerOnPlay {
+  const _$KodiNotificationPlayerOnPlayImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnPlay.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnPlayFromJson(json);
+  factory _$KodiNotificationPlayerOnPlayImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiNotificationPlayerOnPlayImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -13454,25 +13637,28 @@ class _$_KodiNotificationPlayerOnPlay implements _KodiNotificationPlayerOnPlay {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnPlay &&
+            other is _$KodiNotificationPlayerOnPlayImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnPlayCopyWith<_$_KodiNotificationPlayerOnPlay>
-      get copyWith => __$$_KodiNotificationPlayerOnPlayCopyWithImpl<
-          _$_KodiNotificationPlayerOnPlay>(this, _$identity);
+  _$$KodiNotificationPlayerOnPlayImplCopyWith<
+          _$KodiNotificationPlayerOnPlayImpl>
+      get copyWith => __$$KodiNotificationPlayerOnPlayImplCopyWithImpl<
+          _$KodiNotificationPlayerOnPlayImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -14083,7 +14269,7 @@ class _$_KodiNotificationPlayerOnPlay implements _KodiNotificationPlayerOnPlay {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnPlayToJson(
+    return _$$KodiNotificationPlayerOnPlayImplToJson(
       this,
     );
   }
@@ -14094,10 +14280,10 @@ abstract class _KodiNotificationPlayerOnPlay implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnPlayParams params}) =
-      _$_KodiNotificationPlayerOnPlay;
+      _$KodiNotificationPlayerOnPlayImpl;
 
   factory _KodiNotificationPlayerOnPlay.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnPlay.fromJson;
+      _$KodiNotificationPlayerOnPlayImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -14105,19 +14291,23 @@ abstract class _KodiNotificationPlayerOnPlay implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlayerOnPlayParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnPlayCopyWith<_$_KodiNotificationPlayerOnPlay>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnPlayImplCopyWith<
+          _$KodiNotificationPlayerOnPlayImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnPropertyChangedCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnPropertyChangedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnPropertyChangedCopyWith(
-          _$_KodiNotificationPlayerOnPropertyChanged value,
-          $Res Function(_$_KodiNotificationPlayerOnPropertyChanged) then) =
-      __$$_KodiNotificationPlayerOnPropertyChangedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnPropertyChangedImplCopyWith(
+          _$KodiNotificationPlayerOnPropertyChangedImpl value,
+          $Res Function(_$KodiNotificationPlayerOnPropertyChangedImpl) then) =
+      __$$KodiNotificationPlayerOnPropertyChangedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -14129,15 +14319,17 @@ abstract class _$$_KodiNotificationPlayerOnPropertyChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnPropertyChangedCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnPropertyChangedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnPropertyChanged>
-    implements _$$_KodiNotificationPlayerOnPropertyChangedCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnPropertyChangedCopyWithImpl(
-      _$_KodiNotificationPlayerOnPropertyChanged _value,
-      $Res Function(_$_KodiNotificationPlayerOnPropertyChanged) _then)
+        _$KodiNotificationPlayerOnPropertyChangedImpl>
+    implements _$$KodiNotificationPlayerOnPropertyChangedImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnPropertyChangedImplCopyWithImpl(
+      _$KodiNotificationPlayerOnPropertyChangedImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnPropertyChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14145,7 +14337,7 @@ class __$$_KodiNotificationPlayerOnPropertyChangedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnPropertyChanged(
+    return _then(_$KodiNotificationPlayerOnPropertyChangedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -14161,6 +14353,8 @@ class __$$_KodiNotificationPlayerOnPropertyChangedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnPropertyChangedParamsCopyWith<$Res> get params {
@@ -14173,14 +14367,14 @@ class __$$_KodiNotificationPlayerOnPropertyChangedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnPropertyChanged
+class _$KodiNotificationPlayerOnPropertyChangedImpl
     implements _KodiNotificationPlayerOnPropertyChanged {
-  const _$_KodiNotificationPlayerOnPropertyChanged(
+  const _$KodiNotificationPlayerOnPropertyChangedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnPropertyChanged.fromJson(
+  factory _$KodiNotificationPlayerOnPropertyChangedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnPropertyChangedFromJson(json);
+      _$$KodiNotificationPlayerOnPropertyChangedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -14195,26 +14389,29 @@ class _$_KodiNotificationPlayerOnPropertyChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnPropertyChanged &&
+            other is _$KodiNotificationPlayerOnPropertyChangedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnPropertyChangedCopyWith<
-          _$_KodiNotificationPlayerOnPropertyChanged>
-      get copyWith => __$$_KodiNotificationPlayerOnPropertyChangedCopyWithImpl<
-          _$_KodiNotificationPlayerOnPropertyChanged>(this, _$identity);
+  _$$KodiNotificationPlayerOnPropertyChangedImplCopyWith<
+          _$KodiNotificationPlayerOnPropertyChangedImpl>
+      get copyWith =>
+          __$$KodiNotificationPlayerOnPropertyChangedImplCopyWithImpl<
+              _$KodiNotificationPlayerOnPropertyChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -14825,7 +15022,7 @@ class _$_KodiNotificationPlayerOnPropertyChanged
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnPropertyChangedToJson(
+    return _$$KodiNotificationPlayerOnPropertyChangedImplToJson(
       this,
     );
   }
@@ -14837,11 +15034,11 @@ abstract class _KodiNotificationPlayerOnPropertyChanged
       {required final String jsonrpc,
       required final String method,
       required final KodiNotificationPlayerOnPropertyChangedParams
-          params}) = _$_KodiNotificationPlayerOnPropertyChanged;
+          params}) = _$KodiNotificationPlayerOnPropertyChangedImpl;
 
   factory _KodiNotificationPlayerOnPropertyChanged.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnPropertyChanged.fromJson;
+      _$KodiNotificationPlayerOnPropertyChangedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -14849,20 +15046,23 @@ abstract class _KodiNotificationPlayerOnPropertyChanged
   String get method;
   @override
   KodiNotificationPlayerOnPropertyChangedParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnPropertyChangedCopyWith<
-          _$_KodiNotificationPlayerOnPropertyChanged>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnPropertyChangedImplCopyWith<
+          _$KodiNotificationPlayerOnPropertyChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnResumeCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnResumeImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnResumeCopyWith(
-          _$_KodiNotificationPlayerOnResume value,
-          $Res Function(_$_KodiNotificationPlayerOnResume) then) =
-      __$$_KodiNotificationPlayerOnResumeCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnResumeImplCopyWith(
+          _$KodiNotificationPlayerOnResumeImpl value,
+          $Res Function(_$KodiNotificationPlayerOnResumeImpl) then) =
+      __$$KodiNotificationPlayerOnResumeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -14874,15 +15074,17 @@ abstract class _$$_KodiNotificationPlayerOnResumeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnResumeCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnResumeImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnResume>
-    implements _$$_KodiNotificationPlayerOnResumeCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnResumeCopyWithImpl(
-      _$_KodiNotificationPlayerOnResume _value,
-      $Res Function(_$_KodiNotificationPlayerOnResume) _then)
+        _$KodiNotificationPlayerOnResumeImpl>
+    implements _$$KodiNotificationPlayerOnResumeImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnResumeImplCopyWithImpl(
+      _$KodiNotificationPlayerOnResumeImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnResumeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14890,7 +15092,7 @@ class __$$_KodiNotificationPlayerOnResumeCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnResume(
+    return _then(_$KodiNotificationPlayerOnResumeImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -14906,6 +15108,8 @@ class __$$_KodiNotificationPlayerOnResumeCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnResumeParamsCopyWith<$Res> get params {
@@ -14918,14 +15122,14 @@ class __$$_KodiNotificationPlayerOnResumeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnResume
+class _$KodiNotificationPlayerOnResumeImpl
     implements _KodiNotificationPlayerOnResume {
-  const _$_KodiNotificationPlayerOnResume(
+  const _$KodiNotificationPlayerOnResumeImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnResume.fromJson(
+  factory _$KodiNotificationPlayerOnResumeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnResumeFromJson(json);
+      _$$KodiNotificationPlayerOnResumeImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -14940,25 +15144,28 @@ class _$_KodiNotificationPlayerOnResume
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnResume &&
+            other is _$KodiNotificationPlayerOnResumeImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnResumeCopyWith<_$_KodiNotificationPlayerOnResume>
-      get copyWith => __$$_KodiNotificationPlayerOnResumeCopyWithImpl<
-          _$_KodiNotificationPlayerOnResume>(this, _$identity);
+  _$$KodiNotificationPlayerOnResumeImplCopyWith<
+          _$KodiNotificationPlayerOnResumeImpl>
+      get copyWith => __$$KodiNotificationPlayerOnResumeImplCopyWithImpl<
+          _$KodiNotificationPlayerOnResumeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -15569,7 +15776,7 @@ class _$_KodiNotificationPlayerOnResume
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnResumeToJson(
+    return _$$KodiNotificationPlayerOnResumeImplToJson(
       this,
     );
   }
@@ -15580,10 +15787,10 @@ abstract class _KodiNotificationPlayerOnResume implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnResumeParams params}) =
-      _$_KodiNotificationPlayerOnResume;
+      _$KodiNotificationPlayerOnResumeImpl;
 
   factory _KodiNotificationPlayerOnResume.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnResume.fromJson;
+      _$KodiNotificationPlayerOnResumeImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -15591,19 +15798,23 @@ abstract class _KodiNotificationPlayerOnResume implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlayerOnResumeParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnResumeCopyWith<_$_KodiNotificationPlayerOnResume>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnResumeImplCopyWith<
+          _$KodiNotificationPlayerOnResumeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnSeekCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnSeekImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnSeekCopyWith(
-          _$_KodiNotificationPlayerOnSeek value,
-          $Res Function(_$_KodiNotificationPlayerOnSeek) then) =
-      __$$_KodiNotificationPlayerOnSeekCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnSeekImplCopyWith(
+          _$KodiNotificationPlayerOnSeekImpl value,
+          $Res Function(_$KodiNotificationPlayerOnSeekImpl) then) =
+      __$$KodiNotificationPlayerOnSeekImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -15615,15 +15826,17 @@ abstract class _$$_KodiNotificationPlayerOnSeekCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnSeekCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnSeekImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnSeek>
-    implements _$$_KodiNotificationPlayerOnSeekCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnSeekCopyWithImpl(
-      _$_KodiNotificationPlayerOnSeek _value,
-      $Res Function(_$_KodiNotificationPlayerOnSeek) _then)
+        _$KodiNotificationPlayerOnSeekImpl>
+    implements _$$KodiNotificationPlayerOnSeekImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnSeekImplCopyWithImpl(
+      _$KodiNotificationPlayerOnSeekImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnSeekImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -15631,7 +15844,7 @@ class __$$_KodiNotificationPlayerOnSeekCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnSeek(
+    return _then(_$KodiNotificationPlayerOnSeekImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -15647,6 +15860,8 @@ class __$$_KodiNotificationPlayerOnSeekCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnSeekParamsCopyWith<$Res> get params {
@@ -15659,12 +15874,14 @@ class __$$_KodiNotificationPlayerOnSeekCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnSeek implements _KodiNotificationPlayerOnSeek {
-  const _$_KodiNotificationPlayerOnSeek(
+class _$KodiNotificationPlayerOnSeekImpl
+    implements _KodiNotificationPlayerOnSeek {
+  const _$KodiNotificationPlayerOnSeekImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnSeek.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnSeekFromJson(json);
+  factory _$KodiNotificationPlayerOnSeekImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiNotificationPlayerOnSeekImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -15679,25 +15896,28 @@ class _$_KodiNotificationPlayerOnSeek implements _KodiNotificationPlayerOnSeek {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnSeek &&
+            other is _$KodiNotificationPlayerOnSeekImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnSeekCopyWith<_$_KodiNotificationPlayerOnSeek>
-      get copyWith => __$$_KodiNotificationPlayerOnSeekCopyWithImpl<
-          _$_KodiNotificationPlayerOnSeek>(this, _$identity);
+  _$$KodiNotificationPlayerOnSeekImplCopyWith<
+          _$KodiNotificationPlayerOnSeekImpl>
+      get copyWith => __$$KodiNotificationPlayerOnSeekImplCopyWithImpl<
+          _$KodiNotificationPlayerOnSeekImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -16308,7 +16528,7 @@ class _$_KodiNotificationPlayerOnSeek implements _KodiNotificationPlayerOnSeek {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnSeekToJson(
+    return _$$KodiNotificationPlayerOnSeekImplToJson(
       this,
     );
   }
@@ -16319,10 +16539,10 @@ abstract class _KodiNotificationPlayerOnSeek implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnSeekParams params}) =
-      _$_KodiNotificationPlayerOnSeek;
+      _$KodiNotificationPlayerOnSeekImpl;
 
   factory _KodiNotificationPlayerOnSeek.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnSeek.fromJson;
+      _$KodiNotificationPlayerOnSeekImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -16330,19 +16550,23 @@ abstract class _KodiNotificationPlayerOnSeek implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlayerOnSeekParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnSeekCopyWith<_$_KodiNotificationPlayerOnSeek>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnSeekImplCopyWith<
+          _$KodiNotificationPlayerOnSeekImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnSpeedChangedCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnSpeedChangedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnSpeedChangedCopyWith(
-          _$_KodiNotificationPlayerOnSpeedChanged value,
-          $Res Function(_$_KodiNotificationPlayerOnSpeedChanged) then) =
-      __$$_KodiNotificationPlayerOnSpeedChangedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnSpeedChangedImplCopyWith(
+          _$KodiNotificationPlayerOnSpeedChangedImpl value,
+          $Res Function(_$KodiNotificationPlayerOnSpeedChangedImpl) then) =
+      __$$KodiNotificationPlayerOnSpeedChangedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -16354,15 +16578,17 @@ abstract class _$$_KodiNotificationPlayerOnSpeedChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnSpeedChangedCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnSpeedChangedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnSpeedChanged>
-    implements _$$_KodiNotificationPlayerOnSpeedChangedCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnSpeedChangedCopyWithImpl(
-      _$_KodiNotificationPlayerOnSpeedChanged _value,
-      $Res Function(_$_KodiNotificationPlayerOnSpeedChanged) _then)
+        _$KodiNotificationPlayerOnSpeedChangedImpl>
+    implements _$$KodiNotificationPlayerOnSpeedChangedImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnSpeedChangedImplCopyWithImpl(
+      _$KodiNotificationPlayerOnSpeedChangedImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnSpeedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -16370,7 +16596,7 @@ class __$$_KodiNotificationPlayerOnSpeedChangedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnSpeedChanged(
+    return _then(_$KodiNotificationPlayerOnSpeedChangedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -16386,6 +16612,8 @@ class __$$_KodiNotificationPlayerOnSpeedChangedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnSpeedChangedParamsCopyWith<$Res> get params {
@@ -16398,14 +16626,14 @@ class __$$_KodiNotificationPlayerOnSpeedChangedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnSpeedChanged
+class _$KodiNotificationPlayerOnSpeedChangedImpl
     implements _KodiNotificationPlayerOnSpeedChanged {
-  const _$_KodiNotificationPlayerOnSpeedChanged(
+  const _$KodiNotificationPlayerOnSpeedChangedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnSpeedChanged.fromJson(
+  factory _$KodiNotificationPlayerOnSpeedChangedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnSpeedChangedFromJson(json);
+      _$$KodiNotificationPlayerOnSpeedChangedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -16420,26 +16648,28 @@ class _$_KodiNotificationPlayerOnSpeedChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnSpeedChanged &&
+            other is _$KodiNotificationPlayerOnSpeedChangedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnSpeedChangedCopyWith<
-          _$_KodiNotificationPlayerOnSpeedChanged>
-      get copyWith => __$$_KodiNotificationPlayerOnSpeedChangedCopyWithImpl<
-          _$_KodiNotificationPlayerOnSpeedChanged>(this, _$identity);
+  _$$KodiNotificationPlayerOnSpeedChangedImplCopyWith<
+          _$KodiNotificationPlayerOnSpeedChangedImpl>
+      get copyWith => __$$KodiNotificationPlayerOnSpeedChangedImplCopyWithImpl<
+          _$KodiNotificationPlayerOnSpeedChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -17050,7 +17280,7 @@ class _$_KodiNotificationPlayerOnSpeedChanged
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnSpeedChangedToJson(
+    return _$$KodiNotificationPlayerOnSpeedChangedImplToJson(
       this,
     );
   }
@@ -17062,11 +17292,11 @@ abstract class _KodiNotificationPlayerOnSpeedChanged
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnSpeedChangedParams params}) =
-      _$_KodiNotificationPlayerOnSpeedChanged;
+      _$KodiNotificationPlayerOnSpeedChangedImpl;
 
   factory _KodiNotificationPlayerOnSpeedChanged.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnSpeedChanged.fromJson;
+      _$KodiNotificationPlayerOnSpeedChangedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -17074,20 +17304,23 @@ abstract class _KodiNotificationPlayerOnSpeedChanged
   String get method;
   @override
   KodiNotificationPlayerOnSpeedChangedParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnSpeedChangedCopyWith<
-          _$_KodiNotificationPlayerOnSpeedChanged>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnSpeedChangedImplCopyWith<
+          _$KodiNotificationPlayerOnSpeedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnStopCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnStopImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnStopCopyWith(
-          _$_KodiNotificationPlayerOnStop value,
-          $Res Function(_$_KodiNotificationPlayerOnStop) then) =
-      __$$_KodiNotificationPlayerOnStopCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnStopImplCopyWith(
+          _$KodiNotificationPlayerOnStopImpl value,
+          $Res Function(_$KodiNotificationPlayerOnStopImpl) then) =
+      __$$KodiNotificationPlayerOnStopImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -17099,15 +17332,17 @@ abstract class _$$_KodiNotificationPlayerOnStopCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnStopCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnStopImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnStop>
-    implements _$$_KodiNotificationPlayerOnStopCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnStopCopyWithImpl(
-      _$_KodiNotificationPlayerOnStop _value,
-      $Res Function(_$_KodiNotificationPlayerOnStop) _then)
+        _$KodiNotificationPlayerOnStopImpl>
+    implements _$$KodiNotificationPlayerOnStopImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnStopImplCopyWithImpl(
+      _$KodiNotificationPlayerOnStopImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnStopImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -17115,7 +17350,7 @@ class __$$_KodiNotificationPlayerOnStopCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnStop(
+    return _then(_$KodiNotificationPlayerOnStopImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -17131,6 +17366,8 @@ class __$$_KodiNotificationPlayerOnStopCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnStopParamsCopyWith<$Res> get params {
@@ -17143,12 +17380,14 @@ class __$$_KodiNotificationPlayerOnStopCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnStop implements _KodiNotificationPlayerOnStop {
-  const _$_KodiNotificationPlayerOnStop(
+class _$KodiNotificationPlayerOnStopImpl
+    implements _KodiNotificationPlayerOnStop {
+  const _$KodiNotificationPlayerOnStopImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlayerOnStop.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnStopFromJson(json);
+  factory _$KodiNotificationPlayerOnStopImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiNotificationPlayerOnStopImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -17163,25 +17402,28 @@ class _$_KodiNotificationPlayerOnStop implements _KodiNotificationPlayerOnStop {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnStop &&
+            other is _$KodiNotificationPlayerOnStopImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnStopCopyWith<_$_KodiNotificationPlayerOnStop>
-      get copyWith => __$$_KodiNotificationPlayerOnStopCopyWithImpl<
-          _$_KodiNotificationPlayerOnStop>(this, _$identity);
+  _$$KodiNotificationPlayerOnStopImplCopyWith<
+          _$KodiNotificationPlayerOnStopImpl>
+      get copyWith => __$$KodiNotificationPlayerOnStopImplCopyWithImpl<
+          _$KodiNotificationPlayerOnStopImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -17792,7 +18034,7 @@ class _$_KodiNotificationPlayerOnStop implements _KodiNotificationPlayerOnStop {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnStopToJson(
+    return _$$KodiNotificationPlayerOnStopImplToJson(
       this,
     );
   }
@@ -17803,10 +18045,10 @@ abstract class _KodiNotificationPlayerOnStop implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlayerOnStopParams params}) =
-      _$_KodiNotificationPlayerOnStop;
+      _$KodiNotificationPlayerOnStopImpl;
 
   factory _KodiNotificationPlayerOnStop.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnStop.fromJson;
+      _$KodiNotificationPlayerOnStopImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -17814,19 +18056,23 @@ abstract class _KodiNotificationPlayerOnStop implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlayerOnStopParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnStopCopyWith<_$_KodiNotificationPlayerOnStop>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnStopImplCopyWith<
+          _$KodiNotificationPlayerOnStopImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlaylistOnAddCopyWith<$Res>
+abstract class _$$KodiNotificationPlaylistOnAddImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlaylistOnAddCopyWith(
-          _$_KodiNotificationPlaylistOnAdd value,
-          $Res Function(_$_KodiNotificationPlaylistOnAdd) then) =
-      __$$_KodiNotificationPlaylistOnAddCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlaylistOnAddImplCopyWith(
+          _$KodiNotificationPlaylistOnAddImpl value,
+          $Res Function(_$KodiNotificationPlaylistOnAddImpl) then) =
+      __$$KodiNotificationPlaylistOnAddImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -17838,15 +18084,17 @@ abstract class _$$_KodiNotificationPlaylistOnAddCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlaylistOnAddCopyWithImpl<$Res>
+class __$$KodiNotificationPlaylistOnAddImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlaylistOnAdd>
-    implements _$$_KodiNotificationPlaylistOnAddCopyWith<$Res> {
-  __$$_KodiNotificationPlaylistOnAddCopyWithImpl(
-      _$_KodiNotificationPlaylistOnAdd _value,
-      $Res Function(_$_KodiNotificationPlaylistOnAdd) _then)
+        _$KodiNotificationPlaylistOnAddImpl>
+    implements _$$KodiNotificationPlaylistOnAddImplCopyWith<$Res> {
+  __$$KodiNotificationPlaylistOnAddImplCopyWithImpl(
+      _$KodiNotificationPlaylistOnAddImpl _value,
+      $Res Function(_$KodiNotificationPlaylistOnAddImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -17854,7 +18102,7 @@ class __$$_KodiNotificationPlaylistOnAddCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlaylistOnAdd(
+    return _then(_$KodiNotificationPlaylistOnAddImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -17870,6 +18118,8 @@ class __$$_KodiNotificationPlaylistOnAddCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlaylistOnAddParamsCopyWith<$Res> get params {
@@ -17882,14 +18132,14 @@ class __$$_KodiNotificationPlaylistOnAddCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlaylistOnAdd
+class _$KodiNotificationPlaylistOnAddImpl
     implements _KodiNotificationPlaylistOnAdd {
-  const _$_KodiNotificationPlaylistOnAdd(
+  const _$KodiNotificationPlaylistOnAddImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlaylistOnAdd.fromJson(
+  factory _$KodiNotificationPlaylistOnAddImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlaylistOnAddFromJson(json);
+      _$$KodiNotificationPlaylistOnAddImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -17904,25 +18154,28 @@ class _$_KodiNotificationPlaylistOnAdd
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlaylistOnAdd &&
+            other is _$KodiNotificationPlaylistOnAddImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlaylistOnAddCopyWith<_$_KodiNotificationPlaylistOnAdd>
-      get copyWith => __$$_KodiNotificationPlaylistOnAddCopyWithImpl<
-          _$_KodiNotificationPlaylistOnAdd>(this, _$identity);
+  _$$KodiNotificationPlaylistOnAddImplCopyWith<
+          _$KodiNotificationPlaylistOnAddImpl>
+      get copyWith => __$$KodiNotificationPlaylistOnAddImplCopyWithImpl<
+          _$KodiNotificationPlaylistOnAddImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -18533,7 +18786,7 @@ class _$_KodiNotificationPlaylistOnAdd
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlaylistOnAddToJson(
+    return _$$KodiNotificationPlaylistOnAddImplToJson(
       this,
     );
   }
@@ -18544,10 +18797,10 @@ abstract class _KodiNotificationPlaylistOnAdd implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlaylistOnAddParams params}) =
-      _$_KodiNotificationPlaylistOnAdd;
+      _$KodiNotificationPlaylistOnAddImpl;
 
   factory _KodiNotificationPlaylistOnAdd.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlaylistOnAdd.fromJson;
+      _$KodiNotificationPlaylistOnAddImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -18555,19 +18808,23 @@ abstract class _KodiNotificationPlaylistOnAdd implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlaylistOnAddParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlaylistOnAddCopyWith<_$_KodiNotificationPlaylistOnAdd>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlaylistOnAddImplCopyWith<
+          _$KodiNotificationPlaylistOnAddImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlaylistOnClearCopyWith<$Res>
+abstract class _$$KodiNotificationPlaylistOnClearImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlaylistOnClearCopyWith(
-          _$_KodiNotificationPlaylistOnClear value,
-          $Res Function(_$_KodiNotificationPlaylistOnClear) then) =
-      __$$_KodiNotificationPlaylistOnClearCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlaylistOnClearImplCopyWith(
+          _$KodiNotificationPlaylistOnClearImpl value,
+          $Res Function(_$KodiNotificationPlaylistOnClearImpl) then) =
+      __$$KodiNotificationPlaylistOnClearImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -18579,15 +18836,17 @@ abstract class _$$_KodiNotificationPlaylistOnClearCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlaylistOnClearCopyWithImpl<$Res>
+class __$$KodiNotificationPlaylistOnClearImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlaylistOnClear>
-    implements _$$_KodiNotificationPlaylistOnClearCopyWith<$Res> {
-  __$$_KodiNotificationPlaylistOnClearCopyWithImpl(
-      _$_KodiNotificationPlaylistOnClear _value,
-      $Res Function(_$_KodiNotificationPlaylistOnClear) _then)
+        _$KodiNotificationPlaylistOnClearImpl>
+    implements _$$KodiNotificationPlaylistOnClearImplCopyWith<$Res> {
+  __$$KodiNotificationPlaylistOnClearImplCopyWithImpl(
+      _$KodiNotificationPlaylistOnClearImpl _value,
+      $Res Function(_$KodiNotificationPlaylistOnClearImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -18595,7 +18854,7 @@ class __$$_KodiNotificationPlaylistOnClearCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlaylistOnClear(
+    return _then(_$KodiNotificationPlaylistOnClearImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -18611,6 +18870,8 @@ class __$$_KodiNotificationPlaylistOnClearCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlaylistOnClearParamsCopyWith<$Res> get params {
@@ -18623,14 +18884,14 @@ class __$$_KodiNotificationPlaylistOnClearCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlaylistOnClear
+class _$KodiNotificationPlaylistOnClearImpl
     implements _KodiNotificationPlaylistOnClear {
-  const _$_KodiNotificationPlaylistOnClear(
+  const _$KodiNotificationPlaylistOnClearImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlaylistOnClear.fromJson(
+  factory _$KodiNotificationPlaylistOnClearImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlaylistOnClearFromJson(json);
+      _$$KodiNotificationPlaylistOnClearImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -18645,26 +18906,28 @@ class _$_KodiNotificationPlaylistOnClear
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlaylistOnClear &&
+            other is _$KodiNotificationPlaylistOnClearImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlaylistOnClearCopyWith<
-          _$_KodiNotificationPlaylistOnClear>
-      get copyWith => __$$_KodiNotificationPlaylistOnClearCopyWithImpl<
-          _$_KodiNotificationPlaylistOnClear>(this, _$identity);
+  _$$KodiNotificationPlaylistOnClearImplCopyWith<
+          _$KodiNotificationPlaylistOnClearImpl>
+      get copyWith => __$$KodiNotificationPlaylistOnClearImplCopyWithImpl<
+          _$KodiNotificationPlaylistOnClearImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -19275,7 +19538,7 @@ class _$_KodiNotificationPlaylistOnClear
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlaylistOnClearToJson(
+    return _$$KodiNotificationPlaylistOnClearImplToJson(
       this,
     );
   }
@@ -19286,10 +19549,10 @@ abstract class _KodiNotificationPlaylistOnClear implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlaylistOnClearParams params}) =
-      _$_KodiNotificationPlaylistOnClear;
+      _$KodiNotificationPlaylistOnClearImpl;
 
   factory _KodiNotificationPlaylistOnClear.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationPlaylistOnClear.fromJson;
+      _$KodiNotificationPlaylistOnClearImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -19297,20 +19560,23 @@ abstract class _KodiNotificationPlaylistOnClear implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlaylistOnClearParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlaylistOnClearCopyWith<
-          _$_KodiNotificationPlaylistOnClear>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlaylistOnClearImplCopyWith<
+          _$KodiNotificationPlaylistOnClearImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlaylistOnRemoveCopyWith<$Res>
+abstract class _$$KodiNotificationPlaylistOnRemoveImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationPlaylistOnRemoveCopyWith(
-          _$_KodiNotificationPlaylistOnRemove value,
-          $Res Function(_$_KodiNotificationPlaylistOnRemove) then) =
-      __$$_KodiNotificationPlaylistOnRemoveCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlaylistOnRemoveImplCopyWith(
+          _$KodiNotificationPlaylistOnRemoveImpl value,
+          $Res Function(_$KodiNotificationPlaylistOnRemoveImpl) then) =
+      __$$KodiNotificationPlaylistOnRemoveImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -19322,15 +19588,17 @@ abstract class _$$_KodiNotificationPlaylistOnRemoveCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlaylistOnRemoveCopyWithImpl<$Res>
+class __$$KodiNotificationPlaylistOnRemoveImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationPlaylistOnRemove>
-    implements _$$_KodiNotificationPlaylistOnRemoveCopyWith<$Res> {
-  __$$_KodiNotificationPlaylistOnRemoveCopyWithImpl(
-      _$_KodiNotificationPlaylistOnRemove _value,
-      $Res Function(_$_KodiNotificationPlaylistOnRemove) _then)
+        _$KodiNotificationPlaylistOnRemoveImpl>
+    implements _$$KodiNotificationPlaylistOnRemoveImplCopyWith<$Res> {
+  __$$KodiNotificationPlaylistOnRemoveImplCopyWithImpl(
+      _$KodiNotificationPlaylistOnRemoveImpl _value,
+      $Res Function(_$KodiNotificationPlaylistOnRemoveImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -19338,7 +19606,7 @@ class __$$_KodiNotificationPlaylistOnRemoveCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationPlaylistOnRemove(
+    return _then(_$KodiNotificationPlaylistOnRemoveImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -19354,6 +19622,8 @@ class __$$_KodiNotificationPlaylistOnRemoveCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlaylistOnRemoveParamsCopyWith<$Res> get params {
@@ -19366,14 +19636,14 @@ class __$$_KodiNotificationPlaylistOnRemoveCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlaylistOnRemove
+class _$KodiNotificationPlaylistOnRemoveImpl
     implements _KodiNotificationPlaylistOnRemove {
-  const _$_KodiNotificationPlaylistOnRemove(
+  const _$KodiNotificationPlaylistOnRemoveImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationPlaylistOnRemove.fromJson(
+  factory _$KodiNotificationPlaylistOnRemoveImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlaylistOnRemoveFromJson(json);
+      _$$KodiNotificationPlaylistOnRemoveImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -19388,26 +19658,28 @@ class _$_KodiNotificationPlaylistOnRemove
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlaylistOnRemove &&
+            other is _$KodiNotificationPlaylistOnRemoveImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlaylistOnRemoveCopyWith<
-          _$_KodiNotificationPlaylistOnRemove>
-      get copyWith => __$$_KodiNotificationPlaylistOnRemoveCopyWithImpl<
-          _$_KodiNotificationPlaylistOnRemove>(this, _$identity);
+  _$$KodiNotificationPlaylistOnRemoveImplCopyWith<
+          _$KodiNotificationPlaylistOnRemoveImpl>
+      get copyWith => __$$KodiNotificationPlaylistOnRemoveImplCopyWithImpl<
+          _$KodiNotificationPlaylistOnRemoveImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -20018,7 +20290,7 @@ class _$_KodiNotificationPlaylistOnRemove
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlaylistOnRemoveToJson(
+    return _$$KodiNotificationPlaylistOnRemoveImplToJson(
       this,
     );
   }
@@ -20029,10 +20301,11 @@ abstract class _KodiNotificationPlaylistOnRemove implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationPlaylistOnRemoveParams params}) =
-      _$_KodiNotificationPlaylistOnRemove;
+      _$KodiNotificationPlaylistOnRemoveImpl;
 
   factory _KodiNotificationPlaylistOnRemove.fromJson(
-      Map<String, dynamic> json) = _$_KodiNotificationPlaylistOnRemove.fromJson;
+          Map<String, dynamic> json) =
+      _$KodiNotificationPlaylistOnRemoveImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -20040,20 +20313,23 @@ abstract class _KodiNotificationPlaylistOnRemove implements KodiNotification {
   String get method;
   @override
   KodiNotificationPlaylistOnRemoveParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlaylistOnRemoveCopyWith<
-          _$_KodiNotificationPlaylistOnRemove>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlaylistOnRemoveImplCopyWith<
+          _$KodiNotificationPlaylistOnRemoveImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnLowBatteryCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnLowBatteryImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnLowBatteryCopyWith(
-          _$_KodiNotificationSystemOnLowBattery value,
-          $Res Function(_$_KodiNotificationSystemOnLowBattery) then) =
-      __$$_KodiNotificationSystemOnLowBatteryCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnLowBatteryImplCopyWith(
+          _$KodiNotificationSystemOnLowBatteryImpl value,
+          $Res Function(_$KodiNotificationSystemOnLowBatteryImpl) then) =
+      __$$KodiNotificationSystemOnLowBatteryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -20063,15 +20339,17 @@ abstract class _$$_KodiNotificationSystemOnLowBatteryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnLowBatteryCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnLowBatteryImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnLowBattery>
-    implements _$$_KodiNotificationSystemOnLowBatteryCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnLowBatteryCopyWithImpl(
-      _$_KodiNotificationSystemOnLowBattery _value,
-      $Res Function(_$_KodiNotificationSystemOnLowBattery) _then)
+        _$KodiNotificationSystemOnLowBatteryImpl>
+    implements _$$KodiNotificationSystemOnLowBatteryImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnLowBatteryImplCopyWithImpl(
+      _$KodiNotificationSystemOnLowBatteryImpl _value,
+      $Res Function(_$KodiNotificationSystemOnLowBatteryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -20079,7 +20357,7 @@ class __$$_KodiNotificationSystemOnLowBatteryCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnLowBattery(
+    return _then(_$KodiNotificationSystemOnLowBatteryImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -20095,6 +20373,8 @@ class __$$_KodiNotificationSystemOnLowBatteryCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -20106,14 +20386,14 @@ class __$$_KodiNotificationSystemOnLowBatteryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnLowBattery
+class _$KodiNotificationSystemOnLowBatteryImpl
     implements _KodiNotificationSystemOnLowBattery {
-  const _$_KodiNotificationSystemOnLowBattery(
+  const _$KodiNotificationSystemOnLowBatteryImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationSystemOnLowBattery.fromJson(
+  factory _$KodiNotificationSystemOnLowBatteryImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnLowBatteryFromJson(json);
+      _$$KodiNotificationSystemOnLowBatteryImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -20128,26 +20408,28 @@ class _$_KodiNotificationSystemOnLowBattery
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnLowBattery &&
+            other is _$KodiNotificationSystemOnLowBatteryImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnLowBatteryCopyWith<
-          _$_KodiNotificationSystemOnLowBattery>
-      get copyWith => __$$_KodiNotificationSystemOnLowBatteryCopyWithImpl<
-          _$_KodiNotificationSystemOnLowBattery>(this, _$identity);
+  _$$KodiNotificationSystemOnLowBatteryImplCopyWith<
+          _$KodiNotificationSystemOnLowBatteryImpl>
+      get copyWith => __$$KodiNotificationSystemOnLowBatteryImplCopyWithImpl<
+          _$KodiNotificationSystemOnLowBatteryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -20758,7 +21040,7 @@ class _$_KodiNotificationSystemOnLowBattery
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnLowBatteryToJson(
+    return _$$KodiNotificationSystemOnLowBatteryImplToJson(
       this,
     );
   }
@@ -20769,11 +21051,11 @@ abstract class _KodiNotificationSystemOnLowBattery implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationSystemOnLowBattery;
+      _$KodiNotificationSystemOnLowBatteryImpl;
 
   factory _KodiNotificationSystemOnLowBattery.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnLowBattery.fromJson;
+      _$KodiNotificationSystemOnLowBatteryImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -20781,20 +21063,23 @@ abstract class _KodiNotificationSystemOnLowBattery implements KodiNotification {
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnLowBatteryCopyWith<
-          _$_KodiNotificationSystemOnLowBattery>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnLowBatteryImplCopyWith<
+          _$KodiNotificationSystemOnLowBatteryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnQuitCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnQuitImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnQuitCopyWith(
-          _$_KodiNotificationSystemOnQuit value,
-          $Res Function(_$_KodiNotificationSystemOnQuit) then) =
-      __$$_KodiNotificationSystemOnQuitCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnQuitImplCopyWith(
+          _$KodiNotificationSystemOnQuitImpl value,
+          $Res Function(_$KodiNotificationSystemOnQuitImpl) then) =
+      __$$KodiNotificationSystemOnQuitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -20806,15 +21091,17 @@ abstract class _$$_KodiNotificationSystemOnQuitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnQuitCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnQuitImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnQuit>
-    implements _$$_KodiNotificationSystemOnQuitCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnQuitCopyWithImpl(
-      _$_KodiNotificationSystemOnQuit _value,
-      $Res Function(_$_KodiNotificationSystemOnQuit) _then)
+        _$KodiNotificationSystemOnQuitImpl>
+    implements _$$KodiNotificationSystemOnQuitImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnQuitImplCopyWithImpl(
+      _$KodiNotificationSystemOnQuitImpl _value,
+      $Res Function(_$KodiNotificationSystemOnQuitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -20822,7 +21109,7 @@ class __$$_KodiNotificationSystemOnQuitCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnQuit(
+    return _then(_$KodiNotificationSystemOnQuitImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -20838,6 +21125,8 @@ class __$$_KodiNotificationSystemOnQuitCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationSystemOnQuitParamsCopyWith<$Res> get params {
@@ -20850,12 +21139,14 @@ class __$$_KodiNotificationSystemOnQuitCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnQuit implements _KodiNotificationSystemOnQuit {
-  const _$_KodiNotificationSystemOnQuit(
+class _$KodiNotificationSystemOnQuitImpl
+    implements _KodiNotificationSystemOnQuit {
+  const _$KodiNotificationSystemOnQuitImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationSystemOnQuit.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnQuitFromJson(json);
+  factory _$KodiNotificationSystemOnQuitImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiNotificationSystemOnQuitImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -20870,25 +21161,28 @@ class _$_KodiNotificationSystemOnQuit implements _KodiNotificationSystemOnQuit {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnQuit &&
+            other is _$KodiNotificationSystemOnQuitImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnQuitCopyWith<_$_KodiNotificationSystemOnQuit>
-      get copyWith => __$$_KodiNotificationSystemOnQuitCopyWithImpl<
-          _$_KodiNotificationSystemOnQuit>(this, _$identity);
+  _$$KodiNotificationSystemOnQuitImplCopyWith<
+          _$KodiNotificationSystemOnQuitImpl>
+      get copyWith => __$$KodiNotificationSystemOnQuitImplCopyWithImpl<
+          _$KodiNotificationSystemOnQuitImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -21499,7 +21793,7 @@ class _$_KodiNotificationSystemOnQuit implements _KodiNotificationSystemOnQuit {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnQuitToJson(
+    return _$$KodiNotificationSystemOnQuitImplToJson(
       this,
     );
   }
@@ -21510,10 +21804,10 @@ abstract class _KodiNotificationSystemOnQuit implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationSystemOnQuitParams params}) =
-      _$_KodiNotificationSystemOnQuit;
+      _$KodiNotificationSystemOnQuitImpl;
 
   factory _KodiNotificationSystemOnQuit.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnQuit.fromJson;
+      _$KodiNotificationSystemOnQuitImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -21521,19 +21815,23 @@ abstract class _KodiNotificationSystemOnQuit implements KodiNotification {
   String get method;
   @override
   KodiNotificationSystemOnQuitParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnQuitCopyWith<_$_KodiNotificationSystemOnQuit>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnQuitImplCopyWith<
+          _$KodiNotificationSystemOnQuitImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnRestartCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnRestartImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnRestartCopyWith(
-          _$_KodiNotificationSystemOnRestart value,
-          $Res Function(_$_KodiNotificationSystemOnRestart) then) =
-      __$$_KodiNotificationSystemOnRestartCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnRestartImplCopyWith(
+          _$KodiNotificationSystemOnRestartImpl value,
+          $Res Function(_$KodiNotificationSystemOnRestartImpl) then) =
+      __$$KodiNotificationSystemOnRestartImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -21543,15 +21841,17 @@ abstract class _$$_KodiNotificationSystemOnRestartCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnRestartCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnRestartImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnRestart>
-    implements _$$_KodiNotificationSystemOnRestartCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnRestartCopyWithImpl(
-      _$_KodiNotificationSystemOnRestart _value,
-      $Res Function(_$_KodiNotificationSystemOnRestart) _then)
+        _$KodiNotificationSystemOnRestartImpl>
+    implements _$$KodiNotificationSystemOnRestartImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnRestartImplCopyWithImpl(
+      _$KodiNotificationSystemOnRestartImpl _value,
+      $Res Function(_$KodiNotificationSystemOnRestartImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -21559,7 +21859,7 @@ class __$$_KodiNotificationSystemOnRestartCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnRestart(
+    return _then(_$KodiNotificationSystemOnRestartImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -21575,6 +21875,8 @@ class __$$_KodiNotificationSystemOnRestartCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -21586,14 +21888,14 @@ class __$$_KodiNotificationSystemOnRestartCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnRestart
+class _$KodiNotificationSystemOnRestartImpl
     implements _KodiNotificationSystemOnRestart {
-  const _$_KodiNotificationSystemOnRestart(
+  const _$KodiNotificationSystemOnRestartImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationSystemOnRestart.fromJson(
+  factory _$KodiNotificationSystemOnRestartImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnRestartFromJson(json);
+      _$$KodiNotificationSystemOnRestartImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -21608,26 +21910,28 @@ class _$_KodiNotificationSystemOnRestart
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnRestart &&
+            other is _$KodiNotificationSystemOnRestartImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnRestartCopyWith<
-          _$_KodiNotificationSystemOnRestart>
-      get copyWith => __$$_KodiNotificationSystemOnRestartCopyWithImpl<
-          _$_KodiNotificationSystemOnRestart>(this, _$identity);
+  _$$KodiNotificationSystemOnRestartImplCopyWith<
+          _$KodiNotificationSystemOnRestartImpl>
+      get copyWith => __$$KodiNotificationSystemOnRestartImplCopyWithImpl<
+          _$KodiNotificationSystemOnRestartImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -22238,7 +22542,7 @@ class _$_KodiNotificationSystemOnRestart
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnRestartToJson(
+    return _$$KodiNotificationSystemOnRestartImplToJson(
       this,
     );
   }
@@ -22249,10 +22553,10 @@ abstract class _KodiNotificationSystemOnRestart implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationSystemOnRestart;
+      _$KodiNotificationSystemOnRestartImpl;
 
   factory _KodiNotificationSystemOnRestart.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnRestart.fromJson;
+      _$KodiNotificationSystemOnRestartImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -22260,20 +22564,23 @@ abstract class _KodiNotificationSystemOnRestart implements KodiNotification {
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnRestartCopyWith<
-          _$_KodiNotificationSystemOnRestart>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnRestartImplCopyWith<
+          _$KodiNotificationSystemOnRestartImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnSleepCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnSleepImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnSleepCopyWith(
-          _$_KodiNotificationSystemOnSleep value,
-          $Res Function(_$_KodiNotificationSystemOnSleep) then) =
-      __$$_KodiNotificationSystemOnSleepCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnSleepImplCopyWith(
+          _$KodiNotificationSystemOnSleepImpl value,
+          $Res Function(_$KodiNotificationSystemOnSleepImpl) then) =
+      __$$KodiNotificationSystemOnSleepImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -22283,15 +22590,17 @@ abstract class _$$_KodiNotificationSystemOnSleepCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnSleepCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnSleepImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnSleep>
-    implements _$$_KodiNotificationSystemOnSleepCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnSleepCopyWithImpl(
-      _$_KodiNotificationSystemOnSleep _value,
-      $Res Function(_$_KodiNotificationSystemOnSleep) _then)
+        _$KodiNotificationSystemOnSleepImpl>
+    implements _$$KodiNotificationSystemOnSleepImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnSleepImplCopyWithImpl(
+      _$KodiNotificationSystemOnSleepImpl _value,
+      $Res Function(_$KodiNotificationSystemOnSleepImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -22299,7 +22608,7 @@ class __$$_KodiNotificationSystemOnSleepCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnSleep(
+    return _then(_$KodiNotificationSystemOnSleepImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -22315,6 +22624,8 @@ class __$$_KodiNotificationSystemOnSleepCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -22326,14 +22637,14 @@ class __$$_KodiNotificationSystemOnSleepCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnSleep
+class _$KodiNotificationSystemOnSleepImpl
     implements _KodiNotificationSystemOnSleep {
-  const _$_KodiNotificationSystemOnSleep(
+  const _$KodiNotificationSystemOnSleepImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationSystemOnSleep.fromJson(
+  factory _$KodiNotificationSystemOnSleepImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnSleepFromJson(json);
+      _$$KodiNotificationSystemOnSleepImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -22348,25 +22659,28 @@ class _$_KodiNotificationSystemOnSleep
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnSleep &&
+            other is _$KodiNotificationSystemOnSleepImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnSleepCopyWith<_$_KodiNotificationSystemOnSleep>
-      get copyWith => __$$_KodiNotificationSystemOnSleepCopyWithImpl<
-          _$_KodiNotificationSystemOnSleep>(this, _$identity);
+  _$$KodiNotificationSystemOnSleepImplCopyWith<
+          _$KodiNotificationSystemOnSleepImpl>
+      get copyWith => __$$KodiNotificationSystemOnSleepImplCopyWithImpl<
+          _$KodiNotificationSystemOnSleepImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -22977,7 +23291,7 @@ class _$_KodiNotificationSystemOnSleep
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnSleepToJson(
+    return _$$KodiNotificationSystemOnSleepImplToJson(
       this,
     );
   }
@@ -22988,10 +23302,10 @@ abstract class _KodiNotificationSystemOnSleep implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationSystemOnSleep;
+      _$KodiNotificationSystemOnSleepImpl;
 
   factory _KodiNotificationSystemOnSleep.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnSleep.fromJson;
+      _$KodiNotificationSystemOnSleepImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -22999,19 +23313,23 @@ abstract class _KodiNotificationSystemOnSleep implements KodiNotification {
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnSleepCopyWith<_$_KodiNotificationSystemOnSleep>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnSleepImplCopyWith<
+          _$KodiNotificationSystemOnSleepImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnWakeCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnWakeImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnWakeCopyWith(
-          _$_KodiNotificationSystemOnWake value,
-          $Res Function(_$_KodiNotificationSystemOnWake) then) =
-      __$$_KodiNotificationSystemOnWakeCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnWakeImplCopyWith(
+          _$KodiNotificationSystemOnWakeImpl value,
+          $Res Function(_$KodiNotificationSystemOnWakeImpl) then) =
+      __$$KodiNotificationSystemOnWakeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -23021,15 +23339,17 @@ abstract class _$$_KodiNotificationSystemOnWakeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnWakeCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnWakeImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnWake>
-    implements _$$_KodiNotificationSystemOnWakeCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnWakeCopyWithImpl(
-      _$_KodiNotificationSystemOnWake _value,
-      $Res Function(_$_KodiNotificationSystemOnWake) _then)
+        _$KodiNotificationSystemOnWakeImpl>
+    implements _$$KodiNotificationSystemOnWakeImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnWakeImplCopyWithImpl(
+      _$KodiNotificationSystemOnWakeImpl _value,
+      $Res Function(_$KodiNotificationSystemOnWakeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -23037,7 +23357,7 @@ class __$$_KodiNotificationSystemOnWakeCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnWake(
+    return _then(_$KodiNotificationSystemOnWakeImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -23053,6 +23373,8 @@ class __$$_KodiNotificationSystemOnWakeCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -23064,12 +23386,14 @@ class __$$_KodiNotificationSystemOnWakeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnWake implements _KodiNotificationSystemOnWake {
-  const _$_KodiNotificationSystemOnWake(
+class _$KodiNotificationSystemOnWakeImpl
+    implements _KodiNotificationSystemOnWake {
+  const _$KodiNotificationSystemOnWakeImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationSystemOnWake.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnWakeFromJson(json);
+  factory _$KodiNotificationSystemOnWakeImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiNotificationSystemOnWakeImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -23084,25 +23408,28 @@ class _$_KodiNotificationSystemOnWake implements _KodiNotificationSystemOnWake {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnWake &&
+            other is _$KodiNotificationSystemOnWakeImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnWakeCopyWith<_$_KodiNotificationSystemOnWake>
-      get copyWith => __$$_KodiNotificationSystemOnWakeCopyWithImpl<
-          _$_KodiNotificationSystemOnWake>(this, _$identity);
+  _$$KodiNotificationSystemOnWakeImplCopyWith<
+          _$KodiNotificationSystemOnWakeImpl>
+      get copyWith => __$$KodiNotificationSystemOnWakeImplCopyWithImpl<
+          _$KodiNotificationSystemOnWakeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -23713,7 +24040,7 @@ class _$_KodiNotificationSystemOnWake implements _KodiNotificationSystemOnWake {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnWakeToJson(
+    return _$$KodiNotificationSystemOnWakeImplToJson(
       this,
     );
   }
@@ -23724,10 +24051,10 @@ abstract class _KodiNotificationSystemOnWake implements KodiNotification {
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationSystemOnWake;
+      _$KodiNotificationSystemOnWakeImpl;
 
   factory _KodiNotificationSystemOnWake.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnWake.fromJson;
+      _$KodiNotificationSystemOnWakeImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -23735,19 +24062,24 @@ abstract class _KodiNotificationSystemOnWake implements KodiNotification {
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnWakeCopyWith<_$_KodiNotificationSystemOnWake>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnWakeImplCopyWith<
+          _$KodiNotificationSystemOnWakeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWith(
-          _$_KodiNotificationVideoLibraryOnCleanFinished value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnCleanFinished) then) =
-      __$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWith(
+          _$KodiNotificationVideoLibraryOnCleanFinishedImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnCleanFinishedImpl)
+              then) =
+      __$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -23757,15 +24089,18 @@ abstract class _$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnCleanFinished>
-    implements _$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnCleanFinished _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnCleanFinished) _then)
+        _$KodiNotificationVideoLibraryOnCleanFinishedImpl>
+    implements
+        _$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnCleanFinishedImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnCleanFinishedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -23773,7 +24108,7 @@ class __$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnCleanFinished(
+    return _then(_$KodiNotificationVideoLibraryOnCleanFinishedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -23789,6 +24124,8 @@ class __$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -23800,14 +24137,14 @@ class __$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnCleanFinished
+class _$KodiNotificationVideoLibraryOnCleanFinishedImpl
     implements _KodiNotificationVideoLibraryOnCleanFinished {
-  const _$_KodiNotificationVideoLibraryOnCleanFinished(
+  const _$KodiNotificationVideoLibraryOnCleanFinishedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnCleanFinished.fromJson(
+  factory _$KodiNotificationVideoLibraryOnCleanFinishedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnCleanFinishedFromJson(json);
+      _$$KodiNotificationVideoLibraryOnCleanFinishedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -23822,27 +24159,30 @@ class _$_KodiNotificationVideoLibraryOnCleanFinished
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnCleanFinished &&
+            other is _$KodiNotificationVideoLibraryOnCleanFinishedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanFinished>
+  _$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanFinishedImpl>
       get copyWith =>
-          __$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWithImpl<
-              _$_KodiNotificationVideoLibraryOnCleanFinished>(this, _$identity);
+          __$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWithImpl<
+                  _$KodiNotificationVideoLibraryOnCleanFinishedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -24453,7 +24793,7 @@ class _$_KodiNotificationVideoLibraryOnCleanFinished
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnCleanFinishedToJson(
+    return _$$KodiNotificationVideoLibraryOnCleanFinishedImplToJson(
       this,
     );
   }
@@ -24465,11 +24805,11 @@ abstract class _KodiNotificationVideoLibraryOnCleanFinished
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationVideoLibraryOnCleanFinished;
+      _$KodiNotificationVideoLibraryOnCleanFinishedImpl;
 
   factory _KodiNotificationVideoLibraryOnCleanFinished.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnCleanFinished.fromJson;
+      _$KodiNotificationVideoLibraryOnCleanFinishedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -24477,20 +24817,24 @@ abstract class _KodiNotificationVideoLibraryOnCleanFinished
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnCleanFinishedCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanFinished>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnCleanFinishedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanFinishedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnCleanStartedCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnCleanStartedCopyWith(
-          _$_KodiNotificationVideoLibraryOnCleanStarted value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnCleanStarted) then) =
-      __$$_KodiNotificationVideoLibraryOnCleanStartedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWith(
+          _$KodiNotificationVideoLibraryOnCleanStartedImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnCleanStartedImpl)
+              then) =
+      __$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -24500,15 +24844,17 @@ abstract class _$$_KodiNotificationVideoLibraryOnCleanStartedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnCleanStartedCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnCleanStarted>
-    implements _$$_KodiNotificationVideoLibraryOnCleanStartedCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnCleanStartedCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnCleanStarted _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnCleanStarted) _then)
+        _$KodiNotificationVideoLibraryOnCleanStartedImpl>
+    implements _$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnCleanStartedImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnCleanStartedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -24516,7 +24862,7 @@ class __$$_KodiNotificationVideoLibraryOnCleanStartedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnCleanStarted(
+    return _then(_$KodiNotificationVideoLibraryOnCleanStartedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -24532,6 +24878,8 @@ class __$$_KodiNotificationVideoLibraryOnCleanStartedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -24543,14 +24891,14 @@ class __$$_KodiNotificationVideoLibraryOnCleanStartedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnCleanStarted
+class _$KodiNotificationVideoLibraryOnCleanStartedImpl
     implements _KodiNotificationVideoLibraryOnCleanStarted {
-  const _$_KodiNotificationVideoLibraryOnCleanStarted(
+  const _$KodiNotificationVideoLibraryOnCleanStartedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnCleanStarted.fromJson(
+  factory _$KodiNotificationVideoLibraryOnCleanStartedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnCleanStartedFromJson(json);
+      _$$KodiNotificationVideoLibraryOnCleanStartedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -24565,27 +24913,30 @@ class _$_KodiNotificationVideoLibraryOnCleanStarted
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnCleanStarted &&
+            other is _$KodiNotificationVideoLibraryOnCleanStartedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnCleanStartedCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanStarted>
+  _$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanStartedImpl>
       get copyWith =>
-          __$$_KodiNotificationVideoLibraryOnCleanStartedCopyWithImpl<
-              _$_KodiNotificationVideoLibraryOnCleanStarted>(this, _$identity);
+          __$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWithImpl<
+                  _$KodiNotificationVideoLibraryOnCleanStartedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -25196,7 +25547,7 @@ class _$_KodiNotificationVideoLibraryOnCleanStarted
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnCleanStartedToJson(
+    return _$$KodiNotificationVideoLibraryOnCleanStartedImplToJson(
       this,
     );
   }
@@ -25208,11 +25559,11 @@ abstract class _KodiNotificationVideoLibraryOnCleanStarted
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationVideoLibraryOnCleanStarted;
+      _$KodiNotificationVideoLibraryOnCleanStartedImpl;
 
   factory _KodiNotificationVideoLibraryOnCleanStarted.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnCleanStarted.fromJson;
+      _$KodiNotificationVideoLibraryOnCleanStartedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -25220,20 +25571,23 @@ abstract class _KodiNotificationVideoLibraryOnCleanStarted
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnCleanStartedCopyWith<
-          _$_KodiNotificationVideoLibraryOnCleanStarted>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnCleanStartedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnCleanStartedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnExportCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnExportImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnExportCopyWith(
-          _$_KodiNotificationVideoLibraryOnExport value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnExport) then) =
-      __$$_KodiNotificationVideoLibraryOnExportCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnExportImplCopyWith(
+          _$KodiNotificationVideoLibraryOnExportImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnExportImpl) then) =
+      __$$KodiNotificationVideoLibraryOnExportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -25245,15 +25599,17 @@ abstract class _$$_KodiNotificationVideoLibraryOnExportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnExportCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnExportImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnExport>
-    implements _$$_KodiNotificationVideoLibraryOnExportCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnExportCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnExport _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnExport) _then)
+        _$KodiNotificationVideoLibraryOnExportImpl>
+    implements _$$KodiNotificationVideoLibraryOnExportImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnExportImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnExportImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnExportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -25261,7 +25617,7 @@ class __$$_KodiNotificationVideoLibraryOnExportCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnExport(
+    return _then(_$KodiNotificationVideoLibraryOnExportImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -25277,6 +25633,8 @@ class __$$_KodiNotificationVideoLibraryOnExportCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationVideoLibraryOnExportParamsCopyWith<$Res> get params {
@@ -25289,14 +25647,14 @@ class __$$_KodiNotificationVideoLibraryOnExportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnExport
+class _$KodiNotificationVideoLibraryOnExportImpl
     implements _KodiNotificationVideoLibraryOnExport {
-  const _$_KodiNotificationVideoLibraryOnExport(
+  const _$KodiNotificationVideoLibraryOnExportImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnExport.fromJson(
+  factory _$KodiNotificationVideoLibraryOnExportImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnExportFromJson(json);
+      _$$KodiNotificationVideoLibraryOnExportImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -25311,26 +25669,28 @@ class _$_KodiNotificationVideoLibraryOnExport
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnExport &&
+            other is _$KodiNotificationVideoLibraryOnExportImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnExportCopyWith<
-          _$_KodiNotificationVideoLibraryOnExport>
-      get copyWith => __$$_KodiNotificationVideoLibraryOnExportCopyWithImpl<
-          _$_KodiNotificationVideoLibraryOnExport>(this, _$identity);
+  _$$KodiNotificationVideoLibraryOnExportImplCopyWith<
+          _$KodiNotificationVideoLibraryOnExportImpl>
+      get copyWith => __$$KodiNotificationVideoLibraryOnExportImplCopyWithImpl<
+          _$KodiNotificationVideoLibraryOnExportImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -25941,7 +26301,7 @@ class _$_KodiNotificationVideoLibraryOnExport
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnExportToJson(
+    return _$$KodiNotificationVideoLibraryOnExportImplToJson(
       this,
     );
   }
@@ -25953,11 +26313,11 @@ abstract class _KodiNotificationVideoLibraryOnExport
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationVideoLibraryOnExportParams params}) =
-      _$_KodiNotificationVideoLibraryOnExport;
+      _$KodiNotificationVideoLibraryOnExportImpl;
 
   factory _KodiNotificationVideoLibraryOnExport.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnExport.fromJson;
+      _$KodiNotificationVideoLibraryOnExportImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -25965,20 +26325,23 @@ abstract class _KodiNotificationVideoLibraryOnExport
   String get method;
   @override
   KodiNotificationVideoLibraryOnExportParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnExportCopyWith<
-          _$_KodiNotificationVideoLibraryOnExport>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnExportImplCopyWith<
+          _$KodiNotificationVideoLibraryOnExportImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnRefreshCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnRefreshImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnRefreshCopyWith(
-          _$_KodiNotificationVideoLibraryOnRefresh value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnRefresh) then) =
-      __$$_KodiNotificationVideoLibraryOnRefreshCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnRefreshImplCopyWith(
+          _$KodiNotificationVideoLibraryOnRefreshImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnRefreshImpl) then) =
+      __$$KodiNotificationVideoLibraryOnRefreshImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -25988,15 +26351,17 @@ abstract class _$$_KodiNotificationVideoLibraryOnRefreshCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnRefreshCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnRefreshImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnRefresh>
-    implements _$$_KodiNotificationVideoLibraryOnRefreshCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnRefreshCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnRefresh _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnRefresh) _then)
+        _$KodiNotificationVideoLibraryOnRefreshImpl>
+    implements _$$KodiNotificationVideoLibraryOnRefreshImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnRefreshImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnRefreshImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnRefreshImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -26004,7 +26369,7 @@ class __$$_KodiNotificationVideoLibraryOnRefreshCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnRefresh(
+    return _then(_$KodiNotificationVideoLibraryOnRefreshImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -26020,6 +26385,8 @@ class __$$_KodiNotificationVideoLibraryOnRefreshCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -26031,14 +26398,14 @@ class __$$_KodiNotificationVideoLibraryOnRefreshCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnRefresh
+class _$KodiNotificationVideoLibraryOnRefreshImpl
     implements _KodiNotificationVideoLibraryOnRefresh {
-  const _$_KodiNotificationVideoLibraryOnRefresh(
+  const _$KodiNotificationVideoLibraryOnRefreshImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnRefresh.fromJson(
+  factory _$KodiNotificationVideoLibraryOnRefreshImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnRefreshFromJson(json);
+      _$$KodiNotificationVideoLibraryOnRefreshImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -26053,26 +26420,28 @@ class _$_KodiNotificationVideoLibraryOnRefresh
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnRefresh &&
+            other is _$KodiNotificationVideoLibraryOnRefreshImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnRefreshCopyWith<
-          _$_KodiNotificationVideoLibraryOnRefresh>
-      get copyWith => __$$_KodiNotificationVideoLibraryOnRefreshCopyWithImpl<
-          _$_KodiNotificationVideoLibraryOnRefresh>(this, _$identity);
+  _$$KodiNotificationVideoLibraryOnRefreshImplCopyWith<
+          _$KodiNotificationVideoLibraryOnRefreshImpl>
+      get copyWith => __$$KodiNotificationVideoLibraryOnRefreshImplCopyWithImpl<
+          _$KodiNotificationVideoLibraryOnRefreshImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -26683,7 +27052,7 @@ class _$_KodiNotificationVideoLibraryOnRefresh
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnRefreshToJson(
+    return _$$KodiNotificationVideoLibraryOnRefreshImplToJson(
       this,
     );
   }
@@ -26695,11 +27064,11 @@ abstract class _KodiNotificationVideoLibraryOnRefresh
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationVideoLibraryOnRefresh;
+      _$KodiNotificationVideoLibraryOnRefreshImpl;
 
   factory _KodiNotificationVideoLibraryOnRefresh.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnRefresh.fromJson;
+      _$KodiNotificationVideoLibraryOnRefreshImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -26707,20 +27076,23 @@ abstract class _KodiNotificationVideoLibraryOnRefresh
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnRefreshCopyWith<
-          _$_KodiNotificationVideoLibraryOnRefresh>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnRefreshImplCopyWith<
+          _$KodiNotificationVideoLibraryOnRefreshImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnRemoveCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnRemoveImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnRemoveCopyWith(
-          _$_KodiNotificationVideoLibraryOnRemove value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnRemove) then) =
-      __$$_KodiNotificationVideoLibraryOnRemoveCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnRemoveImplCopyWith(
+          _$KodiNotificationVideoLibraryOnRemoveImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnRemoveImpl) then) =
+      __$$KodiNotificationVideoLibraryOnRemoveImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -26732,15 +27104,17 @@ abstract class _$$_KodiNotificationVideoLibraryOnRemoveCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnRemoveCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnRemoveImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnRemove>
-    implements _$$_KodiNotificationVideoLibraryOnRemoveCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnRemoveCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnRemove _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnRemove) _then)
+        _$KodiNotificationVideoLibraryOnRemoveImpl>
+    implements _$$KodiNotificationVideoLibraryOnRemoveImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnRemoveImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnRemoveImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnRemoveImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -26748,7 +27122,7 @@ class __$$_KodiNotificationVideoLibraryOnRemoveCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnRemove(
+    return _then(_$KodiNotificationVideoLibraryOnRemoveImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -26764,6 +27138,8 @@ class __$$_KodiNotificationVideoLibraryOnRemoveCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationVideoLibraryOnRemoveParamsCopyWith<$Res> get params {
@@ -26776,14 +27152,14 @@ class __$$_KodiNotificationVideoLibraryOnRemoveCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnRemove
+class _$KodiNotificationVideoLibraryOnRemoveImpl
     implements _KodiNotificationVideoLibraryOnRemove {
-  const _$_KodiNotificationVideoLibraryOnRemove(
+  const _$KodiNotificationVideoLibraryOnRemoveImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnRemove.fromJson(
+  factory _$KodiNotificationVideoLibraryOnRemoveImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnRemoveFromJson(json);
+      _$$KodiNotificationVideoLibraryOnRemoveImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -26798,26 +27174,28 @@ class _$_KodiNotificationVideoLibraryOnRemove
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnRemove &&
+            other is _$KodiNotificationVideoLibraryOnRemoveImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnRemoveCopyWith<
-          _$_KodiNotificationVideoLibraryOnRemove>
-      get copyWith => __$$_KodiNotificationVideoLibraryOnRemoveCopyWithImpl<
-          _$_KodiNotificationVideoLibraryOnRemove>(this, _$identity);
+  _$$KodiNotificationVideoLibraryOnRemoveImplCopyWith<
+          _$KodiNotificationVideoLibraryOnRemoveImpl>
+      get copyWith => __$$KodiNotificationVideoLibraryOnRemoveImplCopyWithImpl<
+          _$KodiNotificationVideoLibraryOnRemoveImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -27428,7 +27806,7 @@ class _$_KodiNotificationVideoLibraryOnRemove
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnRemoveToJson(
+    return _$$KodiNotificationVideoLibraryOnRemoveImplToJson(
       this,
     );
   }
@@ -27440,11 +27818,11 @@ abstract class _KodiNotificationVideoLibraryOnRemove
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationVideoLibraryOnRemoveParams params}) =
-      _$_KodiNotificationVideoLibraryOnRemove;
+      _$KodiNotificationVideoLibraryOnRemoveImpl;
 
   factory _KodiNotificationVideoLibraryOnRemove.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnRemove.fromJson;
+      _$KodiNotificationVideoLibraryOnRemoveImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -27452,20 +27830,24 @@ abstract class _KodiNotificationVideoLibraryOnRemove
   String get method;
   @override
   KodiNotificationVideoLibraryOnRemoveParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnRemoveCopyWith<
-          _$_KodiNotificationVideoLibraryOnRemove>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnRemoveImplCopyWith<
+          _$KodiNotificationVideoLibraryOnRemoveImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnScanFinishedCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnScanFinishedCopyWith(
-          _$_KodiNotificationVideoLibraryOnScanFinished value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnScanFinished) then) =
-      __$$_KodiNotificationVideoLibraryOnScanFinishedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWith(
+          _$KodiNotificationVideoLibraryOnScanFinishedImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnScanFinishedImpl)
+              then) =
+      __$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -27475,15 +27857,17 @@ abstract class _$$_KodiNotificationVideoLibraryOnScanFinishedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnScanFinishedCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnScanFinished>
-    implements _$$_KodiNotificationVideoLibraryOnScanFinishedCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnScanFinishedCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnScanFinished _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnScanFinished) _then)
+        _$KodiNotificationVideoLibraryOnScanFinishedImpl>
+    implements _$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnScanFinishedImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnScanFinishedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -27491,7 +27875,7 @@ class __$$_KodiNotificationVideoLibraryOnScanFinishedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnScanFinished(
+    return _then(_$KodiNotificationVideoLibraryOnScanFinishedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -27507,6 +27891,8 @@ class __$$_KodiNotificationVideoLibraryOnScanFinishedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -27518,14 +27904,14 @@ class __$$_KodiNotificationVideoLibraryOnScanFinishedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnScanFinished
+class _$KodiNotificationVideoLibraryOnScanFinishedImpl
     implements _KodiNotificationVideoLibraryOnScanFinished {
-  const _$_KodiNotificationVideoLibraryOnScanFinished(
+  const _$KodiNotificationVideoLibraryOnScanFinishedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnScanFinished.fromJson(
+  factory _$KodiNotificationVideoLibraryOnScanFinishedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnScanFinishedFromJson(json);
+      _$$KodiNotificationVideoLibraryOnScanFinishedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -27540,27 +27926,30 @@ class _$_KodiNotificationVideoLibraryOnScanFinished
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnScanFinished &&
+            other is _$KodiNotificationVideoLibraryOnScanFinishedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnScanFinishedCopyWith<
-          _$_KodiNotificationVideoLibraryOnScanFinished>
+  _$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnScanFinishedImpl>
       get copyWith =>
-          __$$_KodiNotificationVideoLibraryOnScanFinishedCopyWithImpl<
-              _$_KodiNotificationVideoLibraryOnScanFinished>(this, _$identity);
+          __$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWithImpl<
+                  _$KodiNotificationVideoLibraryOnScanFinishedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -28171,7 +28560,7 @@ class _$_KodiNotificationVideoLibraryOnScanFinished
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnScanFinishedToJson(
+    return _$$KodiNotificationVideoLibraryOnScanFinishedImplToJson(
       this,
     );
   }
@@ -28183,11 +28572,11 @@ abstract class _KodiNotificationVideoLibraryOnScanFinished
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationVideoLibraryOnScanFinished;
+      _$KodiNotificationVideoLibraryOnScanFinishedImpl;
 
   factory _KodiNotificationVideoLibraryOnScanFinished.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnScanFinished.fromJson;
+      _$KodiNotificationVideoLibraryOnScanFinishedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -28195,20 +28584,23 @@ abstract class _KodiNotificationVideoLibraryOnScanFinished
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnScanFinishedCopyWith<
-          _$_KodiNotificationVideoLibraryOnScanFinished>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnScanFinishedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnScanFinishedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnScanStartedCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnScanStartedImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnScanStartedCopyWith(
-          _$_KodiNotificationVideoLibraryOnScanStarted value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnScanStarted) then) =
-      __$$_KodiNotificationVideoLibraryOnScanStartedCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnScanStartedImplCopyWith(
+          _$KodiNotificationVideoLibraryOnScanStartedImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnScanStartedImpl) then) =
+      __$$KodiNotificationVideoLibraryOnScanStartedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -28218,15 +28610,17 @@ abstract class _$$_KodiNotificationVideoLibraryOnScanStartedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnScanStartedCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnScanStartedImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnScanStarted>
-    implements _$$_KodiNotificationVideoLibraryOnScanStartedCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnScanStartedCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnScanStarted _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnScanStarted) _then)
+        _$KodiNotificationVideoLibraryOnScanStartedImpl>
+    implements _$$KodiNotificationVideoLibraryOnScanStartedImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnScanStartedImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnScanStartedImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnScanStartedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -28234,7 +28628,7 @@ class __$$_KodiNotificationVideoLibraryOnScanStartedCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnScanStarted(
+    return _then(_$KodiNotificationVideoLibraryOnScanStartedImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -28250,6 +28644,8 @@ class __$$_KodiNotificationVideoLibraryOnScanStartedCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationGenericParamsCopyWith<$Res> get params {
@@ -28261,14 +28657,14 @@ class __$$_KodiNotificationVideoLibraryOnScanStartedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnScanStarted
+class _$KodiNotificationVideoLibraryOnScanStartedImpl
     implements _KodiNotificationVideoLibraryOnScanStarted {
-  const _$_KodiNotificationVideoLibraryOnScanStarted(
+  const _$KodiNotificationVideoLibraryOnScanStartedImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnScanStarted.fromJson(
+  factory _$KodiNotificationVideoLibraryOnScanStartedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnScanStartedFromJson(json);
+      _$$KodiNotificationVideoLibraryOnScanStartedImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -28283,27 +28679,30 @@ class _$_KodiNotificationVideoLibraryOnScanStarted
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnScanStarted &&
+            other is _$KodiNotificationVideoLibraryOnScanStartedImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnScanStartedCopyWith<
-          _$_KodiNotificationVideoLibraryOnScanStarted>
+  _$$KodiNotificationVideoLibraryOnScanStartedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnScanStartedImpl>
       get copyWith =>
-          __$$_KodiNotificationVideoLibraryOnScanStartedCopyWithImpl<
-              _$_KodiNotificationVideoLibraryOnScanStarted>(this, _$identity);
+          __$$KodiNotificationVideoLibraryOnScanStartedImplCopyWithImpl<
+                  _$KodiNotificationVideoLibraryOnScanStartedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -28914,7 +29313,7 @@ class _$_KodiNotificationVideoLibraryOnScanStarted
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnScanStartedToJson(
+    return _$$KodiNotificationVideoLibraryOnScanStartedImplToJson(
       this,
     );
   }
@@ -28926,11 +29325,11 @@ abstract class _KodiNotificationVideoLibraryOnScanStarted
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationGenericParams params}) =
-      _$_KodiNotificationVideoLibraryOnScanStarted;
+      _$KodiNotificationVideoLibraryOnScanStartedImpl;
 
   factory _KodiNotificationVideoLibraryOnScanStarted.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnScanStarted.fromJson;
+      _$KodiNotificationVideoLibraryOnScanStartedImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -28938,20 +29337,23 @@ abstract class _KodiNotificationVideoLibraryOnScanStarted
   String get method;
   @override
   KodiNotificationGenericParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnScanStartedCopyWith<
-          _$_KodiNotificationVideoLibraryOnScanStarted>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnScanStartedImplCopyWith<
+          _$KodiNotificationVideoLibraryOnScanStartedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationVideoLibraryOnUpdateCopyWith<$Res>
+abstract class _$$KodiNotificationVideoLibraryOnUpdateImplCopyWith<$Res>
     implements $KodiNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationVideoLibraryOnUpdateCopyWith(
-          _$_KodiNotificationVideoLibraryOnUpdate value,
-          $Res Function(_$_KodiNotificationVideoLibraryOnUpdate) then) =
-      __$$_KodiNotificationVideoLibraryOnUpdateCopyWithImpl<$Res>;
+  factory _$$KodiNotificationVideoLibraryOnUpdateImplCopyWith(
+          _$KodiNotificationVideoLibraryOnUpdateImpl value,
+          $Res Function(_$KodiNotificationVideoLibraryOnUpdateImpl) then) =
+      __$$KodiNotificationVideoLibraryOnUpdateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -28963,15 +29365,17 @@ abstract class _$$_KodiNotificationVideoLibraryOnUpdateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationVideoLibraryOnUpdateCopyWithImpl<$Res>
+class __$$KodiNotificationVideoLibraryOnUpdateImplCopyWithImpl<$Res>
     extends _$KodiNotificationCopyWithImpl<$Res,
-        _$_KodiNotificationVideoLibraryOnUpdate>
-    implements _$$_KodiNotificationVideoLibraryOnUpdateCopyWith<$Res> {
-  __$$_KodiNotificationVideoLibraryOnUpdateCopyWithImpl(
-      _$_KodiNotificationVideoLibraryOnUpdate _value,
-      $Res Function(_$_KodiNotificationVideoLibraryOnUpdate) _then)
+        _$KodiNotificationVideoLibraryOnUpdateImpl>
+    implements _$$KodiNotificationVideoLibraryOnUpdateImplCopyWith<$Res> {
+  __$$KodiNotificationVideoLibraryOnUpdateImplCopyWithImpl(
+      _$KodiNotificationVideoLibraryOnUpdateImpl _value,
+      $Res Function(_$KodiNotificationVideoLibraryOnUpdateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -28979,7 +29383,7 @@ class __$$_KodiNotificationVideoLibraryOnUpdateCopyWithImpl<$Res>
     Object? method = null,
     Object? params = null,
   }) {
-    return _then(_$_KodiNotificationVideoLibraryOnUpdate(
+    return _then(_$KodiNotificationVideoLibraryOnUpdateImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -28995,6 +29399,8 @@ class __$$_KodiNotificationVideoLibraryOnUpdateCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationVideoLibraryOnUpdateParamsCopyWith<$Res> get params {
@@ -29007,14 +29413,14 @@ class __$$_KodiNotificationVideoLibraryOnUpdateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationVideoLibraryOnUpdate
+class _$KodiNotificationVideoLibraryOnUpdateImpl
     implements _KodiNotificationVideoLibraryOnUpdate {
-  const _$_KodiNotificationVideoLibraryOnUpdate(
+  const _$KodiNotificationVideoLibraryOnUpdateImpl(
       {required this.jsonrpc, required this.method, required this.params});
 
-  factory _$_KodiNotificationVideoLibraryOnUpdate.fromJson(
+  factory _$KodiNotificationVideoLibraryOnUpdateImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationVideoLibraryOnUpdateFromJson(json);
+      _$$KodiNotificationVideoLibraryOnUpdateImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -29029,26 +29435,28 @@ class _$_KodiNotificationVideoLibraryOnUpdate
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationVideoLibraryOnUpdate &&
+            other is _$KodiNotificationVideoLibraryOnUpdateImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.method, method) || other.method == method) &&
             (identical(other.params, params) || other.params == params));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, method, params);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationVideoLibraryOnUpdateCopyWith<
-          _$_KodiNotificationVideoLibraryOnUpdate>
-      get copyWith => __$$_KodiNotificationVideoLibraryOnUpdateCopyWithImpl<
-          _$_KodiNotificationVideoLibraryOnUpdate>(this, _$identity);
+  _$$KodiNotificationVideoLibraryOnUpdateImplCopyWith<
+          _$KodiNotificationVideoLibraryOnUpdateImpl>
+      get copyWith => __$$KodiNotificationVideoLibraryOnUpdateImplCopyWithImpl<
+          _$KodiNotificationVideoLibraryOnUpdateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -29659,7 +30067,7 @@ class _$_KodiNotificationVideoLibraryOnUpdate
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationVideoLibraryOnUpdateToJson(
+    return _$$KodiNotificationVideoLibraryOnUpdateImplToJson(
       this,
     );
   }
@@ -29671,11 +30079,11 @@ abstract class _KodiNotificationVideoLibraryOnUpdate
           {required final String jsonrpc,
           required final String method,
           required final KodiNotificationVideoLibraryOnUpdateParams params}) =
-      _$_KodiNotificationVideoLibraryOnUpdate;
+      _$KodiNotificationVideoLibraryOnUpdateImpl;
 
   factory _KodiNotificationVideoLibraryOnUpdate.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationVideoLibraryOnUpdate.fromJson;
+      _$KodiNotificationVideoLibraryOnUpdateImpl.fromJson;
 
   @override
   String get jsonrpc;
@@ -29683,10 +30091,13 @@ abstract class _KodiNotificationVideoLibraryOnUpdate
   String get method;
   @override
   KodiNotificationVideoLibraryOnUpdateParams get params;
+
+  /// Create a copy of KodiNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationVideoLibraryOnUpdateCopyWith<
-          _$_KodiNotificationVideoLibraryOnUpdate>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationVideoLibraryOnUpdateImplCopyWith<
+          _$KodiNotificationVideoLibraryOnUpdateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -29699,8 +30110,12 @@ KodiNotificationGenericParams _$KodiNotificationGenericParamsFromJson(
 mixin _$KodiNotificationGenericParams {
   String get sender => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationGenericParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationGenericParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationGenericParamsCopyWith<KodiNotificationGenericParams>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -29727,6 +30142,8 @@ class _$KodiNotificationGenericParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationGenericParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -29742,33 +30159,35 @@ class _$KodiNotificationGenericParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationGenericParamsCopyWith<$Res>
+abstract class _$$KodiNotificationGenericParamsImplCopyWith<$Res>
     implements $KodiNotificationGenericParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationGenericParamsCopyWith(
-          _$_KodiNotificationGenericParams value,
-          $Res Function(_$_KodiNotificationGenericParams) then) =
-      __$$_KodiNotificationGenericParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationGenericParamsImplCopyWith(
+          _$KodiNotificationGenericParamsImpl value,
+          $Res Function(_$KodiNotificationGenericParamsImpl) then) =
+      __$$KodiNotificationGenericParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender});
 }
 
 /// @nodoc
-class __$$_KodiNotificationGenericParamsCopyWithImpl<$Res>
+class __$$KodiNotificationGenericParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationGenericParamsCopyWithImpl<$Res,
-        _$_KodiNotificationGenericParams>
-    implements _$$_KodiNotificationGenericParamsCopyWith<$Res> {
-  __$$_KodiNotificationGenericParamsCopyWithImpl(
-      _$_KodiNotificationGenericParams _value,
-      $Res Function(_$_KodiNotificationGenericParams) _then)
+        _$KodiNotificationGenericParamsImpl>
+    implements _$$KodiNotificationGenericParamsImplCopyWith<$Res> {
+  __$$KodiNotificationGenericParamsImplCopyWithImpl(
+      _$KodiNotificationGenericParamsImpl _value,
+      $Res Function(_$KodiNotificationGenericParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationGenericParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
   }) {
-    return _then(_$_KodiNotificationGenericParams(
+    return _then(_$KodiNotificationGenericParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -29779,13 +30198,13 @@ class __$$_KodiNotificationGenericParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationGenericParams
+class _$KodiNotificationGenericParamsImpl
     implements _KodiNotificationGenericParams {
-  const _$_KodiNotificationGenericParams({required this.sender});
+  const _$KodiNotificationGenericParamsImpl({required this.sender});
 
-  factory _$_KodiNotificationGenericParams.fromJson(
+  factory _$KodiNotificationGenericParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationGenericParamsFromJson(json);
+      _$$KodiNotificationGenericParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -29796,27 +30215,30 @@ class _$_KodiNotificationGenericParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationGenericParams &&
+            other is _$KodiNotificationGenericParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationGenericParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationGenericParamsCopyWith<_$_KodiNotificationGenericParams>
-      get copyWith => __$$_KodiNotificationGenericParamsCopyWithImpl<
-          _$_KodiNotificationGenericParams>(this, _$identity);
+  _$$KodiNotificationGenericParamsImplCopyWith<
+          _$KodiNotificationGenericParamsImpl>
+      get copyWith => __$$KodiNotificationGenericParamsImplCopyWithImpl<
+          _$KodiNotificationGenericParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationGenericParamsToJson(
+    return _$$KodiNotificationGenericParamsImplToJson(
       this,
     );
   }
@@ -29825,15 +30247,19 @@ class _$_KodiNotificationGenericParams
 abstract class _KodiNotificationGenericParams
     implements KodiNotificationGenericParams {
   const factory _KodiNotificationGenericParams({required final String sender}) =
-      _$_KodiNotificationGenericParams;
+      _$KodiNotificationGenericParamsImpl;
 
   factory _KodiNotificationGenericParams.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationGenericParams.fromJson;
+      _$KodiNotificationGenericParamsImpl.fromJson;
 
   @override
   String get sender;
+
+  /// Create a copy of KodiNotificationGenericParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationGenericParamsCopyWith<_$_KodiNotificationGenericParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationGenericParamsImplCopyWith<
+          _$KodiNotificationGenericParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

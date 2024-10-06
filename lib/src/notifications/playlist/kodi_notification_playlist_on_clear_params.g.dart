@@ -6,31 +6,31 @@ part of 'kodi_notification_playlist_on_clear_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationPlaylistOnClearParams
-    _$$_KodiNotificationPlaylistOnClearParamsFromJson(
+_$KodiNotificationPlaylistOnClearParamsImpl
+    _$$KodiNotificationPlaylistOnClearParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlaylistOnClearParams(
+        _$KodiNotificationPlaylistOnClearParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationPlaylistOnClearParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlaylistOnClearParamsToJson(
-        _$_KodiNotificationPlaylistOnClearParams instance) =>
+Map<String, dynamic> _$$KodiNotificationPlaylistOnClearParamsImplToJson(
+        _$KodiNotificationPlaylistOnClearParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationPlaylistOnClearParamsData
-    _$$_KodiNotificationPlaylistOnClearParamsDataFromJson(
+_$KodiNotificationPlaylistOnClearParamsDataImpl
+    _$$KodiNotificationPlaylistOnClearParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlaylistOnClearParamsData(
-          playlistId: json['playlistid'] as int,
+        _$KodiNotificationPlaylistOnClearParamsDataImpl(
+          playlistId: (json['playlistid'] as num).toInt(),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlaylistOnClearParamsDataToJson(
-        _$_KodiNotificationPlaylistOnClearParamsData instance) =>
+Map<String, dynamic> _$$KodiNotificationPlaylistOnClearParamsDataImplToJson(
+        _$KodiNotificationPlaylistOnClearParamsDataImpl instance) =>
     <String, dynamic>{
       'playlistid': instance.playlistId,
     };

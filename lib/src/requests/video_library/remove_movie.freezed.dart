@@ -12,7 +12,7 @@ part of 'remove_movie.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RemoveMovie _$RemoveMovieFromJson(Map<String, dynamic> json) {
   return _RemoveMovie.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$RemoveMovie {
   @JsonKey(name: 'movieid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this RemoveMovie to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoveMovie
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoveMovieCopyWith<RemoveMovie> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$RemoveMovieCopyWithImpl<$Res, $Val extends RemoveMovie>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoveMovie
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,30 +69,32 @@ class _$RemoveMovieCopyWithImpl<$Res, $Val extends RemoveMovie>
 }
 
 /// @nodoc
-abstract class _$$_RemoveMovieCopyWith<$Res>
+abstract class _$$RemoveMovieImplCopyWith<$Res>
     implements $RemoveMovieCopyWith<$Res> {
-  factory _$$_RemoveMovieCopyWith(
-          _$_RemoveMovie value, $Res Function(_$_RemoveMovie) then) =
-      __$$_RemoveMovieCopyWithImpl<$Res>;
+  factory _$$RemoveMovieImplCopyWith(
+          _$RemoveMovieImpl value, $Res Function(_$RemoveMovieImpl) then) =
+      __$$RemoveMovieImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'movieid') int id});
 }
 
 /// @nodoc
-class __$$_RemoveMovieCopyWithImpl<$Res>
-    extends _$RemoveMovieCopyWithImpl<$Res, _$_RemoveMovie>
-    implements _$$_RemoveMovieCopyWith<$Res> {
-  __$$_RemoveMovieCopyWithImpl(
-      _$_RemoveMovie _value, $Res Function(_$_RemoveMovie) _then)
+class __$$RemoveMovieImplCopyWithImpl<$Res>
+    extends _$RemoveMovieCopyWithImpl<$Res, _$RemoveMovieImpl>
+    implements _$$RemoveMovieImplCopyWith<$Res> {
+  __$$RemoveMovieImplCopyWithImpl(
+      _$RemoveMovieImpl _value, $Res Function(_$RemoveMovieImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoveMovie
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_RemoveMovie(
+    return _then(_$RemoveMovieImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -97,11 +105,11 @@ class __$$_RemoveMovieCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RemoveMovie extends _RemoveMovie {
-  const _$_RemoveMovie(@JsonKey(name: 'movieid') this.id) : super._();
+class _$RemoveMovieImpl extends _RemoveMovie {
+  const _$RemoveMovieImpl(@JsonKey(name: 'movieid') this.id) : super._();
 
-  factory _$_RemoveMovie.fromJson(Map<String, dynamic> json) =>
-      _$$_RemoveMovieFromJson(json);
+  factory _$RemoveMovieImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RemoveMovieImplFromJson(json);
 
   @override
   @JsonKey(name: 'movieid')
@@ -113,26 +121,28 @@ class _$_RemoveMovie extends _RemoveMovie {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RemoveMovie &&
+            other is _$RemoveMovieImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoveMovie
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RemoveMovieCopyWith<_$_RemoveMovie> get copyWith =>
-      __$$_RemoveMovieCopyWithImpl<_$_RemoveMovie>(this, _$identity);
+  _$$RemoveMovieImplCopyWith<_$RemoveMovieImpl> get copyWith =>
+      __$$RemoveMovieImplCopyWithImpl<_$RemoveMovieImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RemoveMovieToJson(
+    return _$$RemoveMovieImplToJson(
       this,
     );
   }
@@ -140,17 +150,20 @@ class _$_RemoveMovie extends _RemoveMovie {
 
 abstract class _RemoveMovie extends RemoveMovie {
   const factory _RemoveMovie(@JsonKey(name: 'movieid') final int id) =
-      _$_RemoveMovie;
+      _$RemoveMovieImpl;
   const _RemoveMovie._() : super._();
 
   factory _RemoveMovie.fromJson(Map<String, dynamic> json) =
-      _$_RemoveMovie.fromJson;
+      _$RemoveMovieImpl.fromJson;
 
   @override
   @JsonKey(name: 'movieid')
   int get id;
+
+  /// Create a copy of RemoveMovie
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RemoveMovieCopyWith<_$_RemoveMovie> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RemoveMovieImplCopyWith<_$RemoveMovieImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

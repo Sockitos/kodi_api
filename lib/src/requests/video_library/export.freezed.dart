@@ -12,7 +12,7 @@ part of 'export.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Export _$ExportFromJson(Map<String, dynamic> json) {
   return _Export.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Export {
   KodiVideoLibraryExportOptions? get options =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this Export to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExportCopyWith<Export> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -51,6 +55,8 @@ class _$ExportCopyWithImpl<$Res, $Val extends Export>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -64,6 +70,8 @@ class _$ExportCopyWithImpl<$Res, $Val extends Export>
     ) as $Val);
   }
 
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoLibraryExportOptionsCopyWith<$Res>? get options {
@@ -79,9 +87,10 @@ class _$ExportCopyWithImpl<$Res, $Val extends Export>
 }
 
 /// @nodoc
-abstract class _$$_ExportCopyWith<$Res> implements $ExportCopyWith<$Res> {
-  factory _$$_ExportCopyWith(_$_Export value, $Res Function(_$_Export) then) =
-      __$$_ExportCopyWithImpl<$Res>;
+abstract class _$$ExportImplCopyWith<$Res> implements $ExportCopyWith<$Res> {
+  factory _$$ExportImplCopyWith(
+          _$ExportImpl value, $Res Function(_$ExportImpl) then) =
+      __$$ExportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,18 +102,21 @@ abstract class _$$_ExportCopyWith<$Res> implements $ExportCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ExportCopyWithImpl<$Res>
-    extends _$ExportCopyWithImpl<$Res, _$_Export>
-    implements _$$_ExportCopyWith<$Res> {
-  __$$_ExportCopyWithImpl(_$_Export _value, $Res Function(_$_Export) _then)
+class __$$ExportImplCopyWithImpl<$Res>
+    extends _$ExportCopyWithImpl<$Res, _$ExportImpl>
+    implements _$$ExportImplCopyWith<$Res> {
+  __$$ExportImplCopyWithImpl(
+      _$ExportImpl _value, $Res Function(_$ExportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? options = freezed,
   }) {
-    return _then(_$_Export(
+    return _then(_$ExportImpl(
       options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
@@ -115,12 +127,12 @@ class __$$_ExportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Export extends _Export {
-  const _$_Export({@KodiVideoLibraryExportOptionsConverter() this.options})
+class _$ExportImpl extends _Export {
+  const _$ExportImpl({@KodiVideoLibraryExportOptionsConverter() this.options})
       : super._();
 
-  factory _$_Export.fromJson(Map<String, dynamic> json) =>
-      _$$_ExportFromJson(json);
+  factory _$ExportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExportImplFromJson(json);
 
   @override
   @KodiVideoLibraryExportOptionsConverter()
@@ -132,26 +144,28 @@ class _$_Export extends _Export {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Export &&
+            other is _$ExportImpl &&
             (identical(other.options, options) || other.options == options));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, options);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExportCopyWith<_$_Export> get copyWith =>
-      __$$_ExportCopyWithImpl<_$_Export>(this, _$identity);
+  _$$ExportImplCopyWith<_$ExportImpl> get copyWith =>
+      __$$ExportImplCopyWithImpl<_$ExportImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExportToJson(
+    return _$$ExportImplToJson(
       this,
     );
   }
@@ -160,17 +174,20 @@ class _$_Export extends _Export {
 abstract class _Export extends Export {
   const factory _Export(
       {@KodiVideoLibraryExportOptionsConverter()
-      final KodiVideoLibraryExportOptions? options}) = _$_Export;
+      final KodiVideoLibraryExportOptions? options}) = _$ExportImpl;
   const _Export._() : super._();
 
-  factory _Export.fromJson(Map<String, dynamic> json) = _$_Export.fromJson;
+  factory _Export.fromJson(Map<String, dynamic> json) = _$ExportImpl.fromJson;
 
   @override
   @KodiVideoLibraryExportOptionsConverter()
   KodiVideoLibraryExportOptions? get options;
+
+  /// Create a copy of Export
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ExportCopyWith<_$_Export> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ExportImplCopyWith<_$ExportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -244,6 +261,8 @@ mixin _$KodiVideoLibraryExportOptions {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiVideoLibraryExportOptions to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -266,34 +285,39 @@ class _$KodiVideoLibraryExportOptionsCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiVideoLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryExportOptionsPathCopyWith<$Res> {
-  factory _$$_KodiVideoLibraryExportOptionsPathCopyWith(
-          _$_KodiVideoLibraryExportOptionsPath value,
-          $Res Function(_$_KodiVideoLibraryExportOptionsPath) then) =
-      __$$_KodiVideoLibraryExportOptionsPathCopyWithImpl<$Res>;
+abstract class _$$KodiVideoLibraryExportOptionsPathImplCopyWith<$Res> {
+  factory _$$KodiVideoLibraryExportOptionsPathImplCopyWith(
+          _$KodiVideoLibraryExportOptionsPathImpl value,
+          $Res Function(_$KodiVideoLibraryExportOptionsPathImpl) then) =
+      __$$KodiVideoLibraryExportOptionsPathImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String path});
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryExportOptionsPathCopyWithImpl<$Res>
+class __$$KodiVideoLibraryExportOptionsPathImplCopyWithImpl<$Res>
     extends _$KodiVideoLibraryExportOptionsCopyWithImpl<$Res,
-        _$_KodiVideoLibraryExportOptionsPath>
-    implements _$$_KodiVideoLibraryExportOptionsPathCopyWith<$Res> {
-  __$$_KodiVideoLibraryExportOptionsPathCopyWithImpl(
-      _$_KodiVideoLibraryExportOptionsPath _value,
-      $Res Function(_$_KodiVideoLibraryExportOptionsPath) _then)
+        _$KodiVideoLibraryExportOptionsPathImpl>
+    implements _$$KodiVideoLibraryExportOptionsPathImplCopyWith<$Res> {
+  __$$KodiVideoLibraryExportOptionsPathImplCopyWithImpl(
+      _$KodiVideoLibraryExportOptionsPathImpl _value,
+      $Res Function(_$KodiVideoLibraryExportOptionsPathImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = null,
   }) {
-    return _then(_$_KodiVideoLibraryExportOptionsPath(
+    return _then(_$KodiVideoLibraryExportOptionsPathImpl(
       null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -304,14 +328,15 @@ class __$$_KodiVideoLibraryExportOptionsPathCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryExportOptionsPath
+class _$KodiVideoLibraryExportOptionsPathImpl
     implements _KodiVideoLibraryExportOptionsPath {
-  const _$_KodiVideoLibraryExportOptionsPath(this.path, {final String? $type})
+  const _$KodiVideoLibraryExportOptionsPathImpl(this.path,
+      {final String? $type})
       : $type = $type ?? 'path';
 
-  factory _$_KodiVideoLibraryExportOptionsPath.fromJson(
+  factory _$KodiVideoLibraryExportOptionsPathImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryExportOptionsPathFromJson(json);
+      _$$KodiVideoLibraryExportOptionsPathImplFromJson(json);
 
   @override
   final String path;
@@ -325,24 +350,26 @@ class _$_KodiVideoLibraryExportOptionsPath
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoLibraryExportOptionsPath &&
+            other is _$KodiVideoLibraryExportOptionsPathImpl &&
             (identical(other.path, path) || other.path == path));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryExportOptionsPathCopyWith<
-          _$_KodiVideoLibraryExportOptionsPath>
-      get copyWith => __$$_KodiVideoLibraryExportOptionsPathCopyWithImpl<
-          _$_KodiVideoLibraryExportOptionsPath>(this, _$identity);
+  _$$KodiVideoLibraryExportOptionsPathImplCopyWith<
+          _$KodiVideoLibraryExportOptionsPathImpl>
+      get copyWith => __$$KodiVideoLibraryExportOptionsPathImplCopyWithImpl<
+          _$KodiVideoLibraryExportOptionsPathImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -420,7 +447,7 @@ class _$_KodiVideoLibraryExportOptionsPath
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryExportOptionsPathToJson(
+    return _$$KodiVideoLibraryExportOptionsPathImplToJson(
       this,
     );
   }
@@ -429,28 +456,31 @@ class _$_KodiVideoLibraryExportOptionsPath
 abstract class _KodiVideoLibraryExportOptionsPath
     implements KodiVideoLibraryExportOptions {
   const factory _KodiVideoLibraryExportOptionsPath(final String path) =
-      _$_KodiVideoLibraryExportOptionsPath;
+      _$KodiVideoLibraryExportOptionsPathImpl;
 
   factory _KodiVideoLibraryExportOptionsPath.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryExportOptionsPath.fromJson;
+      _$KodiVideoLibraryExportOptionsPathImpl.fromJson;
 
   String get path;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryExportOptionsPathCopyWith<
-          _$_KodiVideoLibraryExportOptionsPath>
+
+  /// Create a copy of KodiVideoLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryExportOptionsPathImplCopyWith<
+          _$KodiVideoLibraryExportOptionsPathImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWith<
+abstract class _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWith<
     $Res> {
-  factory _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWith(
-          _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite value,
+  factory _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWith(
+          _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl value,
           $Res Function(
-                  _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite)
+                  _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl)
               then) =
-      __$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWithImpl<
+      __$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWithImpl<
           $Res>;
   @useResult
   $Res call(
@@ -460,19 +490,22 @@ abstract class _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWi
 }
 
 /// @nodoc
-class __$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWithImpl<
+class __$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWithImpl<
         $Res>
     extends _$KodiVideoLibraryExportOptionsCopyWithImpl<$Res,
-        _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite>
+        _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl>
     implements
-        _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWith<
+        _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWith<
             $Res> {
-  __$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWithImpl(
-      _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite _value,
-      $Res Function(_$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite)
+  __$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWithImpl(
+      _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl _value,
+      $Res Function(
+              _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl)
           _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -480,7 +513,7 @@ class __$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWithImpl<
     Object? images = null,
     Object? overwrite = null,
   }) {
-    return _then(_$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite(
+    return _then(_$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl(
       actorThumbs: null == actorThumbs
           ? _value.actorThumbs
           : actorThumbs // ignore: cast_nullable_to_non_nullable
@@ -499,18 +532,19 @@ class __$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWithImpl<
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite
+class _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl
     implements _KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite {
-  const _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite(
+  const _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl(
       {@JsonKey(name: 'actorthumbs') this.actorThumbs = false,
       this.images = false,
       this.overwrite = false,
       final String? $type})
       : $type = $type ?? 'actorThumbsImagesOverwrite';
 
-  factory _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite.fromJson(
+  factory _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteFromJson(json);
+      _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplFromJson(
+          json);
 
   @override
   @JsonKey(name: 'actorthumbs')
@@ -531,11 +565,11 @@ class _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other
-                is _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite &&
+                is _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl &&
             (identical(other.actorThumbs, actorThumbs) ||
                 other.actorThumbs == actorThumbs) &&
             (identical(other.images, images) || other.images == images) &&
@@ -543,18 +577,20 @@ class _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite
                 other.overwrite == overwrite));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, actorThumbs, images, overwrite);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWith<
-          _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite>
+  _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWith<
+          _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl>
       get copyWith =>
-          __$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWithImpl<
-                  _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite>(
+          __$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWithImpl<
+                  _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl>(
               this, _$identity);
 
   @override
@@ -633,7 +669,7 @@ class _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteToJson(
+    return _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplToJson(
       this,
     );
   }
@@ -645,18 +681,21 @@ abstract class _KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite
           {@JsonKey(name: 'actorthumbs') final bool actorThumbs,
           final bool images,
           final bool overwrite}) =
-      _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite;
+      _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl;
 
   factory _KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite.fromJson;
+      _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl.fromJson;
 
   @JsonKey(name: 'actorthumbs')
   bool get actorThumbs;
   bool get images;
   bool get overwrite;
-  @JsonKey(ignore: true)
-  _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteCopyWith<
-          _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite>
+
+  /// Create a copy of KodiVideoLibraryExportOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplCopyWith<
+          _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

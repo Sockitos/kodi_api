@@ -7,8 +7,8 @@ part 'kodi_setting_details_category.g.dart';
 @freezed
 class KodiSettingDetailsCategory with _$KodiSettingDetailsCategory {
   const factory KodiSettingDetailsCategory({
-    List<KodiSettingDetailsGroup>? groups,
-    String? help,
+    Set<KodiSettingDetailsGroup>? groups,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsCategory;

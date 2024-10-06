@@ -6,14 +6,16 @@ part of 'get_available_art.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetAvailableArt _$$_GetAvailableArtFromJson(Map<String, dynamic> json) =>
-    _$_GetAvailableArt(
+_$GetAvailableArtImpl _$$GetAvailableArtImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetAvailableArtImpl(
       const KodiVideoLibraryGetAvailableArtItemConverter()
           .fromJson(json['item'] as Map<String, dynamic>),
       artType: json['arttype'] as String?,
     );
 
-Map<String, dynamic> _$$_GetAvailableArtToJson(_$_GetAvailableArt instance) {
+Map<String, dynamic> _$$GetAvailableArtImplToJson(
+    _$GetAvailableArtImpl instance) {
   final val = <String, dynamic>{
     'item': const KodiVideoLibraryGetAvailableArtItemConverter()
         .toJson(instance.item),
@@ -29,16 +31,17 @@ Map<String, dynamic> _$$_GetAvailableArtToJson(_$_GetAvailableArt instance) {
   return val;
 }
 
-_$_KodiVideoLibraryAvailableArtPath
-    _$$_KodiVideoLibraryAvailableArtPathFromJson(Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryAvailableArtPath(
+_$KodiVideoLibraryAvailableArtPathImpl
+    _$$KodiVideoLibraryAvailableArtPathImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiVideoLibraryAvailableArtPathImpl(
           artType: json['arttype'] as String?,
           previewUrl: json['previewurl'] as String?,
           url: json['url'] as String,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryAvailableArtPathToJson(
-    _$_KodiVideoLibraryAvailableArtPath instance) {
+Map<String, dynamic> _$$KodiVideoLibraryAvailableArtPathImplToJson(
+    _$KodiVideoLibraryAvailableArtPathImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -53,92 +56,93 @@ Map<String, dynamic> _$$_KodiVideoLibraryAvailableArtPathToJson(
   return val;
 }
 
-_$_KodiVideoLibraryGetAvailableArtItemEpisodeId
-    _$$_KodiVideoLibraryGetAvailableArtItemEpisodeIdFromJson(
+_$KodiVideoLibraryGetAvailableArtItemEpisodeIdImpl
+    _$$KodiVideoLibraryGetAvailableArtItemEpisodeIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetAvailableArtItemEpisodeId(
-          json['episodeid'] as int,
+        _$KodiVideoLibraryGetAvailableArtItemEpisodeIdImpl(
+          (json['episodeid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetAvailableArtItemEpisodeIdToJson(
-        _$_KodiVideoLibraryGetAvailableArtItemEpisodeId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetAvailableArtItemEpisodeIdImplToJson(
+        _$KodiVideoLibraryGetAvailableArtItemEpisodeIdImpl instance) =>
     <String, dynamic>{
       'episodeid': instance.episodeId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetAvailableArtItemTvShowId
-    _$$_KodiVideoLibraryGetAvailableArtItemTvShowIdFromJson(
+_$KodiVideoLibraryGetAvailableArtItemTvShowIdImpl
+    _$$KodiVideoLibraryGetAvailableArtItemTvShowIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetAvailableArtItemTvShowId(
-          json['tvshowid'] as int,
+        _$KodiVideoLibraryGetAvailableArtItemTvShowIdImpl(
+          (json['tvshowid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetAvailableArtItemTvShowIdToJson(
-        _$_KodiVideoLibraryGetAvailableArtItemTvShowId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetAvailableArtItemTvShowIdImplToJson(
+        _$KodiVideoLibraryGetAvailableArtItemTvShowIdImpl instance) =>
     <String, dynamic>{
       'tvshowid': instance.tvShowId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetAvailableArtItemSeasonId
-    _$$_KodiVideoLibraryGetAvailableArtItemSeasonIdFromJson(
+_$KodiVideoLibraryGetAvailableArtItemSeasonIdImpl
+    _$$KodiVideoLibraryGetAvailableArtItemSeasonIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetAvailableArtItemSeasonId(
-          json['seasonid'] as int,
+        _$KodiVideoLibraryGetAvailableArtItemSeasonIdImpl(
+          (json['seasonid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetAvailableArtItemSeasonIdToJson(
-        _$_KodiVideoLibraryGetAvailableArtItemSeasonId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetAvailableArtItemSeasonIdImplToJson(
+        _$KodiVideoLibraryGetAvailableArtItemSeasonIdImpl instance) =>
     <String, dynamic>{
       'seasonid': instance.seasonId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetAvailableArtItemMovieId
-    _$$_KodiVideoLibraryGetAvailableArtItemMovieIdFromJson(
+_$KodiVideoLibraryGetAvailableArtItemMovieIdImpl
+    _$$KodiVideoLibraryGetAvailableArtItemMovieIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetAvailableArtItemMovieId(
-          json['movieid'] as int,
+        _$KodiVideoLibraryGetAvailableArtItemMovieIdImpl(
+          (json['movieid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetAvailableArtItemMovieIdToJson(
-        _$_KodiVideoLibraryGetAvailableArtItemMovieId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetAvailableArtItemMovieIdImplToJson(
+        _$KodiVideoLibraryGetAvailableArtItemMovieIdImpl instance) =>
     <String, dynamic>{
       'movieid': instance.movieId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetAvailableArtItemSetId
-    _$$_KodiVideoLibraryGetAvailableArtItemSetIdFromJson(
+_$KodiVideoLibraryGetAvailableArtItemSetIdImpl
+    _$$KodiVideoLibraryGetAvailableArtItemSetIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetAvailableArtItemSetId(
-          json['setid'] as int,
+        _$KodiVideoLibraryGetAvailableArtItemSetIdImpl(
+          (json['setid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetAvailableArtItemSetIdToJson(
-        _$_KodiVideoLibraryGetAvailableArtItemSetId instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryGetAvailableArtItemSetIdImplToJson(
+        _$KodiVideoLibraryGetAvailableArtItemSetIdImpl instance) =>
     <String, dynamic>{
       'setid': instance.setId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryGetAvailableArtItemMusicVideoId
-    _$$_KodiVideoLibraryGetAvailableArtItemMusicVideoIdFromJson(
+_$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImpl
+    _$$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryGetAvailableArtItemMusicVideoId(
-          musicVideoId: json['music_video_id'] as int,
+        _$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImpl(
+          musicVideoId: (json['music_video_id'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryGetAvailableArtItemMusicVideoIdToJson(
-        _$_KodiVideoLibraryGetAvailableArtItemMusicVideoId instance) =>
-    <String, dynamic>{
-      'music_video_id': instance.musicVideoId,
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic>
+    _$$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImplToJson(
+            _$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImpl instance) =>
+        <String, dynamic>{
+          'music_video_id': instance.musicVideoId,
+          'runtimeType': instance.$type,
+        };

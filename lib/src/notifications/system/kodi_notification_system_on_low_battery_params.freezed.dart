@@ -12,7 +12,7 @@ part of 'kodi_notification_system_on_low_battery_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationSystemOnLowBatteryParams
     _$KodiNotificationSystemOnLowBatteryParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationSystemOnLowBatteryParams {
   KodiNotificationSystemOnLowBatteryParamsData? get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnLowBatteryParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnLowBatteryParamsCopyWith<
           KodiNotificationSystemOnLowBatteryParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -59,6 +63,8 @@ class _$KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class _$KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationSystemOnLowBatteryParamsDataCopyWith<$Res>? get data {
@@ -92,12 +100,12 @@ class _$KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnLowBatteryParamsCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnLowBatteryParamsImplCopyWith<$Res>
     implements $KodiNotificationSystemOnLowBatteryParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnLowBatteryParamsCopyWith(
-          _$_KodiNotificationSystemOnLowBatteryParams value,
-          $Res Function(_$_KodiNotificationSystemOnLowBatteryParams) then) =
-      __$$_KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnLowBatteryParamsImplCopyWith(
+          _$KodiNotificationSystemOnLowBatteryParamsImpl value,
+          $Res Function(_$KodiNotificationSystemOnLowBatteryParamsImpl) then) =
+      __$$KodiNotificationSystemOnLowBatteryParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -108,22 +116,24 @@ abstract class _$$_KodiNotificationSystemOnLowBatteryParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnLowBatteryParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnLowBatteryParams>
-    implements _$$_KodiNotificationSystemOnLowBatteryParamsCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnLowBatteryParamsCopyWithImpl(
-      _$_KodiNotificationSystemOnLowBatteryParams _value,
-      $Res Function(_$_KodiNotificationSystemOnLowBatteryParams) _then)
+        _$KodiNotificationSystemOnLowBatteryParamsImpl>
+    implements _$$KodiNotificationSystemOnLowBatteryParamsImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnLowBatteryParamsImplCopyWithImpl(
+      _$KodiNotificationSystemOnLowBatteryParamsImpl _value,
+      $Res Function(_$KodiNotificationSystemOnLowBatteryParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = freezed,
   }) {
-    return _then(_$_KodiNotificationSystemOnLowBatteryParams(
+    return _then(_$KodiNotificationSystemOnLowBatteryParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -138,14 +148,14 @@ class __$$_KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnLowBatteryParams
+class _$KodiNotificationSystemOnLowBatteryParamsImpl
     implements _KodiNotificationSystemOnLowBatteryParams {
-  const _$_KodiNotificationSystemOnLowBatteryParams(
+  const _$KodiNotificationSystemOnLowBatteryParamsImpl(
       {required this.sender, this.data});
 
-  factory _$_KodiNotificationSystemOnLowBatteryParams.fromJson(
+  factory _$KodiNotificationSystemOnLowBatteryParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnLowBatteryParamsFromJson(json);
+      _$$KodiNotificationSystemOnLowBatteryParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -158,29 +168,32 @@ class _$_KodiNotificationSystemOnLowBatteryParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnLowBatteryParams &&
+            other is _$KodiNotificationSystemOnLowBatteryParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnLowBatteryParamsCopyWith<
-          _$_KodiNotificationSystemOnLowBatteryParams>
-      get copyWith => __$$_KodiNotificationSystemOnLowBatteryParamsCopyWithImpl<
-          _$_KodiNotificationSystemOnLowBatteryParams>(this, _$identity);
+  _$$KodiNotificationSystemOnLowBatteryParamsImplCopyWith<
+          _$KodiNotificationSystemOnLowBatteryParamsImpl>
+      get copyWith =>
+          __$$KodiNotificationSystemOnLowBatteryParamsImplCopyWithImpl<
+              _$KodiNotificationSystemOnLowBatteryParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnLowBatteryParamsToJson(
+    return _$$KodiNotificationSystemOnLowBatteryParamsImplToJson(
       this,
     );
   }
@@ -191,20 +204,23 @@ abstract class _KodiNotificationSystemOnLowBatteryParams
   const factory _KodiNotificationSystemOnLowBatteryParams(
           {required final String sender,
           final KodiNotificationSystemOnLowBatteryParamsData? data}) =
-      _$_KodiNotificationSystemOnLowBatteryParams;
+      _$KodiNotificationSystemOnLowBatteryParamsImpl;
 
   factory _KodiNotificationSystemOnLowBatteryParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnLowBatteryParams.fromJson;
+      _$KodiNotificationSystemOnLowBatteryParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationSystemOnLowBatteryParamsData? get data;
+
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnLowBatteryParamsCopyWith<
-          _$_KodiNotificationSystemOnLowBatteryParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnLowBatteryParamsImplCopyWith<
+          _$KodiNotificationSystemOnLowBatteryParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -218,8 +234,12 @@ KodiNotificationSystemOnLowBatteryParamsData
 mixin _$KodiNotificationSystemOnLowBatteryParamsData {
   String get test => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnLowBatteryParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnLowBatteryParamsDataCopyWith<
           KodiNotificationSystemOnLowBatteryParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -248,6 +268,8 @@ class _$KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -263,33 +285,37 @@ class _$KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWith<$Res>
     implements $KodiNotificationSystemOnLowBatteryParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWith(
-          _$_KodiNotificationSystemOnLowBatteryParamsData value,
-          $Res Function(_$_KodiNotificationSystemOnLowBatteryParamsData) then) =
-      __$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWith(
+          _$KodiNotificationSystemOnLowBatteryParamsDataImpl value,
+          $Res Function(_$KodiNotificationSystemOnLowBatteryParamsDataImpl)
+              then) =
+      __$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String test});
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnLowBatteryParamsData>
-    implements _$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl(
-      _$_KodiNotificationSystemOnLowBatteryParamsData _value,
-      $Res Function(_$_KodiNotificationSystemOnLowBatteryParamsData) _then)
+        _$KodiNotificationSystemOnLowBatteryParamsDataImpl>
+    implements
+        _$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWithImpl(
+      _$KodiNotificationSystemOnLowBatteryParamsDataImpl _value,
+      $Res Function(_$KodiNotificationSystemOnLowBatteryParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? test = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnLowBatteryParamsData(
+    return _then(_$KodiNotificationSystemOnLowBatteryParamsDataImpl(
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -300,13 +326,14 @@ class __$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnLowBatteryParamsData
+class _$KodiNotificationSystemOnLowBatteryParamsDataImpl
     implements _KodiNotificationSystemOnLowBatteryParamsData {
-  const _$_KodiNotificationSystemOnLowBatteryParamsData({required this.test});
+  const _$KodiNotificationSystemOnLowBatteryParamsDataImpl(
+      {required this.test});
 
-  factory _$_KodiNotificationSystemOnLowBatteryParamsData.fromJson(
+  factory _$KodiNotificationSystemOnLowBatteryParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnLowBatteryParamsDataFromJson(json);
+      _$$KodiNotificationSystemOnLowBatteryParamsDataImplFromJson(json);
 
   @override
   final String test;
@@ -317,30 +344,32 @@ class _$_KodiNotificationSystemOnLowBatteryParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnLowBatteryParamsData &&
+            other is _$KodiNotificationSystemOnLowBatteryParamsDataImpl &&
             (identical(other.test, test) || other.test == test));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, test);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWith<
-          _$_KodiNotificationSystemOnLowBatteryParamsData>
+  _$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnLowBatteryParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWithImpl<
-                  _$_KodiNotificationSystemOnLowBatteryParamsData>(
+          __$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWithImpl<
+                  _$KodiNotificationSystemOnLowBatteryParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnLowBatteryParamsDataToJson(
+    return _$$KodiNotificationSystemOnLowBatteryParamsDataImplToJson(
       this,
     );
   }
@@ -350,17 +379,20 @@ abstract class _KodiNotificationSystemOnLowBatteryParamsData
     implements KodiNotificationSystemOnLowBatteryParamsData {
   const factory _KodiNotificationSystemOnLowBatteryParamsData(
           {required final String test}) =
-      _$_KodiNotificationSystemOnLowBatteryParamsData;
+      _$KodiNotificationSystemOnLowBatteryParamsDataImpl;
 
   factory _KodiNotificationSystemOnLowBatteryParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnLowBatteryParamsData.fromJson;
+      _$KodiNotificationSystemOnLowBatteryParamsDataImpl.fromJson;
 
   @override
   String get test;
+
+  /// Create a copy of KodiNotificationSystemOnLowBatteryParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnLowBatteryParamsDataCopyWith<
-          _$_KodiNotificationSystemOnLowBatteryParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnLowBatteryParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnLowBatteryParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

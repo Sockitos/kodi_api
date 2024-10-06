@@ -12,7 +12,7 @@ part of 'kodi_setting_details_control.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiSettingDetailsControl _$KodiSettingDetailsControlFromJson(
     Map<String, dynamic> json) {
@@ -51,27 +51,27 @@ mixin _$KodiSettingDetailsControl {
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -79,7 +79,7 @@ mixin _$KodiSettingDetailsControl {
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -101,27 +101,27 @@ mixin _$KodiSettingDetailsControl {
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -129,7 +129,7 @@ mixin _$KodiSettingDetailsControl {
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -151,27 +151,27 @@ mixin _$KodiSettingDetailsControl {
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -179,7 +179,7 @@ mixin _$KodiSettingDetailsControl {
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -233,8 +233,13 @@ mixin _$KodiSettingDetailsControl {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingDetailsControl to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSettingDetailsControlCopyWith<KodiSettingDetailsControl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -259,6 +264,8 @@ class _$KodiSettingDetailsControlCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -274,12 +281,12 @@ class _$KodiSettingDetailsControlCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlToggleCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlToggleImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlToggleCopyWith(
-          _$_KodiSettingDetailsControlToggle value,
-          $Res Function(_$_KodiSettingDetailsControlToggle) then) =
-      __$$_KodiSettingDetailsControlToggleCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlToggleImplCopyWith(
+          _$KodiSettingDetailsControlToggleImpl value,
+          $Res Function(_$KodiSettingDetailsControlToggleImpl) then) =
+      __$$KodiSettingDetailsControlToggleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -289,15 +296,17 @@ abstract class _$$_KodiSettingDetailsControlToggleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlToggleCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlToggleImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlToggle>
-    implements _$$_KodiSettingDetailsControlToggleCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlToggleCopyWithImpl(
-      _$_KodiSettingDetailsControlToggle _value,
-      $Res Function(_$_KodiSettingDetailsControlToggle) _then)
+        _$KodiSettingDetailsControlToggleImpl>
+    implements _$$KodiSettingDetailsControlToggleImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlToggleImplCopyWithImpl(
+      _$KodiSettingDetailsControlToggleImpl _value,
+      $Res Function(_$KodiSettingDetailsControlToggleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,7 +314,7 @@ class __$$_KodiSettingDetailsControlToggleCopyWithImpl<$Res>
     Object? type = null,
     Object? delayed = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlToggle(
+    return _then(_$KodiSettingDetailsControlToggleImpl(
       format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
@@ -324,14 +333,14 @@ class __$$_KodiSettingDetailsControlToggleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlToggle
+class _$KodiSettingDetailsControlToggleImpl
     implements _KodiSettingDetailsControlToggle {
-  const _$_KodiSettingDetailsControlToggle(
+  const _$KodiSettingDetailsControlToggleImpl(
       {required this.format, required this.type, required this.delayed});
 
-  factory _$_KodiSettingDetailsControlToggle.fromJson(
+  factory _$KodiSettingDetailsControlToggleImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlToggleFromJson(json);
+      _$$KodiSettingDetailsControlToggleImplFromJson(json);
 
   @override
   final KodiSettingDetailsControlCheckmarkFormat format;
@@ -346,26 +355,28 @@ class _$_KodiSettingDetailsControlToggle
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlToggle &&
+            other is _$KodiSettingDetailsControlToggleImpl &&
             (identical(other.format, format) || other.format == format) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.delayed, delayed) || other.delayed == delayed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, format, type, delayed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlToggleCopyWith<
-          _$_KodiSettingDetailsControlToggle>
-      get copyWith => __$$_KodiSettingDetailsControlToggleCopyWithImpl<
-          _$_KodiSettingDetailsControlToggle>(this, _$identity);
+  _$$KodiSettingDetailsControlToggleImplCopyWith<
+          _$KodiSettingDetailsControlToggleImpl>
+      get copyWith => __$$KodiSettingDetailsControlToggleImplCopyWithImpl<
+          _$KodiSettingDetailsControlToggleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -374,27 +385,27 @@ class _$_KodiSettingDetailsControlToggle
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -402,7 +413,7 @@ class _$_KodiSettingDetailsControlToggle
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -427,27 +438,27 @@ class _$_KodiSettingDetailsControlToggle
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -455,7 +466,7 @@ class _$_KodiSettingDetailsControlToggle
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -480,27 +491,27 @@ class _$_KodiSettingDetailsControlToggle
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -508,7 +519,7 @@ class _$_KodiSettingDetailsControlToggle
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -581,7 +592,7 @@ class _$_KodiSettingDetailsControlToggle
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlToggleToJson(
+    return _$$KodiSettingDetailsControlToggleImplToJson(
       this,
     );
   }
@@ -592,10 +603,10 @@ abstract class _KodiSettingDetailsControlToggle
   const factory _KodiSettingDetailsControlToggle(
       {required final KodiSettingDetailsControlCheckmarkFormat format,
       required final KodiSettingDetailsControlCheckmarkType type,
-      required final bool delayed}) = _$_KodiSettingDetailsControlToggle;
+      required final bool delayed}) = _$KodiSettingDetailsControlToggleImpl;
 
   factory _KodiSettingDetailsControlToggle.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsControlToggle.fromJson;
+      _$KodiSettingDetailsControlToggleImpl.fromJson;
 
   @override
   KodiSettingDetailsControlCheckmarkFormat get format;
@@ -603,58 +614,63 @@ abstract class _KodiSettingDetailsControlToggle
   KodiSettingDetailsControlCheckmarkType get type;
   @override
   bool get delayed;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlToggleCopyWith<
-          _$_KodiSettingDetailsControlToggle>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlToggleImplCopyWith<
+          _$KodiSettingDetailsControlToggleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlSpinnerCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlSpinnerImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlSpinnerCopyWith(
-          _$_KodiSettingDetailsControlSpinner value,
-          $Res Function(_$_KodiSettingDetailsControlSpinner) then) =
-      __$$_KodiSettingDetailsControlSpinnerCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlSpinnerImplCopyWith(
+          _$KodiSettingDetailsControlSpinnerImpl value,
+          $Res Function(_$KodiSettingDetailsControlSpinnerImpl) then) =
+      __$$KodiSettingDetailsControlSpinnerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'formatlabel') String? formatLabel,
-      @JsonKey(name: 'minimumlabel') String? minimumLabel,
+      {@JsonKey(name: 'formatlabel') String formatLabel,
+      @JsonKey(name: 'minimumlabel') String minimumLabel,
       KodiSettingDetailsControlSpinnerType type,
       bool delayed,
       String format});
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlSpinnerCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlSpinnerImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlSpinner>
-    implements _$$_KodiSettingDetailsControlSpinnerCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlSpinnerCopyWithImpl(
-      _$_KodiSettingDetailsControlSpinner _value,
-      $Res Function(_$_KodiSettingDetailsControlSpinner) _then)
+        _$KodiSettingDetailsControlSpinnerImpl>
+    implements _$$KodiSettingDetailsControlSpinnerImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlSpinnerImplCopyWithImpl(
+      _$KodiSettingDetailsControlSpinnerImpl _value,
+      $Res Function(_$KodiSettingDetailsControlSpinnerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? formatLabel = freezed,
-    Object? minimumLabel = freezed,
+    Object? formatLabel = null,
+    Object? minimumLabel = null,
     Object? type = null,
     Object? delayed = null,
     Object? format = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlSpinner(
-      formatLabel: freezed == formatLabel
+    return _then(_$KodiSettingDetailsControlSpinnerImpl(
+      formatLabel: null == formatLabel
           ? _value.formatLabel
           : formatLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      minimumLabel: freezed == minimumLabel
+              as String,
+      minimumLabel: null == minimumLabel
           ? _value.minimumLabel
           : minimumLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -673,25 +689,25 @@ class __$$_KodiSettingDetailsControlSpinnerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlSpinner
+class _$KodiSettingDetailsControlSpinnerImpl
     implements _KodiSettingDetailsControlSpinner {
-  const _$_KodiSettingDetailsControlSpinner(
-      {@JsonKey(name: 'formatlabel') this.formatLabel,
-      @JsonKey(name: 'minimumlabel') this.minimumLabel,
+  const _$KodiSettingDetailsControlSpinnerImpl(
+      {@JsonKey(name: 'formatlabel') this.formatLabel = '',
+      @JsonKey(name: 'minimumlabel') this.minimumLabel = '',
       required this.type,
       required this.delayed,
       required this.format});
 
-  factory _$_KodiSettingDetailsControlSpinner.fromJson(
+  factory _$KodiSettingDetailsControlSpinnerImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlSpinnerFromJson(json);
+      _$$KodiSettingDetailsControlSpinnerImplFromJson(json);
 
   @override
   @JsonKey(name: 'formatlabel')
-  final String? formatLabel;
+  final String formatLabel;
   @override
   @JsonKey(name: 'minimumlabel')
-  final String? minimumLabel;
+  final String minimumLabel;
   @override
   final KodiSettingDetailsControlSpinnerType type;
   @override
@@ -705,10 +721,10 @@ class _$_KodiSettingDetailsControlSpinner
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlSpinner &&
+            other is _$KodiSettingDetailsControlSpinnerImpl &&
             (identical(other.formatLabel, formatLabel) ||
                 other.formatLabel == formatLabel) &&
             (identical(other.minimumLabel, minimumLabel) ||
@@ -718,18 +734,20 @@ class _$_KodiSettingDetailsControlSpinner
             (identical(other.format, format) || other.format == format));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, formatLabel, minimumLabel, type, delayed, format);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlSpinnerCopyWith<
-          _$_KodiSettingDetailsControlSpinner>
-      get copyWith => __$$_KodiSettingDetailsControlSpinnerCopyWithImpl<
-          _$_KodiSettingDetailsControlSpinner>(this, _$identity);
+  _$$KodiSettingDetailsControlSpinnerImplCopyWith<
+          _$KodiSettingDetailsControlSpinnerImpl>
+      get copyWith => __$$KodiSettingDetailsControlSpinnerImplCopyWithImpl<
+          _$KodiSettingDetailsControlSpinnerImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -738,27 +756,27 @@ class _$_KodiSettingDetailsControlSpinner
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -766,7 +784,7 @@ class _$_KodiSettingDetailsControlSpinner
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -791,27 +809,27 @@ class _$_KodiSettingDetailsControlSpinner
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -819,7 +837,7 @@ class _$_KodiSettingDetailsControlSpinner
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -844,27 +862,27 @@ class _$_KodiSettingDetailsControlSpinner
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -872,7 +890,7 @@ class _$_KodiSettingDetailsControlSpinner
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -945,7 +963,7 @@ class _$_KodiSettingDetailsControlSpinner
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlSpinnerToJson(
+    return _$$KodiSettingDetailsControlSpinnerImplToJson(
       this,
     );
   }
@@ -954,75 +972,81 @@ class _$_KodiSettingDetailsControlSpinner
 abstract class _KodiSettingDetailsControlSpinner
     implements KodiSettingDetailsControl {
   const factory _KodiSettingDetailsControlSpinner(
-      {@JsonKey(name: 'formatlabel') final String? formatLabel,
-      @JsonKey(name: 'minimumlabel') final String? minimumLabel,
+      {@JsonKey(name: 'formatlabel') final String formatLabel,
+      @JsonKey(name: 'minimumlabel') final String minimumLabel,
       required final KodiSettingDetailsControlSpinnerType type,
       required final bool delayed,
-      required final String format}) = _$_KodiSettingDetailsControlSpinner;
+      required final String format}) = _$KodiSettingDetailsControlSpinnerImpl;
 
   factory _KodiSettingDetailsControlSpinner.fromJson(
-      Map<String, dynamic> json) = _$_KodiSettingDetailsControlSpinner.fromJson;
+          Map<String, dynamic> json) =
+      _$KodiSettingDetailsControlSpinnerImpl.fromJson;
 
   @JsonKey(name: 'formatlabel')
-  String? get formatLabel;
+  String get formatLabel;
   @JsonKey(name: 'minimumlabel')
-  String? get minimumLabel;
+  String get minimumLabel;
   @override
   KodiSettingDetailsControlSpinnerType get type;
   @override
   bool get delayed;
   @override
   String get format;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlSpinnerCopyWith<
-          _$_KodiSettingDetailsControlSpinner>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlSpinnerImplCopyWith<
+          _$KodiSettingDetailsControlSpinnerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlEditCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlEditImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlEditCopyWith(
-          _$_KodiSettingDetailsControlEdit value,
-          $Res Function(_$_KodiSettingDetailsControlEdit) then) =
-      __$$_KodiSettingDetailsControlEditCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlEditImplCopyWith(
+          _$KodiSettingDetailsControlEditImpl value,
+          $Res Function(_$KodiSettingDetailsControlEditImpl) then) =
+      __$$KodiSettingDetailsControlEditImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {bool? hidden,
+      {bool hidden,
       KodiSettingDetailsControlEditType type,
       @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlEditCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlEditImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlEdit>
-    implements _$$_KodiSettingDetailsControlEditCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlEditCopyWithImpl(
-      _$_KodiSettingDetailsControlEdit _value,
-      $Res Function(_$_KodiSettingDetailsControlEdit) _then)
+        _$KodiSettingDetailsControlEditImpl>
+    implements _$$KodiSettingDetailsControlEditImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlEditImplCopyWithImpl(
+      _$KodiSettingDetailsControlEditImpl _value,
+      $Res Function(_$KodiSettingDetailsControlEditImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hidden = freezed,
+    Object? hidden = null,
     Object? type = null,
     Object? verifyNewValue = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlEdit(
-      hidden: freezed == hidden
+    return _then(_$KodiSettingDetailsControlEditImpl(
+      hidden: null == hidden
           ? _value.hidden
           : hidden // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1031,10 +1055,10 @@ class __$$_KodiSettingDetailsControlEditCopyWithImpl<$Res>
           ? _value.verifyNewValue
           : verifyNewValue // ignore: cast_nullable_to_non_nullable
               as bool,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -1049,29 +1073,30 @@ class __$$_KodiSettingDetailsControlEditCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlEdit
+class _$KodiSettingDetailsControlEditImpl
     implements _KodiSettingDetailsControlEdit {
-  const _$_KodiSettingDetailsControlEdit(
-      {this.hidden,
+  const _$KodiSettingDetailsControlEditImpl(
+      {required this.hidden,
       required this.type,
       @JsonKey(name: 'verifynewvalue') required this.verifyNewValue,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
-  factory _$_KodiSettingDetailsControlEdit.fromJson(
+  factory _$KodiSettingDetailsControlEditImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlEditFromJson(json);
+      _$$KodiSettingDetailsControlEditImplFromJson(json);
 
   @override
-  final bool? hidden;
+  final bool hidden;
   @override
   final KodiSettingDetailsControlEditType type;
   @override
   @JsonKey(name: 'verifynewvalue')
   final bool verifyNewValue;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -1083,10 +1108,10 @@ class _$_KodiSettingDetailsControlEdit
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlEdit &&
+            other is _$KodiSettingDetailsControlEditImpl &&
             (identical(other.hidden, hidden) || other.hidden == hidden) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.verifyNewValue, verifyNewValue) ||
@@ -1096,17 +1121,20 @@ class _$_KodiSettingDetailsControlEdit
             (identical(other.format, format) || other.format == format));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, hidden, type, verifyNewValue, heading, delayed, format);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlEditCopyWith<_$_KodiSettingDetailsControlEdit>
-      get copyWith => __$$_KodiSettingDetailsControlEditCopyWithImpl<
-          _$_KodiSettingDetailsControlEdit>(this, _$identity);
+  _$$KodiSettingDetailsControlEditImplCopyWith<
+          _$KodiSettingDetailsControlEditImpl>
+      get copyWith => __$$KodiSettingDetailsControlEditImplCopyWithImpl<
+          _$KodiSettingDetailsControlEditImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1115,27 +1143,27 @@ class _$_KodiSettingDetailsControlEdit
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -1143,7 +1171,7 @@ class _$_KodiSettingDetailsControlEdit
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -1168,27 +1196,27 @@ class _$_KodiSettingDetailsControlEdit
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1196,7 +1224,7 @@ class _$_KodiSettingDetailsControlEdit
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1221,27 +1249,27 @@ class _$_KodiSettingDetailsControlEdit
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1249,7 +1277,7 @@ class _$_KodiSettingDetailsControlEdit
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1322,7 +1350,7 @@ class _$_KodiSettingDetailsControlEdit
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlEditToJson(
+    return _$$KodiSettingDetailsControlEditImplToJson(
       this,
     );
   }
@@ -1331,75 +1359,81 @@ class _$_KodiSettingDetailsControlEdit
 abstract class _KodiSettingDetailsControlEdit
     implements KodiSettingDetailsControl {
   const factory _KodiSettingDetailsControlEdit(
-      {final bool? hidden,
+      {required final bool hidden,
       required final KodiSettingDetailsControlEditType type,
       @JsonKey(name: 'verifynewvalue') required final bool verifyNewValue,
-      final String? heading,
+      final String heading,
       required final bool delayed,
-      required final String format}) = _$_KodiSettingDetailsControlEdit;
+      required final String format}) = _$KodiSettingDetailsControlEditImpl;
 
   factory _KodiSettingDetailsControlEdit.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsControlEdit.fromJson;
+      _$KodiSettingDetailsControlEditImpl.fromJson;
 
-  bool? get hidden;
+  bool get hidden;
   @override
   KodiSettingDetailsControlEditType get type;
   @JsonKey(name: 'verifynewvalue')
   bool get verifyNewValue;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
   String get format;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlEditCopyWith<_$_KodiSettingDetailsControlEdit>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlEditImplCopyWith<
+          _$KodiSettingDetailsControlEditImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlButtonCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlButtonImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlButtonCopyWith(
-          _$_KodiSettingDetailsControlButton value,
-          $Res Function(_$_KodiSettingDetailsControlButton) then) =
-      __$$_KodiSettingDetailsControlButtonCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlButtonImplCopyWith(
+          _$KodiSettingDetailsControlButtonImpl value,
+          $Res Function(_$KodiSettingDetailsControlButtonImpl) then) =
+      __$$KodiSettingDetailsControlButtonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {KodiSettingDetailsControlButtonType type,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlButtonCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlButtonImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlButton>
-    implements _$$_KodiSettingDetailsControlButtonCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlButtonCopyWithImpl(
-      _$_KodiSettingDetailsControlButton _value,
-      $Res Function(_$_KodiSettingDetailsControlButton) _then)
+        _$KodiSettingDetailsControlButtonImpl>
+    implements _$$KodiSettingDetailsControlButtonImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlButtonImplCopyWithImpl(
+      _$KodiSettingDetailsControlButtonImpl _value,
+      $Res Function(_$KodiSettingDetailsControlButtonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlButton(
+    return _then(_$KodiSettingDetailsControlButtonImpl(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingDetailsControlButtonType,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -1414,22 +1448,23 @@ class __$$_KodiSettingDetailsControlButtonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlButton
+class _$KodiSettingDetailsControlButtonImpl
     implements _KodiSettingDetailsControlButton {
-  const _$_KodiSettingDetailsControlButton(
+  const _$KodiSettingDetailsControlButtonImpl(
       {required this.type,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
-  factory _$_KodiSettingDetailsControlButton.fromJson(
+  factory _$KodiSettingDetailsControlButtonImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlButtonFromJson(json);
+      _$$KodiSettingDetailsControlButtonImplFromJson(json);
 
   @override
   final KodiSettingDetailsControlButtonType type;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -1441,27 +1476,29 @@ class _$_KodiSettingDetailsControlButton
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlButton &&
+            other is _$KodiSettingDetailsControlButtonImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.heading, heading) || other.heading == heading) &&
             (identical(other.delayed, delayed) || other.delayed == delayed) &&
             (identical(other.format, format) || other.format == format));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, type, heading, delayed, format);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlButtonCopyWith<
-          _$_KodiSettingDetailsControlButton>
-      get copyWith => __$$_KodiSettingDetailsControlButtonCopyWithImpl<
-          _$_KodiSettingDetailsControlButton>(this, _$identity);
+  _$$KodiSettingDetailsControlButtonImplCopyWith<
+          _$KodiSettingDetailsControlButtonImpl>
+      get copyWith => __$$KodiSettingDetailsControlButtonImplCopyWithImpl<
+          _$KodiSettingDetailsControlButtonImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1470,27 +1507,27 @@ class _$_KodiSettingDetailsControlButton
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -1498,7 +1535,7 @@ class _$_KodiSettingDetailsControlButton
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -1523,27 +1560,27 @@ class _$_KodiSettingDetailsControlButton
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1551,7 +1588,7 @@ class _$_KodiSettingDetailsControlButton
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1576,27 +1613,27 @@ class _$_KodiSettingDetailsControlButton
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1604,7 +1641,7 @@ class _$_KodiSettingDetailsControlButton
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1677,7 +1714,7 @@ class _$_KodiSettingDetailsControlButton
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlButtonToJson(
+    return _$$KodiSettingDetailsControlButtonImplToJson(
       this,
     );
   }
@@ -1687,64 +1724,69 @@ abstract class _KodiSettingDetailsControlButton
     implements KodiSettingDetailsControl {
   const factory _KodiSettingDetailsControlButton(
       {required final KodiSettingDetailsControlButtonType type,
-      final String? heading,
+      final String heading,
       required final bool delayed,
-      required final String format}) = _$_KodiSettingDetailsControlButton;
+      required final String format}) = _$KodiSettingDetailsControlButtonImpl;
 
   factory _KodiSettingDetailsControlButton.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsControlButton.fromJson;
+      _$KodiSettingDetailsControlButtonImpl.fromJson;
 
   @override
   KodiSettingDetailsControlButtonType get type;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
   String get format;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlButtonCopyWith<
-          _$_KodiSettingDetailsControlButton>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlButtonImplCopyWith<
+          _$KodiSettingDetailsControlButtonImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlListCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlListImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlListCopyWith(
-          _$_KodiSettingDetailsControlList value,
-          $Res Function(_$_KodiSettingDetailsControlList) then) =
-      __$$_KodiSettingDetailsControlListCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlListImplCopyWith(
+          _$KodiSettingDetailsControlListImpl value,
+          $Res Function(_$KodiSettingDetailsControlListImpl) then) =
+      __$$KodiSettingDetailsControlListImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'multiselect') bool multiSelect,
       KodiSettingDetailsControlListType type,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlListCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlListImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlList>
-    implements _$$_KodiSettingDetailsControlListCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlListCopyWithImpl(
-      _$_KodiSettingDetailsControlList _value,
-      $Res Function(_$_KodiSettingDetailsControlList) _then)
+        _$KodiSettingDetailsControlListImpl>
+    implements _$$KodiSettingDetailsControlListImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlListImplCopyWithImpl(
+      _$KodiSettingDetailsControlListImpl _value,
+      $Res Function(_$KodiSettingDetailsControlListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? multiSelect = null,
     Object? type = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlList(
+    return _then(_$KodiSettingDetailsControlListImpl(
       multiSelect: null == multiSelect
           ? _value.multiSelect
           : multiSelect // ignore: cast_nullable_to_non_nullable
@@ -1753,10 +1795,10 @@ class __$$_KodiSettingDetailsControlListCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingDetailsControlListType,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -1771,18 +1813,18 @@ class __$$_KodiSettingDetailsControlListCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlList
+class _$KodiSettingDetailsControlListImpl
     implements _KodiSettingDetailsControlList {
-  const _$_KodiSettingDetailsControlList(
+  const _$KodiSettingDetailsControlListImpl(
       {@JsonKey(name: 'multiselect') required this.multiSelect,
       required this.type,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
-  factory _$_KodiSettingDetailsControlList.fromJson(
+  factory _$KodiSettingDetailsControlListImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlListFromJson(json);
+      _$$KodiSettingDetailsControlListImplFromJson(json);
 
   @override
   @JsonKey(name: 'multiselect')
@@ -1790,7 +1832,8 @@ class _$_KodiSettingDetailsControlList
   @override
   final KodiSettingDetailsControlListType type;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -1802,10 +1845,10 @@ class _$_KodiSettingDetailsControlList
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlList &&
+            other is _$KodiSettingDetailsControlListImpl &&
             (identical(other.multiSelect, multiSelect) ||
                 other.multiSelect == multiSelect) &&
             (identical(other.type, type) || other.type == type) &&
@@ -1814,17 +1857,20 @@ class _$_KodiSettingDetailsControlList
             (identical(other.format, format) || other.format == format));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, multiSelect, type, heading, delayed, format);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlListCopyWith<_$_KodiSettingDetailsControlList>
-      get copyWith => __$$_KodiSettingDetailsControlListCopyWithImpl<
-          _$_KodiSettingDetailsControlList>(this, _$identity);
+  _$$KodiSettingDetailsControlListImplCopyWith<
+          _$KodiSettingDetailsControlListImpl>
+      get copyWith => __$$KodiSettingDetailsControlListImplCopyWithImpl<
+          _$KodiSettingDetailsControlListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1833,27 +1879,27 @@ class _$_KodiSettingDetailsControlList
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -1861,7 +1907,7 @@ class _$_KodiSettingDetailsControlList
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -1886,27 +1932,27 @@ class _$_KodiSettingDetailsControlList
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1914,7 +1960,7 @@ class _$_KodiSettingDetailsControlList
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1939,27 +1985,27 @@ class _$_KodiSettingDetailsControlList
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1967,7 +2013,7 @@ class _$_KodiSettingDetailsControlList
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2040,7 +2086,7 @@ class _$_KodiSettingDetailsControlList
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlListToJson(
+    return _$$KodiSettingDetailsControlListImplToJson(
       this,
     );
   }
@@ -2051,67 +2097,73 @@ abstract class _KodiSettingDetailsControlList
   const factory _KodiSettingDetailsControlList(
       {@JsonKey(name: 'multiselect') required final bool multiSelect,
       required final KodiSettingDetailsControlListType type,
-      final String? heading,
+      final String heading,
       required final bool delayed,
-      required final String format}) = _$_KodiSettingDetailsControlList;
+      required final String format}) = _$KodiSettingDetailsControlListImpl;
 
   factory _KodiSettingDetailsControlList.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsControlList.fromJson;
+      _$KodiSettingDetailsControlListImpl.fromJson;
 
   @JsonKey(name: 'multiselect')
   bool get multiSelect;
   @override
   KodiSettingDetailsControlListType get type;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
   String get format;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlListCopyWith<_$_KodiSettingDetailsControlList>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlListImplCopyWith<
+          _$KodiSettingDetailsControlListImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlSliderCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlSliderImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlSliderCopyWith(
-          _$_KodiSettingDetailsControlSlider value,
-          $Res Function(_$_KodiSettingDetailsControlSlider) then) =
-      __$$_KodiSettingDetailsControlSliderCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlSliderImplCopyWith(
+          _$KodiSettingDetailsControlSliderImpl value,
+          $Res Function(_$KodiSettingDetailsControlSliderImpl) then) =
+      __$$KodiSettingDetailsControlSliderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'formatlabel') String formatLabel,
       bool popup,
       KodiSettingDetailsControlSliderType type,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlSliderCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlSliderImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlSlider>
-    implements _$$_KodiSettingDetailsControlSliderCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlSliderCopyWithImpl(
-      _$_KodiSettingDetailsControlSlider _value,
-      $Res Function(_$_KodiSettingDetailsControlSlider) _then)
+        _$KodiSettingDetailsControlSliderImpl>
+    implements _$$KodiSettingDetailsControlSliderImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlSliderImplCopyWithImpl(
+      _$KodiSettingDetailsControlSliderImpl _value,
+      $Res Function(_$KodiSettingDetailsControlSliderImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? formatLabel = null,
     Object? popup = null,
     Object? type = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlSlider(
+    return _then(_$KodiSettingDetailsControlSliderImpl(
       formatLabel: null == formatLabel
           ? _value.formatLabel
           : formatLabel // ignore: cast_nullable_to_non_nullable
@@ -2124,10 +2176,10 @@ class __$$_KodiSettingDetailsControlSliderCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingDetailsControlSliderType,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -2142,19 +2194,19 @@ class __$$_KodiSettingDetailsControlSliderCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlSlider
+class _$KodiSettingDetailsControlSliderImpl
     implements _KodiSettingDetailsControlSlider {
-  const _$_KodiSettingDetailsControlSlider(
+  const _$KodiSettingDetailsControlSliderImpl(
       {@JsonKey(name: 'formatlabel') required this.formatLabel,
       required this.popup,
       required this.type,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
-  factory _$_KodiSettingDetailsControlSlider.fromJson(
+  factory _$KodiSettingDetailsControlSliderImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlSliderFromJson(json);
+      _$$KodiSettingDetailsControlSliderImplFromJson(json);
 
   @override
   @JsonKey(name: 'formatlabel')
@@ -2164,7 +2216,8 @@ class _$_KodiSettingDetailsControlSlider
   @override
   final KodiSettingDetailsControlSliderType type;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -2176,10 +2229,10 @@ class _$_KodiSettingDetailsControlSlider
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlSlider &&
+            other is _$KodiSettingDetailsControlSliderImpl &&
             (identical(other.formatLabel, formatLabel) ||
                 other.formatLabel == formatLabel) &&
             (identical(other.popup, popup) || other.popup == popup) &&
@@ -2189,18 +2242,20 @@ class _$_KodiSettingDetailsControlSlider
             (identical(other.format, format) || other.format == format));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, formatLabel, popup, type, heading, delayed, format);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlSliderCopyWith<
-          _$_KodiSettingDetailsControlSlider>
-      get copyWith => __$$_KodiSettingDetailsControlSliderCopyWithImpl<
-          _$_KodiSettingDetailsControlSlider>(this, _$identity);
+  _$$KodiSettingDetailsControlSliderImplCopyWith<
+          _$KodiSettingDetailsControlSliderImpl>
+      get copyWith => __$$KodiSettingDetailsControlSliderImplCopyWithImpl<
+          _$KodiSettingDetailsControlSliderImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2209,27 +2264,27 @@ class _$_KodiSettingDetailsControlSlider
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -2237,7 +2292,7 @@ class _$_KodiSettingDetailsControlSlider
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -2262,27 +2317,27 @@ class _$_KodiSettingDetailsControlSlider
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2290,7 +2345,7 @@ class _$_KodiSettingDetailsControlSlider
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2315,27 +2370,27 @@ class _$_KodiSettingDetailsControlSlider
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2343,7 +2398,7 @@ class _$_KodiSettingDetailsControlSlider
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2416,7 +2471,7 @@ class _$_KodiSettingDetailsControlSlider
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlSliderToJson(
+    return _$$KodiSettingDetailsControlSliderImplToJson(
       this,
     );
   }
@@ -2428,37 +2483,40 @@ abstract class _KodiSettingDetailsControlSlider
       {@JsonKey(name: 'formatlabel') required final String formatLabel,
       required final bool popup,
       required final KodiSettingDetailsControlSliderType type,
-      final String? heading,
+      final String heading,
       required final bool delayed,
-      required final String format}) = _$_KodiSettingDetailsControlSlider;
+      required final String format}) = _$KodiSettingDetailsControlSliderImpl;
 
   factory _KodiSettingDetailsControlSlider.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsControlSlider.fromJson;
+      _$KodiSettingDetailsControlSliderImpl.fromJson;
 
   @JsonKey(name: 'formatlabel')
   String get formatLabel;
   bool get popup;
   @override
   KodiSettingDetailsControlSliderType get type;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
   String get format;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlSliderCopyWith<
-          _$_KodiSettingDetailsControlSlider>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlSliderImplCopyWith<
+          _$KodiSettingDetailsControlSliderImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlRangeCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlRangeImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlRangeCopyWith(
-          _$_KodiSettingDetailsControlRange value,
-          $Res Function(_$_KodiSettingDetailsControlRange) then) =
-      __$$_KodiSettingDetailsControlRangeCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlRangeImplCopyWith(
+          _$KodiSettingDetailsControlRangeImpl value,
+          $Res Function(_$KodiSettingDetailsControlRangeImpl) then) =
+      __$$KodiSettingDetailsControlRangeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2470,15 +2528,17 @@ abstract class _$$_KodiSettingDetailsControlRangeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlRangeCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlRangeImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlRange>
-    implements _$$_KodiSettingDetailsControlRangeCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlRangeCopyWithImpl(
-      _$_KodiSettingDetailsControlRange _value,
-      $Res Function(_$_KodiSettingDetailsControlRange) _then)
+        _$KodiSettingDetailsControlRangeImpl>
+    implements _$$KodiSettingDetailsControlRangeImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlRangeImplCopyWithImpl(
+      _$KodiSettingDetailsControlRangeImpl _value,
+      $Res Function(_$KodiSettingDetailsControlRangeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2488,7 +2548,7 @@ class __$$_KodiSettingDetailsControlRangeCopyWithImpl<$Res>
     Object? delayed = null,
     Object? format = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlRange(
+    return _then(_$KodiSettingDetailsControlRangeImpl(
       formatLabel: null == formatLabel
           ? _value.formatLabel
           : formatLabel // ignore: cast_nullable_to_non_nullable
@@ -2515,18 +2575,18 @@ class __$$_KodiSettingDetailsControlRangeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlRange
+class _$KodiSettingDetailsControlRangeImpl
     implements _KodiSettingDetailsControlRange {
-  const _$_KodiSettingDetailsControlRange(
+  const _$KodiSettingDetailsControlRangeImpl(
       {@JsonKey(name: 'formatlabel') required this.formatLabel,
       @JsonKey(name: 'formatvalue') required this.formatValue,
       required this.type,
       required this.delayed,
       required this.format});
 
-  factory _$_KodiSettingDetailsControlRange.fromJson(
+  factory _$KodiSettingDetailsControlRangeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlRangeFromJson(json);
+      _$$KodiSettingDetailsControlRangeImplFromJson(json);
 
   @override
   @JsonKey(name: 'formatlabel')
@@ -2547,10 +2607,10 @@ class _$_KodiSettingDetailsControlRange
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlRange &&
+            other is _$KodiSettingDetailsControlRangeImpl &&
             (identical(other.formatLabel, formatLabel) ||
                 other.formatLabel == formatLabel) &&
             (identical(other.formatValue, formatValue) ||
@@ -2560,17 +2620,20 @@ class _$_KodiSettingDetailsControlRange
             (identical(other.format, format) || other.format == format));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, formatLabel, formatValue, type, delayed, format);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlRangeCopyWith<_$_KodiSettingDetailsControlRange>
-      get copyWith => __$$_KodiSettingDetailsControlRangeCopyWithImpl<
-          _$_KodiSettingDetailsControlRange>(this, _$identity);
+  _$$KodiSettingDetailsControlRangeImplCopyWith<
+          _$KodiSettingDetailsControlRangeImpl>
+      get copyWith => __$$KodiSettingDetailsControlRangeImplCopyWithImpl<
+          _$KodiSettingDetailsControlRangeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2579,27 +2642,27 @@ class _$_KodiSettingDetailsControlRange
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -2607,7 +2670,7 @@ class _$_KodiSettingDetailsControlRange
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -2632,27 +2695,27 @@ class _$_KodiSettingDetailsControlRange
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2660,7 +2723,7 @@ class _$_KodiSettingDetailsControlRange
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2685,27 +2748,27 @@ class _$_KodiSettingDetailsControlRange
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2713,7 +2776,7 @@ class _$_KodiSettingDetailsControlRange
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2786,7 +2849,7 @@ class _$_KodiSettingDetailsControlRange
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlRangeToJson(
+    return _$$KodiSettingDetailsControlRangeImplToJson(
       this,
     );
   }
@@ -2799,10 +2862,10 @@ abstract class _KodiSettingDetailsControlRange
       @JsonKey(name: 'formatvalue') required final String formatValue,
       required final KodiSettingDetailsControlRangeType type,
       required final bool delayed,
-      required final String format}) = _$_KodiSettingDetailsControlRange;
+      required final String format}) = _$KodiSettingDetailsControlRangeImpl;
 
   factory _KodiSettingDetailsControlRange.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsControlRange.fromJson;
+      _$KodiSettingDetailsControlRangeImpl.fromJson;
 
   @JsonKey(name: 'formatlabel')
   String get formatLabel;
@@ -2814,19 +2877,23 @@ abstract class _KodiSettingDetailsControlRange
   bool get delayed;
   @override
   String get format;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlRangeCopyWith<_$_KodiSettingDetailsControlRange>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlRangeImplCopyWith<
+          _$KodiSettingDetailsControlRangeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsControlLabelCopyWith<$Res>
+abstract class _$$KodiSettingDetailsControlLabelImplCopyWith<$Res>
     implements $KodiSettingDetailsControlCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsControlLabelCopyWith(
-          _$_KodiSettingDetailsControlLabel value,
-          $Res Function(_$_KodiSettingDetailsControlLabel) then) =
-      __$$_KodiSettingDetailsControlLabelCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsControlLabelImplCopyWith(
+          _$KodiSettingDetailsControlLabelImpl value,
+          $Res Function(_$KodiSettingDetailsControlLabelImpl) then) =
+      __$$KodiSettingDetailsControlLabelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2836,15 +2903,17 @@ abstract class _$$_KodiSettingDetailsControlLabelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsControlLabelCopyWithImpl<$Res>
+class __$$KodiSettingDetailsControlLabelImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsControlCopyWithImpl<$Res,
-        _$_KodiSettingDetailsControlLabel>
-    implements _$$_KodiSettingDetailsControlLabelCopyWith<$Res> {
-  __$$_KodiSettingDetailsControlLabelCopyWithImpl(
-      _$_KodiSettingDetailsControlLabel _value,
-      $Res Function(_$_KodiSettingDetailsControlLabel) _then)
+        _$KodiSettingDetailsControlLabelImpl>
+    implements _$$KodiSettingDetailsControlLabelImplCopyWith<$Res> {
+  __$$KodiSettingDetailsControlLabelImplCopyWithImpl(
+      _$KodiSettingDetailsControlLabelImpl _value,
+      $Res Function(_$KodiSettingDetailsControlLabelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2852,7 +2921,7 @@ class __$$_KodiSettingDetailsControlLabelCopyWithImpl<$Res>
     Object? type = null,
     Object? delayed = null,
   }) {
-    return _then(_$_KodiSettingDetailsControlLabel(
+    return _then(_$KodiSettingDetailsControlLabelImpl(
       format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
@@ -2871,14 +2940,14 @@ class __$$_KodiSettingDetailsControlLabelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsControlLabel
+class _$KodiSettingDetailsControlLabelImpl
     implements _KodiSettingDetailsControlLabel {
-  const _$_KodiSettingDetailsControlLabel(
+  const _$KodiSettingDetailsControlLabelImpl(
       {required this.format, required this.type, required this.delayed});
 
-  factory _$_KodiSettingDetailsControlLabel.fromJson(
+  factory _$KodiSettingDetailsControlLabelImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsControlLabelFromJson(json);
+      _$$KodiSettingDetailsControlLabelImplFromJson(json);
 
   @override
   final KodiSettingDetailsControlLabelFormat format;
@@ -2893,25 +2962,28 @@ class _$_KodiSettingDetailsControlLabel
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsControlLabel &&
+            other is _$KodiSettingDetailsControlLabelImpl &&
             (identical(other.format, format) || other.format == format) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.delayed, delayed) || other.delayed == delayed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, format, type, delayed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsControlLabelCopyWith<_$_KodiSettingDetailsControlLabel>
-      get copyWith => __$$_KodiSettingDetailsControlLabelCopyWithImpl<
-          _$_KodiSettingDetailsControlLabel>(this, _$identity);
+  _$$KodiSettingDetailsControlLabelImplCopyWith<
+          _$KodiSettingDetailsControlLabelImpl>
+      get copyWith => __$$KodiSettingDetailsControlLabelImplCopyWithImpl<
+          _$KodiSettingDetailsControlLabelImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2920,27 +2992,27 @@ class _$_KodiSettingDetailsControlLabel
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -2948,7 +3020,7 @@ class _$_KodiSettingDetailsControlLabel
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -2973,27 +3045,27 @@ class _$_KodiSettingDetailsControlLabel
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -3001,7 +3073,7 @@ class _$_KodiSettingDetailsControlLabel
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -3026,27 +3098,27 @@ class _$_KodiSettingDetailsControlLabel
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -3054,7 +3126,7 @@ class _$_KodiSettingDetailsControlLabel
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -3127,7 +3199,7 @@ class _$_KodiSettingDetailsControlLabel
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsControlLabelToJson(
+    return _$$KodiSettingDetailsControlLabelImplToJson(
       this,
     );
   }
@@ -3138,10 +3210,10 @@ abstract class _KodiSettingDetailsControlLabel
   const factory _KodiSettingDetailsControlLabel(
       {required final KodiSettingDetailsControlLabelFormat format,
       required final KodiSettingDetailsControlLabelType type,
-      required final bool delayed}) = _$_KodiSettingDetailsControlLabel;
+      required final bool delayed}) = _$KodiSettingDetailsControlLabelImpl;
 
   factory _KodiSettingDetailsControlLabel.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsControlLabel.fromJson;
+      _$KodiSettingDetailsControlLabelImpl.fromJson;
 
   @override
   KodiSettingDetailsControlLabelFormat get format;
@@ -3149,8 +3221,12 @@ abstract class _KodiSettingDetailsControlLabel
   KodiSettingDetailsControlLabelType get type;
   @override
   bool get delayed;
+
+  /// Create a copy of KodiSettingDetailsControl
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsControlLabelCopyWith<_$_KodiSettingDetailsControlLabel>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsControlLabelImplCopyWith<
+          _$KodiSettingDetailsControlLabelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

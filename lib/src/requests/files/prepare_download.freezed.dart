@@ -12,7 +12,7 @@ part of 'prepare_download.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PrepareDownload _$PrepareDownloadFromJson(Map<String, dynamic> json) {
   return _PrepareDownload.fromJson(json);
@@ -22,8 +22,12 @@ PrepareDownload _$PrepareDownloadFromJson(Map<String, dynamic> json) {
 mixin _$PrepareDownload {
   String get path => throw _privateConstructorUsedError;
 
+  /// Serializes this PrepareDownload to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrepareDownload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrepareDownloadCopyWith<PrepareDownload> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$PrepareDownloadCopyWithImpl<$Res, $Val extends PrepareDownload>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrepareDownload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,30 +68,32 @@ class _$PrepareDownloadCopyWithImpl<$Res, $Val extends PrepareDownload>
 }
 
 /// @nodoc
-abstract class _$$_PrepareDownloadCopyWith<$Res>
+abstract class _$$PrepareDownloadImplCopyWith<$Res>
     implements $PrepareDownloadCopyWith<$Res> {
-  factory _$$_PrepareDownloadCopyWith(
-          _$_PrepareDownload value, $Res Function(_$_PrepareDownload) then) =
-      __$$_PrepareDownloadCopyWithImpl<$Res>;
+  factory _$$PrepareDownloadImplCopyWith(_$PrepareDownloadImpl value,
+          $Res Function(_$PrepareDownloadImpl) then) =
+      __$$PrepareDownloadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String path});
 }
 
 /// @nodoc
-class __$$_PrepareDownloadCopyWithImpl<$Res>
-    extends _$PrepareDownloadCopyWithImpl<$Res, _$_PrepareDownload>
-    implements _$$_PrepareDownloadCopyWith<$Res> {
-  __$$_PrepareDownloadCopyWithImpl(
-      _$_PrepareDownload _value, $Res Function(_$_PrepareDownload) _then)
+class __$$PrepareDownloadImplCopyWithImpl<$Res>
+    extends _$PrepareDownloadCopyWithImpl<$Res, _$PrepareDownloadImpl>
+    implements _$$PrepareDownloadImplCopyWith<$Res> {
+  __$$PrepareDownloadImplCopyWithImpl(
+      _$PrepareDownloadImpl _value, $Res Function(_$PrepareDownloadImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrepareDownload
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = null,
   }) {
-    return _then(_$_PrepareDownload(
+    return _then(_$PrepareDownloadImpl(
       null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
@@ -96,11 +104,11 @@ class __$$_PrepareDownloadCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PrepareDownload extends _PrepareDownload {
-  const _$_PrepareDownload(this.path) : super._();
+class _$PrepareDownloadImpl extends _PrepareDownload {
+  const _$PrepareDownloadImpl(this.path) : super._();
 
-  factory _$_PrepareDownload.fromJson(Map<String, dynamic> json) =>
-      _$$_PrepareDownloadFromJson(json);
+  factory _$PrepareDownloadImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PrepareDownloadImplFromJson(json);
 
   @override
   final String path;
@@ -111,43 +119,49 @@ class _$_PrepareDownload extends _PrepareDownload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrepareDownload &&
+            other is _$PrepareDownloadImpl &&
             (identical(other.path, path) || other.path == path));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrepareDownload
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrepareDownloadCopyWith<_$_PrepareDownload> get copyWith =>
-      __$$_PrepareDownloadCopyWithImpl<_$_PrepareDownload>(this, _$identity);
+  _$$PrepareDownloadImplCopyWith<_$PrepareDownloadImpl> get copyWith =>
+      __$$PrepareDownloadImplCopyWithImpl<_$PrepareDownloadImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrepareDownloadToJson(
+    return _$$PrepareDownloadImplToJson(
       this,
     );
   }
 }
 
 abstract class _PrepareDownload extends PrepareDownload {
-  const factory _PrepareDownload(final String path) = _$_PrepareDownload;
+  const factory _PrepareDownload(final String path) = _$PrepareDownloadImpl;
   const _PrepareDownload._() : super._();
 
   factory _PrepareDownload.fromJson(Map<String, dynamic> json) =
-      _$_PrepareDownload.fromJson;
+      _$PrepareDownloadImpl.fromJson;
 
   @override
   String get path;
+
+  /// Create a copy of PrepareDownload
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_PrepareDownloadCopyWith<_$_PrepareDownload> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PrepareDownloadImplCopyWith<_$PrepareDownloadImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -163,8 +177,12 @@ mixin _$PrepareDownloadResponse {
   KodiFilesPrepareDownloadProtocol get protocol =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this PrepareDownloadResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PrepareDownloadResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PrepareDownloadResponseCopyWith<PrepareDownloadResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -192,6 +210,8 @@ class _$PrepareDownloadResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PrepareDownloadResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -217,11 +237,12 @@ class _$PrepareDownloadResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PrepareDownloadResponseCopyWith<$Res>
+abstract class _$$PrepareDownloadResponseImplCopyWith<$Res>
     implements $PrepareDownloadResponseCopyWith<$Res> {
-  factory _$$_PrepareDownloadResponseCopyWith(_$_PrepareDownloadResponse value,
-          $Res Function(_$_PrepareDownloadResponse) then) =
-      __$$_PrepareDownloadResponseCopyWithImpl<$Res>;
+  factory _$$PrepareDownloadResponseImplCopyWith(
+          _$PrepareDownloadResponseImpl value,
+          $Res Function(_$PrepareDownloadResponseImpl) then) =
+      __$$PrepareDownloadResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -231,14 +252,17 @@ abstract class _$$_PrepareDownloadResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PrepareDownloadResponseCopyWithImpl<$Res>
+class __$$PrepareDownloadResponseImplCopyWithImpl<$Res>
     extends _$PrepareDownloadResponseCopyWithImpl<$Res,
-        _$_PrepareDownloadResponse>
-    implements _$$_PrepareDownloadResponseCopyWith<$Res> {
-  __$$_PrepareDownloadResponseCopyWithImpl(_$_PrepareDownloadResponse _value,
-      $Res Function(_$_PrepareDownloadResponse) _then)
+        _$PrepareDownloadResponseImpl>
+    implements _$$PrepareDownloadResponseImplCopyWith<$Res> {
+  __$$PrepareDownloadResponseImplCopyWithImpl(
+      _$PrepareDownloadResponseImpl _value,
+      $Res Function(_$PrepareDownloadResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PrepareDownloadResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -246,7 +270,7 @@ class __$$_PrepareDownloadResponseCopyWithImpl<$Res>
     Object? mode = null,
     Object? protocol = null,
   }) {
-    return _then(_$_PrepareDownloadResponse(
+    return _then(_$PrepareDownloadResponseImpl(
       details: null == details
           ? _value._details
           : details // ignore: cast_nullable_to_non_nullable
@@ -265,15 +289,15 @@ class __$$_PrepareDownloadResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PrepareDownloadResponse implements _PrepareDownloadResponse {
-  const _$_PrepareDownloadResponse(
+class _$PrepareDownloadResponseImpl implements _PrepareDownloadResponse {
+  const _$PrepareDownloadResponseImpl(
       {required final Map<String, dynamic> details,
       required this.mode,
       required this.protocol})
       : _details = details;
 
-  factory _$_PrepareDownloadResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PrepareDownloadResponseFromJson(json);
+  factory _$PrepareDownloadResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PrepareDownloadResponseImplFromJson(json);
 
   final Map<String, dynamic> _details;
   @override
@@ -294,32 +318,33 @@ class _$_PrepareDownloadResponse implements _PrepareDownloadResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PrepareDownloadResponse &&
+            other is _$PrepareDownloadResponseImpl &&
             const DeepCollectionEquality().equals(other._details, _details) &&
             (identical(other.mode, mode) || other.mode == mode) &&
             (identical(other.protocol, protocol) ||
                 other.protocol == protocol));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_details), mode, protocol);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PrepareDownloadResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PrepareDownloadResponseCopyWith<_$_PrepareDownloadResponse>
-      get copyWith =>
-          __$$_PrepareDownloadResponseCopyWithImpl<_$_PrepareDownloadResponse>(
-              this, _$identity);
+  _$$PrepareDownloadResponseImplCopyWith<_$PrepareDownloadResponseImpl>
+      get copyWith => __$$PrepareDownloadResponseImplCopyWithImpl<
+          _$PrepareDownloadResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrepareDownloadResponseToJson(
+    return _$$PrepareDownloadResponseImplToJson(
       this,
     );
   }
@@ -330,10 +355,10 @@ abstract class _PrepareDownloadResponse implements PrepareDownloadResponse {
           {required final Map<String, dynamic> details,
           required final KodiFilesPrepareDownloadMode mode,
           required final KodiFilesPrepareDownloadProtocol protocol}) =
-      _$_PrepareDownloadResponse;
+      _$PrepareDownloadResponseImpl;
 
   factory _PrepareDownloadResponse.fromJson(Map<String, dynamic> json) =
-      _$_PrepareDownloadResponse.fromJson;
+      _$PrepareDownloadResponseImpl.fromJson;
 
   @override
   Map<String, dynamic> get details;
@@ -341,8 +366,11 @@ abstract class _PrepareDownloadResponse implements PrepareDownloadResponse {
   KodiFilesPrepareDownloadMode get mode;
   @override
   KodiFilesPrepareDownloadProtocol get protocol;
+
+  /// Create a copy of PrepareDownloadResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_PrepareDownloadResponseCopyWith<_$_PrepareDownloadResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PrepareDownloadResponseImplCopyWith<_$PrepareDownloadResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

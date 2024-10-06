@@ -12,7 +12,7 @@ part of 'kodi_addon_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAddonDetails _$KodiAddonDetailsFromJson(Map<String, dynamic> json) {
   return _KodiAddonDetails.fromJson(json);
@@ -22,30 +22,35 @@ KodiAddonDetails _$KodiAddonDetailsFromJson(Map<String, dynamic> json) {
 mixin _$KodiAddonDetails {
   @JsonKey(name: 'addonid')
   String get addonId => throw _privateConstructorUsedError;
-  String? get author => throw _privateConstructorUsedError;
-  bool? get broken => throw _privateConstructorUsedError;
+  String get author => throw _privateConstructorUsedError;
+  @KodiBoolStringConverter()
+  KodiBoolString? get broken => throw _privateConstructorUsedError;
   List<KodiAddonDetailsDependencies>? get dependencies =>
       throw _privateConstructorUsedError;
-  bool? get deprecated => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String? get disclaimer => throw _privateConstructorUsedError;
-  bool? get enabled => throw _privateConstructorUsedError;
+  @KodiBoolStringConverter()
+  KodiBoolString? get deprecated => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  String get disclaimer => throw _privateConstructorUsedError;
+  bool get enabled => throw _privateConstructorUsedError;
   @JsonKey(name: 'extrainfo')
   List<KodiAddonDetailsExtraInfo>? get extraInfo =>
       throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  bool? get installed => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get path => throw _privateConstructorUsedError;
-  int? get rating => throw _privateConstructorUsedError;
-  String? get summary => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  bool get installed => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get path => throw _privateConstructorUsedError;
+  int get rating => throw _privateConstructorUsedError;
+  String get summary => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   KodiAddonType get type => throw _privateConstructorUsedError;
-  String? get version => throw _privateConstructorUsedError;
-  String? get label => throw _privateConstructorUsedError;
+  String get version => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAddonDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAddonDetailsCopyWith<KodiAddonDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,24 +63,26 @@ abstract class $KodiAddonDetailsCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'addonid') String addonId,
-      String? author,
-      bool? broken,
+      String author,
+      @KodiBoolStringConverter() KodiBoolString? broken,
       List<KodiAddonDetailsDependencies>? dependencies,
-      bool? deprecated,
-      String? description,
-      String? disclaimer,
-      bool? enabled,
+      @KodiBoolStringConverter() KodiBoolString? deprecated,
+      String description,
+      String disclaimer,
+      bool enabled,
       @JsonKey(name: 'extrainfo') List<KodiAddonDetailsExtraInfo>? extraInfo,
-      String? fanart,
-      bool? installed,
-      String? name,
-      String? path,
-      int? rating,
-      String? summary,
-      String? thumbnail,
+      String fanart,
+      bool installed,
+      String name,
+      String path,
+      int rating,
+      String summary,
+      String thumbnail,
       KodiAddonType type,
-      String? version,
-      String? label});
+      String version});
+
+  $KodiBoolStringCopyWith<$Res>? get broken;
+  $KodiBoolStringCopyWith<$Res>? get deprecated;
 }
 
 /// @nodoc
@@ -88,42 +95,43 @@ class _$KodiAddonDetailsCopyWithImpl<$Res, $Val extends KodiAddonDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? addonId = null,
-    Object? author = freezed,
+    Object? author = null,
     Object? broken = freezed,
     Object? dependencies = freezed,
     Object? deprecated = freezed,
-    Object? description = freezed,
-    Object? disclaimer = freezed,
-    Object? enabled = freezed,
+    Object? description = null,
+    Object? disclaimer = null,
+    Object? enabled = null,
     Object? extraInfo = freezed,
-    Object? fanart = freezed,
-    Object? installed = freezed,
-    Object? name = freezed,
-    Object? path = freezed,
-    Object? rating = freezed,
-    Object? summary = freezed,
-    Object? thumbnail = freezed,
+    Object? fanart = null,
+    Object? installed = null,
+    Object? name = null,
+    Object? path = null,
+    Object? rating = null,
+    Object? summary = null,
+    Object? thumbnail = null,
     Object? type = null,
-    Object? version = freezed,
-    Object? label = freezed,
+    Object? version = null,
   }) {
     return _then(_value.copyWith(
       addonId: null == addonId
           ? _value.addonId
           : addonId // ignore: cast_nullable_to_non_nullable
               as String,
-      author: freezed == author
+      author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       broken: freezed == broken
           ? _value.broken
           : broken // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as KodiBoolString?,
       dependencies: freezed == dependencies
           ? _value.dependencies
           : dependencies // ignore: cast_nullable_to_non_nullable
@@ -131,141 +139,170 @@ class _$KodiAddonDetailsCopyWithImpl<$Res, $Val extends KodiAddonDetails>
       deprecated: freezed == deprecated
           ? _value.deprecated
           : deprecated // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
+              as KodiBoolString?,
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disclaimer: freezed == disclaimer
+              as String,
+      disclaimer: null == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enabled: freezed == enabled
+              as String,
+      enabled: null == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       extraInfo: freezed == extraInfo
           ? _value.extraInfo
           : extraInfo // ignore: cast_nullable_to_non_nullable
               as List<KodiAddonDetailsExtraInfo>?,
-      fanart: freezed == fanart
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      installed: freezed == installed
+              as String,
+      installed: null == installed
           ? _value.installed
           : installed // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      name: freezed == name
+              as bool,
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      path: freezed == path
+              as String,
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
+              as String,
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      summary: freezed == summary
+              as int,
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiAddonType,
-      version: freezed == version
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      label: freezed == label
-          ? _value.label
-          : label // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
+  }
+
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $KodiBoolStringCopyWith<$Res>? get broken {
+    if (_value.broken == null) {
+      return null;
+    }
+
+    return $KodiBoolStringCopyWith<$Res>(_value.broken!, (value) {
+      return _then(_value.copyWith(broken: value) as $Val);
+    });
+  }
+
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $KodiBoolStringCopyWith<$Res>? get deprecated {
+    if (_value.deprecated == null) {
+      return null;
+    }
+
+    return $KodiBoolStringCopyWith<$Res>(_value.deprecated!, (value) {
+      return _then(_value.copyWith(deprecated: value) as $Val);
+    });
   }
 }
 
 /// @nodoc
-abstract class _$$_KodiAddonDetailsCopyWith<$Res>
+abstract class _$$KodiAddonDetailsImplCopyWith<$Res>
     implements $KodiAddonDetailsCopyWith<$Res> {
-  factory _$$_KodiAddonDetailsCopyWith(
-          _$_KodiAddonDetails value, $Res Function(_$_KodiAddonDetails) then) =
-      __$$_KodiAddonDetailsCopyWithImpl<$Res>;
+  factory _$$KodiAddonDetailsImplCopyWith(_$KodiAddonDetailsImpl value,
+          $Res Function(_$KodiAddonDetailsImpl) then) =
+      __$$KodiAddonDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'addonid') String addonId,
-      String? author,
-      bool? broken,
+      String author,
+      @KodiBoolStringConverter() KodiBoolString? broken,
       List<KodiAddonDetailsDependencies>? dependencies,
-      bool? deprecated,
-      String? description,
-      String? disclaimer,
-      bool? enabled,
+      @KodiBoolStringConverter() KodiBoolString? deprecated,
+      String description,
+      String disclaimer,
+      bool enabled,
       @JsonKey(name: 'extrainfo') List<KodiAddonDetailsExtraInfo>? extraInfo,
-      String? fanart,
-      bool? installed,
-      String? name,
-      String? path,
-      int? rating,
-      String? summary,
-      String? thumbnail,
+      String fanart,
+      bool installed,
+      String name,
+      String path,
+      int rating,
+      String summary,
+      String thumbnail,
       KodiAddonType type,
-      String? version,
-      String? label});
+      String version});
+
+  @override
+  $KodiBoolStringCopyWith<$Res>? get broken;
+  @override
+  $KodiBoolStringCopyWith<$Res>? get deprecated;
 }
 
 /// @nodoc
-class __$$_KodiAddonDetailsCopyWithImpl<$Res>
-    extends _$KodiAddonDetailsCopyWithImpl<$Res, _$_KodiAddonDetails>
-    implements _$$_KodiAddonDetailsCopyWith<$Res> {
-  __$$_KodiAddonDetailsCopyWithImpl(
-      _$_KodiAddonDetails _value, $Res Function(_$_KodiAddonDetails) _then)
+class __$$KodiAddonDetailsImplCopyWithImpl<$Res>
+    extends _$KodiAddonDetailsCopyWithImpl<$Res, _$KodiAddonDetailsImpl>
+    implements _$$KodiAddonDetailsImplCopyWith<$Res> {
+  __$$KodiAddonDetailsImplCopyWithImpl(_$KodiAddonDetailsImpl _value,
+      $Res Function(_$KodiAddonDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? addonId = null,
-    Object? author = freezed,
+    Object? author = null,
     Object? broken = freezed,
     Object? dependencies = freezed,
     Object? deprecated = freezed,
-    Object? description = freezed,
-    Object? disclaimer = freezed,
-    Object? enabled = freezed,
+    Object? description = null,
+    Object? disclaimer = null,
+    Object? enabled = null,
     Object? extraInfo = freezed,
-    Object? fanart = freezed,
-    Object? installed = freezed,
-    Object? name = freezed,
-    Object? path = freezed,
-    Object? rating = freezed,
-    Object? summary = freezed,
-    Object? thumbnail = freezed,
+    Object? fanart = null,
+    Object? installed = null,
+    Object? name = null,
+    Object? path = null,
+    Object? rating = null,
+    Object? summary = null,
+    Object? thumbnail = null,
     Object? type = null,
-    Object? version = freezed,
-    Object? label = freezed,
+    Object? version = null,
   }) {
-    return _then(_$_KodiAddonDetails(
+    return _then(_$KodiAddonDetailsImpl(
       addonId: null == addonId
           ? _value.addonId
           : addonId // ignore: cast_nullable_to_non_nullable
               as String,
-      author: freezed == author
+      author: null == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       broken: freezed == broken
           ? _value.broken
           : broken // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as KodiBoolString?,
       dependencies: freezed == dependencies
           ? _value._dependencies
           : dependencies // ignore: cast_nullable_to_non_nullable
@@ -273,104 +310,101 @@ class __$$_KodiAddonDetailsCopyWithImpl<$Res>
       deprecated: freezed == deprecated
           ? _value.deprecated
           : deprecated // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
+              as KodiBoolString?,
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disclaimer: freezed == disclaimer
+              as String,
+      disclaimer: null == disclaimer
           ? _value.disclaimer
           : disclaimer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      enabled: freezed == enabled
+              as String,
+      enabled: null == enabled
           ? _value.enabled
           : enabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       extraInfo: freezed == extraInfo
           ? _value._extraInfo
           : extraInfo // ignore: cast_nullable_to_non_nullable
               as List<KodiAddonDetailsExtraInfo>?,
-      fanart: freezed == fanart
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      installed: freezed == installed
+              as String,
+      installed: null == installed
           ? _value.installed
           : installed // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      name: freezed == name
+              as bool,
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      path: freezed == path
+              as String,
+      path: null == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
+              as String,
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      summary: freezed == summary
+              as int,
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiAddonType,
-      version: freezed == version
+      version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String?,
-      label: freezed == label
-          ? _value.label
-          : label // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAddonDetails implements _KodiAddonDetails {
-  const _$_KodiAddonDetails(
+class _$KodiAddonDetailsImpl implements _KodiAddonDetails {
+  const _$KodiAddonDetailsImpl(
       {@JsonKey(name: 'addonid') required this.addonId,
-      this.author,
-      this.broken,
+      this.author = '',
+      @KodiBoolStringConverter() this.broken,
       final List<KodiAddonDetailsDependencies>? dependencies,
-      this.deprecated,
-      this.description,
-      this.disclaimer,
-      this.enabled,
+      @KodiBoolStringConverter() this.deprecated,
+      this.description = '',
+      this.disclaimer = '',
+      this.enabled = false,
       @JsonKey(name: 'extrainfo')
       final List<KodiAddonDetailsExtraInfo>? extraInfo,
-      this.fanart,
-      this.installed,
-      this.name,
-      this.path,
-      this.rating,
-      this.summary,
-      this.thumbnail,
+      this.fanart = '',
+      this.installed = false,
+      this.name = '',
+      this.path = '',
+      this.rating = 0,
+      this.summary = '',
+      this.thumbnail = '',
       required this.type,
-      this.version,
-      this.label})
+      this.version = ''})
       : _dependencies = dependencies,
         _extraInfo = extraInfo;
 
-  factory _$_KodiAddonDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAddonDetailsFromJson(json);
+  factory _$KodiAddonDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAddonDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'addonid')
   final String addonId;
   @override
-  final String? author;
+  @JsonKey()
+  final String author;
   @override
-  final bool? broken;
+  @KodiBoolStringConverter()
+  final KodiBoolString? broken;
   final List<KodiAddonDetailsDependencies>? _dependencies;
   @override
   List<KodiAddonDetailsDependencies>? get dependencies {
@@ -382,13 +416,17 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
   }
 
   @override
-  final bool? deprecated;
+  @KodiBoolStringConverter()
+  final KodiBoolString? deprecated;
   @override
-  final String? description;
+  @JsonKey()
+  final String description;
   @override
-  final String? disclaimer;
+  @JsonKey()
+  final String disclaimer;
   @override
-  final bool? enabled;
+  @JsonKey()
+  final bool enabled;
   final List<KodiAddonDetailsExtraInfo>? _extraInfo;
   @override
   @JsonKey(name: 'extrainfo')
@@ -401,36 +439,42 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
   }
 
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final bool? installed;
+  @JsonKey()
+  final bool installed;
   @override
-  final String? name;
+  @JsonKey()
+  final String name;
   @override
-  final String? path;
+  @JsonKey()
+  final String path;
   @override
-  final int? rating;
+  @JsonKey()
+  final int rating;
   @override
-  final String? summary;
+  @JsonKey()
+  final String summary;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final KodiAddonType type;
   @override
-  final String? version;
-  @override
-  final String? label;
+  @JsonKey()
+  final String version;
 
   @override
   String toString() {
-    return 'KodiAddonDetails(addonId: $addonId, author: $author, broken: $broken, dependencies: $dependencies, deprecated: $deprecated, description: $description, disclaimer: $disclaimer, enabled: $enabled, extraInfo: $extraInfo, fanart: $fanart, installed: $installed, name: $name, path: $path, rating: $rating, summary: $summary, thumbnail: $thumbnail, type: $type, version: $version, label: $label)';
+    return 'KodiAddonDetails(addonId: $addonId, author: $author, broken: $broken, dependencies: $dependencies, deprecated: $deprecated, description: $description, disclaimer: $disclaimer, enabled: $enabled, extraInfo: $extraInfo, fanart: $fanart, installed: $installed, name: $name, path: $path, rating: $rating, summary: $summary, thumbnail: $thumbnail, type: $type, version: $version)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAddonDetails &&
+            other is _$KodiAddonDetailsImpl &&
             (identical(other.addonId, addonId) || other.addonId == addonId) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.broken, broken) || other.broken == broken) &&
@@ -455,44 +499,44 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.version, version) || other.version == version) &&
-            (identical(other.label, label) || other.label == label));
+            (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        addonId,
-        author,
-        broken,
-        const DeepCollectionEquality().hash(_dependencies),
-        deprecated,
-        description,
-        disclaimer,
-        enabled,
-        const DeepCollectionEquality().hash(_extraInfo),
-        fanart,
-        installed,
-        name,
-        path,
-        rating,
-        summary,
-        thumbnail,
-        type,
-        version,
-        label
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      addonId,
+      author,
+      broken,
+      const DeepCollectionEquality().hash(_dependencies),
+      deprecated,
+      description,
+      disclaimer,
+      enabled,
+      const DeepCollectionEquality().hash(_extraInfo),
+      fanart,
+      installed,
+      name,
+      path,
+      rating,
+      summary,
+      thumbnail,
+      type,
+      version);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAddonDetailsCopyWith<_$_KodiAddonDetails> get copyWith =>
-      __$$_KodiAddonDetailsCopyWithImpl<_$_KodiAddonDetails>(this, _$identity);
+  _$$KodiAddonDetailsImplCopyWith<_$KodiAddonDetailsImpl> get copyWith =>
+      __$$KodiAddonDetailsImplCopyWithImpl<_$KodiAddonDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAddonDetailsToJson(
+    return _$$KodiAddonDetailsImplToJson(
       this,
     );
   }
@@ -501,72 +545,74 @@ class _$_KodiAddonDetails implements _KodiAddonDetails {
 abstract class _KodiAddonDetails implements KodiAddonDetails {
   const factory _KodiAddonDetails(
       {@JsonKey(name: 'addonid') required final String addonId,
-      final String? author,
-      final bool? broken,
+      final String author,
+      @KodiBoolStringConverter() final KodiBoolString? broken,
       final List<KodiAddonDetailsDependencies>? dependencies,
-      final bool? deprecated,
-      final String? description,
-      final String? disclaimer,
-      final bool? enabled,
+      @KodiBoolStringConverter() final KodiBoolString? deprecated,
+      final String description,
+      final String disclaimer,
+      final bool enabled,
       @JsonKey(name: 'extrainfo')
       final List<KodiAddonDetailsExtraInfo>? extraInfo,
-      final String? fanart,
-      final bool? installed,
-      final String? name,
-      final String? path,
-      final int? rating,
-      final String? summary,
-      final String? thumbnail,
+      final String fanart,
+      final bool installed,
+      final String name,
+      final String path,
+      final int rating,
+      final String summary,
+      final String thumbnail,
       required final KodiAddonType type,
-      final String? version,
-      final String? label}) = _$_KodiAddonDetails;
+      final String version}) = _$KodiAddonDetailsImpl;
 
   factory _KodiAddonDetails.fromJson(Map<String, dynamic> json) =
-      _$_KodiAddonDetails.fromJson;
+      _$KodiAddonDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'addonid')
   String get addonId;
   @override
-  String? get author;
+  String get author;
   @override
-  bool? get broken;
+  @KodiBoolStringConverter()
+  KodiBoolString? get broken;
   @override
   List<KodiAddonDetailsDependencies>? get dependencies;
   @override
-  bool? get deprecated;
+  @KodiBoolStringConverter()
+  KodiBoolString? get deprecated;
   @override
-  String? get description;
+  String get description;
   @override
-  String? get disclaimer;
+  String get disclaimer;
   @override
-  bool? get enabled;
+  bool get enabled;
   @override
   @JsonKey(name: 'extrainfo')
   List<KodiAddonDetailsExtraInfo>? get extraInfo;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  bool? get installed;
+  bool get installed;
   @override
-  String? get name;
+  String get name;
   @override
-  String? get path;
+  String get path;
   @override
-  int? get rating;
+  int get rating;
   @override
-  String? get summary;
+  String get summary;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   KodiAddonType get type;
   @override
-  String? get version;
+  String get version;
+
+  /// Create a copy of KodiAddonDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String? get label;
-  @override
-  @JsonKey(ignore: true)
-  _$$_KodiAddonDetailsCopyWith<_$_KodiAddonDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonDetailsImplCopyWith<_$KodiAddonDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -579,13 +625,15 @@ KodiAddonDetailsDependencies _$KodiAddonDetailsDependenciesFromJson(
 mixin _$KodiAddonDetailsDependencies {
   @JsonKey(name: 'addonid')
   String get addonId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'minversion')
-  String get minVersion => throw _privateConstructorUsedError;
   bool get optional => throw _privateConstructorUsedError;
   String get version => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAddonDetailsDependencies to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAddonDetailsDependenciesCopyWith<KodiAddonDetailsDependencies>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -600,7 +648,6 @@ abstract class $KodiAddonDetailsDependenciesCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'addonid') String addonId,
-      @JsonKey(name: 'minversion') String minVersion,
       bool optional,
       String version});
 }
@@ -616,11 +663,12 @@ class _$KodiAddonDetailsDependenciesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? addonId = null,
-    Object? minVersion = null,
     Object? optional = null,
     Object? version = null,
   }) {
@@ -628,10 +676,6 @@ class _$KodiAddonDetailsDependenciesCopyWithImpl<$Res,
       addonId: null == addonId
           ? _value.addonId
           : addonId // ignore: cast_nullable_to_non_nullable
-              as String,
-      minVersion: null == minVersion
-          ? _value.minVersion
-          : minVersion // ignore: cast_nullable_to_non_nullable
               as String,
       optional: null == optional
           ? _value.optional
@@ -646,47 +690,43 @@ class _$KodiAddonDetailsDependenciesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAddonDetailsDependenciesCopyWith<$Res>
+abstract class _$$KodiAddonDetailsDependenciesImplCopyWith<$Res>
     implements $KodiAddonDetailsDependenciesCopyWith<$Res> {
-  factory _$$_KodiAddonDetailsDependenciesCopyWith(
-          _$_KodiAddonDetailsDependencies value,
-          $Res Function(_$_KodiAddonDetailsDependencies) then) =
-      __$$_KodiAddonDetailsDependenciesCopyWithImpl<$Res>;
+  factory _$$KodiAddonDetailsDependenciesImplCopyWith(
+          _$KodiAddonDetailsDependenciesImpl value,
+          $Res Function(_$KodiAddonDetailsDependenciesImpl) then) =
+      __$$KodiAddonDetailsDependenciesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'addonid') String addonId,
-      @JsonKey(name: 'minversion') String minVersion,
       bool optional,
       String version});
 }
 
 /// @nodoc
-class __$$_KodiAddonDetailsDependenciesCopyWithImpl<$Res>
+class __$$KodiAddonDetailsDependenciesImplCopyWithImpl<$Res>
     extends _$KodiAddonDetailsDependenciesCopyWithImpl<$Res,
-        _$_KodiAddonDetailsDependencies>
-    implements _$$_KodiAddonDetailsDependenciesCopyWith<$Res> {
-  __$$_KodiAddonDetailsDependenciesCopyWithImpl(
-      _$_KodiAddonDetailsDependencies _value,
-      $Res Function(_$_KodiAddonDetailsDependencies) _then)
+        _$KodiAddonDetailsDependenciesImpl>
+    implements _$$KodiAddonDetailsDependenciesImplCopyWith<$Res> {
+  __$$KodiAddonDetailsDependenciesImplCopyWithImpl(
+      _$KodiAddonDetailsDependenciesImpl _value,
+      $Res Function(_$KodiAddonDetailsDependenciesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? addonId = null,
-    Object? minVersion = null,
     Object? optional = null,
     Object? version = null,
   }) {
-    return _then(_$_KodiAddonDetailsDependencies(
+    return _then(_$KodiAddonDetailsDependenciesImpl(
       addonId: null == addonId
           ? _value.addonId
           : addonId // ignore: cast_nullable_to_non_nullable
-              as String,
-      minVersion: null == minVersion
-          ? _value.minVersion
-          : minVersion // ignore: cast_nullable_to_non_nullable
               as String,
       optional: null == optional
           ? _value.optional
@@ -702,22 +742,20 @@ class __$$_KodiAddonDetailsDependenciesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAddonDetailsDependencies implements _KodiAddonDetailsDependencies {
-  const _$_KodiAddonDetailsDependencies(
+class _$KodiAddonDetailsDependenciesImpl
+    implements _KodiAddonDetailsDependencies {
+  const _$KodiAddonDetailsDependenciesImpl(
       {@JsonKey(name: 'addonid') required this.addonId,
-      @JsonKey(name: 'minversion') required this.minVersion,
       required this.optional,
       required this.version});
 
-  factory _$_KodiAddonDetailsDependencies.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAddonDetailsDependenciesFromJson(json);
+  factory _$KodiAddonDetailsDependenciesImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiAddonDetailsDependenciesImplFromJson(json);
 
   @override
   @JsonKey(name: 'addonid')
   final String addonId;
-  @override
-  @JsonKey(name: 'minversion')
-  final String minVersion;
   @override
   final bool optional;
   @override
@@ -725,37 +763,37 @@ class _$_KodiAddonDetailsDependencies implements _KodiAddonDetailsDependencies {
 
   @override
   String toString() {
-    return 'KodiAddonDetailsDependencies(addonId: $addonId, minVersion: $minVersion, optional: $optional, version: $version)';
+    return 'KodiAddonDetailsDependencies(addonId: $addonId, optional: $optional, version: $version)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAddonDetailsDependencies &&
+            other is _$KodiAddonDetailsDependenciesImpl &&
             (identical(other.addonId, addonId) || other.addonId == addonId) &&
-            (identical(other.minVersion, minVersion) ||
-                other.minVersion == minVersion) &&
             (identical(other.optional, optional) ||
                 other.optional == optional) &&
             (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, addonId, minVersion, optional, version);
+  int get hashCode => Object.hash(runtimeType, addonId, optional, version);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAddonDetailsDependenciesCopyWith<_$_KodiAddonDetailsDependencies>
-      get copyWith => __$$_KodiAddonDetailsDependenciesCopyWithImpl<
-          _$_KodiAddonDetailsDependencies>(this, _$identity);
+  _$$KodiAddonDetailsDependenciesImplCopyWith<
+          _$KodiAddonDetailsDependenciesImpl>
+      get copyWith => __$$KodiAddonDetailsDependenciesImplCopyWithImpl<
+          _$KodiAddonDetailsDependenciesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAddonDetailsDependenciesToJson(
+    return _$$KodiAddonDetailsDependenciesImplToJson(
       this,
     );
   }
@@ -765,26 +803,26 @@ abstract class _KodiAddonDetailsDependencies
     implements KodiAddonDetailsDependencies {
   const factory _KodiAddonDetailsDependencies(
       {@JsonKey(name: 'addonid') required final String addonId,
-      @JsonKey(name: 'minversion') required final String minVersion,
       required final bool optional,
-      required final String version}) = _$_KodiAddonDetailsDependencies;
+      required final String version}) = _$KodiAddonDetailsDependenciesImpl;
 
   factory _KodiAddonDetailsDependencies.fromJson(Map<String, dynamic> json) =
-      _$_KodiAddonDetailsDependencies.fromJson;
+      _$KodiAddonDetailsDependenciesImpl.fromJson;
 
   @override
   @JsonKey(name: 'addonid')
   String get addonId;
   @override
-  @JsonKey(name: 'minversion')
-  String get minVersion;
-  @override
   bool get optional;
   @override
   String get version;
+
+  /// Create a copy of KodiAddonDetailsDependencies
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAddonDetailsDependenciesCopyWith<_$_KodiAddonDetailsDependencies>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonDetailsDependenciesImplCopyWith<
+          _$KodiAddonDetailsDependenciesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -798,8 +836,12 @@ mixin _$KodiAddonDetailsExtraInfo {
   String get key => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAddonDetailsExtraInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAddonDetailsExtraInfoCopyWith<KodiAddonDetailsExtraInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -824,6 +866,8 @@ class _$KodiAddonDetailsExtraInfoCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -844,34 +888,36 @@ class _$KodiAddonDetailsExtraInfoCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAddonDetailsExtraInfoCopyWith<$Res>
+abstract class _$$KodiAddonDetailsExtraInfoImplCopyWith<$Res>
     implements $KodiAddonDetailsExtraInfoCopyWith<$Res> {
-  factory _$$_KodiAddonDetailsExtraInfoCopyWith(
-          _$_KodiAddonDetailsExtraInfo value,
-          $Res Function(_$_KodiAddonDetailsExtraInfo) then) =
-      __$$_KodiAddonDetailsExtraInfoCopyWithImpl<$Res>;
+  factory _$$KodiAddonDetailsExtraInfoImplCopyWith(
+          _$KodiAddonDetailsExtraInfoImpl value,
+          $Res Function(_$KodiAddonDetailsExtraInfoImpl) then) =
+      __$$KodiAddonDetailsExtraInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String key, String value});
 }
 
 /// @nodoc
-class __$$_KodiAddonDetailsExtraInfoCopyWithImpl<$Res>
+class __$$KodiAddonDetailsExtraInfoImplCopyWithImpl<$Res>
     extends _$KodiAddonDetailsExtraInfoCopyWithImpl<$Res,
-        _$_KodiAddonDetailsExtraInfo>
-    implements _$$_KodiAddonDetailsExtraInfoCopyWith<$Res> {
-  __$$_KodiAddonDetailsExtraInfoCopyWithImpl(
-      _$_KodiAddonDetailsExtraInfo _value,
-      $Res Function(_$_KodiAddonDetailsExtraInfo) _then)
+        _$KodiAddonDetailsExtraInfoImpl>
+    implements _$$KodiAddonDetailsExtraInfoImplCopyWith<$Res> {
+  __$$KodiAddonDetailsExtraInfoImplCopyWithImpl(
+      _$KodiAddonDetailsExtraInfoImpl _value,
+      $Res Function(_$KodiAddonDetailsExtraInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? key = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiAddonDetailsExtraInfo(
+    return _then(_$KodiAddonDetailsExtraInfoImpl(
       key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
@@ -886,11 +932,12 @@ class __$$_KodiAddonDetailsExtraInfoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAddonDetailsExtraInfo implements _KodiAddonDetailsExtraInfo {
-  const _$_KodiAddonDetailsExtraInfo({required this.key, required this.value});
+class _$KodiAddonDetailsExtraInfoImpl implements _KodiAddonDetailsExtraInfo {
+  const _$KodiAddonDetailsExtraInfoImpl(
+      {required this.key, required this.value});
 
-  factory _$_KodiAddonDetailsExtraInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAddonDetailsExtraInfoFromJson(json);
+  factory _$KodiAddonDetailsExtraInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAddonDetailsExtraInfoImplFromJson(json);
 
   @override
   final String key;
@@ -903,28 +950,30 @@ class _$_KodiAddonDetailsExtraInfo implements _KodiAddonDetailsExtraInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAddonDetailsExtraInfo &&
+            other is _$KodiAddonDetailsExtraInfoImpl &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAddonDetailsExtraInfoCopyWith<_$_KodiAddonDetailsExtraInfo>
-      get copyWith => __$$_KodiAddonDetailsExtraInfoCopyWithImpl<
-          _$_KodiAddonDetailsExtraInfo>(this, _$identity);
+  _$$KodiAddonDetailsExtraInfoImplCopyWith<_$KodiAddonDetailsExtraInfoImpl>
+      get copyWith => __$$KodiAddonDetailsExtraInfoImplCopyWithImpl<
+          _$KodiAddonDetailsExtraInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAddonDetailsExtraInfoToJson(
+    return _$$KodiAddonDetailsExtraInfoImplToJson(
       this,
     );
   }
@@ -933,17 +982,20 @@ class _$_KodiAddonDetailsExtraInfo implements _KodiAddonDetailsExtraInfo {
 abstract class _KodiAddonDetailsExtraInfo implements KodiAddonDetailsExtraInfo {
   const factory _KodiAddonDetailsExtraInfo(
       {required final String key,
-      required final String value}) = _$_KodiAddonDetailsExtraInfo;
+      required final String value}) = _$KodiAddonDetailsExtraInfoImpl;
 
   factory _KodiAddonDetailsExtraInfo.fromJson(Map<String, dynamic> json) =
-      _$_KodiAddonDetailsExtraInfo.fromJson;
+      _$KodiAddonDetailsExtraInfoImpl.fromJson;
 
   @override
   String get key;
   @override
   String get value;
+
+  /// Create a copy of KodiAddonDetailsExtraInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAddonDetailsExtraInfoCopyWith<_$_KodiAddonDetailsExtraInfo>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonDetailsExtraInfoImplCopyWith<_$KodiAddonDetailsExtraInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

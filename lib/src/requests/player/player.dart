@@ -1,5 +1,6 @@
 import 'package:kodi_api/src/requests/player/add_subtitle.dart';
 import 'package:kodi_api/src/requests/player/get_active_players.dart';
+import 'package:kodi_api/src/requests/player/get_audio_delay.dart';
 import 'package:kodi_api/src/requests/player/get_item.dart';
 import 'package:kodi_api/src/requests/player/get_players.dart';
 import 'package:kodi_api/src/requests/player/get_properties.dart';
@@ -10,6 +11,7 @@ import 'package:kodi_api/src/requests/player/open.dart';
 import 'package:kodi_api/src/requests/player/play_pause.dart';
 import 'package:kodi_api/src/requests/player/rotate.dart';
 import 'package:kodi_api/src/requests/player/seek.dart';
+import 'package:kodi_api/src/requests/player/set_audio_delay.dart';
 import 'package:kodi_api/src/requests/player/set_audio_stream.dart';
 import 'package:kodi_api/src/requests/player/set_party_mode.dart';
 import 'package:kodi_api/src/requests/player/set_repeat.dart';
@@ -27,6 +29,9 @@ class Player {
   /// subtitle
   ///  - Local path or remote URL to the subtitle file to load
   static AddSubtitleBuilder get addSubtitle => AddSubtitle.new;
+
+  /// Get the audio delay for the current playback
+  static GetAudioDelayBuilder get getAudioDelay => GetAudioDelay.new;
 
   /// Returns all active players
   static GetActivePlayersBuilder get getActivePlayers => GetActivePlayers.new;
@@ -62,6 +67,9 @@ class Player {
 
   /// Seek through the playing item
   static SeekBuilder get seek => Seek.new;
+
+  /// Set the audio delay for the current playback
+  static SetAudioDelayBuilder get setAudioDelay => SetAudioDelay.new;
 
   /// Set the audio stream played by the player
   ///

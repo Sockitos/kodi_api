@@ -12,7 +12,7 @@ part of 'get_genres.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetGenres _$GetGenresFromJson(Map<String, dynamic> json) {
   return _GetGenres.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetGenres {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetGenres to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetGenres
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetGenresCopyWith<GetGenres> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$GetGenresCopyWithImpl<$Res, $Val extends GetGenres>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetGenres
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,6 +84,8 @@ class _$GetGenresCopyWithImpl<$Res, $Val extends GetGenres>
     ) as $Val);
   }
 
+  /// Create a copy of GetGenres
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -90,6 +98,8 @@ class _$GetGenresCopyWithImpl<$Res, $Val extends GetGenres>
     });
   }
 
+  /// Create a copy of GetGenres
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -104,10 +114,11 @@ class _$GetGenresCopyWithImpl<$Res, $Val extends GetGenres>
 }
 
 /// @nodoc
-abstract class _$$_GetGenresCopyWith<$Res> implements $GetGenresCopyWith<$Res> {
-  factory _$$_GetGenresCopyWith(
-          _$_GetGenres value, $Res Function(_$_GetGenres) then) =
-      __$$_GetGenresCopyWithImpl<$Res>;
+abstract class _$$GetGenresImplCopyWith<$Res>
+    implements $GetGenresCopyWith<$Res> {
+  factory _$$GetGenresImplCopyWith(
+          _$GetGenresImpl value, $Res Function(_$GetGenresImpl) then) =
+      __$$GetGenresImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -122,13 +133,15 @@ abstract class _$$_GetGenresCopyWith<$Res> implements $GetGenresCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetGenresCopyWithImpl<$Res>
-    extends _$GetGenresCopyWithImpl<$Res, _$_GetGenres>
-    implements _$$_GetGenresCopyWith<$Res> {
-  __$$_GetGenresCopyWithImpl(
-      _$_GetGenres _value, $Res Function(_$_GetGenres) _then)
+class __$$GetGenresImplCopyWithImpl<$Res>
+    extends _$GetGenresCopyWithImpl<$Res, _$GetGenresImpl>
+    implements _$$GetGenresImplCopyWith<$Res> {
+  __$$GetGenresImplCopyWithImpl(
+      _$GetGenresImpl _value, $Res Function(_$GetGenresImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetGenres
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,7 +149,7 @@ class __$$_GetGenresCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetGenres(
+    return _then(_$GetGenresImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -155,14 +168,14 @@ class __$$_GetGenresCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetGenres extends _GetGenres {
-  const _$_GetGenres(
+class _$GetGenresImpl extends _GetGenres {
+  const _$GetGenresImpl(
       {final Set<KodiLibraryFieldsGenre>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetGenres.fromJson(Map<String, dynamic> json) =>
-      _$$_GetGenresFromJson(json);
+  factory _$GetGenresImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetGenresImplFromJson(json);
 
   final Set<KodiLibraryFieldsGenre>? _properties;
   @override
@@ -185,30 +198,32 @@ class _$_GetGenres extends _GetGenres {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetGenres &&
+            other is _$GetGenresImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetGenres
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetGenresCopyWith<_$_GetGenres> get copyWith =>
-      __$$_GetGenresCopyWithImpl<_$_GetGenres>(this, _$identity);
+  _$$GetGenresImplCopyWith<_$GetGenresImpl> get copyWith =>
+      __$$GetGenresImplCopyWithImpl<_$GetGenresImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetGenresToJson(
+    return _$$GetGenresImplToJson(
       this,
     );
   }
@@ -218,11 +233,11 @@ abstract class _GetGenres extends GetGenres {
   const factory _GetGenres(
       {final Set<KodiLibraryFieldsGenre>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetGenres;
+      final KodiListSort? sort}) = _$GetGenresImpl;
   const _GetGenres._() : super._();
 
   factory _GetGenres.fromJson(Map<String, dynamic> json) =
-      _$_GetGenres.fromJson;
+      _$GetGenresImpl.fromJson;
 
   @override
   Set<KodiLibraryFieldsGenre>? get properties;
@@ -230,9 +245,12 @@ abstract class _GetGenres extends GetGenres {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetGenres
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetGenresCopyWith<_$_GetGenres> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetGenresImplCopyWith<_$GetGenresImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -246,8 +264,12 @@ mixin _$GetGenresResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetGenresResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetGenresResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetGenresResponseCopyWith<GetGenresResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -274,6 +296,8 @@ class _$GetGenresResponseCopyWithImpl<$Res, $Val extends GetGenresResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetGenresResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -292,6 +316,8 @@ class _$GetGenresResponseCopyWithImpl<$Res, $Val extends GetGenresResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetGenresResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -302,11 +328,11 @@ class _$GetGenresResponseCopyWithImpl<$Res, $Val extends GetGenresResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetGenresResponseCopyWith<$Res>
+abstract class _$$GetGenresResponseImplCopyWith<$Res>
     implements $GetGenresResponseCopyWith<$Res> {
-  factory _$$_GetGenresResponseCopyWith(_$_GetGenresResponse value,
-          $Res Function(_$_GetGenresResponse) then) =
-      __$$_GetGenresResponseCopyWithImpl<$Res>;
+  factory _$$GetGenresResponseImplCopyWith(_$GetGenresResponseImpl value,
+          $Res Function(_$GetGenresResponseImpl) then) =
+      __$$GetGenresResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -317,20 +343,22 @@ abstract class _$$_GetGenresResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetGenresResponseCopyWithImpl<$Res>
-    extends _$GetGenresResponseCopyWithImpl<$Res, _$_GetGenresResponse>
-    implements _$$_GetGenresResponseCopyWith<$Res> {
-  __$$_GetGenresResponseCopyWithImpl(
-      _$_GetGenresResponse _value, $Res Function(_$_GetGenresResponse) _then)
+class __$$GetGenresResponseImplCopyWithImpl<$Res>
+    extends _$GetGenresResponseCopyWithImpl<$Res, _$GetGenresResponseImpl>
+    implements _$$GetGenresResponseImplCopyWith<$Res> {
+  __$$GetGenresResponseImplCopyWithImpl(_$GetGenresResponseImpl _value,
+      $Res Function(_$GetGenresResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetGenresResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genres = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetGenresResponse(
+    return _then(_$GetGenresResponseImpl(
       genres: null == genres
           ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
@@ -345,14 +373,14 @@ class __$$_GetGenresResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetGenresResponse implements _GetGenresResponse {
-  const _$_GetGenresResponse(
+class _$GetGenresResponseImpl implements _GetGenresResponse {
+  const _$GetGenresResponseImpl(
       {required final List<KodiLibraryDetailsGenre> genres,
       required this.limits})
       : _genres = genres;
 
-  factory _$_GetGenresResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetGenresResponseFromJson(json);
+  factory _$GetGenresResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetGenresResponseImplFromJson(json);
 
   final List<KodiLibraryDetailsGenre> _genres;
   @override
@@ -371,29 +399,31 @@ class _$_GetGenresResponse implements _GetGenresResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetGenresResponse &&
+            other is _$GetGenresResponseImpl &&
             const DeepCollectionEquality().equals(other._genres, _genres) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_genres), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetGenresResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetGenresResponseCopyWith<_$_GetGenresResponse> get copyWith =>
-      __$$_GetGenresResponseCopyWithImpl<_$_GetGenresResponse>(
+  _$$GetGenresResponseImplCopyWith<_$GetGenresResponseImpl> get copyWith =>
+      __$$GetGenresResponseImplCopyWithImpl<_$GetGenresResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetGenresResponseToJson(
+    return _$$GetGenresResponseImplToJson(
       this,
     );
   }
@@ -402,17 +432,20 @@ class _$_GetGenresResponse implements _GetGenresResponse {
 abstract class _GetGenresResponse implements GetGenresResponse {
   const factory _GetGenresResponse(
       {required final List<KodiLibraryDetailsGenre> genres,
-      required final KodiListLimitsReturned limits}) = _$_GetGenresResponse;
+      required final KodiListLimitsReturned limits}) = _$GetGenresResponseImpl;
 
   factory _GetGenresResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetGenresResponse.fromJson;
+      _$GetGenresResponseImpl.fromJson;
 
   @override
   List<KodiLibraryDetailsGenre> get genres;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetGenresResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetGenresResponseCopyWith<_$_GetGenresResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetGenresResponseImplCopyWith<_$GetGenresResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

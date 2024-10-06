@@ -6,15 +6,15 @@ part of 'kodi_list_items_sources.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListItemsSources _$$_KodiListItemsSourcesFromJson(
+_$KodiListItemsSourcesImpl _$$KodiListItemsSourcesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListItemsSources(
+    _$KodiListItemsSourcesImpl(
       file: json['file'] as String,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiListItemsSourcesToJson(
-        _$_KodiListItemsSources instance) =>
+Map<String, dynamic> _$$KodiListItemsSourcesImplToJson(
+        _$KodiListItemsSourcesImpl instance) =>
     <String, dynamic>{
       'file': instance.file,
       'label': instance.label,

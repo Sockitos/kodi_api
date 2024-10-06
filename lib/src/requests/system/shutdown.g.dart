@@ -6,7 +6,8 @@ part of 'shutdown.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Shutdown _$$_ShutdownFromJson(Map<String, dynamic> json) => _$_Shutdown();
+_$ShutdownImpl _$$ShutdownImplFromJson(Map<String, dynamic> json) =>
+    _$ShutdownImpl();
 
-Map<String, dynamic> _$$_ShutdownToJson(_$_Shutdown instance) =>
+Map<String, dynamic> _$$ShutdownImplToJson(_$ShutdownImpl instance) =>
     <String, dynamic>{};

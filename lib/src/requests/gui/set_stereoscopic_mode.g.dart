@@ -6,14 +6,14 @@ part of 'set_stereoscopic_mode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetStereoscopicMode _$$_SetStereoscopicModeFromJson(
+_$SetStereoscopicModeImpl _$$SetStereoscopicModeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetStereoscopicMode(
+    _$SetStereoscopicModeImpl(
       $enumDecode(_$KodiGUIStereoscopicSetModeEnumMap, json['mode']),
     );
 
-Map<String, dynamic> _$$_SetStereoscopicModeToJson(
-        _$_SetStereoscopicMode instance) =>
+Map<String, dynamic> _$$SetStereoscopicModeImplToJson(
+        _$SetStereoscopicModeImpl instance) =>
     <String, dynamic>{
       'mode': _$KodiGUIStereoscopicSetModeEnumMap[instance.mode]!,
     };
@@ -25,13 +25,11 @@ const _$KodiGUIStereoscopicSetModeEnumMap = {
   KodiGUIStereoscopicSetMode.previous: 'previous',
   KodiGUIStereoscopicSetMode.select: 'select',
   KodiGUIStereoscopicSetMode.off: 'off',
-  KodiGUIStereoscopicSetMode.splitVertical: 'splitVertical',
-  KodiGUIStereoscopicSetMode.splitHorizontal: 'splitHorizontal',
-  KodiGUIStereoscopicSetMode.rowInterleaved: 'rowInterleaved',
-  KodiGUIStereoscopicSetMode.hardwareBased: 'hardwareBased',
-  KodiGUIStereoscopicSetMode.anaglyphCyanRed: 'anaglyphCyanRed',
-  KodiGUIStereoscopicSetMode.anaglyphGreenMagenta: 'anaglyphGreenMagenta',
-  KodiGUIStereoscopicSetMode.anaglyphYellowBlue: 'anaglyphYellowBlue',
-  KodiGUIStereoscopicSetMode.checkerboard: 'checkerboard',
+  KodiGUIStereoscopicSetMode.splitVertical: 'split_vertical',
+  KodiGUIStereoscopicSetMode.splitHorizontal: 'split_horizontal',
+  KodiGUIStereoscopicSetMode.rowInterleaved: 'row_interleaved',
+  KodiGUIStereoscopicSetMode.hardwareBased: 'hardware_based',
+  KodiGUIStereoscopicSetMode.anaglyphCyanRed: 'anaglyph_cyan_red',
+  KodiGUIStereoscopicSetMode.anaglyphGreenMagenta: 'anaglyph_green_magenta',
   KodiGUIStereoscopicSetMode.monoscopic: 'monoscopic',
 };

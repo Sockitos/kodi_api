@@ -6,7 +6,8 @@ part of 'show_osd.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ShowOSD _$$_ShowOSDFromJson(Map<String, dynamic> json) => _$_ShowOSD();
+_$ShowOSDImpl _$$ShowOSDImplFromJson(Map<String, dynamic> json) =>
+    _$ShowOSDImpl();
 
-Map<String, dynamic> _$$_ShowOSDToJson(_$_ShowOSD instance) =>
+Map<String, dynamic> _$$ShowOSDImplToJson(_$ShowOSDImpl instance) =>
     <String, dynamic>{};

@@ -6,12 +6,12 @@ part of 'remove_texture.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RemoveTexture _$$_RemoveTextureFromJson(Map<String, dynamic> json) =>
-    _$_RemoveTexture(
-      json['textureid'] as int,
+_$RemoveTextureImpl _$$RemoveTextureImplFromJson(Map<String, dynamic> json) =>
+    _$RemoveTextureImpl(
+      (json['textureid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_RemoveTextureToJson(_$_RemoveTexture instance) =>
+Map<String, dynamic> _$$RemoveTextureImplToJson(_$RemoveTextureImpl instance) =>
     <String, dynamic>{
       'textureid': instance.id,
     };

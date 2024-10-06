@@ -7,7 +7,7 @@ part 'kodi_audio_details_role.g.dart';
 class KodiAudioDetailsRole with _$KodiAudioDetailsRole {
   const factory KodiAudioDetailsRole({
     @JsonKey(name: 'roleid') required int roleid,
-    String? title,
+    @Default('') String title,
     required String label,
   }) = _KodiAudioDetailsRole;
 

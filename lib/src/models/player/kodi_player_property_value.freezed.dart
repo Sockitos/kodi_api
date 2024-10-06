@@ -12,7 +12,7 @@ part of 'kodi_player_property_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerPropertyValue _$KodiPlayerPropertyValueFromJson(
     Map<String, dynamic> json) {
@@ -25,21 +25,21 @@ mixin _$KodiPlayerPropertyValue {
   List<KodiPlayerAudioStream>? get audioStreams =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'cachepercentage')
-  double? get cachePercentage => throw _privateConstructorUsedError;
+  double get cachePercentage => throw _privateConstructorUsedError;
   @JsonKey(name: 'canchangespeed')
-  bool? get canChangeSpeed => throw _privateConstructorUsedError;
+  bool get canChangeSpeed => throw _privateConstructorUsedError;
   @JsonKey(name: 'canmove')
-  bool? get canMove => throw _privateConstructorUsedError;
+  bool get canMove => throw _privateConstructorUsedError;
   @JsonKey(name: 'canrepeat')
-  bool? get canRepeat => throw _privateConstructorUsedError;
+  bool get canRepeat => throw _privateConstructorUsedError;
   @JsonKey(name: 'canrotate')
-  bool? get canRotate => throw _privateConstructorUsedError;
+  bool get canRotate => throw _privateConstructorUsedError;
   @JsonKey(name: 'canseek')
-  bool? get canSeek => throw _privateConstructorUsedError;
+  bool get canSeek => throw _privateConstructorUsedError;
   @JsonKey(name: 'canshuffle')
-  bool? get canShuffle => throw _privateConstructorUsedError;
+  bool get canShuffle => throw _privateConstructorUsedError;
   @JsonKey(name: 'canzoom')
-  bool? get canZoom => throw _privateConstructorUsedError;
+  bool get canZoom => throw _privateConstructorUsedError;
   @JsonKey(name: 'currentaudiostream')
   KodiPlayerAudioStream? get currentAudioStream =>
       throw _privateConstructorUsedError;
@@ -48,28 +48,33 @@ mixin _$KodiPlayerPropertyValue {
   @JsonKey(name: 'currentvideostream')
   KodiPlayerVideoStream? get currentVideoStream =>
       throw _privateConstructorUsedError;
-  bool? get live => throw _privateConstructorUsedError;
-  bool? get partymode => throw _privateConstructorUsedError;
-  double? get percentage => throw _privateConstructorUsedError;
+  bool get live => throw _privateConstructorUsedError;
+  @JsonKey(name: 'partyMode')
+  bool get partymode => throw _privateConstructorUsedError;
+  double get percentage => throw _privateConstructorUsedError;
   @JsonKey(name: 'playlistid')
-  int? get playlistId => throw _privateConstructorUsedError;
-  int? get position => throw _privateConstructorUsedError;
-  KodiPlayerRepeat? get repeat => throw _privateConstructorUsedError;
-  bool? get shuffled => throw _privateConstructorUsedError;
-  int? get speed => throw _privateConstructorUsedError;
+  int get playlistId => throw _privateConstructorUsedError;
+  int get position => throw _privateConstructorUsedError;
+  KodiPlayerRepeat get repeat => throw _privateConstructorUsedError;
+  bool get shuffled => throw _privateConstructorUsedError;
+  int get speed => throw _privateConstructorUsedError;
   @JsonKey(name: 'subtitleenabled')
-  bool? get subtitleEnabled => throw _privateConstructorUsedError;
+  bool get subtitleEnabled => throw _privateConstructorUsedError;
   List<KodiPlayerSubtitle>? get subtitles => throw _privateConstructorUsedError;
   KodiGlobalTime? get time => throw _privateConstructorUsedError;
   @JsonKey(name: 'totaltime')
   KodiGlobalTime? get totalTime => throw _privateConstructorUsedError;
-  KodiPlayerType? get type => throw _privateConstructorUsedError;
+  KodiPlayerType get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'videostreams')
   List<KodiPlayerVideoStream>? get videoStreams =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerPropertyValueCopyWith<KodiPlayerPropertyValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -82,32 +87,32 @@ abstract class $KodiPlayerPropertyValueCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'audiostreams') List<KodiPlayerAudioStream>? audioStreams,
-      @JsonKey(name: 'cachepercentage') double? cachePercentage,
-      @JsonKey(name: 'canchangespeed') bool? canChangeSpeed,
-      @JsonKey(name: 'canmove') bool? canMove,
-      @JsonKey(name: 'canrepeat') bool? canRepeat,
-      @JsonKey(name: 'canrotate') bool? canRotate,
-      @JsonKey(name: 'canseek') bool? canSeek,
-      @JsonKey(name: 'canshuffle') bool? canShuffle,
-      @JsonKey(name: 'canzoom') bool? canZoom,
+      @JsonKey(name: 'cachepercentage') double cachePercentage,
+      @JsonKey(name: 'canchangespeed') bool canChangeSpeed,
+      @JsonKey(name: 'canmove') bool canMove,
+      @JsonKey(name: 'canrepeat') bool canRepeat,
+      @JsonKey(name: 'canrotate') bool canRotate,
+      @JsonKey(name: 'canseek') bool canSeek,
+      @JsonKey(name: 'canshuffle') bool canShuffle,
+      @JsonKey(name: 'canzoom') bool canZoom,
       @JsonKey(name: 'currentaudiostream')
       KodiPlayerAudioStream? currentAudioStream,
       @JsonKey(name: 'currentsubtitle') KodiPlayerSubtitle? currentSubtitle,
       @JsonKey(name: 'currentvideostream')
       KodiPlayerVideoStream? currentVideoStream,
-      bool? live,
-      bool? partymode,
-      double? percentage,
-      @JsonKey(name: 'playlistid') int? playlistId,
-      int? position,
-      KodiPlayerRepeat? repeat,
-      bool? shuffled,
-      int? speed,
-      @JsonKey(name: 'subtitleenabled') bool? subtitleEnabled,
+      bool live,
+      @JsonKey(name: 'partyMode') bool partymode,
+      double percentage,
+      @JsonKey(name: 'playlistid') int playlistId,
+      int position,
+      KodiPlayerRepeat repeat,
+      bool shuffled,
+      int speed,
+      @JsonKey(name: 'subtitleenabled') bool subtitleEnabled,
       List<KodiPlayerSubtitle>? subtitles,
       KodiGlobalTime? time,
       @JsonKey(name: 'totaltime') KodiGlobalTime? totalTime,
-      KodiPlayerType? type,
+      KodiPlayerType type,
       @JsonKey(name: 'videostreams')
       List<KodiPlayerVideoStream>? videoStreams});
 
@@ -129,34 +134,36 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? audioStreams = freezed,
-    Object? cachePercentage = freezed,
-    Object? canChangeSpeed = freezed,
-    Object? canMove = freezed,
-    Object? canRepeat = freezed,
-    Object? canRotate = freezed,
-    Object? canSeek = freezed,
-    Object? canShuffle = freezed,
-    Object? canZoom = freezed,
+    Object? cachePercentage = null,
+    Object? canChangeSpeed = null,
+    Object? canMove = null,
+    Object? canRepeat = null,
+    Object? canRotate = null,
+    Object? canSeek = null,
+    Object? canShuffle = null,
+    Object? canZoom = null,
     Object? currentAudioStream = freezed,
     Object? currentSubtitle = freezed,
     Object? currentVideoStream = freezed,
-    Object? live = freezed,
-    Object? partymode = freezed,
-    Object? percentage = freezed,
-    Object? playlistId = freezed,
-    Object? position = freezed,
-    Object? repeat = freezed,
-    Object? shuffled = freezed,
-    Object? speed = freezed,
-    Object? subtitleEnabled = freezed,
+    Object? live = null,
+    Object? partymode = null,
+    Object? percentage = null,
+    Object? playlistId = null,
+    Object? position = null,
+    Object? repeat = null,
+    Object? shuffled = null,
+    Object? speed = null,
+    Object? subtitleEnabled = null,
     Object? subtitles = freezed,
     Object? time = freezed,
     Object? totalTime = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? videoStreams = freezed,
   }) {
     return _then(_value.copyWith(
@@ -164,38 +171,38 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
           ? _value.audioStreams
           : audioStreams // ignore: cast_nullable_to_non_nullable
               as List<KodiPlayerAudioStream>?,
-      cachePercentage: freezed == cachePercentage
+      cachePercentage: null == cachePercentage
           ? _value.cachePercentage
           : cachePercentage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      canChangeSpeed: freezed == canChangeSpeed
+              as double,
+      canChangeSpeed: null == canChangeSpeed
           ? _value.canChangeSpeed
           : canChangeSpeed // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canMove: freezed == canMove
+              as bool,
+      canMove: null == canMove
           ? _value.canMove
           : canMove // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canRepeat: freezed == canRepeat
+              as bool,
+      canRepeat: null == canRepeat
           ? _value.canRepeat
           : canRepeat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canRotate: freezed == canRotate
+              as bool,
+      canRotate: null == canRotate
           ? _value.canRotate
           : canRotate // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canSeek: freezed == canSeek
+              as bool,
+      canSeek: null == canSeek
           ? _value.canSeek
           : canSeek // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canShuffle: freezed == canShuffle
+              as bool,
+      canShuffle: null == canShuffle
           ? _value.canShuffle
           : canShuffle // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canZoom: freezed == canZoom
+              as bool,
+      canZoom: null == canZoom
           ? _value.canZoom
           : canZoom // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       currentAudioStream: freezed == currentAudioStream
           ? _value.currentAudioStream
           : currentAudioStream // ignore: cast_nullable_to_non_nullable
@@ -208,42 +215,42 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
           ? _value.currentVideoStream
           : currentVideoStream // ignore: cast_nullable_to_non_nullable
               as KodiPlayerVideoStream?,
-      live: freezed == live
+      live: null == live
           ? _value.live
           : live // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      partymode: freezed == partymode
+              as bool,
+      partymode: null == partymode
           ? _value.partymode
           : partymode // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      percentage: freezed == percentage
+              as bool,
+      percentage: null == percentage
           ? _value.percentage
           : percentage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      playlistId: freezed == playlistId
+              as double,
+      playlistId: null == playlistId
           ? _value.playlistId
           : playlistId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      position: freezed == position
+              as int,
+      position: null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
-              as int?,
-      repeat: freezed == repeat
+              as int,
+      repeat: null == repeat
           ? _value.repeat
           : repeat // ignore: cast_nullable_to_non_nullable
-              as KodiPlayerRepeat?,
-      shuffled: freezed == shuffled
+              as KodiPlayerRepeat,
+      shuffled: null == shuffled
           ? _value.shuffled
           : shuffled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      speed: freezed == speed
+              as bool,
+      speed: null == speed
           ? _value.speed
           : speed // ignore: cast_nullable_to_non_nullable
-              as int?,
-      subtitleEnabled: freezed == subtitleEnabled
+              as int,
+      subtitleEnabled: null == subtitleEnabled
           ? _value.subtitleEnabled
           : subtitleEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       subtitles: freezed == subtitles
           ? _value.subtitles
           : subtitles // ignore: cast_nullable_to_non_nullable
@@ -256,10 +263,10 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
           ? _value.totalTime
           : totalTime // ignore: cast_nullable_to_non_nullable
               as KodiGlobalTime?,
-      type: freezed == type
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as KodiPlayerType?,
+              as KodiPlayerType,
       videoStreams: freezed == videoStreams
           ? _value.videoStreams
           : videoStreams // ignore: cast_nullable_to_non_nullable
@@ -267,6 +274,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerAudioStreamCopyWith<$Res>? get currentAudioStream {
@@ -280,6 +289,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerSubtitleCopyWith<$Res>? get currentSubtitle {
@@ -292,6 +303,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerVideoStreamCopyWith<$Res>? get currentVideoStream {
@@ -305,6 +318,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res>? get time {
@@ -317,6 +332,8 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res>? get totalTime {
@@ -331,41 +348,42 @@ class _$KodiPlayerPropertyValueCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPropertyValueCopyWith<$Res>
+abstract class _$$KodiPlayerPropertyValueImplCopyWith<$Res>
     implements $KodiPlayerPropertyValueCopyWith<$Res> {
-  factory _$$_KodiPlayerPropertyValueCopyWith(_$_KodiPlayerPropertyValue value,
-          $Res Function(_$_KodiPlayerPropertyValue) then) =
-      __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>;
+  factory _$$KodiPlayerPropertyValueImplCopyWith(
+          _$KodiPlayerPropertyValueImpl value,
+          $Res Function(_$KodiPlayerPropertyValueImpl) then) =
+      __$$KodiPlayerPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'audiostreams') List<KodiPlayerAudioStream>? audioStreams,
-      @JsonKey(name: 'cachepercentage') double? cachePercentage,
-      @JsonKey(name: 'canchangespeed') bool? canChangeSpeed,
-      @JsonKey(name: 'canmove') bool? canMove,
-      @JsonKey(name: 'canrepeat') bool? canRepeat,
-      @JsonKey(name: 'canrotate') bool? canRotate,
-      @JsonKey(name: 'canseek') bool? canSeek,
-      @JsonKey(name: 'canshuffle') bool? canShuffle,
-      @JsonKey(name: 'canzoom') bool? canZoom,
+      @JsonKey(name: 'cachepercentage') double cachePercentage,
+      @JsonKey(name: 'canchangespeed') bool canChangeSpeed,
+      @JsonKey(name: 'canmove') bool canMove,
+      @JsonKey(name: 'canrepeat') bool canRepeat,
+      @JsonKey(name: 'canrotate') bool canRotate,
+      @JsonKey(name: 'canseek') bool canSeek,
+      @JsonKey(name: 'canshuffle') bool canShuffle,
+      @JsonKey(name: 'canzoom') bool canZoom,
       @JsonKey(name: 'currentaudiostream')
       KodiPlayerAudioStream? currentAudioStream,
       @JsonKey(name: 'currentsubtitle') KodiPlayerSubtitle? currentSubtitle,
       @JsonKey(name: 'currentvideostream')
       KodiPlayerVideoStream? currentVideoStream,
-      bool? live,
-      bool? partymode,
-      double? percentage,
-      @JsonKey(name: 'playlistid') int? playlistId,
-      int? position,
-      KodiPlayerRepeat? repeat,
-      bool? shuffled,
-      int? speed,
-      @JsonKey(name: 'subtitleenabled') bool? subtitleEnabled,
+      bool live,
+      @JsonKey(name: 'partyMode') bool partymode,
+      double percentage,
+      @JsonKey(name: 'playlistid') int playlistId,
+      int position,
+      KodiPlayerRepeat repeat,
+      bool shuffled,
+      int speed,
+      @JsonKey(name: 'subtitleenabled') bool subtitleEnabled,
       List<KodiPlayerSubtitle>? subtitles,
       KodiGlobalTime? time,
       @JsonKey(name: 'totaltime') KodiGlobalTime? totalTime,
-      KodiPlayerType? type,
+      KodiPlayerType type,
       @JsonKey(name: 'videostreams')
       List<KodiPlayerVideoStream>? videoStreams});
 
@@ -382,81 +400,84 @@ abstract class _$$_KodiPlayerPropertyValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>
+class __$$KodiPlayerPropertyValueImplCopyWithImpl<$Res>
     extends _$KodiPlayerPropertyValueCopyWithImpl<$Res,
-        _$_KodiPlayerPropertyValue>
-    implements _$$_KodiPlayerPropertyValueCopyWith<$Res> {
-  __$$_KodiPlayerPropertyValueCopyWithImpl(_$_KodiPlayerPropertyValue _value,
-      $Res Function(_$_KodiPlayerPropertyValue) _then)
+        _$KodiPlayerPropertyValueImpl>
+    implements _$$KodiPlayerPropertyValueImplCopyWith<$Res> {
+  __$$KodiPlayerPropertyValueImplCopyWithImpl(
+      _$KodiPlayerPropertyValueImpl _value,
+      $Res Function(_$KodiPlayerPropertyValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? audioStreams = freezed,
-    Object? cachePercentage = freezed,
-    Object? canChangeSpeed = freezed,
-    Object? canMove = freezed,
-    Object? canRepeat = freezed,
-    Object? canRotate = freezed,
-    Object? canSeek = freezed,
-    Object? canShuffle = freezed,
-    Object? canZoom = freezed,
+    Object? cachePercentage = null,
+    Object? canChangeSpeed = null,
+    Object? canMove = null,
+    Object? canRepeat = null,
+    Object? canRotate = null,
+    Object? canSeek = null,
+    Object? canShuffle = null,
+    Object? canZoom = null,
     Object? currentAudioStream = freezed,
     Object? currentSubtitle = freezed,
     Object? currentVideoStream = freezed,
-    Object? live = freezed,
-    Object? partymode = freezed,
-    Object? percentage = freezed,
-    Object? playlistId = freezed,
-    Object? position = freezed,
-    Object? repeat = freezed,
-    Object? shuffled = freezed,
-    Object? speed = freezed,
-    Object? subtitleEnabled = freezed,
+    Object? live = null,
+    Object? partymode = null,
+    Object? percentage = null,
+    Object? playlistId = null,
+    Object? position = null,
+    Object? repeat = null,
+    Object? shuffled = null,
+    Object? speed = null,
+    Object? subtitleEnabled = null,
     Object? subtitles = freezed,
     Object? time = freezed,
     Object? totalTime = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? videoStreams = freezed,
   }) {
-    return _then(_$_KodiPlayerPropertyValue(
+    return _then(_$KodiPlayerPropertyValueImpl(
       audioStreams: freezed == audioStreams
           ? _value._audioStreams
           : audioStreams // ignore: cast_nullable_to_non_nullable
               as List<KodiPlayerAudioStream>?,
-      cachePercentage: freezed == cachePercentage
+      cachePercentage: null == cachePercentage
           ? _value.cachePercentage
           : cachePercentage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      canChangeSpeed: freezed == canChangeSpeed
+              as double,
+      canChangeSpeed: null == canChangeSpeed
           ? _value.canChangeSpeed
           : canChangeSpeed // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canMove: freezed == canMove
+              as bool,
+      canMove: null == canMove
           ? _value.canMove
           : canMove // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canRepeat: freezed == canRepeat
+              as bool,
+      canRepeat: null == canRepeat
           ? _value.canRepeat
           : canRepeat // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canRotate: freezed == canRotate
+              as bool,
+      canRotate: null == canRotate
           ? _value.canRotate
           : canRotate // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canSeek: freezed == canSeek
+              as bool,
+      canSeek: null == canSeek
           ? _value.canSeek
           : canSeek // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canShuffle: freezed == canShuffle
+              as bool,
+      canShuffle: null == canShuffle
           ? _value.canShuffle
           : canShuffle // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canZoom: freezed == canZoom
+              as bool,
+      canZoom: null == canZoom
           ? _value.canZoom
           : canZoom // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       currentAudioStream: freezed == currentAudioStream
           ? _value.currentAudioStream
           : currentAudioStream // ignore: cast_nullable_to_non_nullable
@@ -469,42 +490,42 @@ class __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>
           ? _value.currentVideoStream
           : currentVideoStream // ignore: cast_nullable_to_non_nullable
               as KodiPlayerVideoStream?,
-      live: freezed == live
+      live: null == live
           ? _value.live
           : live // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      partymode: freezed == partymode
+              as bool,
+      partymode: null == partymode
           ? _value.partymode
           : partymode // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      percentage: freezed == percentage
+              as bool,
+      percentage: null == percentage
           ? _value.percentage
           : percentage // ignore: cast_nullable_to_non_nullable
-              as double?,
-      playlistId: freezed == playlistId
+              as double,
+      playlistId: null == playlistId
           ? _value.playlistId
           : playlistId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      position: freezed == position
+              as int,
+      position: null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
-              as int?,
-      repeat: freezed == repeat
+              as int,
+      repeat: null == repeat
           ? _value.repeat
           : repeat // ignore: cast_nullable_to_non_nullable
-              as KodiPlayerRepeat?,
-      shuffled: freezed == shuffled
+              as KodiPlayerRepeat,
+      shuffled: null == shuffled
           ? _value.shuffled
           : shuffled // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      speed: freezed == speed
+              as bool,
+      speed: null == speed
           ? _value.speed
           : speed // ignore: cast_nullable_to_non_nullable
-              as int?,
-      subtitleEnabled: freezed == subtitleEnabled
+              as int,
+      subtitleEnabled: null == subtitleEnabled
           ? _value.subtitleEnabled
           : subtitleEnabled // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       subtitles: freezed == subtitles
           ? _value._subtitles
           : subtitles // ignore: cast_nullable_to_non_nullable
@@ -517,10 +538,10 @@ class __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>
           ? _value.totalTime
           : totalTime // ignore: cast_nullable_to_non_nullable
               as KodiGlobalTime?,
-      type: freezed == type
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as KodiPlayerType?,
+              as KodiPlayerType,
       videoStreams: freezed == videoStreams
           ? _value._videoStreams
           : videoStreams // ignore: cast_nullable_to_non_nullable
@@ -531,42 +552,42 @@ class __$$_KodiPlayerPropertyValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
-  const _$_KodiPlayerPropertyValue(
+class _$KodiPlayerPropertyValueImpl implements _KodiPlayerPropertyValue {
+  const _$KodiPlayerPropertyValueImpl(
       {@JsonKey(name: 'audiostreams')
       final List<KodiPlayerAudioStream>? audioStreams,
-      @JsonKey(name: 'cachepercentage') this.cachePercentage,
-      @JsonKey(name: 'canchangespeed') this.canChangeSpeed,
-      @JsonKey(name: 'canmove') this.canMove,
-      @JsonKey(name: 'canrepeat') this.canRepeat,
-      @JsonKey(name: 'canrotate') this.canRotate,
-      @JsonKey(name: 'canseek') this.canSeek,
-      @JsonKey(name: 'canshuffle') this.canShuffle,
-      @JsonKey(name: 'canzoom') this.canZoom,
+      @JsonKey(name: 'cachepercentage') this.cachePercentage = 0,
+      @JsonKey(name: 'canchangespeed') this.canChangeSpeed = false,
+      @JsonKey(name: 'canmove') this.canMove = false,
+      @JsonKey(name: 'canrepeat') this.canRepeat = false,
+      @JsonKey(name: 'canrotate') this.canRotate = false,
+      @JsonKey(name: 'canseek') this.canSeek = false,
+      @JsonKey(name: 'canshuffle') this.canShuffle = false,
+      @JsonKey(name: 'canzoom') this.canZoom = false,
       @JsonKey(name: 'currentaudiostream') this.currentAudioStream,
       @JsonKey(name: 'currentsubtitle') this.currentSubtitle,
       @JsonKey(name: 'currentvideostream') this.currentVideoStream,
-      this.live,
-      this.partymode,
-      this.percentage,
-      @JsonKey(name: 'playlistid') this.playlistId,
-      this.position,
-      this.repeat,
-      this.shuffled,
-      this.speed,
-      @JsonKey(name: 'subtitleenabled') this.subtitleEnabled,
+      this.live = false,
+      @JsonKey(name: 'partyMode') this.partymode = false,
+      this.percentage = 0,
+      @JsonKey(name: 'playlistid') this.playlistId = -1,
+      this.position = -1,
+      this.repeat = KodiPlayerRepeat.off,
+      this.shuffled = false,
+      this.speed = 0,
+      @JsonKey(name: 'subtitleenabled') this.subtitleEnabled = false,
       final List<KodiPlayerSubtitle>? subtitles,
       this.time,
       @JsonKey(name: 'totaltime') this.totalTime,
-      this.type,
+      this.type = KodiPlayerType.video,
       @JsonKey(name: 'videostreams')
       final List<KodiPlayerVideoStream>? videoStreams})
       : _audioStreams = audioStreams,
         _subtitles = subtitles,
         _videoStreams = videoStreams;
 
-  factory _$_KodiPlayerPropertyValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerPropertyValueFromJson(json);
+  factory _$KodiPlayerPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerPropertyValueImplFromJson(json);
 
   final List<KodiPlayerAudioStream>? _audioStreams;
   @override
@@ -581,28 +602,28 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
 
   @override
   @JsonKey(name: 'cachepercentage')
-  final double? cachePercentage;
+  final double cachePercentage;
   @override
   @JsonKey(name: 'canchangespeed')
-  final bool? canChangeSpeed;
+  final bool canChangeSpeed;
   @override
   @JsonKey(name: 'canmove')
-  final bool? canMove;
+  final bool canMove;
   @override
   @JsonKey(name: 'canrepeat')
-  final bool? canRepeat;
+  final bool canRepeat;
   @override
   @JsonKey(name: 'canrotate')
-  final bool? canRotate;
+  final bool canRotate;
   @override
   @JsonKey(name: 'canseek')
-  final bool? canSeek;
+  final bool canSeek;
   @override
   @JsonKey(name: 'canshuffle')
-  final bool? canShuffle;
+  final bool canShuffle;
   @override
   @JsonKey(name: 'canzoom')
-  final bool? canZoom;
+  final bool canZoom;
   @override
   @JsonKey(name: 'currentaudiostream')
   final KodiPlayerAudioStream? currentAudioStream;
@@ -613,25 +634,32 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
   @JsonKey(name: 'currentvideostream')
   final KodiPlayerVideoStream? currentVideoStream;
   @override
-  final bool? live;
+  @JsonKey()
+  final bool live;
   @override
-  final bool? partymode;
+  @JsonKey(name: 'partyMode')
+  final bool partymode;
   @override
-  final double? percentage;
+  @JsonKey()
+  final double percentage;
   @override
   @JsonKey(name: 'playlistid')
-  final int? playlistId;
+  final int playlistId;
   @override
-  final int? position;
+  @JsonKey()
+  final int position;
   @override
-  final KodiPlayerRepeat? repeat;
+  @JsonKey()
+  final KodiPlayerRepeat repeat;
   @override
-  final bool? shuffled;
+  @JsonKey()
+  final bool shuffled;
   @override
-  final int? speed;
+  @JsonKey()
+  final int speed;
   @override
   @JsonKey(name: 'subtitleenabled')
-  final bool? subtitleEnabled;
+  final bool subtitleEnabled;
   final List<KodiPlayerSubtitle>? _subtitles;
   @override
   List<KodiPlayerSubtitle>? get subtitles {
@@ -648,7 +676,8 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
   @JsonKey(name: 'totaltime')
   final KodiGlobalTime? totalTime;
   @override
-  final KodiPlayerType? type;
+  @JsonKey()
+  final KodiPlayerType type;
   final List<KodiPlayerVideoStream>? _videoStreams;
   @override
   @JsonKey(name: 'videostreams')
@@ -666,10 +695,10 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPropertyValue &&
+            other is _$KodiPlayerPropertyValueImpl &&
             const DeepCollectionEquality()
                 .equals(other._audioStreams, _audioStreams) &&
             (identical(other.cachePercentage, cachePercentage) ||
@@ -716,7 +745,7 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
                 .equals(other._videoStreams, _videoStreams));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -748,17 +777,18 @@ class _$_KodiPlayerPropertyValue implements _KodiPlayerPropertyValue {
         const DeepCollectionEquality().hash(_videoStreams)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPropertyValueCopyWith<_$_KodiPlayerPropertyValue>
-      get copyWith =>
-          __$$_KodiPlayerPropertyValueCopyWithImpl<_$_KodiPlayerPropertyValue>(
-              this, _$identity);
+  _$$KodiPlayerPropertyValueImplCopyWith<_$KodiPlayerPropertyValueImpl>
+      get copyWith => __$$KodiPlayerPropertyValueImplCopyWithImpl<
+          _$KodiPlayerPropertyValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPropertyValueToJson(
+    return _$$KodiPlayerPropertyValueImplToJson(
       this,
     );
   }
@@ -768,67 +798,67 @@ abstract class _KodiPlayerPropertyValue implements KodiPlayerPropertyValue {
   const factory _KodiPlayerPropertyValue(
           {@JsonKey(name: 'audiostreams')
           final List<KodiPlayerAudioStream>? audioStreams,
-          @JsonKey(name: 'cachepercentage') final double? cachePercentage,
-          @JsonKey(name: 'canchangespeed') final bool? canChangeSpeed,
-          @JsonKey(name: 'canmove') final bool? canMove,
-          @JsonKey(name: 'canrepeat') final bool? canRepeat,
-          @JsonKey(name: 'canrotate') final bool? canRotate,
-          @JsonKey(name: 'canseek') final bool? canSeek,
-          @JsonKey(name: 'canshuffle') final bool? canShuffle,
-          @JsonKey(name: 'canzoom') final bool? canZoom,
+          @JsonKey(name: 'cachepercentage') final double cachePercentage,
+          @JsonKey(name: 'canchangespeed') final bool canChangeSpeed,
+          @JsonKey(name: 'canmove') final bool canMove,
+          @JsonKey(name: 'canrepeat') final bool canRepeat,
+          @JsonKey(name: 'canrotate') final bool canRotate,
+          @JsonKey(name: 'canseek') final bool canSeek,
+          @JsonKey(name: 'canshuffle') final bool canShuffle,
+          @JsonKey(name: 'canzoom') final bool canZoom,
           @JsonKey(name: 'currentaudiostream')
           final KodiPlayerAudioStream? currentAudioStream,
           @JsonKey(name: 'currentsubtitle')
           final KodiPlayerSubtitle? currentSubtitle,
           @JsonKey(name: 'currentvideostream')
           final KodiPlayerVideoStream? currentVideoStream,
-          final bool? live,
-          final bool? partymode,
-          final double? percentage,
-          @JsonKey(name: 'playlistid') final int? playlistId,
-          final int? position,
-          final KodiPlayerRepeat? repeat,
-          final bool? shuffled,
-          final int? speed,
-          @JsonKey(name: 'subtitleenabled') final bool? subtitleEnabled,
+          final bool live,
+          @JsonKey(name: 'partyMode') final bool partymode,
+          final double percentage,
+          @JsonKey(name: 'playlistid') final int playlistId,
+          final int position,
+          final KodiPlayerRepeat repeat,
+          final bool shuffled,
+          final int speed,
+          @JsonKey(name: 'subtitleenabled') final bool subtitleEnabled,
           final List<KodiPlayerSubtitle>? subtitles,
           final KodiGlobalTime? time,
           @JsonKey(name: 'totaltime') final KodiGlobalTime? totalTime,
-          final KodiPlayerType? type,
+          final KodiPlayerType type,
           @JsonKey(name: 'videostreams')
           final List<KodiPlayerVideoStream>? videoStreams}) =
-      _$_KodiPlayerPropertyValue;
+      _$KodiPlayerPropertyValueImpl;
 
   factory _KodiPlayerPropertyValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerPropertyValue.fromJson;
+      _$KodiPlayerPropertyValueImpl.fromJson;
 
   @override
   @JsonKey(name: 'audiostreams')
   List<KodiPlayerAudioStream>? get audioStreams;
   @override
   @JsonKey(name: 'cachepercentage')
-  double? get cachePercentage;
+  double get cachePercentage;
   @override
   @JsonKey(name: 'canchangespeed')
-  bool? get canChangeSpeed;
+  bool get canChangeSpeed;
   @override
   @JsonKey(name: 'canmove')
-  bool? get canMove;
+  bool get canMove;
   @override
   @JsonKey(name: 'canrepeat')
-  bool? get canRepeat;
+  bool get canRepeat;
   @override
   @JsonKey(name: 'canrotate')
-  bool? get canRotate;
+  bool get canRotate;
   @override
   @JsonKey(name: 'canseek')
-  bool? get canSeek;
+  bool get canSeek;
   @override
   @JsonKey(name: 'canshuffle')
-  bool? get canShuffle;
+  bool get canShuffle;
   @override
   @JsonKey(name: 'canzoom')
-  bool? get canZoom;
+  bool get canZoom;
   @override
   @JsonKey(name: 'currentaudiostream')
   KodiPlayerAudioStream? get currentAudioStream;
@@ -839,25 +869,26 @@ abstract class _KodiPlayerPropertyValue implements KodiPlayerPropertyValue {
   @JsonKey(name: 'currentvideostream')
   KodiPlayerVideoStream? get currentVideoStream;
   @override
-  bool? get live;
+  bool get live;
   @override
-  bool? get partymode;
+  @JsonKey(name: 'partyMode')
+  bool get partymode;
   @override
-  double? get percentage;
+  double get percentage;
   @override
   @JsonKey(name: 'playlistid')
-  int? get playlistId;
+  int get playlistId;
   @override
-  int? get position;
+  int get position;
   @override
-  KodiPlayerRepeat? get repeat;
+  KodiPlayerRepeat get repeat;
   @override
-  bool? get shuffled;
+  bool get shuffled;
   @override
-  int? get speed;
+  int get speed;
   @override
   @JsonKey(name: 'subtitleenabled')
-  bool? get subtitleEnabled;
+  bool get subtitleEnabled;
   @override
   List<KodiPlayerSubtitle>? get subtitles;
   @override
@@ -866,12 +897,15 @@ abstract class _KodiPlayerPropertyValue implements KodiPlayerPropertyValue {
   @JsonKey(name: 'totaltime')
   KodiGlobalTime? get totalTime;
   @override
-  KodiPlayerType? get type;
+  KodiPlayerType get type;
   @override
   @JsonKey(name: 'videostreams')
   List<KodiPlayerVideoStream>? get videoStreams;
+
+  /// Create a copy of KodiPlayerPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPropertyValueCopyWith<_$_KodiPlayerPropertyValue>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPropertyValueImplCopyWith<_$KodiPlayerPropertyValueImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

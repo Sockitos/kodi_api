@@ -12,7 +12,7 @@ part of 'kodi_playlist_property_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlaylistPropertyValue _$KodiPlaylistPropertyValueFromJson(
     Map<String, dynamic> json) {
@@ -21,11 +21,15 @@ KodiPlaylistPropertyValue _$KodiPlaylistPropertyValueFromJson(
 
 /// @nodoc
 mixin _$KodiPlaylistPropertyValue {
-  int? get size => throw _privateConstructorUsedError;
-  KodiPlaylistType? get type => throw _privateConstructorUsedError;
+  int get size => throw _privateConstructorUsedError;
+  KodiPlaylistType get type => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlaylistPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlaylistPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlaylistPropertyValueCopyWith<KodiPlaylistPropertyValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -36,7 +40,7 @@ abstract class $KodiPlaylistPropertyValueCopyWith<$Res> {
           $Res Function(KodiPlaylistPropertyValue) then) =
       _$KodiPlaylistPropertyValueCopyWithImpl<$Res, KodiPlaylistPropertyValue>;
   @useResult
-  $Res call({int? size, KodiPlaylistType? type});
+  $Res call({int size, KodiPlaylistType type});
 }
 
 /// @nodoc
@@ -50,78 +54,85 @@ class _$KodiPlaylistPropertyValueCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlaylistPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? size = freezed,
-    Object? type = freezed,
+    Object? size = null,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
-      size: freezed == size
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
+              as int,
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as KodiPlaylistType?,
+              as KodiPlaylistType,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_KodiPlaylistPropertyValueCopyWith<$Res>
+abstract class _$$KodiPlaylistPropertyValueImplCopyWith<$Res>
     implements $KodiPlaylistPropertyValueCopyWith<$Res> {
-  factory _$$_KodiPlaylistPropertyValueCopyWith(
-          _$_KodiPlaylistPropertyValue value,
-          $Res Function(_$_KodiPlaylistPropertyValue) then) =
-      __$$_KodiPlaylistPropertyValueCopyWithImpl<$Res>;
+  factory _$$KodiPlaylistPropertyValueImplCopyWith(
+          _$KodiPlaylistPropertyValueImpl value,
+          $Res Function(_$KodiPlaylistPropertyValueImpl) then) =
+      __$$KodiPlaylistPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? size, KodiPlaylistType? type});
+  $Res call({int size, KodiPlaylistType type});
 }
 
 /// @nodoc
-class __$$_KodiPlaylistPropertyValueCopyWithImpl<$Res>
+class __$$KodiPlaylistPropertyValueImplCopyWithImpl<$Res>
     extends _$KodiPlaylistPropertyValueCopyWithImpl<$Res,
-        _$_KodiPlaylistPropertyValue>
-    implements _$$_KodiPlaylistPropertyValueCopyWith<$Res> {
-  __$$_KodiPlaylistPropertyValueCopyWithImpl(
-      _$_KodiPlaylistPropertyValue _value,
-      $Res Function(_$_KodiPlaylistPropertyValue) _then)
+        _$KodiPlaylistPropertyValueImpl>
+    implements _$$KodiPlaylistPropertyValueImplCopyWith<$Res> {
+  __$$KodiPlaylistPropertyValueImplCopyWithImpl(
+      _$KodiPlaylistPropertyValueImpl _value,
+      $Res Function(_$KodiPlaylistPropertyValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlaylistPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? size = freezed,
-    Object? type = freezed,
+    Object? size = null,
+    Object? type = null,
   }) {
-    return _then(_$_KodiPlaylistPropertyValue(
-      size: freezed == size
+    return _then(_$KodiPlaylistPropertyValueImpl(
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
+              as int,
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as KodiPlaylistType?,
+              as KodiPlaylistType,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlaylistPropertyValue implements _KodiPlaylistPropertyValue {
-  const _$_KodiPlaylistPropertyValue({this.size, this.type});
+class _$KodiPlaylistPropertyValueImpl implements _KodiPlaylistPropertyValue {
+  const _$KodiPlaylistPropertyValueImpl(
+      {this.size = 0, this.type = KodiPlaylistType.unknown});
 
-  factory _$_KodiPlaylistPropertyValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlaylistPropertyValueFromJson(json);
+  factory _$KodiPlaylistPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlaylistPropertyValueImplFromJson(json);
 
   @override
-  final int? size;
+  @JsonKey()
+  final int size;
   @override
-  final KodiPlaylistType? type;
+  @JsonKey()
+  final KodiPlaylistType type;
 
   @override
   String toString() {
@@ -129,28 +140,30 @@ class _$_KodiPlaylistPropertyValue implements _KodiPlaylistPropertyValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlaylistPropertyValue &&
+            other is _$KodiPlaylistPropertyValueImpl &&
             (identical(other.size, size) || other.size == size) &&
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, size, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlaylistPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlaylistPropertyValueCopyWith<_$_KodiPlaylistPropertyValue>
-      get copyWith => __$$_KodiPlaylistPropertyValueCopyWithImpl<
-          _$_KodiPlaylistPropertyValue>(this, _$identity);
+  _$$KodiPlaylistPropertyValueImplCopyWith<_$KodiPlaylistPropertyValueImpl>
+      get copyWith => __$$KodiPlaylistPropertyValueImplCopyWithImpl<
+          _$KodiPlaylistPropertyValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlaylistPropertyValueToJson(
+    return _$$KodiPlaylistPropertyValueImplToJson(
       this,
     );
   }
@@ -158,18 +171,21 @@ class _$_KodiPlaylistPropertyValue implements _KodiPlaylistPropertyValue {
 
 abstract class _KodiPlaylistPropertyValue implements KodiPlaylistPropertyValue {
   const factory _KodiPlaylistPropertyValue(
-      {final int? size,
-      final KodiPlaylistType? type}) = _$_KodiPlaylistPropertyValue;
+      {final int size,
+      final KodiPlaylistType type}) = _$KodiPlaylistPropertyValueImpl;
 
   factory _KodiPlaylistPropertyValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlaylistPropertyValue.fromJson;
+      _$KodiPlaylistPropertyValueImpl.fromJson;
 
   @override
-  int? get size;
+  int get size;
   @override
-  KodiPlaylistType? get type;
+  KodiPlaylistType get type;
+
+  /// Create a copy of KodiPlaylistPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlaylistPropertyValueCopyWith<_$_KodiPlaylistPropertyValue>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlaylistPropertyValueImplCopyWith<_$KodiPlaylistPropertyValueImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

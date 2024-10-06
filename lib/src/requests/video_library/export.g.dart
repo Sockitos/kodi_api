@@ -6,13 +6,13 @@ part of 'export.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Export _$$_ExportFromJson(Map<String, dynamic> json) => _$_Export(
+_$ExportImpl _$$ExportImplFromJson(Map<String, dynamic> json) => _$ExportImpl(
       options: _$JsonConverterFromJson<Map<String, dynamic>,
               KodiVideoLibraryExportOptions>(json['options'],
           const KodiVideoLibraryExportOptionsConverter().fromJson),
     );
 
-Map<String, dynamic> _$$_ExportToJson(_$_Export instance) {
+Map<String, dynamic> _$$ExportImplToJson(_$ExportImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -41,36 +41,38 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_KodiVideoLibraryExportOptionsPath
-    _$$_KodiVideoLibraryExportOptionsPathFromJson(Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryExportOptionsPath(
+_$KodiVideoLibraryExportOptionsPathImpl
+    _$$KodiVideoLibraryExportOptionsPathImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiVideoLibraryExportOptionsPathImpl(
           json['path'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiVideoLibraryExportOptionsPathToJson(
-        _$_KodiVideoLibraryExportOptionsPath instance) =>
+Map<String, dynamic> _$$KodiVideoLibraryExportOptionsPathImplToJson(
+        _$KodiVideoLibraryExportOptionsPathImpl instance) =>
     <String, dynamic>{
       'path': instance.path,
       'runtimeType': instance.$type,
     };
 
-_$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite
-    _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteFromJson(
+_$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl
+    _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite(
+        _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl(
           actorThumbs: json['actorthumbs'] as bool? ?? false,
           images: json['images'] as bool? ?? false,
           overwrite: json['overwrite'] as bool? ?? false,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String,
-    dynamic> _$$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteToJson(
-        _$_KodiVideoLibraryExportOptionsActorThumbsImagesOverwrite instance) =>
-    <String, dynamic>{
-      'actorthumbs': instance.actorThumbs,
-      'images': instance.images,
-      'overwrite': instance.overwrite,
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic>
+    _$$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImplToJson(
+            _$KodiVideoLibraryExportOptionsActorThumbsImagesOverwriteImpl
+                instance) =>
+        <String, dynamic>{
+          'actorthumbs': instance.actorThumbs,
+          'images': instance.images,
+          'overwrite': instance.overwrite,
+          'runtimeType': instance.$type,
+        };

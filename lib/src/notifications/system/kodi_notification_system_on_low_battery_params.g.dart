@@ -6,10 +6,10 @@ part of 'kodi_notification_system_on_low_battery_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationSystemOnLowBatteryParams
-    _$$_KodiNotificationSystemOnLowBatteryParamsFromJson(
+_$KodiNotificationSystemOnLowBatteryParamsImpl
+    _$$KodiNotificationSystemOnLowBatteryParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnLowBatteryParams(
+        _$KodiNotificationSystemOnLowBatteryParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,8 @@ _$_KodiNotificationSystemOnLowBatteryParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnLowBatteryParamsToJson(
-    _$_KodiNotificationSystemOnLowBatteryParams instance) {
+Map<String, dynamic> _$$KodiNotificationSystemOnLowBatteryParamsImplToJson(
+    _$KodiNotificationSystemOnLowBatteryParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,15 +33,15 @@ Map<String, dynamic> _$$_KodiNotificationSystemOnLowBatteryParamsToJson(
   return val;
 }
 
-_$_KodiNotificationSystemOnLowBatteryParamsData
-    _$$_KodiNotificationSystemOnLowBatteryParamsDataFromJson(
+_$KodiNotificationSystemOnLowBatteryParamsDataImpl
+    _$$KodiNotificationSystemOnLowBatteryParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnLowBatteryParamsData(
+        _$KodiNotificationSystemOnLowBatteryParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnLowBatteryParamsDataToJson(
-        _$_KodiNotificationSystemOnLowBatteryParamsData instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnLowBatteryParamsDataImplToJson(
+        _$KodiNotificationSystemOnLowBatteryParamsDataImpl instance) =>
     <String, dynamic>{
       'test': instance.test,
     };

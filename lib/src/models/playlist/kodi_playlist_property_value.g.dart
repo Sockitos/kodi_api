@@ -6,27 +6,20 @@ part of 'kodi_playlist_property_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlaylistPropertyValue _$$_KodiPlaylistPropertyValueFromJson(
+_$KodiPlaylistPropertyValueImpl _$$KodiPlaylistPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlaylistPropertyValue(
-      size: json['size'] as int?,
-      type: $enumDecodeNullable(_$KodiPlaylistTypeEnumMap, json['type']),
+    _$KodiPlaylistPropertyValueImpl(
+      size: (json['size'] as num?)?.toInt() ?? 0,
+      type: $enumDecodeNullable(_$KodiPlaylistTypeEnumMap, json['type']) ??
+          KodiPlaylistType.unknown,
     );
 
-Map<String, dynamic> _$$_KodiPlaylistPropertyValueToJson(
-    _$_KodiPlaylistPropertyValue instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('size', instance.size);
-  writeNotNull('type', _$KodiPlaylistTypeEnumMap[instance.type]);
-  return val;
-}
+Map<String, dynamic> _$$KodiPlaylistPropertyValueImplToJson(
+        _$KodiPlaylistPropertyValueImpl instance) =>
+    <String, dynamic>{
+      'size': instance.size,
+      'type': _$KodiPlaylistTypeEnumMap[instance.type]!,
+    };
 
 const _$KodiPlaylistTypeEnumMap = {
   KodiPlaylistType.unknown: 'unknown',

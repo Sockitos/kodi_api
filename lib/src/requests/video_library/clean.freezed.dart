@@ -12,7 +12,7 @@ part of 'clean.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Clean _$CleanFromJson(Map<String, dynamic> json) {
   return _Clean.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$Clean {
   KodiVideoLibraryContentType get content => throw _privateConstructorUsedError;
   String? get directory => throw _privateConstructorUsedError;
 
+  /// Serializes this Clean to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Clean
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CleanCopyWith<Clean> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -51,6 +55,8 @@ class _$CleanCopyWithImpl<$Res, $Val extends Clean>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Clean
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -76,9 +82,10 @@ class _$CleanCopyWithImpl<$Res, $Val extends Clean>
 }
 
 /// @nodoc
-abstract class _$$_CleanCopyWith<$Res> implements $CleanCopyWith<$Res> {
-  factory _$$_CleanCopyWith(_$_Clean value, $Res Function(_$_Clean) then) =
-      __$$_CleanCopyWithImpl<$Res>;
+abstract class _$$CleanImplCopyWith<$Res> implements $CleanCopyWith<$Res> {
+  factory _$$CleanImplCopyWith(
+          _$CleanImpl value, $Res Function(_$CleanImpl) then) =
+      __$$CleanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +95,15 @@ abstract class _$$_CleanCopyWith<$Res> implements $CleanCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CleanCopyWithImpl<$Res> extends _$CleanCopyWithImpl<$Res, _$_Clean>
-    implements _$$_CleanCopyWith<$Res> {
-  __$$_CleanCopyWithImpl(_$_Clean _value, $Res Function(_$_Clean) _then)
+class __$$CleanImplCopyWithImpl<$Res>
+    extends _$CleanCopyWithImpl<$Res, _$CleanImpl>
+    implements _$$CleanImplCopyWith<$Res> {
+  __$$CleanImplCopyWithImpl(
+      _$CleanImpl _value, $Res Function(_$CleanImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Clean
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -100,7 +111,7 @@ class __$$_CleanCopyWithImpl<$Res> extends _$CleanCopyWithImpl<$Res, _$_Clean>
     Object? content = null,
     Object? directory = freezed,
   }) {
-    return _then(_$_Clean(
+    return _then(_$CleanImpl(
       showDialogs: null == showDialogs
           ? _value.showDialogs
           : showDialogs // ignore: cast_nullable_to_non_nullable
@@ -119,15 +130,15 @@ class __$$_CleanCopyWithImpl<$Res> extends _$CleanCopyWithImpl<$Res, _$_Clean>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Clean extends _Clean {
-  const _$_Clean(
+class _$CleanImpl extends _Clean {
+  const _$CleanImpl(
       {@JsonKey(name: 'showdialogs') this.showDialogs = true,
       this.content = KodiVideoLibraryContentType.video,
       this.directory})
       : super._();
 
-  factory _$_Clean.fromJson(Map<String, dynamic> json) =>
-      _$$_CleanFromJson(json);
+  factory _$CleanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CleanImplFromJson(json);
 
   @override
   @JsonKey(name: 'showdialogs')
@@ -144,10 +155,10 @@ class _$_Clean extends _Clean {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Clean &&
+            other is _$CleanImpl &&
             (identical(other.showDialogs, showDialogs) ||
                 other.showDialogs == showDialogs) &&
             (identical(other.content, content) || other.content == content) &&
@@ -155,19 +166,21 @@ class _$_Clean extends _Clean {
                 other.directory == directory));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, showDialogs, content, directory);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Clean
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CleanCopyWith<_$_Clean> get copyWith =>
-      __$$_CleanCopyWithImpl<_$_Clean>(this, _$identity);
+  _$$CleanImplCopyWith<_$CleanImpl> get copyWith =>
+      __$$CleanImplCopyWithImpl<_$CleanImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CleanToJson(
+    return _$$CleanImplToJson(
       this,
     );
   }
@@ -177,10 +190,10 @@ abstract class _Clean extends Clean {
   const factory _Clean(
       {@JsonKey(name: 'showdialogs') final bool showDialogs,
       final KodiVideoLibraryContentType content,
-      final String? directory}) = _$_Clean;
+      final String? directory}) = _$CleanImpl;
   const _Clean._() : super._();
 
-  factory _Clean.fromJson(Map<String, dynamic> json) = _$_Clean.fromJson;
+  factory _Clean.fromJson(Map<String, dynamic> json) = _$CleanImpl.fromJson;
 
   @override
   @JsonKey(name: 'showdialogs')
@@ -189,8 +202,11 @@ abstract class _Clean extends Clean {
   KodiVideoLibraryContentType get content;
   @override
   String? get directory;
+
+  /// Create a copy of Clean
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_CleanCopyWith<_$_Clean> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CleanImplCopyWith<_$CleanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'kodi_video_details_music_video.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiVideoDetailsMusicVideo _$KodiVideoDetailsMusicVideoFromJson(
     Map<String, dynamic> json) {
@@ -53,8 +53,12 @@ mixin _$KodiVideoDetailsMusicVideo {
   String? get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiVideoDetailsMusicVideo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiVideoDetailsMusicVideoCopyWith<KodiVideoDetailsMusicVideo>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -109,6 +113,8 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,6 +248,8 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoResumeCopyWith<$Res>? get resume {
@@ -254,6 +262,8 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoStreamsCopyWith<$Res>? get streamDetails {
@@ -266,6 +276,8 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -280,12 +292,12 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoDetailsMusicVideoCopyWith<$Res>
+abstract class _$$KodiVideoDetailsMusicVideoImplCopyWith<$Res>
     implements $KodiVideoDetailsMusicVideoCopyWith<$Res> {
-  factory _$$_KodiVideoDetailsMusicVideoCopyWith(
-          _$_KodiVideoDetailsMusicVideo value,
-          $Res Function(_$_KodiVideoDetailsMusicVideo) then) =
-      __$$_KodiVideoDetailsMusicVideoCopyWithImpl<$Res>;
+  factory _$$KodiVideoDetailsMusicVideoImplCopyWith(
+          _$KodiVideoDetailsMusicVideoImpl value,
+          $Res Function(_$KodiVideoDetailsMusicVideoImpl) then) =
+      __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -324,15 +336,17 @@ abstract class _$$_KodiVideoDetailsMusicVideoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiVideoDetailsMusicVideoCopyWithImpl<$Res>
+class __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>
     extends _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
-        _$_KodiVideoDetailsMusicVideo>
-    implements _$$_KodiVideoDetailsMusicVideoCopyWith<$Res> {
-  __$$_KodiVideoDetailsMusicVideoCopyWithImpl(
-      _$_KodiVideoDetailsMusicVideo _value,
-      $Res Function(_$_KodiVideoDetailsMusicVideo) _then)
+        _$KodiVideoDetailsMusicVideoImpl>
+    implements _$$KodiVideoDetailsMusicVideoImplCopyWith<$Res> {
+  __$$KodiVideoDetailsMusicVideoImplCopyWithImpl(
+      _$KodiVideoDetailsMusicVideoImpl _value,
+      $Res Function(_$KodiVideoDetailsMusicVideoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -362,7 +376,7 @@ class __$$_KodiVideoDetailsMusicVideoCopyWithImpl<$Res>
     Object? thumbnail = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiVideoDetailsMusicVideo(
+    return _then(_$KodiVideoDetailsMusicVideoImpl(
       album: freezed == album
           ? _value.album
           : album // ignore: cast_nullable_to_non_nullable
@@ -470,8 +484,8 @@ class __$$_KodiVideoDetailsMusicVideoCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiVideoDetailsMusicVideo implements _KodiVideoDetailsMusicVideo {
-  const _$_KodiVideoDetailsMusicVideo(
+class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
+  const _$KodiVideoDetailsMusicVideoImpl(
       {this.album,
       final List<String>? artist,
       final List<String>? genre,
@@ -503,8 +517,9 @@ class _$_KodiVideoDetailsMusicVideo implements _KodiVideoDetailsMusicVideo {
         _tag = tag,
         _director = director;
 
-  factory _$_KodiVideoDetailsMusicVideo.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiVideoDetailsMusicVideoFromJson(json);
+  factory _$KodiVideoDetailsMusicVideoImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiVideoDetailsMusicVideoImplFromJson(json);
 
   @override
   final String? album;
@@ -609,10 +624,10 @@ class _$_KodiVideoDetailsMusicVideo implements _KodiVideoDetailsMusicVideo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoDetailsMusicVideo &&
+            other is _$KodiVideoDetailsMusicVideoImpl &&
             (identical(other.album, album) || other.album == album) &&
             const DeepCollectionEquality().equals(other._artist, _artist) &&
             const DeepCollectionEquality().equals(other._genre, _genre) &&
@@ -648,7 +663,7 @@ class _$_KodiVideoDetailsMusicVideo implements _KodiVideoDetailsMusicVideo {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -679,16 +694,18 @@ class _$_KodiVideoDetailsMusicVideo implements _KodiVideoDetailsMusicVideo {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoDetailsMusicVideoCopyWith<_$_KodiVideoDetailsMusicVideo>
-      get copyWith => __$$_KodiVideoDetailsMusicVideoCopyWithImpl<
-          _$_KodiVideoDetailsMusicVideo>(this, _$identity);
+  _$$KodiVideoDetailsMusicVideoImplCopyWith<_$KodiVideoDetailsMusicVideoImpl>
+      get copyWith => __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<
+          _$KodiVideoDetailsMusicVideoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoDetailsMusicVideoToJson(
+    return _$$KodiVideoDetailsMusicVideoImplToJson(
       this,
     );
   }
@@ -721,10 +738,10 @@ abstract class _KodiVideoDetailsMusicVideo
       @JsonKey(name: 'playcount') final int? playCount,
       final String? fanart,
       final String? thumbnail,
-      required final String label}) = _$_KodiVideoDetailsMusicVideo;
+      required final String label}) = _$KodiVideoDetailsMusicVideoImpl;
 
   factory _KodiVideoDetailsMusicVideo.fromJson(Map<String, dynamic> json) =
-      _$_KodiVideoDetailsMusicVideo.fromJson;
+      _$KodiVideoDetailsMusicVideoImpl.fromJson;
 
   @override
   String? get album;
@@ -782,8 +799,11 @@ abstract class _KodiVideoDetailsMusicVideo
   String? get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiVideoDetailsMusicVideo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiVideoDetailsMusicVideoCopyWith<_$_KodiVideoDetailsMusicVideo>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoDetailsMusicVideoImplCopyWith<_$KodiVideoDetailsMusicVideoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

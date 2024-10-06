@@ -12,7 +12,7 @@ part of 'quit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Quit _$QuitFromJson(Map<String, dynamic> json) {
   return _Quit.fromJson(json);
@@ -20,6 +20,7 @@ Quit _$QuitFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Quit {
+  /// Serializes this Quit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,27 +39,36 @@ class _$QuitCopyWithImpl<$Res, $Val extends Quit>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Quit
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_QuitCopyWith<$Res> {
-  factory _$$_QuitCopyWith(_$_Quit value, $Res Function(_$_Quit) then) =
-      __$$_QuitCopyWithImpl<$Res>;
+abstract class _$$QuitImplCopyWith<$Res> {
+  factory _$$QuitImplCopyWith(
+          _$QuitImpl value, $Res Function(_$QuitImpl) then) =
+      __$$QuitImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_QuitCopyWithImpl<$Res> extends _$QuitCopyWithImpl<$Res, _$_Quit>
-    implements _$$_QuitCopyWith<$Res> {
-  __$$_QuitCopyWithImpl(_$_Quit _value, $Res Function(_$_Quit) _then)
+class __$$QuitImplCopyWithImpl<$Res>
+    extends _$QuitCopyWithImpl<$Res, _$QuitImpl>
+    implements _$$QuitImplCopyWith<$Res> {
+  __$$QuitImplCopyWithImpl(_$QuitImpl _value, $Res Function(_$QuitImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Quit
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Quit extends _Quit {
-  const _$_Quit() : super._();
+class _$QuitImpl extends _Quit {
+  const _$QuitImpl() : super._();
 
-  factory _$_Quit.fromJson(Map<String, dynamic> json) => _$$_QuitFromJson(json);
+  factory _$QuitImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuitImplFromJson(json);
 
   @override
   String toString() {
@@ -66,26 +76,26 @@ class _$_Quit extends _Quit {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Quit);
+        (other.runtimeType == runtimeType && other is _$QuitImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuitToJson(
+    return _$$QuitImplToJson(
       this,
     );
   }
 }
 
 abstract class _Quit extends Quit {
-  const factory _Quit() = _$_Quit;
+  const factory _Quit() = _$QuitImpl;
   const _Quit._() : super._();
 
-  factory _Quit.fromJson(Map<String, dynamic> json) = _$_Quit.fromJson;
+  factory _Quit.fromJson(Map<String, dynamic> json) = _$QuitImpl.fromJson;
 }

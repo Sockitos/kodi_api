@@ -6,8 +6,8 @@ part of 'get_sources.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSources _$$_GetSourcesFromJson(Map<String, dynamic> json) =>
-    _$_GetSources(
+_$GetSourcesImpl _$$GetSourcesImplFromJson(Map<String, dynamic> json) =>
+    _$GetSourcesImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiLibraryFieldsSourceEnumMap, e))
           .toSet(),
@@ -19,7 +19,7 @@ _$_GetSources _$$_GetSourcesFromJson(Map<String, dynamic> json) =>
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSourcesToJson(_$_GetSources instance) {
+Map<String, dynamic> _$$GetSourcesImplToJson(_$GetSourcesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -43,9 +43,9 @@ const _$KodiLibraryFieldsSourceEnumMap = {
   KodiLibraryFieldsSource.paths: 'paths',
 };
 
-_$_GetSourcesResponse _$$_GetSourcesResponseFromJson(
+_$GetSourcesResponseImpl _$$GetSourcesResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetSourcesResponse(
+    _$GetSourcesResponseImpl(
       sources: (json['sources'] as List<dynamic>)
           .map((e) =>
               KodiLibraryDetailsSource.fromJson(e as Map<String, dynamic>))
@@ -54,8 +54,8 @@ _$_GetSourcesResponse _$$_GetSourcesResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSourcesResponseToJson(
-        _$_GetSourcesResponse instance) =>
+Map<String, dynamic> _$$GetSourcesResponseImplToJson(
+        _$GetSourcesResponseImpl instance) =>
     <String, dynamic>{
       'sources': instance.sources.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

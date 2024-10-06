@@ -12,7 +12,7 @@ part of 'get_file_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetFileDetails _$GetFileDetailsFromJson(Map<String, dynamic> json) {
   return _GetFileDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetFileDetails {
   Set<KodiListFieldsFiles>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetFileDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetFileDetailsCopyWith<GetFileDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$GetFileDetailsCopyWithImpl<$Res, $Val extends GetFileDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,11 +84,11 @@ class _$GetFileDetailsCopyWithImpl<$Res, $Val extends GetFileDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetFileDetailsCopyWith<$Res>
+abstract class _$$GetFileDetailsImplCopyWith<$Res>
     implements $GetFileDetailsCopyWith<$Res> {
-  factory _$$_GetFileDetailsCopyWith(
-          _$_GetFileDetails value, $Res Function(_$_GetFileDetails) then) =
-      __$$_GetFileDetailsCopyWithImpl<$Res>;
+  factory _$$GetFileDetailsImplCopyWith(_$GetFileDetailsImpl value,
+          $Res Function(_$GetFileDetailsImpl) then) =
+      __$$GetFileDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -92,13 +98,15 @@ abstract class _$$_GetFileDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetFileDetailsCopyWithImpl<$Res>
-    extends _$GetFileDetailsCopyWithImpl<$Res, _$_GetFileDetails>
-    implements _$$_GetFileDetailsCopyWith<$Res> {
-  __$$_GetFileDetailsCopyWithImpl(
-      _$_GetFileDetails _value, $Res Function(_$_GetFileDetails) _then)
+class __$$GetFileDetailsImplCopyWithImpl<$Res>
+    extends _$GetFileDetailsCopyWithImpl<$Res, _$GetFileDetailsImpl>
+    implements _$$GetFileDetailsImplCopyWith<$Res> {
+  __$$GetFileDetailsImplCopyWithImpl(
+      _$GetFileDetailsImpl _value, $Res Function(_$GetFileDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,7 +114,7 @@ class __$$_GetFileDetailsCopyWithImpl<$Res>
     Object? media = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetFileDetails(
+    return _then(_$GetFileDetailsImpl(
       null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
@@ -125,15 +133,15 @@ class __$$_GetFileDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetFileDetails extends _GetFileDetails {
-  const _$_GetFileDetails(this.file,
+class _$GetFileDetailsImpl extends _GetFileDetails {
+  const _$GetFileDetailsImpl(this.file,
       {this.media = KodiFilesMedia.files,
       final Set<KodiListFieldsFiles>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetFileDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetFileDetailsFromJson(json);
+  factory _$GetFileDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetFileDetailsImplFromJson(json);
 
   @override
   final String file;
@@ -156,30 +164,33 @@ class _$_GetFileDetails extends _GetFileDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetFileDetails &&
+            other is _$GetFileDetailsImpl &&
             (identical(other.file, file) || other.file == file) &&
             (identical(other.media, media) || other.media == media) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, file, media,
       const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetFileDetailsCopyWith<_$_GetFileDetails> get copyWith =>
-      __$$_GetFileDetailsCopyWithImpl<_$_GetFileDetails>(this, _$identity);
+  _$$GetFileDetailsImplCopyWith<_$GetFileDetailsImpl> get copyWith =>
+      __$$GetFileDetailsImplCopyWithImpl<_$GetFileDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetFileDetailsToJson(
+    return _$$GetFileDetailsImplToJson(
       this,
     );
   }
@@ -188,11 +199,11 @@ class _$_GetFileDetails extends _GetFileDetails {
 abstract class _GetFileDetails extends GetFileDetails {
   const factory _GetFileDetails(final String file,
       {final KodiFilesMedia media,
-      final Set<KodiListFieldsFiles>? properties}) = _$_GetFileDetails;
+      final Set<KodiListFieldsFiles>? properties}) = _$GetFileDetailsImpl;
   const _GetFileDetails._() : super._();
 
   factory _GetFileDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetFileDetails.fromJson;
+      _$GetFileDetailsImpl.fromJson;
 
   @override
   String get file;
@@ -200,8 +211,11 @@ abstract class _GetFileDetails extends GetFileDetails {
   KodiFilesMedia get media;
   @override
   Set<KodiListFieldsFiles>? get properties;
+
+  /// Create a copy of GetFileDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetFileDetailsCopyWith<_$_GetFileDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetFileDetailsImplCopyWith<_$GetFileDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

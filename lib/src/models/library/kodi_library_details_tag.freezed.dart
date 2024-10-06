@@ -12,7 +12,7 @@ part of 'kodi_library_details_tag.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiLibraryDetailsTag _$KodiLibraryDetailsTagFromJson(
     Map<String, dynamic> json) {
@@ -26,8 +26,12 @@ mixin _$KodiLibraryDetailsTag {
   String? get title => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiLibraryDetailsTag to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiLibraryDetailsTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiLibraryDetailsTagCopyWith<KodiLibraryDetailsTag> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$KodiLibraryDetailsTagCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiLibraryDetailsTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,24 +83,28 @@ class _$KodiLibraryDetailsTagCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiLibraryDetailsTagCopyWith<$Res>
+abstract class _$$KodiLibraryDetailsTagImplCopyWith<$Res>
     implements $KodiLibraryDetailsTagCopyWith<$Res> {
-  factory _$$_KodiLibraryDetailsTagCopyWith(_$_KodiLibraryDetailsTag value,
-          $Res Function(_$_KodiLibraryDetailsTag) then) =
-      __$$_KodiLibraryDetailsTagCopyWithImpl<$Res>;
+  factory _$$KodiLibraryDetailsTagImplCopyWith(
+          _$KodiLibraryDetailsTagImpl value,
+          $Res Function(_$KodiLibraryDetailsTagImpl) then) =
+      __$$KodiLibraryDetailsTagImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'tagid') int tagId, String? title, String label});
 }
 
 /// @nodoc
-class __$$_KodiLibraryDetailsTagCopyWithImpl<$Res>
-    extends _$KodiLibraryDetailsTagCopyWithImpl<$Res, _$_KodiLibraryDetailsTag>
-    implements _$$_KodiLibraryDetailsTagCopyWith<$Res> {
-  __$$_KodiLibraryDetailsTagCopyWithImpl(_$_KodiLibraryDetailsTag _value,
-      $Res Function(_$_KodiLibraryDetailsTag) _then)
+class __$$KodiLibraryDetailsTagImplCopyWithImpl<$Res>
+    extends _$KodiLibraryDetailsTagCopyWithImpl<$Res,
+        _$KodiLibraryDetailsTagImpl>
+    implements _$$KodiLibraryDetailsTagImplCopyWith<$Res> {
+  __$$KodiLibraryDetailsTagImplCopyWithImpl(_$KodiLibraryDetailsTagImpl _value,
+      $Res Function(_$KodiLibraryDetailsTagImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiLibraryDetailsTag
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,7 +112,7 @@ class __$$_KodiLibraryDetailsTagCopyWithImpl<$Res>
     Object? title = freezed,
     Object? label = null,
   }) {
-    return _then(_$_KodiLibraryDetailsTag(
+    return _then(_$KodiLibraryDetailsTagImpl(
       tagId: null == tagId
           ? _value.tagId
           : tagId // ignore: cast_nullable_to_non_nullable
@@ -121,14 +131,14 @@ class __$$_KodiLibraryDetailsTagCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiLibraryDetailsTag implements _KodiLibraryDetailsTag {
-  const _$_KodiLibraryDetailsTag(
+class _$KodiLibraryDetailsTagImpl implements _KodiLibraryDetailsTag {
+  const _$KodiLibraryDetailsTagImpl(
       {@JsonKey(name: 'tagid') required this.tagId,
       this.title,
       required this.label});
 
-  factory _$_KodiLibraryDetailsTag.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiLibraryDetailsTagFromJson(json);
+  factory _$KodiLibraryDetailsTagImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiLibraryDetailsTagImplFromJson(json);
 
   @override
   @JsonKey(name: 'tagid')
@@ -144,29 +154,31 @@ class _$_KodiLibraryDetailsTag implements _KodiLibraryDetailsTag {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiLibraryDetailsTag &&
+            other is _$KodiLibraryDetailsTagImpl &&
             (identical(other.tagId, tagId) || other.tagId == tagId) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, tagId, title, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiLibraryDetailsTag
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiLibraryDetailsTagCopyWith<_$_KodiLibraryDetailsTag> get copyWith =>
-      __$$_KodiLibraryDetailsTagCopyWithImpl<_$_KodiLibraryDetailsTag>(
-          this, _$identity);
+  _$$KodiLibraryDetailsTagImplCopyWith<_$KodiLibraryDetailsTagImpl>
+      get copyWith => __$$KodiLibraryDetailsTagImplCopyWithImpl<
+          _$KodiLibraryDetailsTagImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiLibraryDetailsTagToJson(
+    return _$$KodiLibraryDetailsTagImplToJson(
       this,
     );
   }
@@ -176,10 +188,10 @@ abstract class _KodiLibraryDetailsTag implements KodiLibraryDetailsTag {
   const factory _KodiLibraryDetailsTag(
       {@JsonKey(name: 'tagid') required final int tagId,
       final String? title,
-      required final String label}) = _$_KodiLibraryDetailsTag;
+      required final String label}) = _$KodiLibraryDetailsTagImpl;
 
   factory _KodiLibraryDetailsTag.fromJson(Map<String, dynamic> json) =
-      _$_KodiLibraryDetailsTag.fromJson;
+      _$KodiLibraryDetailsTagImpl.fromJson;
 
   @override
   @JsonKey(name: 'tagid')
@@ -188,8 +200,11 @@ abstract class _KodiLibraryDetailsTag implements KodiLibraryDetailsTag {
   String? get title;
   @override
   String get label;
+
+  /// Create a copy of KodiLibraryDetailsTag
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiLibraryDetailsTagCopyWith<_$_KodiLibraryDetailsTag> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiLibraryDetailsTagImplCopyWith<_$KodiLibraryDetailsTagImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'play_pause.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PlayPause _$PlayPauseFromJson(Map<String, dynamic> json) {
   return _PlayPause.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$PlayPause {
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get play => throw _privateConstructorUsedError;
 
+  /// Serializes this PlayPause to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlayPause
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlayPauseCopyWith<PlayPause> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$PlayPauseCopyWithImpl<$Res, $Val extends PlayPause>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlayPause
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$PlayPauseCopyWithImpl<$Res, $Val extends PlayPause>
     ) as $Val);
   }
 
+  /// Create a copy of PlayPause
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalToggleCopyWith<$Res> get play {
@@ -81,10 +89,11 @@ class _$PlayPauseCopyWithImpl<$Res, $Val extends PlayPause>
 }
 
 /// @nodoc
-abstract class _$$_PlayPauseCopyWith<$Res> implements $PlayPauseCopyWith<$Res> {
-  factory _$$_PlayPauseCopyWith(
-          _$_PlayPause value, $Res Function(_$_PlayPause) then) =
-      __$$_PlayPauseCopyWithImpl<$Res>;
+abstract class _$$PlayPauseImplCopyWith<$Res>
+    implements $PlayPauseCopyWith<$Res> {
+  factory _$$PlayPauseImplCopyWith(
+          _$PlayPauseImpl value, $Res Function(_$PlayPauseImpl) then) =
+      __$$PlayPauseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -96,20 +105,22 @@ abstract class _$$_PlayPauseCopyWith<$Res> implements $PlayPauseCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PlayPauseCopyWithImpl<$Res>
-    extends _$PlayPauseCopyWithImpl<$Res, _$_PlayPause>
-    implements _$$_PlayPauseCopyWith<$Res> {
-  __$$_PlayPauseCopyWithImpl(
-      _$_PlayPause _value, $Res Function(_$_PlayPause) _then)
+class __$$PlayPauseImplCopyWithImpl<$Res>
+    extends _$PlayPauseCopyWithImpl<$Res, _$PlayPauseImpl>
+    implements _$$PlayPauseImplCopyWith<$Res> {
+  __$$PlayPauseImplCopyWithImpl(
+      _$PlayPauseImpl _value, $Res Function(_$PlayPauseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlayPause
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? play = null,
   }) {
-    return _then(_$_PlayPause(
+    return _then(_$PlayPauseImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -124,14 +135,14 @@ class __$$_PlayPauseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PlayPause extends _PlayPause {
-  const _$_PlayPause(@JsonKey(name: 'playerid') this.id,
+class _$PlayPauseImpl extends _PlayPause {
+  const _$PlayPauseImpl(@JsonKey(name: 'playerid') this.id,
       {@KodiGlobalToggleConverter() this.play =
           const KodiGlobalToggle.enumerator(KodiGlobalToggleEnum.toggle)})
       : super._();
 
-  factory _$_PlayPause.fromJson(Map<String, dynamic> json) =>
-      _$$_PlayPauseFromJson(json);
+  factory _$PlayPauseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PlayPauseImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -147,27 +158,29 @@ class _$_PlayPause extends _PlayPause {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PlayPause &&
+            other is _$PlayPauseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.play, play) || other.play == play));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, play);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlayPause
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PlayPauseCopyWith<_$_PlayPause> get copyWith =>
-      __$$_PlayPauseCopyWithImpl<_$_PlayPause>(this, _$identity);
+  _$$PlayPauseImplCopyWith<_$PlayPauseImpl> get copyWith =>
+      __$$PlayPauseImplCopyWithImpl<_$PlayPauseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlayPauseToJson(
+    return _$$PlayPauseImplToJson(
       this,
     );
   }
@@ -176,11 +189,11 @@ class _$_PlayPause extends _PlayPause {
 abstract class _PlayPause extends PlayPause {
   const factory _PlayPause(@JsonKey(name: 'playerid') final int id,
           {@KodiGlobalToggleConverter() final KodiGlobalToggle play}) =
-      _$_PlayPause;
+      _$PlayPauseImpl;
   const _PlayPause._() : super._();
 
   factory _PlayPause.fromJson(Map<String, dynamic> json) =
-      _$_PlayPause.fromJson;
+      _$PlayPauseImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -188,8 +201,11 @@ abstract class _PlayPause extends PlayPause {
   @override
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get play;
+
+  /// Create a copy of PlayPause
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_PlayPauseCopyWith<_$_PlayPause> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PlayPauseImplCopyWith<_$PlayPauseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

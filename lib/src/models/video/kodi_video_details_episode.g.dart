@@ -6,27 +6,27 @@ part of 'kodi_video_details_episode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoDetailsEpisode _$$_KodiVideoDetailsEpisodeFromJson(
+_$KodiVideoDetailsEpisodeImpl _$$KodiVideoDetailsEpisodeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiVideoDetailsEpisode(
+    _$KodiVideoDetailsEpisodeImpl(
       cast: (json['cast'] as List<dynamic>?)
           ?.map((e) => KodiVideoCast.fromJson(e as Map<String, dynamic>))
           .toList(),
-      episode: json['episode'] as int?,
-      episodeId: json['episodeid'] as int,
+      episode: (json['episode'] as num?)?.toInt(),
+      episodeId: (json['episodeid'] as num).toInt(),
       firstAired: const DateTimeConverter().fromJson(json['firstaired']),
       originalTitle: json['originaltitle'] as String?,
       productionCode: json['productioncode'] as String?,
       rating: (json['rating'] as num?)?.toDouble(),
       ratings: json['ratings'] as Map<String, dynamic>?,
-      season: json['season'] as int?,
-      seasonId: json['seasonid'] as int?,
+      season: (json['season'] as num?)?.toInt(),
+      seasonId: (json['seasonid'] as num?)?.toInt(),
       showTitle: json['showtitle'] as String?,
-      specialSortEpisode: json['specialsortepisode'] as int?,
-      specialSortSeason: json['specialsortseason'] as int?,
-      tvshowId: json['tvshowid'] as int?,
+      specialSortEpisode: (json['specialsortepisode'] as num?)?.toInt(),
+      specialSortSeason: (json['specialsortseason'] as num?)?.toInt(),
+      tvshowId: (json['tvshowid'] as num?)?.toInt(),
       uniqueId: json['uniqueid'] as Map<String, dynamic>?,
-      userRating: json['userrating'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
       votes: json['votes'] as String?,
       writer:
           (json['writer'] as List<dynamic>?)?.map((e) => e as String).toList(),
@@ -36,7 +36,7 @@ _$_KodiVideoDetailsEpisode _$$_KodiVideoDetailsEpisodeFromJson(
       resume: json['resume'] == null
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
-      runtime: json['runtime'] as int?,
+      runtime: (json['runtime'] as num?)?.toInt(),
       streamDetails: json['streamdetails'] == null
           ? null
           : KodiVideoStreams.fromJson(
@@ -49,14 +49,14 @@ _$_KodiVideoDetailsEpisode _$$_KodiVideoDetailsEpisodeFromJson(
       art: json['art'] == null
           ? null
           : KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       fanart: json['fanart'] as String?,
       thumbnail: json['thumbnail'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiVideoDetailsEpisodeToJson(
-    _$_KodiVideoDetailsEpisode instance) {
+Map<String, dynamic> _$$KodiVideoDetailsEpisodeImplToJson(
+    _$KodiVideoDetailsEpisodeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

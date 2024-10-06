@@ -12,7 +12,7 @@ part of 'add_timer.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AddTimer _$AddTimerFromJson(Map<String, dynamic> json) {
   return _AddTimer.fromJson(json);
@@ -26,8 +26,12 @@ mixin _$AddTimer {
   bool get timerRule => throw _privateConstructorUsedError;
   bool get reminder => throw _privateConstructorUsedError;
 
+  /// Serializes this AddTimer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddTimerCopyWith<AddTimer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$AddTimerCopyWithImpl<$Res, $Val extends AddTimer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,10 +84,11 @@ class _$AddTimerCopyWithImpl<$Res, $Val extends AddTimer>
 }
 
 /// @nodoc
-abstract class _$$_AddTimerCopyWith<$Res> implements $AddTimerCopyWith<$Res> {
-  factory _$$_AddTimerCopyWith(
-          _$_AddTimer value, $Res Function(_$_AddTimer) then) =
-      __$$_AddTimerCopyWithImpl<$Res>;
+abstract class _$$AddTimerImplCopyWith<$Res>
+    implements $AddTimerCopyWith<$Res> {
+  factory _$$AddTimerImplCopyWith(
+          _$AddTimerImpl value, $Res Function(_$AddTimerImpl) then) =
+      __$$AddTimerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -91,13 +98,15 @@ abstract class _$$_AddTimerCopyWith<$Res> implements $AddTimerCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AddTimerCopyWithImpl<$Res>
-    extends _$AddTimerCopyWithImpl<$Res, _$_AddTimer>
-    implements _$$_AddTimerCopyWith<$Res> {
-  __$$_AddTimerCopyWithImpl(
-      _$_AddTimer _value, $Res Function(_$_AddTimer) _then)
+class __$$AddTimerImplCopyWithImpl<$Res>
+    extends _$AddTimerCopyWithImpl<$Res, _$AddTimerImpl>
+    implements _$$AddTimerImplCopyWith<$Res> {
+  __$$AddTimerImplCopyWithImpl(
+      _$AddTimerImpl _value, $Res Function(_$AddTimerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddTimer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -105,7 +114,7 @@ class __$$_AddTimerCopyWithImpl<$Res>
     Object? timerRule = null,
     Object? reminder = null,
   }) {
-    return _then(_$_AddTimer(
+    return _then(_$AddTimerImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -124,14 +133,14 @@ class __$$_AddTimerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AddTimer extends _AddTimer {
-  const _$_AddTimer(@JsonKey(name: 'broadcastid') this.id,
+class _$AddTimerImpl extends _AddTimer {
+  const _$AddTimerImpl(@JsonKey(name: 'broadcastid') this.id,
       {@JsonKey(name: 'timerrule') this.timerRule = false,
       this.reminder = false})
       : super._();
 
-  factory _$_AddTimer.fromJson(Map<String, dynamic> json) =>
-      _$$_AddTimerFromJson(json);
+  factory _$AddTimerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddTimerImplFromJson(json);
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -149,10 +158,10 @@ class _$_AddTimer extends _AddTimer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddTimer &&
+            other is _$AddTimerImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.timerRule, timerRule) ||
                 other.timerRule == timerRule) &&
@@ -160,19 +169,21 @@ class _$_AddTimer extends _AddTimer {
                 other.reminder == reminder));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, timerRule, reminder);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddTimer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddTimerCopyWith<_$_AddTimer> get copyWith =>
-      __$$_AddTimerCopyWithImpl<_$_AddTimer>(this, _$identity);
+  _$$AddTimerImplCopyWith<_$AddTimerImpl> get copyWith =>
+      __$$AddTimerImplCopyWithImpl<_$AddTimerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddTimerToJson(
+    return _$$AddTimerImplToJson(
       this,
     );
   }
@@ -181,10 +192,11 @@ class _$_AddTimer extends _AddTimer {
 abstract class _AddTimer extends AddTimer {
   const factory _AddTimer(@JsonKey(name: 'broadcastid') final int id,
       {@JsonKey(name: 'timerrule') final bool timerRule,
-      final bool reminder}) = _$_AddTimer;
+      final bool reminder}) = _$AddTimerImpl;
   const _AddTimer._() : super._();
 
-  factory _AddTimer.fromJson(Map<String, dynamic> json) = _$_AddTimer.fromJson;
+  factory _AddTimer.fromJson(Map<String, dynamic> json) =
+      _$AddTimerImpl.fromJson;
 
   @override
   @JsonKey(name: 'broadcastid')
@@ -194,8 +206,11 @@ abstract class _AddTimer extends AddTimer {
   bool get timerRule;
   @override
   bool get reminder;
+
+  /// Create a copy of AddTimer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_AddTimerCopyWith<_$_AddTimer> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddTimerImplCopyWith<_$AddTimerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,12 +6,12 @@ part of 'remove_movie.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RemoveMovie _$$_RemoveMovieFromJson(Map<String, dynamic> json) =>
-    _$_RemoveMovie(
-      json['movieid'] as int,
+_$RemoveMovieImpl _$$RemoveMovieImplFromJson(Map<String, dynamic> json) =>
+    _$RemoveMovieImpl(
+      (json['movieid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_RemoveMovieToJson(_$_RemoveMovie instance) =>
+Map<String, dynamic> _$$RemoveMovieImplToJson(_$RemoveMovieImpl instance) =>
     <String, dynamic>{
       'movieid': instance.id,
     };

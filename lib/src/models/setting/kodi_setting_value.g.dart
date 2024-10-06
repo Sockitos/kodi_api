@@ -6,57 +6,57 @@ part of 'kodi_setting_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiSettingValueBool _$$_KodiSettingValueBoolFromJson(
+_$KodiSettingValueBoolImpl _$$KodiSettingValueBoolImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingValueBool(
+    _$KodiSettingValueBoolImpl(
       json['value'] as bool,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiSettingValueBoolToJson(
-        _$_KodiSettingValueBool instance) =>
+Map<String, dynamic> _$$KodiSettingValueBoolImplToJson(
+        _$KodiSettingValueBoolImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiSettingValueInt _$$_KodiSettingValueIntFromJson(
+_$KodiSettingValueIntImpl _$$KodiSettingValueIntImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingValueInt(
-      json['value'] as int,
+    _$KodiSettingValueIntImpl(
+      (json['value'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiSettingValueIntToJson(
-        _$_KodiSettingValueInt instance) =>
+Map<String, dynamic> _$$KodiSettingValueIntImplToJson(
+        _$KodiSettingValueIntImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiSettingValueNumber _$$_KodiSettingValueNumberFromJson(
+_$KodiSettingValueNumberImpl _$$KodiSettingValueNumberImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingValueNumber(
+    _$KodiSettingValueNumberImpl(
       (json['value'] as num).toDouble(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiSettingValueNumberToJson(
-        _$_KodiSettingValueNumber instance) =>
+Map<String, dynamic> _$$KodiSettingValueNumberImplToJson(
+        _$KodiSettingValueNumberImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiSettingValueString _$$_KodiSettingValueStringFromJson(
+_$KodiSettingValueStringImpl _$$KodiSettingValueStringImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingValueString(
+    _$KodiSettingValueStringImpl(
       json['value'] as String,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiSettingValueStringToJson(
-        _$_KodiSettingValueString instance) =>
+Map<String, dynamic> _$$KodiSettingValueStringImplToJson(
+        _$KodiSettingValueStringImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

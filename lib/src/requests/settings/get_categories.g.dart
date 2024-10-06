@@ -6,20 +6,21 @@ part of 'get_categories.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetCategories _$$_GetCategoriesFromJson(Map<String, dynamic> json) =>
-    _$_GetCategories(
+_$GetCategoriesImpl _$$GetCategoriesImplFromJson(Map<String, dynamic> json) =>
+    _$GetCategoriesImpl(
       level: $enumDecodeNullable(_$KodiSettingLevelEnumMap, json['level']) ??
           KodiSettingLevel.standard,
-      section: json['section'] as String?,
+      section: json['section'] as String? ?? '',
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) =>
               $enumDecode(_$KodiSettingsGetCategoriesPropertiesEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetCategoriesToJson(_$_GetCategories instance) {
+Map<String, dynamic> _$$GetCategoriesImplToJson(_$GetCategoriesImpl instance) {
   final val = <String, dynamic>{
     'level': _$KodiSettingLevelEnumMap[instance.level]!,
+    'section': instance.section,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -28,7 +29,6 @@ Map<String, dynamic> _$$_GetCategoriesToJson(_$_GetCategories instance) {
     }
   }
 
-  writeNotNull('section', instance.section);
   writeNotNull(
       'properties',
       instance.properties
@@ -48,17 +48,18 @@ const _$KodiSettingsGetCategoriesPropertiesEnumMap = {
   KodiSettingsGetCategoriesProperties.settings: 'settings',
 };
 
-_$_KodiSettingsGetCategoriesResponse
-    _$$_KodiSettingsGetCategoriesResponseFromJson(Map<String, dynamic> json) =>
-        _$_KodiSettingsGetCategoriesResponse(
+_$KodiSettingsGetCategoriesResponseImpl
+    _$$KodiSettingsGetCategoriesResponseImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiSettingsGetCategoriesResponseImpl(
           categories: (json['categories'] as List<dynamic>)
               .map((e) => KodiSettingDetailsCategory.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
         );
 
-Map<String, dynamic> _$$_KodiSettingsGetCategoriesResponseToJson(
-        _$_KodiSettingsGetCategoriesResponse instance) =>
+Map<String, dynamic> _$$KodiSettingsGetCategoriesResponseImplToJson(
+        _$KodiSettingsGetCategoriesResponseImpl instance) =>
     <String, dynamic>{
       'categories': instance.categories.map((e) => e.toJson()).toList(),
     };

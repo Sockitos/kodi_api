@@ -10,8 +10,10 @@ export 'open.dart'
         KodiPlayerPlayerOpenItemPartyMode,
         KodiPlayerPlayerOpenOptions,
         KodiPlayerPlayerOpenOptionsResume;
+export 'player.dart' show Player;
 export 'rotate.dart' show KodiPlayerRotate;
 export 'seek.dart' show KodiPlayerSeekStep, KodiPlayerSeekValue;
+export 'set_audio_delay.dart' show KodiPlayerSetAudioOffset;
 export 'set_audio_stream.dart'
     show KodiSetAudioStreamEnum, SetAudioStreamStream;
 export 'set_repeat.dart' show KodiPlayerRepeatCycle, SetRepeatRepeat;

@@ -12,7 +12,7 @@ part of 'get_available_art.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetAvailableArt _$GetAvailableArtFromJson(Map<String, dynamic> json) {
   return _GetAvailableArt.fromJson(json);
@@ -24,10 +24,14 @@ mixin _$GetAvailableArt {
   KodiAudioLibraryGetAvailableArtItem get item =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'arttype')
-  String? get artType => throw _privateConstructorUsedError;
+  String get artType => throw _privateConstructorUsedError;
 
+  /// Serializes this GetAvailableArt to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetAvailableArtCopyWith<GetAvailableArt> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -41,7 +45,7 @@ abstract class $GetAvailableArtCopyWith<$Res> {
   $Res call(
       {@KodiAudioLibraryGetAvailableArtItemConverter()
       KodiAudioLibraryGetAvailableArtItem item,
-      @JsonKey(name: 'arttype') String? artType});
+      @JsonKey(name: 'arttype') String artType});
 
   $KodiAudioLibraryGetAvailableArtItemCopyWith<$Res> get item;
 }
@@ -56,24 +60,28 @@ class _$GetAvailableArtCopyWithImpl<$Res, $Val extends GetAvailableArt>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? item = null,
-    Object? artType = freezed,
+    Object? artType = null,
   }) {
     return _then(_value.copyWith(
       item: null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as KodiAudioLibraryGetAvailableArtItem,
-      artType: freezed == artType
+      artType: null == artType
           ? _value.artType
           : artType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 
+  /// Create a copy of GetAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiAudioLibraryGetAvailableArtItemCopyWith<$Res> get item {
@@ -85,66 +93,68 @@ class _$GetAvailableArtCopyWithImpl<$Res, $Val extends GetAvailableArt>
 }
 
 /// @nodoc
-abstract class _$$_GetAvailableArtCopyWith<$Res>
+abstract class _$$GetAvailableArtImplCopyWith<$Res>
     implements $GetAvailableArtCopyWith<$Res> {
-  factory _$$_GetAvailableArtCopyWith(
-          _$_GetAvailableArt value, $Res Function(_$_GetAvailableArt) then) =
-      __$$_GetAvailableArtCopyWithImpl<$Res>;
+  factory _$$GetAvailableArtImplCopyWith(_$GetAvailableArtImpl value,
+          $Res Function(_$GetAvailableArtImpl) then) =
+      __$$GetAvailableArtImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@KodiAudioLibraryGetAvailableArtItemConverter()
       KodiAudioLibraryGetAvailableArtItem item,
-      @JsonKey(name: 'arttype') String? artType});
+      @JsonKey(name: 'arttype') String artType});
 
   @override
   $KodiAudioLibraryGetAvailableArtItemCopyWith<$Res> get item;
 }
 
 /// @nodoc
-class __$$_GetAvailableArtCopyWithImpl<$Res>
-    extends _$GetAvailableArtCopyWithImpl<$Res, _$_GetAvailableArt>
-    implements _$$_GetAvailableArtCopyWith<$Res> {
-  __$$_GetAvailableArtCopyWithImpl(
-      _$_GetAvailableArt _value, $Res Function(_$_GetAvailableArt) _then)
+class __$$GetAvailableArtImplCopyWithImpl<$Res>
+    extends _$GetAvailableArtCopyWithImpl<$Res, _$GetAvailableArtImpl>
+    implements _$$GetAvailableArtImplCopyWith<$Res> {
+  __$$GetAvailableArtImplCopyWithImpl(
+      _$GetAvailableArtImpl _value, $Res Function(_$GetAvailableArtImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? item = null,
-    Object? artType = freezed,
+    Object? artType = null,
   }) {
-    return _then(_$_GetAvailableArt(
+    return _then(_$GetAvailableArtImpl(
       null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as KodiAudioLibraryGetAvailableArtItem,
-      artType: freezed == artType
+      artType: null == artType
           ? _value.artType
           : artType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetAvailableArt extends _GetAvailableArt {
-  const _$_GetAvailableArt(
+class _$GetAvailableArtImpl extends _GetAvailableArt {
+  const _$GetAvailableArtImpl(
       @KodiAudioLibraryGetAvailableArtItemConverter() this.item,
       {@JsonKey(name: 'arttype') this.artType = ''})
       : super._();
 
-  factory _$_GetAvailableArt.fromJson(Map<String, dynamic> json) =>
-      _$$_GetAvailableArtFromJson(json);
+  factory _$GetAvailableArtImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetAvailableArtImplFromJson(json);
 
   @override
   @KodiAudioLibraryGetAvailableArtItemConverter()
   final KodiAudioLibraryGetAvailableArtItem item;
   @override
   @JsonKey(name: 'arttype')
-  final String? artType;
+  final String artType;
 
   @override
   String toString() {
@@ -152,27 +162,30 @@ class _$_GetAvailableArt extends _GetAvailableArt {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAvailableArt &&
+            other is _$GetAvailableArtImpl &&
             (identical(other.item, item) || other.item == item) &&
             (identical(other.artType, artType) || other.artType == artType));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, item, artType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAvailableArtCopyWith<_$_GetAvailableArt> get copyWith =>
-      __$$_GetAvailableArtCopyWithImpl<_$_GetAvailableArt>(this, _$identity);
+  _$$GetAvailableArtImplCopyWith<_$GetAvailableArtImpl> get copyWith =>
+      __$$GetAvailableArtImplCopyWithImpl<_$GetAvailableArtImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetAvailableArtToJson(
+    return _$$GetAvailableArtImplToJson(
       this,
     );
   }
@@ -182,21 +195,24 @@ abstract class _GetAvailableArt extends GetAvailableArt {
   const factory _GetAvailableArt(
       @KodiAudioLibraryGetAvailableArtItemConverter()
       final KodiAudioLibraryGetAvailableArtItem item,
-      {@JsonKey(name: 'arttype') final String? artType}) = _$_GetAvailableArt;
+      {@JsonKey(name: 'arttype') final String artType}) = _$GetAvailableArtImpl;
   const _GetAvailableArt._() : super._();
 
   factory _GetAvailableArt.fromJson(Map<String, dynamic> json) =
-      _$_GetAvailableArt.fromJson;
+      _$GetAvailableArtImpl.fromJson;
 
   @override
   @KodiAudioLibraryGetAvailableArtItemConverter()
   KodiAudioLibraryGetAvailableArtItem get item;
   @override
   @JsonKey(name: 'arttype')
-  String? get artType;
+  String get artType;
+
+  /// Create a copy of GetAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetAvailableArtCopyWith<_$_GetAvailableArt> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetAvailableArtImplCopyWith<_$GetAvailableArtImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -213,8 +229,12 @@ mixin _$KodiAudioLibraryAvailableArt {
   String get previewUrl => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAudioLibraryAvailableArt to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAudioLibraryAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAudioLibraryAvailableArtCopyWith<KodiAudioLibraryAvailableArt>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -244,6 +264,8 @@ class _$KodiAudioLibraryAvailableArtCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAudioLibraryAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -269,12 +291,12 @@ class _$KodiAudioLibraryAvailableArtCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryAvailableArtCopyWith<$Res>
+abstract class _$$KodiAudioLibraryAvailableArtImplCopyWith<$Res>
     implements $KodiAudioLibraryAvailableArtCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryAvailableArtCopyWith(
-          _$_KodiAudioLibraryAvailableArt value,
-          $Res Function(_$_KodiAudioLibraryAvailableArt) then) =
-      __$$_KodiAudioLibraryAvailableArtCopyWithImpl<$Res>;
+  factory _$$KodiAudioLibraryAvailableArtImplCopyWith(
+          _$KodiAudioLibraryAvailableArtImpl value,
+          $Res Function(_$KodiAudioLibraryAvailableArtImpl) then) =
+      __$$KodiAudioLibraryAvailableArtImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -284,15 +306,17 @@ abstract class _$$_KodiAudioLibraryAvailableArtCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryAvailableArtCopyWithImpl<$Res>
+class __$$KodiAudioLibraryAvailableArtImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryAvailableArtCopyWithImpl<$Res,
-        _$_KodiAudioLibraryAvailableArt>
-    implements _$$_KodiAudioLibraryAvailableArtCopyWith<$Res> {
-  __$$_KodiAudioLibraryAvailableArtCopyWithImpl(
-      _$_KodiAudioLibraryAvailableArt _value,
-      $Res Function(_$_KodiAudioLibraryAvailableArt) _then)
+        _$KodiAudioLibraryAvailableArtImpl>
+    implements _$$KodiAudioLibraryAvailableArtImplCopyWith<$Res> {
+  __$$KodiAudioLibraryAvailableArtImplCopyWithImpl(
+      _$KodiAudioLibraryAvailableArtImpl _value,
+      $Res Function(_$KodiAudioLibraryAvailableArtImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -300,7 +324,7 @@ class __$$_KodiAudioLibraryAvailableArtCopyWithImpl<$Res>
     Object? previewUrl = null,
     Object? url = null,
   }) {
-    return _then(_$_KodiAudioLibraryAvailableArt(
+    return _then(_$KodiAudioLibraryAvailableArtImpl(
       artType: null == artType
           ? _value.artType
           : artType // ignore: cast_nullable_to_non_nullable
@@ -319,14 +343,16 @@ class __$$_KodiAudioLibraryAvailableArtCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryAvailableArt implements _KodiAudioLibraryAvailableArt {
-  const _$_KodiAudioLibraryAvailableArt(
+class _$KodiAudioLibraryAvailableArtImpl
+    implements _KodiAudioLibraryAvailableArt {
+  const _$KodiAudioLibraryAvailableArtImpl(
       {@JsonKey(name: 'arttype') required this.artType,
       @JsonKey(name: 'previewurl') this.previewUrl = '',
       required this.url});
 
-  factory _$_KodiAudioLibraryAvailableArt.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryAvailableArtFromJson(json);
+  factory _$KodiAudioLibraryAvailableArtImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiAudioLibraryAvailableArtImplFromJson(json);
 
   @override
   @JsonKey(name: 'arttype')
@@ -343,30 +369,33 @@ class _$_KodiAudioLibraryAvailableArt implements _KodiAudioLibraryAvailableArt {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryAvailableArt &&
+            other is _$KodiAudioLibraryAvailableArtImpl &&
             (identical(other.artType, artType) || other.artType == artType) &&
             (identical(other.previewUrl, previewUrl) ||
                 other.previewUrl == previewUrl) &&
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artType, previewUrl, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryAvailableArtCopyWith<_$_KodiAudioLibraryAvailableArt>
-      get copyWith => __$$_KodiAudioLibraryAvailableArtCopyWithImpl<
-          _$_KodiAudioLibraryAvailableArt>(this, _$identity);
+  _$$KodiAudioLibraryAvailableArtImplCopyWith<
+          _$KodiAudioLibraryAvailableArtImpl>
+      get copyWith => __$$KodiAudioLibraryAvailableArtImplCopyWithImpl<
+          _$KodiAudioLibraryAvailableArtImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryAvailableArtToJson(
+    return _$$KodiAudioLibraryAvailableArtImplToJson(
       this,
     );
   }
@@ -377,10 +406,10 @@ abstract class _KodiAudioLibraryAvailableArt
   const factory _KodiAudioLibraryAvailableArt(
       {@JsonKey(name: 'arttype') required final String artType,
       @JsonKey(name: 'previewurl') final String previewUrl,
-      required final String url}) = _$_KodiAudioLibraryAvailableArt;
+      required final String url}) = _$KodiAudioLibraryAvailableArtImpl;
 
   factory _KodiAudioLibraryAvailableArt.fromJson(Map<String, dynamic> json) =
-      _$_KodiAudioLibraryAvailableArt.fromJson;
+      _$KodiAudioLibraryAvailableArtImpl.fromJson;
 
   @override
   @JsonKey(name: 'arttype')
@@ -390,9 +419,13 @@ abstract class _KodiAudioLibraryAvailableArt
   String get previewUrl;
   @override
   String get url;
+
+  /// Create a copy of KodiAudioLibraryAvailableArt
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryAvailableArtCopyWith<_$_KodiAudioLibraryAvailableArt>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryAvailableArtImplCopyWith<
+          _$KodiAudioLibraryAvailableArtImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -460,6 +493,8 @@ mixin _$KodiAudioLibraryGetAvailableArtItem {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiAudioLibraryGetAvailableArtItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -482,34 +517,40 @@ class _$KodiAudioLibraryGetAvailableArtItemCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiAudioLibraryGetAvailableArtItem
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWith(
-          _$_KodiAudioLibraryGetAvailableArtItemAlbumId value,
-          $Res Function(_$_KodiAudioLibraryGetAvailableArtItemAlbumId) then) =
-      __$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWith<$Res> {
+  factory _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWith(
+          _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl value,
+          $Res Function(_$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl)
+              then) =
+      __$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'albumid') int albumId});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetAvailableArtItemCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetAvailableArtItemAlbumId>
-    implements _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWithImpl(
-      _$_KodiAudioLibraryGetAvailableArtItemAlbumId _value,
-      $Res Function(_$_KodiAudioLibraryGetAvailableArtItemAlbumId) _then)
+        _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl>
+    implements _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWithImpl(
+      _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl _value,
+      $Res Function(_$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetAvailableArtItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumId = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetAvailableArtItemAlbumId(
+    return _then(_$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl(
       null == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
@@ -520,16 +561,16 @@ class __$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetAvailableArtItemAlbumId
+class _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl
     implements _KodiAudioLibraryGetAvailableArtItemAlbumId {
-  const _$_KodiAudioLibraryGetAvailableArtItemAlbumId(
+  const _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl(
       @JsonKey(name: 'albumid') this.albumId,
       {final String? $type})
       : $type = $type ?? 'albumId';
 
-  factory _$_KodiAudioLibraryGetAvailableArtItemAlbumId.fromJson(
+  factory _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdFromJson(json);
+      _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'albumid')
@@ -544,25 +585,28 @@ class _$_KodiAudioLibraryGetAvailableArtItemAlbumId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetAvailableArtItemAlbumId &&
+            other is _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl &&
             (identical(other.albumId, albumId) || other.albumId == albumId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, albumId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetAvailableArtItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWith<
-          _$_KodiAudioLibraryGetAvailableArtItemAlbumId>
+  _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWith<
+          _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl>
       get copyWith =>
-          __$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWithImpl<
-              _$_KodiAudioLibraryGetAvailableArtItemAlbumId>(this, _$identity);
+          __$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWithImpl<
+                  _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -635,7 +679,7 @@ class _$_KodiAudioLibraryGetAvailableArtItemAlbumId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdToJson(
+    return _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplToJson(
       this,
     );
   }
@@ -645,46 +689,54 @@ abstract class _KodiAudioLibraryGetAvailableArtItemAlbumId
     implements KodiAudioLibraryGetAvailableArtItem {
   const factory _KodiAudioLibraryGetAvailableArtItemAlbumId(
           @JsonKey(name: 'albumid') final int albumId) =
-      _$_KodiAudioLibraryGetAvailableArtItemAlbumId;
+      _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl;
 
   factory _KodiAudioLibraryGetAvailableArtItemAlbumId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetAvailableArtItemAlbumId.fromJson;
+      _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl.fromJson;
 
   @JsonKey(name: 'albumid')
   int get albumId;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdCopyWith<
-          _$_KodiAudioLibraryGetAvailableArtItemAlbumId>
+
+  /// Create a copy of KodiAudioLibraryGetAvailableArtItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplCopyWith<
+          _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWith<$Res> {
-  factory _$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWith(
-          _$_KodiAudioLibraryGetAvailableArtItemArtistId value,
-          $Res Function(_$_KodiAudioLibraryGetAvailableArtItemArtistId) then) =
-      __$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWithImpl<$Res>;
+abstract class _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWith<
+    $Res> {
+  factory _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWith(
+          _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl value,
+          $Res Function(_$KodiAudioLibraryGetAvailableArtItemArtistIdImpl)
+              then) =
+      __$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@JsonKey(name: 'artistid') int artistId});
 }
 
 /// @nodoc
-class __$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWithImpl<$Res>
+class __$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWithImpl<$Res>
     extends _$KodiAudioLibraryGetAvailableArtItemCopyWithImpl<$Res,
-        _$_KodiAudioLibraryGetAvailableArtItemArtistId>
-    implements _$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWith<$Res> {
-  __$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWithImpl(
-      _$_KodiAudioLibraryGetAvailableArtItemArtistId _value,
-      $Res Function(_$_KodiAudioLibraryGetAvailableArtItemArtistId) _then)
+        _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl>
+    implements
+        _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWith<$Res> {
+  __$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWithImpl(
+      _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl _value,
+      $Res Function(_$KodiAudioLibraryGetAvailableArtItemArtistIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioLibraryGetAvailableArtItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artistId = null,
   }) {
-    return _then(_$_KodiAudioLibraryGetAvailableArtItemArtistId(
+    return _then(_$KodiAudioLibraryGetAvailableArtItemArtistIdImpl(
       null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
@@ -695,16 +747,16 @@ class __$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioLibraryGetAvailableArtItemArtistId
+class _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl
     implements _KodiAudioLibraryGetAvailableArtItemArtistId {
-  const _$_KodiAudioLibraryGetAvailableArtItemArtistId(
+  const _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl(
       @JsonKey(name: 'artistid') this.artistId,
       {final String? $type})
       : $type = $type ?? 'artistId';
 
-  factory _$_KodiAudioLibraryGetAvailableArtItemArtistId.fromJson(
+  factory _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiAudioLibraryGetAvailableArtItemArtistIdFromJson(json);
+      _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplFromJson(json);
 
   @override
   @JsonKey(name: 'artistid')
@@ -719,26 +771,29 @@ class _$_KodiAudioLibraryGetAvailableArtItemArtistId
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioLibraryGetAvailableArtItemArtistId &&
+            other is _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl &&
             (identical(other.artistId, artistId) ||
                 other.artistId == artistId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artistId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioLibraryGetAvailableArtItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWith<
-          _$_KodiAudioLibraryGetAvailableArtItemArtistId>
+  _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWith<
+          _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl>
       get copyWith =>
-          __$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWithImpl<
-              _$_KodiAudioLibraryGetAvailableArtItemArtistId>(this, _$identity);
+          __$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWithImpl<
+                  _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -811,7 +866,7 @@ class _$_KodiAudioLibraryGetAvailableArtItemArtistId
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioLibraryGetAvailableArtItemArtistIdToJson(
+    return _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplToJson(
       this,
     );
   }
@@ -821,16 +876,19 @@ abstract class _KodiAudioLibraryGetAvailableArtItemArtistId
     implements KodiAudioLibraryGetAvailableArtItem {
   const factory _KodiAudioLibraryGetAvailableArtItemArtistId(
           @JsonKey(name: 'artistid') final int artistId) =
-      _$_KodiAudioLibraryGetAvailableArtItemArtistId;
+      _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl;
 
   factory _KodiAudioLibraryGetAvailableArtItemArtistId.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiAudioLibraryGetAvailableArtItemArtistId.fromJson;
+      _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl.fromJson;
 
   @JsonKey(name: 'artistid')
   int get artistId;
-  @JsonKey(ignore: true)
-  _$$_KodiAudioLibraryGetAvailableArtItemArtistIdCopyWith<
-          _$_KodiAudioLibraryGetAvailableArtItemArtistId>
+
+  /// Create a copy of KodiAudioLibraryGetAvailableArtItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplCopyWith<
+          _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

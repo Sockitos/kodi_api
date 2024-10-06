@@ -12,7 +12,7 @@ part of 'kodi_list_filter_rule_music_videos.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListFilterRuleMusicVideos _$KodiListFilterRuleMusicVideosFromJson(
     Map<String, dynamic> json) {
@@ -28,8 +28,12 @@ mixin _$KodiListFilterRuleMusicVideos {
   KodiListFilterRuleMusicVideosValue get value =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListFilterRuleMusicVideos to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListFilterRuleMusicVideos
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListFilterRuleMusicVideosCopyWith<KodiListFilterRuleMusicVideos>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$KodiListFilterRuleMusicVideosCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListFilterRuleMusicVideos
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +91,8 @@ class _$KodiListFilterRuleMusicVideosCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiListFilterRuleMusicVideos
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterRuleMusicVideosValueCopyWith<$Res> get value {
@@ -96,12 +104,12 @@ class _$KodiListFilterRuleMusicVideosCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleMusicVideosCopyWith<$Res>
+abstract class _$$KodiListFilterRuleMusicVideosImplCopyWith<$Res>
     implements $KodiListFilterRuleMusicVideosCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleMusicVideosCopyWith(
-          _$_KodiListFilterRuleMusicVideos value,
-          $Res Function(_$_KodiListFilterRuleMusicVideos) then) =
-      __$$_KodiListFilterRuleMusicVideosCopyWithImpl<$Res>;
+  factory _$$KodiListFilterRuleMusicVideosImplCopyWith(
+          _$KodiListFilterRuleMusicVideosImpl value,
+          $Res Function(_$KodiListFilterRuleMusicVideosImpl) then) =
+      __$$KodiListFilterRuleMusicVideosImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -115,15 +123,17 @@ abstract class _$$_KodiListFilterRuleMusicVideosCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleMusicVideosCopyWithImpl<$Res>
+class __$$KodiListFilterRuleMusicVideosImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleMusicVideosCopyWithImpl<$Res,
-        _$_KodiListFilterRuleMusicVideos>
-    implements _$$_KodiListFilterRuleMusicVideosCopyWith<$Res> {
-  __$$_KodiListFilterRuleMusicVideosCopyWithImpl(
-      _$_KodiListFilterRuleMusicVideos _value,
-      $Res Function(_$_KodiListFilterRuleMusicVideos) _then)
+        _$KodiListFilterRuleMusicVideosImpl>
+    implements _$$KodiListFilterRuleMusicVideosImplCopyWith<$Res> {
+  __$$KodiListFilterRuleMusicVideosImplCopyWithImpl(
+      _$KodiListFilterRuleMusicVideosImpl _value,
+      $Res Function(_$KodiListFilterRuleMusicVideosImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleMusicVideos
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,7 +141,7 @@ class __$$_KodiListFilterRuleMusicVideosCopyWithImpl<$Res>
     Object? operator = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleMusicVideos(
+    return _then(_$KodiListFilterRuleMusicVideosImpl(
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -150,16 +160,16 @@ class __$$_KodiListFilterRuleMusicVideosCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleMusicVideos
+class _$KodiListFilterRuleMusicVideosImpl
     implements _KodiListFilterRuleMusicVideos {
-  const _$_KodiListFilterRuleMusicVideos(
+  const _$KodiListFilterRuleMusicVideosImpl(
       {required this.field,
       required this.operator,
       @KodiListFilterRuleMusicVideosValueConverter() required this.value});
 
-  factory _$_KodiListFilterRuleMusicVideos.fromJson(
+  factory _$KodiListFilterRuleMusicVideosImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleMusicVideosFromJson(json);
+      _$$KodiListFilterRuleMusicVideosImplFromJson(json);
 
   @override
   final KodiListFilterFieldsMusicVideos field;
@@ -175,30 +185,33 @@ class _$_KodiListFilterRuleMusicVideos
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleMusicVideos &&
+            other is _$KodiListFilterRuleMusicVideosImpl &&
             (identical(other.field, field) || other.field == field) &&
             (identical(other.operator, operator) ||
                 other.operator == operator) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, field, operator, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleMusicVideos
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleMusicVideosCopyWith<_$_KodiListFilterRuleMusicVideos>
-      get copyWith => __$$_KodiListFilterRuleMusicVideosCopyWithImpl<
-          _$_KodiListFilterRuleMusicVideos>(this, _$identity);
+  _$$KodiListFilterRuleMusicVideosImplCopyWith<
+          _$KodiListFilterRuleMusicVideosImpl>
+      get copyWith => __$$KodiListFilterRuleMusicVideosImplCopyWithImpl<
+          _$KodiListFilterRuleMusicVideosImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleMusicVideosToJson(
+    return _$$KodiListFilterRuleMusicVideosImplToJson(
       this,
     );
   }
@@ -211,10 +224,10 @@ abstract class _KodiListFilterRuleMusicVideos
           required final KodiListFilterOperators operator,
           @KodiListFilterRuleMusicVideosValueConverter()
           required final KodiListFilterRuleMusicVideosValue value}) =
-      _$_KodiListFilterRuleMusicVideos;
+      _$KodiListFilterRuleMusicVideosImpl;
 
   factory _KodiListFilterRuleMusicVideos.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterRuleMusicVideos.fromJson;
+      _$KodiListFilterRuleMusicVideosImpl.fromJson;
 
   @override
   KodiListFilterFieldsMusicVideos get field;
@@ -223,9 +236,13 @@ abstract class _KodiListFilterRuleMusicVideos
   @override
   @KodiListFilterRuleMusicVideosValueConverter()
   KodiListFilterRuleMusicVideosValue get value;
+
+  /// Create a copy of KodiListFilterRuleMusicVideos
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleMusicVideosCopyWith<_$_KodiListFilterRuleMusicVideos>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleMusicVideosImplCopyWith<
+          _$KodiListFilterRuleMusicVideosImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -289,6 +306,8 @@ mixin _$KodiListFilterRuleMusicVideosValue {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiListFilterRuleMusicVideosValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -311,34 +330,39 @@ class _$KodiListFilterRuleMusicVideosValueCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiListFilterRuleMusicVideosValue
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleMusicVideosValueSingleCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleMusicVideosValueSingleCopyWith(
-          _$_KodiListFilterRuleMusicVideosValueSingle value,
-          $Res Function(_$_KodiListFilterRuleMusicVideosValueSingle) then) =
-      __$$_KodiListFilterRuleMusicVideosValueSingleCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterRuleMusicVideosValueSingleImplCopyWith<$Res> {
+  factory _$$KodiListFilterRuleMusicVideosValueSingleImplCopyWith(
+          _$KodiListFilterRuleMusicVideosValueSingleImpl value,
+          $Res Function(_$KodiListFilterRuleMusicVideosValueSingleImpl) then) =
+      __$$KodiListFilterRuleMusicVideosValueSingleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleMusicVideosValueSingleCopyWithImpl<$Res>
+class __$$KodiListFilterRuleMusicVideosValueSingleImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleMusicVideosValueCopyWithImpl<$Res,
-        _$_KodiListFilterRuleMusicVideosValueSingle>
-    implements _$$_KodiListFilterRuleMusicVideosValueSingleCopyWith<$Res> {
-  __$$_KodiListFilterRuleMusicVideosValueSingleCopyWithImpl(
-      _$_KodiListFilterRuleMusicVideosValueSingle _value,
-      $Res Function(_$_KodiListFilterRuleMusicVideosValueSingle) _then)
+        _$KodiListFilterRuleMusicVideosValueSingleImpl>
+    implements _$$KodiListFilterRuleMusicVideosValueSingleImplCopyWith<$Res> {
+  __$$KodiListFilterRuleMusicVideosValueSingleImplCopyWithImpl(
+      _$KodiListFilterRuleMusicVideosValueSingleImpl _value,
+      $Res Function(_$KodiListFilterRuleMusicVideosValueSingleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleMusicVideosValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleMusicVideosValueSingle(
+    return _then(_$KodiListFilterRuleMusicVideosValueSingleImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -349,15 +373,15 @@ class __$$_KodiListFilterRuleMusicVideosValueSingleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleMusicVideosValueSingle
+class _$KodiListFilterRuleMusicVideosValueSingleImpl
     implements _KodiListFilterRuleMusicVideosValueSingle {
-  const _$_KodiListFilterRuleMusicVideosValueSingle(this.value,
+  const _$KodiListFilterRuleMusicVideosValueSingleImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'single';
 
-  factory _$_KodiListFilterRuleMusicVideosValueSingle.fromJson(
+  factory _$KodiListFilterRuleMusicVideosValueSingleImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleMusicVideosValueSingleFromJson(json);
+      _$$KodiListFilterRuleMusicVideosValueSingleImplFromJson(json);
 
   @override
   final String value;
@@ -371,24 +395,27 @@ class _$_KodiListFilterRuleMusicVideosValueSingle
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleMusicVideosValueSingle &&
+            other is _$KodiListFilterRuleMusicVideosValueSingleImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleMusicVideosValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleMusicVideosValueSingleCopyWith<
-          _$_KodiListFilterRuleMusicVideosValueSingle>
-      get copyWith => __$$_KodiListFilterRuleMusicVideosValueSingleCopyWithImpl<
-          _$_KodiListFilterRuleMusicVideosValueSingle>(this, _$identity);
+  _$$KodiListFilterRuleMusicVideosValueSingleImplCopyWith<
+          _$KodiListFilterRuleMusicVideosValueSingleImpl>
+      get copyWith =>
+          __$$KodiListFilterRuleMusicVideosValueSingleImplCopyWithImpl<
+              _$KodiListFilterRuleMusicVideosValueSingleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -456,7 +483,7 @@ class _$_KodiListFilterRuleMusicVideosValueSingle
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleMusicVideosValueSingleToJson(
+    return _$$KodiListFilterRuleMusicVideosValueSingleImplToJson(
       this,
     );
   }
@@ -465,46 +492,51 @@ class _$_KodiListFilterRuleMusicVideosValueSingle
 abstract class _KodiListFilterRuleMusicVideosValueSingle
     implements KodiListFilterRuleMusicVideosValue {
   const factory _KodiListFilterRuleMusicVideosValueSingle(final String value) =
-      _$_KodiListFilterRuleMusicVideosValueSingle;
+      _$KodiListFilterRuleMusicVideosValueSingleImpl;
 
   factory _KodiListFilterRuleMusicVideosValueSingle.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiListFilterRuleMusicVideosValueSingle.fromJson;
+      _$KodiListFilterRuleMusicVideosValueSingleImpl.fromJson;
 
   @override
   String get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleMusicVideosValueSingleCopyWith<
-          _$_KodiListFilterRuleMusicVideosValueSingle>
+
+  /// Create a copy of KodiListFilterRuleMusicVideosValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleMusicVideosValueSingleImplCopyWith<
+          _$KodiListFilterRuleMusicVideosValueSingleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleMusicVideosValueGroupCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleMusicVideosValueGroupCopyWith(
-          _$_KodiListFilterRuleMusicVideosValueGroup value,
-          $Res Function(_$_KodiListFilterRuleMusicVideosValueGroup) then) =
-      __$$_KodiListFilterRuleMusicVideosValueGroupCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterRuleMusicVideosValueGroupImplCopyWith<$Res> {
+  factory _$$KodiListFilterRuleMusicVideosValueGroupImplCopyWith(
+          _$KodiListFilterRuleMusicVideosValueGroupImpl value,
+          $Res Function(_$KodiListFilterRuleMusicVideosValueGroupImpl) then) =
+      __$$KodiListFilterRuleMusicVideosValueGroupImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<String> value});
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleMusicVideosValueGroupCopyWithImpl<$Res>
+class __$$KodiListFilterRuleMusicVideosValueGroupImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleMusicVideosValueCopyWithImpl<$Res,
-        _$_KodiListFilterRuleMusicVideosValueGroup>
-    implements _$$_KodiListFilterRuleMusicVideosValueGroupCopyWith<$Res> {
-  __$$_KodiListFilterRuleMusicVideosValueGroupCopyWithImpl(
-      _$_KodiListFilterRuleMusicVideosValueGroup _value,
-      $Res Function(_$_KodiListFilterRuleMusicVideosValueGroup) _then)
+        _$KodiListFilterRuleMusicVideosValueGroupImpl>
+    implements _$$KodiListFilterRuleMusicVideosValueGroupImplCopyWith<$Res> {
+  __$$KodiListFilterRuleMusicVideosValueGroupImplCopyWithImpl(
+      _$KodiListFilterRuleMusicVideosValueGroupImpl _value,
+      $Res Function(_$KodiListFilterRuleMusicVideosValueGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleMusicVideosValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleMusicVideosValueGroup(
+    return _then(_$KodiListFilterRuleMusicVideosValueGroupImpl(
       null == value
           ? _value._value
           : value // ignore: cast_nullable_to_non_nullable
@@ -515,16 +547,16 @@ class __$$_KodiListFilterRuleMusicVideosValueGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleMusicVideosValueGroup
+class _$KodiListFilterRuleMusicVideosValueGroupImpl
     implements _KodiListFilterRuleMusicVideosValueGroup {
-  const _$_KodiListFilterRuleMusicVideosValueGroup(final List<String> value,
+  const _$KodiListFilterRuleMusicVideosValueGroupImpl(final List<String> value,
       {final String? $type})
       : _value = value,
         $type = $type ?? 'group';
 
-  factory _$_KodiListFilterRuleMusicVideosValueGroup.fromJson(
+  factory _$KodiListFilterRuleMusicVideosValueGroupImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleMusicVideosValueGroupFromJson(json);
+      _$$KodiListFilterRuleMusicVideosValueGroupImplFromJson(json);
 
   final List<String> _value;
   @override
@@ -543,25 +575,28 @@ class _$_KodiListFilterRuleMusicVideosValueGroup
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleMusicVideosValueGroup &&
+            other is _$KodiListFilterRuleMusicVideosValueGroupImpl &&
             const DeepCollectionEquality().equals(other._value, _value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleMusicVideosValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleMusicVideosValueGroupCopyWith<
-          _$_KodiListFilterRuleMusicVideosValueGroup>
-      get copyWith => __$$_KodiListFilterRuleMusicVideosValueGroupCopyWithImpl<
-          _$_KodiListFilterRuleMusicVideosValueGroup>(this, _$identity);
+  _$$KodiListFilterRuleMusicVideosValueGroupImplCopyWith<
+          _$KodiListFilterRuleMusicVideosValueGroupImpl>
+      get copyWith =>
+          __$$KodiListFilterRuleMusicVideosValueGroupImplCopyWithImpl<
+              _$KodiListFilterRuleMusicVideosValueGroupImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -629,7 +664,7 @@ class _$_KodiListFilterRuleMusicVideosValueGroup
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleMusicVideosValueGroupToJson(
+    return _$$KodiListFilterRuleMusicVideosValueGroupImplToJson(
       this,
     );
   }
@@ -638,16 +673,19 @@ class _$_KodiListFilterRuleMusicVideosValueGroup
 abstract class _KodiListFilterRuleMusicVideosValueGroup
     implements KodiListFilterRuleMusicVideosValue {
   const factory _KodiListFilterRuleMusicVideosValueGroup(
-      final List<String> value) = _$_KodiListFilterRuleMusicVideosValueGroup;
+      final List<String> value) = _$KodiListFilterRuleMusicVideosValueGroupImpl;
 
   factory _KodiListFilterRuleMusicVideosValueGroup.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiListFilterRuleMusicVideosValueGroup.fromJson;
+      _$KodiListFilterRuleMusicVideosValueGroupImpl.fromJson;
 
   @override
   List<String> get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleMusicVideosValueGroupCopyWith<
-          _$_KodiListFilterRuleMusicVideosValueGroup>
+
+  /// Create a copy of KodiListFilterRuleMusicVideosValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleMusicVideosValueGroupImplCopyWith<
+          _$KodiListFilterRuleMusicVideosValueGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

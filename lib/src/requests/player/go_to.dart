@@ -35,13 +35,13 @@ enum KodiPlayerGoToTo {
 
 @freezed
 class GoToTo with _$GoToTo {
-  const factory GoToTo.abs(
-    int value,
-  ) = _GoToToAbs;
-
   const factory GoToTo.enumerator(
     KodiPlayerGoToTo value,
   ) = _GoToToEnum;
+
+  const factory GoToTo.playlistPos(
+    int value,
+  ) = _GoToToPlaylistPos;
 
   factory GoToTo.fromJson(Map<String, dynamic> json) => _$GoToToFromJson(json);
 }
@@ -54,7 +54,7 @@ class GoToToConverter implements JsonConverter<GoToTo, dynamic> {
 
   @override
   dynamic toJson(GoToTo data) => data.map<dynamic>(
-        abs: (value) => value,
         enumerator: (value) => value.value.name,
+        playlistPos: (value) => value,
       );
 }

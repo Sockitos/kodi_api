@@ -12,7 +12,7 @@ part of 'kodi_pvr_details_channel_group.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsChannelGroup _$KodiPVRDetailsChannelGroupFromJson(
     Map<String, dynamic> json) {
@@ -27,8 +27,12 @@ mixin _$KodiPVRDetailsChannelGroup {
   KodiPVRChannelType get channelType => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsChannelGroup to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsChannelGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsChannelGroupCopyWith<KodiPVRDetailsChannelGroup>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$KodiPVRDetailsChannelGroupCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsChannelGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,12 +88,12 @@ class _$KodiPVRDetailsChannelGroupCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsChannelGroupCopyWith<$Res>
+abstract class _$$KodiPVRDetailsChannelGroupImplCopyWith<$Res>
     implements $KodiPVRDetailsChannelGroupCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsChannelGroupCopyWith(
-          _$_KodiPVRDetailsChannelGroup value,
-          $Res Function(_$_KodiPVRDetailsChannelGroup) then) =
-      __$$_KodiPVRDetailsChannelGroupCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsChannelGroupImplCopyWith(
+          _$KodiPVRDetailsChannelGroupImpl value,
+          $Res Function(_$KodiPVRDetailsChannelGroupImpl) then) =
+      __$$KodiPVRDetailsChannelGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -97,15 +103,17 @@ abstract class _$$_KodiPVRDetailsChannelGroupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsChannelGroupCopyWithImpl<$Res>
+class __$$KodiPVRDetailsChannelGroupImplCopyWithImpl<$Res>
     extends _$KodiPVRDetailsChannelGroupCopyWithImpl<$Res,
-        _$_KodiPVRDetailsChannelGroup>
-    implements _$$_KodiPVRDetailsChannelGroupCopyWith<$Res> {
-  __$$_KodiPVRDetailsChannelGroupCopyWithImpl(
-      _$_KodiPVRDetailsChannelGroup _value,
-      $Res Function(_$_KodiPVRDetailsChannelGroup) _then)
+        _$KodiPVRDetailsChannelGroupImpl>
+    implements _$$KodiPVRDetailsChannelGroupImplCopyWith<$Res> {
+  __$$KodiPVRDetailsChannelGroupImplCopyWithImpl(
+      _$KodiPVRDetailsChannelGroupImpl _value,
+      $Res Function(_$KodiPVRDetailsChannelGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsChannelGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,7 +121,7 @@ class __$$_KodiPVRDetailsChannelGroupCopyWithImpl<$Res>
     Object? channelType = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsChannelGroup(
+    return _then(_$KodiPVRDetailsChannelGroupImpl(
       channelGroupId: null == channelGroupId
           ? _value.channelGroupId
           : channelGroupId // ignore: cast_nullable_to_non_nullable
@@ -132,14 +140,15 @@ class __$$_KodiPVRDetailsChannelGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRDetailsChannelGroup implements _KodiPVRDetailsChannelGroup {
-  const _$_KodiPVRDetailsChannelGroup(
+class _$KodiPVRDetailsChannelGroupImpl implements _KodiPVRDetailsChannelGroup {
+  const _$KodiPVRDetailsChannelGroupImpl(
       {@JsonKey(name: 'channelgroupid') required this.channelGroupId,
       @JsonKey(name: 'channeltype') required this.channelType,
       required this.label});
 
-  factory _$_KodiPVRDetailsChannelGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsChannelGroupFromJson(json);
+  factory _$KodiPVRDetailsChannelGroupImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPVRDetailsChannelGroupImplFromJson(json);
 
   @override
   @JsonKey(name: 'channelgroupid')
@@ -156,10 +165,10 @@ class _$_KodiPVRDetailsChannelGroup implements _KodiPVRDetailsChannelGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsChannelGroup &&
+            other is _$KodiPVRDetailsChannelGroupImpl &&
             (identical(other.channelGroupId, channelGroupId) ||
                 other.channelGroupId == channelGroupId) &&
             (identical(other.channelType, channelType) ||
@@ -167,21 +176,23 @@ class _$_KodiPVRDetailsChannelGroup implements _KodiPVRDetailsChannelGroup {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, channelGroupId, channelType, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsChannelGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsChannelGroupCopyWith<_$_KodiPVRDetailsChannelGroup>
-      get copyWith => __$$_KodiPVRDetailsChannelGroupCopyWithImpl<
-          _$_KodiPVRDetailsChannelGroup>(this, _$identity);
+  _$$KodiPVRDetailsChannelGroupImplCopyWith<_$KodiPVRDetailsChannelGroupImpl>
+      get copyWith => __$$KodiPVRDetailsChannelGroupImplCopyWithImpl<
+          _$KodiPVRDetailsChannelGroupImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsChannelGroupToJson(
+    return _$$KodiPVRDetailsChannelGroupImplToJson(
       this,
     );
   }
@@ -193,10 +204,10 @@ abstract class _KodiPVRDetailsChannelGroup
       {@JsonKey(name: 'channelgroupid') required final int channelGroupId,
       @JsonKey(name: 'channeltype')
       required final KodiPVRChannelType channelType,
-      required final String label}) = _$_KodiPVRDetailsChannelGroup;
+      required final String label}) = _$KodiPVRDetailsChannelGroupImpl;
 
   factory _KodiPVRDetailsChannelGroup.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRDetailsChannelGroup.fromJson;
+      _$KodiPVRDetailsChannelGroupImpl.fromJson;
 
   @override
   @JsonKey(name: 'channelgroupid')
@@ -206,8 +217,11 @@ abstract class _KodiPVRDetailsChannelGroup
   KodiPVRChannelType get channelType;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsChannelGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsChannelGroupCopyWith<_$_KodiPVRDetailsChannelGroup>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsChannelGroupImplCopyWith<_$KodiPVRDetailsChannelGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

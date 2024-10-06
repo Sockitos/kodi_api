@@ -12,7 +12,7 @@ part of 'show_player_process_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ShowPlayerProcessInfo _$ShowPlayerProcessInfoFromJson(
     Map<String, dynamic> json) {
@@ -21,6 +21,7 @@ ShowPlayerProcessInfo _$ShowPlayerProcessInfoFromJson(
 
 /// @nodoc
 mixin _$ShowPlayerProcessInfo {
+  /// Serializes this ShowPlayerProcessInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -41,31 +42,39 @@ class _$ShowPlayerProcessInfoCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ShowPlayerProcessInfo
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_ShowPlayerProcessInfoCopyWith<$Res> {
-  factory _$$_ShowPlayerProcessInfoCopyWith(_$_ShowPlayerProcessInfo value,
-          $Res Function(_$_ShowPlayerProcessInfo) then) =
-      __$$_ShowPlayerProcessInfoCopyWithImpl<$Res>;
+abstract class _$$ShowPlayerProcessInfoImplCopyWith<$Res> {
+  factory _$$ShowPlayerProcessInfoImplCopyWith(
+          _$ShowPlayerProcessInfoImpl value,
+          $Res Function(_$ShowPlayerProcessInfoImpl) then) =
+      __$$ShowPlayerProcessInfoImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ShowPlayerProcessInfoCopyWithImpl<$Res>
-    extends _$ShowPlayerProcessInfoCopyWithImpl<$Res, _$_ShowPlayerProcessInfo>
-    implements _$$_ShowPlayerProcessInfoCopyWith<$Res> {
-  __$$_ShowPlayerProcessInfoCopyWithImpl(_$_ShowPlayerProcessInfo _value,
-      $Res Function(_$_ShowPlayerProcessInfo) _then)
+class __$$ShowPlayerProcessInfoImplCopyWithImpl<$Res>
+    extends _$ShowPlayerProcessInfoCopyWithImpl<$Res,
+        _$ShowPlayerProcessInfoImpl>
+    implements _$$ShowPlayerProcessInfoImplCopyWith<$Res> {
+  __$$ShowPlayerProcessInfoImplCopyWithImpl(_$ShowPlayerProcessInfoImpl _value,
+      $Res Function(_$ShowPlayerProcessInfoImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ShowPlayerProcessInfo
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShowPlayerProcessInfo extends _ShowPlayerProcessInfo {
-  const _$_ShowPlayerProcessInfo() : super._();
+class _$ShowPlayerProcessInfoImpl extends _ShowPlayerProcessInfo {
+  const _$ShowPlayerProcessInfoImpl() : super._();
 
-  factory _$_ShowPlayerProcessInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_ShowPlayerProcessInfoFromJson(json);
+  factory _$ShowPlayerProcessInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ShowPlayerProcessInfoImplFromJson(json);
 
   @override
   String toString() {
@@ -73,27 +82,28 @@ class _$_ShowPlayerProcessInfo extends _ShowPlayerProcessInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ShowPlayerProcessInfo);
+        (other.runtimeType == runtimeType &&
+            other is _$ShowPlayerProcessInfoImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowPlayerProcessInfoToJson(
+    return _$$ShowPlayerProcessInfoImplToJson(
       this,
     );
   }
 }
 
 abstract class _ShowPlayerProcessInfo extends ShowPlayerProcessInfo {
-  const factory _ShowPlayerProcessInfo() = _$_ShowPlayerProcessInfo;
+  const factory _ShowPlayerProcessInfo() = _$ShowPlayerProcessInfoImpl;
   const _ShowPlayerProcessInfo._() : super._();
 
   factory _ShowPlayerProcessInfo.fromJson(Map<String, dynamic> json) =
-      _$_ShowPlayerProcessInfo.fromJson;
+      _$ShowPlayerProcessInfoImpl.fromJson;
 }

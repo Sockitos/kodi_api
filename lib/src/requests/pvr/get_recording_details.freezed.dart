@@ -12,7 +12,7 @@ part of 'get_recording_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetRecordingDetails _$GetRecordingDetailsFromJson(Map<String, dynamic> json) {
   return _GetRecordingDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetRecordingDetails {
   Set<KodiPVRFieldsRecording>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecordingDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecordingDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecordingDetailsCopyWith<GetRecordingDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$GetRecordingDetailsCopyWithImpl<$Res, $Val extends GetRecordingDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecordingDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,11 +78,11 @@ class _$GetRecordingDetailsCopyWithImpl<$Res, $Val extends GetRecordingDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetRecordingDetailsCopyWith<$Res>
+abstract class _$$GetRecordingDetailsImplCopyWith<$Res>
     implements $GetRecordingDetailsCopyWith<$Res> {
-  factory _$$_GetRecordingDetailsCopyWith(_$_GetRecordingDetails value,
-          $Res Function(_$_GetRecordingDetails) then) =
-      __$$_GetRecordingDetailsCopyWithImpl<$Res>;
+  factory _$$GetRecordingDetailsImplCopyWith(_$GetRecordingDetailsImpl value,
+          $Res Function(_$GetRecordingDetailsImpl) then) =
+      __$$GetRecordingDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,20 +91,22 @@ abstract class _$$_GetRecordingDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecordingDetailsCopyWithImpl<$Res>
-    extends _$GetRecordingDetailsCopyWithImpl<$Res, _$_GetRecordingDetails>
-    implements _$$_GetRecordingDetailsCopyWith<$Res> {
-  __$$_GetRecordingDetailsCopyWithImpl(_$_GetRecordingDetails _value,
-      $Res Function(_$_GetRecordingDetails) _then)
+class __$$GetRecordingDetailsImplCopyWithImpl<$Res>
+    extends _$GetRecordingDetailsCopyWithImpl<$Res, _$GetRecordingDetailsImpl>
+    implements _$$GetRecordingDetailsImplCopyWith<$Res> {
+  __$$GetRecordingDetailsImplCopyWithImpl(_$GetRecordingDetailsImpl _value,
+      $Res Function(_$GetRecordingDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecordingDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetRecordingDetails(
+    return _then(_$GetRecordingDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -113,14 +121,14 @@ class __$$_GetRecordingDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecordingDetails extends _GetRecordingDetails {
-  const _$_GetRecordingDetails(@JsonKey(name: 'recordingid') this.id,
+class _$GetRecordingDetailsImpl extends _GetRecordingDetails {
+  const _$GetRecordingDetailsImpl(@JsonKey(name: 'recordingid') this.id,
       {final Set<KodiPVRFieldsRecording>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetRecordingDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRecordingDetailsFromJson(json);
+  factory _$GetRecordingDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRecordingDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'recordingid')
@@ -141,30 +149,32 @@ class _$_GetRecordingDetails extends _GetRecordingDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecordingDetails &&
+            other is _$GetRecordingDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecordingDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecordingDetailsCopyWith<_$_GetRecordingDetails> get copyWith =>
-      __$$_GetRecordingDetailsCopyWithImpl<_$_GetRecordingDetails>(
+  _$$GetRecordingDetailsImplCopyWith<_$GetRecordingDetailsImpl> get copyWith =>
+      __$$GetRecordingDetailsImplCopyWithImpl<_$GetRecordingDetailsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecordingDetailsToJson(
+    return _$$GetRecordingDetailsImplToJson(
       this,
     );
   }
@@ -172,19 +182,23 @@ class _$_GetRecordingDetails extends _GetRecordingDetails {
 
 abstract class _GetRecordingDetails extends GetRecordingDetails {
   const factory _GetRecordingDetails(@JsonKey(name: 'recordingid') final int id,
-      {final Set<KodiPVRFieldsRecording>? properties}) = _$_GetRecordingDetails;
+          {final Set<KodiPVRFieldsRecording>? properties}) =
+      _$GetRecordingDetailsImpl;
   const _GetRecordingDetails._() : super._();
 
   factory _GetRecordingDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetRecordingDetails.fromJson;
+      _$GetRecordingDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'recordingid')
   int get id;
   @override
   Set<KodiPVRFieldsRecording>? get properties;
+
+  /// Create a copy of GetRecordingDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecordingDetailsCopyWith<_$_GetRecordingDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecordingDetailsImplCopyWith<_$GetRecordingDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

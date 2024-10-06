@@ -5,13 +5,12 @@ part 'kodi_profiles_password.g.dart';
 
 enum KodiProfilesPasswordEncryption {
   none,
-  md5,
 }
 
 @freezed
 class KodiProfilesPassword with _$KodiProfilesPassword {
   const factory KodiProfilesPassword({
-    @Default(KodiProfilesPasswordEncryption.md5)
+    @Default(KodiProfilesPasswordEncryption.none)
     KodiProfilesPasswordEncryption encryption,
     required String value,
   }) = _KodiProfilesPassword;

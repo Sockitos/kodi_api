@@ -6,12 +6,13 @@ part of 'set_episode_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetEpisodeDetails _$$_SetEpisodeDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetEpisodeDetails(
-      json['episodeid'] as int,
+_$SetEpisodeDetailsImpl _$$SetEpisodeDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetEpisodeDetailsImpl(
+      (json['episodeid'] as num).toInt(),
       title: json['title'] as String?,
-      playCount: json['playcount'] as int?,
-      runtime: json['runtime'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
+      runtime: (json['runtime'] as num?)?.toInt(),
       directors: (json['director'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -27,8 +28,8 @@ _$_SetEpisodeDetails _$$_SetEpisodeDetailsFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['firstaired'] as String),
       productionCode: json['productioncode'] as String?,
-      season: json['season'] as int?,
-      episode: json['episode'] as int?,
+      season: (json['season'] as num?)?.toInt(),
+      episode: (json['episode'] as num?)?.toInt(),
       originalTitle: json['originaltitle'] as String?,
       thumbnail: json['thumbnail'] as String?,
       fanart: json['fanart'] as String?,
@@ -38,7 +39,7 @@ _$_SetEpisodeDetails _$$_SetEpisodeDetailsFromJson(Map<String, dynamic> json) =>
       resume: json['resume'] == null
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
-      userRating: json['userrating'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
       ratings: (json['ratings'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, KodiVideoRating.fromJson(e as Map<String, dynamic>)),
@@ -51,8 +52,8 @@ _$_SetEpisodeDetails _$$_SetEpisodeDetailsFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$$_SetEpisodeDetailsToJson(
-    _$_SetEpisodeDetails instance) {
+Map<String, dynamic> _$$SetEpisodeDetailsImplToJson(
+    _$SetEpisodeDetailsImpl instance) {
   final val = <String, dynamic>{
     'episodeid': instance.id,
   };

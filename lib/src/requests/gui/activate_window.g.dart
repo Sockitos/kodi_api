@@ -6,13 +6,14 @@ part of 'activate_window.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ActivateWindow _$$_ActivateWindowFromJson(Map<String, dynamic> json) =>
-    _$_ActivateWindow(
+_$ActivateWindowImpl _$$ActivateWindowImplFromJson(Map<String, dynamic> json) =>
+    _$ActivateWindowImpl(
       $enumDecode(_$KodiGUIWindowEnumMap, json['window']),
       (json['parameters'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_ActivateWindowToJson(_$_ActivateWindow instance) =>
+Map<String, dynamic> _$$ActivateWindowImplToJson(
+        _$ActivateWindowImpl instance) =>
     <String, dynamic>{
       'window': _$KodiGUIWindowEnumMap[instance.window]!,
       'parameters': instance.parameters,

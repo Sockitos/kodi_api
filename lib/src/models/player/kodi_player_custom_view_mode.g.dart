@@ -6,9 +6,9 @@ part of 'kodi_player_custom_view_mode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerCustomViewMode _$$_KodiPlayerCustomViewModeFromJson(
+_$KodiPlayerCustomViewModeImpl _$$KodiPlayerCustomViewModeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerCustomViewMode(
+    _$KodiPlayerCustomViewModeImpl(
       nonLinearStretch:
           const KodiPlayerCustomViewModeNonLinearStretchConverter()
               .fromJson(json['nonlinearstretch']),
@@ -20,8 +20,8 @@ _$_KodiPlayerCustomViewMode _$$_KodiPlayerCustomViewModeFromJson(
           const KodiPlayerCustomViewModeZoomConverter().fromJson(json['zoom']),
     );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModeToJson(
-    _$_KodiPlayerCustomViewMode instance) {
+Map<String, dynamic> _$$KodiPlayerCustomViewModeImplToJson(
+    _$KodiPlayerCustomViewModeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -58,16 +58,16 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_KodiPlayerCustomViewModeNonLinearStretchEnum
-    _$$_KodiPlayerCustomViewModeNonLinearStretchEnumFromJson(
+_$KodiPlayerCustomViewModeNonLinearStretchEnumImpl
+    _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerCustomViewModeNonLinearStretchEnum(
+        _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl(
           $enumDecode(_$IncDecEnumMap, json['value']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModeNonLinearStretchEnumToJson(
-        _$_KodiPlayerCustomViewModeNonLinearStretchEnum instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModeNonLinearStretchEnumImplToJson(
+        _$KodiPlayerCustomViewModeNonLinearStretchEnumImpl instance) =>
     <String, dynamic>{
       'value': _$IncDecEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -78,104 +78,105 @@ const _$IncDecEnumMap = {
   IncDec.decrease: 'decrease',
 };
 
-_$_KodiPlayerCustomViewModeNonLinearStretchBool
-    _$$_KodiPlayerCustomViewModeNonLinearStretchBoolFromJson(
+_$KodiPlayerCustomViewModeNonLinearStretchBoolImpl
+    _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerCustomViewModeNonLinearStretchBool(
+        _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl(
           json['value'] as bool,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModeNonLinearStretchBoolToJson(
-        _$_KodiPlayerCustomViewModeNonLinearStretchBool instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModeNonLinearStretchBoolImplToJson(
+        _$KodiPlayerCustomViewModeNonLinearStretchBoolImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerCustomViewModePixelRatioEnum
-    _$$_KodiPlayerCustomViewModePixelRatioEnumFromJson(
+_$KodiPlayerCustomViewModePixelRatioEnumImpl
+    _$$KodiPlayerCustomViewModePixelRatioEnumImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerCustomViewModePixelRatioEnum(
+        _$KodiPlayerCustomViewModePixelRatioEnumImpl(
           $enumDecode(_$IncDecEnumMap, json['value']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModePixelRatioEnumToJson(
-        _$_KodiPlayerCustomViewModePixelRatioEnum instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModePixelRatioEnumImplToJson(
+        _$KodiPlayerCustomViewModePixelRatioEnumImpl instance) =>
     <String, dynamic>{
       'value': _$IncDecEnumMap[instance.value]!,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerCustomViewModePixelRatioAbs
-    _$$_KodiPlayerCustomViewModePixelRatioAbsFromJson(
+_$KodiPlayerCustomViewModePixelRatioAbsImpl
+    _$$KodiPlayerCustomViewModePixelRatioAbsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerCustomViewModePixelRatioAbs(
+        _$KodiPlayerCustomViewModePixelRatioAbsImpl(
           (json['value'] as num).toDouble(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModePixelRatioAbsToJson(
-        _$_KodiPlayerCustomViewModePixelRatioAbs instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModePixelRatioAbsImplToJson(
+        _$KodiPlayerCustomViewModePixelRatioAbsImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerCustomViewModeVerticalShiftEnum
-    _$$_KodiPlayerCustomViewModeVerticalShiftEnumFromJson(
+_$KodiPlayerCustomViewModeVerticalShiftEnumImpl
+    _$$KodiPlayerCustomViewModeVerticalShiftEnumImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerCustomViewModeVerticalShiftEnum(
+        _$KodiPlayerCustomViewModeVerticalShiftEnumImpl(
           $enumDecode(_$IncDecEnumMap, json['value']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModeVerticalShiftEnumToJson(
-        _$_KodiPlayerCustomViewModeVerticalShiftEnum instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModeVerticalShiftEnumImplToJson(
+        _$KodiPlayerCustomViewModeVerticalShiftEnumImpl instance) =>
     <String, dynamic>{
       'value': _$IncDecEnumMap[instance.value]!,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerCustomViewModeVerticalShiftAbs
-    _$$_KodiPlayerCustomViewModeVerticalShiftAbsFromJson(
+_$KodiPlayerCustomViewModeVerticalShiftAbsImpl
+    _$$KodiPlayerCustomViewModeVerticalShiftAbsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerCustomViewModeVerticalShiftAbs(
+        _$KodiPlayerCustomViewModeVerticalShiftAbsImpl(
           (json['value'] as num).toDouble(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModeVerticalShiftAbsToJson(
-        _$_KodiPlayerCustomViewModeVerticalShiftAbs instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModeVerticalShiftAbsImplToJson(
+        _$KodiPlayerCustomViewModeVerticalShiftAbsImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerCustomViewModeZoomEnum
-    _$$_KodiPlayerCustomViewModeZoomEnumFromJson(Map<String, dynamic> json) =>
-        _$_KodiPlayerCustomViewModeZoomEnum(
+_$KodiPlayerCustomViewModeZoomEnumImpl
+    _$$KodiPlayerCustomViewModeZoomEnumImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiPlayerCustomViewModeZoomEnumImpl(
           $enumDecode(_$IncDecEnumMap, json['value']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModeZoomEnumToJson(
-        _$_KodiPlayerCustomViewModeZoomEnum instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModeZoomEnumImplToJson(
+        _$KodiPlayerCustomViewModeZoomEnumImpl instance) =>
     <String, dynamic>{
       'value': _$IncDecEnumMap[instance.value]!,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerCustomViewModeZoomAbs _$$_KodiPlayerCustomViewModeZoomAbsFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiPlayerCustomViewModeZoomAbs(
-      (json['value'] as num).toDouble(),
-      $type: json['runtimeType'] as String?,
-    );
+_$KodiPlayerCustomViewModeZoomAbsImpl
+    _$$KodiPlayerCustomViewModeZoomAbsImplFromJson(Map<String, dynamic> json) =>
+        _$KodiPlayerCustomViewModeZoomAbsImpl(
+          (json['value'] as num).toDouble(),
+          $type: json['runtimeType'] as String?,
+        );
 
-Map<String, dynamic> _$$_KodiPlayerCustomViewModeZoomAbsToJson(
-        _$_KodiPlayerCustomViewModeZoomAbs instance) =>
+Map<String, dynamic> _$$KodiPlayerCustomViewModeZoomAbsImplToJson(
+        _$KodiPlayerCustomViewModeZoomAbsImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

@@ -12,7 +12,7 @@ part of 'refresh_tv_show.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RefreshTVShow _$RefreshTVShowFromJson(Map<String, dynamic> json) {
   return _RefreshTVShow.fromJson(json);
@@ -28,8 +28,12 @@ mixin _$RefreshTVShow {
   bool get refreshEpisodes => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
 
+  /// Serializes this RefreshTVShow to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RefreshTVShow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RefreshTVShowCopyWith<RefreshTVShow> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$RefreshTVShowCopyWithImpl<$Res, $Val extends RefreshTVShow>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RefreshTVShow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,11 +93,11 @@ class _$RefreshTVShowCopyWithImpl<$Res, $Val extends RefreshTVShow>
 }
 
 /// @nodoc
-abstract class _$$_RefreshTVShowCopyWith<$Res>
+abstract class _$$RefreshTVShowImplCopyWith<$Res>
     implements $RefreshTVShowCopyWith<$Res> {
-  factory _$$_RefreshTVShowCopyWith(
-          _$_RefreshTVShow value, $Res Function(_$_RefreshTVShow) then) =
-      __$$_RefreshTVShowCopyWithImpl<$Res>;
+  factory _$$RefreshTVShowImplCopyWith(
+          _$RefreshTVShowImpl value, $Res Function(_$RefreshTVShowImpl) then) =
+      __$$RefreshTVShowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -102,13 +108,15 @@ abstract class _$$_RefreshTVShowCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RefreshTVShowCopyWithImpl<$Res>
-    extends _$RefreshTVShowCopyWithImpl<$Res, _$_RefreshTVShow>
-    implements _$$_RefreshTVShowCopyWith<$Res> {
-  __$$_RefreshTVShowCopyWithImpl(
-      _$_RefreshTVShow _value, $Res Function(_$_RefreshTVShow) _then)
+class __$$RefreshTVShowImplCopyWithImpl<$Res>
+    extends _$RefreshTVShowCopyWithImpl<$Res, _$RefreshTVShowImpl>
+    implements _$$RefreshTVShowImplCopyWith<$Res> {
+  __$$RefreshTVShowImplCopyWithImpl(
+      _$RefreshTVShowImpl _value, $Res Function(_$RefreshTVShowImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RefreshTVShow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,7 +125,7 @@ class __$$_RefreshTVShowCopyWithImpl<$Res>
     Object? refreshEpisodes = null,
     Object? title = freezed,
   }) {
-    return _then(_$_RefreshTVShow(
+    return _then(_$RefreshTVShowImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -140,15 +148,15 @@ class __$$_RefreshTVShowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RefreshTVShow extends _RefreshTVShow {
-  const _$_RefreshTVShow(@JsonKey(name: 'tvshowid') this.id,
+class _$RefreshTVShowImpl extends _RefreshTVShow {
+  const _$RefreshTVShowImpl(@JsonKey(name: 'tvshowid') this.id,
       {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false,
       @JsonKey(name: 'refreshepisodes') this.refreshEpisodes = false,
       this.title})
       : super._();
 
-  factory _$_RefreshTVShow.fromJson(Map<String, dynamic> json) =>
-      _$$_RefreshTVShowFromJson(json);
+  factory _$RefreshTVShowImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RefreshTVShowImplFromJson(json);
 
   @override
   @JsonKey(name: 'tvshowid')
@@ -168,10 +176,10 @@ class _$_RefreshTVShow extends _RefreshTVShow {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RefreshTVShow &&
+            other is _$RefreshTVShowImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.ignoreNFO, ignoreNFO) ||
                 other.ignoreNFO == ignoreNFO) &&
@@ -180,20 +188,22 @@ class _$_RefreshTVShow extends _RefreshTVShow {
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, ignoreNFO, refreshEpisodes, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RefreshTVShow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RefreshTVShowCopyWith<_$_RefreshTVShow> get copyWith =>
-      __$$_RefreshTVShowCopyWithImpl<_$_RefreshTVShow>(this, _$identity);
+  _$$RefreshTVShowImplCopyWith<_$RefreshTVShowImpl> get copyWith =>
+      __$$RefreshTVShowImplCopyWithImpl<_$RefreshTVShowImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RefreshTVShowToJson(
+    return _$$RefreshTVShowImplToJson(
       this,
     );
   }
@@ -203,11 +213,11 @@ abstract class _RefreshTVShow extends RefreshTVShow {
   const factory _RefreshTVShow(@JsonKey(name: 'tvshowid') final int id,
       {@JsonKey(name: 'ignorenfo') final bool ignoreNFO,
       @JsonKey(name: 'refreshepisodes') final bool refreshEpisodes,
-      final String? title}) = _$_RefreshTVShow;
+      final String? title}) = _$RefreshTVShowImpl;
   const _RefreshTVShow._() : super._();
 
   factory _RefreshTVShow.fromJson(Map<String, dynamic> json) =
-      _$_RefreshTVShow.fromJson;
+      _$RefreshTVShowImpl.fromJson;
 
   @override
   @JsonKey(name: 'tvshowid')
@@ -220,8 +230,11 @@ abstract class _RefreshTVShow extends RefreshTVShow {
   bool get refreshEpisodes;
   @override
   String? get title;
+
+  /// Create a copy of RefreshTVShow
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RefreshTVShowCopyWith<_$_RefreshTVShow> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RefreshTVShowImplCopyWith<_$RefreshTVShowImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

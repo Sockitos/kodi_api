@@ -6,15 +6,15 @@ part of 'permission.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
-    _$_Permission();
+_$PermissionImpl _$$PermissionImplFromJson(Map<String, dynamic> json) =>
+    _$PermissionImpl();
 
-Map<String, dynamic> _$$_PermissionToJson(_$_Permission instance) =>
+Map<String, dynamic> _$$PermissionImplToJson(_$PermissionImpl instance) =>
     <String, dynamic>{};
 
-_$_PermissionResponse _$$_PermissionResponseFromJson(
+_$PermissionResponseImpl _$$PermissionResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PermissionResponse(
+    _$PermissionResponseImpl(
       controlGUI: json['ControlGUI'] as bool,
       controlNotify: json['ControlNotify'] as bool,
       controlPlayback: json['ControlPlayback'] as bool,
@@ -30,8 +30,8 @@ _$_PermissionResponse _$$_PermissionResponseFromJson(
       writeFile: json['WriteFile'] as bool,
     );
 
-Map<String, dynamic> _$$_PermissionResponseToJson(
-        _$_PermissionResponse instance) =>
+Map<String, dynamic> _$$PermissionResponseImplToJson(
+        _$PermissionResponseImpl instance) =>
     <String, dynamic>{
       'ControlGUI': instance.controlGUI,
       'ControlNotify': instance.controlNotify,

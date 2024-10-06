@@ -6,10 +6,10 @@ part of 'kodi_notification_gui_on_dpms_deactivated_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationGUIOnDPMSDeactivatedParams
-    _$$_KodiNotificationGUIOnDPMSDeactivatedParamsFromJson(
+_$KodiNotificationGUIOnDPMSDeactivatedParamsImpl
+    _$$KodiNotificationGUIOnDPMSDeactivatedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnDPMSDeactivatedParams(
+        _$KodiNotificationGUIOnDPMSDeactivatedParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,8 @@ _$_KodiNotificationGUIOnDPMSDeactivatedParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationGUIOnDPMSDeactivatedParamsToJson(
-    _$_KodiNotificationGUIOnDPMSDeactivatedParams instance) {
+Map<String, dynamic> _$$KodiNotificationGUIOnDPMSDeactivatedParamsImplToJson(
+    _$KodiNotificationGUIOnDPMSDeactivatedParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,15 +33,16 @@ Map<String, dynamic> _$$_KodiNotificationGUIOnDPMSDeactivatedParamsToJson(
   return val;
 }
 
-_$_KodiNotificationGUIOnDPMSDeactivatedParamsData
-    _$$_KodiNotificationGUIOnDPMSDeactivatedParamsDataFromJson(
+_$KodiNotificationGUIOnDPMSDeactivatedParamsDataImpl
+    _$$KodiNotificationGUIOnDPMSDeactivatedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnDPMSDeactivatedParamsData(
+        _$KodiNotificationGUIOnDPMSDeactivatedParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic> _$$_KodiNotificationGUIOnDPMSDeactivatedParamsDataToJson(
-        _$_KodiNotificationGUIOnDPMSDeactivatedParamsData instance) =>
-    <String, dynamic>{
-      'test': instance.test,
-    };
+Map<String, dynamic>
+    _$$KodiNotificationGUIOnDPMSDeactivatedParamsDataImplToJson(
+            _$KodiNotificationGUIOnDPMSDeactivatedParamsDataImpl instance) =>
+        <String, dynamic>{
+          'test': instance.test,
+        };

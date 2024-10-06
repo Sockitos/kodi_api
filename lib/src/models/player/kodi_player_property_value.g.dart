@@ -6,21 +6,21 @@ part of 'kodi_player_property_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerPropertyValue _$$_KodiPlayerPropertyValueFromJson(
+_$KodiPlayerPropertyValueImpl _$$KodiPlayerPropertyValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerPropertyValue(
+    _$KodiPlayerPropertyValueImpl(
       audioStreams: (json['audiostreams'] as List<dynamic>?)
           ?.map(
               (e) => KodiPlayerAudioStream.fromJson(e as Map<String, dynamic>))
           .toList(),
-      cachePercentage: (json['cachepercentage'] as num?)?.toDouble(),
-      canChangeSpeed: json['canchangespeed'] as bool?,
-      canMove: json['canmove'] as bool?,
-      canRepeat: json['canrepeat'] as bool?,
-      canRotate: json['canrotate'] as bool?,
-      canSeek: json['canseek'] as bool?,
-      canShuffle: json['canshuffle'] as bool?,
-      canZoom: json['canzoom'] as bool?,
+      cachePercentage: (json['cachepercentage'] as num?)?.toDouble() ?? 0,
+      canChangeSpeed: json['canchangespeed'] as bool? ?? false,
+      canMove: json['canmove'] as bool? ?? false,
+      canRepeat: json['canrepeat'] as bool? ?? false,
+      canRotate: json['canrotate'] as bool? ?? false,
+      canSeek: json['canseek'] as bool? ?? false,
+      canShuffle: json['canshuffle'] as bool? ?? false,
+      canZoom: json['canzoom'] as bool? ?? false,
       currentAudioStream: json['currentaudiostream'] == null
           ? null
           : KodiPlayerAudioStream.fromJson(
@@ -33,15 +33,16 @@ _$_KodiPlayerPropertyValue _$$_KodiPlayerPropertyValueFromJson(
           ? null
           : KodiPlayerVideoStream.fromJson(
               json['currentvideostream'] as Map<String, dynamic>),
-      live: json['live'] as bool?,
-      partymode: json['partymode'] as bool?,
-      percentage: (json['percentage'] as num?)?.toDouble(),
-      playlistId: json['playlistid'] as int?,
-      position: json['position'] as int?,
-      repeat: $enumDecodeNullable(_$KodiPlayerRepeatEnumMap, json['repeat']),
-      shuffled: json['shuffled'] as bool?,
-      speed: json['speed'] as int?,
-      subtitleEnabled: json['subtitleenabled'] as bool?,
+      live: json['live'] as bool? ?? false,
+      partymode: json['partyMode'] as bool? ?? false,
+      percentage: (json['percentage'] as num?)?.toDouble() ?? 0,
+      playlistId: (json['playlistid'] as num?)?.toInt() ?? -1,
+      position: (json['position'] as num?)?.toInt() ?? -1,
+      repeat: $enumDecodeNullable(_$KodiPlayerRepeatEnumMap, json['repeat']) ??
+          KodiPlayerRepeat.off,
+      shuffled: json['shuffled'] as bool? ?? false,
+      speed: (json['speed'] as num?)?.toInt() ?? 0,
+      subtitleEnabled: json['subtitleenabled'] as bool? ?? false,
       subtitles: (json['subtitles'] as List<dynamic>?)
           ?.map((e) => KodiPlayerSubtitle.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -51,15 +52,16 @@ _$_KodiPlayerPropertyValue _$$_KodiPlayerPropertyValueFromJson(
       totalTime: json['totaltime'] == null
           ? null
           : KodiGlobalTime.fromJson(json['totaltime'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(_$KodiPlayerTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$KodiPlayerTypeEnumMap, json['type']) ??
+          KodiPlayerType.video,
       videoStreams: (json['videostreams'] as List<dynamic>?)
           ?.map(
               (e) => KodiPlayerVideoStream.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_KodiPlayerPropertyValueToJson(
-    _$_KodiPlayerPropertyValue instance) {
+Map<String, dynamic> _$$KodiPlayerPropertyValueImplToJson(
+    _$KodiPlayerPropertyValueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -70,31 +72,31 @@ Map<String, dynamic> _$$_KodiPlayerPropertyValueToJson(
 
   writeNotNull(
       'audiostreams', instance.audioStreams?.map((e) => e.toJson()).toList());
-  writeNotNull('cachepercentage', instance.cachePercentage);
-  writeNotNull('canchangespeed', instance.canChangeSpeed);
-  writeNotNull('canmove', instance.canMove);
-  writeNotNull('canrepeat', instance.canRepeat);
-  writeNotNull('canrotate', instance.canRotate);
-  writeNotNull('canseek', instance.canSeek);
-  writeNotNull('canshuffle', instance.canShuffle);
-  writeNotNull('canzoom', instance.canZoom);
+  val['cachepercentage'] = instance.cachePercentage;
+  val['canchangespeed'] = instance.canChangeSpeed;
+  val['canmove'] = instance.canMove;
+  val['canrepeat'] = instance.canRepeat;
+  val['canrotate'] = instance.canRotate;
+  val['canseek'] = instance.canSeek;
+  val['canshuffle'] = instance.canShuffle;
+  val['canzoom'] = instance.canZoom;
   writeNotNull('currentaudiostream', instance.currentAudioStream?.toJson());
   writeNotNull('currentsubtitle', instance.currentSubtitle?.toJson());
   writeNotNull('currentvideostream', instance.currentVideoStream?.toJson());
-  writeNotNull('live', instance.live);
-  writeNotNull('partymode', instance.partymode);
-  writeNotNull('percentage', instance.percentage);
-  writeNotNull('playlistid', instance.playlistId);
-  writeNotNull('position', instance.position);
-  writeNotNull('repeat', _$KodiPlayerRepeatEnumMap[instance.repeat]);
-  writeNotNull('shuffled', instance.shuffled);
-  writeNotNull('speed', instance.speed);
-  writeNotNull('subtitleenabled', instance.subtitleEnabled);
+  val['live'] = instance.live;
+  val['partyMode'] = instance.partymode;
+  val['percentage'] = instance.percentage;
+  val['playlistid'] = instance.playlistId;
+  val['position'] = instance.position;
+  val['repeat'] = _$KodiPlayerRepeatEnumMap[instance.repeat]!;
+  val['shuffled'] = instance.shuffled;
+  val['speed'] = instance.speed;
+  val['subtitleenabled'] = instance.subtitleEnabled;
   writeNotNull(
       'subtitles', instance.subtitles?.map((e) => e.toJson()).toList());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('totaltime', instance.totalTime?.toJson());
-  writeNotNull('type', _$KodiPlayerTypeEnumMap[instance.type]);
+  val['type'] = _$KodiPlayerTypeEnumMap[instance.type]!;
   writeNotNull(
       'videostreams', instance.videoStreams?.map((e) => e.toJson()).toList());
   return val;

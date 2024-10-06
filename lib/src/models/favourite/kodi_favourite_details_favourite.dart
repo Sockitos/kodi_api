@@ -7,12 +7,12 @@ part 'kodi_favourite_details_favourite.g.dart';
 @freezed
 class KodiFavouriteDetailsFavourite with _$KodiFavouriteDetailsFavourite {
   const factory KodiFavouriteDetailsFavourite({
-    String? path,
-    String? thumbnail,
+    @Default('') String path,
+    @Default('') String thumbnail,
     required String title,
     required KodiFavouriteType type,
-    String? window,
-    @JsonKey(name: 'windowparameter') String? windowParameter,
+    @Default('') String window,
+    @JsonKey(name: 'windowparameter') @Default('') String windowParameter,
   }) = _KodiFavouriteDetailsFavourite;
 
   factory KodiFavouriteDetailsFavourite.fromJson(Map<String, dynamic> json) =>

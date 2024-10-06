@@ -6,10 +6,10 @@ part 'kodi_player_position_time.g.dart';
 @freezed
 class KodiPlayerPositionTime with _$KodiPlayerPositionTime {
   const factory KodiPlayerPositionTime({
-    required int hours,
-    required int milliseconds,
-    required int minutes,
-    required int seconds,
+    @Default(0) int hours,
+    @Default(0) int milliseconds,
+    @Default(0) int minutes,
+    @Default(0) int seconds,
   }) = _KodiPlayerPositionTime;
 
   factory KodiPlayerPositionTime.fromJson(Map<String, dynamic> json) =>

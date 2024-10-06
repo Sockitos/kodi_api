@@ -6,28 +6,28 @@ part of 'set_song_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetSongDetails _$$_SetSongDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetSongDetails(
-      json['songid'] as int,
+_$SetSongDetailsImpl _$$SetSongDetailsImplFromJson(Map<String, dynamic> json) =>
+    _$SetSongDetailsImpl(
+      (json['songid'] as num).toInt(),
       title: json['title'] as String?,
       artists:
           (json['artist'] as List<dynamic>?)?.map((e) => e as String).toList(),
       genres:
           (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      year: json['year'] as int?,
+      year: (json['year'] as num?)?.toInt(),
       rating: (json['rating'] as num?)?.toDouble(),
-      track: json['track'] as int?,
-      disc: json['disc'] as int?,
-      duration: json['duration'] as int?,
+      track: (json['track'] as num?)?.toInt(),
+      disc: (json['disc'] as num?)?.toInt(),
+      duration: (json['duration'] as num?)?.toInt(),
       comment: json['comment'] as String?,
       musicBrainzTrackId: json['musicbrainztrackid'] as String?,
       musicBrainzArtistId: json['musicbrainzartistid'] as String?,
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       lastPlayed: json['lastplayed'] == null
           ? null
           : DateTime.parse(json['lastplayed'] as String),
-      userRating: json['userrating'] as int?,
-      votes: json['votes'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
+      votes: (json['votes'] as num?)?.toInt(),
       displayArtist: json['displayartist'] as String?,
       sortArtist: json['sortartist'] as String?,
       mood: json['mood'] as String?,
@@ -41,10 +41,11 @@ _$_SetSongDetails _$$_SetSongDetailsFromJson(Map<String, dynamic> json) =>
       originalDate: json['originaldate'] == null
           ? null
           : DateTime.parse(json['originaldate'] as String),
-      bpm: json['bpm'] as int?,
+      bpm: (json['bpm'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$_SetSongDetailsToJson(_$_SetSongDetails instance) {
+Map<String, dynamic> _$$SetSongDetailsImplToJson(
+    _$SetSongDetailsImpl instance) {
   final val = <String, dynamic>{
     'songid': instance.id,
   };

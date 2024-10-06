@@ -6,20 +6,20 @@ part of 'kodi_setting_details_category.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiSettingDetailsCategory _$$_KodiSettingDetailsCategoryFromJson(
+_$KodiSettingDetailsCategoryImpl _$$KodiSettingDetailsCategoryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiSettingDetailsCategory(
+    _$KodiSettingDetailsCategoryImpl(
       groups: (json['groups'] as List<dynamic>?)
           ?.map((e) =>
               KodiSettingDetailsGroup.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      help: json['help'] as String?,
+          .toSet(),
+      help: json['help'] as String? ?? '',
       id: json['id'] as String,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiSettingDetailsCategoryToJson(
-    _$_KodiSettingDetailsCategory instance) {
+Map<String, dynamic> _$$KodiSettingDetailsCategoryImplToJson(
+    _$KodiSettingDetailsCategoryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -29,7 +29,7 @@ Map<String, dynamic> _$$_KodiSettingDetailsCategoryToJson(
   }
 
   writeNotNull('groups', instance.groups?.map((e) => e.toJson()).toList());
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;

@@ -6,17 +6,17 @@ part of 'kodi_list_filter_rule_movies.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterRuleMovies _$$_KodiListFilterRuleMoviesFromJson(
+_$KodiListFilterRuleMoviesImpl _$$KodiListFilterRuleMoviesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterRuleMovies(
+    _$KodiListFilterRuleMoviesImpl(
       field: $enumDecode(_$KodiListFilterFieldsMoviesEnumMap, json['field']),
       operator: $enumDecode(_$KodiListFilterOperatorsEnumMap, json['operator']),
       value: const KodiListFilterRuleMoviesValueConverter()
           .fromJson(json['value']),
     );
 
-Map<String, dynamic> _$$_KodiListFilterRuleMoviesToJson(
-    _$_KodiListFilterRuleMovies instance) {
+Map<String, dynamic> _$$KodiListFilterRuleMoviesImplToJson(
+    _$KodiListFilterRuleMoviesImpl instance) {
   final val = <String, dynamic>{
     'field': _$KodiListFilterFieldsMoviesEnumMap[instance.field]!,
     'operator': _$KodiListFilterOperatorsEnumMap[instance.operator]!,
@@ -92,30 +92,31 @@ const _$KodiListFilterOperatorsEnumMap = {
   KodiListFilterOperators.between: 'between',
 };
 
-_$_KodiListFilterRuleMoviesValueSingle
-    _$$_KodiListFilterRuleMoviesValueSingleFromJson(
+_$KodiListFilterRuleMoviesValueSingleImpl
+    _$$KodiListFilterRuleMoviesValueSingleImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleMoviesValueSingle(
+        _$KodiListFilterRuleMoviesValueSingleImpl(
           json['value'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleMoviesValueSingleToJson(
-        _$_KodiListFilterRuleMoviesValueSingle instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleMoviesValueSingleImplToJson(
+        _$KodiListFilterRuleMoviesValueSingleImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterRuleMoviesValueGroup
-    _$$_KodiListFilterRuleMoviesValueGroupFromJson(Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleMoviesValueGroup(
+_$KodiListFilterRuleMoviesValueGroupImpl
+    _$$KodiListFilterRuleMoviesValueGroupImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiListFilterRuleMoviesValueGroupImpl(
           (json['value'] as List<dynamic>).map((e) => e as String).toList(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleMoviesValueGroupToJson(
-        _$_KodiListFilterRuleMoviesValueGroup instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleMoviesValueGroupImplToJson(
+        _$KodiListFilterRuleMoviesValueGroupImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

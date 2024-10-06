@@ -12,7 +12,7 @@ part of 'eject_optical_drive.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 EjectOpticalDrive _$EjectOpticalDriveFromJson(Map<String, dynamic> json) {
   return _EjectOpticalDrive.fromJson(json);
@@ -20,6 +20,7 @@ EjectOpticalDrive _$EjectOpticalDriveFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EjectOpticalDrive {
+  /// Serializes this EjectOpticalDrive to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -39,31 +40,37 @@ class _$EjectOpticalDriveCopyWithImpl<$Res, $Val extends EjectOpticalDrive>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of EjectOpticalDrive
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_EjectOpticalDriveCopyWith<$Res> {
-  factory _$$_EjectOpticalDriveCopyWith(_$_EjectOpticalDrive value,
-          $Res Function(_$_EjectOpticalDrive) then) =
-      __$$_EjectOpticalDriveCopyWithImpl<$Res>;
+abstract class _$$EjectOpticalDriveImplCopyWith<$Res> {
+  factory _$$EjectOpticalDriveImplCopyWith(_$EjectOpticalDriveImpl value,
+          $Res Function(_$EjectOpticalDriveImpl) then) =
+      __$$EjectOpticalDriveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EjectOpticalDriveCopyWithImpl<$Res>
-    extends _$EjectOpticalDriveCopyWithImpl<$Res, _$_EjectOpticalDrive>
-    implements _$$_EjectOpticalDriveCopyWith<$Res> {
-  __$$_EjectOpticalDriveCopyWithImpl(
-      _$_EjectOpticalDrive _value, $Res Function(_$_EjectOpticalDrive) _then)
+class __$$EjectOpticalDriveImplCopyWithImpl<$Res>
+    extends _$EjectOpticalDriveCopyWithImpl<$Res, _$EjectOpticalDriveImpl>
+    implements _$$EjectOpticalDriveImplCopyWith<$Res> {
+  __$$EjectOpticalDriveImplCopyWithImpl(_$EjectOpticalDriveImpl _value,
+      $Res Function(_$EjectOpticalDriveImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of EjectOpticalDrive
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_EjectOpticalDrive extends _EjectOpticalDrive {
-  const _$_EjectOpticalDrive() : super._();
+class _$EjectOpticalDriveImpl extends _EjectOpticalDrive {
+  const _$EjectOpticalDriveImpl() : super._();
 
-  factory _$_EjectOpticalDrive.fromJson(Map<String, dynamic> json) =>
-      _$$_EjectOpticalDriveFromJson(json);
+  factory _$EjectOpticalDriveImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EjectOpticalDriveImplFromJson(json);
 
   @override
   String toString() {
@@ -71,27 +78,27 @@ class _$_EjectOpticalDrive extends _EjectOpticalDrive {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_EjectOpticalDrive);
+        (other.runtimeType == runtimeType && other is _$EjectOpticalDriveImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EjectOpticalDriveToJson(
+    return _$$EjectOpticalDriveImplToJson(
       this,
     );
   }
 }
 
 abstract class _EjectOpticalDrive extends EjectOpticalDrive {
-  const factory _EjectOpticalDrive() = _$_EjectOpticalDrive;
+  const factory _EjectOpticalDrive() = _$EjectOpticalDriveImpl;
   const _EjectOpticalDrive._() : super._();
 
   factory _EjectOpticalDrive.fromJson(Map<String, dynamic> json) =
-      _$_EjectOpticalDrive.fromJson;
+      _$EjectOpticalDriveImpl.fromJson;
 }

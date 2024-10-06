@@ -18,7 +18,6 @@ typedef SetFileDetailsBuilder = SetFileDetails Function(
 
 @freezed
 class SetFileDetails with _$SetFileDetails implements KodiRequest<void> {
-  @JsonSerializable(converters: [DateTimeConverter()])
   const factory SetFileDetails(
     String file,
     KodiFilesMedia media, {

@@ -6,13 +6,13 @@ part of 'add_subtitle.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AddSubtitle _$$_AddSubtitleFromJson(Map<String, dynamic> json) =>
-    _$_AddSubtitle(
-      json['playerid'] as int,
+_$AddSubtitleImpl _$$AddSubtitleImplFromJson(Map<String, dynamic> json) =>
+    _$AddSubtitleImpl(
+      (json['playerid'] as num).toInt(),
       json['subtitle'] as String,
     );
 
-Map<String, dynamic> _$$_AddSubtitleToJson(_$_AddSubtitle instance) =>
+Map<String, dynamic> _$$AddSubtitleImplToJson(_$AddSubtitleImpl instance) =>
     <String, dynamic>{
       'playerid': instance.id,
       'subtitle': instance.subtitle,

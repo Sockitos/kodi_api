@@ -6,30 +6,30 @@ part of 'kodi_video_details_music_video.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoDetailsMusicVideo _$$_KodiVideoDetailsMusicVideoFromJson(
+_$KodiVideoDetailsMusicVideoImpl _$$KodiVideoDetailsMusicVideoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiVideoDetailsMusicVideo(
+    _$KodiVideoDetailsMusicVideoImpl(
       album: json['album'] as String?,
       artist:
           (json['artist'] as List<dynamic>?)?.map((e) => e as String).toList(),
       genre:
           (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      musicVideoId: json['musicvideoid'] as int,
+      musicVideoId: (json['musicvideoid'] as num).toInt(),
       premiered: json['premiered'] as String?,
       rating: (json['rating'] as num?)?.toDouble(),
       studio:
           (json['studio'] as List<dynamic>?)?.map((e) => e as String).toList(),
       tag: (json['tag'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      track: json['track'] as int?,
-      userRating: json['userrating'] as int?,
-      year: json['year'] as int?,
+      track: (json['track'] as num?)?.toInt(),
+      userRating: (json['userrating'] as num?)?.toInt(),
+      year: (json['year'] as num?)?.toInt(),
       director: (json['director'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       resume: json['resume'] == null
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
-      runtime: json['runtime'] as int?,
+      runtime: (json['runtime'] as num?)?.toInt(),
       streamDetails: json['streamdetails'] == null
           ? null
           : KodiVideoStreams.fromJson(
@@ -42,14 +42,14 @@ _$_KodiVideoDetailsMusicVideo _$$_KodiVideoDetailsMusicVideoFromJson(
       art: json['art'] == null
           ? null
           : KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
-      playCount: json['playcount'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
       fanart: json['fanart'] as String?,
       thumbnail: json['thumbnail'] as String?,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiVideoDetailsMusicVideoToJson(
-    _$_KodiVideoDetailsMusicVideo instance) {
+Map<String, dynamic> _$$KodiVideoDetailsMusicVideoImplToJson(
+    _$KodiVideoDetailsMusicVideoImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

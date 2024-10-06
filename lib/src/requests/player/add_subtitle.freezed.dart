@@ -12,7 +12,7 @@ part of 'add_subtitle.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AddSubtitle _$AddSubtitleFromJson(Map<String, dynamic> json) {
   return _AddSubtitle.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$AddSubtitle {
   int get id => throw _privateConstructorUsedError;
   String get subtitle => throw _privateConstructorUsedError;
 
+  /// Serializes this AddSubtitle to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddSubtitleCopyWith<AddSubtitle> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$AddSubtitleCopyWithImpl<$Res, $Val extends AddSubtitle>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AddSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,31 +75,33 @@ class _$AddSubtitleCopyWithImpl<$Res, $Val extends AddSubtitle>
 }
 
 /// @nodoc
-abstract class _$$_AddSubtitleCopyWith<$Res>
+abstract class _$$AddSubtitleImplCopyWith<$Res>
     implements $AddSubtitleCopyWith<$Res> {
-  factory _$$_AddSubtitleCopyWith(
-          _$_AddSubtitle value, $Res Function(_$_AddSubtitle) then) =
-      __$$_AddSubtitleCopyWithImpl<$Res>;
+  factory _$$AddSubtitleImplCopyWith(
+          _$AddSubtitleImpl value, $Res Function(_$AddSubtitleImpl) then) =
+      __$$AddSubtitleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'playerid') int id, String subtitle});
 }
 
 /// @nodoc
-class __$$_AddSubtitleCopyWithImpl<$Res>
-    extends _$AddSubtitleCopyWithImpl<$Res, _$_AddSubtitle>
-    implements _$$_AddSubtitleCopyWith<$Res> {
-  __$$_AddSubtitleCopyWithImpl(
-      _$_AddSubtitle _value, $Res Function(_$_AddSubtitle) _then)
+class __$$AddSubtitleImplCopyWithImpl<$Res>
+    extends _$AddSubtitleCopyWithImpl<$Res, _$AddSubtitleImpl>
+    implements _$$AddSubtitleImplCopyWith<$Res> {
+  __$$AddSubtitleImplCopyWithImpl(
+      _$AddSubtitleImpl _value, $Res Function(_$AddSubtitleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? subtitle = null,
   }) {
-    return _then(_$_AddSubtitle(
+    return _then(_$AddSubtitleImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -108,12 +116,12 @@ class __$$_AddSubtitleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AddSubtitle extends _AddSubtitle {
-  const _$_AddSubtitle(@JsonKey(name: 'playerid') this.id, this.subtitle)
+class _$AddSubtitleImpl extends _AddSubtitle {
+  const _$AddSubtitleImpl(@JsonKey(name: 'playerid') this.id, this.subtitle)
       : super._();
 
-  factory _$_AddSubtitle.fromJson(Map<String, dynamic> json) =>
-      _$$_AddSubtitleFromJson(json);
+  factory _$AddSubtitleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddSubtitleImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -127,28 +135,30 @@ class _$_AddSubtitle extends _AddSubtitle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddSubtitle &&
+            other is _$AddSubtitleImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.subtitle, subtitle) ||
                 other.subtitle == subtitle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, subtitle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddSubtitle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddSubtitleCopyWith<_$_AddSubtitle> get copyWith =>
-      __$$_AddSubtitleCopyWithImpl<_$_AddSubtitle>(this, _$identity);
+  _$$AddSubtitleImplCopyWith<_$AddSubtitleImpl> get copyWith =>
+      __$$AddSubtitleImplCopyWithImpl<_$AddSubtitleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddSubtitleToJson(
+    return _$$AddSubtitleImplToJson(
       this,
     );
   }
@@ -157,19 +167,22 @@ class _$_AddSubtitle extends _AddSubtitle {
 abstract class _AddSubtitle extends AddSubtitle {
   const factory _AddSubtitle(
           @JsonKey(name: 'playerid') final int id, final String subtitle) =
-      _$_AddSubtitle;
+      _$AddSubtitleImpl;
   const _AddSubtitle._() : super._();
 
   factory _AddSubtitle.fromJson(Map<String, dynamic> json) =
-      _$_AddSubtitle.fromJson;
+      _$AddSubtitleImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
   int get id;
   @override
   String get subtitle;
+
+  /// Create a copy of AddSubtitle
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_AddSubtitleCopyWith<_$_AddSubtitle> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddSubtitleImplCopyWith<_$AddSubtitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
