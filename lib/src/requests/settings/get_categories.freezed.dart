@@ -21,7 +21,7 @@ GetCategories _$GetCategoriesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetCategories {
   KodiSettingLevel get level => throw _privateConstructorUsedError;
-  String? get section => throw _privateConstructorUsedError;
+  String get section => throw _privateConstructorUsedError;
   Set<KodiSettingsGetCategoriesProperties>? get properties =>
       throw _privateConstructorUsedError;
 
@@ -43,7 +43,7 @@ abstract class $GetCategoriesCopyWith<$Res> {
   @useResult
   $Res call(
       {KodiSettingLevel level,
-      String? section,
+      String section,
       Set<KodiSettingsGetCategoriesProperties>? properties});
 }
 
@@ -63,7 +63,7 @@ class _$GetCategoriesCopyWithImpl<$Res, $Val extends GetCategories>
   @override
   $Res call({
     Object? level = null,
-    Object? section = freezed,
+    Object? section = null,
     Object? properties = freezed,
   }) {
     return _then(_value.copyWith(
@@ -71,10 +71,10 @@ class _$GetCategoriesCopyWithImpl<$Res, $Val extends GetCategories>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      section: freezed == section
+      section: null == section
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       properties: freezed == properties
           ? _value.properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -93,7 +93,7 @@ abstract class _$$GetCategoriesImplCopyWith<$Res>
   @useResult
   $Res call(
       {KodiSettingLevel level,
-      String? section,
+      String section,
       Set<KodiSettingsGetCategoriesProperties>? properties});
 }
 
@@ -111,7 +111,7 @@ class __$$GetCategoriesImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? level = null,
-    Object? section = freezed,
+    Object? section = null,
     Object? properties = freezed,
   }) {
     return _then(_$GetCategoriesImpl(
@@ -119,10 +119,10 @@ class __$$GetCategoriesImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      section: freezed == section
+      section: null == section
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -136,7 +136,7 @@ class __$$GetCategoriesImplCopyWithImpl<$Res>
 class _$GetCategoriesImpl extends _GetCategories {
   const _$GetCategoriesImpl(
       {this.level = KodiSettingLevel.standard,
-      this.section,
+      this.section = '',
       final Set<KodiSettingsGetCategoriesProperties>? properties})
       : _properties = properties,
         super._();
@@ -148,7 +148,8 @@ class _$GetCategoriesImpl extends _GetCategories {
   @JsonKey()
   final KodiSettingLevel level;
   @override
-  final String? section;
+  @JsonKey()
+  final String section;
   final Set<KodiSettingsGetCategoriesProperties>? _properties;
   @override
   Set<KodiSettingsGetCategoriesProperties>? get properties {
@@ -199,7 +200,7 @@ class _$GetCategoriesImpl extends _GetCategories {
 abstract class _GetCategories extends GetCategories {
   const factory _GetCategories(
           {final KodiSettingLevel level,
-          final String? section,
+          final String section,
           final Set<KodiSettingsGetCategoriesProperties>? properties}) =
       _$GetCategoriesImpl;
   const _GetCategories._() : super._();
@@ -210,7 +211,7 @@ abstract class _GetCategories extends GetCategories {
   @override
   KodiSettingLevel get level;
   @override
-  String? get section;
+  String get section;
   @override
   Set<KodiSettingsGetCategoriesProperties>? get properties;
 

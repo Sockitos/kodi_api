@@ -21,9 +21,9 @@ KodiSettingDetailsCategory _$KodiSettingDetailsCategoryFromJson(
 
 /// @nodoc
 mixin _$KodiSettingDetailsCategory {
-  List<KodiSettingDetailsGroup>? get groups =>
+  Set<KodiSettingDetailsGroup>? get groups =>
       throw _privateConstructorUsedError;
-  String? get help => throw _privateConstructorUsedError;
+  String get help => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
@@ -45,8 +45,8 @@ abstract class $KodiSettingDetailsCategoryCopyWith<$Res> {
           KodiSettingDetailsCategory>;
   @useResult
   $Res call(
-      {List<KodiSettingDetailsGroup>? groups,
-      String? help,
+      {Set<KodiSettingDetailsGroup>? groups,
+      String help,
       String id,
       String label});
 }
@@ -68,7 +68,7 @@ class _$KodiSettingDetailsCategoryCopyWithImpl<$Res,
   @override
   $Res call({
     Object? groups = freezed,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -76,11 +76,11 @@ class _$KodiSettingDetailsCategoryCopyWithImpl<$Res,
       groups: freezed == groups
           ? _value.groups
           : groups // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsGroup>?,
-      help: freezed == help
+              as Set<KodiSettingDetailsGroup>?,
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -103,8 +103,8 @@ abstract class _$$KodiSettingDetailsCategoryImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<KodiSettingDetailsGroup>? groups,
-      String? help,
+      {Set<KodiSettingDetailsGroup>? groups,
+      String help,
       String id,
       String label});
 }
@@ -125,7 +125,7 @@ class __$$KodiSettingDetailsCategoryImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? groups = freezed,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -133,11 +133,11 @@ class __$$KodiSettingDetailsCategoryImplCopyWithImpl<$Res>
       groups: freezed == groups
           ? _value._groups
           : groups // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsGroup>?,
-      help: freezed == help
+              as Set<KodiSettingDetailsGroup>?,
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -154,8 +154,8 @@ class __$$KodiSettingDetailsCategoryImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiSettingDetailsCategoryImpl implements _KodiSettingDetailsCategory {
   const _$KodiSettingDetailsCategoryImpl(
-      {final List<KodiSettingDetailsGroup>? groups,
-      this.help,
+      {final Set<KodiSettingDetailsGroup>? groups,
+      this.help = '',
       required this.id,
       required this.label})
       : _groups = groups;
@@ -164,18 +164,19 @@ class _$KodiSettingDetailsCategoryImpl implements _KodiSettingDetailsCategory {
           Map<String, dynamic> json) =>
       _$$KodiSettingDetailsCategoryImplFromJson(json);
 
-  final List<KodiSettingDetailsGroup>? _groups;
+  final Set<KodiSettingDetailsGroup>? _groups;
   @override
-  List<KodiSettingDetailsGroup>? get groups {
+  Set<KodiSettingDetailsGroup>? get groups {
     final value = _groups;
     if (value == null) return null;
-    if (_groups is EqualUnmodifiableListView) return _groups;
+    if (_groups is EqualUnmodifiableSetView) return _groups;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableSetView(value);
   }
 
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -222,8 +223,8 @@ class _$KodiSettingDetailsCategoryImpl implements _KodiSettingDetailsCategory {
 abstract class _KodiSettingDetailsCategory
     implements KodiSettingDetailsCategory {
   const factory _KodiSettingDetailsCategory(
-      {final List<KodiSettingDetailsGroup>? groups,
-      final String? help,
+      {final Set<KodiSettingDetailsGroup>? groups,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsCategoryImpl;
 
@@ -231,9 +232,9 @@ abstract class _KodiSettingDetailsCategory
       _$KodiSettingDetailsCategoryImpl.fromJson;
 
   @override
-  List<KodiSettingDetailsGroup>? get groups;
+  Set<KodiSettingDetailsGroup>? get groups;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override

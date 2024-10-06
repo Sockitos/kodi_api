@@ -37,8 +37,8 @@ _$KodiSettingDetailsControlSpinnerImpl
     _$$KodiSettingDetailsControlSpinnerImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiSettingDetailsControlSpinnerImpl(
-          formatLabel: json['formatlabel'] as String?,
-          minimumLabel: json['minimumlabel'] as String?,
+          formatLabel: json['formatlabel'] as String? ?? '',
+          minimumLabel: json['minimumlabel'] as String? ?? '',
           type: $enumDecode(
               _$KodiSettingDetailsControlSpinnerTypeEnumMap, json['type']),
           delayed: json['delayed'] as bool,
@@ -46,22 +46,14 @@ _$KodiSettingDetailsControlSpinnerImpl
         );
 
 Map<String, dynamic> _$$KodiSettingDetailsControlSpinnerImplToJson(
-    _$KodiSettingDetailsControlSpinnerImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('formatlabel', instance.formatLabel);
-  writeNotNull('minimumlabel', instance.minimumLabel);
-  val['type'] = _$KodiSettingDetailsControlSpinnerTypeEnumMap[instance.type]!;
-  val['delayed'] = instance.delayed;
-  val['format'] = instance.format;
-  return val;
-}
+        _$KodiSettingDetailsControlSpinnerImpl instance) =>
+    <String, dynamic>{
+      'formatlabel': instance.formatLabel,
+      'minimumlabel': instance.minimumLabel,
+      'type': _$KodiSettingDetailsControlSpinnerTypeEnumMap[instance.type]!,
+      'delayed': instance.delayed,
+      'format': instance.format,
+    };
 
 const _$KodiSettingDetailsControlSpinnerTypeEnumMap = {
   KodiSettingDetailsControlSpinnerType.spinner: 'spinner',
@@ -70,33 +62,25 @@ const _$KodiSettingDetailsControlSpinnerTypeEnumMap = {
 _$KodiSettingDetailsControlEditImpl
     _$$KodiSettingDetailsControlEditImplFromJson(Map<String, dynamic> json) =>
         _$KodiSettingDetailsControlEditImpl(
-          hidden: json['hidden'] as bool?,
+          hidden: json['hidden'] as bool,
           type: $enumDecode(
               _$KodiSettingDetailsControlEditTypeEnumMap, json['type']),
           verifyNewValue: json['verifynewvalue'] as bool,
-          heading: json['heading'] as String?,
+          heading: json['heading'] as String? ?? '',
           delayed: json['delayed'] as bool,
           format: json['format'] as String,
         );
 
 Map<String, dynamic> _$$KodiSettingDetailsControlEditImplToJson(
-    _$KodiSettingDetailsControlEditImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('hidden', instance.hidden);
-  val['type'] = _$KodiSettingDetailsControlEditTypeEnumMap[instance.type]!;
-  val['verifynewvalue'] = instance.verifyNewValue;
-  writeNotNull('heading', instance.heading);
-  val['delayed'] = instance.delayed;
-  val['format'] = instance.format;
-  return val;
-}
+        _$KodiSettingDetailsControlEditImpl instance) =>
+    <String, dynamic>{
+      'hidden': instance.hidden,
+      'type': _$KodiSettingDetailsControlEditTypeEnumMap[instance.type]!,
+      'verifynewvalue': instance.verifyNewValue,
+      'heading': instance.heading,
+      'delayed': instance.delayed,
+      'format': instance.format,
+    };
 
 const _$KodiSettingDetailsControlEditTypeEnumMap = {
   KodiSettingDetailsControlEditType.edit: 'edit',
@@ -107,28 +91,19 @@ _$KodiSettingDetailsControlButtonImpl
         _$KodiSettingDetailsControlButtonImpl(
           type: $enumDecode(
               _$KodiSettingDetailsControlButtonTypeEnumMap, json['type']),
-          heading: json['heading'] as String?,
+          heading: json['heading'] as String? ?? '',
           delayed: json['delayed'] as bool,
           format: json['format'] as String,
         );
 
 Map<String, dynamic> _$$KodiSettingDetailsControlButtonImplToJson(
-    _$KodiSettingDetailsControlButtonImpl instance) {
-  final val = <String, dynamic>{
-    'type': _$KodiSettingDetailsControlButtonTypeEnumMap[instance.type]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('heading', instance.heading);
-  val['delayed'] = instance.delayed;
-  val['format'] = instance.format;
-  return val;
-}
+        _$KodiSettingDetailsControlButtonImpl instance) =>
+    <String, dynamic>{
+      'type': _$KodiSettingDetailsControlButtonTypeEnumMap[instance.type]!,
+      'heading': instance.heading,
+      'delayed': instance.delayed,
+      'format': instance.format,
+    };
 
 const _$KodiSettingDetailsControlButtonTypeEnumMap = {
   KodiSettingDetailsControlButtonType.button: 'button',
@@ -140,29 +115,20 @@ _$KodiSettingDetailsControlListImpl
           multiSelect: json['multiselect'] as bool,
           type: $enumDecode(
               _$KodiSettingDetailsControlListTypeEnumMap, json['type']),
-          heading: json['heading'] as String?,
+          heading: json['heading'] as String? ?? '',
           delayed: json['delayed'] as bool,
           format: json['format'] as String,
         );
 
 Map<String, dynamic> _$$KodiSettingDetailsControlListImplToJson(
-    _$KodiSettingDetailsControlListImpl instance) {
-  final val = <String, dynamic>{
-    'multiselect': instance.multiSelect,
-    'type': _$KodiSettingDetailsControlListTypeEnumMap[instance.type]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('heading', instance.heading);
-  val['delayed'] = instance.delayed;
-  val['format'] = instance.format;
-  return val;
-}
+        _$KodiSettingDetailsControlListImpl instance) =>
+    <String, dynamic>{
+      'multiselect': instance.multiSelect,
+      'type': _$KodiSettingDetailsControlListTypeEnumMap[instance.type]!,
+      'heading': instance.heading,
+      'delayed': instance.delayed,
+      'format': instance.format,
+    };
 
 const _$KodiSettingDetailsControlListTypeEnumMap = {
   KodiSettingDetailsControlListType.list: 'list',
@@ -175,30 +141,21 @@ _$KodiSettingDetailsControlSliderImpl
           popup: json['popup'] as bool,
           type: $enumDecode(
               _$KodiSettingDetailsControlSliderTypeEnumMap, json['type']),
-          heading: json['heading'] as String?,
+          heading: json['heading'] as String? ?? '',
           delayed: json['delayed'] as bool,
           format: json['format'] as String,
         );
 
 Map<String, dynamic> _$$KodiSettingDetailsControlSliderImplToJson(
-    _$KodiSettingDetailsControlSliderImpl instance) {
-  final val = <String, dynamic>{
-    'formatlabel': instance.formatLabel,
-    'popup': instance.popup,
-    'type': _$KodiSettingDetailsControlSliderTypeEnumMap[instance.type]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('heading', instance.heading);
-  val['delayed'] = instance.delayed;
-  val['format'] = instance.format;
-  return val;
-}
+        _$KodiSettingDetailsControlSliderImpl instance) =>
+    <String, dynamic>{
+      'formatlabel': instance.formatLabel,
+      'popup': instance.popup,
+      'type': _$KodiSettingDetailsControlSliderTypeEnumMap[instance.type]!,
+      'heading': instance.heading,
+      'delayed': instance.delayed,
+      'format': instance.format,
+    };
 
 const _$KodiSettingDetailsControlSliderTypeEnumMap = {
   KodiSettingDetailsControlSliderType.slider: 'slider',

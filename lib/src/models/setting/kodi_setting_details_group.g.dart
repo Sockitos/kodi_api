@@ -13,7 +13,7 @@ _$KodiSettingDetailsGroupImpl _$$KodiSettingDetailsGroupImplFromJson(
       settings: (json['settings'] as List<dynamic>?)
           ?.map((e) =>
               KodiSettingDetailsSetting.fromJson(e as Map<String, dynamic>))
-          .toList(),
+          .toSet(),
     );
 
 Map<String, dynamic> _$$KodiSettingDetailsGroupImplToJson(

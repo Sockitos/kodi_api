@@ -49,9 +49,9 @@ mixin _$KodiSettingDetailsSetting {
   KodiSettingDetailsControl? get control => throw _privateConstructorUsedError;
   bool get enabled => throw _privateConstructorUsedError;
   KodiSettingLevel get level => throw _privateConstructorUsedError;
-  String? get parent => throw _privateConstructorUsedError;
+  String get parent => throw _privateConstructorUsedError;
   KodiSettingType get type => throw _privateConstructorUsedError;
-  String? get help => throw _privateConstructorUsedError;
+  String get help => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,30 +62,30 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -93,23 +93,23 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -118,9 +118,9 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -130,32 +130,32 @@ mixin _$KodiSettingDetailsSetting {
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -163,42 +163,42 @@ mixin _$KodiSettingDetailsSetting {
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -212,30 +212,30 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -243,23 +243,23 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -268,9 +268,9 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -280,32 +280,32 @@ mixin _$KodiSettingDetailsSetting {
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -313,42 +313,42 @@ mixin _$KodiSettingDetailsSetting {
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -362,30 +362,30 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -393,23 +393,23 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -418,9 +418,9 @@ mixin _$KodiSettingDetailsSetting {
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -430,32 +430,32 @@ mixin _$KodiSettingDetailsSetting {
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -463,42 +463,42 @@ mixin _$KodiSettingDetailsSetting {
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -569,9 +569,9 @@ abstract class $KodiSettingDetailsSettingCopyWith<$Res> {
       {KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -597,9 +597,9 @@ class _$KodiSettingDetailsSettingCopyWithImpl<$Res,
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -616,18 +616,18 @@ class _$KodiSettingDetailsSettingCopyWithImpl<$Res,
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -669,9 +669,9 @@ abstract class _$$KodiSettingDetailsSettingBoolImplCopyWith<$Res>
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -699,9 +699,9 @@ class __$$KodiSettingDetailsSettingBoolImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -726,18 +726,18 @@ class __$$KodiSettingDetailsSettingBoolImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -760,9 +760,9 @@ class _$KodiSettingDetailsSettingBoolImpl
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label});
 
@@ -782,11 +782,13 @@ class _$KodiSettingDetailsSettingBoolImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -839,30 +841,30 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -870,23 +872,23 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -895,9 +897,9 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -907,32 +909,32 @@ class _$KodiSettingDetailsSettingBoolImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -940,42 +942,42 @@ class _$KodiSettingDetailsSettingBoolImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -993,30 +995,30 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -1024,23 +1026,23 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -1049,9 +1051,9 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -1061,32 +1063,32 @@ class _$KodiSettingDetailsSettingBoolImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -1094,42 +1096,42 @@ class _$KodiSettingDetailsSettingBoolImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -1147,30 +1149,30 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -1178,23 +1180,23 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -1203,9 +1205,9 @@ class _$KodiSettingDetailsSettingBoolImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -1215,32 +1217,32 @@ class _$KodiSettingDetailsSettingBoolImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -1248,42 +1250,42 @@ class _$KodiSettingDetailsSettingBoolImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -1367,9 +1369,9 @@ abstract class _KodiSettingDetailsSettingBool
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingBoolImpl;
 
@@ -1386,11 +1388,11 @@ abstract class _KodiSettingDetailsSettingBool
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -1416,17 +1418,17 @@ abstract class _$$KodiSettingDetailsSettingIntImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'default') int defaultt,
-      int? maximum,
-      int? minimum,
+      int maximum,
+      int minimum,
       List<KodiSettingDetailsSettingIntOption>? options,
-      int? step,
+      int step,
       int value,
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -1450,17 +1452,17 @@ class __$$KodiSettingDetailsSettingIntImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? defaultt = null,
-    Object? maximum = freezed,
-    Object? minimum = freezed,
+    Object? maximum = null,
+    Object? minimum = null,
     Object? options = freezed,
-    Object? step = freezed,
+    Object? step = null,
     Object? value = null,
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -1469,22 +1471,22 @@ class __$$KodiSettingDetailsSettingIntImplCopyWithImpl<$Res>
           ? _value.defaultt
           : defaultt // ignore: cast_nullable_to_non_nullable
               as int,
-      maximum: freezed == maximum
+      maximum: null == maximum
           ? _value.maximum
           : maximum // ignore: cast_nullable_to_non_nullable
-              as int?,
-      minimum: freezed == minimum
+              as int,
+      minimum: null == minimum
           ? _value.minimum
           : minimum // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
               as List<KodiSettingDetailsSettingIntOption>?,
-      step: freezed == step
+      step: null == step
           ? _value.step
           : step // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -1501,18 +1503,18 @@ class __$$KodiSettingDetailsSettingIntImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1531,17 +1533,17 @@ class _$KodiSettingDetailsSettingIntImpl
     implements _KodiSettingDetailsSettingInt {
   const _$KodiSettingDetailsSettingIntImpl(
       {@JsonKey(name: 'default') required this.defaultt,
-      this.maximum,
-      this.minimum,
+      this.maximum = 0,
+      this.minimum = 0,
       final List<KodiSettingDetailsSettingIntOption>? options,
-      this.step,
+      this.step = 0,
       required this.value,
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label})
       : _options = options;
@@ -1554,9 +1556,11 @@ class _$KodiSettingDetailsSettingIntImpl
   @JsonKey(name: 'default')
   final int defaultt;
   @override
-  final int? maximum;
+  @JsonKey()
+  final int maximum;
   @override
-  final int? minimum;
+  @JsonKey()
+  final int minimum;
   final List<KodiSettingDetailsSettingIntOption>? _options;
   @override
   List<KodiSettingDetailsSettingIntOption>? get options {
@@ -1568,7 +1572,8 @@ class _$KodiSettingDetailsSettingIntImpl
   }
 
   @override
-  final int? step;
+  @JsonKey()
+  final int step;
   @override
   final int value;
   @override
@@ -1578,11 +1583,13 @@ class _$KodiSettingDetailsSettingIntImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -1653,30 +1660,30 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -1684,23 +1691,23 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -1709,9 +1716,9 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -1721,32 +1728,32 @@ class _$KodiSettingDetailsSettingIntImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -1754,42 +1761,42 @@ class _$KodiSettingDetailsSettingIntImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -1807,30 +1814,30 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -1838,23 +1845,23 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -1863,9 +1870,9 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -1875,32 +1882,32 @@ class _$KodiSettingDetailsSettingIntImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -1908,42 +1915,42 @@ class _$KodiSettingDetailsSettingIntImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -1961,30 +1968,30 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -1992,23 +1999,23 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -2017,9 +2024,9 @@ class _$KodiSettingDetailsSettingIntImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -2029,32 +2036,32 @@ class _$KodiSettingDetailsSettingIntImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -2062,42 +2069,42 @@ class _$KodiSettingDetailsSettingIntImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -2177,17 +2184,17 @@ abstract class _KodiSettingDetailsSettingInt
     implements KodiSettingDetailsSetting {
   const factory _KodiSettingDetailsSettingInt(
       {@JsonKey(name: 'default') required final int defaultt,
-      final int? maximum,
-      final int? minimum,
+      final int maximum,
+      final int minimum,
       final List<KodiSettingDetailsSettingIntOption>? options,
-      final int? step,
+      final int step,
       required final int value,
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingIntImpl;
 
@@ -2196,10 +2203,10 @@ abstract class _KodiSettingDetailsSettingInt
 
   @JsonKey(name: 'default')
   int get defaultt;
-  int? get maximum;
-  int? get minimum;
+  int get maximum;
+  int get minimum;
   List<KodiSettingDetailsSettingIntOption>? get options;
-  int? get step;
+  int get step;
   int get value;
   @override
   KodiSettingDetailsControl? get control;
@@ -2208,11 +2215,11 @@ abstract class _KodiSettingDetailsSettingInt
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -2237,7 +2244,7 @@ abstract class _$$KodiSettingDetailsSettingNumberImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'default') String defaultt,
+      {@JsonKey(name: 'default') double defaultt,
       double maximum,
       double minimum,
       double step,
@@ -2245,9 +2252,9 @@ abstract class _$$KodiSettingDetailsSettingNumberImplCopyWith<$Res>
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -2278,9 +2285,9 @@ class __$$KodiSettingDetailsSettingNumberImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -2288,7 +2295,7 @@ class __$$KodiSettingDetailsSettingNumberImplCopyWithImpl<$Res>
       defaultt: null == defaultt
           ? _value.defaultt
           : defaultt // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
       maximum: null == maximum
           ? _value.maximum
           : maximum // ignore: cast_nullable_to_non_nullable
@@ -2317,18 +2324,18 @@ class __$$KodiSettingDetailsSettingNumberImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2354,9 +2361,9 @@ class _$KodiSettingDetailsSettingNumberImpl
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label});
 
@@ -2366,7 +2373,7 @@ class _$KodiSettingDetailsSettingNumberImpl
 
   @override
   @JsonKey(name: 'default')
-  final String defaultt;
+  final double defaultt;
   @override
   final double maximum;
   @override
@@ -2382,11 +2389,13 @@ class _$KodiSettingDetailsSettingNumberImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -2442,30 +2451,30 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -2473,23 +2482,23 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -2498,9 +2507,9 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -2510,32 +2519,32 @@ class _$KodiSettingDetailsSettingNumberImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -2543,42 +2552,42 @@ class _$KodiSettingDetailsSettingNumberImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -2596,30 +2605,30 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -2627,23 +2636,23 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -2652,9 +2661,9 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -2664,32 +2673,32 @@ class _$KodiSettingDetailsSettingNumberImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -2697,42 +2706,42 @@ class _$KodiSettingDetailsSettingNumberImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -2750,30 +2759,30 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -2781,23 +2790,23 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -2806,9 +2815,9 @@ class _$KodiSettingDetailsSettingNumberImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -2818,32 +2827,32 @@ class _$KodiSettingDetailsSettingNumberImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -2851,42 +2860,42 @@ class _$KodiSettingDetailsSettingNumberImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -2965,7 +2974,7 @@ class _$KodiSettingDetailsSettingNumberImpl
 abstract class _KodiSettingDetailsSettingNumber
     implements KodiSettingDetailsSetting {
   const factory _KodiSettingDetailsSettingNumber(
-      {@JsonKey(name: 'default') required final String defaultt,
+      {@JsonKey(name: 'default') required final double defaultt,
       required final double maximum,
       required final double minimum,
       required final double step,
@@ -2973,9 +2982,9 @@ abstract class _KodiSettingDetailsSettingNumber
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingNumberImpl;
 
@@ -2983,7 +2992,7 @@ abstract class _KodiSettingDetailsSettingNumber
       _$KodiSettingDetailsSettingNumberImpl.fromJson;
 
   @JsonKey(name: 'default')
-  String get defaultt;
+  double get defaultt;
   double get maximum;
   double get minimum;
   double get step;
@@ -2995,11 +3004,11 @@ abstract class _KodiSettingDetailsSettingNumber
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -3026,14 +3035,14 @@ abstract class _$$KodiSettingDetailsSettingStringImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'allowempty') bool allowEmpty,
       @JsonKey(name: 'default') String defaultt,
-      List<KodiSettingDetailsSettingIntOption>? options,
+      List<KodiSettingDetailsSettingStringOption>? options,
       String value,
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -3063,9 +3072,9 @@ class __$$KodiSettingDetailsSettingStringImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -3081,7 +3090,7 @@ class __$$KodiSettingDetailsSettingStringImplCopyWithImpl<$Res>
       options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSettingIntOption>?,
+              as List<KodiSettingDetailsSettingStringOption>?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -3098,18 +3107,18 @@ class __$$KodiSettingDetailsSettingStringImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3129,14 +3138,14 @@ class _$KodiSettingDetailsSettingStringImpl
   const _$KodiSettingDetailsSettingStringImpl(
       {@JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingStringOption>? options,
       required this.value,
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label})
       : _options = options;
@@ -3151,9 +3160,9 @@ class _$KodiSettingDetailsSettingStringImpl
   @override
   @JsonKey(name: 'default')
   final String defaultt;
-  final List<KodiSettingDetailsSettingIntOption>? _options;
+  final List<KodiSettingDetailsSettingStringOption>? _options;
   @override
-  List<KodiSettingDetailsSettingIntOption>? get options {
+  List<KodiSettingDetailsSettingStringOption>? get options {
     final value = _options;
     if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
@@ -3170,11 +3179,13 @@ class _$KodiSettingDetailsSettingStringImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -3242,30 +3253,30 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -3273,23 +3284,23 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -3298,9 +3309,9 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -3310,32 +3321,32 @@ class _$KodiSettingDetailsSettingStringImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -3343,42 +3354,42 @@ class _$KodiSettingDetailsSettingStringImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -3396,30 +3407,30 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -3427,23 +3438,23 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -3452,9 +3463,9 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -3464,32 +3475,32 @@ class _$KodiSettingDetailsSettingStringImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -3497,42 +3508,42 @@ class _$KodiSettingDetailsSettingStringImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -3550,30 +3561,30 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -3581,23 +3592,23 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -3606,9 +3617,9 @@ class _$KodiSettingDetailsSettingStringImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -3618,32 +3629,32 @@ class _$KodiSettingDetailsSettingStringImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -3651,42 +3662,42 @@ class _$KodiSettingDetailsSettingStringImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -3767,14 +3778,14 @@ abstract class _KodiSettingDetailsSettingString
   const factory _KodiSettingDetailsSettingString(
       {@JsonKey(name: 'allowempty') required final bool allowEmpty,
       @JsonKey(name: 'default') required final String defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingStringOption>? options,
       required final String value,
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingStringImpl;
 
@@ -3785,7 +3796,7 @@ abstract class _KodiSettingDetailsSettingString
   bool get allowEmpty;
   @JsonKey(name: 'default')
   String get defaultt;
-  List<KodiSettingDetailsSettingIntOption>? get options;
+  List<KodiSettingDetailsSettingStringOption>? get options;
   String get value;
   @override
   KodiSettingDetailsControl? get control;
@@ -3794,11 +3805,11 @@ abstract class _KodiSettingDetailsSettingString
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -3827,9 +3838,9 @@ abstract class _$$KodiSettingDetailsSettingActionImplCopyWith<$Res>
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -3856,9 +3867,9 @@ class __$$KodiSettingDetailsSettingActionImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -3879,18 +3890,18 @@ class __$$KodiSettingDetailsSettingActionImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3912,9 +3923,9 @@ class _$KodiSettingDetailsSettingActionImpl
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label});
 
@@ -3931,11 +3942,13 @@ class _$KodiSettingDetailsSettingActionImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -3986,30 +3999,30 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -4017,23 +4030,23 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -4042,9 +4055,9 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -4054,32 +4067,32 @@ class _$KodiSettingDetailsSettingActionImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -4087,42 +4100,42 @@ class _$KodiSettingDetailsSettingActionImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -4139,30 +4152,30 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -4170,23 +4183,23 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -4195,9 +4208,9 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -4207,32 +4220,32 @@ class _$KodiSettingDetailsSettingActionImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -4240,42 +4253,42 @@ class _$KodiSettingDetailsSettingActionImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -4293,30 +4306,30 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -4324,23 +4337,23 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -4349,9 +4362,9 @@ class _$KodiSettingDetailsSettingActionImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -4361,32 +4374,32 @@ class _$KodiSettingDetailsSettingActionImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -4394,42 +4407,42 @@ class _$KodiSettingDetailsSettingActionImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -4512,9 +4525,9 @@ abstract class _KodiSettingDetailsSettingAction
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingActionImpl;
 
@@ -4529,11 +4542,11 @@ abstract class _KodiSettingDetailsSettingAction
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -4563,16 +4576,16 @@ abstract class _$$KodiSettingDetailsSettingListImplCopyWith<$Res>
       List<KodiSettingValue> defaultt,
       KodiSettingDetailsSetting definition,
       String delimiter,
-      @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-      @JsonKey(name: 'maximumitems') int? maximumItems,
-      @JsonKey(name: 'minimumitems') int? minimumItems,
+      @JsonKey(name: 'elementtype') KodiSettingType elementType,
+      @JsonKey(name: 'maximumitems') int maximumItems,
+      @JsonKey(name: 'minimumitems') int minimumItems,
       @KodiSettingValueConverter() List<KodiSettingValue> value,
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -4599,16 +4612,16 @@ class __$$KodiSettingDetailsSettingListImplCopyWithImpl<$Res>
     Object? defaultt = null,
     Object? definition = null,
     Object? delimiter = null,
-    Object? elementType = freezed,
-    Object? maximumItems = freezed,
-    Object? minimumItems = freezed,
+    Object? elementType = null,
+    Object? maximumItems = null,
+    Object? minimumItems = null,
     Object? value = null,
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -4625,18 +4638,18 @@ class __$$KodiSettingDetailsSettingListImplCopyWithImpl<$Res>
           ? _value.delimiter
           : delimiter // ignore: cast_nullable_to_non_nullable
               as String,
-      elementType: freezed == elementType
+      elementType: null == elementType
           ? _value.elementType
           : elementType // ignore: cast_nullable_to_non_nullable
-              as KodiSettingType?,
-      maximumItems: freezed == maximumItems
+              as KodiSettingType,
+      maximumItems: null == maximumItems
           ? _value.maximumItems
           : maximumItems // ignore: cast_nullable_to_non_nullable
-              as int?,
-      minimumItems: freezed == minimumItems
+              as int,
+      minimumItems: null == minimumItems
           ? _value.minimumItems
           : minimumItems // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       value: null == value
           ? _value._value
           : value // ignore: cast_nullable_to_non_nullable
@@ -4653,18 +4666,18 @@ class __$$KodiSettingDetailsSettingListImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4697,16 +4710,16 @@ class _$KodiSettingDetailsSettingListImpl
       required final List<KodiSettingValue> defaultt,
       required this.definition,
       required this.delimiter,
-      @JsonKey(name: 'elementtype') this.elementType,
-      @JsonKey(name: 'maximumitems') this.maximumItems,
-      @JsonKey(name: 'minimumitems') this.minimumItems,
+      @JsonKey(name: 'elementtype') required this.elementType,
+      @JsonKey(name: 'maximumitems') this.maximumItems = 0,
+      @JsonKey(name: 'minimumitems') this.minimumItems = 0,
       @KodiSettingValueConverter() required final List<KodiSettingValue> value,
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label})
       : _defaultt = defaultt,
@@ -4732,13 +4745,13 @@ class _$KodiSettingDetailsSettingListImpl
   final String delimiter;
   @override
   @JsonKey(name: 'elementtype')
-  final KodiSettingType? elementType;
+  final KodiSettingType elementType;
   @override
   @JsonKey(name: 'maximumitems')
-  final int? maximumItems;
+  final int maximumItems;
   @override
   @JsonKey(name: 'minimumitems')
-  final int? minimumItems;
+  final int minimumItems;
   final List<KodiSettingValue> _value;
   @override
   @KodiSettingValueConverter()
@@ -4755,11 +4768,13 @@ class _$KodiSettingDetailsSettingListImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -4836,30 +4851,30 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -4867,23 +4882,23 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -4892,9 +4907,9 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -4904,32 +4919,32 @@ class _$KodiSettingDetailsSettingListImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -4937,42 +4952,42 @@ class _$KodiSettingDetailsSettingListImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -5004,30 +5019,30 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -5035,23 +5050,23 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -5060,9 +5075,9 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -5072,32 +5087,32 @@ class _$KodiSettingDetailsSettingListImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -5105,42 +5120,42 @@ class _$KodiSettingDetailsSettingListImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -5172,30 +5187,30 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -5203,23 +5218,23 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -5228,9 +5243,9 @@ class _$KodiSettingDetailsSettingListImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -5240,32 +5255,32 @@ class _$KodiSettingDetailsSettingListImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -5273,42 +5288,42 @@ class _$KodiSettingDetailsSettingListImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -5406,16 +5421,16 @@ abstract class _KodiSettingDetailsSettingList
       required final List<KodiSettingValue> defaultt,
       required final KodiSettingDetailsSetting definition,
       required final String delimiter,
-      @JsonKey(name: 'elementtype') final KodiSettingType? elementType,
-      @JsonKey(name: 'maximumitems') final int? maximumItems,
-      @JsonKey(name: 'minimumitems') final int? minimumItems,
+      @JsonKey(name: 'elementtype') required final KodiSettingType elementType,
+      @JsonKey(name: 'maximumitems') final int maximumItems,
+      @JsonKey(name: 'minimumitems') final int minimumItems,
       @KodiSettingValueConverter() required final List<KodiSettingValue> value,
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingListImpl;
 
@@ -5428,11 +5443,11 @@ abstract class _KodiSettingDetailsSettingList
   KodiSettingDetailsSetting get definition;
   String get delimiter;
   @JsonKey(name: 'elementtype')
-  KodiSettingType? get elementType;
+  KodiSettingType get elementType;
   @JsonKey(name: 'maximumitems')
-  int? get maximumItems;
+  int get maximumItems;
   @JsonKey(name: 'minimumitems')
-  int? get minimumItems;
+  int get minimumItems;
   @KodiSettingValueConverter()
   List<KodiSettingValue> get value;
   @override
@@ -5442,11 +5457,11 @@ abstract class _KodiSettingDetailsSettingList
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -5472,17 +5487,17 @@ abstract class _$$KodiSettingDetailsSettingPathImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<String>? sources,
-      bool? writeable,
+      bool writable,
       @JsonKey(name: 'allowempty') bool allowEmpty,
       @JsonKey(name: 'default') String defaultt,
-      List<KodiSettingDetailsSettingIntOption>? options,
+      List<KodiSettingDetailsSettingPathOption>? options,
       String value,
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -5506,7 +5521,7 @@ class __$$KodiSettingDetailsSettingPathImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? sources = freezed,
-    Object? writeable = freezed,
+    Object? writable = null,
     Object? allowEmpty = null,
     Object? defaultt = null,
     Object? options = freezed,
@@ -5514,9 +5529,9 @@ class __$$KodiSettingDetailsSettingPathImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -5525,10 +5540,10 @@ class __$$KodiSettingDetailsSettingPathImplCopyWithImpl<$Res>
           ? _value._sources
           : sources // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      writeable: freezed == writeable
-          ? _value.writeable
-          : writeable // ignore: cast_nullable_to_non_nullable
-              as bool?,
+      writable: null == writable
+          ? _value.writable
+          : writable // ignore: cast_nullable_to_non_nullable
+              as bool,
       allowEmpty: null == allowEmpty
           ? _value.allowEmpty
           : allowEmpty // ignore: cast_nullable_to_non_nullable
@@ -5540,7 +5555,7 @@ class __$$KodiSettingDetailsSettingPathImplCopyWithImpl<$Res>
       options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSettingIntOption>?,
+              as List<KodiSettingDetailsSettingPathOption>?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -5557,18 +5572,18 @@ class __$$KodiSettingDetailsSettingPathImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5587,17 +5602,17 @@ class _$KodiSettingDetailsSettingPathImpl
     implements _KodiSettingDetailsSettingPath {
   const _$KodiSettingDetailsSettingPathImpl(
       {final List<String>? sources,
-      this.writeable,
+      required this.writable,
       @JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingPathOption>? options,
       required this.value,
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label})
       : _sources = sources,
@@ -5618,16 +5633,16 @@ class _$KodiSettingDetailsSettingPathImpl
   }
 
   @override
-  final bool? writeable;
+  final bool writable;
   @override
   @JsonKey(name: 'allowempty')
   final bool allowEmpty;
   @override
   @JsonKey(name: 'default')
   final String defaultt;
-  final List<KodiSettingDetailsSettingIntOption>? _options;
+  final List<KodiSettingDetailsSettingPathOption>? _options;
   @override
-  List<KodiSettingDetailsSettingIntOption>? get options {
+  List<KodiSettingDetailsSettingPathOption>? get options {
     final value = _options;
     if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
@@ -5644,11 +5659,13 @@ class _$KodiSettingDetailsSettingPathImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -5656,7 +5673,7 @@ class _$KodiSettingDetailsSettingPathImpl
 
   @override
   String toString() {
-    return 'KodiSettingDetailsSetting.path(sources: $sources, writeable: $writeable, allowEmpty: $allowEmpty, defaultt: $defaultt, options: $options, value: $value, control: $control, enabled: $enabled, level: $level, parent: $parent, type: $type, help: $help, id: $id, label: $label)';
+    return 'KodiSettingDetailsSetting.path(sources: $sources, writable: $writable, allowEmpty: $allowEmpty, defaultt: $defaultt, options: $options, value: $value, control: $control, enabled: $enabled, level: $level, parent: $parent, type: $type, help: $help, id: $id, label: $label)';
   }
 
   @override
@@ -5665,8 +5682,8 @@ class _$KodiSettingDetailsSettingPathImpl
         (other.runtimeType == runtimeType &&
             other is _$KodiSettingDetailsSettingPathImpl &&
             const DeepCollectionEquality().equals(other._sources, _sources) &&
-            (identical(other.writeable, writeable) ||
-                other.writeable == writeable) &&
+            (identical(other.writable, writable) ||
+                other.writable == writable) &&
             (identical(other.allowEmpty, allowEmpty) ||
                 other.allowEmpty == allowEmpty) &&
             (identical(other.defaultt, defaultt) ||
@@ -5688,7 +5705,7 @@ class _$KodiSettingDetailsSettingPathImpl
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_sources),
-      writeable,
+      writable,
       allowEmpty,
       defaultt,
       const DeepCollectionEquality().hash(_options),
@@ -5721,30 +5738,30 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -5752,23 +5769,23 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -5777,9 +5794,9 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -5789,32 +5806,32 @@ class _$KodiSettingDetailsSettingPathImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -5822,47 +5839,47 @@ class _$KodiSettingDetailsSettingPathImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
   }) {
-    return path(sources, writeable, allowEmpty, defaultt, options, value,
+    return path(sources, writable, allowEmpty, defaultt, options, value,
         control, enabled, level, parent, type, help, id, label);
   }
 
@@ -5875,30 +5892,30 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -5906,23 +5923,23 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -5931,9 +5948,9 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -5943,32 +5960,32 @@ class _$KodiSettingDetailsSettingPathImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -5976,47 +5993,47 @@ class _$KodiSettingDetailsSettingPathImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
   }) {
-    return path?.call(sources, writeable, allowEmpty, defaultt, options, value,
+    return path?.call(sources, writable, allowEmpty, defaultt, options, value,
         control, enabled, level, parent, type, help, id, label);
   }
 
@@ -6029,30 +6046,30 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -6060,23 +6077,23 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -6085,9 +6102,9 @@ class _$KodiSettingDetailsSettingPathImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -6097,32 +6114,32 @@ class _$KodiSettingDetailsSettingPathImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -6130,49 +6147,49 @@ class _$KodiSettingDetailsSettingPathImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
     required TResult orElse(),
   }) {
     if (path != null) {
-      return path(sources, writeable, allowEmpty, defaultt, options, value,
+      return path(sources, writable, allowEmpty, defaultt, options, value,
           control, enabled, level, parent, type, help, id, label);
     }
     return orElse();
@@ -6245,17 +6262,17 @@ abstract class _KodiSettingDetailsSettingPath
     implements KodiSettingDetailsSetting {
   const factory _KodiSettingDetailsSettingPath(
       {final List<String>? sources,
-      final bool? writeable,
+      required final bool writable,
       @JsonKey(name: 'allowempty') required final bool allowEmpty,
       @JsonKey(name: 'default') required final String defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingPathOption>? options,
       required final String value,
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingPathImpl;
 
@@ -6263,12 +6280,12 @@ abstract class _KodiSettingDetailsSettingPath
       _$KodiSettingDetailsSettingPathImpl.fromJson;
 
   List<String>? get sources;
-  bool? get writeable;
+  bool get writable;
   @JsonKey(name: 'allowempty')
   bool get allowEmpty;
   @JsonKey(name: 'default')
   String get defaultt;
-  List<KodiSettingDetailsSettingIntOption>? get options;
+  List<KodiSettingDetailsSettingPathOption>? get options;
   String get value;
   @override
   KodiSettingDetailsControl? get control;
@@ -6277,11 +6294,11 @@ abstract class _KodiSettingDetailsSettingPath
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -6309,14 +6326,14 @@ abstract class _$$KodiSettingDetailsSettingAddonImplCopyWith<$Res>
       {@JsonKey(name: 'addontype') KodiAddonType addonType,
       @JsonKey(name: 'allowempty') bool allowEmpty,
       @JsonKey(name: 'default') String defaultt,
-      List<KodiSettingDetailsSettingIntOption>? options,
+      List<KodiSettingDetailsSettingAddonOption>? options,
       String value,
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -6347,9 +6364,9 @@ class __$$KodiSettingDetailsSettingAddonImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -6369,7 +6386,7 @@ class __$$KodiSettingDetailsSettingAddonImplCopyWithImpl<$Res>
       options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSettingIntOption>?,
+              as List<KodiSettingDetailsSettingAddonOption>?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -6386,18 +6403,18 @@ class __$$KodiSettingDetailsSettingAddonImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6418,14 +6435,14 @@ class _$KodiSettingDetailsSettingAddonImpl
       {@JsonKey(name: 'addontype') required this.addonType,
       @JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingAddonOption>? options,
       required this.value,
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label})
       : _options = options;
@@ -6443,9 +6460,9 @@ class _$KodiSettingDetailsSettingAddonImpl
   @override
   @JsonKey(name: 'default')
   final String defaultt;
-  final List<KodiSettingDetailsSettingIntOption>? _options;
+  final List<KodiSettingDetailsSettingAddonOption>? _options;
   @override
-  List<KodiSettingDetailsSettingIntOption>? get options {
+  List<KodiSettingDetailsSettingAddonOption>? get options {
     final value = _options;
     if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
@@ -6462,11 +6479,13 @@ class _$KodiSettingDetailsSettingAddonImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -6537,30 +6556,30 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -6568,23 +6587,23 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -6593,9 +6612,9 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -6605,32 +6624,32 @@ class _$KodiSettingDetailsSettingAddonImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -6638,42 +6657,42 @@ class _$KodiSettingDetailsSettingAddonImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -6691,30 +6710,30 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -6722,23 +6741,23 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -6747,9 +6766,9 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -6759,32 +6778,32 @@ class _$KodiSettingDetailsSettingAddonImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -6792,42 +6811,42 @@ class _$KodiSettingDetailsSettingAddonImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -6845,30 +6864,30 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -6876,23 +6895,23 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -6901,9 +6920,9 @@ class _$KodiSettingDetailsSettingAddonImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -6913,32 +6932,32 @@ class _$KodiSettingDetailsSettingAddonImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -6946,42 +6965,42 @@ class _$KodiSettingDetailsSettingAddonImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -7063,14 +7082,14 @@ abstract class _KodiSettingDetailsSettingAddon
       {@JsonKey(name: 'addontype') required final KodiAddonType addonType,
       @JsonKey(name: 'allowempty') required final bool allowEmpty,
       @JsonKey(name: 'default') required final String defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingAddonOption>? options,
       required final String value,
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingAddonImpl;
 
@@ -7083,7 +7102,7 @@ abstract class _KodiSettingDetailsSettingAddon
   bool get allowEmpty;
   @JsonKey(name: 'default')
   String get defaultt;
-  List<KodiSettingDetailsSettingIntOption>? get options;
+  List<KodiSettingDetailsSettingAddonOption>? get options;
   String get value;
   @override
   KodiSettingDetailsControl? get control;
@@ -7092,11 +7111,11 @@ abstract class _KodiSettingDetailsSettingAddon
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -7123,14 +7142,14 @@ abstract class _$$KodiSettingDetailsSettingDateImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'allowempty') bool allowEmpty,
       @JsonKey(name: 'default') String defaultt,
-      List<KodiSettingDetailsSettingIntOption>? options,
+      List<KodiSettingDetailsSettingDateOption>? options,
       String value,
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -7160,9 +7179,9 @@ class __$$KodiSettingDetailsSettingDateImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -7178,7 +7197,7 @@ class __$$KodiSettingDetailsSettingDateImplCopyWithImpl<$Res>
       options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSettingIntOption>?,
+              as List<KodiSettingDetailsSettingDateOption>?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -7195,18 +7214,18 @@ class __$$KodiSettingDetailsSettingDateImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7226,14 +7245,14 @@ class _$KodiSettingDetailsSettingDateImpl
   const _$KodiSettingDetailsSettingDateImpl(
       {@JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingDateOption>? options,
       required this.value,
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label})
       : _options = options;
@@ -7248,9 +7267,9 @@ class _$KodiSettingDetailsSettingDateImpl
   @override
   @JsonKey(name: 'default')
   final String defaultt;
-  final List<KodiSettingDetailsSettingIntOption>? _options;
+  final List<KodiSettingDetailsSettingDateOption>? _options;
   @override
-  List<KodiSettingDetailsSettingIntOption>? get options {
+  List<KodiSettingDetailsSettingDateOption>? get options {
     final value = _options;
     if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
@@ -7267,11 +7286,13 @@ class _$KodiSettingDetailsSettingDateImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -7339,30 +7360,30 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -7370,23 +7391,23 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -7395,9 +7416,9 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -7407,32 +7428,32 @@ class _$KodiSettingDetailsSettingDateImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -7440,42 +7461,42 @@ class _$KodiSettingDetailsSettingDateImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -7493,30 +7514,30 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -7524,23 +7545,23 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -7549,9 +7570,9 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -7561,32 +7582,32 @@ class _$KodiSettingDetailsSettingDateImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -7594,42 +7615,42 @@ class _$KodiSettingDetailsSettingDateImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -7647,30 +7668,30 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -7678,23 +7699,23 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -7703,9 +7724,9 @@ class _$KodiSettingDetailsSettingDateImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -7715,32 +7736,32 @@ class _$KodiSettingDetailsSettingDateImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -7748,42 +7769,42 @@ class _$KodiSettingDetailsSettingDateImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -7864,14 +7885,14 @@ abstract class _KodiSettingDetailsSettingDate
   const factory _KodiSettingDetailsSettingDate(
       {@JsonKey(name: 'allowempty') required final bool allowEmpty,
       @JsonKey(name: 'default') required final String defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingDateOption>? options,
       required final String value,
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingDateImpl;
 
@@ -7882,7 +7903,7 @@ abstract class _KodiSettingDetailsSettingDate
   bool get allowEmpty;
   @JsonKey(name: 'default')
   String get defaultt;
-  List<KodiSettingDetailsSettingIntOption>? get options;
+  List<KodiSettingDetailsSettingDateOption>? get options;
   String get value;
   @override
   KodiSettingDetailsControl? get control;
@@ -7891,11 +7912,11 @@ abstract class _KodiSettingDetailsSettingDate
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -7922,14 +7943,14 @@ abstract class _$$KodiSettingDetailsSettingTimeImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'allowempty') bool allowEmpty,
       @JsonKey(name: 'default') String defaultt,
-      List<KodiSettingDetailsSettingIntOption>? options,
+      List<KodiSettingDetailsSettingTimeOption>? options,
       String value,
       KodiSettingDetailsControl? control,
       bool enabled,
       KodiSettingLevel level,
-      String? parent,
+      String parent,
       KodiSettingType type,
-      String? help,
+      String help,
       String id,
       String label});
 
@@ -7959,9 +7980,9 @@ class __$$KodiSettingDetailsSettingTimeImplCopyWithImpl<$Res>
     Object? control = freezed,
     Object? enabled = null,
     Object? level = null,
-    Object? parent = freezed,
+    Object? parent = null,
     Object? type = null,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -7977,7 +7998,7 @@ class __$$KodiSettingDetailsSettingTimeImplCopyWithImpl<$Res>
       options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSettingIntOption>?,
+              as List<KodiSettingDetailsSettingTimeOption>?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -7994,18 +8015,18 @@ class __$$KodiSettingDetailsSettingTimeImplCopyWithImpl<$Res>
           ? _value.level
           : level // ignore: cast_nullable_to_non_nullable
               as KodiSettingLevel,
-      parent: freezed == parent
+      parent: null == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingType,
-      help: freezed == help
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -8025,14 +8046,14 @@ class _$KodiSettingDetailsSettingTimeImpl
   const _$KodiSettingDetailsSettingTimeImpl(
       {@JsonKey(name: 'allowempty') required this.allowEmpty,
       @JsonKey(name: 'default') required this.defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingTimeOption>? options,
       required this.value,
       this.control,
       required this.enabled,
       required this.level,
-      this.parent,
+      this.parent = '',
       required this.type,
-      this.help,
+      this.help = '',
       required this.id,
       required this.label})
       : _options = options;
@@ -8047,9 +8068,9 @@ class _$KodiSettingDetailsSettingTimeImpl
   @override
   @JsonKey(name: 'default')
   final String defaultt;
-  final List<KodiSettingDetailsSettingIntOption>? _options;
+  final List<KodiSettingDetailsSettingTimeOption>? _options;
   @override
-  List<KodiSettingDetailsSettingIntOption>? get options {
+  List<KodiSettingDetailsSettingTimeOption>? get options {
     final value = _options;
     if (value == null) return null;
     if (_options is EqualUnmodifiableListView) return _options;
@@ -8066,11 +8087,13 @@ class _$KodiSettingDetailsSettingTimeImpl
   @override
   final KodiSettingLevel level;
   @override
-  final String? parent;
+  @JsonKey()
+  final String parent;
   @override
   final KodiSettingType type;
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -8138,30 +8161,30 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         boolean,
     required TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         integer,
     required TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -8169,23 +8192,23 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         number,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         string,
@@ -8194,9 +8217,9 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         action,
@@ -8206,32 +8229,32 @@ class _$KodiSettingDetailsSettingTimeImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         list,
     required TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         path,
@@ -8239,42 +8262,42 @@ class _$KodiSettingDetailsSettingTimeImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         addon,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         date,
     required TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)
         time,
@@ -8292,30 +8315,30 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult? Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult? Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -8323,23 +8346,23 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -8348,9 +8371,9 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -8360,32 +8383,32 @@ class _$KodiSettingDetailsSettingTimeImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult? Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -8393,42 +8416,42 @@ class _$KodiSettingDetailsSettingTimeImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult? Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -8446,30 +8469,30 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         boolean,
     TResult Function(
             @JsonKey(name: 'default') int defaultt,
-            int? maximum,
-            int? minimum,
+            int maximum,
+            int minimum,
             List<KodiSettingDetailsSettingIntOption>? options,
-            int? step,
+            int step,
             int value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         integer,
     TResult Function(
-            @JsonKey(name: 'default') String defaultt,
+            @JsonKey(name: 'default') double defaultt,
             double maximum,
             double minimum,
             double step,
@@ -8477,23 +8500,23 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         number,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingStringOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         string,
@@ -8502,9 +8525,9 @@ class _$KodiSettingDetailsSettingTimeImpl
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         action,
@@ -8514,32 +8537,32 @@ class _$KodiSettingDetailsSettingTimeImpl
             List<KodiSettingValue> defaultt,
             KodiSettingDetailsSetting definition,
             String delimiter,
-            @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-            @JsonKey(name: 'maximumitems') int? maximumItems,
-            @JsonKey(name: 'minimumitems') int? minimumItems,
+            @JsonKey(name: 'elementtype') KodiSettingType elementType,
+            @JsonKey(name: 'maximumitems') int maximumItems,
+            @JsonKey(name: 'minimumitems') int minimumItems,
             @KodiSettingValueConverter() List<KodiSettingValue> value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         list,
     TResult Function(
             List<String>? sources,
-            bool? writeable,
+            bool writable,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingPathOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         path,
@@ -8547,42 +8570,42 @@ class _$KodiSettingDetailsSettingTimeImpl
             @JsonKey(name: 'addontype') KodiAddonType addonType,
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingAddonOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         addon,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingDateOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         date,
     TResult Function(
             @JsonKey(name: 'allowempty') bool allowEmpty,
             @JsonKey(name: 'default') String defaultt,
-            List<KodiSettingDetailsSettingIntOption>? options,
+            List<KodiSettingDetailsSettingTimeOption>? options,
             String value,
             KodiSettingDetailsControl? control,
             bool enabled,
             KodiSettingLevel level,
-            String? parent,
+            String parent,
             KodiSettingType type,
-            String? help,
+            String help,
             String id,
             String label)?
         time,
@@ -8663,14 +8686,14 @@ abstract class _KodiSettingDetailsSettingTime
   const factory _KodiSettingDetailsSettingTime(
       {@JsonKey(name: 'allowempty') required final bool allowEmpty,
       @JsonKey(name: 'default') required final String defaultt,
-      final List<KodiSettingDetailsSettingIntOption>? options,
+      final List<KodiSettingDetailsSettingTimeOption>? options,
       required final String value,
       final KodiSettingDetailsControl? control,
       required final bool enabled,
       required final KodiSettingLevel level,
-      final String? parent,
+      final String parent,
       required final KodiSettingType type,
-      final String? help,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSettingTimeImpl;
 
@@ -8681,7 +8704,7 @@ abstract class _KodiSettingDetailsSettingTime
   bool get allowEmpty;
   @JsonKey(name: 'default')
   String get defaultt;
-  List<KodiSettingDetailsSettingIntOption>? get options;
+  List<KodiSettingDetailsSettingTimeOption>? get options;
   String get value;
   @override
   KodiSettingDetailsControl? get control;
@@ -8690,11 +8713,11 @@ abstract class _KodiSettingDetailsSettingTime
   @override
   KodiSettingLevel get level;
   @override
-  String? get parent;
+  String get parent;
   @override
   KodiSettingType get type;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override
@@ -8717,8 +8740,7 @@ KodiSettingDetailsSettingIntOption _$KodiSettingDetailsSettingIntOptionFromJson(
 /// @nodoc
 mixin _$KodiSettingDetailsSettingIntOption {
   String get label => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: parseValue)
-  String get value => throw _privateConstructorUsedError;
+  int get value => throw _privateConstructorUsedError;
 
   /// Serializes this KodiSettingDetailsSettingIntOption to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8739,7 +8761,7 @@ abstract class $KodiSettingDetailsSettingIntOptionCopyWith<$Res> {
       _$KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res,
           KodiSettingDetailsSettingIntOption>;
   @useResult
-  $Res call({String label, @JsonKey(fromJson: parseValue) String value});
+  $Res call({String label, int value});
 }
 
 /// @nodoc
@@ -8769,7 +8791,7 @@ class _$KodiSettingDetailsSettingIntOptionCopyWithImpl<$Res,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ) as $Val);
   }
 }
@@ -8783,7 +8805,7 @@ abstract class _$$KodiSettingDetailsSettingIntOptionImplCopyWith<$Res>
       __$$KodiSettingDetailsSettingIntOptionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String label, @JsonKey(fromJson: parseValue) String value});
+  $Res call({String label, int value});
 }
 
 /// @nodoc
@@ -8812,7 +8834,7 @@ class __$$KodiSettingDetailsSettingIntOptionImplCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
     ));
   }
 }
@@ -8822,8 +8844,7 @@ class __$$KodiSettingDetailsSettingIntOptionImplCopyWithImpl<$Res>
 class _$KodiSettingDetailsSettingIntOptionImpl
     implements _KodiSettingDetailsSettingIntOption {
   const _$KodiSettingDetailsSettingIntOptionImpl(
-      {required this.label,
-      @JsonKey(fromJson: parseValue) required this.value});
+      {required this.label, required this.value});
 
   factory _$KodiSettingDetailsSettingIntOptionImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -8832,8 +8853,7 @@ class _$KodiSettingDetailsSettingIntOptionImpl
   @override
   final String label;
   @override
-  @JsonKey(fromJson: parseValue)
-  final String value;
+  final int value;
 
   @override
   String toString() {
@@ -8874,9 +8894,8 @@ class _$KodiSettingDetailsSettingIntOptionImpl
 abstract class _KodiSettingDetailsSettingIntOption
     implements KodiSettingDetailsSettingIntOption {
   const factory _KodiSettingDetailsSettingIntOption(
-          {required final String label,
-          @JsonKey(fromJson: parseValue) required final String value}) =
-      _$KodiSettingDetailsSettingIntOptionImpl;
+      {required final String label,
+      required final int value}) = _$KodiSettingDetailsSettingIntOptionImpl;
 
   factory _KodiSettingDetailsSettingIntOption.fromJson(
           Map<String, dynamic> json) =
@@ -8885,8 +8904,7 @@ abstract class _KodiSettingDetailsSettingIntOption
   @override
   String get label;
   @override
-  @JsonKey(fromJson: parseValue)
-  String get value;
+  int get value;
 
   /// Create a copy of KodiSettingDetailsSettingIntOption
   /// with the given fields replaced by the non-null parameter values.
@@ -8894,5 +8912,920 @@ abstract class _KodiSettingDetailsSettingIntOption
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$KodiSettingDetailsSettingIntOptionImplCopyWith<
           _$KodiSettingDetailsSettingIntOptionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+KodiSettingDetailsSettingStringOption
+    _$KodiSettingDetailsSettingStringOptionFromJson(Map<String, dynamic> json) {
+  return _KodiSettingDetailsSettingStringOption.fromJson(json);
+}
+
+/// @nodoc
+mixin _$KodiSettingDetailsSettingStringOption {
+  String get label => throw _privateConstructorUsedError;
+  String get value => throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingDetailsSettingStringOption to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiSettingDetailsSettingStringOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $KodiSettingDetailsSettingStringOptionCopyWith<
+          KodiSettingDetailsSettingStringOption>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $KodiSettingDetailsSettingStringOptionCopyWith<$Res> {
+  factory $KodiSettingDetailsSettingStringOptionCopyWith(
+          KodiSettingDetailsSettingStringOption value,
+          $Res Function(KodiSettingDetailsSettingStringOption) then) =
+      _$KodiSettingDetailsSettingStringOptionCopyWithImpl<$Res,
+          KodiSettingDetailsSettingStringOption>;
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class _$KodiSettingDetailsSettingStringOptionCopyWithImpl<$Res,
+        $Val extends KodiSettingDetailsSettingStringOption>
+    implements $KodiSettingDetailsSettingStringOptionCopyWith<$Res> {
+  _$KodiSettingDetailsSettingStringOptionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of KodiSettingDetailsSettingStringOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$KodiSettingDetailsSettingStringOptionImplCopyWith<$Res>
+    implements $KodiSettingDetailsSettingStringOptionCopyWith<$Res> {
+  factory _$$KodiSettingDetailsSettingStringOptionImplCopyWith(
+          _$KodiSettingDetailsSettingStringOptionImpl value,
+          $Res Function(_$KodiSettingDetailsSettingStringOptionImpl) then) =
+      __$$KodiSettingDetailsSettingStringOptionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class __$$KodiSettingDetailsSettingStringOptionImplCopyWithImpl<$Res>
+    extends _$KodiSettingDetailsSettingStringOptionCopyWithImpl<$Res,
+        _$KodiSettingDetailsSettingStringOptionImpl>
+    implements _$$KodiSettingDetailsSettingStringOptionImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingStringOptionImplCopyWithImpl(
+      _$KodiSettingDetailsSettingStringOptionImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingStringOptionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of KodiSettingDetailsSettingStringOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_$KodiSettingDetailsSettingStringOptionImpl(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$KodiSettingDetailsSettingStringOptionImpl
+    implements _KodiSettingDetailsSettingStringOption {
+  const _$KodiSettingDetailsSettingStringOptionImpl(
+      {required this.label, required this.value});
+
+  factory _$KodiSettingDetailsSettingStringOptionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsSettingStringOptionImplFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final String value;
+
+  @override
+  String toString() {
+    return 'KodiSettingDetailsSettingStringOption(label: $label, value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$KodiSettingDetailsSettingStringOptionImpl &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, label, value);
+
+  /// Create a copy of KodiSettingDetailsSettingStringOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$KodiSettingDetailsSettingStringOptionImplCopyWith<
+          _$KodiSettingDetailsSettingStringOptionImpl>
+      get copyWith => __$$KodiSettingDetailsSettingStringOptionImplCopyWithImpl<
+          _$KodiSettingDetailsSettingStringOptionImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$KodiSettingDetailsSettingStringOptionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _KodiSettingDetailsSettingStringOption
+    implements KodiSettingDetailsSettingStringOption {
+  const factory _KodiSettingDetailsSettingStringOption(
+          {required final String label, required final String value}) =
+      _$KodiSettingDetailsSettingStringOptionImpl;
+
+  factory _KodiSettingDetailsSettingStringOption.fromJson(
+          Map<String, dynamic> json) =
+      _$KodiSettingDetailsSettingStringOptionImpl.fromJson;
+
+  @override
+  String get label;
+  @override
+  String get value;
+
+  /// Create a copy of KodiSettingDetailsSettingStringOption
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingStringOptionImplCopyWith<
+          _$KodiSettingDetailsSettingStringOptionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+KodiSettingDetailsSettingPathOption
+    _$KodiSettingDetailsSettingPathOptionFromJson(Map<String, dynamic> json) {
+  return _KodiSettingDetailsSettingPathOption.fromJson(json);
+}
+
+/// @nodoc
+mixin _$KodiSettingDetailsSettingPathOption {
+  String get label => throw _privateConstructorUsedError;
+  String get value => throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingDetailsSettingPathOption to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiSettingDetailsSettingPathOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $KodiSettingDetailsSettingPathOptionCopyWith<
+          KodiSettingDetailsSettingPathOption>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $KodiSettingDetailsSettingPathOptionCopyWith<$Res> {
+  factory $KodiSettingDetailsSettingPathOptionCopyWith(
+          KodiSettingDetailsSettingPathOption value,
+          $Res Function(KodiSettingDetailsSettingPathOption) then) =
+      _$KodiSettingDetailsSettingPathOptionCopyWithImpl<$Res,
+          KodiSettingDetailsSettingPathOption>;
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class _$KodiSettingDetailsSettingPathOptionCopyWithImpl<$Res,
+        $Val extends KodiSettingDetailsSettingPathOption>
+    implements $KodiSettingDetailsSettingPathOptionCopyWith<$Res> {
+  _$KodiSettingDetailsSettingPathOptionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of KodiSettingDetailsSettingPathOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$KodiSettingDetailsSettingPathOptionImplCopyWith<$Res>
+    implements $KodiSettingDetailsSettingPathOptionCopyWith<$Res> {
+  factory _$$KodiSettingDetailsSettingPathOptionImplCopyWith(
+          _$KodiSettingDetailsSettingPathOptionImpl value,
+          $Res Function(_$KodiSettingDetailsSettingPathOptionImpl) then) =
+      __$$KodiSettingDetailsSettingPathOptionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class __$$KodiSettingDetailsSettingPathOptionImplCopyWithImpl<$Res>
+    extends _$KodiSettingDetailsSettingPathOptionCopyWithImpl<$Res,
+        _$KodiSettingDetailsSettingPathOptionImpl>
+    implements _$$KodiSettingDetailsSettingPathOptionImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingPathOptionImplCopyWithImpl(
+      _$KodiSettingDetailsSettingPathOptionImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingPathOptionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of KodiSettingDetailsSettingPathOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_$KodiSettingDetailsSettingPathOptionImpl(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$KodiSettingDetailsSettingPathOptionImpl
+    implements _KodiSettingDetailsSettingPathOption {
+  const _$KodiSettingDetailsSettingPathOptionImpl(
+      {required this.label, required this.value});
+
+  factory _$KodiSettingDetailsSettingPathOptionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsSettingPathOptionImplFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final String value;
+
+  @override
+  String toString() {
+    return 'KodiSettingDetailsSettingPathOption(label: $label, value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$KodiSettingDetailsSettingPathOptionImpl &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, label, value);
+
+  /// Create a copy of KodiSettingDetailsSettingPathOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$KodiSettingDetailsSettingPathOptionImplCopyWith<
+          _$KodiSettingDetailsSettingPathOptionImpl>
+      get copyWith => __$$KodiSettingDetailsSettingPathOptionImplCopyWithImpl<
+          _$KodiSettingDetailsSettingPathOptionImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$KodiSettingDetailsSettingPathOptionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _KodiSettingDetailsSettingPathOption
+    implements KodiSettingDetailsSettingPathOption {
+  const factory _KodiSettingDetailsSettingPathOption(
+      {required final String label,
+      required final String value}) = _$KodiSettingDetailsSettingPathOptionImpl;
+
+  factory _KodiSettingDetailsSettingPathOption.fromJson(
+          Map<String, dynamic> json) =
+      _$KodiSettingDetailsSettingPathOptionImpl.fromJson;
+
+  @override
+  String get label;
+  @override
+  String get value;
+
+  /// Create a copy of KodiSettingDetailsSettingPathOption
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingPathOptionImplCopyWith<
+          _$KodiSettingDetailsSettingPathOptionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+KodiSettingDetailsSettingAddonOption
+    _$KodiSettingDetailsSettingAddonOptionFromJson(Map<String, dynamic> json) {
+  return _KodiSettingDetailsSettingAddonOption.fromJson(json);
+}
+
+/// @nodoc
+mixin _$KodiSettingDetailsSettingAddonOption {
+  String get label => throw _privateConstructorUsedError;
+  String get value => throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingDetailsSettingAddonOption to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiSettingDetailsSettingAddonOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $KodiSettingDetailsSettingAddonOptionCopyWith<
+          KodiSettingDetailsSettingAddonOption>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $KodiSettingDetailsSettingAddonOptionCopyWith<$Res> {
+  factory $KodiSettingDetailsSettingAddonOptionCopyWith(
+          KodiSettingDetailsSettingAddonOption value,
+          $Res Function(KodiSettingDetailsSettingAddonOption) then) =
+      _$KodiSettingDetailsSettingAddonOptionCopyWithImpl<$Res,
+          KodiSettingDetailsSettingAddonOption>;
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class _$KodiSettingDetailsSettingAddonOptionCopyWithImpl<$Res,
+        $Val extends KodiSettingDetailsSettingAddonOption>
+    implements $KodiSettingDetailsSettingAddonOptionCopyWith<$Res> {
+  _$KodiSettingDetailsSettingAddonOptionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of KodiSettingDetailsSettingAddonOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$KodiSettingDetailsSettingAddonOptionImplCopyWith<$Res>
+    implements $KodiSettingDetailsSettingAddonOptionCopyWith<$Res> {
+  factory _$$KodiSettingDetailsSettingAddonOptionImplCopyWith(
+          _$KodiSettingDetailsSettingAddonOptionImpl value,
+          $Res Function(_$KodiSettingDetailsSettingAddonOptionImpl) then) =
+      __$$KodiSettingDetailsSettingAddonOptionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class __$$KodiSettingDetailsSettingAddonOptionImplCopyWithImpl<$Res>
+    extends _$KodiSettingDetailsSettingAddonOptionCopyWithImpl<$Res,
+        _$KodiSettingDetailsSettingAddonOptionImpl>
+    implements _$$KodiSettingDetailsSettingAddonOptionImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingAddonOptionImplCopyWithImpl(
+      _$KodiSettingDetailsSettingAddonOptionImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingAddonOptionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of KodiSettingDetailsSettingAddonOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_$KodiSettingDetailsSettingAddonOptionImpl(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$KodiSettingDetailsSettingAddonOptionImpl
+    implements _KodiSettingDetailsSettingAddonOption {
+  const _$KodiSettingDetailsSettingAddonOptionImpl(
+      {required this.label, required this.value});
+
+  factory _$KodiSettingDetailsSettingAddonOptionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsSettingAddonOptionImplFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final String value;
+
+  @override
+  String toString() {
+    return 'KodiSettingDetailsSettingAddonOption(label: $label, value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$KodiSettingDetailsSettingAddonOptionImpl &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, label, value);
+
+  /// Create a copy of KodiSettingDetailsSettingAddonOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$KodiSettingDetailsSettingAddonOptionImplCopyWith<
+          _$KodiSettingDetailsSettingAddonOptionImpl>
+      get copyWith => __$$KodiSettingDetailsSettingAddonOptionImplCopyWithImpl<
+          _$KodiSettingDetailsSettingAddonOptionImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$KodiSettingDetailsSettingAddonOptionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _KodiSettingDetailsSettingAddonOption
+    implements KodiSettingDetailsSettingAddonOption {
+  const factory _KodiSettingDetailsSettingAddonOption(
+          {required final String label, required final String value}) =
+      _$KodiSettingDetailsSettingAddonOptionImpl;
+
+  factory _KodiSettingDetailsSettingAddonOption.fromJson(
+          Map<String, dynamic> json) =
+      _$KodiSettingDetailsSettingAddonOptionImpl.fromJson;
+
+  @override
+  String get label;
+  @override
+  String get value;
+
+  /// Create a copy of KodiSettingDetailsSettingAddonOption
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingAddonOptionImplCopyWith<
+          _$KodiSettingDetailsSettingAddonOptionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+KodiSettingDetailsSettingDateOption
+    _$KodiSettingDetailsSettingDateOptionFromJson(Map<String, dynamic> json) {
+  return _KodiSettingDetailsSettingDateOption.fromJson(json);
+}
+
+/// @nodoc
+mixin _$KodiSettingDetailsSettingDateOption {
+  String get label => throw _privateConstructorUsedError;
+  String get value => throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingDetailsSettingDateOption to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiSettingDetailsSettingDateOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $KodiSettingDetailsSettingDateOptionCopyWith<
+          KodiSettingDetailsSettingDateOption>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $KodiSettingDetailsSettingDateOptionCopyWith<$Res> {
+  factory $KodiSettingDetailsSettingDateOptionCopyWith(
+          KodiSettingDetailsSettingDateOption value,
+          $Res Function(KodiSettingDetailsSettingDateOption) then) =
+      _$KodiSettingDetailsSettingDateOptionCopyWithImpl<$Res,
+          KodiSettingDetailsSettingDateOption>;
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class _$KodiSettingDetailsSettingDateOptionCopyWithImpl<$Res,
+        $Val extends KodiSettingDetailsSettingDateOption>
+    implements $KodiSettingDetailsSettingDateOptionCopyWith<$Res> {
+  _$KodiSettingDetailsSettingDateOptionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of KodiSettingDetailsSettingDateOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$KodiSettingDetailsSettingDateOptionImplCopyWith<$Res>
+    implements $KodiSettingDetailsSettingDateOptionCopyWith<$Res> {
+  factory _$$KodiSettingDetailsSettingDateOptionImplCopyWith(
+          _$KodiSettingDetailsSettingDateOptionImpl value,
+          $Res Function(_$KodiSettingDetailsSettingDateOptionImpl) then) =
+      __$$KodiSettingDetailsSettingDateOptionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class __$$KodiSettingDetailsSettingDateOptionImplCopyWithImpl<$Res>
+    extends _$KodiSettingDetailsSettingDateOptionCopyWithImpl<$Res,
+        _$KodiSettingDetailsSettingDateOptionImpl>
+    implements _$$KodiSettingDetailsSettingDateOptionImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingDateOptionImplCopyWithImpl(
+      _$KodiSettingDetailsSettingDateOptionImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingDateOptionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of KodiSettingDetailsSettingDateOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_$KodiSettingDetailsSettingDateOptionImpl(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$KodiSettingDetailsSettingDateOptionImpl
+    implements _KodiSettingDetailsSettingDateOption {
+  const _$KodiSettingDetailsSettingDateOptionImpl(
+      {required this.label, required this.value});
+
+  factory _$KodiSettingDetailsSettingDateOptionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsSettingDateOptionImplFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final String value;
+
+  @override
+  String toString() {
+    return 'KodiSettingDetailsSettingDateOption(label: $label, value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$KodiSettingDetailsSettingDateOptionImpl &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, label, value);
+
+  /// Create a copy of KodiSettingDetailsSettingDateOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$KodiSettingDetailsSettingDateOptionImplCopyWith<
+          _$KodiSettingDetailsSettingDateOptionImpl>
+      get copyWith => __$$KodiSettingDetailsSettingDateOptionImplCopyWithImpl<
+          _$KodiSettingDetailsSettingDateOptionImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$KodiSettingDetailsSettingDateOptionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _KodiSettingDetailsSettingDateOption
+    implements KodiSettingDetailsSettingDateOption {
+  const factory _KodiSettingDetailsSettingDateOption(
+      {required final String label,
+      required final String value}) = _$KodiSettingDetailsSettingDateOptionImpl;
+
+  factory _KodiSettingDetailsSettingDateOption.fromJson(
+          Map<String, dynamic> json) =
+      _$KodiSettingDetailsSettingDateOptionImpl.fromJson;
+
+  @override
+  String get label;
+  @override
+  String get value;
+
+  /// Create a copy of KodiSettingDetailsSettingDateOption
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingDateOptionImplCopyWith<
+          _$KodiSettingDetailsSettingDateOptionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+KodiSettingDetailsSettingTimeOption
+    _$KodiSettingDetailsSettingTimeOptionFromJson(Map<String, dynamic> json) {
+  return _KodiSettingDetailsSettingTimeOption.fromJson(json);
+}
+
+/// @nodoc
+mixin _$KodiSettingDetailsSettingTimeOption {
+  String get label => throw _privateConstructorUsedError;
+  String get value => throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingDetailsSettingTimeOption to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiSettingDetailsSettingTimeOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $KodiSettingDetailsSettingTimeOptionCopyWith<
+          KodiSettingDetailsSettingTimeOption>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $KodiSettingDetailsSettingTimeOptionCopyWith<$Res> {
+  factory $KodiSettingDetailsSettingTimeOptionCopyWith(
+          KodiSettingDetailsSettingTimeOption value,
+          $Res Function(KodiSettingDetailsSettingTimeOption) then) =
+      _$KodiSettingDetailsSettingTimeOptionCopyWithImpl<$Res,
+          KodiSettingDetailsSettingTimeOption>;
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class _$KodiSettingDetailsSettingTimeOptionCopyWithImpl<$Res,
+        $Val extends KodiSettingDetailsSettingTimeOption>
+    implements $KodiSettingDetailsSettingTimeOptionCopyWith<$Res> {
+  _$KodiSettingDetailsSettingTimeOptionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of KodiSettingDetailsSettingTimeOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$KodiSettingDetailsSettingTimeOptionImplCopyWith<$Res>
+    implements $KodiSettingDetailsSettingTimeOptionCopyWith<$Res> {
+  factory _$$KodiSettingDetailsSettingTimeOptionImplCopyWith(
+          _$KodiSettingDetailsSettingTimeOptionImpl value,
+          $Res Function(_$KodiSettingDetailsSettingTimeOptionImpl) then) =
+      __$$KodiSettingDetailsSettingTimeOptionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String label, String value});
+}
+
+/// @nodoc
+class __$$KodiSettingDetailsSettingTimeOptionImplCopyWithImpl<$Res>
+    extends _$KodiSettingDetailsSettingTimeOptionCopyWithImpl<$Res,
+        _$KodiSettingDetailsSettingTimeOptionImpl>
+    implements _$$KodiSettingDetailsSettingTimeOptionImplCopyWith<$Res> {
+  __$$KodiSettingDetailsSettingTimeOptionImplCopyWithImpl(
+      _$KodiSettingDetailsSettingTimeOptionImpl _value,
+      $Res Function(_$KodiSettingDetailsSettingTimeOptionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of KodiSettingDetailsSettingTimeOption
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? value = null,
+  }) {
+    return _then(_$KodiSettingDetailsSettingTimeOptionImpl(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$KodiSettingDetailsSettingTimeOptionImpl
+    implements _KodiSettingDetailsSettingTimeOption {
+  const _$KodiSettingDetailsSettingTimeOptionImpl(
+      {required this.label, required this.value});
+
+  factory _$KodiSettingDetailsSettingTimeOptionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsSettingTimeOptionImplFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final String value;
+
+  @override
+  String toString() {
+    return 'KodiSettingDetailsSettingTimeOption(label: $label, value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$KodiSettingDetailsSettingTimeOptionImpl &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, label, value);
+
+  /// Create a copy of KodiSettingDetailsSettingTimeOption
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$KodiSettingDetailsSettingTimeOptionImplCopyWith<
+          _$KodiSettingDetailsSettingTimeOptionImpl>
+      get copyWith => __$$KodiSettingDetailsSettingTimeOptionImplCopyWithImpl<
+          _$KodiSettingDetailsSettingTimeOptionImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$KodiSettingDetailsSettingTimeOptionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _KodiSettingDetailsSettingTimeOption
+    implements KodiSettingDetailsSettingTimeOption {
+  const factory _KodiSettingDetailsSettingTimeOption(
+      {required final String label,
+      required final String value}) = _$KodiSettingDetailsSettingTimeOptionImpl;
+
+  factory _KodiSettingDetailsSettingTimeOption.fromJson(
+          Map<String, dynamic> json) =
+      _$KodiSettingDetailsSettingTimeOptionImpl.fromJson;
+
+  @override
+  String get label;
+  @override
+  String get value;
+
+  /// Create a copy of KodiSettingDetailsSettingTimeOption
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsSettingTimeOptionImplCopyWith<
+          _$KodiSettingDetailsSettingTimeOptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

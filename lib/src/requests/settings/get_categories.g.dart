@@ -10,7 +10,7 @@ _$GetCategoriesImpl _$$GetCategoriesImplFromJson(Map<String, dynamic> json) =>
     _$GetCategoriesImpl(
       level: $enumDecodeNullable(_$KodiSettingLevelEnumMap, json['level']) ??
           KodiSettingLevel.standard,
-      section: json['section'] as String?,
+      section: json['section'] as String? ?? '',
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) =>
               $enumDecode(_$KodiSettingsGetCategoriesPropertiesEnumMap, e))
@@ -20,6 +20,7 @@ _$GetCategoriesImpl _$$GetCategoriesImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$GetCategoriesImplToJson(_$GetCategoriesImpl instance) {
   final val = <String, dynamic>{
     'level': _$KodiSettingLevelEnumMap[instance.level]!,
+    'section': instance.section,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -28,7 +29,6 @@ Map<String, dynamic> _$$GetCategoriesImplToJson(_$GetCategoriesImpl instance) {
     }
   }
 
-  writeNotNull('section', instance.section);
   writeNotNull(
       'properties',
       instance.properties

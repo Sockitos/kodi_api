@@ -17,9 +17,9 @@ _$KodiSettingDetailsSettingBoolImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -40,9 +40,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingBoolImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -72,13 +72,13 @@ _$KodiSettingDetailsSettingIntImpl _$$KodiSettingDetailsSettingIntImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiSettingDetailsSettingIntImpl(
       defaultt: (json['default'] as num).toInt(),
-      maximum: (json['maximum'] as num?)?.toInt(),
-      minimum: (json['minimum'] as num?)?.toInt(),
+      maximum: (json['maximum'] as num?)?.toInt() ?? 0,
+      minimum: (json['minimum'] as num?)?.toInt() ?? 0,
       options: (json['options'] as List<dynamic>?)
           ?.map((e) => KodiSettingDetailsSettingIntOption.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      step: (json['step'] as num?)?.toInt(),
+      step: (json['step'] as num?)?.toInt() ?? 0,
       value: (json['value'] as num).toInt(),
       control: json['control'] == null
           ? null
@@ -86,9 +86,9 @@ _$KodiSettingDetailsSettingIntImpl _$$KodiSettingDetailsSettingIntImplFromJson(
               json['control'] as Map<String, dynamic>),
       enabled: json['enabled'] as bool,
       level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-      parent: json['parent'] as String?,
+      parent: json['parent'] as String? ?? '',
       type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-      help: json['help'] as String?,
+      help: json['help'] as String? ?? '',
       id: json['id'] as String,
       label: json['label'] as String,
     );
@@ -97,6 +97,8 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingIntImplToJson(
     _$KodiSettingDetailsSettingIntImpl instance) {
   final val = <String, dynamic>{
     'default': instance.defaultt,
+    'maximum': instance.maximum,
+    'minimum': instance.minimum,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -105,17 +107,15 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingIntImplToJson(
     }
   }
 
-  writeNotNull('maximum', instance.maximum);
-  writeNotNull('minimum', instance.minimum);
   writeNotNull('options', instance.options?.map((e) => e.toJson()).toList());
-  writeNotNull('step', instance.step);
+  val['step'] = instance.step;
   val['value'] = instance.value;
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -124,7 +124,7 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingIntImplToJson(
 _$KodiSettingDetailsSettingNumberImpl
     _$$KodiSettingDetailsSettingNumberImplFromJson(Map<String, dynamic> json) =>
         _$KodiSettingDetailsSettingNumberImpl(
-          defaultt: json['default'] as String,
+          defaultt: (json['default'] as num).toDouble(),
           maximum: (json['maximum'] as num).toDouble(),
           minimum: (json['minimum'] as num).toDouble(),
           step: (json['step'] as num).toDouble(),
@@ -135,9 +135,9 @@ _$KodiSettingDetailsSettingNumberImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -161,9 +161,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingNumberImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -175,7 +175,7 @@ _$KodiSettingDetailsSettingStringImpl
           allowEmpty: json['allowempty'] as bool,
           defaultt: json['default'] as String,
           options: (json['options'] as List<dynamic>?)
-              ?.map((e) => KodiSettingDetailsSettingIntOption.fromJson(
+              ?.map((e) => KodiSettingDetailsSettingStringOption.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
           value: json['value'] as String,
@@ -185,9 +185,9 @@ _$KodiSettingDetailsSettingStringImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -210,9 +210,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingStringImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -228,9 +228,9 @@ _$KodiSettingDetailsSettingActionImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -250,9 +250,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingActionImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -267,10 +267,10 @@ _$KodiSettingDetailsSettingListImpl
           definition: KodiSettingDetailsSetting.fromJson(
               json['definition'] as Map<String, dynamic>),
           delimiter: json['delimiter'] as String,
-          elementType: $enumDecodeNullable(
-              _$KodiSettingTypeEnumMap, json['elementtype']),
-          maximumItems: (json['maximumitems'] as num?)?.toInt(),
-          minimumItems: (json['minimumitems'] as num?)?.toInt(),
+          elementType:
+              $enumDecode(_$KodiSettingTypeEnumMap, json['elementtype']),
+          maximumItems: (json['maximumitems'] as num?)?.toInt() ?? 0,
+          minimumItems: (json['minimumitems'] as num?)?.toInt() ?? 0,
           value: (json['value'] as List<dynamic>)
               .map(const KodiSettingValueConverter().fromJson)
               .toList(),
@@ -280,9 +280,9 @@ _$KodiSettingDetailsSettingListImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -295,6 +295,11 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingListImplToJson(
         .toList(),
     'definition': instance.definition.toJson(),
     'delimiter': instance.delimiter,
+    'elementtype': _$KodiSettingTypeEnumMap[instance.elementType]!,
+    'maximumitems': instance.maximumItems,
+    'minimumitems': instance.minimumItems,
+    'value':
+        instance.value.map(const KodiSettingValueConverter().toJson).toList(),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -303,17 +308,12 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingListImplToJson(
     }
   }
 
-  writeNotNull('elementtype', _$KodiSettingTypeEnumMap[instance.elementType]);
-  writeNotNull('maximumitems', instance.maximumItems);
-  writeNotNull('minimumitems', instance.minimumItems);
-  val['value'] =
-      instance.value.map(const KodiSettingValueConverter().toJson).toList();
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -325,11 +325,11 @@ _$KodiSettingDetailsSettingPathImpl
           sources: (json['sources'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList(),
-          writeable: json['writeable'] as bool?,
+          writable: json['writable'] as bool,
           allowEmpty: json['allowempty'] as bool,
           defaultt: json['default'] as String,
           options: (json['options'] as List<dynamic>?)
-              ?.map((e) => KodiSettingDetailsSettingIntOption.fromJson(
+              ?.map((e) => KodiSettingDetailsSettingPathOption.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
           value: json['value'] as String,
@@ -339,9 +339,9 @@ _$KodiSettingDetailsSettingPathImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -357,7 +357,7 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingPathImplToJson(
   }
 
   writeNotNull('sources', instance.sources);
-  writeNotNull('writeable', instance.writeable);
+  val['writable'] = instance.writable;
   val['allowempty'] = instance.allowEmpty;
   val['default'] = instance.defaultt;
   writeNotNull('options', instance.options?.map((e) => e.toJson()).toList());
@@ -365,9 +365,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingPathImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -380,7 +380,7 @@ _$KodiSettingDetailsSettingAddonImpl
           allowEmpty: json['allowempty'] as bool,
           defaultt: json['default'] as String,
           options: (json['options'] as List<dynamic>?)
-              ?.map((e) => KodiSettingDetailsSettingIntOption.fromJson(
+              ?.map((e) => KodiSettingDetailsSettingAddonOption.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
           value: json['value'] as String,
@@ -390,9 +390,9 @@ _$KodiSettingDetailsSettingAddonImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -416,9 +416,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingAddonImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -475,7 +475,7 @@ _$KodiSettingDetailsSettingDateImpl
           allowEmpty: json['allowempty'] as bool,
           defaultt: json['default'] as String,
           options: (json['options'] as List<dynamic>?)
-              ?.map((e) => KodiSettingDetailsSettingIntOption.fromJson(
+              ?.map((e) => KodiSettingDetailsSettingDateOption.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
           value: json['value'] as String,
@@ -485,9 +485,9 @@ _$KodiSettingDetailsSettingDateImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -510,9 +510,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingDateImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -524,7 +524,7 @@ _$KodiSettingDetailsSettingTimeImpl
           allowEmpty: json['allowempty'] as bool,
           defaultt: json['default'] as String,
           options: (json['options'] as List<dynamic>?)
-              ?.map((e) => KodiSettingDetailsSettingIntOption.fromJson(
+              ?.map((e) => KodiSettingDetailsSettingTimeOption.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
           value: json['value'] as String,
@@ -534,9 +534,9 @@ _$KodiSettingDetailsSettingTimeImpl
                   json['control'] as Map<String, dynamic>),
           enabled: json['enabled'] as bool,
           level: $enumDecode(_$KodiSettingLevelEnumMap, json['level']),
-          parent: json['parent'] as String?,
+          parent: json['parent'] as String? ?? '',
           type: $enumDecode(_$KodiSettingTypeEnumMap, json['type']),
-          help: json['help'] as String?,
+          help: json['help'] as String? ?? '',
           id: json['id'] as String,
           label: json['label'] as String,
         );
@@ -559,9 +559,9 @@ Map<String, dynamic> _$$KodiSettingDetailsSettingTimeImplToJson(
   writeNotNull('control', instance.control?.toJson());
   val['enabled'] = instance.enabled;
   val['level'] = _$KodiSettingLevelEnumMap[instance.level]!;
-  writeNotNull('parent', instance.parent);
+  val['parent'] = instance.parent;
   val['type'] = _$KodiSettingTypeEnumMap[instance.type]!;
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
@@ -572,11 +572,86 @@ _$KodiSettingDetailsSettingIntOptionImpl
             Map<String, dynamic> json) =>
         _$KodiSettingDetailsSettingIntOptionImpl(
           label: json['label'] as String,
-          value: parseValue(json['value']),
+          value: (json['value'] as num).toInt(),
         );
 
 Map<String, dynamic> _$$KodiSettingDetailsSettingIntOptionImplToJson(
         _$KodiSettingDetailsSettingIntOptionImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'value': instance.value,
+    };
+
+_$KodiSettingDetailsSettingStringOptionImpl
+    _$$KodiSettingDetailsSettingStringOptionImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiSettingDetailsSettingStringOptionImpl(
+          label: json['label'] as String,
+          value: json['value'] as String,
+        );
+
+Map<String, dynamic> _$$KodiSettingDetailsSettingStringOptionImplToJson(
+        _$KodiSettingDetailsSettingStringOptionImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'value': instance.value,
+    };
+
+_$KodiSettingDetailsSettingPathOptionImpl
+    _$$KodiSettingDetailsSettingPathOptionImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiSettingDetailsSettingPathOptionImpl(
+          label: json['label'] as String,
+          value: json['value'] as String,
+        );
+
+Map<String, dynamic> _$$KodiSettingDetailsSettingPathOptionImplToJson(
+        _$KodiSettingDetailsSettingPathOptionImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'value': instance.value,
+    };
+
+_$KodiSettingDetailsSettingAddonOptionImpl
+    _$$KodiSettingDetailsSettingAddonOptionImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiSettingDetailsSettingAddonOptionImpl(
+          label: json['label'] as String,
+          value: json['value'] as String,
+        );
+
+Map<String, dynamic> _$$KodiSettingDetailsSettingAddonOptionImplToJson(
+        _$KodiSettingDetailsSettingAddonOptionImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'value': instance.value,
+    };
+
+_$KodiSettingDetailsSettingDateOptionImpl
+    _$$KodiSettingDetailsSettingDateOptionImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiSettingDetailsSettingDateOptionImpl(
+          label: json['label'] as String,
+          value: json['value'] as String,
+        );
+
+Map<String, dynamic> _$$KodiSettingDetailsSettingDateOptionImplToJson(
+        _$KodiSettingDetailsSettingDateOptionImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'value': instance.value,
+    };
+
+_$KodiSettingDetailsSettingTimeOptionImpl
+    _$$KodiSettingDetailsSettingTimeOptionImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiSettingDetailsSettingTimeOptionImpl(
+          label: json['label'] as String,
+          value: json['value'] as String,
+        );
+
+Map<String, dynamic> _$$KodiSettingDetailsSettingTimeOptionImplToJson(
+        _$KodiSettingDetailsSettingTimeOptionImpl instance) =>
     <String, dynamic>{
       'label': instance.label,
       'value': instance.value,

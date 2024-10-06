@@ -10,6 +10,7 @@ import 'package:example/ui/screens/player/player_screen.dart';
 import 'package:example/ui/screens/playlist/playlist_screen.dart';
 import 'package:example/ui/screens/profiles/profiles_screen.dart';
 import 'package:example/ui/screens/pvr/pvr_screen.dart';
+import 'package:example/ui/screens/settings/setttings_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -156,6 +157,20 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'Profiles',
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const SetttingsScreen(),
+                  ),
+                ),
+                label: 'Settings',
               ),
             ],
           ),

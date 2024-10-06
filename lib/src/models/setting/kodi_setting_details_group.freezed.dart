@@ -22,7 +22,7 @@ KodiSettingDetailsGroup _$KodiSettingDetailsGroupFromJson(
 /// @nodoc
 mixin _$KodiSettingDetailsGroup {
   String get id => throw _privateConstructorUsedError;
-  List<KodiSettingDetailsSetting>? get settings =>
+  Set<KodiSettingDetailsSetting>? get settings =>
       throw _privateConstructorUsedError;
 
   /// Serializes this KodiSettingDetailsGroup to a JSON map.
@@ -41,7 +41,7 @@ abstract class $KodiSettingDetailsGroupCopyWith<$Res> {
           $Res Function(KodiSettingDetailsGroup) then) =
       _$KodiSettingDetailsGroupCopyWithImpl<$Res, KodiSettingDetailsGroup>;
   @useResult
-  $Res call({String id, List<KodiSettingDetailsSetting>? settings});
+  $Res call({String id, Set<KodiSettingDetailsSetting>? settings});
 }
 
 /// @nodoc
@@ -71,7 +71,7 @@ class _$KodiSettingDetailsGroupCopyWithImpl<$Res,
       settings: freezed == settings
           ? _value.settings
           : settings // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSetting>?,
+              as Set<KodiSettingDetailsSetting>?,
     ) as $Val);
   }
 }
@@ -85,7 +85,7 @@ abstract class _$$KodiSettingDetailsGroupImplCopyWith<$Res>
       __$$KodiSettingDetailsGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, List<KodiSettingDetailsSetting>? settings});
+  $Res call({String id, Set<KodiSettingDetailsSetting>? settings});
 }
 
 /// @nodoc
@@ -114,7 +114,7 @@ class __$$KodiSettingDetailsGroupImplCopyWithImpl<$Res>
       settings: freezed == settings
           ? _value._settings
           : settings // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSetting>?,
+              as Set<KodiSettingDetailsSetting>?,
     ));
   }
 }
@@ -123,7 +123,7 @@ class __$$KodiSettingDetailsGroupImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiSettingDetailsGroupImpl implements _KodiSettingDetailsGroup {
   const _$KodiSettingDetailsGroupImpl(
-      {required this.id, final List<KodiSettingDetailsSetting>? settings})
+      {required this.id, final Set<KodiSettingDetailsSetting>? settings})
       : _settings = settings;
 
   factory _$KodiSettingDetailsGroupImpl.fromJson(Map<String, dynamic> json) =>
@@ -131,14 +131,14 @@ class _$KodiSettingDetailsGroupImpl implements _KodiSettingDetailsGroup {
 
   @override
   final String id;
-  final List<KodiSettingDetailsSetting>? _settings;
+  final Set<KodiSettingDetailsSetting>? _settings;
   @override
-  List<KodiSettingDetailsSetting>? get settings {
+  Set<KodiSettingDetailsSetting>? get settings {
     final value = _settings;
     if (value == null) return null;
-    if (_settings is EqualUnmodifiableListView) return _settings;
+    if (_settings is EqualUnmodifiableSetView) return _settings;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableSetView(value);
   }
 
   @override
@@ -180,7 +180,7 @@ class _$KodiSettingDetailsGroupImpl implements _KodiSettingDetailsGroup {
 abstract class _KodiSettingDetailsGroup implements KodiSettingDetailsGroup {
   const factory _KodiSettingDetailsGroup(
           {required final String id,
-          final List<KodiSettingDetailsSetting>? settings}) =
+          final Set<KodiSettingDetailsSetting>? settings}) =
       _$KodiSettingDetailsGroupImpl;
 
   factory _KodiSettingDetailsGroup.fromJson(Map<String, dynamic> json) =
@@ -189,7 +189,7 @@ abstract class _KodiSettingDetailsGroup implements KodiSettingDetailsGroup {
   @override
   String get id;
   @override
-  List<KodiSettingDetailsSetting>? get settings;
+  Set<KodiSettingDetailsSetting>? get settings;
 
   /// Create a copy of KodiSettingDetailsGroup
   /// with the given fields replaced by the non-null parameter values.

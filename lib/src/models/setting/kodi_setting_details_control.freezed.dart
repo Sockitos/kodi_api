@@ -51,27 +51,27 @@ mixin _$KodiSettingDetailsControl {
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -79,7 +79,7 @@ mixin _$KodiSettingDetailsControl {
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -101,27 +101,27 @@ mixin _$KodiSettingDetailsControl {
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -129,7 +129,7 @@ mixin _$KodiSettingDetailsControl {
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -151,27 +151,27 @@ mixin _$KodiSettingDetailsControl {
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -179,7 +179,7 @@ mixin _$KodiSettingDetailsControl {
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -385,27 +385,27 @@ class _$KodiSettingDetailsControlToggleImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -413,7 +413,7 @@ class _$KodiSettingDetailsControlToggleImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -438,27 +438,27 @@ class _$KodiSettingDetailsControlToggleImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -466,7 +466,7 @@ class _$KodiSettingDetailsControlToggleImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -491,27 +491,27 @@ class _$KodiSettingDetailsControlToggleImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -519,7 +519,7 @@ class _$KodiSettingDetailsControlToggleImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -634,8 +634,8 @@ abstract class _$$KodiSettingDetailsControlSpinnerImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'formatlabel') String? formatLabel,
-      @JsonKey(name: 'minimumlabel') String? minimumLabel,
+      {@JsonKey(name: 'formatlabel') String formatLabel,
+      @JsonKey(name: 'minimumlabel') String minimumLabel,
       KodiSettingDetailsControlSpinnerType type,
       bool delayed,
       String format});
@@ -656,21 +656,21 @@ class __$$KodiSettingDetailsControlSpinnerImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? formatLabel = freezed,
-    Object? minimumLabel = freezed,
+    Object? formatLabel = null,
+    Object? minimumLabel = null,
     Object? type = null,
     Object? delayed = null,
     Object? format = null,
   }) {
     return _then(_$KodiSettingDetailsControlSpinnerImpl(
-      formatLabel: freezed == formatLabel
+      formatLabel: null == formatLabel
           ? _value.formatLabel
           : formatLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      minimumLabel: freezed == minimumLabel
+              as String,
+      minimumLabel: null == minimumLabel
           ? _value.minimumLabel
           : minimumLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -692,8 +692,8 @@ class __$$KodiSettingDetailsControlSpinnerImplCopyWithImpl<$Res>
 class _$KodiSettingDetailsControlSpinnerImpl
     implements _KodiSettingDetailsControlSpinner {
   const _$KodiSettingDetailsControlSpinnerImpl(
-      {@JsonKey(name: 'formatlabel') this.formatLabel,
-      @JsonKey(name: 'minimumlabel') this.minimumLabel,
+      {@JsonKey(name: 'formatlabel') this.formatLabel = '',
+      @JsonKey(name: 'minimumlabel') this.minimumLabel = '',
       required this.type,
       required this.delayed,
       required this.format});
@@ -704,10 +704,10 @@ class _$KodiSettingDetailsControlSpinnerImpl
 
   @override
   @JsonKey(name: 'formatlabel')
-  final String? formatLabel;
+  final String formatLabel;
   @override
   @JsonKey(name: 'minimumlabel')
-  final String? minimumLabel;
+  final String minimumLabel;
   @override
   final KodiSettingDetailsControlSpinnerType type;
   @override
@@ -756,27 +756,27 @@ class _$KodiSettingDetailsControlSpinnerImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -784,7 +784,7 @@ class _$KodiSettingDetailsControlSpinnerImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -809,27 +809,27 @@ class _$KodiSettingDetailsControlSpinnerImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -837,7 +837,7 @@ class _$KodiSettingDetailsControlSpinnerImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -862,27 +862,27 @@ class _$KodiSettingDetailsControlSpinnerImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -890,7 +890,7 @@ class _$KodiSettingDetailsControlSpinnerImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -972,8 +972,8 @@ class _$KodiSettingDetailsControlSpinnerImpl
 abstract class _KodiSettingDetailsControlSpinner
     implements KodiSettingDetailsControl {
   const factory _KodiSettingDetailsControlSpinner(
-      {@JsonKey(name: 'formatlabel') final String? formatLabel,
-      @JsonKey(name: 'minimumlabel') final String? minimumLabel,
+      {@JsonKey(name: 'formatlabel') final String formatLabel,
+      @JsonKey(name: 'minimumlabel') final String minimumLabel,
       required final KodiSettingDetailsControlSpinnerType type,
       required final bool delayed,
       required final String format}) = _$KodiSettingDetailsControlSpinnerImpl;
@@ -983,9 +983,9 @@ abstract class _KodiSettingDetailsControlSpinner
       _$KodiSettingDetailsControlSpinnerImpl.fromJson;
 
   @JsonKey(name: 'formatlabel')
-  String? get formatLabel;
+  String get formatLabel;
   @JsonKey(name: 'minimumlabel')
-  String? get minimumLabel;
+  String get minimumLabel;
   @override
   KodiSettingDetailsControlSpinnerType get type;
   @override
@@ -1012,10 +1012,10 @@ abstract class _$$KodiSettingDetailsControlEditImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool? hidden,
+      {bool hidden,
       KodiSettingDetailsControlEditType type,
       @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
@@ -1035,18 +1035,18 @@ class __$$KodiSettingDetailsControlEditImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hidden = freezed,
+    Object? hidden = null,
     Object? type = null,
     Object? verifyNewValue = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
     return _then(_$KodiSettingDetailsControlEditImpl(
-      hidden: freezed == hidden
+      hidden: null == hidden
           ? _value.hidden
           : hidden // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1055,10 +1055,10 @@ class __$$KodiSettingDetailsControlEditImplCopyWithImpl<$Res>
           ? _value.verifyNewValue
           : verifyNewValue // ignore: cast_nullable_to_non_nullable
               as bool,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -1076,10 +1076,10 @@ class __$$KodiSettingDetailsControlEditImplCopyWithImpl<$Res>
 class _$KodiSettingDetailsControlEditImpl
     implements _KodiSettingDetailsControlEdit {
   const _$KodiSettingDetailsControlEditImpl(
-      {this.hidden,
+      {required this.hidden,
       required this.type,
       @JsonKey(name: 'verifynewvalue') required this.verifyNewValue,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
@@ -1088,14 +1088,15 @@ class _$KodiSettingDetailsControlEditImpl
       _$$KodiSettingDetailsControlEditImplFromJson(json);
 
   @override
-  final bool? hidden;
+  final bool hidden;
   @override
   final KodiSettingDetailsControlEditType type;
   @override
   @JsonKey(name: 'verifynewvalue')
   final bool verifyNewValue;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -1142,27 +1143,27 @@ class _$KodiSettingDetailsControlEditImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -1170,7 +1171,7 @@ class _$KodiSettingDetailsControlEditImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -1195,27 +1196,27 @@ class _$KodiSettingDetailsControlEditImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1223,7 +1224,7 @@ class _$KodiSettingDetailsControlEditImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1248,27 +1249,27 @@ class _$KodiSettingDetailsControlEditImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1276,7 +1277,7 @@ class _$KodiSettingDetailsControlEditImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1358,22 +1359,22 @@ class _$KodiSettingDetailsControlEditImpl
 abstract class _KodiSettingDetailsControlEdit
     implements KodiSettingDetailsControl {
   const factory _KodiSettingDetailsControlEdit(
-      {final bool? hidden,
+      {required final bool hidden,
       required final KodiSettingDetailsControlEditType type,
       @JsonKey(name: 'verifynewvalue') required final bool verifyNewValue,
-      final String? heading,
+      final String heading,
       required final bool delayed,
       required final String format}) = _$KodiSettingDetailsControlEditImpl;
 
   factory _KodiSettingDetailsControlEdit.fromJson(Map<String, dynamic> json) =
       _$KodiSettingDetailsControlEditImpl.fromJson;
 
-  bool? get hidden;
+  bool get hidden;
   @override
   KodiSettingDetailsControlEditType get type;
   @JsonKey(name: 'verifynewvalue')
   bool get verifyNewValue;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
@@ -1399,7 +1400,7 @@ abstract class _$$KodiSettingDetailsControlButtonImplCopyWith<$Res>
   @useResult
   $Res call(
       {KodiSettingDetailsControlButtonType type,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
@@ -1420,7 +1421,7 @@ class __$$KodiSettingDetailsControlButtonImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? type = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
@@ -1429,10 +1430,10 @@ class __$$KodiSettingDetailsControlButtonImplCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingDetailsControlButtonType,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -1451,7 +1452,7 @@ class _$KodiSettingDetailsControlButtonImpl
     implements _KodiSettingDetailsControlButton {
   const _$KodiSettingDetailsControlButtonImpl(
       {required this.type,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
@@ -1462,7 +1463,8 @@ class _$KodiSettingDetailsControlButtonImpl
   @override
   final KodiSettingDetailsControlButtonType type;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -1505,27 +1507,27 @@ class _$KodiSettingDetailsControlButtonImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -1533,7 +1535,7 @@ class _$KodiSettingDetailsControlButtonImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -1558,27 +1560,27 @@ class _$KodiSettingDetailsControlButtonImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1586,7 +1588,7 @@ class _$KodiSettingDetailsControlButtonImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1611,27 +1613,27 @@ class _$KodiSettingDetailsControlButtonImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1639,7 +1641,7 @@ class _$KodiSettingDetailsControlButtonImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1722,7 +1724,7 @@ abstract class _KodiSettingDetailsControlButton
     implements KodiSettingDetailsControl {
   const factory _KodiSettingDetailsControlButton(
       {required final KodiSettingDetailsControlButtonType type,
-      final String? heading,
+      final String heading,
       required final bool delayed,
       required final String format}) = _$KodiSettingDetailsControlButtonImpl;
 
@@ -1731,7 +1733,7 @@ abstract class _KodiSettingDetailsControlButton
 
   @override
   KodiSettingDetailsControlButtonType get type;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
@@ -1758,7 +1760,7 @@ abstract class _$$KodiSettingDetailsControlListImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'multiselect') bool multiSelect,
       KodiSettingDetailsControlListType type,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
@@ -1780,7 +1782,7 @@ class __$$KodiSettingDetailsControlListImplCopyWithImpl<$Res>
   $Res call({
     Object? multiSelect = null,
     Object? type = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
@@ -1793,10 +1795,10 @@ class __$$KodiSettingDetailsControlListImplCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingDetailsControlListType,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -1816,7 +1818,7 @@ class _$KodiSettingDetailsControlListImpl
   const _$KodiSettingDetailsControlListImpl(
       {@JsonKey(name: 'multiselect') required this.multiSelect,
       required this.type,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
@@ -1830,7 +1832,8 @@ class _$KodiSettingDetailsControlListImpl
   @override
   final KodiSettingDetailsControlListType type;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -1876,27 +1879,27 @@ class _$KodiSettingDetailsControlListImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -1904,7 +1907,7 @@ class _$KodiSettingDetailsControlListImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -1929,27 +1932,27 @@ class _$KodiSettingDetailsControlListImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -1957,7 +1960,7 @@ class _$KodiSettingDetailsControlListImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -1982,27 +1985,27 @@ class _$KodiSettingDetailsControlListImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2010,7 +2013,7 @@ class _$KodiSettingDetailsControlListImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2094,7 +2097,7 @@ abstract class _KodiSettingDetailsControlList
   const factory _KodiSettingDetailsControlList(
       {@JsonKey(name: 'multiselect') required final bool multiSelect,
       required final KodiSettingDetailsControlListType type,
-      final String? heading,
+      final String heading,
       required final bool delayed,
       required final String format}) = _$KodiSettingDetailsControlListImpl;
 
@@ -2105,7 +2108,7 @@ abstract class _KodiSettingDetailsControlList
   bool get multiSelect;
   @override
   KodiSettingDetailsControlListType get type;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
@@ -2133,7 +2136,7 @@ abstract class _$$KodiSettingDetailsControlSliderImplCopyWith<$Res>
       {@JsonKey(name: 'formatlabel') String formatLabel,
       bool popup,
       KodiSettingDetailsControlSliderType type,
-      String? heading,
+      String heading,
       bool delayed,
       String format});
 }
@@ -2156,7 +2159,7 @@ class __$$KodiSettingDetailsControlSliderImplCopyWithImpl<$Res>
     Object? formatLabel = null,
     Object? popup = null,
     Object? type = null,
-    Object? heading = freezed,
+    Object? heading = null,
     Object? delayed = null,
     Object? format = null,
   }) {
@@ -2173,10 +2176,10 @@ class __$$KodiSettingDetailsControlSliderImplCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as KodiSettingDetailsControlSliderType,
-      heading: freezed == heading
+      heading: null == heading
           ? _value.heading
           : heading // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       delayed: null == delayed
           ? _value.delayed
           : delayed // ignore: cast_nullable_to_non_nullable
@@ -2197,7 +2200,7 @@ class _$KodiSettingDetailsControlSliderImpl
       {@JsonKey(name: 'formatlabel') required this.formatLabel,
       required this.popup,
       required this.type,
-      this.heading,
+      this.heading = '',
       required this.delayed,
       required this.format});
 
@@ -2213,7 +2216,8 @@ class _$KodiSettingDetailsControlSliderImpl
   @override
   final KodiSettingDetailsControlSliderType type;
   @override
-  final String? heading;
+  @JsonKey()
+  final String heading;
   @override
   final bool delayed;
   @override
@@ -2260,27 +2264,27 @@ class _$KodiSettingDetailsControlSliderImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -2288,7 +2292,7 @@ class _$KodiSettingDetailsControlSliderImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -2313,27 +2317,27 @@ class _$KodiSettingDetailsControlSliderImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2341,7 +2345,7 @@ class _$KodiSettingDetailsControlSliderImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2366,27 +2370,27 @@ class _$KodiSettingDetailsControlSliderImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2394,7 +2398,7 @@ class _$KodiSettingDetailsControlSliderImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2479,7 +2483,7 @@ abstract class _KodiSettingDetailsControlSlider
       {@JsonKey(name: 'formatlabel') required final String formatLabel,
       required final bool popup,
       required final KodiSettingDetailsControlSliderType type,
-      final String? heading,
+      final String heading,
       required final bool delayed,
       required final String format}) = _$KodiSettingDetailsControlSliderImpl;
 
@@ -2491,7 +2495,7 @@ abstract class _KodiSettingDetailsControlSlider
   bool get popup;
   @override
   KodiSettingDetailsControlSliderType get type;
-  String? get heading;
+  String get heading;
   @override
   bool get delayed;
   @override
@@ -2638,27 +2642,27 @@ class _$KodiSettingDetailsControlRangeImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -2666,7 +2670,7 @@ class _$KodiSettingDetailsControlRangeImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -2691,27 +2695,27 @@ class _$KodiSettingDetailsControlRangeImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2719,7 +2723,7 @@ class _$KodiSettingDetailsControlRangeImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2744,27 +2748,27 @@ class _$KodiSettingDetailsControlRangeImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -2772,7 +2776,7 @@ class _$KodiSettingDetailsControlRangeImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -2988,27 +2992,27 @@ class _$KodiSettingDetailsControlLabelImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)
         toggle,
     required TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)
         spinner,
     required TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         edit,
     required TResult Function(KodiSettingDetailsControlButtonType type,
-            String? heading, bool delayed, String format)
+            String heading, bool delayed, String format)
         button,
     required TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         list,
@@ -3016,7 +3020,7 @@ class _$KodiSettingDetailsControlLabelImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)
         slider,
@@ -3041,27 +3045,27 @@ class _$KodiSettingDetailsControlLabelImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult? Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult? Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult? Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult? Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult? Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -3069,7 +3073,7 @@ class _$KodiSettingDetailsControlLabelImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,
@@ -3094,27 +3098,27 @@ class _$KodiSettingDetailsControlLabelImpl
             KodiSettingDetailsControlCheckmarkType type, bool delayed)?
         toggle,
     TResult Function(
-            @JsonKey(name: 'formatlabel') String? formatLabel,
-            @JsonKey(name: 'minimumlabel') String? minimumLabel,
+            @JsonKey(name: 'formatlabel') String formatLabel,
+            @JsonKey(name: 'minimumlabel') String minimumLabel,
             KodiSettingDetailsControlSpinnerType type,
             bool delayed,
             String format)?
         spinner,
     TResult Function(
-            bool? hidden,
+            bool hidden,
             KodiSettingDetailsControlEditType type,
             @JsonKey(name: 'verifynewvalue') bool verifyNewValue,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         edit,
-    TResult Function(KodiSettingDetailsControlButtonType type, String? heading,
+    TResult Function(KodiSettingDetailsControlButtonType type, String heading,
             bool delayed, String format)?
         button,
     TResult Function(
             @JsonKey(name: 'multiselect') bool multiSelect,
             KodiSettingDetailsControlListType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         list,
@@ -3122,7 +3126,7 @@ class _$KodiSettingDetailsControlLabelImpl
             @JsonKey(name: 'formatlabel') String formatLabel,
             bool popup,
             KodiSettingDetailsControlSliderType type,
-            String? heading,
+            String heading,
             bool delayed,
             String format)?
         slider,

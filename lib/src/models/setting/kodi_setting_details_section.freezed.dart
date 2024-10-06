@@ -21,9 +21,9 @@ KodiSettingDetailsSection _$KodiSettingDetailsSectionFromJson(
 
 /// @nodoc
 mixin _$KodiSettingDetailsSection {
-  List<KodiSettingDetailsCategory>? get categories =>
+  Set<KodiSettingDetailsCategory>? get categories =>
       throw _privateConstructorUsedError;
-  String? get help => throw _privateConstructorUsedError;
+  String get help => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
@@ -44,8 +44,8 @@ abstract class $KodiSettingDetailsSectionCopyWith<$Res> {
       _$KodiSettingDetailsSectionCopyWithImpl<$Res, KodiSettingDetailsSection>;
   @useResult
   $Res call(
-      {List<KodiSettingDetailsCategory>? categories,
-      String? help,
+      {Set<KodiSettingDetailsCategory>? categories,
+      String help,
       String id,
       String label});
 }
@@ -67,7 +67,7 @@ class _$KodiSettingDetailsSectionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? categories = freezed,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -75,11 +75,11 @@ class _$KodiSettingDetailsSectionCopyWithImpl<$Res,
       categories: freezed == categories
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsCategory>?,
-      help: freezed == help
+              as Set<KodiSettingDetailsCategory>?,
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -102,8 +102,8 @@ abstract class _$$KodiSettingDetailsSectionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<KodiSettingDetailsCategory>? categories,
-      String? help,
+      {Set<KodiSettingDetailsCategory>? categories,
+      String help,
       String id,
       String label});
 }
@@ -124,7 +124,7 @@ class __$$KodiSettingDetailsSectionImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? categories = freezed,
-    Object? help = freezed,
+    Object? help = null,
     Object? id = null,
     Object? label = null,
   }) {
@@ -132,11 +132,11 @@ class __$$KodiSettingDetailsSectionImplCopyWithImpl<$Res>
       categories: freezed == categories
           ? _value._categories
           : categories // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsCategory>?,
-      help: freezed == help
+              as Set<KodiSettingDetailsCategory>?,
+      help: null == help
           ? _value.help
           : help // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -153,8 +153,8 @@ class __$$KodiSettingDetailsSectionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiSettingDetailsSectionImpl implements _KodiSettingDetailsSection {
   const _$KodiSettingDetailsSectionImpl(
-      {final List<KodiSettingDetailsCategory>? categories,
-      this.help,
+      {final Set<KodiSettingDetailsCategory>? categories,
+      this.help = '',
       required this.id,
       required this.label})
       : _categories = categories;
@@ -162,18 +162,19 @@ class _$KodiSettingDetailsSectionImpl implements _KodiSettingDetailsSection {
   factory _$KodiSettingDetailsSectionImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiSettingDetailsSectionImplFromJson(json);
 
-  final List<KodiSettingDetailsCategory>? _categories;
+  final Set<KodiSettingDetailsCategory>? _categories;
   @override
-  List<KodiSettingDetailsCategory>? get categories {
+  Set<KodiSettingDetailsCategory>? get categories {
     final value = _categories;
     if (value == null) return null;
-    if (_categories is EqualUnmodifiableListView) return _categories;
+    if (_categories is EqualUnmodifiableSetView) return _categories;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableSetView(value);
   }
 
   @override
-  final String? help;
+  @JsonKey()
+  final String help;
   @override
   final String id;
   @override
@@ -220,8 +221,8 @@ class _$KodiSettingDetailsSectionImpl implements _KodiSettingDetailsSection {
 
 abstract class _KodiSettingDetailsSection implements KodiSettingDetailsSection {
   const factory _KodiSettingDetailsSection(
-      {final List<KodiSettingDetailsCategory>? categories,
-      final String? help,
+      {final Set<KodiSettingDetailsCategory>? categories,
+      final String help,
       required final String id,
       required final String label}) = _$KodiSettingDetailsSectionImpl;
 
@@ -229,9 +230,9 @@ abstract class _KodiSettingDetailsSection implements KodiSettingDetailsSection {
       _$KodiSettingDetailsSectionImpl.fromJson;
 
   @override
-  List<KodiSettingDetailsCategory>? get categories;
+  Set<KodiSettingDetailsCategory>? get categories;
   @override
-  String? get help;
+  String get help;
   @override
   String get id;
   @override

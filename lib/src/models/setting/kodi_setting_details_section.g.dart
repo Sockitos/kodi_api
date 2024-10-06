@@ -12,8 +12,8 @@ _$KodiSettingDetailsSectionImpl _$$KodiSettingDetailsSectionImplFromJson(
       categories: (json['categories'] as List<dynamic>?)
           ?.map((e) =>
               KodiSettingDetailsCategory.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      help: json['help'] as String?,
+          .toSet(),
+      help: json['help'] as String? ?? '',
       id: json['id'] as String,
       label: json['label'] as String,
     );
@@ -30,7 +30,7 @@ Map<String, dynamic> _$$KodiSettingDetailsSectionImplToJson(
 
   writeNotNull(
       'categories', instance.categories?.map((e) => e.toJson()).toList());
-  writeNotNull('help', instance.help);
+  val['help'] = instance.help;
   val['id'] = instance.id;
   val['label'] = instance.label;
   return val;
