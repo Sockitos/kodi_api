@@ -29,9 +29,9 @@ _$KodiListItemFileImpl _$$KodiListItemFileImplFromJson(
       albumStatus: json['albumstatus'] as String? ?? '',
       bitrate: (json['bitrate'] as num?)?.toInt() ?? 0,
       bpm: (json['bpm'] as num?)?.toInt() ?? 0,
-      cast: json['cast'] == null
-          ? null
-          : KodiVideoCast.fromJson(json['cast'] as Map<String, dynamic>),
+      cast: (json['cast'] as List<dynamic>?)
+          ?.map((e) => KodiVideoCast.fromJson(e as Map<String, dynamic>))
+          .toList(),
       channels: (json['channels'] as num?)?.toInt() ?? 0,
       comment: json['comment'] as String? ?? '',
       compilation: json['compilation'] as bool? ?? false,
@@ -171,7 +171,7 @@ Map<String, dynamic> _$$KodiListItemFileImplToJson(
   val['albumstatus'] = instance.albumStatus;
   val['bitrate'] = instance.bitrate;
   val['bpm'] = instance.bpm;
-  writeNotNull('cast', instance.cast?.toJson());
+  writeNotNull('cast', instance.cast?.map((e) => e.toJson()).toList());
   val['channels'] = instance.channels;
   val['comment'] = instance.comment;
   val['compilation'] = instance.compilation;

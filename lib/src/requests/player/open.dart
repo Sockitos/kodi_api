@@ -35,7 +35,7 @@ class Open with _$Open implements KodiRequest<void> {
 class KodiPlayerPlayerOpenItem with _$KodiPlayerPlayerOpenItem {
   const factory KodiPlayerPlayerOpenItem.playlistIdPosition({
     @JsonKey(name: 'playlistid') required int playlistId,
-    required int position,
+    @Default(0) int position,
   }) = _KodiPlayerPlayerOpenItemPlaylistIdPosition;
 
   const factory KodiPlayerPlayerOpenItem.playlistItem(
@@ -78,29 +78,14 @@ class KodiPlayerPlayerOpenItemConverter
   @override
   Map<String, dynamic> toJson(KodiPlayerPlayerOpenItem data) =>
       data.map<Map<String, dynamic>>(
-        playlistIdPosition: (value) => <String, dynamic>{
-          'playlistid': value.playlistId,
-          'position': value.position,
-        },
+        playlistIdPosition: (value) => value.toJson(),
         playlistItem: (value) =>
             const KodiPlaylistItemConverter().toJson(value.playlistItem),
-        pathRecursive: (value) => <String, dynamic>{
-          'path': value.path,
-          'recursive': value.recursive,
-        },
-        partyMode: (value) => <String, dynamic>{
-          'partymode': const KodiPlayerPlayerOpenItemPartyModeConverter()
-              .toJson(value.partyMode),
-        },
-        broadcastId: (value) => <String, dynamic>{
-          'broadcastid': value.broadcastId,
-        },
-        channelId: (value) => <String, dynamic>{
-          'channelid': value.channelId,
-        },
-        recordingId: (value) => <String, dynamic>{
-          'recordingid': value.recordingId,
-        },
+        pathRecursive: (value) => value.toJson(),
+        partyMode: (value) => value.toJson(),
+        broadcastId: (value) => value.toJson(),
+        channelId: (value) => value.toJson(),
+        recordingId: (value) => value.toJson(),
       );
 }
 

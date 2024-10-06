@@ -47,7 +47,7 @@ Map<String, dynamic> _$$KodiPlayerSeekResponseImplToJson(
 _$KodiPlayerSeekValuePercentageImpl
     _$$KodiPlayerSeekValuePercentageImplFromJson(Map<String, dynamic> json) =>
         _$KodiPlayerSeekValuePercentageImpl(
-          percentage: (json['percentage'] as num).toDouble(),
+          (json['percentage'] as num).toDouble(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -61,8 +61,7 @@ Map<String, dynamic> _$$KodiPlayerSeekValuePercentageImplToJson(
 _$KodiPlayerSeekValueTimeImpl _$$KodiPlayerSeekValueTimeImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlayerSeekValueTimeImpl(
-      time:
-          KodiPlayerPositionTime.fromJson(json['time'] as Map<String, dynamic>),
+      KodiPlayerPositionTime.fromJson(json['time'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
@@ -76,7 +75,7 @@ Map<String, dynamic> _$$KodiPlayerSeekValueTimeImplToJson(
 _$KodiPlayerSeekValueStepImpl _$$KodiPlayerSeekValueStepImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlayerSeekValueStepImpl(
-      step: $enumDecode(_$KodiPlayerSeekStepEnumMap, json['step']),
+      $enumDecode(_$KodiPlayerSeekStepEnumMap, json['step']),
       $type: json['runtimeType'] as String?,
     );
 
@@ -97,7 +96,7 @@ const _$KodiPlayerSeekStepEnumMap = {
 _$KodiPlayerSeekValueSecondsImpl _$$KodiPlayerSeekValueSecondsImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlayerSeekValueSecondsImpl(
-      seconds: (json['seconds'] as num).toInt(),
+      (json['seconds'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 

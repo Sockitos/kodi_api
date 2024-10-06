@@ -35,8 +35,6 @@ const _$KodiPlayerActivePlayerTypeEnumMap = {
   KodiPlayerActivePlayerType.internal: 'internal',
   KodiPlayerActivePlayerType.external: 'external',
   KodiPlayerActivePlayerType.remote: 'remote',
-  KodiPlayerActivePlayerType.video: 'video',
-  KodiPlayerActivePlayerType.music: 'music',
 };
 
 const _$KodiPlayerTypeEnumMap = {

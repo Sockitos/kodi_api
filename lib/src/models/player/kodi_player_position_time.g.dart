@@ -9,10 +9,10 @@ part of 'kodi_player_position_time.dart';
 _$KodiPlayerPositionTimeImpl _$$KodiPlayerPositionTimeImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlayerPositionTimeImpl(
-      hours: (json['hours'] as num).toInt(),
-      milliseconds: (json['milliseconds'] as num).toInt(),
-      minutes: (json['minutes'] as num).toInt(),
-      seconds: (json['seconds'] as num).toInt(),
+      hours: (json['hours'] as num?)?.toInt() ?? 0,
+      milliseconds: (json['milliseconds'] as num?)?.toInt() ?? 0,
+      minutes: (json['minutes'] as num?)?.toInt() ?? 0,
+      seconds: (json['seconds'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$KodiPlayerPositionTimeImplToJson(

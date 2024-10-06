@@ -152,7 +152,7 @@ class __$$SetSubtitleImplCopyWithImpl<$Res>
 class _$SetSubtitleImpl extends _SetSubtitle {
   const _$SetSubtitleImpl(@JsonKey(name: 'playerid') this.id,
       @SetSubtitleSubtitleConverter() this.subtitle,
-      {this.enable = true})
+      {this.enable = false})
       : super._();
 
   factory _$SetSubtitleImpl.fromJson(Map<String, dynamic> json) =>

@@ -194,6 +194,7 @@ KodiJSONRPCSetConfigurationNotifications
 /// @nodoc
 mixin _$KodiJSONRPCSetConfigurationNotifications {
   bool? get application => throw _privateConstructorUsedError;
+  @JsonKey(name: 'audiolibrary')
   bool? get audioLibrary => throw _privateConstructorUsedError;
   bool? get gui => throw _privateConstructorUsedError;
   bool? get input => throw _privateConstructorUsedError;
@@ -201,6 +202,7 @@ mixin _$KodiJSONRPCSetConfigurationNotifications {
   bool? get player => throw _privateConstructorUsedError;
   bool? get playlist => throw _privateConstructorUsedError;
   bool? get system => throw _privateConstructorUsedError;
+  @JsonKey(name: 'videolibrary')
   bool? get videoLibrary => throw _privateConstructorUsedError;
 
   /// Serializes this KodiJSONRPCSetConfigurationNotifications to a JSON map.
@@ -224,14 +226,14 @@ abstract class $KodiJSONRPCSetConfigurationNotificationsCopyWith<$Res> {
   @useResult
   $Res call(
       {bool? application,
-      bool? audioLibrary,
+      @JsonKey(name: 'audiolibrary') bool? audioLibrary,
       bool? gui,
       bool? input,
       bool? other,
       bool? player,
       bool? playlist,
       bool? system,
-      bool? videoLibrary});
+      @JsonKey(name: 'videolibrary') bool? videoLibrary});
 }
 
 /// @nodoc
@@ -313,14 +315,14 @@ abstract class _$$KodiJSONRPCSetConfigurationNotificationsImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool? application,
-      bool? audioLibrary,
+      @JsonKey(name: 'audiolibrary') bool? audioLibrary,
       bool? gui,
       bool? input,
       bool? other,
       bool? player,
       bool? playlist,
       bool? system,
-      bool? videoLibrary});
+      @JsonKey(name: 'videolibrary') bool? videoLibrary});
 }
 
 /// @nodoc
@@ -395,14 +397,14 @@ class _$KodiJSONRPCSetConfigurationNotificationsImpl
     implements _KodiJSONRPCSetConfigurationNotifications {
   const _$KodiJSONRPCSetConfigurationNotificationsImpl(
       {this.application,
-      this.audioLibrary,
+      @JsonKey(name: 'audiolibrary') this.audioLibrary,
       this.gui,
       this.input,
       this.other,
       this.player,
       this.playlist,
       this.system,
-      this.videoLibrary});
+      @JsonKey(name: 'videolibrary') this.videoLibrary});
 
   factory _$KodiJSONRPCSetConfigurationNotificationsImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -411,6 +413,7 @@ class _$KodiJSONRPCSetConfigurationNotificationsImpl
   @override
   final bool? application;
   @override
+  @JsonKey(name: 'audiolibrary')
   final bool? audioLibrary;
   @override
   final bool? gui;
@@ -425,6 +428,7 @@ class _$KodiJSONRPCSetConfigurationNotificationsImpl
   @override
   final bool? system;
   @override
+  @JsonKey(name: 'videolibrary')
   final bool? videoLibrary;
 
   @override
@@ -480,14 +484,14 @@ abstract class _KodiJSONRPCSetConfigurationNotifications
     implements KodiJSONRPCSetConfigurationNotifications {
   const factory _KodiJSONRPCSetConfigurationNotifications(
           {final bool? application,
-          final bool? audioLibrary,
+          @JsonKey(name: 'audiolibrary') final bool? audioLibrary,
           final bool? gui,
           final bool? input,
           final bool? other,
           final bool? player,
           final bool? playlist,
           final bool? system,
-          final bool? videoLibrary}) =
+          @JsonKey(name: 'videolibrary') final bool? videoLibrary}) =
       _$KodiJSONRPCSetConfigurationNotificationsImpl;
 
   factory _KodiJSONRPCSetConfigurationNotifications.fromJson(
@@ -497,6 +501,7 @@ abstract class _KodiJSONRPCSetConfigurationNotifications
   @override
   bool? get application;
   @override
+  @JsonKey(name: 'audiolibrary')
   bool? get audioLibrary;
   @override
   bool? get gui;
@@ -511,6 +516,7 @@ abstract class _KodiJSONRPCSetConfigurationNotifications
   @override
   bool? get system;
   @override
+  @JsonKey(name: 'videolibrary')
   bool? get videoLibrary;
 
   /// Create a copy of KodiJSONRPCSetConfigurationNotifications

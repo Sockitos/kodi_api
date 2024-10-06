@@ -10,7 +10,7 @@ _$SetSubtitleImpl _$$SetSubtitleImplFromJson(Map<String, dynamic> json) =>
     _$SetSubtitleImpl(
       (json['playerid'] as num).toInt(),
       const SetSubtitleSubtitleConverter().fromJson(json['subtitle']),
-      enable: json['enable'] as bool? ?? true,
+      enable: json['enable'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$SetSubtitleImplToJson(_$SetSubtitleImpl instance) {

@@ -25,8 +25,9 @@ _$KodiPlaylistItemDirectoryMediaRecursiveImpl
             Map<String, dynamic> json) =>
         _$KodiPlaylistItemDirectoryMediaRecursiveImpl(
           directory: json['directory'] as String,
-          media: $enumDecode(_$KodiFilesMediaEnumMap, json['media']),
-          recursive: json['recursive'] as bool,
+          media: $enumDecodeNullable(_$KodiFilesMediaEnumMap, json['media']) ??
+              KodiFilesMedia.files,
+          recursive: json['recursive'] as bool? ?? false,
           $type: json['runtimeType'] as String?,
         );
 
@@ -50,97 +51,97 @@ const _$KodiFilesMediaEnumMap = {
 _$KodiPlaylistItemMovieIdImpl _$$KodiPlaylistItemMovieIdImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemMovieIdImpl(
-      movieId: (json['movie_id'] as num).toInt(),
+      (json['movieid'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$KodiPlaylistItemMovieIdImplToJson(
         _$KodiPlaylistItemMovieIdImpl instance) =>
     <String, dynamic>{
-      'movie_id': instance.movieId,
+      'movieid': instance.movieId,
       'runtimeType': instance.$type,
     };
 
 _$KodiPlaylistItemEpisodeIdImpl _$$KodiPlaylistItemEpisodeIdImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemEpisodeIdImpl(
-      episodeId: (json['episode_id'] as num).toInt(),
+      (json['episodeid'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$KodiPlaylistItemEpisodeIdImplToJson(
         _$KodiPlaylistItemEpisodeIdImpl instance) =>
     <String, dynamic>{
-      'episode_id': instance.episodeId,
+      'episodeid': instance.episodeId,
       'runtimeType': instance.$type,
     };
 
 _$KodiPlaylistItemMusicVideoIdImpl _$$KodiPlaylistItemMusicVideoIdImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemMusicVideoIdImpl(
-      musicVideoid: (json['music_videoid'] as num).toInt(),
+      (json['musicvideoid'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$KodiPlaylistItemMusicVideoIdImplToJson(
         _$KodiPlaylistItemMusicVideoIdImpl instance) =>
     <String, dynamic>{
-      'music_videoid': instance.musicVideoid,
+      'musicvideoid': instance.musicVideoId,
       'runtimeType': instance.$type,
     };
 
 _$KodiPlaylistItemArtistIdImpl _$$KodiPlaylistItemArtistIdImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemArtistIdImpl(
-      artistId: (json['artist_id'] as num).toInt(),
+      (json['artistid'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$KodiPlaylistItemArtistIdImplToJson(
         _$KodiPlaylistItemArtistIdImpl instance) =>
     <String, dynamic>{
-      'artist_id': instance.artistId,
+      'artistid': instance.artistId,
       'runtimeType': instance.$type,
     };
 
 _$KodiPlaylistItemAlbumIdImpl _$$KodiPlaylistItemAlbumIdImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemAlbumIdImpl(
-      albumId: (json['album_id'] as num).toInt(),
+      (json['albumid'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$KodiPlaylistItemAlbumIdImplToJson(
         _$KodiPlaylistItemAlbumIdImpl instance) =>
     <String, dynamic>{
-      'album_id': instance.albumId,
+      'albumid': instance.albumId,
       'runtimeType': instance.$type,
     };
 
 _$KodiPlaylistItemSongIdImpl _$$KodiPlaylistItemSongIdImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemSongIdImpl(
-      songId: (json['song_id'] as num).toInt(),
+      (json['songid'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$KodiPlaylistItemSongIdImplToJson(
         _$KodiPlaylistItemSongIdImpl instance) =>
     <String, dynamic>{
-      'song_id': instance.songId,
+      'songid': instance.songId,
       'runtimeType': instance.$type,
     };
 
 _$KodiPlaylistItemGenreIdImpl _$$KodiPlaylistItemGenreIdImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemGenreIdImpl(
-      genreId: (json['genre_id'] as num).toInt(),
+      (json['genreid'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$KodiPlaylistItemGenreIdImplToJson(
         _$KodiPlaylistItemGenreIdImpl instance) =>
     <String, dynamic>{
-      'genre_id': instance.genreId,
+      'genreid': instance.genreId,
       'runtimeType': instance.$type,
     };

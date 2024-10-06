@@ -6,6 +6,7 @@ import 'package:example/ui/screens/files/files_screen.dart';
 import 'package:example/ui/screens/gui/gui_screen.dart';
 import 'package:example/ui/screens/input/input_screen.dart';
 import 'package:example/ui/screens/jsonrpc/jsonrpc_screen.dart';
+import 'package:example/ui/screens/player/player_screen.dart';
 import 'package:example/ui/screens/pvr/pvr_screen.dart';
 import 'package:example/ui/widgets/app_button.dart';
 import 'package:flutter/material.dart';
@@ -123,6 +124,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 label: 'PVR',
+              ),
+              AppButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const PlayerScreen(),
+                  ),
+                ),
+                label: 'Player',
               ),
             ],
           ),

@@ -39,15 +39,15 @@ Map<String, dynamic> _$$KodiPlayerSpeedImplToJson(
       'speed': instance.speed,
     };
 
-_$SetSpeedSpeedAbsImpl _$$SetSpeedSpeedAbsImplFromJson(
+_$SetSpeedSpeedStepImpl _$$SetSpeedSpeedStepImplFromJson(
         Map<String, dynamic> json) =>
-    _$SetSpeedSpeedAbsImpl(
+    _$SetSpeedSpeedStepImpl(
       $enumDecode(_$KodiPlayerSpeedStepEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SetSpeedSpeedAbsImplToJson(
-        _$SetSpeedSpeedAbsImpl instance) =>
+Map<String, dynamic> _$$SetSpeedSpeedStepImplToJson(
+        _$SetSpeedSpeedStepImpl instance) =>
     <String, dynamic>{
       'value': _$KodiPlayerSpeedStepEnumMap[instance.value]!,
       'runtimeType': instance.$type,

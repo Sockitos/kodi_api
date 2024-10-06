@@ -360,8 +360,8 @@ abstract class _KodiPlayerSpeed implements KodiPlayerSpeed {
 
 SetSpeedSpeed _$SetSpeedSpeedFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
-    case 'abs':
-      return _SetSpeedSpeedAbs.fromJson(json);
+    case 'step':
+      return _SetSpeedSpeedStep.fromJson(json);
     case 'enumerator':
       return _SetSpeedSpeedEnum.fromJson(json);
 
@@ -376,38 +376,38 @@ mixin _$SetSpeedSpeed {
   Enum get value => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(KodiPlayerSpeedStep value) abs,
+    required TResult Function(KodiPlayerSpeedStep value) step,
     required TResult Function(KodiGlobalIncrementDecrement value) enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(KodiPlayerSpeedStep value)? abs,
+    TResult? Function(KodiPlayerSpeedStep value)? step,
     TResult? Function(KodiGlobalIncrementDecrement value)? enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(KodiPlayerSpeedStep value)? abs,
+    TResult Function(KodiPlayerSpeedStep value)? step,
     TResult Function(KodiGlobalIncrementDecrement value)? enumerator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SetSpeedSpeedAbs value) abs,
+    required TResult Function(_SetSpeedSpeedStep value) step,
     required TResult Function(_SetSpeedSpeedEnum value) enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SetSpeedSpeedAbs value)? abs,
+    TResult? Function(_SetSpeedSpeedStep value)? step,
     TResult? Function(_SetSpeedSpeedEnum value)? enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SetSpeedSpeedAbs value)? abs,
+    TResult Function(_SetSpeedSpeedStep value)? step,
     TResult Function(_SetSpeedSpeedEnum value)? enumerator,
     required TResult orElse(),
   }) =>
@@ -439,20 +439,20 @@ class _$SetSpeedSpeedCopyWithImpl<$Res, $Val extends SetSpeedSpeed>
 }
 
 /// @nodoc
-abstract class _$$SetSpeedSpeedAbsImplCopyWith<$Res> {
-  factory _$$SetSpeedSpeedAbsImplCopyWith(_$SetSpeedSpeedAbsImpl value,
-          $Res Function(_$SetSpeedSpeedAbsImpl) then) =
-      __$$SetSpeedSpeedAbsImplCopyWithImpl<$Res>;
+abstract class _$$SetSpeedSpeedStepImplCopyWith<$Res> {
+  factory _$$SetSpeedSpeedStepImplCopyWith(_$SetSpeedSpeedStepImpl value,
+          $Res Function(_$SetSpeedSpeedStepImpl) then) =
+      __$$SetSpeedSpeedStepImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerSpeedStep value});
 }
 
 /// @nodoc
-class __$$SetSpeedSpeedAbsImplCopyWithImpl<$Res>
-    extends _$SetSpeedSpeedCopyWithImpl<$Res, _$SetSpeedSpeedAbsImpl>
-    implements _$$SetSpeedSpeedAbsImplCopyWith<$Res> {
-  __$$SetSpeedSpeedAbsImplCopyWithImpl(_$SetSpeedSpeedAbsImpl _value,
-      $Res Function(_$SetSpeedSpeedAbsImpl) _then)
+class __$$SetSpeedSpeedStepImplCopyWithImpl<$Res>
+    extends _$SetSpeedSpeedCopyWithImpl<$Res, _$SetSpeedSpeedStepImpl>
+    implements _$$SetSpeedSpeedStepImplCopyWith<$Res> {
+  __$$SetSpeedSpeedStepImplCopyWithImpl(_$SetSpeedSpeedStepImpl _value,
+      $Res Function(_$SetSpeedSpeedStepImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SetSpeedSpeed
@@ -462,7 +462,7 @@ class __$$SetSpeedSpeedAbsImplCopyWithImpl<$Res>
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$SetSpeedSpeedAbsImpl(
+    return _then(_$SetSpeedSpeedStepImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -473,12 +473,12 @@ class __$$SetSpeedSpeedAbsImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SetSpeedSpeedAbsImpl implements _SetSpeedSpeedAbs {
-  const _$SetSpeedSpeedAbsImpl(this.value, {final String? $type})
-      : $type = $type ?? 'abs';
+class _$SetSpeedSpeedStepImpl implements _SetSpeedSpeedStep {
+  const _$SetSpeedSpeedStepImpl(this.value, {final String? $type})
+      : $type = $type ?? 'step';
 
-  factory _$SetSpeedSpeedAbsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SetSpeedSpeedAbsImplFromJson(json);
+  factory _$SetSpeedSpeedStepImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSpeedSpeedStepImplFromJson(json);
 
   @override
   final KodiPlayerSpeedStep value;
@@ -488,14 +488,14 @@ class _$SetSpeedSpeedAbsImpl implements _SetSpeedSpeedAbs {
 
   @override
   String toString() {
-    return 'SetSpeedSpeed.abs(value: $value)';
+    return 'SetSpeedSpeed.step(value: $value)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SetSpeedSpeedAbsImpl &&
+            other is _$SetSpeedSpeedStepImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
@@ -508,37 +508,37 @@ class _$SetSpeedSpeedAbsImpl implements _SetSpeedSpeedAbs {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SetSpeedSpeedAbsImplCopyWith<_$SetSpeedSpeedAbsImpl> get copyWith =>
-      __$$SetSpeedSpeedAbsImplCopyWithImpl<_$SetSpeedSpeedAbsImpl>(
+  _$$SetSpeedSpeedStepImplCopyWith<_$SetSpeedSpeedStepImpl> get copyWith =>
+      __$$SetSpeedSpeedStepImplCopyWithImpl<_$SetSpeedSpeedStepImpl>(
           this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(KodiPlayerSpeedStep value) abs,
+    required TResult Function(KodiPlayerSpeedStep value) step,
     required TResult Function(KodiGlobalIncrementDecrement value) enumerator,
   }) {
-    return abs(value);
+    return step(value);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(KodiPlayerSpeedStep value)? abs,
+    TResult? Function(KodiPlayerSpeedStep value)? step,
     TResult? Function(KodiGlobalIncrementDecrement value)? enumerator,
   }) {
-    return abs?.call(value);
+    return step?.call(value);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(KodiPlayerSpeedStep value)? abs,
+    TResult Function(KodiPlayerSpeedStep value)? step,
     TResult Function(KodiGlobalIncrementDecrement value)? enumerator,
     required TResult orElse(),
   }) {
-    if (abs != null) {
-      return abs(value);
+    if (step != null) {
+      return step(value);
     }
     return orElse();
   }
@@ -546,48 +546,48 @@ class _$SetSpeedSpeedAbsImpl implements _SetSpeedSpeedAbs {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SetSpeedSpeedAbs value) abs,
+    required TResult Function(_SetSpeedSpeedStep value) step,
     required TResult Function(_SetSpeedSpeedEnum value) enumerator,
   }) {
-    return abs(this);
+    return step(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SetSpeedSpeedAbs value)? abs,
+    TResult? Function(_SetSpeedSpeedStep value)? step,
     TResult? Function(_SetSpeedSpeedEnum value)? enumerator,
   }) {
-    return abs?.call(this);
+    return step?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SetSpeedSpeedAbs value)? abs,
+    TResult Function(_SetSpeedSpeedStep value)? step,
     TResult Function(_SetSpeedSpeedEnum value)? enumerator,
     required TResult orElse(),
   }) {
-    if (abs != null) {
-      return abs(this);
+    if (step != null) {
+      return step(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SetSpeedSpeedAbsImplToJson(
+    return _$$SetSpeedSpeedStepImplToJson(
       this,
     );
   }
 }
 
-abstract class _SetSpeedSpeedAbs implements SetSpeedSpeed {
-  const factory _SetSpeedSpeedAbs(final KodiPlayerSpeedStep value) =
-      _$SetSpeedSpeedAbsImpl;
+abstract class _SetSpeedSpeedStep implements SetSpeedSpeed {
+  const factory _SetSpeedSpeedStep(final KodiPlayerSpeedStep value) =
+      _$SetSpeedSpeedStepImpl;
 
-  factory _SetSpeedSpeedAbs.fromJson(Map<String, dynamic> json) =
-      _$SetSpeedSpeedAbsImpl.fromJson;
+  factory _SetSpeedSpeedStep.fromJson(Map<String, dynamic> json) =
+      _$SetSpeedSpeedStepImpl.fromJson;
 
   @override
   KodiPlayerSpeedStep get value;
@@ -595,7 +595,7 @@ abstract class _SetSpeedSpeedAbs implements SetSpeedSpeed {
   /// Create a copy of SetSpeedSpeed
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SetSpeedSpeedAbsImplCopyWith<_$SetSpeedSpeedAbsImpl> get copyWith =>
+  _$$SetSpeedSpeedStepImplCopyWith<_$SetSpeedSpeedStepImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -676,7 +676,7 @@ class _$SetSpeedSpeedEnumImpl implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(KodiPlayerSpeedStep value) abs,
+    required TResult Function(KodiPlayerSpeedStep value) step,
     required TResult Function(KodiGlobalIncrementDecrement value) enumerator,
   }) {
     return enumerator(value);
@@ -685,7 +685,7 @@ class _$SetSpeedSpeedEnumImpl implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(KodiPlayerSpeedStep value)? abs,
+    TResult? Function(KodiPlayerSpeedStep value)? step,
     TResult? Function(KodiGlobalIncrementDecrement value)? enumerator,
   }) {
     return enumerator?.call(value);
@@ -694,7 +694,7 @@ class _$SetSpeedSpeedEnumImpl implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(KodiPlayerSpeedStep value)? abs,
+    TResult Function(KodiPlayerSpeedStep value)? step,
     TResult Function(KodiGlobalIncrementDecrement value)? enumerator,
     required TResult orElse(),
   }) {
@@ -707,7 +707,7 @@ class _$SetSpeedSpeedEnumImpl implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SetSpeedSpeedAbs value) abs,
+    required TResult Function(_SetSpeedSpeedStep value) step,
     required TResult Function(_SetSpeedSpeedEnum value) enumerator,
   }) {
     return enumerator(this);
@@ -716,7 +716,7 @@ class _$SetSpeedSpeedEnumImpl implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SetSpeedSpeedAbs value)? abs,
+    TResult? Function(_SetSpeedSpeedStep value)? step,
     TResult? Function(_SetSpeedSpeedEnum value)? enumerator,
   }) {
     return enumerator?.call(this);
@@ -725,7 +725,7 @@ class _$SetSpeedSpeedEnumImpl implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SetSpeedSpeedAbs value)? abs,
+    TResult Function(_SetSpeedSpeedStep value)? step,
     TResult Function(_SetSpeedSpeedEnum value)? enumerator,
     required TResult orElse(),
   }) {

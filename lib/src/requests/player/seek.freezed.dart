@@ -560,7 +560,7 @@ class __$$KodiPlayerSeekValuePercentageImplCopyWithImpl<$Res>
     Object? percentage = null,
   }) {
     return _then(_$KodiPlayerSeekValuePercentageImpl(
-      percentage: null == percentage
+      null == percentage
           ? _value.percentage
           : percentage // ignore: cast_nullable_to_non_nullable
               as double,
@@ -572,8 +572,8 @@ class __$$KodiPlayerSeekValuePercentageImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiPlayerSeekValuePercentageImpl
     implements KodiPlayerSeekValuePercentage {
-  const _$KodiPlayerSeekValuePercentageImpl(
-      {required this.percentage, final String? $type})
+  const _$KodiPlayerSeekValuePercentageImpl(this.percentage,
+      {final String? $type})
       : $type = $type ?? 'percentage';
 
   factory _$KodiPlayerSeekValuePercentageImpl.fromJson(
@@ -697,8 +697,8 @@ class _$KodiPlayerSeekValuePercentageImpl
 }
 
 abstract class KodiPlayerSeekValuePercentage implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValuePercentage(
-      {required final double percentage}) = _$KodiPlayerSeekValuePercentageImpl;
+  const factory KodiPlayerSeekValuePercentage(final double percentage) =
+      _$KodiPlayerSeekValuePercentageImpl;
 
   factory KodiPlayerSeekValuePercentage.fromJson(Map<String, dynamic> json) =
       _$KodiPlayerSeekValuePercentageImpl.fromJson;
@@ -743,7 +743,7 @@ class __$$KodiPlayerSeekValueTimeImplCopyWithImpl<$Res>
     Object? time = null,
   }) {
     return _then(_$KodiPlayerSeekValueTimeImpl(
-      time: null == time
+      null == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as KodiPlayerPositionTime,
@@ -764,7 +764,7 @@ class __$$KodiPlayerSeekValueTimeImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlayerSeekValueTimeImpl implements KodiPlayerSeekValueTime {
-  const _$KodiPlayerSeekValueTimeImpl({required this.time, final String? $type})
+  const _$KodiPlayerSeekValueTimeImpl(this.time, {final String? $type})
       : $type = $type ?? 'time';
 
   factory _$KodiPlayerSeekValueTimeImpl.fromJson(Map<String, dynamic> json) =>
@@ -885,8 +885,7 @@ class _$KodiPlayerSeekValueTimeImpl implements KodiPlayerSeekValueTime {
 }
 
 abstract class KodiPlayerSeekValueTime implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValueTime(
-          {required final KodiPlayerPositionTime time}) =
+  const factory KodiPlayerSeekValueTime(final KodiPlayerPositionTime time) =
       _$KodiPlayerSeekValueTimeImpl;
 
   factory KodiPlayerSeekValueTime.fromJson(Map<String, dynamic> json) =
@@ -929,7 +928,7 @@ class __$$KodiPlayerSeekValueStepImplCopyWithImpl<$Res>
     Object? step = null,
   }) {
     return _then(_$KodiPlayerSeekValueStepImpl(
-      step: null == step
+      null == step
           ? _value.step
           : step // ignore: cast_nullable_to_non_nullable
               as KodiPlayerSeekStep,
@@ -940,7 +939,7 @@ class __$$KodiPlayerSeekValueStepImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlayerSeekValueStepImpl implements KodiPlayerSeekValueStep {
-  const _$KodiPlayerSeekValueStepImpl({required this.step, final String? $type})
+  const _$KodiPlayerSeekValueStepImpl(this.step, {final String? $type})
       : $type = $type ?? 'step';
 
   factory _$KodiPlayerSeekValueStepImpl.fromJson(Map<String, dynamic> json) =>
@@ -1061,8 +1060,8 @@ class _$KodiPlayerSeekValueStepImpl implements KodiPlayerSeekValueStep {
 }
 
 abstract class KodiPlayerSeekValueStep implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValueStep(
-      {required final KodiPlayerSeekStep step}) = _$KodiPlayerSeekValueStepImpl;
+  const factory KodiPlayerSeekValueStep(final KodiPlayerSeekStep step) =
+      _$KodiPlayerSeekValueStepImpl;
 
   factory KodiPlayerSeekValueStep.fromJson(Map<String, dynamic> json) =
       _$KodiPlayerSeekValueStepImpl.fromJson;
@@ -1104,7 +1103,7 @@ class __$$KodiPlayerSeekValueSecondsImplCopyWithImpl<$Res>
     Object? seconds = null,
   }) {
     return _then(_$KodiPlayerSeekValueSecondsImpl(
-      seconds: null == seconds
+      null == seconds
           ? _value.seconds
           : seconds // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1115,8 +1114,7 @@ class __$$KodiPlayerSeekValueSecondsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlayerSeekValueSecondsImpl implements KodiPlayerSeekValueSeconds {
-  const _$KodiPlayerSeekValueSecondsImpl(
-      {required this.seconds, final String? $type})
+  const _$KodiPlayerSeekValueSecondsImpl(this.seconds, {final String? $type})
       : $type = $type ?? 'seconds';
 
   factory _$KodiPlayerSeekValueSecondsImpl.fromJson(
@@ -1238,7 +1236,7 @@ class _$KodiPlayerSeekValueSecondsImpl implements KodiPlayerSeekValueSeconds {
 }
 
 abstract class KodiPlayerSeekValueSeconds implements KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValueSeconds({required final int seconds}) =
+  const factory KodiPlayerSeekValueSeconds(final int seconds) =
       _$KodiPlayerSeekValueSecondsImpl;
 
   factory KodiPlayerSeekValueSeconds.fromJson(Map<String, dynamic> json) =

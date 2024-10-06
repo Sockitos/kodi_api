@@ -35,7 +35,7 @@ _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl
             Map<String, dynamic> json) =>
         _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl(
           playlistId: (json['playlistid'] as num).toInt(),
-          position: (json['position'] as num).toInt(),
+          position: (json['position'] as num?)?.toInt() ?? 0,
           $type: json['runtimeType'] as String?,
         );
 

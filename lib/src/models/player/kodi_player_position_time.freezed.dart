@@ -144,21 +144,25 @@ class __$$KodiPlayerPositionTimeImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiPlayerPositionTimeImpl implements _KodiPlayerPositionTime {
   const _$KodiPlayerPositionTimeImpl(
-      {required this.hours,
-      required this.milliseconds,
-      required this.minutes,
-      required this.seconds});
+      {this.hours = 0,
+      this.milliseconds = 0,
+      this.minutes = 0,
+      this.seconds = 0});
 
   factory _$KodiPlayerPositionTimeImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlayerPositionTimeImplFromJson(json);
 
   @override
+  @JsonKey()
   final int hours;
   @override
+  @JsonKey()
   final int milliseconds;
   @override
+  @JsonKey()
   final int minutes;
   @override
+  @JsonKey()
   final int seconds;
 
   @override
@@ -202,10 +206,10 @@ class _$KodiPlayerPositionTimeImpl implements _KodiPlayerPositionTime {
 
 abstract class _KodiPlayerPositionTime implements KodiPlayerPositionTime {
   const factory _KodiPlayerPositionTime(
-      {required final int hours,
-      required final int milliseconds,
-      required final int minutes,
-      required final int seconds}) = _$KodiPlayerPositionTimeImpl;
+      {final int hours,
+      final int milliseconds,
+      final int minutes,
+      final int seconds}) = _$KodiPlayerPositionTimeImpl;
 
   factory _KodiPlayerPositionTime.fromJson(Map<String, dynamic> json) =
       _$KodiPlayerPositionTimeImpl.fromJson;

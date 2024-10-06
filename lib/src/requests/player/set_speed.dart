@@ -63,9 +63,9 @@ enum KodiPlayerSpeedStep {
 
 @freezed
 class SetSpeedSpeed with _$SetSpeedSpeed {
-  const factory SetSpeedSpeed.abs(
+  const factory SetSpeedSpeed.step(
     KodiPlayerSpeedStep value,
-  ) = _SetSpeedSpeedAbs;
+  ) = _SetSpeedSpeedStep;
 
   const factory SetSpeedSpeed.enumerator(
     KodiGlobalIncrementDecrement value,
@@ -83,7 +83,7 @@ class SetSpeedSpeedConverter implements JsonConverter<SetSpeedSpeed, dynamic> {
 
   @override
   dynamic toJson(SetSpeedSpeed data) => data.when(
-        abs: (value) => value.value,
+        step: (value) => value.value,
         enumerator: (value) => value.name,
       );
 }

@@ -26,18 +26,6 @@ Map<String, dynamic> _$$GoToImplToJson(_$GoToImpl instance) {
   return val;
 }
 
-_$GoToToAbsImpl _$$GoToToAbsImplFromJson(Map<String, dynamic> json) =>
-    _$GoToToAbsImpl(
-      (json['value'] as num).toInt(),
-      $type: json['runtimeType'] as String?,
-    );
-
-Map<String, dynamic> _$$GoToToAbsImplToJson(_$GoToToAbsImpl instance) =>
-    <String, dynamic>{
-      'value': instance.value,
-      'runtimeType': instance.$type,
-    };
-
 _$GoToToEnumImpl _$$GoToToEnumImplFromJson(Map<String, dynamic> json) =>
     _$GoToToEnumImpl(
       $enumDecode(_$KodiPlayerGoToToEnumMap, json['value']),
@@ -54,3 +42,17 @@ const _$KodiPlayerGoToToEnumMap = {
   KodiPlayerGoToTo.previous: 'previous',
   KodiPlayerGoToTo.next: 'next',
 };
+
+_$GoToToPlaylistPosImpl _$$GoToToPlaylistPosImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GoToToPlaylistPosImpl(
+      (json['value'] as num).toInt(),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$GoToToPlaylistPosImplToJson(
+        _$GoToToPlaylistPosImpl instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+      'runtimeType': instance.$type,
+    };

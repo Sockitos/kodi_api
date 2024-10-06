@@ -44,7 +44,7 @@ mixin _$KodiListItemFile {
   String get albumStatus => throw _privateConstructorUsedError;
   int get bitrate => throw _privateConstructorUsedError;
   int get bpm => throw _privateConstructorUsedError;
-  KodiVideoCast? get cast => throw _privateConstructorUsedError;
+  List<KodiVideoCast>? get cast => throw _privateConstructorUsedError;
   int get channels => throw _privateConstructorUsedError;
   String get comment => throw _privateConstructorUsedError;
   bool get compilation => throw _privateConstructorUsedError;
@@ -200,7 +200,7 @@ abstract class $KodiListItemFileCopyWith<$Res> {
       @JsonKey(name: 'albumstatus') String albumStatus,
       int bitrate,
       int bpm,
-      KodiVideoCast? cast,
+      List<KodiVideoCast>? cast,
       int channels,
       String comment,
       bool compilation,
@@ -283,7 +283,6 @@ abstract class $KodiListItemFileCopyWith<$Res> {
       int year,
       List<String>? genre});
 
-  $KodiVideoCastCopyWith<$Res>? get cast;
   $KodiAudioContributorsCopyWith<$Res>? get contributors;
   $KodiVideoResumeCopyWith<$Res>? get resume;
   $KodiVideoStreamsCopyWith<$Res>? get streamDetails;
@@ -461,7 +460,7 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
       cast: freezed == cast
           ? _value.cast
           : cast // ignore: cast_nullable_to_non_nullable
-              as KodiVideoCast?,
+              as List<KodiVideoCast>?,
       channels: null == channels
           ? _value.channels
           : channels // ignore: cast_nullable_to_non_nullable
@@ -789,20 +788,6 @@ class _$KodiListItemFileCopyWithImpl<$Res, $Val extends KodiListItemFile>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiVideoCastCopyWith<$Res>? get cast {
-    if (_value.cast == null) {
-      return null;
-    }
-
-    return $KodiVideoCastCopyWith<$Res>(_value.cast!, (value) {
-      return _then(_value.copyWith(cast: value) as $Val);
-    });
-  }
-
-  /// Create a copy of KodiListItemFile
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
   $KodiAudioContributorsCopyWith<$Res>? get contributors {
     if (_value.contributors == null) {
       return null;
@@ -880,7 +865,7 @@ abstract class _$$KodiListItemFileImplCopyWith<$Res>
       @JsonKey(name: 'albumstatus') String albumStatus,
       int bitrate,
       int bpm,
-      KodiVideoCast? cast,
+      List<KodiVideoCast>? cast,
       int channels,
       String comment,
       bool compilation,
@@ -963,8 +948,6 @@ abstract class _$$KodiListItemFileImplCopyWith<$Res>
       int year,
       List<String>? genre});
 
-  @override
-  $KodiVideoCastCopyWith<$Res>? get cast;
   @override
   $KodiAudioContributorsCopyWith<$Res>? get contributors;
   @override
@@ -1142,9 +1125,9 @@ class __$$KodiListItemFileImplCopyWithImpl<$Res>
           : bpm // ignore: cast_nullable_to_non_nullable
               as int,
       cast: freezed == cast
-          ? _value.cast
+          ? _value._cast
           : cast // ignore: cast_nullable_to_non_nullable
-              as KodiVideoCast?,
+              as List<KodiVideoCast>?,
       channels: null == channels
           ? _value.channels
           : channels // ignore: cast_nullable_to_non_nullable
@@ -1489,7 +1472,7 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
       @JsonKey(name: 'albumstatus') this.albumStatus = '',
       this.bitrate = 0,
       this.bpm = 0,
-      this.cast,
+      final List<KodiVideoCast>? cast,
       this.channels = 0,
       this.comment = '',
       this.compilation = false,
@@ -1576,6 +1559,7 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
       final List<String>? genre})
       : _albumArtist = albumArtist,
         _albumArtistId = albumArtistId,
+        _cast = cast,
         _country = country,
         _customProperties = customProperties,
         _mood = mood,
@@ -1653,8 +1637,16 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
   @override
   @JsonKey()
   final int bpm;
+  final List<KodiVideoCast>? _cast;
   @override
-  final KodiVideoCast? cast;
+  List<KodiVideoCast>? get cast {
+    final value = _cast;
+    if (value == null) return null;
+    if (_cast is EqualUnmodifiableListView) return _cast;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey()
   final int channels;
@@ -2042,7 +2034,7 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
                 other.albumStatus == albumStatus) &&
             (identical(other.bitrate, bitrate) || other.bitrate == bitrate) &&
             (identical(other.bpm, bpm) || other.bpm == bpm) &&
-            (identical(other.cast, cast) || other.cast == cast) &&
+            const DeepCollectionEquality().equals(other._cast, _cast) &&
             (identical(other.channels, channels) ||
                 other.channels == channels) &&
             (identical(other.comment, comment) || other.comment == comment) &&
@@ -2178,7 +2170,7 @@ class _$KodiListItemFileImpl implements _KodiListItemFile {
         albumStatus,
         bitrate,
         bpm,
-        cast,
+        const DeepCollectionEquality().hash(_cast),
         channels,
         comment,
         compilation,
@@ -2295,7 +2287,7 @@ abstract class _KodiListItemFile implements KodiListItemFile {
       @JsonKey(name: 'albumstatus') final String albumStatus,
       final int bitrate,
       final int bpm,
-      final KodiVideoCast? cast,
+      final List<KodiVideoCast>? cast,
       final int channels,
       final String comment,
       final bool compilation,
@@ -2421,7 +2413,7 @@ abstract class _KodiListItemFile implements KodiListItemFile {
   @override
   int get bpm;
   @override
-  KodiVideoCast? get cast;
+  List<KodiVideoCast>? get cast;
   @override
   int get channels;
   @override

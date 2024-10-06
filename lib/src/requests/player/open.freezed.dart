@@ -430,7 +430,7 @@ class _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl
     implements _KodiPlayerPlayerOpenItemPlaylistIdPosition {
   const _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl(
       {@JsonKey(name: 'playlistid') required this.playlistId,
-      required this.position,
+      this.position = 0,
       final String? $type})
       : $type = $type ?? 'playlistIdPosition';
 
@@ -442,6 +442,7 @@ class _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl
   @JsonKey(name: 'playlistid')
   final int playlistId;
   @override
+  @JsonKey()
   final int position;
 
   @JsonKey(name: 'runtimeType')
@@ -621,9 +622,8 @@ class _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl
 abstract class _KodiPlayerPlayerOpenItemPlaylistIdPosition
     implements KodiPlayerPlayerOpenItem {
   const factory _KodiPlayerPlayerOpenItemPlaylistIdPosition(
-          {@JsonKey(name: 'playlistid') required final int playlistId,
-          required final int position}) =
-      _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl;
+      {@JsonKey(name: 'playlistid') required final int playlistId,
+      final int position}) = _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl;
 
   factory _KodiPlayerPlayerOpenItemPlaylistIdPosition.fromJson(
           Map<String, dynamic> json) =

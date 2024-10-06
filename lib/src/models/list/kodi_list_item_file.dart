@@ -31,7 +31,7 @@ class KodiListItemFile with _$KodiListItemFile {
     @JsonKey(name: 'albumstatus') @Default('') String albumStatus,
     @Default(0) int bitrate,
     @Default(0) int bpm,
-    KodiVideoCast? cast,
+    List<KodiVideoCast>? cast,
     @Default(0) int channels,
     @Default('') String comment,
     @Default(false) bool compilation,

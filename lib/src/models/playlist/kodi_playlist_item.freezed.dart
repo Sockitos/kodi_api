@@ -24,7 +24,7 @@ KodiPlaylistItem _$KodiPlaylistItemFromJson(Map<String, dynamic> json) {
       return KodiPlaylistItemMovieId.fromJson(json);
     case 'episodeId':
       return KodiPlaylistItemEpisodeId.fromJson(json);
-    case 'musicVideoid':
+    case 'musicVideoId':
       return KodiPlaylistItemMusicVideoId.fromJson(json);
     case 'artistId':
       return KodiPlaylistItemArtistId.fromJson(json);
@@ -49,13 +49,15 @@ mixin _$KodiPlaylistItem {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,13 +65,14 @@ mixin _$KodiPlaylistItem {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -77,13 +80,14 @@ mixin _$KodiPlaylistItem {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -94,7 +98,7 @@ mixin _$KodiPlaylistItem {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -108,7 +112,7 @@ mixin _$KodiPlaylistItem {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -122,7 +126,7 @@ mixin _$KodiPlaylistItem {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -238,13 +242,15 @@ class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return file(this.file);
   }
@@ -255,13 +261,14 @@ class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return file?.call(this.file);
   }
@@ -272,13 +279,14 @@ class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (file != null) {
@@ -295,7 +303,7 @@ class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -312,7 +320,7 @@ class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -329,7 +337,7 @@ class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -418,8 +426,8 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
     implements KodiPlaylistItemDirectoryMediaRecursive {
   const _$KodiPlaylistItemDirectoryMediaRecursiveImpl(
       {required this.directory,
-      required this.media,
-      required this.recursive,
+      this.media = KodiFilesMedia.files,
+      this.recursive = false,
       final String? $type})
       : $type = $type ?? 'directoryMediaRecursive';
 
@@ -430,8 +438,10 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
   @override
   final String directory;
   @override
+  @JsonKey()
   final KodiFilesMedia media;
   @override
+  @JsonKey()
   final bool recursive;
 
   @JsonKey(name: 'runtimeType')
@@ -476,13 +486,15 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return directoryMediaRecursive(directory, media, recursive);
   }
@@ -493,13 +505,14 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return directoryMediaRecursive?.call(directory, media, recursive);
   }
@@ -510,13 +523,14 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (directoryMediaRecursive != null) {
@@ -533,7 +547,7 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -550,7 +564,7 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -567,7 +581,7 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -591,10 +605,9 @@ class _$KodiPlaylistItemDirectoryMediaRecursiveImpl
 abstract class KodiPlaylistItemDirectoryMediaRecursive
     implements KodiPlaylistItem {
   const factory KodiPlaylistItemDirectoryMediaRecursive(
-          {required final String directory,
-          required final KodiFilesMedia media,
-          required final bool recursive}) =
-      _$KodiPlaylistItemDirectoryMediaRecursiveImpl;
+      {required final String directory,
+      final KodiFilesMedia media,
+      final bool recursive}) = _$KodiPlaylistItemDirectoryMediaRecursiveImpl;
 
   factory KodiPlaylistItemDirectoryMediaRecursive.fromJson(
           Map<String, dynamic> json) =
@@ -619,7 +632,7 @@ abstract class _$$KodiPlaylistItemMovieIdImplCopyWith<$Res> {
           $Res Function(_$KodiPlaylistItemMovieIdImpl) then) =
       __$$KodiPlaylistItemMovieIdImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int movieId});
+  $Res call({@JsonKey(name: 'movieid') int movieId});
 }
 
 /// @nodoc
@@ -639,7 +652,7 @@ class __$$KodiPlaylistItemMovieIdImplCopyWithImpl<$Res>
     Object? movieId = null,
   }) {
     return _then(_$KodiPlaylistItemMovieIdImpl(
-      movieId: null == movieId
+      null == movieId
           ? _value.movieId
           : movieId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -650,14 +663,15 @@ class __$$KodiPlaylistItemMovieIdImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
-  const _$KodiPlaylistItemMovieIdImpl(
-      {required this.movieId, final String? $type})
+  const _$KodiPlaylistItemMovieIdImpl(@JsonKey(name: 'movieid') this.movieId,
+      {final String? $type})
       : $type = $type ?? 'movieId';
 
   factory _$KodiPlaylistItemMovieIdImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlaylistItemMovieIdImplFromJson(json);
 
   @override
+  @JsonKey(name: 'movieid')
   final int movieId;
 
   @JsonKey(name: 'runtimeType')
@@ -696,13 +710,15 @@ class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return movieId(this.movieId);
   }
@@ -713,13 +729,14 @@ class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return movieId?.call(this.movieId);
   }
@@ -730,13 +747,14 @@ class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (movieId != null) {
@@ -753,7 +771,7 @@ class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -770,7 +788,7 @@ class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -787,7 +805,7 @@ class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -809,12 +827,14 @@ class _$KodiPlaylistItemMovieIdImpl implements KodiPlaylistItemMovieId {
 }
 
 abstract class KodiPlaylistItemMovieId implements KodiPlaylistItem {
-  const factory KodiPlaylistItemMovieId({required final int movieId}) =
+  const factory KodiPlaylistItemMovieId(
+          @JsonKey(name: 'movieid') final int movieId) =
       _$KodiPlaylistItemMovieIdImpl;
 
   factory KodiPlaylistItemMovieId.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistItemMovieIdImpl.fromJson;
 
+  @JsonKey(name: 'movieid')
   int get movieId;
 
   /// Create a copy of KodiPlaylistItem
@@ -831,7 +851,7 @@ abstract class _$$KodiPlaylistItemEpisodeIdImplCopyWith<$Res> {
           $Res Function(_$KodiPlaylistItemEpisodeIdImpl) then) =
       __$$KodiPlaylistItemEpisodeIdImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int episodeId});
+  $Res call({@JsonKey(name: 'episodeid') int episodeId});
 }
 
 /// @nodoc
@@ -852,7 +872,7 @@ class __$$KodiPlaylistItemEpisodeIdImplCopyWithImpl<$Res>
     Object? episodeId = null,
   }) {
     return _then(_$KodiPlaylistItemEpisodeIdImpl(
-      episodeId: null == episodeId
+      null == episodeId
           ? _value.episodeId
           : episodeId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -864,13 +884,15 @@ class __$$KodiPlaylistItemEpisodeIdImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
   const _$KodiPlaylistItemEpisodeIdImpl(
-      {required this.episodeId, final String? $type})
+      @JsonKey(name: 'episodeid') this.episodeId,
+      {final String? $type})
       : $type = $type ?? 'episodeId';
 
   factory _$KodiPlaylistItemEpisodeIdImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlaylistItemEpisodeIdImplFromJson(json);
 
   @override
+  @JsonKey(name: 'episodeid')
   final int episodeId;
 
   @JsonKey(name: 'runtimeType')
@@ -910,13 +932,15 @@ class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return episodeId(this.episodeId);
   }
@@ -927,13 +951,14 @@ class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return episodeId?.call(this.episodeId);
   }
@@ -944,13 +969,14 @@ class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (episodeId != null) {
@@ -967,7 +993,7 @@ class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -984,7 +1010,7 @@ class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -1001,7 +1027,7 @@ class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -1023,12 +1049,14 @@ class _$KodiPlaylistItemEpisodeIdImpl implements KodiPlaylistItemEpisodeId {
 }
 
 abstract class KodiPlaylistItemEpisodeId implements KodiPlaylistItem {
-  const factory KodiPlaylistItemEpisodeId({required final int episodeId}) =
+  const factory KodiPlaylistItemEpisodeId(
+          @JsonKey(name: 'episodeid') final int episodeId) =
       _$KodiPlaylistItemEpisodeIdImpl;
 
   factory KodiPlaylistItemEpisodeId.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistItemEpisodeIdImpl.fromJson;
 
+  @JsonKey(name: 'episodeid')
   int get episodeId;
 
   /// Create a copy of KodiPlaylistItem
@@ -1045,7 +1073,7 @@ abstract class _$$KodiPlaylistItemMusicVideoIdImplCopyWith<$Res> {
           $Res Function(_$KodiPlaylistItemMusicVideoIdImpl) then) =
       __$$KodiPlaylistItemMusicVideoIdImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int musicVideoid});
+  $Res call({@JsonKey(name: 'musicvideoid') int musicVideoId});
 }
 
 /// @nodoc
@@ -1063,12 +1091,12 @@ class __$$KodiPlaylistItemMusicVideoIdImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? musicVideoid = null,
+    Object? musicVideoId = null,
   }) {
     return _then(_$KodiPlaylistItemMusicVideoIdImpl(
-      musicVideoid: null == musicVideoid
-          ? _value.musicVideoid
-          : musicVideoid // ignore: cast_nullable_to_non_nullable
+      null == musicVideoId
+          ? _value.musicVideoId
+          : musicVideoId // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -1079,22 +1107,24 @@ class __$$KodiPlaylistItemMusicVideoIdImplCopyWithImpl<$Res>
 class _$KodiPlaylistItemMusicVideoIdImpl
     implements KodiPlaylistItemMusicVideoId {
   const _$KodiPlaylistItemMusicVideoIdImpl(
-      {required this.musicVideoid, final String? $type})
-      : $type = $type ?? 'musicVideoid';
+      @JsonKey(name: 'musicvideoid') this.musicVideoId,
+      {final String? $type})
+      : $type = $type ?? 'musicVideoId';
 
   factory _$KodiPlaylistItemMusicVideoIdImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$KodiPlaylistItemMusicVideoIdImplFromJson(json);
 
   @override
-  final int musicVideoid;
+  @JsonKey(name: 'musicvideoid')
+  final int musicVideoId;
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'KodiPlaylistItem.musicVideoid(musicVideoid: $musicVideoid)';
+    return 'KodiPlaylistItem.musicVideoId(musicVideoId: $musicVideoId)';
   }
 
   @override
@@ -1102,13 +1132,13 @@ class _$KodiPlaylistItemMusicVideoIdImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$KodiPlaylistItemMusicVideoIdImpl &&
-            (identical(other.musicVideoid, musicVideoid) ||
-                other.musicVideoid == musicVideoid));
+            (identical(other.musicVideoId, musicVideoId) ||
+                other.musicVideoId == musicVideoId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, musicVideoid);
+  int get hashCode => Object.hash(runtimeType, musicVideoId);
 
   /// Create a copy of KodiPlaylistItem
   /// with the given fields replaced by the non-null parameter values.
@@ -1127,15 +1157,17 @@ class _$KodiPlaylistItemMusicVideoIdImpl
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
-    return musicVideoid(this.musicVideoid);
+    return musicVideoId(this.musicVideoId);
   }
 
   @override
@@ -1144,15 +1176,16 @@ class _$KodiPlaylistItemMusicVideoIdImpl
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
-    return musicVideoid?.call(this.musicVideoid);
+    return musicVideoId?.call(this.musicVideoId);
   }
 
   @override
@@ -1161,17 +1194,18 @@ class _$KodiPlaylistItemMusicVideoIdImpl
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
-    if (musicVideoid != null) {
-      return musicVideoid(this.musicVideoid);
+    if (musicVideoId != null) {
+      return musicVideoId(this.musicVideoId);
     }
     return orElse();
   }
@@ -1184,13 +1218,13 @@ class _$KodiPlaylistItemMusicVideoIdImpl
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
     required TResult Function(KodiPlaylistItemGenreId value) genreId,
   }) {
-    return musicVideoid(this);
+    return musicVideoId(this);
   }
 
   @override
@@ -1201,13 +1235,13 @@ class _$KodiPlaylistItemMusicVideoIdImpl
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
     TResult? Function(KodiPlaylistItemGenreId value)? genreId,
   }) {
-    return musicVideoid?.call(this);
+    return musicVideoId?.call(this);
   }
 
   @override
@@ -1218,15 +1252,15 @@ class _$KodiPlaylistItemMusicVideoIdImpl
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
     TResult Function(KodiPlaylistItemGenreId value)? genreId,
     required TResult orElse(),
   }) {
-    if (musicVideoid != null) {
-      return musicVideoid(this);
+    if (musicVideoId != null) {
+      return musicVideoId(this);
     }
     return orElse();
   }
@@ -1241,12 +1275,14 @@ class _$KodiPlaylistItemMusicVideoIdImpl
 
 abstract class KodiPlaylistItemMusicVideoId implements KodiPlaylistItem {
   const factory KodiPlaylistItemMusicVideoId(
-      {required final int musicVideoid}) = _$KodiPlaylistItemMusicVideoIdImpl;
+          @JsonKey(name: 'musicvideoid') final int musicVideoId) =
+      _$KodiPlaylistItemMusicVideoIdImpl;
 
   factory KodiPlaylistItemMusicVideoId.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistItemMusicVideoIdImpl.fromJson;
 
-  int get musicVideoid;
+  @JsonKey(name: 'musicvideoid')
+  int get musicVideoId;
 
   /// Create a copy of KodiPlaylistItem
   /// with the given fields replaced by the non-null parameter values.
@@ -1263,7 +1299,7 @@ abstract class _$$KodiPlaylistItemArtistIdImplCopyWith<$Res> {
           $Res Function(_$KodiPlaylistItemArtistIdImpl) then) =
       __$$KodiPlaylistItemArtistIdImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int artistId});
+  $Res call({@JsonKey(name: 'artistid') int artistId});
 }
 
 /// @nodoc
@@ -1283,7 +1319,7 @@ class __$$KodiPlaylistItemArtistIdImplCopyWithImpl<$Res>
     Object? artistId = null,
   }) {
     return _then(_$KodiPlaylistItemArtistIdImpl(
-      artistId: null == artistId
+      null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1294,14 +1330,15 @@ class __$$KodiPlaylistItemArtistIdImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
-  const _$KodiPlaylistItemArtistIdImpl(
-      {required this.artistId, final String? $type})
+  const _$KodiPlaylistItemArtistIdImpl(@JsonKey(name: 'artistid') this.artistId,
+      {final String? $type})
       : $type = $type ?? 'artistId';
 
   factory _$KodiPlaylistItemArtistIdImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlaylistItemArtistIdImplFromJson(json);
 
   @override
+  @JsonKey(name: 'artistid')
   final int artistId;
 
   @JsonKey(name: 'runtimeType')
@@ -1341,13 +1378,15 @@ class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return artistId(this.artistId);
   }
@@ -1358,13 +1397,14 @@ class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return artistId?.call(this.artistId);
   }
@@ -1375,13 +1415,14 @@ class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (artistId != null) {
@@ -1398,7 +1439,7 @@ class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -1415,7 +1456,7 @@ class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -1432,7 +1473,7 @@ class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -1454,12 +1495,14 @@ class _$KodiPlaylistItemArtistIdImpl implements KodiPlaylistItemArtistId {
 }
 
 abstract class KodiPlaylistItemArtistId implements KodiPlaylistItem {
-  const factory KodiPlaylistItemArtistId({required final int artistId}) =
+  const factory KodiPlaylistItemArtistId(
+          @JsonKey(name: 'artistid') final int artistId) =
       _$KodiPlaylistItemArtistIdImpl;
 
   factory KodiPlaylistItemArtistId.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistItemArtistIdImpl.fromJson;
 
+  @JsonKey(name: 'artistid')
   int get artistId;
 
   /// Create a copy of KodiPlaylistItem
@@ -1476,7 +1519,7 @@ abstract class _$$KodiPlaylistItemAlbumIdImplCopyWith<$Res> {
           $Res Function(_$KodiPlaylistItemAlbumIdImpl) then) =
       __$$KodiPlaylistItemAlbumIdImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int albumId});
+  $Res call({@JsonKey(name: 'albumid') int albumId});
 }
 
 /// @nodoc
@@ -1496,7 +1539,7 @@ class __$$KodiPlaylistItemAlbumIdImplCopyWithImpl<$Res>
     Object? albumId = null,
   }) {
     return _then(_$KodiPlaylistItemAlbumIdImpl(
-      albumId: null == albumId
+      null == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1507,14 +1550,15 @@ class __$$KodiPlaylistItemAlbumIdImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
-  const _$KodiPlaylistItemAlbumIdImpl(
-      {required this.albumId, final String? $type})
+  const _$KodiPlaylistItemAlbumIdImpl(@JsonKey(name: 'albumid') this.albumId,
+      {final String? $type})
       : $type = $type ?? 'albumId';
 
   factory _$KodiPlaylistItemAlbumIdImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlaylistItemAlbumIdImplFromJson(json);
 
   @override
+  @JsonKey(name: 'albumid')
   final int albumId;
 
   @JsonKey(name: 'runtimeType')
@@ -1553,13 +1597,15 @@ class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return albumId(this.albumId);
   }
@@ -1570,13 +1616,14 @@ class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return albumId?.call(this.albumId);
   }
@@ -1587,13 +1634,14 @@ class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (albumId != null) {
@@ -1610,7 +1658,7 @@ class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -1627,7 +1675,7 @@ class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -1644,7 +1692,7 @@ class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -1666,12 +1714,14 @@ class _$KodiPlaylistItemAlbumIdImpl implements KodiPlaylistItemAlbumId {
 }
 
 abstract class KodiPlaylistItemAlbumId implements KodiPlaylistItem {
-  const factory KodiPlaylistItemAlbumId({required final int albumId}) =
+  const factory KodiPlaylistItemAlbumId(
+          @JsonKey(name: 'albumid') final int albumId) =
       _$KodiPlaylistItemAlbumIdImpl;
 
   factory KodiPlaylistItemAlbumId.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistItemAlbumIdImpl.fromJson;
 
+  @JsonKey(name: 'albumid')
   int get albumId;
 
   /// Create a copy of KodiPlaylistItem
@@ -1688,7 +1738,7 @@ abstract class _$$KodiPlaylistItemSongIdImplCopyWith<$Res> {
           $Res Function(_$KodiPlaylistItemSongIdImpl) then) =
       __$$KodiPlaylistItemSongIdImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int songId});
+  $Res call({@JsonKey(name: 'songid') int songId});
 }
 
 /// @nodoc
@@ -1708,7 +1758,7 @@ class __$$KodiPlaylistItemSongIdImplCopyWithImpl<$Res>
     Object? songId = null,
   }) {
     return _then(_$KodiPlaylistItemSongIdImpl(
-      songId: null == songId
+      null == songId
           ? _value.songId
           : songId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1719,14 +1769,15 @@ class __$$KodiPlaylistItemSongIdImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
-  const _$KodiPlaylistItemSongIdImpl(
-      {required this.songId, final String? $type})
+  const _$KodiPlaylistItemSongIdImpl(@JsonKey(name: 'songid') this.songId,
+      {final String? $type})
       : $type = $type ?? 'songId';
 
   factory _$KodiPlaylistItemSongIdImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlaylistItemSongIdImplFromJson(json);
 
   @override
+  @JsonKey(name: 'songid')
   final int songId;
 
   @JsonKey(name: 'runtimeType')
@@ -1765,13 +1816,15 @@ class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return songId(this.songId);
   }
@@ -1782,13 +1835,14 @@ class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return songId?.call(this.songId);
   }
@@ -1799,13 +1853,14 @@ class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (songId != null) {
@@ -1822,7 +1877,7 @@ class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -1839,7 +1894,7 @@ class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -1856,7 +1911,7 @@ class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -1878,12 +1933,13 @@ class _$KodiPlaylistItemSongIdImpl implements KodiPlaylistItemSongId {
 }
 
 abstract class KodiPlaylistItemSongId implements KodiPlaylistItem {
-  const factory KodiPlaylistItemSongId({required final int songId}) =
-      _$KodiPlaylistItemSongIdImpl;
+  const factory KodiPlaylistItemSongId(
+      @JsonKey(name: 'songid') final int songId) = _$KodiPlaylistItemSongIdImpl;
 
   factory KodiPlaylistItemSongId.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistItemSongIdImpl.fromJson;
 
+  @JsonKey(name: 'songid')
   int get songId;
 
   /// Create a copy of KodiPlaylistItem
@@ -1900,7 +1956,7 @@ abstract class _$$KodiPlaylistItemGenreIdImplCopyWith<$Res> {
           $Res Function(_$KodiPlaylistItemGenreIdImpl) then) =
       __$$KodiPlaylistItemGenreIdImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int genreId});
+  $Res call({@JsonKey(name: 'genreid') int genreId});
 }
 
 /// @nodoc
@@ -1920,7 +1976,7 @@ class __$$KodiPlaylistItemGenreIdImplCopyWithImpl<$Res>
     Object? genreId = null,
   }) {
     return _then(_$KodiPlaylistItemGenreIdImpl(
-      genreId: null == genreId
+      null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1931,14 +1987,15 @@ class __$$KodiPlaylistItemGenreIdImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
-  const _$KodiPlaylistItemGenreIdImpl(
-      {required this.genreId, final String? $type})
+  const _$KodiPlaylistItemGenreIdImpl(@JsonKey(name: 'genreid') this.genreId,
+      {final String? $type})
       : $type = $type ?? 'genreId';
 
   factory _$KodiPlaylistItemGenreIdImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlaylistItemGenreIdImplFromJson(json);
 
   @override
+  @JsonKey(name: 'genreid')
   final int genreId;
 
   @JsonKey(name: 'runtimeType')
@@ -1977,13 +2034,15 @@ class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
     required TResult Function(
             String directory, KodiFilesMedia media, bool recursive)
         directoryMediaRecursive,
-    required TResult Function(int movieId) movieId,
-    required TResult Function(int episodeId) episodeId,
-    required TResult Function(int musicVideoid) musicVideoid,
-    required TResult Function(int artistId) artistId,
-    required TResult Function(int albumId) albumId,
-    required TResult Function(int songId) songId,
-    required TResult Function(int genreId) genreId,
+    required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
+    required TResult Function(@JsonKey(name: 'episodeid') int episodeId)
+        episodeId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
+    required TResult Function(@JsonKey(name: 'artistid') int artistId) artistId,
+    required TResult Function(@JsonKey(name: 'albumid') int albumId) albumId,
+    required TResult Function(@JsonKey(name: 'songid') int songId) songId,
+    required TResult Function(@JsonKey(name: 'genreid') int genreId) genreId,
   }) {
     return genreId(this.genreId);
   }
@@ -1994,13 +2053,14 @@ class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
     TResult? Function(String file)? file,
     TResult? Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult? Function(int movieId)? movieId,
-    TResult? Function(int episodeId)? episodeId,
-    TResult? Function(int musicVideoid)? musicVideoid,
-    TResult? Function(int artistId)? artistId,
-    TResult? Function(int albumId)? albumId,
-    TResult? Function(int songId)? songId,
-    TResult? Function(int genreId)? genreId,
+    TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult? Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult? Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult? Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult? Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult? Function(@JsonKey(name: 'genreid') int genreId)? genreId,
   }) {
     return genreId?.call(this.genreId);
   }
@@ -2011,13 +2071,14 @@ class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
     TResult Function(String file)? file,
     TResult Function(String directory, KodiFilesMedia media, bool recursive)?
         directoryMediaRecursive,
-    TResult Function(int movieId)? movieId,
-    TResult Function(int episodeId)? episodeId,
-    TResult Function(int musicVideoid)? musicVideoid,
-    TResult Function(int artistId)? artistId,
-    TResult Function(int albumId)? albumId,
-    TResult Function(int songId)? songId,
-    TResult Function(int genreId)? genreId,
+    TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
+    TResult Function(@JsonKey(name: 'episodeid') int episodeId)? episodeId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
+    TResult Function(@JsonKey(name: 'artistid') int artistId)? artistId,
+    TResult Function(@JsonKey(name: 'albumid') int albumId)? albumId,
+    TResult Function(@JsonKey(name: 'songid') int songId)? songId,
+    TResult Function(@JsonKey(name: 'genreid') int genreId)? genreId,
     required TResult orElse(),
   }) {
     if (genreId != null) {
@@ -2034,7 +2095,7 @@ class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
         directoryMediaRecursive,
     required TResult Function(KodiPlaylistItemMovieId value) movieId,
     required TResult Function(KodiPlaylistItemEpisodeId value) episodeId,
-    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoid,
+    required TResult Function(KodiPlaylistItemMusicVideoId value) musicVideoId,
     required TResult Function(KodiPlaylistItemArtistId value) artistId,
     required TResult Function(KodiPlaylistItemAlbumId value) albumId,
     required TResult Function(KodiPlaylistItemSongId value) songId,
@@ -2051,7 +2112,7 @@ class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
         directoryMediaRecursive,
     TResult? Function(KodiPlaylistItemMovieId value)? movieId,
     TResult? Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult? Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult? Function(KodiPlaylistItemArtistId value)? artistId,
     TResult? Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult? Function(KodiPlaylistItemSongId value)? songId,
@@ -2068,7 +2129,7 @@ class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
         directoryMediaRecursive,
     TResult Function(KodiPlaylistItemMovieId value)? movieId,
     TResult Function(KodiPlaylistItemEpisodeId value)? episodeId,
-    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoid,
+    TResult Function(KodiPlaylistItemMusicVideoId value)? musicVideoId,
     TResult Function(KodiPlaylistItemArtistId value)? artistId,
     TResult Function(KodiPlaylistItemAlbumId value)? albumId,
     TResult Function(KodiPlaylistItemSongId value)? songId,
@@ -2090,12 +2151,14 @@ class _$KodiPlaylistItemGenreIdImpl implements KodiPlaylistItemGenreId {
 }
 
 abstract class KodiPlaylistItemGenreId implements KodiPlaylistItem {
-  const factory KodiPlaylistItemGenreId({required final int genreId}) =
+  const factory KodiPlaylistItemGenreId(
+          @JsonKey(name: 'genreid') final int genreId) =
       _$KodiPlaylistItemGenreIdImpl;
 
   factory KodiPlaylistItemGenreId.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistItemGenreIdImpl.fromJson;
 
+  @JsonKey(name: 'genreid')
   int get genreId;
 
   /// Create a copy of KodiPlaylistItem
