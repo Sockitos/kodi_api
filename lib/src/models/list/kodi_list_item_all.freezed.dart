@@ -53,7 +53,8 @@ mixin _$KodiListItemAll {
   int get channels => throw _privateConstructorUsedError;
   String get comment => throw _privateConstructorUsedError;
   bool get compilation => throw _privateConstructorUsedError;
-  KodiAudioContributors? get contributors => throw _privateConstructorUsedError;
+  List<KodiAudioContributors>? get contributors =>
+      throw _privateConstructorUsedError;
   List<String>? get country => throw _privateConstructorUsedError;
   @JsonKey(name: 'customproperties')
   Map<String, dynamic>? get customProperties =>
@@ -212,7 +213,7 @@ abstract class $KodiListItemAllCopyWith<$Res> {
       int channels,
       String comment,
       bool compilation,
-      KodiAudioContributors? contributors,
+      List<KodiAudioContributors>? contributors,
       List<String>? country,
       @JsonKey(name: 'customproperties') Map<String, dynamic>? customProperties,
       String description,
@@ -291,7 +292,6 @@ abstract class $KodiListItemAllCopyWith<$Res> {
       int year,
       List<String>? genre});
 
-  $KodiAudioContributorsCopyWith<$Res>? get contributors;
   $KodiVideoResumeCopyWith<$Res>? get resume;
   $KodiVideoStreamsCopyWith<$Res>? get streamDetails;
   $KodiMediaArtworkCopyWith<$Res>? get art;
@@ -499,7 +499,7 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
       contributors: freezed == contributors
           ? _value.contributors
           : contributors // ignore: cast_nullable_to_non_nullable
-              as KodiAudioContributors?,
+              as List<KodiAudioContributors>?,
       country: freezed == country
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
@@ -811,20 +811,6 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiAudioContributorsCopyWith<$Res>? get contributors {
-    if (_value.contributors == null) {
-      return null;
-    }
-
-    return $KodiAudioContributorsCopyWith<$Res>(_value.contributors!, (value) {
-      return _then(_value.copyWith(contributors: value) as $Val);
-    });
-  }
-
-  /// Create a copy of KodiListItemAll
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
   $KodiVideoResumeCopyWith<$Res>? get resume {
     if (_value.resume == null) {
       return null;
@@ -895,7 +881,7 @@ abstract class _$$KodiListItemAllImplCopyWith<$Res>
       int channels,
       String comment,
       bool compilation,
-      KodiAudioContributors? contributors,
+      List<KodiAudioContributors>? contributors,
       List<String>? country,
       @JsonKey(name: 'customproperties') Map<String, dynamic>? customProperties,
       String description,
@@ -974,8 +960,6 @@ abstract class _$$KodiListItemAllImplCopyWith<$Res>
       int year,
       List<String>? genre});
 
-  @override
-  $KodiAudioContributorsCopyWith<$Res>? get contributors;
   @override
   $KodiVideoResumeCopyWith<$Res>? get resume;
   @override
@@ -1182,9 +1166,9 @@ class __$$KodiListItemAllImplCopyWithImpl<$Res>
           : compilation // ignore: cast_nullable_to_non_nullable
               as bool,
       contributors: freezed == contributors
-          ? _value.contributors
+          ? _value._contributors
           : contributors // ignore: cast_nullable_to_non_nullable
-              as KodiAudioContributors?,
+              as List<KodiAudioContributors>?,
       country: freezed == country
           ? _value._country
           : country // ignore: cast_nullable_to_non_nullable
@@ -1520,7 +1504,7 @@ class _$KodiListItemAllImpl implements _KodiListItemAll {
       this.channels = 0,
       this.comment = '',
       this.compilation = false,
-      this.contributors,
+      final List<KodiAudioContributors>? contributors,
       final List<String>? country,
       @JsonKey(name: 'customproperties')
       final Map<String, dynamic>? customProperties,
@@ -1604,6 +1588,7 @@ class _$KodiListItemAllImpl implements _KodiListItemAll {
       : _albumArtist = albumArtist,
         _albumArtistId = albumArtistId,
         _cast = cast,
+        _contributors = contributors,
         _country = country,
         _customProperties = customProperties,
         _mood = mood,
@@ -1710,8 +1695,16 @@ class _$KodiListItemAllImpl implements _KodiListItemAll {
   @override
   @JsonKey()
   final bool compilation;
+  final List<KodiAudioContributors>? _contributors;
   @override
-  final KodiAudioContributors? contributors;
+  List<KodiAudioContributors>? get contributors {
+    final value = _contributors;
+    if (value == null) return null;
+    if (_contributors is EqualUnmodifiableListView) return _contributors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<String>? _country;
   @override
   List<String>? get country {
@@ -2098,8 +2091,8 @@ class _$KodiListItemAllImpl implements _KodiListItemAll {
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.compilation, compilation) ||
                 other.compilation == compilation) &&
-            (identical(other.contributors, contributors) ||
-                other.contributors == contributors) &&
+            const DeepCollectionEquality()
+                .equals(other._contributors, _contributors) &&
             const DeepCollectionEquality().equals(other._country, _country) &&
             const DeepCollectionEquality()
                 .equals(other._customProperties, _customProperties) &&
@@ -2234,7 +2227,7 @@ class _$KodiListItemAllImpl implements _KodiListItemAll {
         channels,
         comment,
         compilation,
-        contributors,
+        const DeepCollectionEquality().hash(_contributors),
         const DeepCollectionEquality().hash(_country),
         const DeepCollectionEquality().hash(_customProperties),
         description,
@@ -2354,7 +2347,7 @@ abstract class _KodiListItemAll implements KodiListItemAll {
       final int channels,
       final String comment,
       final bool compilation,
-      final KodiAudioContributors? contributors,
+      final List<KodiAudioContributors>? contributors,
       final List<String>? country,
       @JsonKey(name: 'customproperties')
       final Map<String, dynamic>? customProperties,
@@ -2492,7 +2485,7 @@ abstract class _KodiListItemAll implements KodiListItemAll {
   @override
   bool get compilation;
   @override
-  KodiAudioContributors? get contributors;
+  List<KodiAudioContributors>? get contributors;
   @override
   List<String>? get country;
   @override

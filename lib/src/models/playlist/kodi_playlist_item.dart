@@ -6,9 +6,9 @@ part 'kodi_playlist_item.g.dart';
 
 @freezed
 class KodiPlaylistItem with _$KodiPlaylistItem {
-  const factory KodiPlaylistItem.file({
-    required String file,
-  }) = KodiPlaylistItemFile;
+  const factory KodiPlaylistItem.file(
+    String file,
+  ) = KodiPlaylistItemFile;
 
   const factory KodiPlaylistItem.directoryMediaRecursive({
     required String directory,

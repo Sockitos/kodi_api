@@ -21,8 +21,8 @@ KodiPlaylistPropertyValue _$KodiPlaylistPropertyValueFromJson(
 
 /// @nodoc
 mixin _$KodiPlaylistPropertyValue {
-  int? get size => throw _privateConstructorUsedError;
-  KodiPlaylistType? get type => throw _privateConstructorUsedError;
+  int get size => throw _privateConstructorUsedError;
+  KodiPlaylistType get type => throw _privateConstructorUsedError;
 
   /// Serializes this KodiPlaylistPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,7 +40,7 @@ abstract class $KodiPlaylistPropertyValueCopyWith<$Res> {
           $Res Function(KodiPlaylistPropertyValue) then) =
       _$KodiPlaylistPropertyValueCopyWithImpl<$Res, KodiPlaylistPropertyValue>;
   @useResult
-  $Res call({int? size, KodiPlaylistType? type});
+  $Res call({int size, KodiPlaylistType type});
 }
 
 /// @nodoc
@@ -59,18 +59,18 @@ class _$KodiPlaylistPropertyValueCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? size = freezed,
-    Object? type = freezed,
+    Object? size = null,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
-      size: freezed == size
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
+              as int,
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as KodiPlaylistType?,
+              as KodiPlaylistType,
     ) as $Val);
   }
 }
@@ -84,7 +84,7 @@ abstract class _$$KodiPlaylistPropertyValueImplCopyWith<$Res>
       __$$KodiPlaylistPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? size, KodiPlaylistType? type});
+  $Res call({int size, KodiPlaylistType type});
 }
 
 /// @nodoc
@@ -102,18 +102,18 @@ class __$$KodiPlaylistPropertyValueImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? size = freezed,
-    Object? type = freezed,
+    Object? size = null,
+    Object? type = null,
   }) {
     return _then(_$KodiPlaylistPropertyValueImpl(
-      size: freezed == size
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
+              as int,
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as KodiPlaylistType?,
+              as KodiPlaylistType,
     ));
   }
 }
@@ -121,15 +121,18 @@ class __$$KodiPlaylistPropertyValueImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlaylistPropertyValueImpl implements _KodiPlaylistPropertyValue {
-  const _$KodiPlaylistPropertyValueImpl({this.size, this.type});
+  const _$KodiPlaylistPropertyValueImpl(
+      {this.size = 0, this.type = KodiPlaylistType.unknown});
 
   factory _$KodiPlaylistPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiPlaylistPropertyValueImplFromJson(json);
 
   @override
-  final int? size;
+  @JsonKey()
+  final int size;
   @override
-  final KodiPlaylistType? type;
+  @JsonKey()
+  final KodiPlaylistType type;
 
   @override
   String toString() {
@@ -168,16 +171,16 @@ class _$KodiPlaylistPropertyValueImpl implements _KodiPlaylistPropertyValue {
 
 abstract class _KodiPlaylistPropertyValue implements KodiPlaylistPropertyValue {
   const factory _KodiPlaylistPropertyValue(
-      {final int? size,
-      final KodiPlaylistType? type}) = _$KodiPlaylistPropertyValueImpl;
+      {final int size,
+      final KodiPlaylistType type}) = _$KodiPlaylistPropertyValueImpl;
 
   factory _KodiPlaylistPropertyValue.fromJson(Map<String, dynamic> json) =
       _$KodiPlaylistPropertyValueImpl.fromJson;
 
   @override
-  int? get size;
+  int get size;
   @override
-  KodiPlaylistType? get type;
+  KodiPlaylistType get type;
 
   /// Create a copy of KodiPlaylistPropertyValue
   /// with the given fields replaced by the non-null parameter values.

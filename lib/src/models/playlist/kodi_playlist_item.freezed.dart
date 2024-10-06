@@ -185,7 +185,7 @@ class __$$KodiPlaylistItemFileImplCopyWithImpl<$Res>
     Object? file = null,
   }) {
     return _then(_$KodiPlaylistItemFileImpl(
-      file: null == file
+      null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String,
@@ -196,7 +196,7 @@ class __$$KodiPlaylistItemFileImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
-  const _$KodiPlaylistItemFileImpl({required this.file, final String? $type})
+  const _$KodiPlaylistItemFileImpl(this.file, {final String? $type})
       : $type = $type ?? 'file';
 
   factory _$KodiPlaylistItemFileImpl.fromJson(Map<String, dynamic> json) =>
@@ -359,7 +359,7 @@ class _$KodiPlaylistItemFileImpl implements KodiPlaylistItemFile {
 }
 
 abstract class KodiPlaylistItemFile implements KodiPlaylistItem {
-  const factory KodiPlaylistItemFile({required final String file}) =
+  const factory KodiPlaylistItemFile(final String file) =
       _$KodiPlaylistItemFileImpl;
 
   factory KodiPlaylistItemFile.fromJson(Map<String, dynamic> json) =

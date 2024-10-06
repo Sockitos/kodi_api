@@ -7,8 +7,8 @@ part 'kodi_playlist_property_value.g.dart';
 @freezed
 class KodiPlaylistPropertyValue with _$KodiPlaylistPropertyValue {
   const factory KodiPlaylistPropertyValue({
-    int? size,
-    KodiPlaylistType? type,
+    @Default(0) int size,
+    @Default(KodiPlaylistType.unknown) KodiPlaylistType type,
   }) = _KodiPlaylistPropertyValue;
 
   factory KodiPlaylistPropertyValue.fromJson(Map<String, dynamic> json) =>

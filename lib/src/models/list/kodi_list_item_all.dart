@@ -40,7 +40,7 @@ class KodiListItemAll with _$KodiListItemAll {
     @Default(0) int channels,
     @Default('') String comment,
     @Default(false) bool compilation,
-    KodiAudioContributors? contributors,
+    List<KodiAudioContributors>? contributors,
     List<String>? country,
     @JsonKey(name: 'customproperties') Map<String, dynamic>? customProperties,
     @Default('') String description,

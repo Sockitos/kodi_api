@@ -40,10 +40,10 @@ _$KodiListItemAllImpl _$$KodiListItemAllImplFromJson(
       channels: (json['channels'] as num?)?.toInt() ?? 0,
       comment: json['comment'] as String? ?? '',
       compilation: json['compilation'] as bool? ?? false,
-      contributors: json['contributors'] == null
-          ? null
-          : KodiAudioContributors.fromJson(
-              json['contributors'] as Map<String, dynamic>),
+      contributors: (json['contributors'] as List<dynamic>?)
+          ?.map(
+              (e) => KodiAudioContributors.fromJson(e as Map<String, dynamic>))
+          .toList(),
       country:
           (json['country'] as List<dynamic>?)?.map((e) => e as String).toList(),
       customProperties: json['customproperties'] as Map<String, dynamic>?,
@@ -183,7 +183,8 @@ Map<String, dynamic> _$$KodiListItemAllImplToJson(
   val['channels'] = instance.channels;
   val['comment'] = instance.comment;
   val['compilation'] = instance.compilation;
-  writeNotNull('contributors', instance.contributors?.toJson());
+  writeNotNull(
+      'contributors', instance.contributors?.map((e) => e.toJson()).toList());
   writeNotNull('country', instance.country);
   writeNotNull('customproperties', instance.customProperties);
   val['description'] = instance.description;

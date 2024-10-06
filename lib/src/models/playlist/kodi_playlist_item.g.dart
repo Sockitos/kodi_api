@@ -9,7 +9,7 @@ part of 'kodi_playlist_item.dart';
 _$KodiPlaylistItemFileImpl _$$KodiPlaylistItemFileImplFromJson(
         Map<String, dynamic> json) =>
     _$KodiPlaylistItemFileImpl(
-      file: json['file'] as String,
+      json['file'] as String,
       $type: json['runtimeType'] as String?,
     );
 
