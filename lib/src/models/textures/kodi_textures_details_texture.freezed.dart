@@ -22,16 +22,16 @@ KodiTexturesDetailsTexture _$KodiTexturesDetailsTextureFromJson(
 /// @nodoc
 mixin _$KodiTexturesDetailsTexture {
   @JsonKey(name: 'cachedurl')
-  String? get cachedUrl => throw _privateConstructorUsedError;
+  String get cachedUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'imagehash')
-  String? get imageHash => throw _privateConstructorUsedError;
+  String get imageHash => throw _privateConstructorUsedError;
   @JsonKey(name: 'lasthashcheck')
-  String? get lastHashCheck => throw _privateConstructorUsedError;
+  String get lastHashCheck => throw _privateConstructorUsedError;
   List<KodiTexturesDetailsSize>? get sizes =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'textureid')
-  int? get textureId => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
+  int get textureId => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
 
   /// Serializes this KodiTexturesDetailsTexture to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -51,12 +51,12 @@ abstract class $KodiTexturesDetailsTextureCopyWith<$Res> {
           KodiTexturesDetailsTexture>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'cachedurl') String? cachedUrl,
-      @JsonKey(name: 'imagehash') String? imageHash,
-      @JsonKey(name: 'lasthashcheck') String? lastHashCheck,
+      {@JsonKey(name: 'cachedurl') String cachedUrl,
+      @JsonKey(name: 'imagehash') String imageHash,
+      @JsonKey(name: 'lasthashcheck') String lastHashCheck,
       List<KodiTexturesDetailsSize>? sizes,
-      @JsonKey(name: 'textureid') int? textureId,
-      String? url});
+      @JsonKey(name: 'textureid') int textureId,
+      String url});
 }
 
 /// @nodoc
@@ -75,38 +75,38 @@ class _$KodiTexturesDetailsTextureCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cachedUrl = freezed,
-    Object? imageHash = freezed,
-    Object? lastHashCheck = freezed,
+    Object? cachedUrl = null,
+    Object? imageHash = null,
+    Object? lastHashCheck = null,
     Object? sizes = freezed,
-    Object? textureId = freezed,
-    Object? url = freezed,
+    Object? textureId = null,
+    Object? url = null,
   }) {
     return _then(_value.copyWith(
-      cachedUrl: freezed == cachedUrl
+      cachedUrl: null == cachedUrl
           ? _value.cachedUrl
           : cachedUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imageHash: freezed == imageHash
+              as String,
+      imageHash: null == imageHash
           ? _value.imageHash
           : imageHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastHashCheck: freezed == lastHashCheck
+              as String,
+      lastHashCheck: null == lastHashCheck
           ? _value.lastHashCheck
           : lastHashCheck // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       sizes: freezed == sizes
           ? _value.sizes
           : sizes // ignore: cast_nullable_to_non_nullable
               as List<KodiTexturesDetailsSize>?,
-      textureId: freezed == textureId
+      textureId: null == textureId
           ? _value.textureId
           : textureId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      url: freezed == url
+              as int,
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -121,12 +121,12 @@ abstract class _$$KodiTexturesDetailsTextureImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'cachedurl') String? cachedUrl,
-      @JsonKey(name: 'imagehash') String? imageHash,
-      @JsonKey(name: 'lasthashcheck') String? lastHashCheck,
+      {@JsonKey(name: 'cachedurl') String cachedUrl,
+      @JsonKey(name: 'imagehash') String imageHash,
+      @JsonKey(name: 'lasthashcheck') String lastHashCheck,
       List<KodiTexturesDetailsSize>? sizes,
-      @JsonKey(name: 'textureid') int? textureId,
-      String? url});
+      @JsonKey(name: 'textureid') int textureId,
+      String url});
 }
 
 /// @nodoc
@@ -144,38 +144,38 @@ class __$$KodiTexturesDetailsTextureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cachedUrl = freezed,
-    Object? imageHash = freezed,
-    Object? lastHashCheck = freezed,
+    Object? cachedUrl = null,
+    Object? imageHash = null,
+    Object? lastHashCheck = null,
     Object? sizes = freezed,
-    Object? textureId = freezed,
-    Object? url = freezed,
+    Object? textureId = null,
+    Object? url = null,
   }) {
     return _then(_$KodiTexturesDetailsTextureImpl(
-      cachedUrl: freezed == cachedUrl
+      cachedUrl: null == cachedUrl
           ? _value.cachedUrl
           : cachedUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      imageHash: freezed == imageHash
+              as String,
+      imageHash: null == imageHash
           ? _value.imageHash
           : imageHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastHashCheck: freezed == lastHashCheck
+              as String,
+      lastHashCheck: null == lastHashCheck
           ? _value.lastHashCheck
           : lastHashCheck // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       sizes: freezed == sizes
           ? _value._sizes
           : sizes // ignore: cast_nullable_to_non_nullable
               as List<KodiTexturesDetailsSize>?,
-      textureId: freezed == textureId
+      textureId: null == textureId
           ? _value.textureId
           : textureId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      url: freezed == url
+              as int,
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -184,12 +184,12 @@ class __$$KodiTexturesDetailsTextureImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiTexturesDetailsTextureImpl implements _KodiTexturesDetailsTexture {
   const _$KodiTexturesDetailsTextureImpl(
-      {@JsonKey(name: 'cachedurl') this.cachedUrl,
-      @JsonKey(name: 'imagehash') this.imageHash,
-      @JsonKey(name: 'lasthashcheck') this.lastHashCheck,
+      {@JsonKey(name: 'cachedurl') this.cachedUrl = '',
+      @JsonKey(name: 'imagehash') this.imageHash = '',
+      @JsonKey(name: 'lasthashcheck') this.lastHashCheck = '',
       final List<KodiTexturesDetailsSize>? sizes,
-      @JsonKey(name: 'textureid') this.textureId,
-      this.url})
+      @JsonKey(name: 'textureid') this.textureId = -1,
+      this.url = ''})
       : _sizes = sizes;
 
   factory _$KodiTexturesDetailsTextureImpl.fromJson(
@@ -198,13 +198,13 @@ class _$KodiTexturesDetailsTextureImpl implements _KodiTexturesDetailsTexture {
 
   @override
   @JsonKey(name: 'cachedurl')
-  final String? cachedUrl;
+  final String cachedUrl;
   @override
   @JsonKey(name: 'imagehash')
-  final String? imageHash;
+  final String imageHash;
   @override
   @JsonKey(name: 'lasthashcheck')
-  final String? lastHashCheck;
+  final String lastHashCheck;
   final List<KodiTexturesDetailsSize>? _sizes;
   @override
   List<KodiTexturesDetailsSize>? get sizes {
@@ -217,9 +217,10 @@ class _$KodiTexturesDetailsTextureImpl implements _KodiTexturesDetailsTexture {
 
   @override
   @JsonKey(name: 'textureid')
-  final int? textureId;
+  final int textureId;
   @override
-  final String? url;
+  @JsonKey()
+  final String url;
 
   @override
   String toString() {
@@ -274,32 +275,32 @@ class _$KodiTexturesDetailsTextureImpl implements _KodiTexturesDetailsTexture {
 abstract class _KodiTexturesDetailsTexture
     implements KodiTexturesDetailsTexture {
   const factory _KodiTexturesDetailsTexture(
-      {@JsonKey(name: 'cachedurl') final String? cachedUrl,
-      @JsonKey(name: 'imagehash') final String? imageHash,
-      @JsonKey(name: 'lasthashcheck') final String? lastHashCheck,
+      {@JsonKey(name: 'cachedurl') final String cachedUrl,
+      @JsonKey(name: 'imagehash') final String imageHash,
+      @JsonKey(name: 'lasthashcheck') final String lastHashCheck,
       final List<KodiTexturesDetailsSize>? sizes,
-      @JsonKey(name: 'textureid') final int? textureId,
-      final String? url}) = _$KodiTexturesDetailsTextureImpl;
+      @JsonKey(name: 'textureid') final int textureId,
+      final String url}) = _$KodiTexturesDetailsTextureImpl;
 
   factory _KodiTexturesDetailsTexture.fromJson(Map<String, dynamic> json) =
       _$KodiTexturesDetailsTextureImpl.fromJson;
 
   @override
   @JsonKey(name: 'cachedurl')
-  String? get cachedUrl;
+  String get cachedUrl;
   @override
   @JsonKey(name: 'imagehash')
-  String? get imageHash;
+  String get imageHash;
   @override
   @JsonKey(name: 'lasthashcheck')
-  String? get lastHashCheck;
+  String get lastHashCheck;
   @override
   List<KodiTexturesDetailsSize>? get sizes;
   @override
   @JsonKey(name: 'textureid')
-  int? get textureId;
+  int get textureId;
   @override
-  String? get url;
+  String get url;
 
   /// Create a copy of KodiTexturesDetailsTexture
   /// with the given fields replaced by the non-null parameter values.

@@ -8,11 +8,11 @@ part 'kodi_textures_details_size.g.dart';
 class KodiTexturesDetailsSize with _$KodiTexturesDetailsSize {
   @JsonSerializable(converters: [DateTimeConverter()])
   const factory KodiTexturesDetailsSize({
-    int? height,
+    @Default(0) int height,
     @JsonKey(name: 'lastused') DateTime? lastUsed,
-    int? size,
-    @JsonKey(name: 'usecount') int? useCount,
-    int? width,
+    @Default(0) int size,
+    @JsonKey(name: 'usecount') @Default(0) int useCount,
+    @Default(0) int width,
   }) = _KodiTexturesDetailsSize;
 
   factory KodiTexturesDetailsSize.fromJson(Map<String, dynamic> json) =>

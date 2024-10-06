@@ -21,13 +21,13 @@ KodiTexturesDetailsSize _$KodiTexturesDetailsSizeFromJson(
 
 /// @nodoc
 mixin _$KodiTexturesDetailsSize {
-  int? get height => throw _privateConstructorUsedError;
+  int get height => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastused')
   DateTime? get lastUsed => throw _privateConstructorUsedError;
-  int? get size => throw _privateConstructorUsedError;
+  int get size => throw _privateConstructorUsedError;
   @JsonKey(name: 'usecount')
-  int? get useCount => throw _privateConstructorUsedError;
-  int? get width => throw _privateConstructorUsedError;
+  int get useCount => throw _privateConstructorUsedError;
+  int get width => throw _privateConstructorUsedError;
 
   /// Serializes this KodiTexturesDetailsSize to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,11 +46,11 @@ abstract class $KodiTexturesDetailsSizeCopyWith<$Res> {
       _$KodiTexturesDetailsSizeCopyWithImpl<$Res, KodiTexturesDetailsSize>;
   @useResult
   $Res call(
-      {int? height,
+      {int height,
       @JsonKey(name: 'lastused') DateTime? lastUsed,
-      int? size,
-      @JsonKey(name: 'usecount') int? useCount,
-      int? width});
+      int size,
+      @JsonKey(name: 'usecount') int useCount,
+      int width});
 }
 
 /// @nodoc
@@ -69,33 +69,33 @@ class _$KodiTexturesDetailsSizeCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? height = freezed,
+    Object? height = null,
     Object? lastUsed = freezed,
-    Object? size = freezed,
-    Object? useCount = freezed,
-    Object? width = freezed,
+    Object? size = null,
+    Object? useCount = null,
+    Object? width = null,
   }) {
     return _then(_value.copyWith(
-      height: freezed == height
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       lastUsed: freezed == lastUsed
           ? _value.lastUsed
           : lastUsed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      size: freezed == size
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      useCount: freezed == useCount
+              as int,
+      useCount: null == useCount
           ? _value.useCount
           : useCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      width: freezed == width
+              as int,
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
     ) as $Val);
   }
 }
@@ -110,11 +110,11 @@ abstract class _$$KodiTexturesDetailsSizeImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? height,
+      {int height,
       @JsonKey(name: 'lastused') DateTime? lastUsed,
-      int? size,
-      @JsonKey(name: 'usecount') int? useCount,
-      int? width});
+      int size,
+      @JsonKey(name: 'usecount') int useCount,
+      int width});
 }
 
 /// @nodoc
@@ -132,33 +132,33 @@ class __$$KodiTexturesDetailsSizeImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? height = freezed,
+    Object? height = null,
     Object? lastUsed = freezed,
-    Object? size = freezed,
-    Object? useCount = freezed,
-    Object? width = freezed,
+    Object? size = null,
+    Object? useCount = null,
+    Object? width = null,
   }) {
     return _then(_$KodiTexturesDetailsSizeImpl(
-      height: freezed == height
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       lastUsed: freezed == lastUsed
           ? _value.lastUsed
           : lastUsed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      size: freezed == size
+      size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
-              as int?,
-      useCount: freezed == useCount
+              as int,
+      useCount: null == useCount
           ? _value.useCount
           : useCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      width: freezed == width
+              as int,
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
     ));
   }
 }
@@ -168,27 +168,30 @@ class __$$KodiTexturesDetailsSizeImplCopyWithImpl<$Res>
 @JsonSerializable(converters: [DateTimeConverter()])
 class _$KodiTexturesDetailsSizeImpl implements _KodiTexturesDetailsSize {
   const _$KodiTexturesDetailsSizeImpl(
-      {this.height,
+      {this.height = 0,
       @JsonKey(name: 'lastused') this.lastUsed,
-      this.size,
-      @JsonKey(name: 'usecount') this.useCount,
-      this.width});
+      this.size = 0,
+      @JsonKey(name: 'usecount') this.useCount = 0,
+      this.width = 0});
 
   factory _$KodiTexturesDetailsSizeImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiTexturesDetailsSizeImplFromJson(json);
 
   @override
-  final int? height;
+  @JsonKey()
+  final int height;
   @override
   @JsonKey(name: 'lastused')
   final DateTime? lastUsed;
   @override
-  final int? size;
+  @JsonKey()
+  final int size;
   @override
   @JsonKey(name: 'usecount')
-  final int? useCount;
+  final int useCount;
   @override
-  final int? width;
+  @JsonKey()
+  final int width;
 
   @override
   String toString() {
@@ -233,27 +236,27 @@ class _$KodiTexturesDetailsSizeImpl implements _KodiTexturesDetailsSize {
 
 abstract class _KodiTexturesDetailsSize implements KodiTexturesDetailsSize {
   const factory _KodiTexturesDetailsSize(
-      {final int? height,
+      {final int height,
       @JsonKey(name: 'lastused') final DateTime? lastUsed,
-      final int? size,
-      @JsonKey(name: 'usecount') final int? useCount,
-      final int? width}) = _$KodiTexturesDetailsSizeImpl;
+      final int size,
+      @JsonKey(name: 'usecount') final int useCount,
+      final int width}) = _$KodiTexturesDetailsSizeImpl;
 
   factory _KodiTexturesDetailsSize.fromJson(Map<String, dynamic> json) =
       _$KodiTexturesDetailsSizeImpl.fromJson;
 
   @override
-  int? get height;
+  int get height;
   @override
   @JsonKey(name: 'lastused')
   DateTime? get lastUsed;
   @override
-  int? get size;
+  int get size;
   @override
   @JsonKey(name: 'usecount')
-  int? get useCount;
+  int get useCount;
   @override
-  int? get width;
+  int get width;
 
   /// Create a copy of KodiTexturesDetailsSize
   /// with the given fields replaced by the non-null parameter values.
