@@ -15,5 +15,6 @@ export 'playlist/playlist_models.dart';
 export 'profiles/profiles_models.dart';
 export 'pvr/pvr_models.dart';
 export 'setting/setting_models.dart';
+export 'system/system_models.dart';
 export 'textures/textures_models.dart';
 export 'video/video_models.dart';

@@ -22,13 +22,13 @@ KodiSystemPropertyValue _$KodiSystemPropertyValueFromJson(
 /// @nodoc
 mixin _$KodiSystemPropertyValue {
   @JsonKey(name: 'canhibernate')
-  bool? get canHibernate => throw _privateConstructorUsedError;
+  bool get canHibernate => throw _privateConstructorUsedError;
   @JsonKey(name: 'canreboot')
-  bool? get canReboot => throw _privateConstructorUsedError;
+  bool get canReboot => throw _privateConstructorUsedError;
   @JsonKey(name: 'canshutdown')
-  bool? get canShutdown => throw _privateConstructorUsedError;
+  bool get canShutdown => throw _privateConstructorUsedError;
   @JsonKey(name: 'cansuspend')
-  bool? get canSuspend => throw _privateConstructorUsedError;
+  bool get canSuspend => throw _privateConstructorUsedError;
 
   /// Serializes this KodiSystemPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,10 +47,10 @@ abstract class $KodiSystemPropertyValueCopyWith<$Res> {
       _$KodiSystemPropertyValueCopyWithImpl<$Res, KodiSystemPropertyValue>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'canhibernate') bool? canHibernate,
-      @JsonKey(name: 'canreboot') bool? canReboot,
-      @JsonKey(name: 'canshutdown') bool? canShutdown,
-      @JsonKey(name: 'cansuspend') bool? canSuspend});
+      {@JsonKey(name: 'canhibernate') bool canHibernate,
+      @JsonKey(name: 'canreboot') bool canReboot,
+      @JsonKey(name: 'canshutdown') bool canShutdown,
+      @JsonKey(name: 'cansuspend') bool canSuspend});
 }
 
 /// @nodoc
@@ -69,28 +69,28 @@ class _$KodiSystemPropertyValueCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? canHibernate = freezed,
-    Object? canReboot = freezed,
-    Object? canShutdown = freezed,
-    Object? canSuspend = freezed,
+    Object? canHibernate = null,
+    Object? canReboot = null,
+    Object? canShutdown = null,
+    Object? canSuspend = null,
   }) {
     return _then(_value.copyWith(
-      canHibernate: freezed == canHibernate
+      canHibernate: null == canHibernate
           ? _value.canHibernate
           : canHibernate // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canReboot: freezed == canReboot
+              as bool,
+      canReboot: null == canReboot
           ? _value.canReboot
           : canReboot // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canShutdown: freezed == canShutdown
+              as bool,
+      canShutdown: null == canShutdown
           ? _value.canShutdown
           : canShutdown // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canSuspend: freezed == canSuspend
+              as bool,
+      canSuspend: null == canSuspend
           ? _value.canSuspend
           : canSuspend // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
     ) as $Val);
   }
 }
@@ -105,10 +105,10 @@ abstract class _$$KodiSystemPropertyValueImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'canhibernate') bool? canHibernate,
-      @JsonKey(name: 'canreboot') bool? canReboot,
-      @JsonKey(name: 'canshutdown') bool? canShutdown,
-      @JsonKey(name: 'cansuspend') bool? canSuspend});
+      {@JsonKey(name: 'canhibernate') bool canHibernate,
+      @JsonKey(name: 'canreboot') bool canReboot,
+      @JsonKey(name: 'canshutdown') bool canShutdown,
+      @JsonKey(name: 'cansuspend') bool canSuspend});
 }
 
 /// @nodoc
@@ -126,28 +126,28 @@ class __$$KodiSystemPropertyValueImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? canHibernate = freezed,
-    Object? canReboot = freezed,
-    Object? canShutdown = freezed,
-    Object? canSuspend = freezed,
+    Object? canHibernate = null,
+    Object? canReboot = null,
+    Object? canShutdown = null,
+    Object? canSuspend = null,
   }) {
     return _then(_$KodiSystemPropertyValueImpl(
-      canHibernate: freezed == canHibernate
+      canHibernate: null == canHibernate
           ? _value.canHibernate
           : canHibernate // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canReboot: freezed == canReboot
+              as bool,
+      canReboot: null == canReboot
           ? _value.canReboot
           : canReboot // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canShutdown: freezed == canShutdown
+              as bool,
+      canShutdown: null == canShutdown
           ? _value.canShutdown
           : canShutdown // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canSuspend: freezed == canSuspend
+              as bool,
+      canSuspend: null == canSuspend
           ? _value.canSuspend
           : canSuspend // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
     ));
   }
 }
@@ -156,26 +156,26 @@ class __$$KodiSystemPropertyValueImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiSystemPropertyValueImpl implements _KodiSystemPropertyValue {
   const _$KodiSystemPropertyValueImpl(
-      {@JsonKey(name: 'canhibernate') this.canHibernate,
-      @JsonKey(name: 'canreboot') this.canReboot,
-      @JsonKey(name: 'canshutdown') this.canShutdown,
-      @JsonKey(name: 'cansuspend') this.canSuspend});
+      {@JsonKey(name: 'canhibernate') this.canHibernate = false,
+      @JsonKey(name: 'canreboot') this.canReboot = false,
+      @JsonKey(name: 'canshutdown') this.canShutdown = false,
+      @JsonKey(name: 'cansuspend') this.canSuspend = false});
 
   factory _$KodiSystemPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
       _$$KodiSystemPropertyValueImplFromJson(json);
 
   @override
   @JsonKey(name: 'canhibernate')
-  final bool? canHibernate;
+  final bool canHibernate;
   @override
   @JsonKey(name: 'canreboot')
-  final bool? canReboot;
+  final bool canReboot;
   @override
   @JsonKey(name: 'canshutdown')
-  final bool? canShutdown;
+  final bool canShutdown;
   @override
   @JsonKey(name: 'cansuspend')
-  final bool? canSuspend;
+  final bool canSuspend;
 
   @override
   String toString() {
@@ -221,10 +221,10 @@ class _$KodiSystemPropertyValueImpl implements _KodiSystemPropertyValue {
 
 abstract class _KodiSystemPropertyValue implements KodiSystemPropertyValue {
   const factory _KodiSystemPropertyValue(
-          {@JsonKey(name: 'canhibernate') final bool? canHibernate,
-          @JsonKey(name: 'canreboot') final bool? canReboot,
-          @JsonKey(name: 'canshutdown') final bool? canShutdown,
-          @JsonKey(name: 'cansuspend') final bool? canSuspend}) =
+          {@JsonKey(name: 'canhibernate') final bool canHibernate,
+          @JsonKey(name: 'canreboot') final bool canReboot,
+          @JsonKey(name: 'canshutdown') final bool canShutdown,
+          @JsonKey(name: 'cansuspend') final bool canSuspend}) =
       _$KodiSystemPropertyValueImpl;
 
   factory _KodiSystemPropertyValue.fromJson(Map<String, dynamic> json) =
@@ -232,16 +232,16 @@ abstract class _KodiSystemPropertyValue implements KodiSystemPropertyValue {
 
   @override
   @JsonKey(name: 'canhibernate')
-  bool? get canHibernate;
+  bool get canHibernate;
   @override
   @JsonKey(name: 'canreboot')
-  bool? get canReboot;
+  bool get canReboot;
   @override
   @JsonKey(name: 'canshutdown')
-  bool? get canShutdown;
+  bool get canShutdown;
   @override
   @JsonKey(name: 'cansuspend')
-  bool? get canSuspend;
+  bool get canSuspend;
 
   /// Create a copy of KodiSystemPropertyValue
   /// with the given fields replaced by the non-null parameter values.
