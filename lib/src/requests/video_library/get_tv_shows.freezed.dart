@@ -670,7 +670,7 @@ class __$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWithImpl<$Res>
     Object? genreId = null,
   }) {
     return _then(_$KodiVideoLibraryGetTvShowsFilterGenreIdImpl(
-      genreId: null == genreId
+      null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -683,7 +683,8 @@ class __$$KodiVideoLibraryGetTvShowsFilterGenreIdImplCopyWithImpl<$Res>
 class _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl
     implements _KodiVideoLibraryGetTvShowsFilterGenreId {
   const _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl(
-      {@JsonKey(name: 'genreid') required this.genreId, final String? $type})
+      @JsonKey(name: 'genreid') this.genreId,
+      {final String? $type})
       : $type = $type ?? 'genreId';
 
   factory _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl.fromJson(
@@ -839,7 +840,7 @@ class _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl
 abstract class _KodiVideoLibraryGetTvShowsFilterGenreId
     implements KodiVideoLibraryGetTvShowsFilter {
   const factory _KodiVideoLibraryGetTvShowsFilterGenreId(
-          {@JsonKey(name: 'genreid') required final int genreId}) =
+          @JsonKey(name: 'genreid') final int genreId) =
       _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl;
 
   factory _KodiVideoLibraryGetTvShowsFilterGenreId.fromJson(
@@ -885,7 +886,7 @@ class __$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWithImpl<$Res>
     Object? genre = null,
   }) {
     return _then(_$KodiVideoLibraryGetTvShowsFilterGenreImpl(
-      genre: null == genre
+      null == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
               as String,
@@ -897,8 +898,8 @@ class __$$KodiVideoLibraryGetTvShowsFilterGenreImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGetTvShowsFilterGenreImpl
     implements _KodiVideoLibraryGetTvShowsFilterGenre {
-  const _$KodiVideoLibraryGetTvShowsFilterGenreImpl(
-      {required this.genre, final String? $type})
+  const _$KodiVideoLibraryGetTvShowsFilterGenreImpl(this.genre,
+      {final String? $type})
       : $type = $type ?? 'genre';
 
   factory _$KodiVideoLibraryGetTvShowsFilterGenreImpl.fromJson(
@@ -1051,8 +1052,7 @@ class _$KodiVideoLibraryGetTvShowsFilterGenreImpl
 
 abstract class _KodiVideoLibraryGetTvShowsFilterGenre
     implements KodiVideoLibraryGetTvShowsFilter {
-  const factory _KodiVideoLibraryGetTvShowsFilterGenre(
-          {required final String genre}) =
+  const factory _KodiVideoLibraryGetTvShowsFilterGenre(final String genre) =
       _$KodiVideoLibraryGetTvShowsFilterGenreImpl;
 
   factory _KodiVideoLibraryGetTvShowsFilterGenre.fromJson(
@@ -1097,7 +1097,7 @@ class __$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWithImpl<$Res>
     Object? year = null,
   }) {
     return _then(_$KodiVideoLibraryGeTvShowsFilterYearImpl(
-      year: null == year
+      null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1109,8 +1109,8 @@ class __$$KodiVideoLibraryGeTvShowsFilterYearImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGeTvShowsFilterYearImpl
     implements _KodiVideoLibraryGeTvShowsFilterYear {
-  const _$KodiVideoLibraryGeTvShowsFilterYearImpl(
-      {required this.year, final String? $type})
+  const _$KodiVideoLibraryGeTvShowsFilterYearImpl(this.year,
+      {final String? $type})
       : $type = $type ?? 'year';
 
   factory _$KodiVideoLibraryGeTvShowsFilterYearImpl.fromJson(
@@ -1263,8 +1263,8 @@ class _$KodiVideoLibraryGeTvShowsFilterYearImpl
 
 abstract class _KodiVideoLibraryGeTvShowsFilterYear
     implements KodiVideoLibraryGetTvShowsFilter {
-  const factory _KodiVideoLibraryGeTvShowsFilterYear(
-      {required final int year}) = _$KodiVideoLibraryGeTvShowsFilterYearImpl;
+  const factory _KodiVideoLibraryGeTvShowsFilterYear(final int year) =
+      _$KodiVideoLibraryGeTvShowsFilterYearImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterYear.fromJson(
           Map<String, dynamic> json) =
@@ -1308,7 +1308,7 @@ class __$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWithImpl<$Res>
     Object? actor = null,
   }) {
     return _then(_$KodiVideoLibraryGeTvShowsFilterActorImpl(
-      actor: null == actor
+      null == actor
           ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1320,8 +1320,8 @@ class __$$KodiVideoLibraryGeTvShowsFilterActorImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGeTvShowsFilterActorImpl
     implements _KodiVideoLibraryGeTvShowsFilterActor {
-  const _$KodiVideoLibraryGeTvShowsFilterActorImpl(
-      {required this.actor, final String? $type})
+  const _$KodiVideoLibraryGeTvShowsFilterActorImpl(this.actor,
+      {final String? $type})
       : $type = $type ?? 'actor';
 
   factory _$KodiVideoLibraryGeTvShowsFilterActorImpl.fromJson(
@@ -1474,8 +1474,7 @@ class _$KodiVideoLibraryGeTvShowsFilterActorImpl
 
 abstract class _KodiVideoLibraryGeTvShowsFilterActor
     implements KodiVideoLibraryGetTvShowsFilter {
-  const factory _KodiVideoLibraryGeTvShowsFilterActor(
-          {required final String actor}) =
+  const factory _KodiVideoLibraryGeTvShowsFilterActor(final String actor) =
       _$KodiVideoLibraryGeTvShowsFilterActorImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterActor.fromJson(
@@ -1520,7 +1519,7 @@ class __$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWithImpl<$Res>
     Object? studio = null,
   }) {
     return _then(_$KodiVideoLibraryGeTvShowsFilterStudioImpl(
-      studio: null == studio
+      null == studio
           ? _value.studio
           : studio // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1532,8 +1531,8 @@ class __$$KodiVideoLibraryGeTvShowsFilterStudioImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGeTvShowsFilterStudioImpl
     implements _KodiVideoLibraryGeTvShowsFilterStudio {
-  const _$KodiVideoLibraryGeTvShowsFilterStudioImpl(
-      {required this.studio, final String? $type})
+  const _$KodiVideoLibraryGeTvShowsFilterStudioImpl(this.studio,
+      {final String? $type})
       : $type = $type ?? 'studio';
 
   factory _$KodiVideoLibraryGeTvShowsFilterStudioImpl.fromJson(
@@ -1686,8 +1685,7 @@ class _$KodiVideoLibraryGeTvShowsFilterStudioImpl
 
 abstract class _KodiVideoLibraryGeTvShowsFilterStudio
     implements KodiVideoLibraryGetTvShowsFilter {
-  const factory _KodiVideoLibraryGeTvShowsFilterStudio(
-          {required final String studio}) =
+  const factory _KodiVideoLibraryGeTvShowsFilterStudio(final String studio) =
       _$KodiVideoLibraryGeTvShowsFilterStudioImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterStudio.fromJson(
@@ -1732,7 +1730,7 @@ class __$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWithImpl<$Res>
     Object? tag = null,
   }) {
     return _then(_$KodiVideoLibraryGeTvShowsFilterTagImpl(
-      tag: null == tag
+      null == tag
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1744,8 +1742,8 @@ class __$$KodiVideoLibraryGeTvShowsFilterTagImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGeTvShowsFilterTagImpl
     implements _KodiVideoLibraryGeTvShowsFilterTag {
-  const _$KodiVideoLibraryGeTvShowsFilterTagImpl(
-      {required this.tag, final String? $type})
+  const _$KodiVideoLibraryGeTvShowsFilterTagImpl(this.tag,
+      {final String? $type})
       : $type = $type ?? 'tag';
 
   factory _$KodiVideoLibraryGeTvShowsFilterTagImpl.fromJson(
@@ -1898,8 +1896,8 @@ class _$KodiVideoLibraryGeTvShowsFilterTagImpl
 
 abstract class _KodiVideoLibraryGeTvShowsFilterTag
     implements KodiVideoLibraryGetTvShowsFilter {
-  const factory _KodiVideoLibraryGeTvShowsFilterTag(
-      {required final String tag}) = _$KodiVideoLibraryGeTvShowsFilterTagImpl;
+  const factory _KodiVideoLibraryGeTvShowsFilterTag(final String tag) =
+      _$KodiVideoLibraryGeTvShowsFilterTagImpl;
 
   factory _KodiVideoLibraryGeTvShowsFilterTag.fromJson(
           Map<String, dynamic> json) =

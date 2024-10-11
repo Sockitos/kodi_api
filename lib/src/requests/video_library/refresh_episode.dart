@@ -8,7 +8,7 @@ part 'refresh_episode.g.dart';
 typedef RefreshEpisodeBuilder = RefreshEpisode Function(
   int id, {
   bool ignoreNFO,
-  String? title,
+  String title,
 });
 
 @freezed
@@ -16,7 +16,7 @@ class RefreshEpisode with _$RefreshEpisode implements KodiRequest<void> {
   const factory RefreshEpisode(
     @JsonKey(name: 'episodeid') int id, {
     @JsonKey(name: 'ignorenfo') @Default(false) bool ignoreNFO,
-    String? title,
+    @Default('') String title,
   }) = _RefreshEpisode;
 
   const RefreshEpisode._();

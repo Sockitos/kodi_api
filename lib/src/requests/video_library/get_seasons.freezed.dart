@@ -21,7 +21,7 @@ GetSeasons _$GetSeasonsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetSeasons {
   @JsonKey(name: 'tvshowid')
-  int? get tvShowId => throw _privateConstructorUsedError;
+  int get tvShowId => throw _privateConstructorUsedError;
   Set<KodiVideoFieldsSeason>? get properties =>
       throw _privateConstructorUsedError;
   KodiListLimits? get limits => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $GetSeasonsCopyWith<$Res> {
       _$GetSeasonsCopyWithImpl<$Res, GetSeasons>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'tvshowid') int? tvShowId,
+      {@JsonKey(name: 'tvshowid') int tvShowId,
       Set<KodiVideoFieldsSeason>? properties,
       KodiListLimits? limits,
       KodiListSort? sort});
@@ -68,16 +68,16 @@ class _$GetSeasonsCopyWithImpl<$Res, $Val extends GetSeasons>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tvShowId = freezed,
+    Object? tvShowId = null,
     Object? properties = freezed,
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
     return _then(_value.copyWith(
-      tvShowId: freezed == tvShowId
+      tvShowId: null == tvShowId
           ? _value.tvShowId
           : tvShowId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       properties: freezed == properties
           ? _value.properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -131,7 +131,7 @@ abstract class _$$GetSeasonsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'tvshowid') int? tvShowId,
+      {@JsonKey(name: 'tvshowid') int tvShowId,
       Set<KodiVideoFieldsSeason>? properties,
       KodiListLimits? limits,
       KodiListSort? sort});
@@ -155,16 +155,16 @@ class __$$GetSeasonsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? tvShowId = freezed,
+    Object? tvShowId = null,
     Object? properties = freezed,
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
     return _then(_$GetSeasonsImpl(
-      tvShowId: freezed == tvShowId
+      tvShowId: null == tvShowId
           ? _value.tvShowId
           : tvShowId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -185,7 +185,7 @@ class __$$GetSeasonsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GetSeasonsImpl extends _GetSeasons {
   const _$GetSeasonsImpl(
-      {@JsonKey(name: 'tvshowid') this.tvShowId,
+      {@JsonKey(name: 'tvshowid') required this.tvShowId,
       final Set<KodiVideoFieldsSeason>? properties,
       this.limits,
       this.sort})
@@ -197,7 +197,7 @@ class _$GetSeasonsImpl extends _GetSeasons {
 
   @override
   @JsonKey(name: 'tvshowid')
-  final int? tvShowId;
+  final int tvShowId;
   final Set<KodiVideoFieldsSeason>? _properties;
   @override
   Set<KodiVideoFieldsSeason>? get properties {
@@ -254,7 +254,7 @@ class _$GetSeasonsImpl extends _GetSeasons {
 
 abstract class _GetSeasons extends GetSeasons {
   const factory _GetSeasons(
-      {@JsonKey(name: 'tvshowid') final int? tvShowId,
+      {@JsonKey(name: 'tvshowid') required final int tvShowId,
       final Set<KodiVideoFieldsSeason>? properties,
       final KodiListLimits? limits,
       final KodiListSort? sort}) = _$GetSeasonsImpl;
@@ -265,7 +265,7 @@ abstract class _GetSeasons extends GetSeasons {
 
   @override
   @JsonKey(name: 'tvshowid')
-  int? get tvShowId;
+  int get tvShowId;
   @override
   Set<KodiVideoFieldsSeason>? get properties;
   @override

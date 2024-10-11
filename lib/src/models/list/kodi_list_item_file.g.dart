@@ -68,7 +68,7 @@ _$KodiListItemFileImpl _$$KodiListItemFileImplFromJson(
       originalDate: const DateTimeConverter().fromJson(json['originaldate']),
       originalTitle: json['originaltitle'] as String? ?? '',
       plotOutline: json['plotoutline'] as String? ?? '',
-      premiered: json['premiered'] as String? ?? '',
+      premiered: const DateTimeConverter().fromJson(json['premiered']),
       productionCode: json['productioncode'] as String? ?? '',
       releaseDate: const DateTimeConverter().fromJson(json['releasedate']),
       releaseType: $enumDecodeNullable(
@@ -204,7 +204,8 @@ Map<String, dynamic> _$$KodiListItemFileImplToJson(
       'originaldate', const DateTimeConverter().toJson(instance.originalDate));
   val['originaltitle'] = instance.originalTitle;
   val['plotoutline'] = instance.plotOutline;
-  val['premiered'] = instance.premiered;
+  writeNotNull(
+      'premiered', const DateTimeConverter().toJson(instance.premiered));
   val['productioncode'] = instance.productionCode;
   writeNotNull(
       'releasedate', const DateTimeConverter().toJson(instance.releaseDate));

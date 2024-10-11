@@ -8,7 +8,7 @@ part of 'get_seasons.dart';
 
 _$GetSeasonsImpl _$$GetSeasonsImplFromJson(Map<String, dynamic> json) =>
     _$GetSeasonsImpl(
-      tvShowId: (json['tvshowid'] as num?)?.toInt(),
+      tvShowId: (json['tvshowid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsSeasonEnumMap, e))
           .toSet(),
@@ -21,7 +21,9 @@ _$GetSeasonsImpl _$$GetSeasonsImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$GetSeasonsImplToJson(_$GetSeasonsImpl instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'tvshowid': instance.tvShowId,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -29,7 +31,6 @@ Map<String, dynamic> _$$GetSeasonsImplToJson(_$GetSeasonsImpl instance) {
     }
   }
 
-  writeNotNull('tvshowid', instance.tvShowId);
   writeNotNull(
       'properties',
       instance.properties

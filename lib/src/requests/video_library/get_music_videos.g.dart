@@ -92,7 +92,7 @@ _$KodiVideoLibraryGetMusicVideosFilterArtistImpl
     _$$KodiVideoLibraryGetMusicVideosFilterArtistImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMusicVideosFilterArtistImpl(
-          artist: json['artist'] as String,
+          json['artist'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -107,7 +107,7 @@ _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl
     _$$KodiVideoLibraryGetMusicVideosFilterGenreIdImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl(
-          genreId: (json['genreid'] as num).toInt(),
+          (json['genreid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -122,7 +122,7 @@ _$KodiVideoLibraryGetMusicVideosFilterGenreImpl
     _$$KodiVideoLibraryGetMusicVideosFilterGenreImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMusicVideosFilterGenreImpl(
-          genre: json['genre'] as String,
+          json['genre'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -137,7 +137,7 @@ _$KodiVideoLibraryGetMusicVideosFilterYearImpl
     _$$KodiVideoLibraryGetMusicVideosFilterYearImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMusicVideosFilterYearImpl(
-          year: (json['year'] as num).toInt(),
+          (json['year'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -152,7 +152,7 @@ _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl
     _$$KodiVideoLibraryGetMusicVideosFilterDirectorImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl(
-          director: json['director'] as String,
+          json['director'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -167,7 +167,7 @@ _$KodiVideoLibraryGetMusicVideosFilterStudioImpl
     _$$KodiVideoLibraryGetMusicVideosFilterStudioImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMusicVideosFilterStudioImpl(
-          studio: json['studio'] as String,
+          json['studio'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -182,7 +182,7 @@ _$KodiVideoLibraryGetMusicVideosFilterTagImpl
     _$$KodiVideoLibraryGetMusicVideosFilterTagImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMusicVideosFilterTagImpl(
-          tag: json['tag'] as String,
+          json['tag'] as String,
           $type: json['runtimeType'] as String?,
         );
 

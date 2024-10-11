@@ -112,7 +112,7 @@ _$KodiVideoLibraryGetMoviesFilterGenreIdImpl
     _$$KodiVideoLibraryGetMoviesFilterGenreIdImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterGenreIdImpl(
-          genreId: (json['genreid'] as num).toInt(),
+          (json['genreid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -127,7 +127,7 @@ _$KodiVideoLibraryGetMoviesFilterGenreImpl
     _$$KodiVideoLibraryGetMoviesFilterGenreImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterGenreImpl(
-          genre: json['genre'] as String,
+          json['genre'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -142,7 +142,7 @@ _$KodiVideoLibraryGetMoviesFilterYearImpl
     _$$KodiVideoLibraryGetMoviesFilterYearImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterYearImpl(
-          year: (json['year'] as num).toInt(),
+          (json['year'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -157,7 +157,7 @@ _$KodiVideoLibraryGetMoviesFilterActorImpl
     _$$KodiVideoLibraryGetMoviesFilterActorImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterActorImpl(
-          actor: json['actor'] as String,
+          json['actor'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -172,7 +172,7 @@ _$KodiVideoLibraryGetMoviesFilterDirectorImpl
     _$$KodiVideoLibraryGetMoviesFilterDirectorImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterDirectorImpl(
-          director: json['director'] as String,
+          json['director'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -187,7 +187,7 @@ _$KodiVideoLibraryGetMoviesFilterStudioImpl
     _$$KodiVideoLibraryGetMoviesFilterStudioImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterStudioImpl(
-          studio: json['studio'] as String,
+          json['studio'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -202,7 +202,7 @@ _$KodiVideoLibraryGetMoviesFilterCountryImpl
     _$$KodiVideoLibraryGetMoviesFilterCountryImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterCountryImpl(
-          country: json['country'] as String,
+          json['country'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -217,7 +217,7 @@ _$KodiVideoLibraryGetMoviesFilterSetIdImpl
     _$$KodiVideoLibraryGetMoviesFilterSetIdImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterSetIdImpl(
-          setId: (json['setid'] as num).toInt(),
+          (json['setid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -232,7 +232,7 @@ _$KodiVideoLibraryGetMoviesFilterSetImpl
     _$$KodiVideoLibraryGetMoviesFilterSetImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterSetImpl(
-          set: json['set'] as String,
+          json['set'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -247,7 +247,7 @@ _$KodiVideoLibraryGetMoviesFilterTagImpl
     _$$KodiVideoLibraryGetMoviesFilterTagImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetMoviesFilterTagImpl(
-          tag: json['tag'] as String,
+          json['tag'] as String,
           $type: json['runtimeType'] as String?,
         );
 

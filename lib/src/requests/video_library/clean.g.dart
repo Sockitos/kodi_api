@@ -11,24 +11,15 @@ _$CleanImpl _$$CleanImplFromJson(Map<String, dynamic> json) => _$CleanImpl(
       content: $enumDecodeNullable(
               _$KodiVideoLibraryContentTypeEnumMap, json['content']) ??
           KodiVideoLibraryContentType.video,
-      directory: json['directory'] as String?,
+      directory: json['directory'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$CleanImplToJson(_$CleanImpl instance) {
-  final val = <String, dynamic>{
-    'showdialogs': instance.showDialogs,
-    'content': _$KodiVideoLibraryContentTypeEnumMap[instance.content]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('directory', instance.directory);
-  return val;
-}
+Map<String, dynamic> _$$CleanImplToJson(_$CleanImpl instance) =>
+    <String, dynamic>{
+      'showdialogs': instance.showDialogs,
+      'content': _$KodiVideoLibraryContentTypeEnumMap[instance.content]!,
+      'directory': instance.directory,
+    };
 
 const _$KodiVideoLibraryContentTypeEnumMap = {
   KodiVideoLibraryContentType.video: 'video',

@@ -11,7 +11,7 @@ part 'get_seasons.freezed.dart';
 part 'get_seasons.g.dart';
 
 typedef GetSeasonsBuilder = GetSeasons Function({
-  int? tvShowId,
+  required int tvShowId,
   Set<KodiVideoFieldsSeason>? properties,
   KodiListLimits? limits,
   KodiListSort? sort,
@@ -20,7 +20,7 @@ typedef GetSeasonsBuilder = GetSeasons Function({
 @freezed
 class GetSeasons with _$GetSeasons implements KodiRequest<GetSeasonsResponse> {
   const factory GetSeasons({
-    @JsonKey(name: 'tvshowid') int? tvShowId,
+    @JsonKey(name: 'tvshowid') required int tvShowId,
     Set<KodiVideoFieldsSeason>? properties,
     KodiListLimits? limits,
     KodiListSort? sort,

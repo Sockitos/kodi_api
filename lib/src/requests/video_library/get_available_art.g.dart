@@ -35,26 +35,18 @@ _$KodiVideoLibraryAvailableArtPathImpl
     _$$KodiVideoLibraryAvailableArtPathImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryAvailableArtPathImpl(
-          artType: json['arttype'] as String?,
-          previewUrl: json['previewurl'] as String?,
+          artType: json['arttype'] as String,
+          previewUrl: json['previewurl'] as String? ?? '',
           url: json['url'] as String,
         );
 
 Map<String, dynamic> _$$KodiVideoLibraryAvailableArtPathImplToJson(
-    _$KodiVideoLibraryAvailableArtPathImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('arttype', instance.artType);
-  writeNotNull('previewurl', instance.previewUrl);
-  val['url'] = instance.url;
-  return val;
-}
+        _$KodiVideoLibraryAvailableArtPathImpl instance) =>
+    <String, dynamic>{
+      'arttype': instance.artType,
+      'previewurl': instance.previewUrl,
+      'url': instance.url,
+    };
 
 _$KodiVideoLibraryGetAvailableArtItemEpisodeIdImpl
     _$$KodiVideoLibraryGetAvailableArtItemEpisodeIdImplFromJson(
@@ -135,7 +127,7 @@ _$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImpl
     _$$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImpl(
-          musicVideoId: (json['music_video_id'] as num).toInt(),
+          (json['musicvideoid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -143,6 +135,6 @@ Map<String, dynamic>
     _$$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImplToJson(
             _$KodiVideoLibraryGetAvailableArtItemMusicVideoIdImpl instance) =>
         <String, dynamic>{
-          'music_video_id': instance.musicVideoId,
+          'musicvideoid': instance.musicVideoId,
           'runtimeType': instance.$type,
         };

@@ -23,7 +23,7 @@ mixin _$Clean {
   @JsonKey(name: 'showdialogs')
   bool get showDialogs => throw _privateConstructorUsedError;
   KodiVideoLibraryContentType get content => throw _privateConstructorUsedError;
-  String? get directory => throw _privateConstructorUsedError;
+  String get directory => throw _privateConstructorUsedError;
 
   /// Serializes this Clean to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ abstract class $CleanCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'showdialogs') bool showDialogs,
       KodiVideoLibraryContentType content,
-      String? directory});
+      String directory});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$CleanCopyWithImpl<$Res, $Val extends Clean>
   $Res call({
     Object? showDialogs = null,
     Object? content = null,
-    Object? directory = freezed,
+    Object? directory = null,
   }) {
     return _then(_value.copyWith(
       showDialogs: null == showDialogs
@@ -73,10 +73,10 @@ class _$CleanCopyWithImpl<$Res, $Val extends Clean>
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as KodiVideoLibraryContentType,
-      directory: freezed == directory
+      directory: null == directory
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -91,7 +91,7 @@ abstract class _$$CleanImplCopyWith<$Res> implements $CleanCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'showdialogs') bool showDialogs,
       KodiVideoLibraryContentType content,
-      String? directory});
+      String directory});
 }
 
 /// @nodoc
@@ -109,7 +109,7 @@ class __$$CleanImplCopyWithImpl<$Res>
   $Res call({
     Object? showDialogs = null,
     Object? content = null,
-    Object? directory = freezed,
+    Object? directory = null,
   }) {
     return _then(_$CleanImpl(
       showDialogs: null == showDialogs
@@ -120,10 +120,10 @@ class __$$CleanImplCopyWithImpl<$Res>
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as KodiVideoLibraryContentType,
-      directory: freezed == directory
+      directory: null == directory
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -134,7 +134,7 @@ class _$CleanImpl extends _Clean {
   const _$CleanImpl(
       {@JsonKey(name: 'showdialogs') this.showDialogs = true,
       this.content = KodiVideoLibraryContentType.video,
-      this.directory})
+      this.directory = ''})
       : super._();
 
   factory _$CleanImpl.fromJson(Map<String, dynamic> json) =>
@@ -147,7 +147,8 @@ class _$CleanImpl extends _Clean {
   @JsonKey()
   final KodiVideoLibraryContentType content;
   @override
-  final String? directory;
+  @JsonKey()
+  final String directory;
 
   @override
   String toString() {
@@ -190,7 +191,7 @@ abstract class _Clean extends Clean {
   const factory _Clean(
       {@JsonKey(name: 'showdialogs') final bool showDialogs,
       final KodiVideoLibraryContentType content,
-      final String? directory}) = _$CleanImpl;
+      final String directory}) = _$CleanImpl;
   const _Clean._() : super._();
 
   factory _Clean.fromJson(Map<String, dynamic> json) = _$CleanImpl.fromJson;
@@ -201,7 +202,7 @@ abstract class _Clean extends Clean {
   @override
   KodiVideoLibraryContentType get content;
   @override
-  String? get directory;
+  String get directory;
 
   /// Create a copy of Clean
   /// with the given fields replaced by the non-null parameter values.

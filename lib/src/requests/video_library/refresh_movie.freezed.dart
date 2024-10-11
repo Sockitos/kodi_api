@@ -24,7 +24,7 @@ mixin _$RefreshMovie {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'ignorenfo')
   bool get ignoreNFO => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
 
   /// Serializes this RefreshMovie to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $RefreshMovieCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'movieid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
-      String? title});
+      String title});
 }
 
 /// @nodoc
@@ -65,7 +65,7 @@ class _$RefreshMovieCopyWithImpl<$Res, $Val extends RefreshMovie>
   $Res call({
     Object? id = null,
     Object? ignoreNFO = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -76,10 +76,10 @@ class _$RefreshMovieCopyWithImpl<$Res, $Val extends RefreshMovie>
           ? _value.ignoreNFO
           : ignoreNFO // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -95,7 +95,7 @@ abstract class _$$RefreshMovieImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'movieid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
-      String? title});
+      String title});
 }
 
 /// @nodoc
@@ -113,7 +113,7 @@ class __$$RefreshMovieImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? ignoreNFO = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_$RefreshMovieImpl(
       null == id
@@ -124,10 +124,10 @@ class __$$RefreshMovieImplCopyWithImpl<$Res>
           ? _value.ignoreNFO
           : ignoreNFO // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -136,7 +136,7 @@ class __$$RefreshMovieImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RefreshMovieImpl extends _RefreshMovie {
   const _$RefreshMovieImpl(@JsonKey(name: 'movieid') this.id,
-      {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false, this.title})
+      {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false, this.title = ''})
       : super._();
 
   factory _$RefreshMovieImpl.fromJson(Map<String, dynamic> json) =>
@@ -149,7 +149,8 @@ class _$RefreshMovieImpl extends _RefreshMovie {
   @JsonKey(name: 'ignorenfo')
   final bool ignoreNFO;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
 
   @override
   String toString() {
@@ -190,7 +191,7 @@ class _$RefreshMovieImpl extends _RefreshMovie {
 abstract class _RefreshMovie extends RefreshMovie {
   const factory _RefreshMovie(@JsonKey(name: 'movieid') final int id,
       {@JsonKey(name: 'ignorenfo') final bool ignoreNFO,
-      final String? title}) = _$RefreshMovieImpl;
+      final String title}) = _$RefreshMovieImpl;
   const _RefreshMovie._() : super._();
 
   factory _RefreshMovie.fromJson(Map<String, dynamic> json) =
@@ -203,7 +204,7 @@ abstract class _RefreshMovie extends RefreshMovie {
   @JsonKey(name: 'ignorenfo')
   bool get ignoreNFO;
   @override
-  String? get title;
+  String get title;
 
   /// Create a copy of RefreshMovie
   /// with the given fields replaced by the non-null parameter values.

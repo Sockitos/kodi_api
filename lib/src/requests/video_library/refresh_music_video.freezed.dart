@@ -24,7 +24,7 @@ mixin _$RefreshMusicVideo {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'ignorenfo')
   bool get ignoreNFO => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
 
   /// Serializes this RefreshMusicVideo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ abstract class $RefreshMusicVideoCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'musicvideoid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
-      String? title});
+      String title});
 }
 
 /// @nodoc
@@ -65,7 +65,7 @@ class _$RefreshMusicVideoCopyWithImpl<$Res, $Val extends RefreshMusicVideo>
   $Res call({
     Object? id = null,
     Object? ignoreNFO = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -76,10 +76,10 @@ class _$RefreshMusicVideoCopyWithImpl<$Res, $Val extends RefreshMusicVideo>
           ? _value.ignoreNFO
           : ignoreNFO // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -95,7 +95,7 @@ abstract class _$$RefreshMusicVideoImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'musicvideoid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
-      String? title});
+      String title});
 }
 
 /// @nodoc
@@ -113,7 +113,7 @@ class __$$RefreshMusicVideoImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? ignoreNFO = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_$RefreshMusicVideoImpl(
       null == id
@@ -124,10 +124,10 @@ class __$$RefreshMusicVideoImplCopyWithImpl<$Res>
           ? _value.ignoreNFO
           : ignoreNFO // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -136,7 +136,7 @@ class __$$RefreshMusicVideoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RefreshMusicVideoImpl extends _RefreshMusicVideo {
   const _$RefreshMusicVideoImpl(@JsonKey(name: 'musicvideoid') this.id,
-      {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false, this.title})
+      {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false, this.title = ''})
       : super._();
 
   factory _$RefreshMusicVideoImpl.fromJson(Map<String, dynamic> json) =>
@@ -149,7 +149,8 @@ class _$RefreshMusicVideoImpl extends _RefreshMusicVideo {
   @JsonKey(name: 'ignorenfo')
   final bool ignoreNFO;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
 
   @override
   String toString() {
@@ -191,7 +192,7 @@ class _$RefreshMusicVideoImpl extends _RefreshMusicVideo {
 abstract class _RefreshMusicVideo extends RefreshMusicVideo {
   const factory _RefreshMusicVideo(@JsonKey(name: 'musicvideoid') final int id,
       {@JsonKey(name: 'ignorenfo') final bool ignoreNFO,
-      final String? title}) = _$RefreshMusicVideoImpl;
+      final String title}) = _$RefreshMusicVideoImpl;
   const _RefreshMusicVideo._() : super._();
 
   factory _RefreshMusicVideo.fromJson(Map<String, dynamic> json) =
@@ -204,7 +205,7 @@ abstract class _RefreshMusicVideo extends RefreshMusicVideo {
   @JsonKey(name: 'ignorenfo')
   bool get ignoreNFO;
   @override
-  String? get title;
+  String get title;
 
   /// Create a copy of RefreshMusicVideo
   /// with the given fields replaced by the non-null parameter values.

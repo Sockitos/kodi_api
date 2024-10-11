@@ -22,51 +22,51 @@ KodiVideoDetailsEpisode _$KodiVideoDetailsEpisodeFromJson(
 /// @nodoc
 mixin _$KodiVideoDetailsEpisode {
   List<KodiVideoCast>? get cast => throw _privateConstructorUsedError;
-  int? get episode => throw _privateConstructorUsedError;
+  int get episode => throw _privateConstructorUsedError;
   @JsonKey(name: 'episodeid')
   int get episodeId => throw _privateConstructorUsedError;
   @JsonKey(name: 'firstaired')
   DateTime? get firstAired => throw _privateConstructorUsedError;
   @JsonKey(name: 'originaltitle')
-  String? get originalTitle => throw _privateConstructorUsedError;
+  String get originalTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'productioncode')
-  String? get productionCode => throw _privateConstructorUsedError;
-  double? get rating => throw _privateConstructorUsedError;
+  String get productionCode => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
   Map<String, dynamic>? get ratings => throw _privateConstructorUsedError;
-  int? get season => throw _privateConstructorUsedError;
+  int get season => throw _privateConstructorUsedError;
   @JsonKey(name: 'seasonid')
-  int? get seasonId => throw _privateConstructorUsedError;
+  int get seasonId => throw _privateConstructorUsedError;
   @JsonKey(name: 'showtitle')
-  String? get showTitle => throw _privateConstructorUsedError;
+  String get showTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'specialsortepisode')
-  int? get specialSortEpisode => throw _privateConstructorUsedError;
+  int get specialSortEpisode => throw _privateConstructorUsedError;
   @JsonKey(name: 'specialsortseason')
-  int? get specialSortSeason => throw _privateConstructorUsedError;
+  int get specialSortSeason => throw _privateConstructorUsedError;
   @JsonKey(name: 'tvshowid')
-  int? get tvshowId => throw _privateConstructorUsedError;
+  int get tvshowId => throw _privateConstructorUsedError;
   @JsonKey(name: 'uniqueid')
   Map<String, dynamic>? get uniqueId => throw _privateConstructorUsedError;
   @JsonKey(name: 'userrating')
-  int? get userRating => throw _privateConstructorUsedError;
-  String? get votes => throw _privateConstructorUsedError;
+  int get userRating => throw _privateConstructorUsedError;
+  String get votes => throw _privateConstructorUsedError;
   List<String>? get writer => throw _privateConstructorUsedError;
   List<String>? get director => throw _privateConstructorUsedError;
   KodiVideoResume? get resume => throw _privateConstructorUsedError;
-  int? get runtime => throw _privateConstructorUsedError;
+  int get runtime => throw _privateConstructorUsedError;
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails => throw _privateConstructorUsedError;
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded => throw _privateConstructorUsedError;
-  String? get file => throw _privateConstructorUsedError;
+  String get file => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed => throw _privateConstructorUsedError;
-  String? get plot => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get plot => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiVideoDetailsEpisode to a JSON map.
@@ -87,36 +87,36 @@ abstract class $KodiVideoDetailsEpisodeCopyWith<$Res> {
   @useResult
   $Res call(
       {List<KodiVideoCast>? cast,
-      int? episode,
+      int episode,
       @JsonKey(name: 'episodeid') int episodeId,
       @JsonKey(name: 'firstaired') DateTime? firstAired,
-      @JsonKey(name: 'originaltitle') String? originalTitle,
-      @JsonKey(name: 'productioncode') String? productionCode,
-      double? rating,
+      @JsonKey(name: 'originaltitle') String originalTitle,
+      @JsonKey(name: 'productioncode') String productionCode,
+      double rating,
       Map<String, dynamic>? ratings,
-      int? season,
-      @JsonKey(name: 'seasonid') int? seasonId,
-      @JsonKey(name: 'showtitle') String? showTitle,
-      @JsonKey(name: 'specialsortepisode') int? specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') int? specialSortSeason,
-      @JsonKey(name: 'tvshowid') int? tvshowId,
+      int season,
+      @JsonKey(name: 'seasonid') int seasonId,
+      @JsonKey(name: 'showtitle') String showTitle,
+      @JsonKey(name: 'specialsortepisode') int specialSortEpisode,
+      @JsonKey(name: 'specialsortseason') int specialSortSeason,
+      @JsonKey(name: 'tvshowid') int tvshowId,
       @JsonKey(name: 'uniqueid') Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') int? userRating,
-      String? votes,
+      @JsonKey(name: 'userrating') int userRating,
+      String votes,
       List<String>? writer,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
-      String? file,
+      String file,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiVideoResumeCopyWith<$Res>? get resume;
@@ -141,36 +141,36 @@ class _$KodiVideoDetailsEpisodeCopyWithImpl<$Res,
   @override
   $Res call({
     Object? cast = freezed,
-    Object? episode = freezed,
+    Object? episode = null,
     Object? episodeId = null,
     Object? firstAired = freezed,
-    Object? originalTitle = freezed,
-    Object? productionCode = freezed,
-    Object? rating = freezed,
+    Object? originalTitle = null,
+    Object? productionCode = null,
+    Object? rating = null,
     Object? ratings = freezed,
-    Object? season = freezed,
-    Object? seasonId = freezed,
-    Object? showTitle = freezed,
-    Object? specialSortEpisode = freezed,
-    Object? specialSortSeason = freezed,
-    Object? tvshowId = freezed,
+    Object? season = null,
+    Object? seasonId = null,
+    Object? showTitle = null,
+    Object? specialSortEpisode = null,
+    Object? specialSortSeason = null,
+    Object? tvshowId = null,
     Object? uniqueId = freezed,
-    Object? userRating = freezed,
-    Object? votes = freezed,
+    Object? userRating = null,
+    Object? votes = null,
     Object? writer = freezed,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
-    Object? file = freezed,
+    Object? file = null,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -178,10 +178,10 @@ class _$KodiVideoDetailsEpisodeCopyWithImpl<$Res,
           ? _value.cast
           : cast // ignore: cast_nullable_to_non_nullable
               as List<KodiVideoCast>?,
-      episode: freezed == episode
+      episode: null == episode
           ? _value.episode
           : episode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       episodeId: null == episodeId
           ? _value.episodeId
           : episodeId // ignore: cast_nullable_to_non_nullable
@@ -190,58 +190,58 @@ class _$KodiVideoDetailsEpisodeCopyWithImpl<$Res,
           ? _value.firstAired
           : firstAired // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      originalTitle: freezed == originalTitle
+      originalTitle: null == originalTitle
           ? _value.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productionCode: freezed == productionCode
+              as String,
+      productionCode: null == productionCode
           ? _value.productionCode
           : productionCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
+              as String,
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       ratings: freezed == ratings
           ? _value.ratings
           : ratings // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      season: freezed == season
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
-      seasonId: freezed == seasonId
+              as int,
+      seasonId: null == seasonId
           ? _value.seasonId
           : seasonId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      showTitle: freezed == showTitle
+              as int,
+      showTitle: null == showTitle
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      specialSortEpisode: freezed == specialSortEpisode
+              as String,
+      specialSortEpisode: null == specialSortEpisode
           ? _value.specialSortEpisode
           : specialSortEpisode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      specialSortSeason: freezed == specialSortSeason
+              as int,
+      specialSortSeason: null == specialSortSeason
           ? _value.specialSortSeason
           : specialSortSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
-      tvshowId: freezed == tvshowId
+              as int,
+      tvshowId: null == tvshowId
           ? _value.tvshowId
           : tvshowId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       uniqueId: freezed == uniqueId
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      userRating: freezed == userRating
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      votes: freezed == votes
+              as int,
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       writer: freezed == writer
           ? _value.writer
           : writer // ignore: cast_nullable_to_non_nullable
@@ -254,10 +254,10 @@ class _$KodiVideoDetailsEpisodeCopyWithImpl<$Res,
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -266,38 +266,38 @@ class _$KodiVideoDetailsEpisodeCopyWithImpl<$Res,
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      file: freezed == file
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastPlayed: freezed == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -359,36 +359,36 @@ abstract class _$$KodiVideoDetailsEpisodeImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<KodiVideoCast>? cast,
-      int? episode,
+      int episode,
       @JsonKey(name: 'episodeid') int episodeId,
       @JsonKey(name: 'firstaired') DateTime? firstAired,
-      @JsonKey(name: 'originaltitle') String? originalTitle,
-      @JsonKey(name: 'productioncode') String? productionCode,
-      double? rating,
+      @JsonKey(name: 'originaltitle') String originalTitle,
+      @JsonKey(name: 'productioncode') String productionCode,
+      double rating,
       Map<String, dynamic>? ratings,
-      int? season,
-      @JsonKey(name: 'seasonid') int? seasonId,
-      @JsonKey(name: 'showtitle') String? showTitle,
-      @JsonKey(name: 'specialsortepisode') int? specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') int? specialSortSeason,
-      @JsonKey(name: 'tvshowid') int? tvshowId,
+      int season,
+      @JsonKey(name: 'seasonid') int seasonId,
+      @JsonKey(name: 'showtitle') String showTitle,
+      @JsonKey(name: 'specialsortepisode') int specialSortEpisode,
+      @JsonKey(name: 'specialsortseason') int specialSortSeason,
+      @JsonKey(name: 'tvshowid') int tvshowId,
       @JsonKey(name: 'uniqueid') Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') int? userRating,
-      String? votes,
+      @JsonKey(name: 'userrating') int userRating,
+      String votes,
       List<String>? writer,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
-      String? file,
+      String file,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -415,36 +415,36 @@ class __$$KodiVideoDetailsEpisodeImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? cast = freezed,
-    Object? episode = freezed,
+    Object? episode = null,
     Object? episodeId = null,
     Object? firstAired = freezed,
-    Object? originalTitle = freezed,
-    Object? productionCode = freezed,
-    Object? rating = freezed,
+    Object? originalTitle = null,
+    Object? productionCode = null,
+    Object? rating = null,
     Object? ratings = freezed,
-    Object? season = freezed,
-    Object? seasonId = freezed,
-    Object? showTitle = freezed,
-    Object? specialSortEpisode = freezed,
-    Object? specialSortSeason = freezed,
-    Object? tvshowId = freezed,
+    Object? season = null,
+    Object? seasonId = null,
+    Object? showTitle = null,
+    Object? specialSortEpisode = null,
+    Object? specialSortSeason = null,
+    Object? tvshowId = null,
     Object? uniqueId = freezed,
-    Object? userRating = freezed,
-    Object? votes = freezed,
+    Object? userRating = null,
+    Object? votes = null,
     Object? writer = freezed,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
-    Object? file = freezed,
+    Object? file = null,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_$KodiVideoDetailsEpisodeImpl(
@@ -452,10 +452,10 @@ class __$$KodiVideoDetailsEpisodeImplCopyWithImpl<$Res>
           ? _value._cast
           : cast // ignore: cast_nullable_to_non_nullable
               as List<KodiVideoCast>?,
-      episode: freezed == episode
+      episode: null == episode
           ? _value.episode
           : episode // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       episodeId: null == episodeId
           ? _value.episodeId
           : episodeId // ignore: cast_nullable_to_non_nullable
@@ -464,58 +464,58 @@ class __$$KodiVideoDetailsEpisodeImplCopyWithImpl<$Res>
           ? _value.firstAired
           : firstAired // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      originalTitle: freezed == originalTitle
+      originalTitle: null == originalTitle
           ? _value.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productionCode: freezed == productionCode
+              as String,
+      productionCode: null == productionCode
           ? _value.productionCode
           : productionCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
+              as String,
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       ratings: freezed == ratings
           ? _value._ratings
           : ratings // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      season: freezed == season
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
-      seasonId: freezed == seasonId
+              as int,
+      seasonId: null == seasonId
           ? _value.seasonId
           : seasonId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      showTitle: freezed == showTitle
+              as int,
+      showTitle: null == showTitle
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      specialSortEpisode: freezed == specialSortEpisode
+              as String,
+      specialSortEpisode: null == specialSortEpisode
           ? _value.specialSortEpisode
           : specialSortEpisode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      specialSortSeason: freezed == specialSortSeason
+              as int,
+      specialSortSeason: null == specialSortSeason
           ? _value.specialSortSeason
           : specialSortSeason // ignore: cast_nullable_to_non_nullable
-              as int?,
-      tvshowId: freezed == tvshowId
+              as int,
+      tvshowId: null == tvshowId
           ? _value.tvshowId
           : tvshowId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       uniqueId: freezed == uniqueId
           ? _value._uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      userRating: freezed == userRating
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      votes: freezed == votes
+              as int,
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       writer: freezed == writer
           ? _value._writer
           : writer // ignore: cast_nullable_to_non_nullable
@@ -528,10 +528,10 @@ class __$$KodiVideoDetailsEpisodeImplCopyWithImpl<$Res>
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -540,38 +540,38 @@ class __$$KodiVideoDetailsEpisodeImplCopyWithImpl<$Res>
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      file: freezed == file
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastPlayed: freezed == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -586,36 +586,36 @@ class __$$KodiVideoDetailsEpisodeImplCopyWithImpl<$Res>
 class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
   const _$KodiVideoDetailsEpisodeImpl(
       {final List<KodiVideoCast>? cast,
-      this.episode,
+      this.episode = 0,
       @JsonKey(name: 'episodeid') required this.episodeId,
       @JsonKey(name: 'firstaired') this.firstAired,
-      @JsonKey(name: 'originaltitle') this.originalTitle,
-      @JsonKey(name: 'productioncode') this.productionCode,
-      this.rating,
+      @JsonKey(name: 'originaltitle') this.originalTitle = '',
+      @JsonKey(name: 'productioncode') this.productionCode = '',
+      this.rating = 0,
       final Map<String, dynamic>? ratings,
-      this.season,
-      @JsonKey(name: 'seasonid') this.seasonId,
-      @JsonKey(name: 'showtitle') this.showTitle,
-      @JsonKey(name: 'specialsortepisode') this.specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') this.specialSortSeason,
-      @JsonKey(name: 'tvshowid') this.tvshowId,
+      this.season = 0,
+      @JsonKey(name: 'seasonid') this.seasonId = -1,
+      @JsonKey(name: 'showtitle') this.showTitle = '',
+      @JsonKey(name: 'specialsortepisode') this.specialSortEpisode = 0,
+      @JsonKey(name: 'specialsortseason') this.specialSortSeason = 0,
+      @JsonKey(name: 'tvshowid') this.tvshowId = -1,
       @JsonKey(name: 'uniqueid') final Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') this.userRating,
-      this.votes,
+      @JsonKey(name: 'userrating') this.userRating = 0,
+      this.votes = '',
       final List<String>? writer,
       final List<String>? director,
       this.resume,
-      this.runtime,
+      this.runtime = 0,
       @JsonKey(name: 'streamdetails') this.streamDetails,
       @JsonKey(name: 'dateadded') this.dateAdded,
-      this.file,
+      this.file = '',
       @JsonKey(name: 'lastplayed') this.lastPlayed,
-      this.plot,
-      this.title,
+      this.plot = '',
+      this.title = '',
       this.art,
-      @JsonKey(name: 'playcount') this.playCount,
-      this.fanart,
-      this.thumbnail,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label})
       : _cast = cast,
         _ratings = ratings,
@@ -637,7 +637,8 @@ class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
   }
 
   @override
-  final int? episode;
+  @JsonKey()
+  final int episode;
   @override
   @JsonKey(name: 'episodeid')
   final int episodeId;
@@ -646,12 +647,13 @@ class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
   final DateTime? firstAired;
   @override
   @JsonKey(name: 'originaltitle')
-  final String? originalTitle;
+  final String originalTitle;
   @override
   @JsonKey(name: 'productioncode')
-  final String? productionCode;
+  final String productionCode;
   @override
-  final double? rating;
+  @JsonKey()
+  final double rating;
   final Map<String, dynamic>? _ratings;
   @override
   Map<String, dynamic>? get ratings {
@@ -663,22 +665,23 @@ class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
   }
 
   @override
-  final int? season;
+  @JsonKey()
+  final int season;
   @override
   @JsonKey(name: 'seasonid')
-  final int? seasonId;
+  final int seasonId;
   @override
   @JsonKey(name: 'showtitle')
-  final String? showTitle;
+  final String showTitle;
   @override
   @JsonKey(name: 'specialsortepisode')
-  final int? specialSortEpisode;
+  final int specialSortEpisode;
   @override
   @JsonKey(name: 'specialsortseason')
-  final int? specialSortSeason;
+  final int specialSortSeason;
   @override
   @JsonKey(name: 'tvshowid')
-  final int? tvshowId;
+  final int tvshowId;
   final Map<String, dynamic>? _uniqueId;
   @override
   @JsonKey(name: 'uniqueid')
@@ -692,9 +695,10 @@ class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
 
   @override
   @JsonKey(name: 'userrating')
-  final int? userRating;
+  final int userRating;
   @override
-  final String? votes;
+  @JsonKey()
+  final String votes;
   final List<String>? _writer;
   @override
   List<String>? get writer {
@@ -718,7 +722,8 @@ class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
   @override
   final KodiVideoResume? resume;
   @override
-  final int? runtime;
+  @JsonKey()
+  final int runtime;
   @override
   @JsonKey(name: 'streamdetails')
   final KodiVideoStreams? streamDetails;
@@ -726,23 +731,28 @@ class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
   @JsonKey(name: 'dateadded')
   final DateTime? dateAdded;
   @override
-  final String? file;
+  @JsonKey()
+  final String file;
   @override
   @JsonKey(name: 'lastplayed')
   final DateTime? lastPlayed;
   @override
-  final String? plot;
+  @JsonKey()
+  final String plot;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final KodiMediaArtwork? art;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
@@ -863,36 +873,36 @@ class _$KodiVideoDetailsEpisodeImpl implements _KodiVideoDetailsEpisode {
 abstract class _KodiVideoDetailsEpisode implements KodiVideoDetailsEpisode {
   const factory _KodiVideoDetailsEpisode(
       {final List<KodiVideoCast>? cast,
-      final int? episode,
+      final int episode,
       @JsonKey(name: 'episodeid') required final int episodeId,
       @JsonKey(name: 'firstaired') final DateTime? firstAired,
-      @JsonKey(name: 'originaltitle') final String? originalTitle,
-      @JsonKey(name: 'productioncode') final String? productionCode,
-      final double? rating,
+      @JsonKey(name: 'originaltitle') final String originalTitle,
+      @JsonKey(name: 'productioncode') final String productionCode,
+      final double rating,
       final Map<String, dynamic>? ratings,
-      final int? season,
-      @JsonKey(name: 'seasonid') final int? seasonId,
-      @JsonKey(name: 'showtitle') final String? showTitle,
-      @JsonKey(name: 'specialsortepisode') final int? specialSortEpisode,
-      @JsonKey(name: 'specialsortseason') final int? specialSortSeason,
-      @JsonKey(name: 'tvshowid') final int? tvshowId,
+      final int season,
+      @JsonKey(name: 'seasonid') final int seasonId,
+      @JsonKey(name: 'showtitle') final String showTitle,
+      @JsonKey(name: 'specialsortepisode') final int specialSortEpisode,
+      @JsonKey(name: 'specialsortseason') final int specialSortSeason,
+      @JsonKey(name: 'tvshowid') final int tvshowId,
       @JsonKey(name: 'uniqueid') final Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') final int? userRating,
-      final String? votes,
+      @JsonKey(name: 'userrating') final int userRating,
+      final String votes,
       final List<String>? writer,
       final List<String>? director,
       final KodiVideoResume? resume,
-      final int? runtime,
+      final int runtime,
       @JsonKey(name: 'streamdetails') final KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') final DateTime? dateAdded,
-      final String? file,
+      final String file,
       @JsonKey(name: 'lastplayed') final DateTime? lastPlayed,
-      final String? plot,
-      final String? title,
+      final String plot,
+      final String title,
       final KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') final int? playCount,
-      final String? fanart,
-      final String? thumbnail,
+      @JsonKey(name: 'playcount') final int playCount,
+      final String fanart,
+      final String thumbnail,
       required final String label}) = _$KodiVideoDetailsEpisodeImpl;
 
   factory _KodiVideoDetailsEpisode.fromJson(Map<String, dynamic> json) =
@@ -901,7 +911,7 @@ abstract class _KodiVideoDetailsEpisode implements KodiVideoDetailsEpisode {
   @override
   List<KodiVideoCast>? get cast;
   @override
-  int? get episode;
+  int get episode;
   @override
   @JsonKey(name: 'episodeid')
   int get episodeId;
@@ -910,39 +920,39 @@ abstract class _KodiVideoDetailsEpisode implements KodiVideoDetailsEpisode {
   DateTime? get firstAired;
   @override
   @JsonKey(name: 'originaltitle')
-  String? get originalTitle;
+  String get originalTitle;
   @override
   @JsonKey(name: 'productioncode')
-  String? get productionCode;
+  String get productionCode;
   @override
-  double? get rating;
+  double get rating;
   @override
   Map<String, dynamic>? get ratings;
   @override
-  int? get season;
+  int get season;
   @override
   @JsonKey(name: 'seasonid')
-  int? get seasonId;
+  int get seasonId;
   @override
   @JsonKey(name: 'showtitle')
-  String? get showTitle;
+  String get showTitle;
   @override
   @JsonKey(name: 'specialsortepisode')
-  int? get specialSortEpisode;
+  int get specialSortEpisode;
   @override
   @JsonKey(name: 'specialsortseason')
-  int? get specialSortSeason;
+  int get specialSortSeason;
   @override
   @JsonKey(name: 'tvshowid')
-  int? get tvshowId;
+  int get tvshowId;
   @override
   @JsonKey(name: 'uniqueid')
   Map<String, dynamic>? get uniqueId;
   @override
   @JsonKey(name: 'userrating')
-  int? get userRating;
+  int get userRating;
   @override
-  String? get votes;
+  String get votes;
   @override
   List<String>? get writer;
   @override
@@ -950,7 +960,7 @@ abstract class _KodiVideoDetailsEpisode implements KodiVideoDetailsEpisode {
   @override
   KodiVideoResume? get resume;
   @override
-  int? get runtime;
+  int get runtime;
   @override
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails;
@@ -958,23 +968,23 @@ abstract class _KodiVideoDetailsEpisode implements KodiVideoDetailsEpisode {
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded;
   @override
-  String? get file;
+  String get file;
   @override
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed;
   @override
-  String? get plot;
+  String get plot;
   @override
-  String? get title;
+  String get title;
   @override
   KodiMediaArtwork? get art;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
 

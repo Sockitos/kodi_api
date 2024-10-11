@@ -23,7 +23,7 @@ KodiLibraryDetailsTag _$KodiLibraryDetailsTagFromJson(
 mixin _$KodiLibraryDetailsTag {
   @JsonKey(name: 'tagid')
   int get tagId => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiLibraryDetailsTag to a JSON map.
@@ -42,7 +42,7 @@ abstract class $KodiLibraryDetailsTagCopyWith<$Res> {
           $Res Function(KodiLibraryDetailsTag) then) =
       _$KodiLibraryDetailsTagCopyWithImpl<$Res, KodiLibraryDetailsTag>;
   @useResult
-  $Res call({@JsonKey(name: 'tagid') int tagId, String? title, String label});
+  $Res call({@JsonKey(name: 'tagid') int tagId, String title, String label});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$KodiLibraryDetailsTagCopyWithImpl<$Res,
   @override
   $Res call({
     Object? tagId = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -70,10 +70,10 @@ class _$KodiLibraryDetailsTagCopyWithImpl<$Res,
           ? _value.tagId
           : tagId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -91,7 +91,7 @@ abstract class _$$KodiLibraryDetailsTagImplCopyWith<$Res>
       __$$KodiLibraryDetailsTagImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'tagid') int tagId, String? title, String label});
+  $Res call({@JsonKey(name: 'tagid') int tagId, String title, String label});
 }
 
 /// @nodoc
@@ -109,7 +109,7 @@ class __$$KodiLibraryDetailsTagImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? tagId = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? label = null,
   }) {
     return _then(_$KodiLibraryDetailsTagImpl(
@@ -117,10 +117,10 @@ class __$$KodiLibraryDetailsTagImplCopyWithImpl<$Res>
           ? _value.tagId
           : tagId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -134,7 +134,7 @@ class __$$KodiLibraryDetailsTagImplCopyWithImpl<$Res>
 class _$KodiLibraryDetailsTagImpl implements _KodiLibraryDetailsTag {
   const _$KodiLibraryDetailsTagImpl(
       {@JsonKey(name: 'tagid') required this.tagId,
-      this.title,
+      this.title = '',
       required this.label});
 
   factory _$KodiLibraryDetailsTagImpl.fromJson(Map<String, dynamic> json) =>
@@ -144,7 +144,8 @@ class _$KodiLibraryDetailsTagImpl implements _KodiLibraryDetailsTag {
   @JsonKey(name: 'tagid')
   final int tagId;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final String label;
 
@@ -187,7 +188,7 @@ class _$KodiLibraryDetailsTagImpl implements _KodiLibraryDetailsTag {
 abstract class _KodiLibraryDetailsTag implements KodiLibraryDetailsTag {
   const factory _KodiLibraryDetailsTag(
       {@JsonKey(name: 'tagid') required final int tagId,
-      final String? title,
+      final String title,
       required final String label}) = _$KodiLibraryDetailsTagImpl;
 
   factory _KodiLibraryDetailsTag.fromJson(Map<String, dynamic> json) =
@@ -197,7 +198,7 @@ abstract class _KodiLibraryDetailsTag implements KodiLibraryDetailsTag {
   @JsonKey(name: 'tagid')
   int get tagId;
   @override
-  String? get title;
+  String get title;
   @override
   String get label;
 

@@ -25,53 +25,53 @@ mixin _$KodiVideoDetailsMovie {
   List<String>? get country => throw _privateConstructorUsedError;
   List<String>? get genre => throw _privateConstructorUsedError;
   @JsonKey(name: 'imdbnumber')
-  String? get imdbNumber => throw _privateConstructorUsedError;
+  String get imdbNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'movieid')
   int get movieId => throw _privateConstructorUsedError;
-  String? get mpaa => throw _privateConstructorUsedError;
+  String get mpaa => throw _privateConstructorUsedError;
   @JsonKey(name: 'originaltitle')
-  String? get originalTitle => throw _privateConstructorUsedError;
+  String get originalTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'plotoutline')
-  String? get plotOutline => throw _privateConstructorUsedError;
+  String get plotOutline => throw _privateConstructorUsedError;
   DateTime? get premiered => throw _privateConstructorUsedError;
-  double? get rating => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
   Map<String, dynamic>? get ratings => throw _privateConstructorUsedError;
-  String? get set => throw _privateConstructorUsedError;
+  String get set => throw _privateConstructorUsedError;
   @JsonKey(name: 'setid')
-  int? get setId => throw _privateConstructorUsedError;
+  int get setId => throw _privateConstructorUsedError;
   @JsonKey(name: 'showlink')
   List<String>? get showLink => throw _privateConstructorUsedError;
   @JsonKey(name: 'sorttitle')
-  String? get sortTitle => throw _privateConstructorUsedError;
+  String get sortTitle => throw _privateConstructorUsedError;
   List<String>? get studio => throw _privateConstructorUsedError;
   List<String>? get tag => throw _privateConstructorUsedError;
-  String? get tagline => throw _privateConstructorUsedError;
-  int? get top250 => throw _privateConstructorUsedError;
-  String? get trailer => throw _privateConstructorUsedError;
+  String get tagline => throw _privateConstructorUsedError;
+  int get top250 => throw _privateConstructorUsedError;
+  String get trailer => throw _privateConstructorUsedError;
   @JsonKey(name: 'uniqueid')
   Map<String, dynamic>? get uniqueId => throw _privateConstructorUsedError;
   @JsonKey(name: 'userrating')
-  int? get userRating => throw _privateConstructorUsedError;
-  String? get votes => throw _privateConstructorUsedError;
+  int get userRating => throw _privateConstructorUsedError;
+  String get votes => throw _privateConstructorUsedError;
   List<String>? get writer => throw _privateConstructorUsedError;
-  int? get year => throw _privateConstructorUsedError;
+  int get year => throw _privateConstructorUsedError;
   List<String>? get director => throw _privateConstructorUsedError;
   KodiVideoResume? get resume => throw _privateConstructorUsedError;
-  int? get runtime => throw _privateConstructorUsedError;
+  int get runtime => throw _privateConstructorUsedError;
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails => throw _privateConstructorUsedError;
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded => throw _privateConstructorUsedError;
-  String? get file => throw _privateConstructorUsedError;
+  String get file => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed => throw _privateConstructorUsedError;
-  String? get plot => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get plot => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiVideoDetailsMovie to a JSON map.
@@ -94,41 +94,41 @@ abstract class $KodiVideoDetailsMovieCopyWith<$Res> {
       {List<KodiVideoCast>? cast,
       List<String>? country,
       List<String>? genre,
-      @JsonKey(name: 'imdbnumber') String? imdbNumber,
+      @JsonKey(name: 'imdbnumber') String imdbNumber,
       @JsonKey(name: 'movieid') int movieId,
-      String? mpaa,
-      @JsonKey(name: 'originaltitle') String? originalTitle,
-      @JsonKey(name: 'plotoutline') String? plotOutline,
+      String mpaa,
+      @JsonKey(name: 'originaltitle') String originalTitle,
+      @JsonKey(name: 'plotoutline') String plotOutline,
       DateTime? premiered,
-      double? rating,
+      double rating,
       Map<String, dynamic>? ratings,
-      String? set,
-      @JsonKey(name: 'setid') int? setId,
+      String set,
+      @JsonKey(name: 'setid') int setId,
       @JsonKey(name: 'showlink') List<String>? showLink,
-      @JsonKey(name: 'sorttitle') String? sortTitle,
+      @JsonKey(name: 'sorttitle') String sortTitle,
       List<String>? studio,
       List<String>? tag,
-      String? tagline,
-      int? top250,
-      String? trailer,
+      String tagline,
+      int top250,
+      String trailer,
       @JsonKey(name: 'uniqueid') Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') int? userRating,
-      String? votes,
+      @JsonKey(name: 'userrating') int userRating,
+      String votes,
       List<String>? writer,
-      int? year,
+      int year,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
-      String? file,
+      String file,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiVideoResumeCopyWith<$Res>? get resume;
@@ -155,41 +155,41 @@ class _$KodiVideoDetailsMovieCopyWithImpl<$Res,
     Object? cast = freezed,
     Object? country = freezed,
     Object? genre = freezed,
-    Object? imdbNumber = freezed,
+    Object? imdbNumber = null,
     Object? movieId = null,
-    Object? mpaa = freezed,
-    Object? originalTitle = freezed,
-    Object? plotOutline = freezed,
+    Object? mpaa = null,
+    Object? originalTitle = null,
+    Object? plotOutline = null,
     Object? premiered = freezed,
-    Object? rating = freezed,
+    Object? rating = null,
     Object? ratings = freezed,
-    Object? set = freezed,
-    Object? setId = freezed,
+    Object? set = null,
+    Object? setId = null,
     Object? showLink = freezed,
-    Object? sortTitle = freezed,
+    Object? sortTitle = null,
     Object? studio = freezed,
     Object? tag = freezed,
-    Object? tagline = freezed,
-    Object? top250 = freezed,
-    Object? trailer = freezed,
+    Object? tagline = null,
+    Object? top250 = null,
+    Object? trailer = null,
     Object? uniqueId = freezed,
-    Object? userRating = freezed,
-    Object? votes = freezed,
+    Object? userRating = null,
+    Object? votes = null,
     Object? writer = freezed,
-    Object? year = freezed,
+    Object? year = null,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
-    Object? file = freezed,
+    Object? file = null,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -205,54 +205,54 @@ class _$KodiVideoDetailsMovieCopyWithImpl<$Res,
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      imdbNumber: freezed == imdbNumber
+      imdbNumber: null == imdbNumber
           ? _value.imdbNumber
           : imdbNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       movieId: null == movieId
           ? _value.movieId
           : movieId // ignore: cast_nullable_to_non_nullable
               as int,
-      mpaa: freezed == mpaa
+      mpaa: null == mpaa
           ? _value.mpaa
           : mpaa // ignore: cast_nullable_to_non_nullable
-              as String?,
-      originalTitle: freezed == originalTitle
+              as String,
+      originalTitle: null == originalTitle
           ? _value.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plotOutline: freezed == plotOutline
+              as String,
+      plotOutline: null == plotOutline
           ? _value.plotOutline
           : plotOutline // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       premiered: freezed == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      rating: freezed == rating
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       ratings: freezed == ratings
           ? _value.ratings
           : ratings // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      set: freezed == set
+      set: null == set
           ? _value.set
           : set // ignore: cast_nullable_to_non_nullable
-              as String?,
-      setId: freezed == setId
+              as String,
+      setId: null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       showLink: freezed == showLink
           ? _value.showLink
           : showLink // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      sortTitle: freezed == sortTitle
+      sortTitle: null == sortTitle
           ? _value.sortTitle
           : sortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       studio: freezed == studio
           ? _value.studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -261,38 +261,38 @@ class _$KodiVideoDetailsMovieCopyWithImpl<$Res,
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      tagline: freezed == tagline
+      tagline: null == tagline
           ? _value.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
-              as String?,
-      top250: freezed == top250
+              as String,
+      top250: null == top250
           ? _value.top250
           : top250 // ignore: cast_nullable_to_non_nullable
-              as int?,
-      trailer: freezed == trailer
+              as int,
+      trailer: null == trailer
           ? _value.trailer
           : trailer // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       uniqueId: freezed == uniqueId
           ? _value.uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      userRating: freezed == userRating
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      votes: freezed == votes
+              as int,
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       writer: freezed == writer
           ? _value.writer
           : writer // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      year: freezed == year
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       director: freezed == director
           ? _value.director
           : director // ignore: cast_nullable_to_non_nullable
@@ -301,10 +301,10 @@ class _$KodiVideoDetailsMovieCopyWithImpl<$Res,
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -313,38 +313,38 @@ class _$KodiVideoDetailsMovieCopyWithImpl<$Res,
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      file: freezed == file
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastPlayed: freezed == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -408,41 +408,41 @@ abstract class _$$KodiVideoDetailsMovieImplCopyWith<$Res>
       {List<KodiVideoCast>? cast,
       List<String>? country,
       List<String>? genre,
-      @JsonKey(name: 'imdbnumber') String? imdbNumber,
+      @JsonKey(name: 'imdbnumber') String imdbNumber,
       @JsonKey(name: 'movieid') int movieId,
-      String? mpaa,
-      @JsonKey(name: 'originaltitle') String? originalTitle,
-      @JsonKey(name: 'plotoutline') String? plotOutline,
+      String mpaa,
+      @JsonKey(name: 'originaltitle') String originalTitle,
+      @JsonKey(name: 'plotoutline') String plotOutline,
       DateTime? premiered,
-      double? rating,
+      double rating,
       Map<String, dynamic>? ratings,
-      String? set,
-      @JsonKey(name: 'setid') int? setId,
+      String set,
+      @JsonKey(name: 'setid') int setId,
       @JsonKey(name: 'showlink') List<String>? showLink,
-      @JsonKey(name: 'sorttitle') String? sortTitle,
+      @JsonKey(name: 'sorttitle') String sortTitle,
       List<String>? studio,
       List<String>? tag,
-      String? tagline,
-      int? top250,
-      String? trailer,
+      String tagline,
+      int top250,
+      String trailer,
       @JsonKey(name: 'uniqueid') Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') int? userRating,
-      String? votes,
+      @JsonKey(name: 'userrating') int userRating,
+      String votes,
       List<String>? writer,
-      int? year,
+      int year,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
-      String? file,
+      String file,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -470,41 +470,41 @@ class __$$KodiVideoDetailsMovieImplCopyWithImpl<$Res>
     Object? cast = freezed,
     Object? country = freezed,
     Object? genre = freezed,
-    Object? imdbNumber = freezed,
+    Object? imdbNumber = null,
     Object? movieId = null,
-    Object? mpaa = freezed,
-    Object? originalTitle = freezed,
-    Object? plotOutline = freezed,
+    Object? mpaa = null,
+    Object? originalTitle = null,
+    Object? plotOutline = null,
     Object? premiered = freezed,
-    Object? rating = freezed,
+    Object? rating = null,
     Object? ratings = freezed,
-    Object? set = freezed,
-    Object? setId = freezed,
+    Object? set = null,
+    Object? setId = null,
     Object? showLink = freezed,
-    Object? sortTitle = freezed,
+    Object? sortTitle = null,
     Object? studio = freezed,
     Object? tag = freezed,
-    Object? tagline = freezed,
-    Object? top250 = freezed,
-    Object? trailer = freezed,
+    Object? tagline = null,
+    Object? top250 = null,
+    Object? trailer = null,
     Object? uniqueId = freezed,
-    Object? userRating = freezed,
-    Object? votes = freezed,
+    Object? userRating = null,
+    Object? votes = null,
     Object? writer = freezed,
-    Object? year = freezed,
+    Object? year = null,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
-    Object? file = freezed,
+    Object? file = null,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_$KodiVideoDetailsMovieImpl(
@@ -520,54 +520,54 @@ class __$$KodiVideoDetailsMovieImplCopyWithImpl<$Res>
           ? _value._genre
           : genre // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      imdbNumber: freezed == imdbNumber
+      imdbNumber: null == imdbNumber
           ? _value.imdbNumber
           : imdbNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       movieId: null == movieId
           ? _value.movieId
           : movieId // ignore: cast_nullable_to_non_nullable
               as int,
-      mpaa: freezed == mpaa
+      mpaa: null == mpaa
           ? _value.mpaa
           : mpaa // ignore: cast_nullable_to_non_nullable
-              as String?,
-      originalTitle: freezed == originalTitle
+              as String,
+      originalTitle: null == originalTitle
           ? _value.originalTitle
           : originalTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      plotOutline: freezed == plotOutline
+              as String,
+      plotOutline: null == plotOutline
           ? _value.plotOutline
           : plotOutline // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       premiered: freezed == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      rating: freezed == rating
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       ratings: freezed == ratings
           ? _value._ratings
           : ratings // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      set: freezed == set
+      set: null == set
           ? _value.set
           : set // ignore: cast_nullable_to_non_nullable
-              as String?,
-      setId: freezed == setId
+              as String,
+      setId: null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       showLink: freezed == showLink
           ? _value._showLink
           : showLink // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      sortTitle: freezed == sortTitle
+      sortTitle: null == sortTitle
           ? _value.sortTitle
           : sortTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       studio: freezed == studio
           ? _value._studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -576,38 +576,38 @@ class __$$KodiVideoDetailsMovieImplCopyWithImpl<$Res>
           ? _value._tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      tagline: freezed == tagline
+      tagline: null == tagline
           ? _value.tagline
           : tagline // ignore: cast_nullable_to_non_nullable
-              as String?,
-      top250: freezed == top250
+              as String,
+      top250: null == top250
           ? _value.top250
           : top250 // ignore: cast_nullable_to_non_nullable
-              as int?,
-      trailer: freezed == trailer
+              as int,
+      trailer: null == trailer
           ? _value.trailer
           : trailer // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       uniqueId: freezed == uniqueId
           ? _value._uniqueId
           : uniqueId // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      userRating: freezed == userRating
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      votes: freezed == votes
+              as int,
+      votes: null == votes
           ? _value.votes
           : votes // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       writer: freezed == writer
           ? _value._writer
           : writer // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      year: freezed == year
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       director: freezed == director
           ? _value._director
           : director // ignore: cast_nullable_to_non_nullable
@@ -616,10 +616,10 @@ class __$$KodiVideoDetailsMovieImplCopyWithImpl<$Res>
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -628,38 +628,38 @@ class __$$KodiVideoDetailsMovieImplCopyWithImpl<$Res>
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      file: freezed == file
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastPlayed: freezed == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -676,41 +676,41 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
       {final List<KodiVideoCast>? cast,
       final List<String>? country,
       final List<String>? genre,
-      @JsonKey(name: 'imdbnumber') this.imdbNumber,
+      @JsonKey(name: 'imdbnumber') this.imdbNumber = '',
       @JsonKey(name: 'movieid') required this.movieId,
-      this.mpaa,
-      @JsonKey(name: 'originaltitle') this.originalTitle,
-      @JsonKey(name: 'plotoutline') this.plotOutline,
+      this.mpaa = '',
+      @JsonKey(name: 'originaltitle') this.originalTitle = '',
+      @JsonKey(name: 'plotoutline') this.plotOutline = '',
       this.premiered,
-      this.rating,
+      this.rating = 0,
       final Map<String, dynamic>? ratings,
-      this.set,
-      @JsonKey(name: 'setid') this.setId,
+      this.set = '',
+      @JsonKey(name: 'setid') this.setId = -1,
       @JsonKey(name: 'showlink') final List<String>? showLink,
-      @JsonKey(name: 'sorttitle') this.sortTitle,
+      @JsonKey(name: 'sorttitle') this.sortTitle = '',
       final List<String>? studio,
       final List<String>? tag,
-      this.tagline,
-      this.top250,
-      this.trailer,
+      this.tagline = '',
+      this.top250 = 0,
+      this.trailer = '',
       @JsonKey(name: 'uniqueid') final Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') this.userRating,
-      this.votes,
+      @JsonKey(name: 'userrating') this.userRating = 0,
+      this.votes = '',
       final List<String>? writer,
-      this.year,
+      this.year = 0,
       final List<String>? director,
       this.resume,
-      this.runtime,
+      this.runtime = 0,
       @JsonKey(name: 'streamdetails') this.streamDetails,
       @JsonKey(name: 'dateadded') this.dateAdded,
-      this.file,
+      this.file = '',
       @JsonKey(name: 'lastplayed') this.lastPlayed,
-      this.plot,
-      this.title,
+      this.plot = '',
+      this.title = '',
       this.art,
-      @JsonKey(name: 'playcount') this.playCount,
-      this.fanart,
-      this.thumbnail,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label})
       : _cast = cast,
         _country = country,
@@ -758,22 +758,24 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
 
   @override
   @JsonKey(name: 'imdbnumber')
-  final String? imdbNumber;
+  final String imdbNumber;
   @override
   @JsonKey(name: 'movieid')
   final int movieId;
   @override
-  final String? mpaa;
+  @JsonKey()
+  final String mpaa;
   @override
   @JsonKey(name: 'originaltitle')
-  final String? originalTitle;
+  final String originalTitle;
   @override
   @JsonKey(name: 'plotoutline')
-  final String? plotOutline;
+  final String plotOutline;
   @override
   final DateTime? premiered;
   @override
-  final double? rating;
+  @JsonKey()
+  final double rating;
   final Map<String, dynamic>? _ratings;
   @override
   Map<String, dynamic>? get ratings {
@@ -785,10 +787,11 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
   }
 
   @override
-  final String? set;
+  @JsonKey()
+  final String set;
   @override
   @JsonKey(name: 'setid')
-  final int? setId;
+  final int setId;
   final List<String>? _showLink;
   @override
   @JsonKey(name: 'showlink')
@@ -802,7 +805,7 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
 
   @override
   @JsonKey(name: 'sorttitle')
-  final String? sortTitle;
+  final String sortTitle;
   final List<String>? _studio;
   @override
   List<String>? get studio {
@@ -824,11 +827,14 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
   }
 
   @override
-  final String? tagline;
+  @JsonKey()
+  final String tagline;
   @override
-  final int? top250;
+  @JsonKey()
+  final int top250;
   @override
-  final String? trailer;
+  @JsonKey()
+  final String trailer;
   final Map<String, dynamic>? _uniqueId;
   @override
   @JsonKey(name: 'uniqueid')
@@ -842,9 +848,10 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
 
   @override
   @JsonKey(name: 'userrating')
-  final int? userRating;
+  final int userRating;
   @override
-  final String? votes;
+  @JsonKey()
+  final String votes;
   final List<String>? _writer;
   @override
   List<String>? get writer {
@@ -856,7 +863,8 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
   }
 
   @override
-  final int? year;
+  @JsonKey()
+  final int year;
   final List<String>? _director;
   @override
   List<String>? get director {
@@ -870,7 +878,8 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
   @override
   final KodiVideoResume? resume;
   @override
-  final int? runtime;
+  @JsonKey()
+  final int runtime;
   @override
   @JsonKey(name: 'streamdetails')
   final KodiVideoStreams? streamDetails;
@@ -878,23 +887,28 @@ class _$KodiVideoDetailsMovieImpl implements _KodiVideoDetailsMovie {
   @JsonKey(name: 'dateadded')
   final DateTime? dateAdded;
   @override
-  final String? file;
+  @JsonKey()
+  final String file;
   @override
   @JsonKey(name: 'lastplayed')
   final DateTime? lastPlayed;
   @override
-  final String? plot;
+  @JsonKey()
+  final String plot;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final KodiMediaArtwork? art;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
@@ -1027,41 +1041,41 @@ abstract class _KodiVideoDetailsMovie implements KodiVideoDetailsMovie {
       {final List<KodiVideoCast>? cast,
       final List<String>? country,
       final List<String>? genre,
-      @JsonKey(name: 'imdbnumber') final String? imdbNumber,
+      @JsonKey(name: 'imdbnumber') final String imdbNumber,
       @JsonKey(name: 'movieid') required final int movieId,
-      final String? mpaa,
-      @JsonKey(name: 'originaltitle') final String? originalTitle,
-      @JsonKey(name: 'plotoutline') final String? plotOutline,
+      final String mpaa,
+      @JsonKey(name: 'originaltitle') final String originalTitle,
+      @JsonKey(name: 'plotoutline') final String plotOutline,
       final DateTime? premiered,
-      final double? rating,
+      final double rating,
       final Map<String, dynamic>? ratings,
-      final String? set,
-      @JsonKey(name: 'setid') final int? setId,
+      final String set,
+      @JsonKey(name: 'setid') final int setId,
       @JsonKey(name: 'showlink') final List<String>? showLink,
-      @JsonKey(name: 'sorttitle') final String? sortTitle,
+      @JsonKey(name: 'sorttitle') final String sortTitle,
       final List<String>? studio,
       final List<String>? tag,
-      final String? tagline,
-      final int? top250,
-      final String? trailer,
+      final String tagline,
+      final int top250,
+      final String trailer,
       @JsonKey(name: 'uniqueid') final Map<String, dynamic>? uniqueId,
-      @JsonKey(name: 'userrating') final int? userRating,
-      final String? votes,
+      @JsonKey(name: 'userrating') final int userRating,
+      final String votes,
       final List<String>? writer,
-      final int? year,
+      final int year,
       final List<String>? director,
       final KodiVideoResume? resume,
-      final int? runtime,
+      final int runtime,
       @JsonKey(name: 'streamdetails') final KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') final DateTime? dateAdded,
-      final String? file,
+      final String file,
       @JsonKey(name: 'lastplayed') final DateTime? lastPlayed,
-      final String? plot,
-      final String? title,
+      final String plot,
+      final String title,
       final KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') final int? playCount,
-      final String? fanart,
-      final String? thumbnail,
+      @JsonKey(name: 'playcount') final int playCount,
+      final String fanart,
+      final String thumbnail,
       required final String label}) = _$KodiVideoDetailsMovieImpl;
 
   factory _KodiVideoDetailsMovie.fromJson(Map<String, dynamic> json) =
@@ -1075,63 +1089,63 @@ abstract class _KodiVideoDetailsMovie implements KodiVideoDetailsMovie {
   List<String>? get genre;
   @override
   @JsonKey(name: 'imdbnumber')
-  String? get imdbNumber;
+  String get imdbNumber;
   @override
   @JsonKey(name: 'movieid')
   int get movieId;
   @override
-  String? get mpaa;
+  String get mpaa;
   @override
   @JsonKey(name: 'originaltitle')
-  String? get originalTitle;
+  String get originalTitle;
   @override
   @JsonKey(name: 'plotoutline')
-  String? get plotOutline;
+  String get plotOutline;
   @override
   DateTime? get premiered;
   @override
-  double? get rating;
+  double get rating;
   @override
   Map<String, dynamic>? get ratings;
   @override
-  String? get set;
+  String get set;
   @override
   @JsonKey(name: 'setid')
-  int? get setId;
+  int get setId;
   @override
   @JsonKey(name: 'showlink')
   List<String>? get showLink;
   @override
   @JsonKey(name: 'sorttitle')
-  String? get sortTitle;
+  String get sortTitle;
   @override
   List<String>? get studio;
   @override
   List<String>? get tag;
   @override
-  String? get tagline;
+  String get tagline;
   @override
-  int? get top250;
+  int get top250;
   @override
-  String? get trailer;
+  String get trailer;
   @override
   @JsonKey(name: 'uniqueid')
   Map<String, dynamic>? get uniqueId;
   @override
   @JsonKey(name: 'userrating')
-  int? get userRating;
+  int get userRating;
   @override
-  String? get votes;
+  String get votes;
   @override
   List<String>? get writer;
   @override
-  int? get year;
+  int get year;
   @override
   List<String>? get director;
   @override
   KodiVideoResume? get resume;
   @override
-  int? get runtime;
+  int get runtime;
   @override
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails;
@@ -1139,23 +1153,23 @@ abstract class _KodiVideoDetailsMovie implements KodiVideoDetailsMovie {
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded;
   @override
-  String? get file;
+  String get file;
   @override
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed;
   @override
-  String? get plot;
+  String get plot;
   @override
-  String? get title;
+  String get title;
   @override
   KodiMediaArtwork? get art;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
 

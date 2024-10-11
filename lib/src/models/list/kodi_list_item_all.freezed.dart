@@ -98,7 +98,7 @@ mixin _$KodiListItemAll {
   String get originalTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'plotoutline')
   String get plotOutline => throw _privateConstructorUsedError;
-  String get premiered => throw _privateConstructorUsedError;
+  DateTime? get premiered => throw _privateConstructorUsedError;
   @JsonKey(name: 'productioncode')
   String get productionCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'releasedate')
@@ -240,7 +240,7 @@ abstract class $KodiListItemAllCopyWith<$Res> {
       @JsonKey(name: 'originaldate') DateTime? originalDate,
       @JsonKey(name: 'originaltitle') String originalTitle,
       @JsonKey(name: 'plotoutline') String plotOutline,
-      String premiered,
+      DateTime? premiered,
       @JsonKey(name: 'productioncode') String productionCode,
       @JsonKey(name: 'releasedate') DateTime? releaseDate,
       @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType releaseType,
@@ -360,7 +360,7 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
     Object? originalDate = freezed,
     Object? originalTitle = null,
     Object? plotOutline = null,
-    Object? premiered = null,
+    Object? premiered = freezed,
     Object? productionCode = null,
     Object? releaseDate = freezed,
     Object? releaseType = null,
@@ -604,10 +604,10 @@ class _$KodiListItemAllCopyWithImpl<$Res, $Val extends KodiListItemAll>
           ? _value.plotOutline
           : plotOutline // ignore: cast_nullable_to_non_nullable
               as String,
-      premiered: null == premiered
+      premiered: freezed == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime?,
       productionCode: null == productionCode
           ? _value.productionCode
           : productionCode // ignore: cast_nullable_to_non_nullable
@@ -908,7 +908,7 @@ abstract class _$$KodiListItemAllImplCopyWith<$Res>
       @JsonKey(name: 'originaldate') DateTime? originalDate,
       @JsonKey(name: 'originaltitle') String originalTitle,
       @JsonKey(name: 'plotoutline') String plotOutline,
-      String premiered,
+      DateTime? premiered,
       @JsonKey(name: 'productioncode') String productionCode,
       @JsonKey(name: 'releasedate') DateTime? releaseDate,
       @JsonKey(name: 'releasetype') KodiAudioAlbumReleaseType releaseType,
@@ -1029,7 +1029,7 @@ class __$$KodiListItemAllImplCopyWithImpl<$Res>
     Object? originalDate = freezed,
     Object? originalTitle = null,
     Object? plotOutline = null,
-    Object? premiered = null,
+    Object? premiered = freezed,
     Object? productionCode = null,
     Object? releaseDate = freezed,
     Object? releaseType = null,
@@ -1273,10 +1273,10 @@ class __$$KodiListItemAllImplCopyWithImpl<$Res>
           ? _value.plotOutline
           : plotOutline // ignore: cast_nullable_to_non_nullable
               as String,
-      premiered: null == premiered
+      premiered: freezed == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime?,
       productionCode: null == productionCode
           ? _value.productionCode
           : productionCode // ignore: cast_nullable_to_non_nullable
@@ -1533,7 +1533,7 @@ class _$KodiListItemAllImpl implements _KodiListItemAll {
       @JsonKey(name: 'originaldate') this.originalDate,
       @JsonKey(name: 'originaltitle') this.originalTitle = '',
       @JsonKey(name: 'plotoutline') this.plotOutline = '',
-      this.premiered = '',
+      this.premiered,
       @JsonKey(name: 'productioncode') this.productionCode = '',
       @JsonKey(name: 'releasedate') this.releaseDate,
       @JsonKey(name: 'releasetype')
@@ -1814,8 +1814,7 @@ class _$KodiListItemAllImpl implements _KodiListItemAll {
   @JsonKey(name: 'plotoutline')
   final String plotOutline;
   @override
-  @JsonKey()
-  final String premiered;
+  final DateTime? premiered;
   @override
   @JsonKey(name: 'productioncode')
   final String productionCode;
@@ -2376,7 +2375,7 @@ abstract class _KodiListItemAll implements KodiListItemAll {
       @JsonKey(name: 'originaldate') final DateTime? originalDate,
       @JsonKey(name: 'originaltitle') final String originalTitle,
       @JsonKey(name: 'plotoutline') final String plotOutline,
-      final String premiered,
+      final DateTime? premiered,
       @JsonKey(name: 'productioncode') final String productionCode,
       @JsonKey(name: 'releasedate') final DateTime? releaseDate,
       @JsonKey(name: 'releasetype') final KodiAudioAlbumReleaseType releaseType,
@@ -2555,7 +2554,7 @@ abstract class _KodiListItemAll implements KodiListItemAll {
   @JsonKey(name: 'plotoutline')
   String get plotOutline;
   @override
-  String get premiered;
+  DateTime? get premiered;
   @override
   @JsonKey(name: 'productioncode')
   String get productionCode;

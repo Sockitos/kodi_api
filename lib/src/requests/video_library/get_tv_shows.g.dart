@@ -105,7 +105,7 @@ _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl
     _$$KodiVideoLibraryGetTvShowsFilterGenreIdImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetTvShowsFilterGenreIdImpl(
-          genreId: (json['genreid'] as num).toInt(),
+          (json['genreid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -120,7 +120,7 @@ _$KodiVideoLibraryGetTvShowsFilterGenreImpl
     _$$KodiVideoLibraryGetTvShowsFilterGenreImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetTvShowsFilterGenreImpl(
-          genre: json['genre'] as String,
+          json['genre'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -135,7 +135,7 @@ _$KodiVideoLibraryGeTvShowsFilterYearImpl
     _$$KodiVideoLibraryGeTvShowsFilterYearImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGeTvShowsFilterYearImpl(
-          year: (json['year'] as num).toInt(),
+          (json['year'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -150,7 +150,7 @@ _$KodiVideoLibraryGeTvShowsFilterActorImpl
     _$$KodiVideoLibraryGeTvShowsFilterActorImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGeTvShowsFilterActorImpl(
-          actor: json['actor'] as String,
+          json['actor'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -165,7 +165,7 @@ _$KodiVideoLibraryGeTvShowsFilterStudioImpl
     _$$KodiVideoLibraryGeTvShowsFilterStudioImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGeTvShowsFilterStudioImpl(
-          studio: json['studio'] as String,
+          json['studio'] as String,
           $type: json['runtimeType'] as String?,
         );
 
@@ -180,7 +180,7 @@ _$KodiVideoLibraryGeTvShowsFilterTagImpl
     _$$KodiVideoLibraryGeTvShowsFilterTagImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGeTvShowsFilterTagImpl(
-          tag: json['tag'] as String,
+          json['tag'] as String,
           $type: json['runtimeType'] as String?,
         );
 

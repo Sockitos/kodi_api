@@ -103,7 +103,7 @@ _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
     _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplFromJson(
             Map<String, dynamic> json) =>
         _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl(
-          musicVideoId: (json['music_video_id'] as num).toInt(),
+          (json['musicvideoid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
@@ -111,6 +111,6 @@ Map<String,
     dynamic> _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplToJson(
         _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl instance) =>
     <String, dynamic>{
-      'music_video_id': instance.musicVideoId,
+      'musicvideoid': instance.musicVideoId,
       'runtimeType': instance.$type,
     };

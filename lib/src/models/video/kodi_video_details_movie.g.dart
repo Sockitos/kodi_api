@@ -16,54 +16,54 @@ _$KodiVideoDetailsMovieImpl _$$KodiVideoDetailsMovieImplFromJson(
           (json['country'] as List<dynamic>?)?.map((e) => e as String).toList(),
       genre:
           (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      imdbNumber: json['imdbnumber'] as String?,
+      imdbNumber: json['imdbnumber'] as String? ?? '',
       movieId: (json['movieid'] as num).toInt(),
-      mpaa: json['mpaa'] as String?,
-      originalTitle: json['originaltitle'] as String?,
-      plotOutline: json['plotoutline'] as String?,
+      mpaa: json['mpaa'] as String? ?? '',
+      originalTitle: json['originaltitle'] as String? ?? '',
+      plotOutline: json['plotoutline'] as String? ?? '',
       premiered: const DateTimeConverter().fromJson(json['premiered']),
-      rating: (json['rating'] as num?)?.toDouble(),
+      rating: (json['rating'] as num?)?.toDouble() ?? 0,
       ratings: json['ratings'] as Map<String, dynamic>?,
-      set: json['set'] as String?,
-      setId: (json['setid'] as num?)?.toInt(),
+      set: json['set'] as String? ?? '',
+      setId: (json['setid'] as num?)?.toInt() ?? -1,
       showLink: (json['showlink'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      sortTitle: json['sorttitle'] as String?,
+      sortTitle: json['sorttitle'] as String? ?? '',
       studio:
           (json['studio'] as List<dynamic>?)?.map((e) => e as String).toList(),
       tag: (json['tag'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      tagline: json['tagline'] as String?,
-      top250: (json['top250'] as num?)?.toInt(),
-      trailer: json['trailer'] as String?,
+      tagline: json['tagline'] as String? ?? '',
+      top250: (json['top250'] as num?)?.toInt() ?? 0,
+      trailer: json['trailer'] as String? ?? '',
       uniqueId: json['uniqueid'] as Map<String, dynamic>?,
-      userRating: (json['userrating'] as num?)?.toInt(),
-      votes: json['votes'] as String?,
+      userRating: (json['userrating'] as num?)?.toInt() ?? 0,
+      votes: json['votes'] as String? ?? '',
       writer:
           (json['writer'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      year: (json['year'] as num?)?.toInt(),
+      year: (json['year'] as num?)?.toInt() ?? 0,
       director: (json['director'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       resume: json['resume'] == null
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
-      runtime: (json['runtime'] as num?)?.toInt(),
+      runtime: (json['runtime'] as num?)?.toInt() ?? 0,
       streamDetails: json['streamdetails'] == null
           ? null
           : KodiVideoStreams.fromJson(
               json['streamdetails'] as Map<String, dynamic>),
       dateAdded: const DateTimeConverter().fromJson(json['dateadded']),
-      file: json['file'] as String?,
+      file: json['file'] as String? ?? '',
       lastPlayed: const DateTimeConverter().fromJson(json['lastplayed']),
-      plot: json['plot'] as String?,
-      title: json['title'] as String?,
+      plot: json['plot'] as String? ?? '',
+      title: json['title'] as String? ?? '',
       art: json['art'] == null
           ? null
           : KodiMediaArtwork.fromJson(json['art'] as Map<String, dynamic>),
-      playCount: (json['playcount'] as num?)?.toInt(),
-      fanart: json['fanart'] as String?,
-      thumbnail: json['thumbnail'] as String?,
+      playCount: (json['playcount'] as num?)?.toInt() ?? 0,
+      fanart: json['fanart'] as String? ?? '',
+      thumbnail: json['thumbnail'] as String? ?? '',
       label: json['label'] as String,
     );
 
@@ -80,44 +80,44 @@ Map<String, dynamic> _$$KodiVideoDetailsMovieImplToJson(
   writeNotNull('cast', instance.cast?.map((e) => e.toJson()).toList());
   writeNotNull('country', instance.country);
   writeNotNull('genre', instance.genre);
-  writeNotNull('imdbnumber', instance.imdbNumber);
+  val['imdbnumber'] = instance.imdbNumber;
   val['movieid'] = instance.movieId;
-  writeNotNull('mpaa', instance.mpaa);
-  writeNotNull('originaltitle', instance.originalTitle);
-  writeNotNull('plotoutline', instance.plotOutline);
+  val['mpaa'] = instance.mpaa;
+  val['originaltitle'] = instance.originalTitle;
+  val['plotoutline'] = instance.plotOutline;
   writeNotNull(
       'premiered', const DateTimeConverter().toJson(instance.premiered));
-  writeNotNull('rating', instance.rating);
+  val['rating'] = instance.rating;
   writeNotNull('ratings', instance.ratings);
-  writeNotNull('set', instance.set);
-  writeNotNull('setid', instance.setId);
+  val['set'] = instance.set;
+  val['setid'] = instance.setId;
   writeNotNull('showlink', instance.showLink);
-  writeNotNull('sorttitle', instance.sortTitle);
+  val['sorttitle'] = instance.sortTitle;
   writeNotNull('studio', instance.studio);
   writeNotNull('tag', instance.tag);
-  writeNotNull('tagline', instance.tagline);
-  writeNotNull('top250', instance.top250);
-  writeNotNull('trailer', instance.trailer);
+  val['tagline'] = instance.tagline;
+  val['top250'] = instance.top250;
+  val['trailer'] = instance.trailer;
   writeNotNull('uniqueid', instance.uniqueId);
-  writeNotNull('userrating', instance.userRating);
-  writeNotNull('votes', instance.votes);
+  val['userrating'] = instance.userRating;
+  val['votes'] = instance.votes;
   writeNotNull('writer', instance.writer);
-  writeNotNull('year', instance.year);
+  val['year'] = instance.year;
   writeNotNull('director', instance.director);
   writeNotNull('resume', instance.resume?.toJson());
-  writeNotNull('runtime', instance.runtime);
+  val['runtime'] = instance.runtime;
   writeNotNull('streamdetails', instance.streamDetails?.toJson());
   writeNotNull(
       'dateadded', const DateTimeConverter().toJson(instance.dateAdded));
-  writeNotNull('file', instance.file);
+  val['file'] = instance.file;
   writeNotNull(
       'lastplayed', const DateTimeConverter().toJson(instance.lastPlayed));
-  writeNotNull('plot', instance.plot);
-  writeNotNull('title', instance.title);
+  val['plot'] = instance.plot;
+  val['title'] = instance.title;
   writeNotNull('art', instance.art?.toJson());
-  writeNotNull('playcount', instance.playCount);
-  writeNotNull('fanart', instance.fanart);
-  writeNotNull('thumbnail', instance.thumbnail);
+  val['playcount'] = instance.playCount;
+  val['fanart'] = instance.fanart;
+  val['thumbnail'] = instance.thumbnail;
   val['label'] = instance.label;
   return val;
 }

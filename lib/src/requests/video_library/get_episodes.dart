@@ -12,8 +12,8 @@ part 'get_episodes.freezed.dart';
 part 'get_episodes.g.dart';
 
 typedef GetEpisodesBuilder = GetEpisodes Function({
-  int? showId,
-  int? season,
+  required int showId,
+  required int season,
   Set<KodiVideoFieldsEpisode>? properties,
   KodiListLimits? limits,
   KodiListSort? sort,
@@ -25,8 +25,8 @@ class GetEpisodes
     with _$GetEpisodes
     implements KodiRequest<KodiVideoLibraryGetEpisodesResponse> {
   const factory GetEpisodes({
-    @JsonKey(name: 'tvshowid') int? showId,
-    int? season,
+    @JsonKey(name: 'tvshowid') required int showId,
+    required int season,
     Set<KodiVideoFieldsEpisode>? properties,
     KodiListLimits? limits,
     KodiListSort? sort,
@@ -72,18 +72,22 @@ class KodiVideoLibraryGetEpisodesFilter
     @JsonKey(name: 'genreid') int genreId,
   ) = _KodiVideoLibraryGetEpisodesFilterGenreId;
 
+  @Assert('genre.length >= 1')
   const factory KodiVideoLibraryGetEpisodesFilter.genre(
     String genre,
   ) = _KodiVideoLibraryGetEpisodesFilterGenre;
 
+  @Assert('year >= 0')
   const factory KodiVideoLibraryGetEpisodesFilter.year(
     int year,
   ) = _KodiVideoLibraryGetEpisodesFilterYear;
 
+  @Assert('actor.length >= 1')
   const factory KodiVideoLibraryGetEpisodesFilter.actor(
     String actor,
   ) = _KodiVideoLibraryGetEpisodesFilterActor;
 
+  @Assert('director.length >= 1')
   const factory KodiVideoLibraryGetEpisodesFilter.director(
     String director,
   ) = _KodiVideoLibraryGetEpisodesFilterDirector;

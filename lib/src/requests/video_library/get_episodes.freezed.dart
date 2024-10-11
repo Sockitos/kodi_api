@@ -21,8 +21,8 @@ GetEpisodes _$GetEpisodesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetEpisodes {
   @JsonKey(name: 'tvshowid')
-  int? get showId => throw _privateConstructorUsedError;
-  int? get season => throw _privateConstructorUsedError;
+  int get showId => throw _privateConstructorUsedError;
+  int get season => throw _privateConstructorUsedError;
   Set<KodiVideoFieldsEpisode>? get properties =>
       throw _privateConstructorUsedError;
   KodiListLimits? get limits => throw _privateConstructorUsedError;
@@ -48,8 +48,8 @@ abstract class $GetEpisodesCopyWith<$Res> {
       _$GetEpisodesCopyWithImpl<$Res, GetEpisodes>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'tvshowid') int? showId,
-      int? season,
+      {@JsonKey(name: 'tvshowid') int showId,
+      int season,
       Set<KodiVideoFieldsEpisode>? properties,
       KodiListLimits? limits,
       KodiListSort? sort,
@@ -76,22 +76,22 @@ class _$GetEpisodesCopyWithImpl<$Res, $Val extends GetEpisodes>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? showId = freezed,
-    Object? season = freezed,
+    Object? showId = null,
+    Object? season = null,
     Object? properties = freezed,
     Object? limits = freezed,
     Object? sort = freezed,
     Object? filter = freezed,
   }) {
     return _then(_value.copyWith(
-      showId: freezed == showId
+      showId: null == showId
           ? _value.showId
           : showId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
+              as int,
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       properties: freezed == properties
           ? _value.properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ abstract class _$$GetEpisodesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'tvshowid') int? showId,
-      int? season,
+      {@JsonKey(name: 'tvshowid') int showId,
+      int season,
       Set<KodiVideoFieldsEpisode>? properties,
       KodiListLimits? limits,
       KodiListSort? sort,
@@ -193,22 +193,22 @@ class __$$GetEpisodesImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? showId = freezed,
-    Object? season = freezed,
+    Object? showId = null,
+    Object? season = null,
     Object? properties = freezed,
     Object? limits = freezed,
     Object? sort = freezed,
     Object? filter = freezed,
   }) {
     return _then(_$GetEpisodesImpl(
-      showId: freezed == showId
+      showId: null == showId
           ? _value.showId
           : showId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
+              as int,
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -233,8 +233,8 @@ class __$$GetEpisodesImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GetEpisodesImpl extends _GetEpisodes {
   const _$GetEpisodesImpl(
-      {@JsonKey(name: 'tvshowid') this.showId,
-      this.season,
+      {@JsonKey(name: 'tvshowid') required this.showId,
+      required this.season,
       final Set<KodiVideoFieldsEpisode>? properties,
       this.limits,
       this.sort,
@@ -247,9 +247,9 @@ class _$GetEpisodesImpl extends _GetEpisodes {
 
   @override
   @JsonKey(name: 'tvshowid')
-  final int? showId;
+  final int showId;
   @override
-  final int? season;
+  final int season;
   final Set<KodiVideoFieldsEpisode>? _properties;
   @override
   Set<KodiVideoFieldsEpisode>? get properties {
@@ -310,8 +310,8 @@ class _$GetEpisodesImpl extends _GetEpisodes {
 
 abstract class _GetEpisodes extends GetEpisodes {
   const factory _GetEpisodes(
-      {@JsonKey(name: 'tvshowid') final int? showId,
-      final int? season,
+      {@JsonKey(name: 'tvshowid') required final int showId,
+      required final int season,
       final Set<KodiVideoFieldsEpisode>? properties,
       final KodiListLimits? limits,
       final KodiListSort? sort,
@@ -324,9 +324,9 @@ abstract class _GetEpisodes extends GetEpisodes {
 
   @override
   @JsonKey(name: 'tvshowid')
-  int? get showId;
+  int get showId;
   @override
-  int? get season;
+  int get season;
   @override
   Set<KodiVideoFieldsEpisode>? get properties;
   @override
@@ -943,7 +943,8 @@ class _$KodiVideoLibraryGetEpisodesFilterGenreImpl
     implements _KodiVideoLibraryGetEpisodesFilterGenre {
   const _$KodiVideoLibraryGetEpisodesFilterGenreImpl(this.genre,
       {final String? $type})
-      : $type = $type ?? 'genre';
+      : assert(genre.length >= 1),
+        $type = $type ?? 'genre';
 
   factory _$KodiVideoLibraryGetEpisodesFilterGenreImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -1152,7 +1153,8 @@ class _$KodiVideoLibraryGetEpisodesFilterYearImpl
     implements _KodiVideoLibraryGetEpisodesFilterYear {
   const _$KodiVideoLibraryGetEpisodesFilterYearImpl(this.year,
       {final String? $type})
-      : $type = $type ?? 'year';
+      : assert(year >= 0),
+        $type = $type ?? 'year';
 
   factory _$KodiVideoLibraryGetEpisodesFilterYearImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -1360,7 +1362,8 @@ class _$KodiVideoLibraryGetEpisodesFilterActorImpl
     implements _KodiVideoLibraryGetEpisodesFilterActor {
   const _$KodiVideoLibraryGetEpisodesFilterActorImpl(this.actor,
       {final String? $type})
-      : $type = $type ?? 'actor';
+      : assert(actor.length >= 1),
+        $type = $type ?? 'actor';
 
   factory _$KodiVideoLibraryGetEpisodesFilterActorImpl.fromJson(
           Map<String, dynamic> json) =>
@@ -1569,7 +1572,8 @@ class _$KodiVideoLibraryGetEpisodesFilterDirectorImpl
     implements _KodiVideoLibraryGetEpisodesFilterDirector {
   const _$KodiVideoLibraryGetEpisodesFilterDirectorImpl(this.director,
       {final String? $type})
-      : $type = $type ?? 'director';
+      : assert(director.length >= 1),
+        $type = $type ?? 'director';
 
   factory _$KodiVideoLibraryGetEpisodesFilterDirectorImpl.fromJson(
           Map<String, dynamic> json) =>

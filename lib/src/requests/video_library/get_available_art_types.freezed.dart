@@ -233,7 +233,8 @@ mixin _$KodiVideoLibraryGetAvailableArtTypesItem {
     required TResult Function(@JsonKey(name: 'seasonid') int seasonId) seasonId,
     required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
     required TResult Function(@JsonKey(name: 'setid') int setId) setId,
-    required TResult Function(int musicVideoId) musicVideoId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -243,7 +244,8 @@ mixin _$KodiVideoLibraryGetAvailableArtTypesItem {
     TResult? Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult? Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult? Function(int musicVideoId)? musicVideoId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -253,7 +255,8 @@ mixin _$KodiVideoLibraryGetAvailableArtTypesItem {
     TResult Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult Function(int musicVideoId)? musicVideoId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -445,7 +448,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl
     required TResult Function(@JsonKey(name: 'seasonid') int seasonId) seasonId,
     required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
     required TResult Function(@JsonKey(name: 'setid') int setId) setId,
-    required TResult Function(int musicVideoId) musicVideoId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
   }) {
     return episodeId(this.episodeId);
   }
@@ -458,7 +462,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl
     TResult? Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult? Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult? Function(int musicVideoId)? musicVideoId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
   }) {
     return episodeId?.call(this.episodeId);
   }
@@ -471,7 +476,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemEpisodeIdImpl
     TResult Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult Function(int musicVideoId)? musicVideoId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
     required TResult orElse(),
   }) {
     if (episodeId != null) {
@@ -678,7 +684,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl
     required TResult Function(@JsonKey(name: 'seasonid') int seasonId) seasonId,
     required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
     required TResult Function(@JsonKey(name: 'setid') int setId) setId,
-    required TResult Function(int musicVideoId) musicVideoId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
   }) {
     return tvShowId(this.tvShowId);
   }
@@ -691,7 +698,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl
     TResult? Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult? Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult? Function(int musicVideoId)? musicVideoId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
   }) {
     return tvShowId?.call(this.tvShowId);
   }
@@ -704,7 +712,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemTvShowIdImpl
     TResult Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult Function(int musicVideoId)? musicVideoId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
     required TResult orElse(),
   }) {
     if (tvShowId != null) {
@@ -911,7 +920,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl
     required TResult Function(@JsonKey(name: 'seasonid') int seasonId) seasonId,
     required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
     required TResult Function(@JsonKey(name: 'setid') int setId) setId,
-    required TResult Function(int musicVideoId) musicVideoId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
   }) {
     return seasonId(this.seasonId);
   }
@@ -924,7 +934,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl
     TResult? Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult? Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult? Function(int musicVideoId)? musicVideoId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
   }) {
     return seasonId?.call(this.seasonId);
   }
@@ -937,7 +948,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemSeasonIdImpl
     TResult Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult Function(int musicVideoId)? musicVideoId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
     required TResult orElse(),
   }) {
     if (seasonId != null) {
@@ -1142,7 +1154,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl
     required TResult Function(@JsonKey(name: 'seasonid') int seasonId) seasonId,
     required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
     required TResult Function(@JsonKey(name: 'setid') int setId) setId,
-    required TResult Function(int musicVideoId) musicVideoId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
   }) {
     return movieId(this.movieId);
   }
@@ -1155,7 +1168,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl
     TResult? Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult? Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult? Function(int musicVideoId)? musicVideoId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
   }) {
     return movieId?.call(this.movieId);
   }
@@ -1168,7 +1182,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMovieIdImpl
     TResult Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult Function(int musicVideoId)? musicVideoId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
     required TResult orElse(),
   }) {
     if (movieId != null) {
@@ -1372,7 +1387,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl
     required TResult Function(@JsonKey(name: 'seasonid') int seasonId) seasonId,
     required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
     required TResult Function(@JsonKey(name: 'setid') int setId) setId,
-    required TResult Function(int musicVideoId) musicVideoId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
   }) {
     return setId(this.setId);
   }
@@ -1385,7 +1401,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl
     TResult? Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult? Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult? Function(int musicVideoId)? musicVideoId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
   }) {
     return setId?.call(this.setId);
   }
@@ -1398,7 +1415,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemSetIdImpl
     TResult Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult Function(int musicVideoId)? musicVideoId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
     required TResult orElse(),
   }) {
     if (setId != null) {
@@ -1516,7 +1534,7 @@ abstract class _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWi
       __$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWithImpl<
           $Res>;
   @useResult
-  $Res call({int musicVideoId});
+  $Res call({@JsonKey(name: 'musicvideoid') int musicVideoId});
 }
 
 /// @nodoc
@@ -1541,7 +1559,7 @@ class __$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWithImpl<
     Object? musicVideoId = null,
   }) {
     return _then(_$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl(
-      musicVideoId: null == musicVideoId
+      null == musicVideoId
           ? _value.musicVideoId
           : musicVideoId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1554,7 +1572,8 @@ class __$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplCopyWithImpl<
 class _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
     implements _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId {
   const _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl(
-      {required this.musicVideoId, final String? $type})
+      @JsonKey(name: 'musicvideoid') this.musicVideoId,
+      {final String? $type})
       : $type = $type ?? 'musicVideoId';
 
   factory _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl.fromJson(
@@ -1562,6 +1581,7 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
       _$$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImplFromJson(json);
 
   @override
+  @JsonKey(name: 'musicvideoid')
   final int musicVideoId;
 
   @JsonKey(name: 'runtimeType')
@@ -1607,7 +1627,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
     required TResult Function(@JsonKey(name: 'seasonid') int seasonId) seasonId,
     required TResult Function(@JsonKey(name: 'movieid') int movieId) movieId,
     required TResult Function(@JsonKey(name: 'setid') int setId) setId,
-    required TResult Function(int musicVideoId) musicVideoId,
+    required TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)
+        musicVideoId,
   }) {
     return musicVideoId(this.musicVideoId);
   }
@@ -1620,7 +1641,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
     TResult? Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult? Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult? Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult? Function(int musicVideoId)? musicVideoId,
+    TResult? Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
   }) {
     return musicVideoId?.call(this.musicVideoId);
   }
@@ -1633,7 +1655,8 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
     TResult Function(@JsonKey(name: 'seasonid') int seasonId)? seasonId,
     TResult Function(@JsonKey(name: 'movieid') int movieId)? movieId,
     TResult Function(@JsonKey(name: 'setid') int setId)? setId,
-    TResult Function(int musicVideoId)? musicVideoId,
+    TResult Function(@JsonKey(name: 'musicvideoid') int musicVideoId)?
+        musicVideoId,
     required TResult orElse(),
   }) {
     if (musicVideoId != null) {
@@ -1722,13 +1745,14 @@ class _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl
 abstract class _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId
     implements KodiVideoLibraryGetAvailableArtTypesItem {
   const factory _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId(
-          {required final int musicVideoId}) =
+          @JsonKey(name: 'musicvideoid') final int musicVideoId) =
       _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl;
 
   factory _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId.fromJson(
           Map<String, dynamic> json) =
       _$KodiVideoLibraryGetAvailableArtTypesItemMusicVideoIdImpl.fromJson;
 
+  @JsonKey(name: 'musicvideoid')
   int get musicVideoId;
 
   /// Create a copy of KodiVideoLibraryGetAvailableArtTypesItem

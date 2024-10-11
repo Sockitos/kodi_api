@@ -13,6 +13,7 @@ part 'get_movie_set_details.g.dart';
 typedef GetMovieSetDetailsBuilder = GetMovieSetDetails Function(
   int id, {
   Set<KodiVideoFieldsMovieSet>? properties,
+  GetMovieSetDetailsMovies? movies,
 });
 
 @freezed
@@ -47,7 +48,7 @@ class GetMovieSetDetails
 class GetMovieSetDetailsMovies with _$GetMovieSetDetailsMovies {
   const factory GetMovieSetDetailsMovies({
     KodiListLimits? limits,
-    KodiVideoFieldsMovie? properties,
+    Set<KodiVideoFieldsMovie>? properties,
     KodiListSort? sort,
   }) = _GetMovieSetDetailsMovies;
 

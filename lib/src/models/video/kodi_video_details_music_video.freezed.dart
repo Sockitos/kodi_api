@@ -21,36 +21,36 @@ KodiVideoDetailsMusicVideo _$KodiVideoDetailsMusicVideoFromJson(
 
 /// @nodoc
 mixin _$KodiVideoDetailsMusicVideo {
-  String? get album => throw _privateConstructorUsedError;
+  String get album => throw _privateConstructorUsedError;
   List<String>? get artist => throw _privateConstructorUsedError;
   List<String>? get genre => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicvideoid')
   int get musicVideoId => throw _privateConstructorUsedError;
-  String? get premiered => throw _privateConstructorUsedError;
-  double? get rating => throw _privateConstructorUsedError;
+  DateTime? get premiered => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
   List<String>? get studio => throw _privateConstructorUsedError;
   List<String>? get tag => throw _privateConstructorUsedError;
-  int? get track => throw _privateConstructorUsedError;
+  int get track => throw _privateConstructorUsedError;
   @JsonKey(name: 'userrating')
-  int? get userRating => throw _privateConstructorUsedError;
-  int? get year => throw _privateConstructorUsedError;
+  int get userRating => throw _privateConstructorUsedError;
+  int get year => throw _privateConstructorUsedError;
   List<String>? get director => throw _privateConstructorUsedError;
   KodiVideoResume? get resume => throw _privateConstructorUsedError;
-  int? get runtime => throw _privateConstructorUsedError;
+  int get runtime => throw _privateConstructorUsedError;
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails => throw _privateConstructorUsedError;
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded => throw _privateConstructorUsedError;
-  String? get file => throw _privateConstructorUsedError;
+  String get file => throw _privateConstructorUsedError;
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed => throw _privateConstructorUsedError;
-  String? get plot => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get plot => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiVideoDetailsMusicVideo to a JSON map.
@@ -71,30 +71,30 @@ abstract class $KodiVideoDetailsMusicVideoCopyWith<$Res> {
           KodiVideoDetailsMusicVideo>;
   @useResult
   $Res call(
-      {String? album,
+      {String album,
       List<String>? artist,
       List<String>? genre,
       @JsonKey(name: 'musicvideoid') int musicVideoId,
-      String? premiered,
-      double? rating,
+      DateTime? premiered,
+      double rating,
       List<String>? studio,
       List<String>? tag,
-      int? track,
-      @JsonKey(name: 'userrating') int? userRating,
-      int? year,
+      int track,
+      @JsonKey(name: 'userrating') int userRating,
+      int year,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
-      String? file,
+      String file,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiVideoResumeCopyWith<$Res>? get resume;
@@ -118,37 +118,37 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? album = freezed,
+    Object? album = null,
     Object? artist = freezed,
     Object? genre = freezed,
     Object? musicVideoId = null,
     Object? premiered = freezed,
-    Object? rating = freezed,
+    Object? rating = null,
     Object? studio = freezed,
     Object? tag = freezed,
-    Object? track = freezed,
-    Object? userRating = freezed,
-    Object? year = freezed,
+    Object? track = null,
+    Object? userRating = null,
+    Object? year = null,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
-    Object? file = freezed,
+    Object? file = null,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
-      album: freezed == album
+      album: null == album
           ? _value.album
           : album // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       artist: freezed == artist
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -164,11 +164,11 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
       premiered: freezed == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
+              as DateTime?,
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       studio: freezed == studio
           ? _value.studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -177,18 +177,18 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      track: freezed == track
+      track: null == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userRating: freezed == userRating
+              as int,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      year: freezed == year
+              as int,
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       director: freezed == director
           ? _value.director
           : director // ignore: cast_nullable_to_non_nullable
@@ -197,10 +197,10 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -209,38 +209,38 @@ class _$KodiVideoDetailsMusicVideoCopyWithImpl<$Res,
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      file: freezed == file
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastPlayed: freezed == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -301,30 +301,30 @@ abstract class _$$KodiVideoDetailsMusicVideoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? album,
+      {String album,
       List<String>? artist,
       List<String>? genre,
       @JsonKey(name: 'musicvideoid') int musicVideoId,
-      String? premiered,
-      double? rating,
+      DateTime? premiered,
+      double rating,
       List<String>? studio,
       List<String>? tag,
-      int? track,
-      @JsonKey(name: 'userrating') int? userRating,
-      int? year,
+      int track,
+      @JsonKey(name: 'userrating') int userRating,
+      int year,
       List<String>? director,
       KodiVideoResume? resume,
-      int? runtime,
+      int runtime,
       @JsonKey(name: 'streamdetails') KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
-      String? file,
+      String file,
       @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-      String? plot,
-      String? title,
+      String plot,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -350,37 +350,37 @@ class __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? album = freezed,
+    Object? album = null,
     Object? artist = freezed,
     Object? genre = freezed,
     Object? musicVideoId = null,
     Object? premiered = freezed,
-    Object? rating = freezed,
+    Object? rating = null,
     Object? studio = freezed,
     Object? tag = freezed,
-    Object? track = freezed,
-    Object? userRating = freezed,
-    Object? year = freezed,
+    Object? track = null,
+    Object? userRating = null,
+    Object? year = null,
     Object? director = freezed,
     Object? resume = freezed,
-    Object? runtime = freezed,
+    Object? runtime = null,
     Object? streamDetails = freezed,
     Object? dateAdded = freezed,
-    Object? file = freezed,
+    Object? file = null,
     Object? lastPlayed = freezed,
-    Object? plot = freezed,
-    Object? title = freezed,
+    Object? plot = null,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_$KodiVideoDetailsMusicVideoImpl(
-      album: freezed == album
+      album: null == album
           ? _value.album
           : album // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       artist: freezed == artist
           ? _value._artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -396,11 +396,11 @@ class __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>
       premiered: freezed == premiered
           ? _value.premiered
           : premiered // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
+              as DateTime?,
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
       studio: freezed == studio
           ? _value._studio
           : studio // ignore: cast_nullable_to_non_nullable
@@ -409,18 +409,18 @@ class __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>
           ? _value._tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      track: freezed == track
+      track: null == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userRating: freezed == userRating
+              as int,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      year: freezed == year
+              as int,
+      year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       director: freezed == director
           ? _value._director
           : director // ignore: cast_nullable_to_non_nullable
@@ -429,10 +429,10 @@ class __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as KodiVideoResume?,
-      runtime: freezed == runtime
+      runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       streamDetails: freezed == streamDetails
           ? _value.streamDetails
           : streamDetails // ignore: cast_nullable_to_non_nullable
@@ -441,38 +441,38 @@ class __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      file: freezed == file
+      file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastPlayed: freezed == lastPlayed
           ? _value.lastPlayed
           : lastPlayed // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -486,30 +486,30 @@ class __$$KodiVideoDetailsMusicVideoImplCopyWithImpl<$Res>
 @JsonSerializable(converters: [DateTimeConverter()])
 class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
   const _$KodiVideoDetailsMusicVideoImpl(
-      {this.album,
+      {this.album = '',
       final List<String>? artist,
       final List<String>? genre,
       @JsonKey(name: 'musicvideoid') required this.musicVideoId,
       this.premiered,
-      this.rating,
+      this.rating = 0,
       final List<String>? studio,
       final List<String>? tag,
-      this.track,
-      @JsonKey(name: 'userrating') this.userRating,
-      this.year,
+      this.track = 0,
+      @JsonKey(name: 'userrating') this.userRating = 0,
+      this.year = 0,
       final List<String>? director,
       this.resume,
-      this.runtime,
+      this.runtime = 0,
       @JsonKey(name: 'streamdetails') this.streamDetails,
       @JsonKey(name: 'dateadded') this.dateAdded,
-      this.file,
+      this.file = '',
       @JsonKey(name: 'lastplayed') this.lastPlayed,
-      this.plot,
-      this.title,
+      this.plot = '',
+      this.title = '',
       this.art,
-      @JsonKey(name: 'playcount') this.playCount,
-      this.fanart,
-      this.thumbnail,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label})
       : _artist = artist,
         _genre = genre,
@@ -522,7 +522,8 @@ class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
       _$$KodiVideoDetailsMusicVideoImplFromJson(json);
 
   @override
-  final String? album;
+  @JsonKey()
+  final String album;
   final List<String>? _artist;
   @override
   List<String>? get artist {
@@ -547,9 +548,10 @@ class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
   @JsonKey(name: 'musicvideoid')
   final int musicVideoId;
   @override
-  final String? premiered;
+  final DateTime? premiered;
   @override
-  final double? rating;
+  @JsonKey()
+  final double rating;
   final List<String>? _studio;
   @override
   List<String>? get studio {
@@ -571,12 +573,14 @@ class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
   }
 
   @override
-  final int? track;
+  @JsonKey()
+  final int track;
   @override
   @JsonKey(name: 'userrating')
-  final int? userRating;
+  final int userRating;
   @override
-  final int? year;
+  @JsonKey()
+  final int year;
   final List<String>? _director;
   @override
   List<String>? get director {
@@ -590,7 +594,8 @@ class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
   @override
   final KodiVideoResume? resume;
   @override
-  final int? runtime;
+  @JsonKey()
+  final int runtime;
   @override
   @JsonKey(name: 'streamdetails')
   final KodiVideoStreams? streamDetails;
@@ -598,23 +603,28 @@ class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
   @JsonKey(name: 'dateadded')
   final DateTime? dateAdded;
   @override
-  final String? file;
+  @JsonKey()
+  final String file;
   @override
   @JsonKey(name: 'lastplayed')
   final DateTime? lastPlayed;
   @override
-  final String? plot;
+  @JsonKey()
+  final String plot;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final KodiMediaArtwork? art;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
@@ -714,37 +724,37 @@ class _$KodiVideoDetailsMusicVideoImpl implements _KodiVideoDetailsMusicVideo {
 abstract class _KodiVideoDetailsMusicVideo
     implements KodiVideoDetailsMusicVideo {
   const factory _KodiVideoDetailsMusicVideo(
-      {final String? album,
+      {final String album,
       final List<String>? artist,
       final List<String>? genre,
       @JsonKey(name: 'musicvideoid') required final int musicVideoId,
-      final String? premiered,
-      final double? rating,
+      final DateTime? premiered,
+      final double rating,
       final List<String>? studio,
       final List<String>? tag,
-      final int? track,
-      @JsonKey(name: 'userrating') final int? userRating,
-      final int? year,
+      final int track,
+      @JsonKey(name: 'userrating') final int userRating,
+      final int year,
       final List<String>? director,
       final KodiVideoResume? resume,
-      final int? runtime,
+      final int runtime,
       @JsonKey(name: 'streamdetails') final KodiVideoStreams? streamDetails,
       @JsonKey(name: 'dateadded') final DateTime? dateAdded,
-      final String? file,
+      final String file,
       @JsonKey(name: 'lastplayed') final DateTime? lastPlayed,
-      final String? plot,
-      final String? title,
+      final String plot,
+      final String title,
       final KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') final int? playCount,
-      final String? fanart,
-      final String? thumbnail,
+      @JsonKey(name: 'playcount') final int playCount,
+      final String fanart,
+      final String thumbnail,
       required final String label}) = _$KodiVideoDetailsMusicVideoImpl;
 
   factory _KodiVideoDetailsMusicVideo.fromJson(Map<String, dynamic> json) =
       _$KodiVideoDetailsMusicVideoImpl.fromJson;
 
   @override
-  String? get album;
+  String get album;
   @override
   List<String>? get artist;
   @override
@@ -753,26 +763,26 @@ abstract class _KodiVideoDetailsMusicVideo
   @JsonKey(name: 'musicvideoid')
   int get musicVideoId;
   @override
-  String? get premiered;
+  DateTime? get premiered;
   @override
-  double? get rating;
+  double get rating;
   @override
   List<String>? get studio;
   @override
   List<String>? get tag;
   @override
-  int? get track;
+  int get track;
   @override
   @JsonKey(name: 'userrating')
-  int? get userRating;
+  int get userRating;
   @override
-  int? get year;
+  int get year;
   @override
   List<String>? get director;
   @override
   KodiVideoResume? get resume;
   @override
-  int? get runtime;
+  int get runtime;
   @override
   @JsonKey(name: 'streamdetails')
   KodiVideoStreams? get streamDetails;
@@ -780,23 +790,23 @@ abstract class _KodiVideoDetailsMusicVideo
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded;
   @override
-  String? get file;
+  String get file;
   @override
   @JsonKey(name: 'lastplayed')
   DateTime? get lastPlayed;
   @override
-  String? get plot;
+  String get plot;
   @override
-  String? get title;
+  String get title;
   @override
   KodiMediaArtwork? get art;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
 

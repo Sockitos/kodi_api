@@ -55,8 +55,9 @@ _$GetMovieSetDetailsMoviesImpl _$$GetMovieSetDetailsMoviesImplFromJson(
       limits: json['limits'] == null
           ? null
           : KodiListLimits.fromJson(json['limits'] as Map<String, dynamic>),
-      properties: $enumDecodeNullable(
-          _$KodiVideoFieldsMovieEnumMap, json['properties']),
+      properties: (json['properties'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$KodiVideoFieldsMovieEnumMap, e))
+          .toSet(),
       sort: json['sort'] == null
           ? null
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
@@ -74,7 +75,10 @@ Map<String, dynamic> _$$GetMovieSetDetailsMoviesImplToJson(
 
   writeNotNull('limits', instance.limits?.toJson());
   writeNotNull(
-      'properties', _$KodiVideoFieldsMovieEnumMap[instance.properties]);
+      'properties',
+      instance.properties
+          ?.map((e) => _$KodiVideoFieldsMovieEnumMap[e]!)
+          .toList());
   writeNotNull('sort', instance.sort?.toJson());
   return val;
 }

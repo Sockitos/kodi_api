@@ -23,15 +23,15 @@ KodiVideoDetailsMovieSetExtended _$KodiVideoDetailsMovieSetExtendedFromJson(
 mixin _$KodiVideoDetailsMovieSetExtended {
   List<KodiVideoDetailsMovie>? get movies => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
-  String? get plot => throw _privateConstructorUsedError;
+  String get plot => throw _privateConstructorUsedError;
   @JsonKey(name: 'setid')
   int get setId => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
   /// Serializes this KodiVideoDetailsMovieSetExtended to a JSON map.
@@ -55,13 +55,13 @@ abstract class $KodiVideoDetailsMovieSetExtendedCopyWith<$Res> {
   $Res call(
       {List<KodiVideoDetailsMovie>? movies,
       KodiListLimitsReturned limits,
-      String? plot,
+      String plot,
       @JsonKey(name: 'setid') int setId,
-      String? title,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiListLimitsReturnedCopyWith<$Res> get limits;
@@ -86,13 +86,13 @@ class _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
   $Res call({
     Object? movies = freezed,
     Object? limits = null,
-    Object? plot = freezed,
+    Object? plot = null,
     Object? setId = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -104,34 +104,34 @@ class _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
           ? _value.limits
           : limits // ignore: cast_nullable_to_non_nullable
               as KodiListLimitsReturned,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       setId: null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -176,13 +176,13 @@ abstract class _$$KodiVideoDetailsMovieSetExtendedImplCopyWith<$Res>
   $Res call(
       {List<KodiVideoDetailsMovie>? movies,
       KodiListLimitsReturned limits,
-      String? plot,
+      String plot,
       @JsonKey(name: 'setid') int setId,
-      String? title,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -208,13 +208,13 @@ class __$$KodiVideoDetailsMovieSetExtendedImplCopyWithImpl<$Res>
   $Res call({
     Object? movies = freezed,
     Object? limits = null,
-    Object? plot = freezed,
+    Object? plot = null,
     Object? setId = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_$KodiVideoDetailsMovieSetExtendedImpl(
@@ -226,34 +226,34 @@ class __$$KodiVideoDetailsMovieSetExtendedImplCopyWithImpl<$Res>
           ? _value.limits
           : limits // ignore: cast_nullable_to_non_nullable
               as KodiListLimitsReturned,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       setId: null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -269,13 +269,13 @@ class _$KodiVideoDetailsMovieSetExtendedImpl
   const _$KodiVideoDetailsMovieSetExtendedImpl(
       {final List<KodiVideoDetailsMovie>? movies,
       required this.limits,
-      this.plot,
+      this.plot = '',
       @JsonKey(name: 'setid') required this.setId,
-      this.title,
+      this.title = '',
       this.art,
-      @JsonKey(name: 'playcount') this.playCount,
-      this.fanart,
-      this.thumbnail,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label})
       : _movies = movies;
 
@@ -296,21 +296,25 @@ class _$KodiVideoDetailsMovieSetExtendedImpl
   @override
   final KodiListLimitsReturned limits;
   @override
-  final String? plot;
+  @JsonKey()
+  final String plot;
   @override
   @JsonKey(name: 'setid')
   final int setId;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final KodiMediaArtwork? art;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
@@ -376,13 +380,13 @@ abstract class _KodiVideoDetailsMovieSetExtended
   const factory _KodiVideoDetailsMovieSetExtended(
       {final List<KodiVideoDetailsMovie>? movies,
       required final KodiListLimitsReturned limits,
-      final String? plot,
+      final String plot,
       @JsonKey(name: 'setid') required final int setId,
-      final String? title,
+      final String title,
       final KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') final int? playCount,
-      final String? fanart,
-      final String? thumbnail,
+      @JsonKey(name: 'playcount') final int playCount,
+      final String fanart,
+      final String thumbnail,
       required final String label}) = _$KodiVideoDetailsMovieSetExtendedImpl;
 
   factory _KodiVideoDetailsMovieSetExtended.fromJson(
@@ -394,21 +398,21 @@ abstract class _KodiVideoDetailsMovieSetExtended
   @override
   KodiListLimitsReturned get limits;
   @override
-  String? get plot;
+  String get plot;
   @override
   @JsonKey(name: 'setid')
   int get setId;
   @override
-  String? get title;
+  String get title;
   @override
   KodiMediaArtwork? get art;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
 

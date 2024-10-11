@@ -699,7 +699,7 @@ class __$$KodiVideoLibraryGetMusicVideosFilterArtistImplCopyWithImpl<$Res>
     Object? artist = null,
   }) {
     return _then(_$KodiVideoLibraryGetMusicVideosFilterArtistImpl(
-      artist: null == artist
+      null == artist
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
               as String,
@@ -711,8 +711,8 @@ class __$$KodiVideoLibraryGetMusicVideosFilterArtistImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGetMusicVideosFilterArtistImpl
     implements _KodiVideoLibraryGetMusicVideosFilterArtist {
-  const _$KodiVideoLibraryGetMusicVideosFilterArtistImpl(
-      {required this.artist, final String? $type})
+  const _$KodiVideoLibraryGetMusicVideosFilterArtistImpl(this.artist,
+      {final String? $type})
       : $type = $type ?? 'artist';
 
   factory _$KodiVideoLibraryGetMusicVideosFilterArtistImpl.fromJson(
@@ -889,8 +889,7 @@ class _$KodiVideoLibraryGetMusicVideosFilterArtistImpl
 abstract class _KodiVideoLibraryGetMusicVideosFilterArtist
     implements KodiVideoLibraryGetMusicVideosFilter {
   const factory _KodiVideoLibraryGetMusicVideosFilterArtist(
-          {required final String artist}) =
-      _$KodiVideoLibraryGetMusicVideosFilterArtistImpl;
+      final String artist) = _$KodiVideoLibraryGetMusicVideosFilterArtistImpl;
 
   factory _KodiVideoLibraryGetMusicVideosFilterArtist.fromJson(
           Map<String, dynamic> json) =
@@ -937,7 +936,7 @@ class __$$KodiVideoLibraryGetMusicVideosFilterGenreIdImplCopyWithImpl<$Res>
     Object? genreId = null,
   }) {
     return _then(_$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl(
-      genreId: null == genreId
+      null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
               as int,
@@ -950,7 +949,8 @@ class __$$KodiVideoLibraryGetMusicVideosFilterGenreIdImplCopyWithImpl<$Res>
 class _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl
     implements _KodiVideoLibraryGetMusicVideosFilterGenreId {
   const _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl(
-      {@JsonKey(name: 'genreid') required this.genreId, final String? $type})
+      @JsonKey(name: 'genreid') this.genreId,
+      {final String? $type})
       : $type = $type ?? 'genreId';
 
   factory _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl.fromJson(
@@ -1128,7 +1128,7 @@ class _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl
 abstract class _KodiVideoLibraryGetMusicVideosFilterGenreId
     implements KodiVideoLibraryGetMusicVideosFilter {
   const factory _KodiVideoLibraryGetMusicVideosFilterGenreId(
-          {@JsonKey(name: 'genreid') required final int genreId}) =
+          @JsonKey(name: 'genreid') final int genreId) =
       _$KodiVideoLibraryGetMusicVideosFilterGenreIdImpl;
 
   factory _KodiVideoLibraryGetMusicVideosFilterGenreId.fromJson(
@@ -1174,7 +1174,7 @@ class __$$KodiVideoLibraryGetMusicVideosFilterGenreImplCopyWithImpl<$Res>
     Object? genre = null,
   }) {
     return _then(_$KodiVideoLibraryGetMusicVideosFilterGenreImpl(
-      genre: null == genre
+      null == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1186,8 +1186,8 @@ class __$$KodiVideoLibraryGetMusicVideosFilterGenreImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGetMusicVideosFilterGenreImpl
     implements _KodiVideoLibraryGetMusicVideosFilterGenre {
-  const _$KodiVideoLibraryGetMusicVideosFilterGenreImpl(
-      {required this.genre, final String? $type})
+  const _$KodiVideoLibraryGetMusicVideosFilterGenreImpl(this.genre,
+      {final String? $type})
       : $type = $type ?? 'genre';
 
   factory _$KodiVideoLibraryGetMusicVideosFilterGenreImpl.fromJson(
@@ -1363,8 +1363,7 @@ class _$KodiVideoLibraryGetMusicVideosFilterGenreImpl
 
 abstract class _KodiVideoLibraryGetMusicVideosFilterGenre
     implements KodiVideoLibraryGetMusicVideosFilter {
-  const factory _KodiVideoLibraryGetMusicVideosFilterGenre(
-          {required final String genre}) =
+  const factory _KodiVideoLibraryGetMusicVideosFilterGenre(final String genre) =
       _$KodiVideoLibraryGetMusicVideosFilterGenreImpl;
 
   factory _KodiVideoLibraryGetMusicVideosFilterGenre.fromJson(
@@ -1409,7 +1408,7 @@ class __$$KodiVideoLibraryGetMusicVideosFilterYearImplCopyWithImpl<$Res>
     Object? year = null,
   }) {
     return _then(_$KodiVideoLibraryGetMusicVideosFilterYearImpl(
-      year: null == year
+      null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1421,8 +1420,8 @@ class __$$KodiVideoLibraryGetMusicVideosFilterYearImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGetMusicVideosFilterYearImpl
     implements _KodiVideoLibraryGetMusicVideosFilterYear {
-  const _$KodiVideoLibraryGetMusicVideosFilterYearImpl(
-      {required this.year, final String? $type})
+  const _$KodiVideoLibraryGetMusicVideosFilterYearImpl(this.year,
+      {final String? $type})
       : $type = $type ?? 'year';
 
   factory _$KodiVideoLibraryGetMusicVideosFilterYearImpl.fromJson(
@@ -1597,8 +1596,7 @@ class _$KodiVideoLibraryGetMusicVideosFilterYearImpl
 
 abstract class _KodiVideoLibraryGetMusicVideosFilterYear
     implements KodiVideoLibraryGetMusicVideosFilter {
-  const factory _KodiVideoLibraryGetMusicVideosFilterYear(
-          {required final int year}) =
+  const factory _KodiVideoLibraryGetMusicVideosFilterYear(final int year) =
       _$KodiVideoLibraryGetMusicVideosFilterYearImpl;
 
   factory _KodiVideoLibraryGetMusicVideosFilterYear.fromJson(
@@ -1646,7 +1644,7 @@ class __$$KodiVideoLibraryGetMusicVideosFilterDirectorImplCopyWithImpl<$Res>
     Object? director = null,
   }) {
     return _then(_$KodiVideoLibraryGetMusicVideosFilterDirectorImpl(
-      director: null == director
+      null == director
           ? _value.director
           : director // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1658,8 +1656,8 @@ class __$$KodiVideoLibraryGetMusicVideosFilterDirectorImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl
     implements _KodiVideoLibraryGetMusicVideosFilterDirector {
-  const _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl(
-      {required this.director, final String? $type})
+  const _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl(this.director,
+      {final String? $type})
       : $type = $type ?? 'director';
 
   factory _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl.fromJson(
@@ -1837,7 +1835,7 @@ class _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl
 abstract class _KodiVideoLibraryGetMusicVideosFilterDirector
     implements KodiVideoLibraryGetMusicVideosFilter {
   const factory _KodiVideoLibraryGetMusicVideosFilterDirector(
-          {required final String director}) =
+          final String director) =
       _$KodiVideoLibraryGetMusicVideosFilterDirectorImpl;
 
   factory _KodiVideoLibraryGetMusicVideosFilterDirector.fromJson(
@@ -1883,7 +1881,7 @@ class __$$KodiVideoLibraryGetMusicVideosFilterStudioImplCopyWithImpl<$Res>
     Object? studio = null,
   }) {
     return _then(_$KodiVideoLibraryGetMusicVideosFilterStudioImpl(
-      studio: null == studio
+      null == studio
           ? _value.studio
           : studio // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1895,8 +1893,8 @@ class __$$KodiVideoLibraryGetMusicVideosFilterStudioImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGetMusicVideosFilterStudioImpl
     implements _KodiVideoLibraryGetMusicVideosFilterStudio {
-  const _$KodiVideoLibraryGetMusicVideosFilterStudioImpl(
-      {required this.studio, final String? $type})
+  const _$KodiVideoLibraryGetMusicVideosFilterStudioImpl(this.studio,
+      {final String? $type})
       : $type = $type ?? 'studio';
 
   factory _$KodiVideoLibraryGetMusicVideosFilterStudioImpl.fromJson(
@@ -2073,8 +2071,7 @@ class _$KodiVideoLibraryGetMusicVideosFilterStudioImpl
 abstract class _KodiVideoLibraryGetMusicVideosFilterStudio
     implements KodiVideoLibraryGetMusicVideosFilter {
   const factory _KodiVideoLibraryGetMusicVideosFilterStudio(
-          {required final String studio}) =
-      _$KodiVideoLibraryGetMusicVideosFilterStudioImpl;
+      final String studio) = _$KodiVideoLibraryGetMusicVideosFilterStudioImpl;
 
   factory _KodiVideoLibraryGetMusicVideosFilterStudio.fromJson(
           Map<String, dynamic> json) =
@@ -2118,7 +2115,7 @@ class __$$KodiVideoLibraryGetMusicVideosFilterTagImplCopyWithImpl<$Res>
     Object? tag = null,
   }) {
     return _then(_$KodiVideoLibraryGetMusicVideosFilterTagImpl(
-      tag: null == tag
+      null == tag
           ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2130,8 +2127,8 @@ class __$$KodiVideoLibraryGetMusicVideosFilterTagImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$KodiVideoLibraryGetMusicVideosFilterTagImpl
     implements _KodiVideoLibraryGetMusicVideosFilterTag {
-  const _$KodiVideoLibraryGetMusicVideosFilterTagImpl(
-      {required this.tag, final String? $type})
+  const _$KodiVideoLibraryGetMusicVideosFilterTagImpl(this.tag,
+      {final String? $type})
       : $type = $type ?? 'tag';
 
   factory _$KodiVideoLibraryGetMusicVideosFilterTagImpl.fromJson(
@@ -2306,8 +2303,7 @@ class _$KodiVideoLibraryGetMusicVideosFilterTagImpl
 
 abstract class _KodiVideoLibraryGetMusicVideosFilterTag
     implements KodiVideoLibraryGetMusicVideosFilter {
-  const factory _KodiVideoLibraryGetMusicVideosFilterTag(
-          {required final String tag}) =
+  const factory _KodiVideoLibraryGetMusicVideosFilterTag(final String tag) =
       _$KodiVideoLibraryGetMusicVideosFilterTagImpl;
 
   factory _KodiVideoLibraryGetMusicVideosFilterTag.fromJson(

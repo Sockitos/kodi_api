@@ -7,13 +7,13 @@ part 'kodi_video_details_movie_set.g.dart';
 @freezed
 class KodiVideoDetailsMovieSet with _$KodiVideoDetailsMovieSet {
   const factory KodiVideoDetailsMovieSet({
-    String? plot,
+    @Default('') String plot,
     @JsonKey(name: 'setid') required int setId,
-    String? title,
+    @Default('') String title,
     KodiMediaArtwork? art,
-    @JsonKey(name: 'playcount') int? playCount,
-    String? fanart,
-    String? thumbnail,
+    @JsonKey(name: 'playcount') @Default(0) int playCount,
+    @Default('') String fanart,
+    @Default('') String thumbnail,
     required String label,
   }) = _KodiVideoDetailsMovieSet;
 

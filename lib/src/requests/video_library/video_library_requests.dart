@@ -5,6 +5,7 @@ export 'get_available_art_types.dart'
     show KodiVideoLibraryGetAvailableArtTypesItem;
 export 'get_episodes.dart' show KodiVideoLibraryGetEpisodesFilter;
 export 'get_genres.dart' show KodiVideoLibraryGetGenresType;
+export 'get_movie_set_details.dart' show GetMovieSetDetailsMovies;
 export 'get_movies.dart' show KodiVideoLibraryGetMoviesFilter;
 export 'get_music_videos.dart' show KodiVideoLibraryGetMusicVideosFilter;
 export 'get_tags.dart' show KodiVideoLibraryGetTagsType;

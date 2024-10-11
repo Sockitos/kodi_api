@@ -26,7 +26,7 @@ mixin _$RefreshTVShow {
   bool get ignoreNFO => throw _privateConstructorUsedError;
   @JsonKey(name: 'refreshepisodes')
   bool get refreshEpisodes => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
 
   /// Serializes this RefreshTVShow to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -48,7 +48,7 @@ abstract class $RefreshTVShowCopyWith<$Res> {
       {@JsonKey(name: 'tvshowid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
       @JsonKey(name: 'refreshepisodes') bool refreshEpisodes,
-      String? title});
+      String title});
 }
 
 /// @nodoc
@@ -69,7 +69,7 @@ class _$RefreshTVShowCopyWithImpl<$Res, $Val extends RefreshTVShow>
     Object? id = null,
     Object? ignoreNFO = null,
     Object? refreshEpisodes = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -84,10 +84,10 @@ class _$RefreshTVShowCopyWithImpl<$Res, $Val extends RefreshTVShow>
           ? _value.refreshEpisodes
           : refreshEpisodes // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -104,7 +104,7 @@ abstract class _$$RefreshTVShowImplCopyWith<$Res>
       {@JsonKey(name: 'tvshowid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
       @JsonKey(name: 'refreshepisodes') bool refreshEpisodes,
-      String? title});
+      String title});
 }
 
 /// @nodoc
@@ -123,7 +123,7 @@ class __$$RefreshTVShowImplCopyWithImpl<$Res>
     Object? id = null,
     Object? ignoreNFO = null,
     Object? refreshEpisodes = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_$RefreshTVShowImpl(
       null == id
@@ -138,10 +138,10 @@ class __$$RefreshTVShowImplCopyWithImpl<$Res>
           ? _value.refreshEpisodes
           : refreshEpisodes // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -152,7 +152,7 @@ class _$RefreshTVShowImpl extends _RefreshTVShow {
   const _$RefreshTVShowImpl(@JsonKey(name: 'tvshowid') this.id,
       {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false,
       @JsonKey(name: 'refreshepisodes') this.refreshEpisodes = false,
-      this.title})
+      this.title = ''})
       : super._();
 
   factory _$RefreshTVShowImpl.fromJson(Map<String, dynamic> json) =>
@@ -168,7 +168,8 @@ class _$RefreshTVShowImpl extends _RefreshTVShow {
   @JsonKey(name: 'refreshepisodes')
   final bool refreshEpisodes;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
 
   @override
   String toString() {
@@ -213,7 +214,7 @@ abstract class _RefreshTVShow extends RefreshTVShow {
   const factory _RefreshTVShow(@JsonKey(name: 'tvshowid') final int id,
       {@JsonKey(name: 'ignorenfo') final bool ignoreNFO,
       @JsonKey(name: 'refreshepisodes') final bool refreshEpisodes,
-      final String? title}) = _$RefreshTVShowImpl;
+      final String title}) = _$RefreshTVShowImpl;
   const _RefreshTVShow._() : super._();
 
   factory _RefreshTVShow.fromJson(Map<String, dynamic> json) =
@@ -229,7 +230,7 @@ abstract class _RefreshTVShow extends RefreshTVShow {
   @JsonKey(name: 'refreshepisodes')
   bool get refreshEpisodes;
   @override
-  String? get title;
+  String get title;
 
   /// Create a copy of RefreshTVShow
   /// with the given fields replaced by the non-null parameter values.

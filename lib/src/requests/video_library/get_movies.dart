@@ -56,45 +56,45 @@ class GetMoviesResponse with _$GetMoviesResponse {
 
 @freezed
 class KodiVideoLibraryGetMoviesFilter with _$KodiVideoLibraryGetMoviesFilter {
-  const factory KodiVideoLibraryGetMoviesFilter.genreId({
-    @JsonKey(name: 'genreid') required int genreId,
-  }) = _KodiVideoLibraryGetMoviesFilterGenreId;
+  const factory KodiVideoLibraryGetMoviesFilter.genreId(
+    @JsonKey(name: 'genreid') int genreId,
+  ) = _KodiVideoLibraryGetMoviesFilterGenreId;
 
-  const factory KodiVideoLibraryGetMoviesFilter.genre({
-    required String genre,
-  }) = _KodiVideoLibraryGetMoviesFilterGenre;
+  const factory KodiVideoLibraryGetMoviesFilter.genre(
+    String genre,
+  ) = _KodiVideoLibraryGetMoviesFilterGenre;
 
-  const factory KodiVideoLibraryGetMoviesFilter.year({
-    required int year,
-  }) = _KodiVideoLibraryGetMoviesFilterYear;
+  const factory KodiVideoLibraryGetMoviesFilter.year(
+    int year,
+  ) = _KodiVideoLibraryGetMoviesFilterYear;
 
-  const factory KodiVideoLibraryGetMoviesFilter.actor({
-    required String actor,
-  }) = _KodiVideoLibraryGetMoviesFilterActor;
+  const factory KodiVideoLibraryGetMoviesFilter.actor(
+    String actor,
+  ) = _KodiVideoLibraryGetMoviesFilterActor;
 
-  const factory KodiVideoLibraryGetMoviesFilter.director({
-    required String director,
-  }) = _KodiVideoLibraryGetMoviesFilterDirector;
+  const factory KodiVideoLibraryGetMoviesFilter.director(
+    String director,
+  ) = _KodiVideoLibraryGetMoviesFilterDirector;
 
-  const factory KodiVideoLibraryGetMoviesFilter.studio({
-    required String studio,
-  }) = _KodiVideoLibraryGetMoviesFilterStudio;
+  const factory KodiVideoLibraryGetMoviesFilter.studio(
+    String studio,
+  ) = _KodiVideoLibraryGetMoviesFilterStudio;
 
-  const factory KodiVideoLibraryGetMoviesFilter.country({
-    required String country,
-  }) = _KodiVideoLibraryGetMoviesFilterCountry;
+  const factory KodiVideoLibraryGetMoviesFilter.country(
+    String country,
+  ) = _KodiVideoLibraryGetMoviesFilterCountry;
 
-  const factory KodiVideoLibraryGetMoviesFilter.setId({
-    @JsonKey(name: 'setid') required int setId,
-  }) = _KodiVideoLibraryGetMoviesFilterSetId;
+  const factory KodiVideoLibraryGetMoviesFilter.setId(
+    @JsonKey(name: 'setid') int setId,
+  ) = _KodiVideoLibraryGetMoviesFilterSetId;
 
-  const factory KodiVideoLibraryGetMoviesFilter.set({
-    required String set,
-  }) = _KodiVideoLibraryGetMoviesFilterSet;
+  const factory KodiVideoLibraryGetMoviesFilter.set(
+    String set,
+  ) = _KodiVideoLibraryGetMoviesFilterSet;
 
-  const factory KodiVideoLibraryGetMoviesFilter.tag({
-    required String tag,
-  }) = _KodiVideoLibraryGetMoviesFilterTag;
+  const factory KodiVideoLibraryGetMoviesFilter.tag(
+    String tag,
+  ) = _KodiVideoLibraryGetMoviesFilterTag;
 
   const factory KodiVideoLibraryGetMoviesFilter.filter(
     @KodiListFilterMoviesConverter() KodiListFilterMovies filter,
@@ -138,7 +138,7 @@ class KodiVideoLibraryGetMoviesFilterConverter
           'country': value.country,
         },
         setId: (value) => <String, dynamic>{
-          'setId': value.setId,
+          'setid': value.setId,
         },
         set: (value) => <String, dynamic>{
           'set': value.set,

@@ -96,6 +96,7 @@ Map<String, dynamic> _$$SetTVShowDetailsImplToJson(
 const _$KodiVideoLibrarySetTvShowDetailsStatusEnumMap = {
   KodiVideoLibrarySetTvShowDetailsStatus.returningSeries: 'returning series',
   KodiVideoLibrarySetTvShowDetailsStatus.inProduction: 'in production',
+  KodiVideoLibrarySetTvShowDetailsStatus.planned: 'planned',
   KodiVideoLibrarySetTvShowDetailsStatus.cancelled: 'cancelled',
   KodiVideoLibrarySetTvShowDetailsStatus.ended: 'ended',
 };

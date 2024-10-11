@@ -8,8 +8,8 @@ part of 'get_episodes.dart';
 
 _$GetEpisodesImpl _$$GetEpisodesImplFromJson(Map<String, dynamic> json) =>
     _$GetEpisodesImpl(
-      showId: (json['tvshowid'] as num?)?.toInt(),
-      season: (json['season'] as num?)?.toInt(),
+      showId: (json['tvshowid'] as num).toInt(),
+      season: (json['season'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsEpisodeEnumMap, e))
           .toSet(),
@@ -24,7 +24,10 @@ _$GetEpisodesImpl _$$GetEpisodesImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$GetEpisodesImplToJson(_$GetEpisodesImpl instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'tvshowid': instance.showId,
+    'season': instance.season,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -32,8 +35,6 @@ Map<String, dynamic> _$$GetEpisodesImplToJson(_$GetEpisodesImpl instance) {
     }
   }
 
-  writeNotNull('tvshowid', instance.showId);
-  writeNotNull('season', instance.season);
   writeNotNull(
       'properties',
       instance.properties

@@ -249,7 +249,8 @@ GetMovieSetDetailsMovies _$GetMovieSetDetailsMoviesFromJson(
 /// @nodoc
 mixin _$GetMovieSetDetailsMovies {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
-  KodiVideoFieldsMovie? get properties => throw _privateConstructorUsedError;
+  Set<KodiVideoFieldsMovie>? get properties =>
+      throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
   /// Serializes this GetMovieSetDetailsMovies to a JSON map.
@@ -270,7 +271,7 @@ abstract class $GetMovieSetDetailsMoviesCopyWith<$Res> {
   @useResult
   $Res call(
       {KodiListLimits? limits,
-      KodiVideoFieldsMovie? properties,
+      Set<KodiVideoFieldsMovie>? properties,
       KodiListSort? sort});
 
   $KodiListLimitsCopyWith<$Res>? get limits;
@@ -305,7 +306,7 @@ class _$GetMovieSetDetailsMoviesCopyWithImpl<$Res,
       properties: freezed == properties
           ? _value.properties
           : properties // ignore: cast_nullable_to_non_nullable
-              as KodiVideoFieldsMovie?,
+              as Set<KodiVideoFieldsMovie>?,
       sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
@@ -353,7 +354,7 @@ abstract class _$$GetMovieSetDetailsMoviesImplCopyWith<$Res>
   @useResult
   $Res call(
       {KodiListLimits? limits,
-      KodiVideoFieldsMovie? properties,
+      Set<KodiVideoFieldsMovie>? properties,
       KodiListSort? sort});
 
   @override
@@ -387,9 +388,9 @@ class __$$GetMovieSetDetailsMoviesImplCopyWithImpl<$Res>
           : limits // ignore: cast_nullable_to_non_nullable
               as KodiListLimits?,
       properties: freezed == properties
-          ? _value.properties
+          ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
-              as KodiVideoFieldsMovie?,
+              as Set<KodiVideoFieldsMovie>?,
       sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
@@ -402,15 +403,24 @@ class __$$GetMovieSetDetailsMoviesImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GetMovieSetDetailsMoviesImpl implements _GetMovieSetDetailsMovies {
   const _$GetMovieSetDetailsMoviesImpl(
-      {this.limits, this.properties, this.sort});
+      {this.limits, final Set<KodiVideoFieldsMovie>? properties, this.sort})
+      : _properties = properties;
 
   factory _$GetMovieSetDetailsMoviesImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetMovieSetDetailsMoviesImplFromJson(json);
 
   @override
   final KodiListLimits? limits;
+  final Set<KodiVideoFieldsMovie>? _properties;
   @override
-  final KodiVideoFieldsMovie? properties;
+  Set<KodiVideoFieldsMovie>? get properties {
+    final value = _properties;
+    if (value == null) return null;
+    if (_properties is EqualUnmodifiableSetView) return _properties;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableSetView(value);
+  }
+
   @override
   final KodiListSort? sort;
 
@@ -425,14 +435,15 @@ class _$GetMovieSetDetailsMoviesImpl implements _GetMovieSetDetailsMovies {
         (other.runtimeType == runtimeType &&
             other is _$GetMovieSetDetailsMoviesImpl &&
             (identical(other.limits, limits) || other.limits == limits) &&
-            (identical(other.properties, properties) ||
-                other.properties == properties) &&
+            const DeepCollectionEquality()
+                .equals(other._properties, _properties) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, limits, properties, sort);
+  int get hashCode => Object.hash(runtimeType, limits,
+      const DeepCollectionEquality().hash(_properties), sort);
 
   /// Create a copy of GetMovieSetDetailsMovies
   /// with the given fields replaced by the non-null parameter values.
@@ -454,7 +465,7 @@ class _$GetMovieSetDetailsMoviesImpl implements _GetMovieSetDetailsMovies {
 abstract class _GetMovieSetDetailsMovies implements GetMovieSetDetailsMovies {
   const factory _GetMovieSetDetailsMovies(
       {final KodiListLimits? limits,
-      final KodiVideoFieldsMovie? properties,
+      final Set<KodiVideoFieldsMovie>? properties,
       final KodiListSort? sort}) = _$GetMovieSetDetailsMoviesImpl;
 
   factory _GetMovieSetDetailsMovies.fromJson(Map<String, dynamic> json) =
@@ -463,7 +474,7 @@ abstract class _GetMovieSetDetailsMovies implements GetMovieSetDetailsMovies {
   @override
   KodiListLimits? get limits;
   @override
-  KodiVideoFieldsMovie? get properties;
+  Set<KodiVideoFieldsMovie>? get properties;
   @override
   KodiListSort? get sort;
 

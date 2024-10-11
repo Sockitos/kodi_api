@@ -62,7 +62,7 @@ class KodiListItemFile with _$KodiListItemFile {
     @JsonKey(name: 'originaldate') DateTime? originalDate,
     @JsonKey(name: 'originaltitle') @Default('') String originalTitle,
     @JsonKey(name: 'plotoutline') @Default('') String plotOutline,
-    @Default('') String premiered,
+    DateTime? premiered,
     @JsonKey(name: 'productioncode') @Default('') String productionCode,
     @JsonKey(name: 'releasedate') DateTime? releaseDate,
     @JsonKey(name: 'releasetype')
