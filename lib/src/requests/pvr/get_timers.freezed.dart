@@ -12,7 +12,7 @@ part of 'get_timers.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetTimers _$GetTimersFromJson(Map<String, dynamic> json) {
   return _GetTimers.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$GetTimers {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetTimers to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetTimers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetTimersCopyWith<GetTimers> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$GetTimersCopyWithImpl<$Res, $Val extends GetTimers>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetTimers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class _$GetTimersCopyWithImpl<$Res, $Val extends GetTimers>
     ) as $Val);
   }
 
+  /// Create a copy of GetTimers
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -89,6 +97,8 @@ class _$GetTimersCopyWithImpl<$Res, $Val extends GetTimers>
     });
   }
 
+  /// Create a copy of GetTimers
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -103,10 +113,11 @@ class _$GetTimersCopyWithImpl<$Res, $Val extends GetTimers>
 }
 
 /// @nodoc
-abstract class _$$_GetTimersCopyWith<$Res> implements $GetTimersCopyWith<$Res> {
-  factory _$$_GetTimersCopyWith(
-          _$_GetTimers value, $Res Function(_$_GetTimers) then) =
-      __$$_GetTimersCopyWithImpl<$Res>;
+abstract class _$$GetTimersImplCopyWith<$Res>
+    implements $GetTimersCopyWith<$Res> {
+  factory _$$GetTimersImplCopyWith(
+          _$GetTimersImpl value, $Res Function(_$GetTimersImpl) then) =
+      __$$GetTimersImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,13 +132,15 @@ abstract class _$$_GetTimersCopyWith<$Res> implements $GetTimersCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetTimersCopyWithImpl<$Res>
-    extends _$GetTimersCopyWithImpl<$Res, _$_GetTimers>
-    implements _$$_GetTimersCopyWith<$Res> {
-  __$$_GetTimersCopyWithImpl(
-      _$_GetTimers _value, $Res Function(_$_GetTimers) _then)
+class __$$GetTimersImplCopyWithImpl<$Res>
+    extends _$GetTimersCopyWithImpl<$Res, _$GetTimersImpl>
+    implements _$$GetTimersImplCopyWith<$Res> {
+  __$$GetTimersImplCopyWithImpl(
+      _$GetTimersImpl _value, $Res Function(_$GetTimersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetTimers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,7 +148,7 @@ class __$$_GetTimersCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetTimers(
+    return _then(_$GetTimersImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -154,14 +167,14 @@ class __$$_GetTimersCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTimers extends _GetTimers {
-  const _$_GetTimers(
+class _$GetTimersImpl extends _GetTimers {
+  const _$GetTimersImpl(
       {final Set<KodiPVRFieldsTimer>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetTimers.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTimersFromJson(json);
+  factory _$GetTimersImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTimersImplFromJson(json);
 
   final Set<KodiPVRFieldsTimer>? _properties;
   @override
@@ -184,30 +197,32 @@ class _$_GetTimers extends _GetTimers {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTimers &&
+            other is _$GetTimersImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetTimers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTimersCopyWith<_$_GetTimers> get copyWith =>
-      __$$_GetTimersCopyWithImpl<_$_GetTimers>(this, _$identity);
+  _$$GetTimersImplCopyWith<_$GetTimersImpl> get copyWith =>
+      __$$GetTimersImplCopyWithImpl<_$GetTimersImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTimersToJson(
+    return _$$GetTimersImplToJson(
       this,
     );
   }
@@ -217,11 +232,11 @@ abstract class _GetTimers extends GetTimers {
   const factory _GetTimers(
       {final Set<KodiPVRFieldsTimer>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetTimers;
+      final KodiListSort? sort}) = _$GetTimersImpl;
   const _GetTimers._() : super._();
 
   factory _GetTimers.fromJson(Map<String, dynamic> json) =
-      _$_GetTimers.fromJson;
+      _$GetTimersImpl.fromJson;
 
   @override
   Set<KodiPVRFieldsTimer>? get properties;
@@ -229,9 +244,12 @@ abstract class _GetTimers extends GetTimers {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetTimers
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetTimersCopyWith<_$_GetTimers> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTimersImplCopyWith<_$GetTimersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -245,8 +263,12 @@ mixin _$KodiPVRGetTimersResponse {
   List<KodiPVRDetailsTimer> get timers => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRGetTimersResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRGetTimersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRGetTimersResponseCopyWith<KodiPVRGetTimersResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -273,6 +295,8 @@ class _$KodiPVRGetTimersResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRGetTimersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -291,6 +315,8 @@ class _$KodiPVRGetTimersResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPVRGetTimersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -301,12 +327,12 @@ class _$KodiPVRGetTimersResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRGetTimersResponseCopyWith<$Res>
+abstract class _$$KodiPVRGetTimersResponseImplCopyWith<$Res>
     implements $KodiPVRGetTimersResponseCopyWith<$Res> {
-  factory _$$_KodiPVRGetTimersResponseCopyWith(
-          _$_KodiPVRGetTimersResponse value,
-          $Res Function(_$_KodiPVRGetTimersResponse) then) =
-      __$$_KodiPVRGetTimersResponseCopyWithImpl<$Res>;
+  factory _$$KodiPVRGetTimersResponseImplCopyWith(
+          _$KodiPVRGetTimersResponseImpl value,
+          $Res Function(_$KodiPVRGetTimersResponseImpl) then) =
+      __$$KodiPVRGetTimersResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiPVRDetailsTimer> timers, KodiListLimitsReturned limits});
@@ -316,21 +342,24 @@ abstract class _$$_KodiPVRGetTimersResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRGetTimersResponseCopyWithImpl<$Res>
+class __$$KodiPVRGetTimersResponseImplCopyWithImpl<$Res>
     extends _$KodiPVRGetTimersResponseCopyWithImpl<$Res,
-        _$_KodiPVRGetTimersResponse>
-    implements _$$_KodiPVRGetTimersResponseCopyWith<$Res> {
-  __$$_KodiPVRGetTimersResponseCopyWithImpl(_$_KodiPVRGetTimersResponse _value,
-      $Res Function(_$_KodiPVRGetTimersResponse) _then)
+        _$KodiPVRGetTimersResponseImpl>
+    implements _$$KodiPVRGetTimersResponseImplCopyWith<$Res> {
+  __$$KodiPVRGetTimersResponseImplCopyWithImpl(
+      _$KodiPVRGetTimersResponseImpl _value,
+      $Res Function(_$KodiPVRGetTimersResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRGetTimersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? timers = null,
     Object? limits = null,
   }) {
-    return _then(_$_KodiPVRGetTimersResponse(
+    return _then(_$KodiPVRGetTimersResponseImpl(
       timers: null == timers
           ? _value._timers
           : timers // ignore: cast_nullable_to_non_nullable
@@ -345,13 +374,13 @@ class __$$_KodiPVRGetTimersResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRGetTimersResponse implements _KodiPVRGetTimersResponse {
-  const _$_KodiPVRGetTimersResponse(
+class _$KodiPVRGetTimersResponseImpl implements _KodiPVRGetTimersResponse {
+  const _$KodiPVRGetTimersResponseImpl(
       {required final List<KodiPVRDetailsTimer> timers, required this.limits})
       : _timers = timers;
 
-  factory _$_KodiPVRGetTimersResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRGetTimersResponseFromJson(json);
+  factory _$KodiPVRGetTimersResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRGetTimersResponseImplFromJson(json);
 
   final List<KodiPVRDetailsTimer> _timers;
   @override
@@ -370,29 +399,31 @@ class _$_KodiPVRGetTimersResponse implements _KodiPVRGetTimersResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRGetTimersResponse &&
+            other is _$KodiPVRGetTimersResponseImpl &&
             const DeepCollectionEquality().equals(other._timers, _timers) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_timers), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRGetTimersResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRGetTimersResponseCopyWith<_$_KodiPVRGetTimersResponse>
-      get copyWith => __$$_KodiPVRGetTimersResponseCopyWithImpl<
-          _$_KodiPVRGetTimersResponse>(this, _$identity);
+  _$$KodiPVRGetTimersResponseImplCopyWith<_$KodiPVRGetTimersResponseImpl>
+      get copyWith => __$$KodiPVRGetTimersResponseImplCopyWithImpl<
+          _$KodiPVRGetTimersResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRGetTimersResponseToJson(
+    return _$$KodiPVRGetTimersResponseImplToJson(
       this,
     );
   }
@@ -402,17 +433,20 @@ abstract class _KodiPVRGetTimersResponse implements KodiPVRGetTimersResponse {
   const factory _KodiPVRGetTimersResponse(
           {required final List<KodiPVRDetailsTimer> timers,
           required final KodiListLimitsReturned limits}) =
-      _$_KodiPVRGetTimersResponse;
+      _$KodiPVRGetTimersResponseImpl;
 
   factory _KodiPVRGetTimersResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRGetTimersResponse.fromJson;
+      _$KodiPVRGetTimersResponseImpl.fromJson;
 
   @override
   List<KodiPVRDetailsTimer> get timers;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of KodiPVRGetTimersResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRGetTimersResponseCopyWith<_$_KodiPVRGetTimersResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRGetTimersResponseImplCopyWith<_$KodiPVRGetTimersResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

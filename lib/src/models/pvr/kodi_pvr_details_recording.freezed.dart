@@ -12,7 +12,7 @@ part of 'kodi_pvr_details_recording.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsRecording _$KodiPVRDetailsRecordingFromJson(
     Map<String, dynamic> json) {
@@ -21,7 +21,7 @@ KodiPVRDetailsRecording _$KodiPVRDetailsRecordingFromJson(
 
 /// @nodoc
 mixin _$KodiPVRDetailsRecording {
-  KodiMediaArtwork get art => throw _privateConstructorUsedError;
+  KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   String get channel => throw _privateConstructorUsedError;
   @JsonKey(name: 'channeluid')
   int get channelUid => throw _privateConstructorUsedError;
@@ -29,12 +29,12 @@ mixin _$KodiPVRDetailsRecording {
   int get clientId => throw _privateConstructorUsedError;
   String get directory => throw _privateConstructorUsedError;
   @JsonKey(name: 'endtime')
-  String get endTime => throw _privateConstructorUsedError;
+  DateTime? get endTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'epgeventid')
   int get epgEventId => throw _privateConstructorUsedError;
   int get episode => throw _privateConstructorUsedError;
   String get file => throw _privateConstructorUsedError;
-  String get genre => throw _privateConstructorUsedError;
+  List<String>? get genre => throw _privateConstructorUsedError;
   String get icon => throw _privateConstructorUsedError;
   @JsonKey(name: 'isdeleted')
   bool get isDeleted => throw _privateConstructorUsedError;
@@ -48,20 +48,24 @@ mixin _$KodiPVRDetailsRecording {
   bool get radio => throw _privateConstructorUsedError;
   @JsonKey(name: 'recordingid')
   int get recordingId => throw _privateConstructorUsedError;
-  KodiVideoResume get resume => throw _privateConstructorUsedError;
+  KodiVideoResume? get resume => throw _privateConstructorUsedError;
   int get runtime => throw _privateConstructorUsedError;
   int get season => throw _privateConstructorUsedError;
   @JsonKey(name: 'showtitle')
   String get showTitle => throw _privateConstructorUsedError;
   @JsonKey(name: 'starttime')
-  DateTime get startTime => throw _privateConstructorUsedError;
+  DateTime? get startTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'streamurl')
   String get streamUrl => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsRecording to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsRecordingCopyWith<KodiPVRDetailsRecording> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -73,16 +77,16 @@ abstract class $KodiPVRDetailsRecordingCopyWith<$Res> {
       _$KodiPVRDetailsRecordingCopyWithImpl<$Res, KodiPVRDetailsRecording>;
   @useResult
   $Res call(
-      {KodiMediaArtwork art,
+      {KodiMediaArtwork? art,
       String channel,
       @JsonKey(name: 'channeluid') int channelUid,
       @JsonKey(name: 'clientid') int clientId,
       String directory,
-      @JsonKey(name: 'endtime') String endTime,
+      @JsonKey(name: 'endtime') DateTime? endTime,
       @JsonKey(name: 'epgeventid') int epgEventId,
       int episode,
       String file,
-      String genre,
+      List<String>? genre,
       String icon,
       @JsonKey(name: 'isdeleted') bool isDeleted,
       @JsonKey(name: 'lifetime') int lifeTime,
@@ -91,17 +95,17 @@ abstract class $KodiPVRDetailsRecordingCopyWith<$Res> {
       @JsonKey(name: 'plotoutline') String plotOutline,
       bool radio,
       @JsonKey(name: 'recordingid') int recordingId,
-      KodiVideoResume resume,
+      KodiVideoResume? resume,
       int runtime,
       int season,
       @JsonKey(name: 'showtitle') String showTitle,
-      @JsonKey(name: 'starttime') DateTime startTime,
+      @JsonKey(name: 'starttime') DateTime? startTime,
       @JsonKey(name: 'streamurl') String streamUrl,
       String title,
       String label});
 
-  $KodiMediaArtworkCopyWith<$Res> get art;
-  $KodiVideoResumeCopyWith<$Res> get resume;
+  $KodiMediaArtworkCopyWith<$Res>? get art;
+  $KodiVideoResumeCopyWith<$Res>? get resume;
 }
 
 /// @nodoc
@@ -115,19 +119,21 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? art = null,
+    Object? art = freezed,
     Object? channel = null,
     Object? channelUid = null,
     Object? clientId = null,
     Object? directory = null,
-    Object? endTime = null,
+    Object? endTime = freezed,
     Object? epgEventId = null,
     Object? episode = null,
     Object? file = null,
-    Object? genre = null,
+    Object? genre = freezed,
     Object? icon = null,
     Object? isDeleted = null,
     Object? lifeTime = null,
@@ -136,20 +142,20 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
     Object? plotOutline = null,
     Object? radio = null,
     Object? recordingId = null,
-    Object? resume = null,
+    Object? resume = freezed,
     Object? runtime = null,
     Object? season = null,
     Object? showTitle = null,
-    Object? startTime = null,
+    Object? startTime = freezed,
     Object? streamUrl = null,
     Object? title = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
-      art: null == art
+      art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
-              as KodiMediaArtwork,
+              as KodiMediaArtwork?,
       channel: null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
@@ -166,10 +172,10 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
               as String,
-      endTime: null == endTime
+      endTime: freezed == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime?,
       epgEventId: null == epgEventId
           ? _value.epgEventId
           : epgEventId // ignore: cast_nullable_to_non_nullable
@@ -182,10 +188,10 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String,
-      genre: null == genre
+      genre: freezed == genre
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<String>?,
       icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -218,10 +224,10 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
           ? _value.recordingId
           : recordingId // ignore: cast_nullable_to_non_nullable
               as int,
-      resume: null == resume
+      resume: freezed == resume
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
-              as KodiVideoResume,
+              as KodiVideoResume?,
       runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
@@ -234,10 +240,10 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      startTime: null == startTime
+      startTime: freezed == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       streamUrl: null == streamUrl
           ? _value.streamUrl
           : streamUrl // ignore: cast_nullable_to_non_nullable
@@ -253,42 +259,55 @@ class _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiMediaArtworkCopyWith<$Res> get art {
-    return $KodiMediaArtworkCopyWith<$Res>(_value.art, (value) {
+  $KodiMediaArtworkCopyWith<$Res>? get art {
+    if (_value.art == null) {
+      return null;
+    }
+
+    return $KodiMediaArtworkCopyWith<$Res>(_value.art!, (value) {
       return _then(_value.copyWith(art: value) as $Val);
     });
   }
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiVideoResumeCopyWith<$Res> get resume {
-    return $KodiVideoResumeCopyWith<$Res>(_value.resume, (value) {
+  $KodiVideoResumeCopyWith<$Res>? get resume {
+    if (_value.resume == null) {
+      return null;
+    }
+
+    return $KodiVideoResumeCopyWith<$Res>(_value.resume!, (value) {
       return _then(_value.copyWith(resume: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsRecordingCopyWith<$Res>
+abstract class _$$KodiPVRDetailsRecordingImplCopyWith<$Res>
     implements $KodiPVRDetailsRecordingCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsRecordingCopyWith(_$_KodiPVRDetailsRecording value,
-          $Res Function(_$_KodiPVRDetailsRecording) then) =
-      __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsRecordingImplCopyWith(
+          _$KodiPVRDetailsRecordingImpl value,
+          $Res Function(_$KodiPVRDetailsRecordingImpl) then) =
+      __$$KodiPVRDetailsRecordingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {KodiMediaArtwork art,
+      {KodiMediaArtwork? art,
       String channel,
       @JsonKey(name: 'channeluid') int channelUid,
       @JsonKey(name: 'clientid') int clientId,
       String directory,
-      @JsonKey(name: 'endtime') String endTime,
+      @JsonKey(name: 'endtime') DateTime? endTime,
       @JsonKey(name: 'epgeventid') int epgEventId,
       int episode,
       String file,
-      String genre,
+      List<String>? genre,
       String icon,
       @JsonKey(name: 'isdeleted') bool isDeleted,
       @JsonKey(name: 'lifetime') int lifeTime,
@@ -297,43 +316,46 @@ abstract class _$$_KodiPVRDetailsRecordingCopyWith<$Res>
       @JsonKey(name: 'plotoutline') String plotOutline,
       bool radio,
       @JsonKey(name: 'recordingid') int recordingId,
-      KodiVideoResume resume,
+      KodiVideoResume? resume,
       int runtime,
       int season,
       @JsonKey(name: 'showtitle') String showTitle,
-      @JsonKey(name: 'starttime') DateTime startTime,
+      @JsonKey(name: 'starttime') DateTime? startTime,
       @JsonKey(name: 'streamurl') String streamUrl,
       String title,
       String label});
 
   @override
-  $KodiMediaArtworkCopyWith<$Res> get art;
+  $KodiMediaArtworkCopyWith<$Res>? get art;
   @override
-  $KodiVideoResumeCopyWith<$Res> get resume;
+  $KodiVideoResumeCopyWith<$Res>? get resume;
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
+class __$$KodiPVRDetailsRecordingImplCopyWithImpl<$Res>
     extends _$KodiPVRDetailsRecordingCopyWithImpl<$Res,
-        _$_KodiPVRDetailsRecording>
-    implements _$$_KodiPVRDetailsRecordingCopyWith<$Res> {
-  __$$_KodiPVRDetailsRecordingCopyWithImpl(_$_KodiPVRDetailsRecording _value,
-      $Res Function(_$_KodiPVRDetailsRecording) _then)
+        _$KodiPVRDetailsRecordingImpl>
+    implements _$$KodiPVRDetailsRecordingImplCopyWith<$Res> {
+  __$$KodiPVRDetailsRecordingImplCopyWithImpl(
+      _$KodiPVRDetailsRecordingImpl _value,
+      $Res Function(_$KodiPVRDetailsRecordingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? art = null,
+    Object? art = freezed,
     Object? channel = null,
     Object? channelUid = null,
     Object? clientId = null,
     Object? directory = null,
-    Object? endTime = null,
+    Object? endTime = freezed,
     Object? epgEventId = null,
     Object? episode = null,
     Object? file = null,
-    Object? genre = null,
+    Object? genre = freezed,
     Object? icon = null,
     Object? isDeleted = null,
     Object? lifeTime = null,
@@ -342,20 +364,20 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
     Object? plotOutline = null,
     Object? radio = null,
     Object? recordingId = null,
-    Object? resume = null,
+    Object? resume = freezed,
     Object? runtime = null,
     Object? season = null,
     Object? showTitle = null,
-    Object? startTime = null,
+    Object? startTime = freezed,
     Object? streamUrl = null,
     Object? title = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsRecording(
-      art: null == art
+    return _then(_$KodiPVRDetailsRecordingImpl(
+      art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
-              as KodiMediaArtwork,
+              as KodiMediaArtwork?,
       channel: null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
@@ -372,10 +394,10 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
               as String,
-      endTime: null == endTime
+      endTime: freezed == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime?,
       epgEventId: null == epgEventId
           ? _value.epgEventId
           : epgEventId // ignore: cast_nullable_to_non_nullable
@@ -388,10 +410,10 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
               as String,
-      genre: null == genre
-          ? _value.genre
+      genre: freezed == genre
+          ? _value._genre
           : genre // ignore: cast_nullable_to_non_nullable
-              as String,
+              as List<String>?,
       icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -424,10 +446,10 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
           ? _value.recordingId
           : recordingId // ignore: cast_nullable_to_non_nullable
               as int,
-      resume: null == resume
+      resume: freezed == resume
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
-              as KodiVideoResume,
+              as KodiVideoResume?,
       runtime: null == runtime
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
@@ -440,10 +462,10 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      startTime: null == startTime
+      startTime: freezed == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
       streamUrl: null == streamUrl
           ? _value.streamUrl
           : streamUrl // ignore: cast_nullable_to_non_nullable
@@ -463,41 +485,43 @@ class __$$_KodiPVRDetailsRecordingCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
-  const _$_KodiPVRDetailsRecording(
-      {required this.art,
-      required this.channel,
-      @JsonKey(name: 'channeluid') required this.channelUid,
-      @JsonKey(name: 'clientid') required this.clientId,
-      required this.directory,
-      @JsonKey(name: 'endtime') required this.endTime,
-      @JsonKey(name: 'epgeventid') required this.epgEventId,
-      required this.episode,
-      required this.file,
-      required this.genre,
-      required this.icon,
-      @JsonKey(name: 'isdeleted') required this.isDeleted,
-      @JsonKey(name: 'lifetime') required this.lifeTime,
-      @JsonKey(name: 'playcount') required this.playCount,
-      required this.plot,
-      @JsonKey(name: 'plotoutline') required this.plotOutline,
-      required this.radio,
+class _$KodiPVRDetailsRecordingImpl implements _KodiPVRDetailsRecording {
+  const _$KodiPVRDetailsRecordingImpl(
+      {this.art,
+      this.channel = '',
+      @JsonKey(name: 'channeluid') this.channelUid = 0,
+      @JsonKey(name: 'clientid') this.clientId = -1,
+      this.directory = '',
+      @JsonKey(name: 'endtime') this.endTime,
+      @JsonKey(name: 'epgeventid') this.epgEventId = 0,
+      this.episode = 0,
+      this.file = '',
+      final List<String>? genre,
+      this.icon = '',
+      @JsonKey(name: 'isdeleted') this.isDeleted = false,
+      @JsonKey(name: 'lifetime') this.lifeTime = 0,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.plot = '',
+      @JsonKey(name: 'plotoutline') this.plotOutline = '',
+      this.radio = false,
       @JsonKey(name: 'recordingid') required this.recordingId,
-      required this.resume,
-      required this.runtime,
-      required this.season,
-      @JsonKey(name: 'showtitle') required this.showTitle,
-      @JsonKey(name: 'starttime') required this.startTime,
-      @JsonKey(name: 'streamurl') required this.streamUrl,
-      required this.title,
-      required this.label});
+      this.resume,
+      this.runtime = 0,
+      this.season = 0,
+      @JsonKey(name: 'showtitle') this.showTitle = '',
+      @JsonKey(name: 'starttime') this.startTime,
+      @JsonKey(name: 'streamurl') this.streamUrl = '',
+      this.title = '',
+      required this.label})
+      : _genre = genre;
 
-  factory _$_KodiPVRDetailsRecording.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsRecordingFromJson(json);
+  factory _$KodiPVRDetailsRecordingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRDetailsRecordingImplFromJson(json);
 
   @override
-  final KodiMediaArtwork art;
+  final KodiMediaArtwork? art;
   @override
+  @JsonKey()
   final String channel;
   @override
   @JsonKey(name: 'channeluid')
@@ -506,20 +530,32 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
   @JsonKey(name: 'clientid')
   final int clientId;
   @override
+  @JsonKey()
   final String directory;
   @override
   @JsonKey(name: 'endtime')
-  final String endTime;
+  final DateTime? endTime;
   @override
   @JsonKey(name: 'epgeventid')
   final int epgEventId;
   @override
+  @JsonKey()
   final int episode;
   @override
+  @JsonKey()
   final String file;
+  final List<String>? _genre;
   @override
-  final String genre;
+  List<String>? get genre {
+    final value = _genre;
+    if (value == null) return null;
+    if (_genre is EqualUnmodifiableListView) return _genre;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
+  @JsonKey()
   final String icon;
   @override
   @JsonKey(name: 'isdeleted')
@@ -531,31 +567,36 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
   @JsonKey(name: 'playcount')
   final int playCount;
   @override
+  @JsonKey()
   final String plot;
   @override
   @JsonKey(name: 'plotoutline')
   final String plotOutline;
   @override
+  @JsonKey()
   final bool radio;
   @override
   @JsonKey(name: 'recordingid')
   final int recordingId;
   @override
-  final KodiVideoResume resume;
+  final KodiVideoResume? resume;
   @override
+  @JsonKey()
   final int runtime;
   @override
+  @JsonKey()
   final int season;
   @override
   @JsonKey(name: 'showtitle')
   final String showTitle;
   @override
   @JsonKey(name: 'starttime')
-  final DateTime startTime;
+  final DateTime? startTime;
   @override
   @JsonKey(name: 'streamurl')
   final String streamUrl;
   @override
+  @JsonKey()
   final String title;
   @override
   final String label;
@@ -566,10 +607,10 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsRecording &&
+            other is _$KodiPVRDetailsRecordingImpl &&
             (identical(other.art, art) || other.art == art) &&
             (identical(other.channel, channel) || other.channel == channel) &&
             (identical(other.channelUid, channelUid) ||
@@ -583,7 +624,7 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
                 other.epgEventId == epgEventId) &&
             (identical(other.episode, episode) || other.episode == episode) &&
             (identical(other.file, file) || other.file == file) &&
-            (identical(other.genre, genre) || other.genre == genre) &&
+            const DeepCollectionEquality().equals(other._genre, _genre) &&
             (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.isDeleted, isDeleted) ||
                 other.isDeleted == isDeleted) &&
@@ -610,7 +651,7 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -623,7 +664,7 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
         epgEventId,
         episode,
         file,
-        genre,
+        const DeepCollectionEquality().hash(_genre),
         icon,
         isDeleted,
         lifeTime,
@@ -642,17 +683,18 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsRecordingCopyWith<_$_KodiPVRDetailsRecording>
-      get copyWith =>
-          __$$_KodiPVRDetailsRecordingCopyWithImpl<_$_KodiPVRDetailsRecording>(
-              this, _$identity);
+  _$$KodiPVRDetailsRecordingImplCopyWith<_$KodiPVRDetailsRecordingImpl>
+      get copyWith => __$$KodiPVRDetailsRecordingImplCopyWithImpl<
+          _$KodiPVRDetailsRecordingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsRecordingToJson(
+    return _$$KodiPVRDetailsRecordingImplToJson(
       this,
     );
   }
@@ -660,38 +702,38 @@ class _$_KodiPVRDetailsRecording implements _KodiPVRDetailsRecording {
 
 abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
   const factory _KodiPVRDetailsRecording(
-      {required final KodiMediaArtwork art,
-      required final String channel,
-      @JsonKey(name: 'channeluid') required final int channelUid,
-      @JsonKey(name: 'clientid') required final int clientId,
-      required final String directory,
-      @JsonKey(name: 'endtime') required final String endTime,
-      @JsonKey(name: 'epgeventid') required final int epgEventId,
-      required final int episode,
-      required final String file,
-      required final String genre,
-      required final String icon,
-      @JsonKey(name: 'isdeleted') required final bool isDeleted,
-      @JsonKey(name: 'lifetime') required final int lifeTime,
-      @JsonKey(name: 'playcount') required final int playCount,
-      required final String plot,
-      @JsonKey(name: 'plotoutline') required final String plotOutline,
-      required final bool radio,
+      {final KodiMediaArtwork? art,
+      final String channel,
+      @JsonKey(name: 'channeluid') final int channelUid,
+      @JsonKey(name: 'clientid') final int clientId,
+      final String directory,
+      @JsonKey(name: 'endtime') final DateTime? endTime,
+      @JsonKey(name: 'epgeventid') final int epgEventId,
+      final int episode,
+      final String file,
+      final List<String>? genre,
+      final String icon,
+      @JsonKey(name: 'isdeleted') final bool isDeleted,
+      @JsonKey(name: 'lifetime') final int lifeTime,
+      @JsonKey(name: 'playcount') final int playCount,
+      final String plot,
+      @JsonKey(name: 'plotoutline') final String plotOutline,
+      final bool radio,
       @JsonKey(name: 'recordingid') required final int recordingId,
-      required final KodiVideoResume resume,
-      required final int runtime,
-      required final int season,
-      @JsonKey(name: 'showtitle') required final String showTitle,
-      @JsonKey(name: 'starttime') required final DateTime startTime,
-      @JsonKey(name: 'streamurl') required final String streamUrl,
-      required final String title,
-      required final String label}) = _$_KodiPVRDetailsRecording;
+      final KodiVideoResume? resume,
+      final int runtime,
+      final int season,
+      @JsonKey(name: 'showtitle') final String showTitle,
+      @JsonKey(name: 'starttime') final DateTime? startTime,
+      @JsonKey(name: 'streamurl') final String streamUrl,
+      final String title,
+      required final String label}) = _$KodiPVRDetailsRecordingImpl;
 
   factory _KodiPVRDetailsRecording.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRDetailsRecording.fromJson;
+      _$KodiPVRDetailsRecordingImpl.fromJson;
 
   @override
-  KodiMediaArtwork get art;
+  KodiMediaArtwork? get art;
   @override
   String get channel;
   @override
@@ -704,7 +746,7 @@ abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
   String get directory;
   @override
   @JsonKey(name: 'endtime')
-  String get endTime;
+  DateTime? get endTime;
   @override
   @JsonKey(name: 'epgeventid')
   int get epgEventId;
@@ -713,7 +755,7 @@ abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
   @override
   String get file;
   @override
-  String get genre;
+  List<String>? get genre;
   @override
   String get icon;
   @override
@@ -736,7 +778,7 @@ abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
   @JsonKey(name: 'recordingid')
   int get recordingId;
   @override
-  KodiVideoResume get resume;
+  KodiVideoResume? get resume;
   @override
   int get runtime;
   @override
@@ -746,7 +788,7 @@ abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
   String get showTitle;
   @override
   @JsonKey(name: 'starttime')
-  DateTime get startTime;
+  DateTime? get startTime;
   @override
   @JsonKey(name: 'streamurl')
   String get streamUrl;
@@ -754,8 +796,11 @@ abstract class _KodiPVRDetailsRecording implements KodiPVRDetailsRecording {
   String get title;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsRecording
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsRecordingCopyWith<_$_KodiPVRDetailsRecording>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsRecordingImplCopyWith<_$KodiPVRDetailsRecordingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

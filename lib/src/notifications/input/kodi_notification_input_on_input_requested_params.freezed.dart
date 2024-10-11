@@ -12,7 +12,7 @@ part of 'kodi_notification_input_on_input_requested_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationInputOnInputRequestedParams
     _$KodiNotificationInputOnInputRequestedParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationInputOnInputRequestedParams {
   KodiNotificationInputOnInputRequestedParamsData get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationInputOnInputRequestedParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationInputOnInputRequestedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationInputOnInputRequestedParamsCopyWith<
           KodiNotificationInputOnInputRequestedParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -59,6 +63,8 @@ class _$KodiNotificationInputOnInputRequestedParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationInputOnInputRequestedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class _$KodiNotificationInputOnInputRequestedParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationInputOnInputRequestedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationInputOnInputRequestedParamsDataCopyWith<$Res> get data {
@@ -88,12 +96,13 @@ class _$KodiNotificationInputOnInputRequestedParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationInputOnInputRequestedParamsCopyWith<$Res>
+abstract class _$$KodiNotificationInputOnInputRequestedParamsImplCopyWith<$Res>
     implements $KodiNotificationInputOnInputRequestedParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationInputOnInputRequestedParamsCopyWith(
-          _$_KodiNotificationInputOnInputRequestedParams value,
-          $Res Function(_$_KodiNotificationInputOnInputRequestedParams) then) =
-      __$$_KodiNotificationInputOnInputRequestedParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationInputOnInputRequestedParamsImplCopyWith(
+          _$KodiNotificationInputOnInputRequestedParamsImpl value,
+          $Res Function(_$KodiNotificationInputOnInputRequestedParamsImpl)
+              then) =
+      __$$KodiNotificationInputOnInputRequestedParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,22 +113,25 @@ abstract class _$$_KodiNotificationInputOnInputRequestedParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationInputOnInputRequestedParamsCopyWithImpl<$Res>
+class __$$KodiNotificationInputOnInputRequestedParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationInputOnInputRequestedParamsCopyWithImpl<$Res,
-        _$_KodiNotificationInputOnInputRequestedParams>
-    implements _$$_KodiNotificationInputOnInputRequestedParamsCopyWith<$Res> {
-  __$$_KodiNotificationInputOnInputRequestedParamsCopyWithImpl(
-      _$_KodiNotificationInputOnInputRequestedParams _value,
-      $Res Function(_$_KodiNotificationInputOnInputRequestedParams) _then)
+        _$KodiNotificationInputOnInputRequestedParamsImpl>
+    implements
+        _$$KodiNotificationInputOnInputRequestedParamsImplCopyWith<$Res> {
+  __$$KodiNotificationInputOnInputRequestedParamsImplCopyWithImpl(
+      _$KodiNotificationInputOnInputRequestedParamsImpl _value,
+      $Res Function(_$KodiNotificationInputOnInputRequestedParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationInputOnInputRequestedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationInputOnInputRequestedParams(
+    return _then(_$KodiNotificationInputOnInputRequestedParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -134,14 +146,14 @@ class __$$_KodiNotificationInputOnInputRequestedParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationInputOnInputRequestedParams
+class _$KodiNotificationInputOnInputRequestedParamsImpl
     implements _KodiNotificationInputOnInputRequestedParams {
-  const _$_KodiNotificationInputOnInputRequestedParams(
+  const _$KodiNotificationInputOnInputRequestedParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationInputOnInputRequestedParams.fromJson(
+  factory _$KodiNotificationInputOnInputRequestedParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationInputOnInputRequestedParamsFromJson(json);
+      _$$KodiNotificationInputOnInputRequestedParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -154,30 +166,33 @@ class _$_KodiNotificationInputOnInputRequestedParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationInputOnInputRequestedParams &&
+            other is _$KodiNotificationInputOnInputRequestedParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationInputOnInputRequestedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationInputOnInputRequestedParamsCopyWith<
-          _$_KodiNotificationInputOnInputRequestedParams>
+  _$$KodiNotificationInputOnInputRequestedParamsImplCopyWith<
+          _$KodiNotificationInputOnInputRequestedParamsImpl>
       get copyWith =>
-          __$$_KodiNotificationInputOnInputRequestedParamsCopyWithImpl<
-              _$_KodiNotificationInputOnInputRequestedParams>(this, _$identity);
+          __$$KodiNotificationInputOnInputRequestedParamsImplCopyWithImpl<
+                  _$KodiNotificationInputOnInputRequestedParamsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationInputOnInputRequestedParamsToJson(
+    return _$$KodiNotificationInputOnInputRequestedParamsImplToJson(
       this,
     );
   }
@@ -188,20 +203,23 @@ abstract class _KodiNotificationInputOnInputRequestedParams
   const factory _KodiNotificationInputOnInputRequestedParams(
       {required final String sender,
       required final KodiNotificationInputOnInputRequestedParamsData
-          data}) = _$_KodiNotificationInputOnInputRequestedParams;
+          data}) = _$KodiNotificationInputOnInputRequestedParamsImpl;
 
   factory _KodiNotificationInputOnInputRequestedParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationInputOnInputRequestedParams.fromJson;
+      _$KodiNotificationInputOnInputRequestedParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationInputOnInputRequestedParamsData get data;
+
+  /// Create a copy of KodiNotificationInputOnInputRequestedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationInputOnInputRequestedParamsCopyWith<
-          _$_KodiNotificationInputOnInputRequestedParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationInputOnInputRequestedParamsImplCopyWith<
+          _$KodiNotificationInputOnInputRequestedParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -218,8 +236,12 @@ mixin _$KodiNotificationInputOnInputRequestedParamsData {
       throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationInputOnInputRequestedParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationInputOnInputRequestedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationInputOnInputRequestedParamsDataCopyWith<
           KodiNotificationInputOnInputRequestedParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -249,6 +271,8 @@ class _$KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationInputOnInputRequestedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -274,13 +298,14 @@ class _$KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationInputOnInputRequestedParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWith<
+        $Res>
     implements $KodiNotificationInputOnInputRequestedParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationInputOnInputRequestedParamsDataCopyWith(
-          _$_KodiNotificationInputOnInputRequestedParamsData value,
-          $Res Function(_$_KodiNotificationInputOnInputRequestedParamsData)
+  factory _$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWith(
+          _$KodiNotificationInputOnInputRequestedParamsDataImpl value,
+          $Res Function(_$KodiNotificationInputOnInputRequestedParamsDataImpl)
               then) =
-      __$$_KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<$Res>;
+      __$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -288,16 +313,19 @@ abstract class _$$_KodiNotificationInputOnInputRequestedParamsDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationInputOnInputRequestedParamsData>
+        _$KodiNotificationInputOnInputRequestedParamsDataImpl>
     implements
-        _$$_KodiNotificationInputOnInputRequestedParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl(
-      _$_KodiNotificationInputOnInputRequestedParamsData _value,
-      $Res Function(_$_KodiNotificationInputOnInputRequestedParamsData) _then)
+        _$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWithImpl(
+      _$KodiNotificationInputOnInputRequestedParamsDataImpl _value,
+      $Res Function(_$KodiNotificationInputOnInputRequestedParamsDataImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationInputOnInputRequestedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,7 +333,7 @@ class __$$_KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<$Res>
     Object? type = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiNotificationInputOnInputRequestedParamsData(
+    return _then(_$KodiNotificationInputOnInputRequestedParamsDataImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -324,14 +352,14 @@ class __$$_KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationInputOnInputRequestedParamsData
+class _$KodiNotificationInputOnInputRequestedParamsDataImpl
     implements _KodiNotificationInputOnInputRequestedParamsData {
-  const _$_KodiNotificationInputOnInputRequestedParamsData(
+  const _$KodiNotificationInputOnInputRequestedParamsDataImpl(
       {required this.title, required this.type, required this.value});
 
-  factory _$_KodiNotificationInputOnInputRequestedParamsData.fromJson(
+  factory _$KodiNotificationInputOnInputRequestedParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationInputOnInputRequestedParamsDataFromJson(json);
+      _$$KodiNotificationInputOnInputRequestedParamsDataImplFromJson(json);
 
   @override
   final String title;
@@ -346,32 +374,34 @@ class _$_KodiNotificationInputOnInputRequestedParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationInputOnInputRequestedParamsData &&
+            other is _$KodiNotificationInputOnInputRequestedParamsDataImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title, type, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationInputOnInputRequestedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationInputOnInputRequestedParamsDataCopyWith<
-          _$_KodiNotificationInputOnInputRequestedParamsData>
+  _$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWith<
+          _$KodiNotificationInputOnInputRequestedParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationInputOnInputRequestedParamsDataCopyWithImpl<
-                  _$_KodiNotificationInputOnInputRequestedParamsData>(
+          __$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWithImpl<
+                  _$KodiNotificationInputOnInputRequestedParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationInputOnInputRequestedParamsDataToJson(
+    return _$$KodiNotificationInputOnInputRequestedParamsDataImplToJson(
       this,
     );
   }
@@ -383,11 +413,11 @@ abstract class _KodiNotificationInputOnInputRequestedParamsData
           {required final String title,
           required final KodiNotificationsOnInputRequestedType type,
           required final String value}) =
-      _$_KodiNotificationInputOnInputRequestedParamsData;
+      _$KodiNotificationInputOnInputRequestedParamsDataImpl;
 
   factory _KodiNotificationInputOnInputRequestedParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationInputOnInputRequestedParamsData.fromJson;
+      _$KodiNotificationInputOnInputRequestedParamsDataImpl.fromJson;
 
   @override
   String get title;
@@ -395,9 +425,12 @@ abstract class _KodiNotificationInputOnInputRequestedParamsData
   KodiNotificationsOnInputRequestedType get type;
   @override
   String get value;
+
+  /// Create a copy of KodiNotificationInputOnInputRequestedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationInputOnInputRequestedParamsDataCopyWith<
-          _$_KodiNotificationInputOnInputRequestedParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationInputOnInputRequestedParamsDataImplCopyWith<
+          _$KodiNotificationInputOnInputRequestedParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

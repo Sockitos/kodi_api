@@ -12,7 +12,7 @@ part of 'execute_action.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ExecuteAction _$ExecuteActionFromJson(Map<String, dynamic> json) {
   return _ExecuteAction.fromJson(json);
@@ -22,8 +22,12 @@ ExecuteAction _$ExecuteActionFromJson(Map<String, dynamic> json) {
 mixin _$ExecuteAction {
   KodiInputAction get action => throw _privateConstructorUsedError;
 
+  /// Serializes this ExecuteAction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ExecuteAction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExecuteActionCopyWith<ExecuteAction> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$ExecuteActionCopyWithImpl<$Res, $Val extends ExecuteAction>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ExecuteAction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,30 +68,32 @@ class _$ExecuteActionCopyWithImpl<$Res, $Val extends ExecuteAction>
 }
 
 /// @nodoc
-abstract class _$$_ExecuteActionCopyWith<$Res>
+abstract class _$$ExecuteActionImplCopyWith<$Res>
     implements $ExecuteActionCopyWith<$Res> {
-  factory _$$_ExecuteActionCopyWith(
-          _$_ExecuteAction value, $Res Function(_$_ExecuteAction) then) =
-      __$$_ExecuteActionCopyWithImpl<$Res>;
+  factory _$$ExecuteActionImplCopyWith(
+          _$ExecuteActionImpl value, $Res Function(_$ExecuteActionImpl) then) =
+      __$$ExecuteActionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiInputAction action});
 }
 
 /// @nodoc
-class __$$_ExecuteActionCopyWithImpl<$Res>
-    extends _$ExecuteActionCopyWithImpl<$Res, _$_ExecuteAction>
-    implements _$$_ExecuteActionCopyWith<$Res> {
-  __$$_ExecuteActionCopyWithImpl(
-      _$_ExecuteAction _value, $Res Function(_$_ExecuteAction) _then)
+class __$$ExecuteActionImplCopyWithImpl<$Res>
+    extends _$ExecuteActionCopyWithImpl<$Res, _$ExecuteActionImpl>
+    implements _$$ExecuteActionImplCopyWith<$Res> {
+  __$$ExecuteActionImplCopyWithImpl(
+      _$ExecuteActionImpl _value, $Res Function(_$ExecuteActionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExecuteAction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? action = null,
   }) {
-    return _then(_$_ExecuteAction(
+    return _then(_$ExecuteActionImpl(
       null == action
           ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
@@ -96,11 +104,11 @@ class __$$_ExecuteActionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ExecuteAction extends _ExecuteAction {
-  const _$_ExecuteAction(this.action) : super._();
+class _$ExecuteActionImpl extends _ExecuteAction {
+  const _$ExecuteActionImpl(this.action) : super._();
 
-  factory _$_ExecuteAction.fromJson(Map<String, dynamic> json) =>
-      _$$_ExecuteActionFromJson(json);
+  factory _$ExecuteActionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExecuteActionImplFromJson(json);
 
   @override
   final KodiInputAction action;
@@ -111,42 +119,48 @@ class _$_ExecuteAction extends _ExecuteAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ExecuteAction &&
+            other is _$ExecuteActionImpl &&
             (identical(other.action, action) || other.action == action));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, action);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExecuteAction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExecuteActionCopyWith<_$_ExecuteAction> get copyWith =>
-      __$$_ExecuteActionCopyWithImpl<_$_ExecuteAction>(this, _$identity);
+  _$$ExecuteActionImplCopyWith<_$ExecuteActionImpl> get copyWith =>
+      __$$ExecuteActionImplCopyWithImpl<_$ExecuteActionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExecuteActionToJson(
+    return _$$ExecuteActionImplToJson(
       this,
     );
   }
 }
 
 abstract class _ExecuteAction extends ExecuteAction {
-  const factory _ExecuteAction(final KodiInputAction action) = _$_ExecuteAction;
+  const factory _ExecuteAction(final KodiInputAction action) =
+      _$ExecuteActionImpl;
   const _ExecuteAction._() : super._();
 
   factory _ExecuteAction.fromJson(Map<String, dynamic> json) =
-      _$_ExecuteAction.fromJson;
+      _$ExecuteActionImpl.fromJson;
 
   @override
   KodiInputAction get action;
+
+  /// Create a copy of ExecuteAction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ExecuteActionCopyWith<_$_ExecuteAction> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ExecuteActionImplCopyWith<_$ExecuteActionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

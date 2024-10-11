@@ -9,7 +9,7 @@ part 'load_profile.g.dart';
 typedef LoadProfileBuilder = LoadProfile Function(
   String name, {
   bool prompt,
-  KodiProfilesPassword? password,
+  required KodiProfilesPassword password,
 });
 
 @freezed
@@ -17,7 +17,7 @@ class LoadProfile with _$LoadProfile implements KodiRequest<void> {
   const factory LoadProfile(
     @JsonKey(name: 'profile') String name, {
     @Default(false) bool prompt,
-    KodiProfilesPassword? password,
+    required KodiProfilesPassword password,
   }) = _LoadProfile;
 
   const LoadProfile._();

@@ -12,7 +12,7 @@ part of 'kodi_audio_details_artist.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAudioDetailsArtist _$KodiAudioDetailsArtistFromJson(
     Map<String, dynamic> json) {
@@ -24,43 +24,47 @@ mixin _$KodiAudioDetailsArtist {
   String get artist => throw _privateConstructorUsedError;
   @JsonKey(name: 'artistid')
   int get artistid => throw _privateConstructorUsedError;
-  String? get born => throw _privateConstructorUsedError;
+  String get born => throw _privateConstructorUsedError;
   @JsonKey(name: 'compilationartist')
-  bool? get compilationArtist => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  String? get died => throw _privateConstructorUsedError;
-  String? get disambiguation => throw _privateConstructorUsedError;
-  String? get disbanded => throw _privateConstructorUsedError;
-  String? get formed => throw _privateConstructorUsedError;
-  String? get gender => throw _privateConstructorUsedError;
+  bool get compilationArtist => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  String get died => throw _privateConstructorUsedError;
+  String get disambiguation => throw _privateConstructorUsedError;
+  String get disbanded => throw _privateConstructorUsedError;
+  String get formed => throw _privateConstructorUsedError;
+  String get gender => throw _privateConstructorUsedError;
   List<String>? get instrument => throw _privateConstructorUsedError;
   @JsonKey(name: 'isalbumartist')
-  bool? get isAlbumArtist => throw _privateConstructorUsedError;
+  bool get isAlbumArtist => throw _privateConstructorUsedError;
   List<String>? get mood => throw _privateConstructorUsedError;
   @JsonKey(name: 'musicbrainzartistid')
   List<String>? get musicBrainzArtistId => throw _privateConstructorUsedError;
   List<KodiAudioArtistRole>? get roles => throw _privateConstructorUsedError;
   @JsonKey(name: 'songgenres')
-  List<KodiAudioDetailsGenres>? get songGenred =>
+  List<KodiAudioDetailsGenres>? get songGenres =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'sortname')
-  String? get sortName => throw _privateConstructorUsedError;
+  String get sortName => throw _privateConstructorUsedError;
   @JsonKey(name: 'sourceid')
   List<int>? get sourceId => throw _privateConstructorUsedError;
   List<String>? get style => throw _privateConstructorUsedError;
-  String? get type => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'yearsactive')
   List<String>? get yearsActive => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'dateadded')
   DateTime? get dateAdded => throw _privateConstructorUsedError;
   List<String>? get genre => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAudioDetailsArtist to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAudioDetailsArtist
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAudioDetailsArtistCopyWith<KodiAudioDetailsArtist> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,30 +78,30 @@ abstract class $KodiAudioDetailsArtistCopyWith<$Res> {
   $Res call(
       {String artist,
       @JsonKey(name: 'artistid') int artistid,
-      String? born,
-      @JsonKey(name: 'compilationartist') bool? compilationArtist,
-      String? description,
-      String? died,
-      String? disambiguation,
-      String? disbanded,
-      String? formed,
-      String? gender,
+      String born,
+      @JsonKey(name: 'compilationartist') bool compilationArtist,
+      String description,
+      String died,
+      String disambiguation,
+      String disbanded,
+      String formed,
+      String gender,
       List<String>? instrument,
-      @JsonKey(name: 'isalbumartist') bool? isAlbumArtist,
+      @JsonKey(name: 'isalbumartist') bool isAlbumArtist,
       List<String>? mood,
       @JsonKey(name: 'musicbrainzartistid') List<String>? musicBrainzArtistId,
       List<KodiAudioArtistRole>? roles,
-      @JsonKey(name: 'songgenres') List<KodiAudioDetailsGenres>? songGenred,
-      @JsonKey(name: 'sortname') String? sortName,
+      @JsonKey(name: 'songgenres') List<KodiAudioDetailsGenres>? songGenres,
+      @JsonKey(name: 'sortname') String sortName,
       @JsonKey(name: 'sourceid') List<int>? sourceId,
       List<String>? style,
-      String? type,
+      String type,
       @JsonKey(name: 'yearsactive') List<String>? yearsActive,
       KodiMediaArtwork? art,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
       List<String>? genre,
-      String? fanart,
-      String? thumbnail,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiMediaArtworkCopyWith<$Res>? get art;
@@ -114,35 +118,37 @@ class _$KodiAudioDetailsArtistCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAudioDetailsArtist
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artist = null,
     Object? artistid = null,
-    Object? born = freezed,
-    Object? compilationArtist = freezed,
-    Object? description = freezed,
-    Object? died = freezed,
-    Object? disambiguation = freezed,
-    Object? disbanded = freezed,
-    Object? formed = freezed,
-    Object? gender = freezed,
+    Object? born = null,
+    Object? compilationArtist = null,
+    Object? description = null,
+    Object? died = null,
+    Object? disambiguation = null,
+    Object? disbanded = null,
+    Object? formed = null,
+    Object? gender = null,
     Object? instrument = freezed,
-    Object? isAlbumArtist = freezed,
+    Object? isAlbumArtist = null,
     Object? mood = freezed,
     Object? musicBrainzArtistId = freezed,
     Object? roles = freezed,
-    Object? songGenred = freezed,
-    Object? sortName = freezed,
+    Object? songGenres = freezed,
+    Object? sortName = null,
     Object? sourceId = freezed,
     Object? style = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? yearsActive = freezed,
     Object? art = freezed,
     Object? dateAdded = freezed,
     Object? genre = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -154,46 +160,46 @@ class _$KodiAudioDetailsArtistCopyWithImpl<$Res,
           ? _value.artistid
           : artistid // ignore: cast_nullable_to_non_nullable
               as int,
-      born: freezed == born
+      born: null == born
           ? _value.born
           : born // ignore: cast_nullable_to_non_nullable
-              as String?,
-      compilationArtist: freezed == compilationArtist
+              as String,
+      compilationArtist: null == compilationArtist
           ? _value.compilationArtist
           : compilationArtist // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
+              as bool,
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      died: freezed == died
+              as String,
+      died: null == died
           ? _value.died
           : died // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disambiguation: freezed == disambiguation
+              as String,
+      disambiguation: null == disambiguation
           ? _value.disambiguation
           : disambiguation // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disbanded: freezed == disbanded
+              as String,
+      disbanded: null == disbanded
           ? _value.disbanded
           : disbanded // ignore: cast_nullable_to_non_nullable
-              as String?,
-      formed: freezed == formed
+              as String,
+      formed: null == formed
           ? _value.formed
           : formed // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gender: freezed == gender
+              as String,
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       instrument: freezed == instrument
           ? _value.instrument
           : instrument // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      isAlbumArtist: freezed == isAlbumArtist
+      isAlbumArtist: null == isAlbumArtist
           ? _value.isAlbumArtist
           : isAlbumArtist // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       mood: freezed == mood
           ? _value.mood
           : mood // ignore: cast_nullable_to_non_nullable
@@ -206,14 +212,14 @@ class _$KodiAudioDetailsArtistCopyWithImpl<$Res,
           ? _value.roles
           : roles // ignore: cast_nullable_to_non_nullable
               as List<KodiAudioArtistRole>?,
-      songGenred: freezed == songGenred
-          ? _value.songGenred
-          : songGenred // ignore: cast_nullable_to_non_nullable
+      songGenres: freezed == songGenres
+          ? _value.songGenres
+          : songGenres // ignore: cast_nullable_to_non_nullable
               as List<KodiAudioDetailsGenres>?,
-      sortName: freezed == sortName
+      sortName: null == sortName
           ? _value.sortName
           : sortName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
@@ -222,10 +228,10 @@ class _$KodiAudioDetailsArtistCopyWithImpl<$Res,
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      type: freezed == type
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       yearsActive: freezed == yearsActive
           ? _value.yearsActive
           : yearsActive // ignore: cast_nullable_to_non_nullable
@@ -242,14 +248,14 @@ class _$KodiAudioDetailsArtistCopyWithImpl<$Res,
           ? _value.genre
           : genre // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      fanart: freezed == fanart
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -257,6 +263,8 @@ class _$KodiAudioDetailsArtistCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiAudioDetailsArtist
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -271,40 +279,41 @@ class _$KodiAudioDetailsArtistCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioDetailsArtistCopyWith<$Res>
+abstract class _$$KodiAudioDetailsArtistImplCopyWith<$Res>
     implements $KodiAudioDetailsArtistCopyWith<$Res> {
-  factory _$$_KodiAudioDetailsArtistCopyWith(_$_KodiAudioDetailsArtist value,
-          $Res Function(_$_KodiAudioDetailsArtist) then) =
-      __$$_KodiAudioDetailsArtistCopyWithImpl<$Res>;
+  factory _$$KodiAudioDetailsArtistImplCopyWith(
+          _$KodiAudioDetailsArtistImpl value,
+          $Res Function(_$KodiAudioDetailsArtistImpl) then) =
+      __$$KodiAudioDetailsArtistImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String artist,
       @JsonKey(name: 'artistid') int artistid,
-      String? born,
-      @JsonKey(name: 'compilationartist') bool? compilationArtist,
-      String? description,
-      String? died,
-      String? disambiguation,
-      String? disbanded,
-      String? formed,
-      String? gender,
+      String born,
+      @JsonKey(name: 'compilationartist') bool compilationArtist,
+      String description,
+      String died,
+      String disambiguation,
+      String disbanded,
+      String formed,
+      String gender,
       List<String>? instrument,
-      @JsonKey(name: 'isalbumartist') bool? isAlbumArtist,
+      @JsonKey(name: 'isalbumartist') bool isAlbumArtist,
       List<String>? mood,
       @JsonKey(name: 'musicbrainzartistid') List<String>? musicBrainzArtistId,
       List<KodiAudioArtistRole>? roles,
-      @JsonKey(name: 'songgenres') List<KodiAudioDetailsGenres>? songGenred,
-      @JsonKey(name: 'sortname') String? sortName,
+      @JsonKey(name: 'songgenres') List<KodiAudioDetailsGenres>? songGenres,
+      @JsonKey(name: 'sortname') String sortName,
       @JsonKey(name: 'sourceid') List<int>? sourceId,
       List<String>? style,
-      String? type,
+      String type,
       @JsonKey(name: 'yearsactive') List<String>? yearsActive,
       KodiMediaArtwork? art,
       @JsonKey(name: 'dateadded') DateTime? dateAdded,
       List<String>? genre,
-      String? fanart,
-      String? thumbnail,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -312,46 +321,49 @@ abstract class _$$_KodiAudioDetailsArtistCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAudioDetailsArtistCopyWithImpl<$Res>
+class __$$KodiAudioDetailsArtistImplCopyWithImpl<$Res>
     extends _$KodiAudioDetailsArtistCopyWithImpl<$Res,
-        _$_KodiAudioDetailsArtist>
-    implements _$$_KodiAudioDetailsArtistCopyWith<$Res> {
-  __$$_KodiAudioDetailsArtistCopyWithImpl(_$_KodiAudioDetailsArtist _value,
-      $Res Function(_$_KodiAudioDetailsArtist) _then)
+        _$KodiAudioDetailsArtistImpl>
+    implements _$$KodiAudioDetailsArtistImplCopyWith<$Res> {
+  __$$KodiAudioDetailsArtistImplCopyWithImpl(
+      _$KodiAudioDetailsArtistImpl _value,
+      $Res Function(_$KodiAudioDetailsArtistImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioDetailsArtist
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artist = null,
     Object? artistid = null,
-    Object? born = freezed,
-    Object? compilationArtist = freezed,
-    Object? description = freezed,
-    Object? died = freezed,
-    Object? disambiguation = freezed,
-    Object? disbanded = freezed,
-    Object? formed = freezed,
-    Object? gender = freezed,
+    Object? born = null,
+    Object? compilationArtist = null,
+    Object? description = null,
+    Object? died = null,
+    Object? disambiguation = null,
+    Object? disbanded = null,
+    Object? formed = null,
+    Object? gender = null,
     Object? instrument = freezed,
-    Object? isAlbumArtist = freezed,
+    Object? isAlbumArtist = null,
     Object? mood = freezed,
     Object? musicBrainzArtistId = freezed,
     Object? roles = freezed,
-    Object? songGenred = freezed,
-    Object? sortName = freezed,
+    Object? songGenres = freezed,
+    Object? sortName = null,
     Object? sourceId = freezed,
     Object? style = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? yearsActive = freezed,
     Object? art = freezed,
     Object? dateAdded = freezed,
     Object? genre = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiAudioDetailsArtist(
+    return _then(_$KodiAudioDetailsArtistImpl(
       artist: null == artist
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
@@ -360,46 +372,46 @@ class __$$_KodiAudioDetailsArtistCopyWithImpl<$Res>
           ? _value.artistid
           : artistid // ignore: cast_nullable_to_non_nullable
               as int,
-      born: freezed == born
+      born: null == born
           ? _value.born
           : born // ignore: cast_nullable_to_non_nullable
-              as String?,
-      compilationArtist: freezed == compilationArtist
+              as String,
+      compilationArtist: null == compilationArtist
           ? _value.compilationArtist
           : compilationArtist // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      description: freezed == description
+              as bool,
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String?,
-      died: freezed == died
+              as String,
+      died: null == died
           ? _value.died
           : died // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disambiguation: freezed == disambiguation
+              as String,
+      disambiguation: null == disambiguation
           ? _value.disambiguation
           : disambiguation // ignore: cast_nullable_to_non_nullable
-              as String?,
-      disbanded: freezed == disbanded
+              as String,
+      disbanded: null == disbanded
           ? _value.disbanded
           : disbanded // ignore: cast_nullable_to_non_nullable
-              as String?,
-      formed: freezed == formed
+              as String,
+      formed: null == formed
           ? _value.formed
           : formed // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gender: freezed == gender
+              as String,
+      gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       instrument: freezed == instrument
           ? _value._instrument
           : instrument // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      isAlbumArtist: freezed == isAlbumArtist
+      isAlbumArtist: null == isAlbumArtist
           ? _value.isAlbumArtist
           : isAlbumArtist // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       mood: freezed == mood
           ? _value._mood
           : mood // ignore: cast_nullable_to_non_nullable
@@ -412,14 +424,14 @@ class __$$_KodiAudioDetailsArtistCopyWithImpl<$Res>
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
               as List<KodiAudioArtistRole>?,
-      songGenred: freezed == songGenred
-          ? _value._songGenred
-          : songGenred // ignore: cast_nullable_to_non_nullable
+      songGenres: freezed == songGenres
+          ? _value._songGenres
+          : songGenres // ignore: cast_nullable_to_non_nullable
               as List<KodiAudioDetailsGenres>?,
-      sortName: freezed == sortName
+      sortName: null == sortName
           ? _value.sortName
           : sortName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       sourceId: freezed == sourceId
           ? _value._sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
@@ -428,10 +440,10 @@ class __$$_KodiAudioDetailsArtistCopyWithImpl<$Res>
           ? _value._style
           : style // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      type: freezed == type
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       yearsActive: freezed == yearsActive
           ? _value._yearsActive
           : yearsActive // ignore: cast_nullable_to_non_nullable
@@ -448,14 +460,14 @@ class __$$_KodiAudioDetailsArtistCopyWithImpl<$Res>
           ? _value._genre
           : genre // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      fanart: freezed == fanart
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -467,49 +479,49 @@ class __$$_KodiAudioDetailsArtistCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(converters: [DateTimeConverter()])
-class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
-  const _$_KodiAudioDetailsArtist(
+class _$KodiAudioDetailsArtistImpl implements _KodiAudioDetailsArtist {
+  const _$KodiAudioDetailsArtistImpl(
       {required this.artist,
       @JsonKey(name: 'artistid') required this.artistid,
-      this.born,
-      @JsonKey(name: 'compilationartist') this.compilationArtist,
-      this.description,
-      this.died,
-      this.disambiguation,
-      this.disbanded,
-      this.formed,
-      this.gender,
+      this.born = '',
+      @JsonKey(name: 'compilationartist') this.compilationArtist = false,
+      this.description = '',
+      this.died = '',
+      this.disambiguation = '',
+      this.disbanded = '',
+      this.formed = '',
+      this.gender = '',
       final List<String>? instrument,
-      @JsonKey(name: 'isalbumartist') this.isAlbumArtist,
+      @JsonKey(name: 'isalbumartist') this.isAlbumArtist = false,
       final List<String>? mood,
       @JsonKey(name: 'musicbrainzartistid')
       final List<String>? musicBrainzArtistId,
       final List<KodiAudioArtistRole>? roles,
       @JsonKey(name: 'songgenres')
-      final List<KodiAudioDetailsGenres>? songGenred,
-      @JsonKey(name: 'sortname') this.sortName,
+      final List<KodiAudioDetailsGenres>? songGenres,
+      @JsonKey(name: 'sortname') this.sortName = '',
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
       final List<String>? style,
-      this.type,
+      this.type = '',
       @JsonKey(name: 'yearsactive') final List<String>? yearsActive,
       this.art,
       @JsonKey(name: 'dateadded') this.dateAdded,
       final List<String>? genre,
-      this.fanart,
-      this.thumbnail,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label})
       : _instrument = instrument,
         _mood = mood,
         _musicBrainzArtistId = musicBrainzArtistId,
         _roles = roles,
-        _songGenred = songGenred,
+        _songGenres = songGenres,
         _sourceId = sourceId,
         _style = style,
         _yearsActive = yearsActive,
         _genre = genre;
 
-  factory _$_KodiAudioDetailsArtist.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAudioDetailsArtistFromJson(json);
+  factory _$KodiAudioDetailsArtistImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAudioDetailsArtistImplFromJson(json);
 
   @override
   final String artist;
@@ -517,22 +529,29 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
   @JsonKey(name: 'artistid')
   final int artistid;
   @override
-  final String? born;
+  @JsonKey()
+  final String born;
   @override
   @JsonKey(name: 'compilationartist')
-  final bool? compilationArtist;
+  final bool compilationArtist;
   @override
-  final String? description;
+  @JsonKey()
+  final String description;
   @override
-  final String? died;
+  @JsonKey()
+  final String died;
   @override
-  final String? disambiguation;
+  @JsonKey()
+  final String disambiguation;
   @override
-  final String? disbanded;
+  @JsonKey()
+  final String disbanded;
   @override
-  final String? formed;
+  @JsonKey()
+  final String formed;
   @override
-  final String? gender;
+  @JsonKey()
+  final String gender;
   final List<String>? _instrument;
   @override
   List<String>? get instrument {
@@ -545,7 +564,7 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
 
   @override
   @JsonKey(name: 'isalbumartist')
-  final bool? isAlbumArtist;
+  final bool isAlbumArtist;
   final List<String>? _mood;
   @override
   List<String>? get mood {
@@ -578,20 +597,20 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<KodiAudioDetailsGenres>? _songGenred;
+  final List<KodiAudioDetailsGenres>? _songGenres;
   @override
   @JsonKey(name: 'songgenres')
-  List<KodiAudioDetailsGenres>? get songGenred {
-    final value = _songGenred;
+  List<KodiAudioDetailsGenres>? get songGenres {
+    final value = _songGenres;
     if (value == null) return null;
-    if (_songGenred is EqualUnmodifiableListView) return _songGenred;
+    if (_songGenres is EqualUnmodifiableListView) return _songGenres;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
 
   @override
   @JsonKey(name: 'sortname')
-  final String? sortName;
+  final String sortName;
   final List<int>? _sourceId;
   @override
   @JsonKey(name: 'sourceid')
@@ -614,7 +633,8 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
   }
 
   @override
-  final String? type;
+  @JsonKey()
+  final String type;
   final List<String>? _yearsActive;
   @override
   @JsonKey(name: 'yearsactive')
@@ -642,22 +662,24 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
   }
 
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
   @override
   String toString() {
-    return 'KodiAudioDetailsArtist(artist: $artist, artistid: $artistid, born: $born, compilationArtist: $compilationArtist, description: $description, died: $died, disambiguation: $disambiguation, disbanded: $disbanded, formed: $formed, gender: $gender, instrument: $instrument, isAlbumArtist: $isAlbumArtist, mood: $mood, musicBrainzArtistId: $musicBrainzArtistId, roles: $roles, songGenred: $songGenred, sortName: $sortName, sourceId: $sourceId, style: $style, type: $type, yearsActive: $yearsActive, art: $art, dateAdded: $dateAdded, genre: $genre, fanart: $fanart, thumbnail: $thumbnail, label: $label)';
+    return 'KodiAudioDetailsArtist(artist: $artist, artistid: $artistid, born: $born, compilationArtist: $compilationArtist, description: $description, died: $died, disambiguation: $disambiguation, disbanded: $disbanded, formed: $formed, gender: $gender, instrument: $instrument, isAlbumArtist: $isAlbumArtist, mood: $mood, musicBrainzArtistId: $musicBrainzArtistId, roles: $roles, songGenres: $songGenres, sortName: $sortName, sourceId: $sourceId, style: $style, type: $type, yearsActive: $yearsActive, art: $art, dateAdded: $dateAdded, genre: $genre, fanart: $fanart, thumbnail: $thumbnail, label: $label)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioDetailsArtist &&
+            other is _$KodiAudioDetailsArtistImpl &&
             (identical(other.artist, artist) || other.artist == artist) &&
             (identical(other.artistid, artistid) ||
                 other.artistid == artistid) &&
@@ -682,7 +704,7 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
                 .equals(other._musicBrainzArtistId, _musicBrainzArtistId) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             const DeepCollectionEquality()
-                .equals(other._songGenred, _songGenred) &&
+                .equals(other._songGenres, _songGenres) &&
             (identical(other.sortName, sortName) ||
                 other.sortName == sortName) &&
             const DeepCollectionEquality().equals(other._sourceId, _sourceId) &&
@@ -700,7 +722,7 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -719,7 +741,7 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
         const DeepCollectionEquality().hash(_mood),
         const DeepCollectionEquality().hash(_musicBrainzArtistId),
         const DeepCollectionEquality().hash(_roles),
-        const DeepCollectionEquality().hash(_songGenred),
+        const DeepCollectionEquality().hash(_songGenres),
         sortName,
         const DeepCollectionEquality().hash(_sourceId),
         const DeepCollectionEquality().hash(_style),
@@ -733,16 +755,18 @@ class _$_KodiAudioDetailsArtist implements _KodiAudioDetailsArtist {
         label
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioDetailsArtist
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioDetailsArtistCopyWith<_$_KodiAudioDetailsArtist> get copyWith =>
-      __$$_KodiAudioDetailsArtistCopyWithImpl<_$_KodiAudioDetailsArtist>(
-          this, _$identity);
+  _$$KodiAudioDetailsArtistImplCopyWith<_$KodiAudioDetailsArtistImpl>
+      get copyWith => __$$KodiAudioDetailsArtistImplCopyWithImpl<
+          _$KodiAudioDetailsArtistImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioDetailsArtistToJson(
+    return _$$KodiAudioDetailsArtistImplToJson(
       this,
     );
   }
@@ -752,36 +776,36 @@ abstract class _KodiAudioDetailsArtist implements KodiAudioDetailsArtist {
   const factory _KodiAudioDetailsArtist(
       {required final String artist,
       @JsonKey(name: 'artistid') required final int artistid,
-      final String? born,
-      @JsonKey(name: 'compilationartist') final bool? compilationArtist,
-      final String? description,
-      final String? died,
-      final String? disambiguation,
-      final String? disbanded,
-      final String? formed,
-      final String? gender,
+      final String born,
+      @JsonKey(name: 'compilationartist') final bool compilationArtist,
+      final String description,
+      final String died,
+      final String disambiguation,
+      final String disbanded,
+      final String formed,
+      final String gender,
       final List<String>? instrument,
-      @JsonKey(name: 'isalbumartist') final bool? isAlbumArtist,
+      @JsonKey(name: 'isalbumartist') final bool isAlbumArtist,
       final List<String>? mood,
       @JsonKey(name: 'musicbrainzartistid')
       final List<String>? musicBrainzArtistId,
       final List<KodiAudioArtistRole>? roles,
       @JsonKey(name: 'songgenres')
-      final List<KodiAudioDetailsGenres>? songGenred,
-      @JsonKey(name: 'sortname') final String? sortName,
+      final List<KodiAudioDetailsGenres>? songGenres,
+      @JsonKey(name: 'sortname') final String sortName,
       @JsonKey(name: 'sourceid') final List<int>? sourceId,
       final List<String>? style,
-      final String? type,
+      final String type,
       @JsonKey(name: 'yearsactive') final List<String>? yearsActive,
       final KodiMediaArtwork? art,
       @JsonKey(name: 'dateadded') final DateTime? dateAdded,
       final List<String>? genre,
-      final String? fanart,
-      final String? thumbnail,
-      required final String label}) = _$_KodiAudioDetailsArtist;
+      final String fanart,
+      final String thumbnail,
+      required final String label}) = _$KodiAudioDetailsArtistImpl;
 
   factory _KodiAudioDetailsArtist.fromJson(Map<String, dynamic> json) =
-      _$_KodiAudioDetailsArtist.fromJson;
+      _$KodiAudioDetailsArtistImpl.fromJson;
 
   @override
   String get artist;
@@ -789,27 +813,27 @@ abstract class _KodiAudioDetailsArtist implements KodiAudioDetailsArtist {
   @JsonKey(name: 'artistid')
   int get artistid;
   @override
-  String? get born;
+  String get born;
   @override
   @JsonKey(name: 'compilationartist')
-  bool? get compilationArtist;
+  bool get compilationArtist;
   @override
-  String? get description;
+  String get description;
   @override
-  String? get died;
+  String get died;
   @override
-  String? get disambiguation;
+  String get disambiguation;
   @override
-  String? get disbanded;
+  String get disbanded;
   @override
-  String? get formed;
+  String get formed;
   @override
-  String? get gender;
+  String get gender;
   @override
   List<String>? get instrument;
   @override
   @JsonKey(name: 'isalbumartist')
-  bool? get isAlbumArtist;
+  bool get isAlbumArtist;
   @override
   List<String>? get mood;
   @override
@@ -819,17 +843,17 @@ abstract class _KodiAudioDetailsArtist implements KodiAudioDetailsArtist {
   List<KodiAudioArtistRole>? get roles;
   @override
   @JsonKey(name: 'songgenres')
-  List<KodiAudioDetailsGenres>? get songGenred;
+  List<KodiAudioDetailsGenres>? get songGenres;
   @override
   @JsonKey(name: 'sortname')
-  String? get sortName;
+  String get sortName;
   @override
   @JsonKey(name: 'sourceid')
   List<int>? get sourceId;
   @override
   List<String>? get style;
   @override
-  String? get type;
+  String get type;
   @override
   @JsonKey(name: 'yearsactive')
   List<String>? get yearsActive;
@@ -841,13 +865,16 @@ abstract class _KodiAudioDetailsArtist implements KodiAudioDetailsArtist {
   @override
   List<String>? get genre;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiAudioDetailsArtist
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAudioDetailsArtistCopyWith<_$_KodiAudioDetailsArtist> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioDetailsArtistImplCopyWith<_$KodiAudioDetailsArtistImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

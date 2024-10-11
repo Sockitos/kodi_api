@@ -6,19 +6,22 @@ part of 'version.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Version _$$_VersionFromJson(Map<String, dynamic> json) => _$_Version();
+_$VersionImpl _$$VersionImplFromJson(Map<String, dynamic> json) =>
+    _$VersionImpl();
 
-Map<String, dynamic> _$$_VersionToJson(_$_Version instance) =>
+Map<String, dynamic> _$$VersionImplToJson(_$VersionImpl instance) =>
     <String, dynamic>{};
 
-_$_VersionResponse _$$_VersionResponseFromJson(Map<String, dynamic> json) =>
-    _$_VersionResponse(
-      major: json['major'] as int,
-      minor: json['minor'] as int,
-      patch: json['patch'] as int,
+_$VersionResponseImpl _$$VersionResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$VersionResponseImpl(
+      major: (json['major'] as num).toInt(),
+      minor: (json['minor'] as num).toInt(),
+      patch: (json['patch'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_VersionResponseToJson(_$_VersionResponse instance) =>
+Map<String, dynamic> _$$VersionResponseImplToJson(
+        _$VersionResponseImpl instance) =>
     <String, dynamic>{
       'major': instance.major,
       'minor': instance.minor,

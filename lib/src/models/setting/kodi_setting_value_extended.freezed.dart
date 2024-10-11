@@ -12,7 +12,7 @@ part of 'kodi_setting_value_extended.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiSettingValueExtended _$KodiSettingValueExtendedFromJson(
     Map<String, dynamic> json) {
@@ -96,6 +96,8 @@ mixin _$KodiSettingValueExtended {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiSettingValueExtended to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -116,34 +118,39 @@ class _$KodiSettingValueExtendedCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingValueExtendedBoolCopyWith<$Res> {
-  factory _$$_KodiSettingValueExtendedBoolCopyWith(
-          _$_KodiSettingValueExtendedBool value,
-          $Res Function(_$_KodiSettingValueExtendedBool) then) =
-      __$$_KodiSettingValueExtendedBoolCopyWithImpl<$Res>;
+abstract class _$$KodiSettingValueExtendedBoolImplCopyWith<$Res> {
+  factory _$$KodiSettingValueExtendedBoolImplCopyWith(
+          _$KodiSettingValueExtendedBoolImpl value,
+          $Res Function(_$KodiSettingValueExtendedBoolImpl) then) =
+      __$$KodiSettingValueExtendedBoolImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool value});
 }
 
 /// @nodoc
-class __$$_KodiSettingValueExtendedBoolCopyWithImpl<$Res>
+class __$$KodiSettingValueExtendedBoolImplCopyWithImpl<$Res>
     extends _$KodiSettingValueExtendedCopyWithImpl<$Res,
-        _$_KodiSettingValueExtendedBool>
-    implements _$$_KodiSettingValueExtendedBoolCopyWith<$Res> {
-  __$$_KodiSettingValueExtendedBoolCopyWithImpl(
-      _$_KodiSettingValueExtendedBool _value,
-      $Res Function(_$_KodiSettingValueExtendedBool) _then)
+        _$KodiSettingValueExtendedBoolImpl>
+    implements _$$KodiSettingValueExtendedBoolImplCopyWith<$Res> {
+  __$$KodiSettingValueExtendedBoolImplCopyWithImpl(
+      _$KodiSettingValueExtendedBoolImpl _value,
+      $Res Function(_$KodiSettingValueExtendedBoolImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiSettingValueExtendedBool(
+    return _then(_$KodiSettingValueExtendedBoolImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -154,12 +161,14 @@ class __$$_KodiSettingValueExtendedBoolCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingValueExtendedBool implements _KodiSettingValueExtendedBool {
-  const _$_KodiSettingValueExtendedBool(this.value, {final String? $type})
+class _$KodiSettingValueExtendedBoolImpl
+    implements _KodiSettingValueExtendedBool {
+  const _$KodiSettingValueExtendedBoolImpl(this.value, {final String? $type})
       : $type = $type ?? 'bool';
 
-  factory _$_KodiSettingValueExtendedBool.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiSettingValueExtendedBoolFromJson(json);
+  factory _$KodiSettingValueExtendedBoolImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingValueExtendedBoolImplFromJson(json);
 
   @override
   final bool value;
@@ -173,23 +182,26 @@ class _$_KodiSettingValueExtendedBool implements _KodiSettingValueExtendedBool {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingValueExtendedBool &&
+            other is _$KodiSettingValueExtendedBoolImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingValueExtendedBoolCopyWith<_$_KodiSettingValueExtendedBool>
-      get copyWith => __$$_KodiSettingValueExtendedBoolCopyWithImpl<
-          _$_KodiSettingValueExtendedBool>(this, _$identity);
+  _$$KodiSettingValueExtendedBoolImplCopyWith<
+          _$KodiSettingValueExtendedBoolImpl>
+      get copyWith => __$$KodiSettingValueExtendedBoolImplCopyWithImpl<
+          _$KodiSettingValueExtendedBoolImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -273,7 +285,7 @@ class _$_KodiSettingValueExtendedBool implements _KodiSettingValueExtendedBool {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingValueExtendedBoolToJson(
+    return _$$KodiSettingValueExtendedBoolImplToJson(
       this,
     );
   }
@@ -282,44 +294,50 @@ class _$_KodiSettingValueExtendedBool implements _KodiSettingValueExtendedBool {
 abstract class _KodiSettingValueExtendedBool
     implements KodiSettingValueExtended {
   const factory _KodiSettingValueExtendedBool(final bool value) =
-      _$_KodiSettingValueExtendedBool;
+      _$KodiSettingValueExtendedBoolImpl;
 
   factory _KodiSettingValueExtendedBool.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingValueExtendedBool.fromJson;
+      _$KodiSettingValueExtendedBoolImpl.fromJson;
 
   @override
   bool get value;
-  @JsonKey(ignore: true)
-  _$$_KodiSettingValueExtendedBoolCopyWith<_$_KodiSettingValueExtendedBool>
+
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingValueExtendedBoolImplCopyWith<
+          _$KodiSettingValueExtendedBoolImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingValueExtendedIntCopyWith<$Res> {
-  factory _$$_KodiSettingValueExtendedIntCopyWith(
-          _$_KodiSettingValueExtendedInt value,
-          $Res Function(_$_KodiSettingValueExtendedInt) then) =
-      __$$_KodiSettingValueExtendedIntCopyWithImpl<$Res>;
+abstract class _$$KodiSettingValueExtendedIntImplCopyWith<$Res> {
+  factory _$$KodiSettingValueExtendedIntImplCopyWith(
+          _$KodiSettingValueExtendedIntImpl value,
+          $Res Function(_$KodiSettingValueExtendedIntImpl) then) =
+      __$$KodiSettingValueExtendedIntImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int value});
 }
 
 /// @nodoc
-class __$$_KodiSettingValueExtendedIntCopyWithImpl<$Res>
+class __$$KodiSettingValueExtendedIntImplCopyWithImpl<$Res>
     extends _$KodiSettingValueExtendedCopyWithImpl<$Res,
-        _$_KodiSettingValueExtendedInt>
-    implements _$$_KodiSettingValueExtendedIntCopyWith<$Res> {
-  __$$_KodiSettingValueExtendedIntCopyWithImpl(
-      _$_KodiSettingValueExtendedInt _value,
-      $Res Function(_$_KodiSettingValueExtendedInt) _then)
+        _$KodiSettingValueExtendedIntImpl>
+    implements _$$KodiSettingValueExtendedIntImplCopyWith<$Res> {
+  __$$KodiSettingValueExtendedIntImplCopyWithImpl(
+      _$KodiSettingValueExtendedIntImpl _value,
+      $Res Function(_$KodiSettingValueExtendedIntImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiSettingValueExtendedInt(
+    return _then(_$KodiSettingValueExtendedIntImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -330,12 +348,14 @@ class __$$_KodiSettingValueExtendedIntCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingValueExtendedInt implements _KodiSettingValueExtendedInt {
-  const _$_KodiSettingValueExtendedInt(this.value, {final String? $type})
+class _$KodiSettingValueExtendedIntImpl
+    implements _KodiSettingValueExtendedInt {
+  const _$KodiSettingValueExtendedIntImpl(this.value, {final String? $type})
       : $type = $type ?? 'int';
 
-  factory _$_KodiSettingValueExtendedInt.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiSettingValueExtendedIntFromJson(json);
+  factory _$KodiSettingValueExtendedIntImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingValueExtendedIntImplFromJson(json);
 
   @override
   final int value;
@@ -349,23 +369,25 @@ class _$_KodiSettingValueExtendedInt implements _KodiSettingValueExtendedInt {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingValueExtendedInt &&
+            other is _$KodiSettingValueExtendedIntImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingValueExtendedIntCopyWith<_$_KodiSettingValueExtendedInt>
-      get copyWith => __$$_KodiSettingValueExtendedIntCopyWithImpl<
-          _$_KodiSettingValueExtendedInt>(this, _$identity);
+  _$$KodiSettingValueExtendedIntImplCopyWith<_$KodiSettingValueExtendedIntImpl>
+      get copyWith => __$$KodiSettingValueExtendedIntImplCopyWithImpl<
+          _$KodiSettingValueExtendedIntImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -449,7 +471,7 @@ class _$_KodiSettingValueExtendedInt implements _KodiSettingValueExtendedInt {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingValueExtendedIntToJson(
+    return _$$KodiSettingValueExtendedIntImplToJson(
       this,
     );
   }
@@ -458,44 +480,49 @@ class _$_KodiSettingValueExtendedInt implements _KodiSettingValueExtendedInt {
 abstract class _KodiSettingValueExtendedInt
     implements KodiSettingValueExtended {
   const factory _KodiSettingValueExtendedInt(final int value) =
-      _$_KodiSettingValueExtendedInt;
+      _$KodiSettingValueExtendedIntImpl;
 
   factory _KodiSettingValueExtendedInt.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingValueExtendedInt.fromJson;
+      _$KodiSettingValueExtendedIntImpl.fromJson;
 
   @override
   int get value;
-  @JsonKey(ignore: true)
-  _$$_KodiSettingValueExtendedIntCopyWith<_$_KodiSettingValueExtendedInt>
+
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingValueExtendedIntImplCopyWith<_$KodiSettingValueExtendedIntImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingValueExtendedNumberCopyWith<$Res> {
-  factory _$$_KodiSettingValueExtendedNumberCopyWith(
-          _$_KodiSettingValueExtendedNumber value,
-          $Res Function(_$_KodiSettingValueExtendedNumber) then) =
-      __$$_KodiSettingValueExtendedNumberCopyWithImpl<$Res>;
+abstract class _$$KodiSettingValueExtendedNumberImplCopyWith<$Res> {
+  factory _$$KodiSettingValueExtendedNumberImplCopyWith(
+          _$KodiSettingValueExtendedNumberImpl value,
+          $Res Function(_$KodiSettingValueExtendedNumberImpl) then) =
+      __$$KodiSettingValueExtendedNumberImplCopyWithImpl<$Res>;
   @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$$_KodiSettingValueExtendedNumberCopyWithImpl<$Res>
+class __$$KodiSettingValueExtendedNumberImplCopyWithImpl<$Res>
     extends _$KodiSettingValueExtendedCopyWithImpl<$Res,
-        _$_KodiSettingValueExtendedNumber>
-    implements _$$_KodiSettingValueExtendedNumberCopyWith<$Res> {
-  __$$_KodiSettingValueExtendedNumberCopyWithImpl(
-      _$_KodiSettingValueExtendedNumber _value,
-      $Res Function(_$_KodiSettingValueExtendedNumber) _then)
+        _$KodiSettingValueExtendedNumberImpl>
+    implements _$$KodiSettingValueExtendedNumberImplCopyWith<$Res> {
+  __$$KodiSettingValueExtendedNumberImplCopyWithImpl(
+      _$KodiSettingValueExtendedNumberImpl _value,
+      $Res Function(_$KodiSettingValueExtendedNumberImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiSettingValueExtendedNumber(
+    return _then(_$KodiSettingValueExtendedNumberImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -506,14 +533,14 @@ class __$$_KodiSettingValueExtendedNumberCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingValueExtendedNumber
+class _$KodiSettingValueExtendedNumberImpl
     implements _KodiSettingValueExtendedNumber {
-  const _$_KodiSettingValueExtendedNumber(this.value, {final String? $type})
+  const _$KodiSettingValueExtendedNumberImpl(this.value, {final String? $type})
       : $type = $type ?? 'number';
 
-  factory _$_KodiSettingValueExtendedNumber.fromJson(
+  factory _$KodiSettingValueExtendedNumberImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingValueExtendedNumberFromJson(json);
+      _$$KodiSettingValueExtendedNumberImplFromJson(json);
 
   @override
   final double value;
@@ -527,23 +554,26 @@ class _$_KodiSettingValueExtendedNumber
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingValueExtendedNumber &&
+            other is _$KodiSettingValueExtendedNumberImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingValueExtendedNumberCopyWith<_$_KodiSettingValueExtendedNumber>
-      get copyWith => __$$_KodiSettingValueExtendedNumberCopyWithImpl<
-          _$_KodiSettingValueExtendedNumber>(this, _$identity);
+  _$$KodiSettingValueExtendedNumberImplCopyWith<
+          _$KodiSettingValueExtendedNumberImpl>
+      get copyWith => __$$KodiSettingValueExtendedNumberImplCopyWithImpl<
+          _$KodiSettingValueExtendedNumberImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -627,7 +657,7 @@ class _$_KodiSettingValueExtendedNumber
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingValueExtendedNumberToJson(
+    return _$$KodiSettingValueExtendedNumberImplToJson(
       this,
     );
   }
@@ -636,44 +666,50 @@ class _$_KodiSettingValueExtendedNumber
 abstract class _KodiSettingValueExtendedNumber
     implements KodiSettingValueExtended {
   const factory _KodiSettingValueExtendedNumber(final double value) =
-      _$_KodiSettingValueExtendedNumber;
+      _$KodiSettingValueExtendedNumberImpl;
 
   factory _KodiSettingValueExtendedNumber.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingValueExtendedNumber.fromJson;
+      _$KodiSettingValueExtendedNumberImpl.fromJson;
 
   @override
   double get value;
-  @JsonKey(ignore: true)
-  _$$_KodiSettingValueExtendedNumberCopyWith<_$_KodiSettingValueExtendedNumber>
+
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingValueExtendedNumberImplCopyWith<
+          _$KodiSettingValueExtendedNumberImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingValueExtendedStringCopyWith<$Res> {
-  factory _$$_KodiSettingValueExtendedStringCopyWith(
-          _$_KodiSettingValueExtendedString value,
-          $Res Function(_$_KodiSettingValueExtendedString) then) =
-      __$$_KodiSettingValueExtendedStringCopyWithImpl<$Res>;
+abstract class _$$KodiSettingValueExtendedStringImplCopyWith<$Res> {
+  factory _$$KodiSettingValueExtendedStringImplCopyWith(
+          _$KodiSettingValueExtendedStringImpl value,
+          $Res Function(_$KodiSettingValueExtendedStringImpl) then) =
+      __$$KodiSettingValueExtendedStringImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_KodiSettingValueExtendedStringCopyWithImpl<$Res>
+class __$$KodiSettingValueExtendedStringImplCopyWithImpl<$Res>
     extends _$KodiSettingValueExtendedCopyWithImpl<$Res,
-        _$_KodiSettingValueExtendedString>
-    implements _$$_KodiSettingValueExtendedStringCopyWith<$Res> {
-  __$$_KodiSettingValueExtendedStringCopyWithImpl(
-      _$_KodiSettingValueExtendedString _value,
-      $Res Function(_$_KodiSettingValueExtendedString) _then)
+        _$KodiSettingValueExtendedStringImpl>
+    implements _$$KodiSettingValueExtendedStringImplCopyWith<$Res> {
+  __$$KodiSettingValueExtendedStringImplCopyWithImpl(
+      _$KodiSettingValueExtendedStringImpl _value,
+      $Res Function(_$KodiSettingValueExtendedStringImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiSettingValueExtendedString(
+    return _then(_$KodiSettingValueExtendedStringImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -684,14 +720,14 @@ class __$$_KodiSettingValueExtendedStringCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingValueExtendedString
+class _$KodiSettingValueExtendedStringImpl
     implements _KodiSettingValueExtendedString {
-  const _$_KodiSettingValueExtendedString(this.value, {final String? $type})
+  const _$KodiSettingValueExtendedStringImpl(this.value, {final String? $type})
       : $type = $type ?? 'string';
 
-  factory _$_KodiSettingValueExtendedString.fromJson(
+  factory _$KodiSettingValueExtendedStringImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiSettingValueExtendedStringFromJson(json);
+      _$$KodiSettingValueExtendedStringImplFromJson(json);
 
   @override
   final String value;
@@ -705,23 +741,26 @@ class _$_KodiSettingValueExtendedString
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingValueExtendedString &&
+            other is _$KodiSettingValueExtendedStringImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingValueExtendedStringCopyWith<_$_KodiSettingValueExtendedString>
-      get copyWith => __$$_KodiSettingValueExtendedStringCopyWithImpl<
-          _$_KodiSettingValueExtendedString>(this, _$identity);
+  _$$KodiSettingValueExtendedStringImplCopyWith<
+          _$KodiSettingValueExtendedStringImpl>
+      get copyWith => __$$KodiSettingValueExtendedStringImplCopyWithImpl<
+          _$KodiSettingValueExtendedStringImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -805,7 +844,7 @@ class _$_KodiSettingValueExtendedString
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingValueExtendedStringToJson(
+    return _$$KodiSettingValueExtendedStringImplToJson(
       this,
     );
   }
@@ -814,44 +853,50 @@ class _$_KodiSettingValueExtendedString
 abstract class _KodiSettingValueExtendedString
     implements KodiSettingValueExtended {
   const factory _KodiSettingValueExtendedString(final String value) =
-      _$_KodiSettingValueExtendedString;
+      _$KodiSettingValueExtendedStringImpl;
 
   factory _KodiSettingValueExtendedString.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingValueExtendedString.fromJson;
+      _$KodiSettingValueExtendedStringImpl.fromJson;
 
   @override
   String get value;
-  @JsonKey(ignore: true)
-  _$$_KodiSettingValueExtendedStringCopyWith<_$_KodiSettingValueExtendedString>
+
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingValueExtendedStringImplCopyWith<
+          _$KodiSettingValueExtendedStringImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingValueExtendedListCopyWith<$Res> {
-  factory _$$_KodiSettingValueExtendedListCopyWith(
-          _$_KodiSettingValueExtendedList value,
-          $Res Function(_$_KodiSettingValueExtendedList) then) =
-      __$$_KodiSettingValueExtendedListCopyWithImpl<$Res>;
+abstract class _$$KodiSettingValueExtendedListImplCopyWith<$Res> {
+  factory _$$KodiSettingValueExtendedListImplCopyWith(
+          _$KodiSettingValueExtendedListImpl value,
+          $Res Function(_$KodiSettingValueExtendedListImpl) then) =
+      __$$KodiSettingValueExtendedListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<KodiSettingValue> value});
 }
 
 /// @nodoc
-class __$$_KodiSettingValueExtendedListCopyWithImpl<$Res>
+class __$$KodiSettingValueExtendedListImplCopyWithImpl<$Res>
     extends _$KodiSettingValueExtendedCopyWithImpl<$Res,
-        _$_KodiSettingValueExtendedList>
-    implements _$$_KodiSettingValueExtendedListCopyWith<$Res> {
-  __$$_KodiSettingValueExtendedListCopyWithImpl(
-      _$_KodiSettingValueExtendedList _value,
-      $Res Function(_$_KodiSettingValueExtendedList) _then)
+        _$KodiSettingValueExtendedListImpl>
+    implements _$$KodiSettingValueExtendedListImplCopyWith<$Res> {
+  __$$KodiSettingValueExtendedListImplCopyWithImpl(
+      _$KodiSettingValueExtendedListImpl _value,
+      $Res Function(_$KodiSettingValueExtendedListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiSettingValueExtendedList(
+    return _then(_$KodiSettingValueExtendedListImpl(
       null == value
           ? _value._value
           : value // ignore: cast_nullable_to_non_nullable
@@ -862,14 +907,16 @@ class __$$_KodiSettingValueExtendedListCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingValueExtendedList implements _KodiSettingValueExtendedList {
-  const _$_KodiSettingValueExtendedList(final List<KodiSettingValue> value,
+class _$KodiSettingValueExtendedListImpl
+    implements _KodiSettingValueExtendedList {
+  const _$KodiSettingValueExtendedListImpl(final List<KodiSettingValue> value,
       {final String? $type})
       : _value = value,
         $type = $type ?? 'list';
 
-  factory _$_KodiSettingValueExtendedList.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiSettingValueExtendedListFromJson(json);
+  factory _$KodiSettingValueExtendedListImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiSettingValueExtendedListImplFromJson(json);
 
   final List<KodiSettingValue> _value;
   @override
@@ -888,24 +935,27 @@ class _$_KodiSettingValueExtendedList implements _KodiSettingValueExtendedList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingValueExtendedList &&
+            other is _$KodiSettingValueExtendedListImpl &&
             const DeepCollectionEquality().equals(other._value, _value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingValueExtendedListCopyWith<_$_KodiSettingValueExtendedList>
-      get copyWith => __$$_KodiSettingValueExtendedListCopyWithImpl<
-          _$_KodiSettingValueExtendedList>(this, _$identity);
+  _$$KodiSettingValueExtendedListImplCopyWith<
+          _$KodiSettingValueExtendedListImpl>
+      get copyWith => __$$KodiSettingValueExtendedListImplCopyWithImpl<
+          _$KodiSettingValueExtendedListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -989,7 +1039,7 @@ class _$_KodiSettingValueExtendedList implements _KodiSettingValueExtendedList {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingValueExtendedListToJson(
+    return _$$KodiSettingValueExtendedListImplToJson(
       this,
     );
   }
@@ -998,14 +1048,18 @@ class _$_KodiSettingValueExtendedList implements _KodiSettingValueExtendedList {
 abstract class _KodiSettingValueExtendedList
     implements KodiSettingValueExtended {
   const factory _KodiSettingValueExtendedList(
-      final List<KodiSettingValue> value) = _$_KodiSettingValueExtendedList;
+      final List<KodiSettingValue> value) = _$KodiSettingValueExtendedListImpl;
 
   factory _KodiSettingValueExtendedList.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingValueExtendedList.fromJson;
+      _$KodiSettingValueExtendedListImpl.fromJson;
 
   @override
   List<KodiSettingValue> get value;
-  @JsonKey(ignore: true)
-  _$$_KodiSettingValueExtendedListCopyWith<_$_KodiSettingValueExtendedList>
+
+  /// Create a copy of KodiSettingValueExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingValueExtendedListImplCopyWith<
+          _$KodiSettingValueExtendedListImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

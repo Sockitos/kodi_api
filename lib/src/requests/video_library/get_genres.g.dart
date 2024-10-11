@@ -6,7 +6,8 @@ part of 'get_genres.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetGenres _$$_GetGenresFromJson(Map<String, dynamic> json) => _$_GetGenres(
+_$GetGenresImpl _$$GetGenresImplFromJson(Map<String, dynamic> json) =>
+    _$GetGenresImpl(
       $enumDecode(_$KodiVideoLibraryGetGenresTypeEnumMap, json['type']),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiLibraryFieldsGenreEnumMap, e))
@@ -19,7 +20,7 @@ _$_GetGenres _$$_GetGenresFromJson(Map<String, dynamic> json) => _$_GetGenres(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetGenresToJson(_$_GetGenres instance) {
+Map<String, dynamic> _$$GetGenresImplToJson(_$GetGenresImpl instance) {
   final val = <String, dynamic>{
     'type': _$KodiVideoLibraryGetGenresTypeEnumMap[instance.type]!,
   };
@@ -52,8 +53,9 @@ const _$KodiLibraryFieldsGenreEnumMap = {
   KodiLibraryFieldsGenre.sourceId: 'sourceid',
 };
 
-_$_GetGenresResponse _$$_GetGenresResponseFromJson(Map<String, dynamic> json) =>
-    _$_GetGenresResponse(
+_$GetGenresResponseImpl _$$GetGenresResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetGenresResponseImpl(
       genres: (json['genres'] as List<dynamic>)
           .map((e) =>
               KodiLibraryDetailsGenre.fromJson(e as Map<String, dynamic>))
@@ -62,8 +64,8 @@ _$_GetGenresResponse _$$_GetGenresResponseFromJson(Map<String, dynamic> json) =>
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetGenresResponseToJson(
-        _$_GetGenresResponse instance) =>
+Map<String, dynamic> _$$GetGenresResponseImplToJson(
+        _$GetGenresResponseImpl instance) =>
     <String, dynamic>{
       'genres': instance.genres.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

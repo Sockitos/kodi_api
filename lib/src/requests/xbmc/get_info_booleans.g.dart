@@ -6,12 +6,14 @@ part of 'get_info_booleans.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetInfoBooleans _$$_GetInfoBooleansFromJson(Map<String, dynamic> json) =>
-    _$_GetInfoBooleans(
+_$GetInfoBooleansImpl _$$GetInfoBooleansImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetInfoBooleansImpl(
       (json['booleans'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_GetInfoBooleansToJson(_$_GetInfoBooleans instance) =>
+Map<String, dynamic> _$$GetInfoBooleansImplToJson(
+        _$GetInfoBooleansImpl instance) =>
     <String, dynamic>{
       'booleans': instance.booleans,
     };

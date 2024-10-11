@@ -6,17 +6,17 @@ part of 'kodi_profiles_password.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiProfilesPassword _$$_KodiProfilesPasswordFromJson(
+_$KodiProfilesPasswordImpl _$$KodiProfilesPasswordImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiProfilesPassword(
+    _$KodiProfilesPasswordImpl(
       encryption: $enumDecodeNullable(
               _$KodiProfilesPasswordEncryptionEnumMap, json['encryption']) ??
-          KodiProfilesPasswordEncryption.md5,
+          KodiProfilesPasswordEncryption.none,
       value: json['value'] as String,
     );
 
-Map<String, dynamic> _$$_KodiProfilesPasswordToJson(
-        _$_KodiProfilesPassword instance) =>
+Map<String, dynamic> _$$KodiProfilesPasswordImplToJson(
+        _$KodiProfilesPasswordImpl instance) =>
     <String, dynamic>{
       'encryption':
           _$KodiProfilesPasswordEncryptionEnumMap[instance.encryption]!,
@@ -25,5 +25,4 @@ Map<String, dynamic> _$$_KodiProfilesPasswordToJson(
 
 const _$KodiProfilesPasswordEncryptionEnumMap = {
   KodiProfilesPasswordEncryption.none: 'none',
-  KodiProfilesPasswordEncryption.md5: 'md5',
 };

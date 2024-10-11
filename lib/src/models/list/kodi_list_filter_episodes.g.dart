@@ -6,9 +6,9 @@ part of 'kodi_list_filter_episodes.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterEpisodesAnd _$$_KodiListFilterEpisodesAndFromJson(
+_$KodiListFilterEpisodesAndImpl _$$KodiListFilterEpisodesAndImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterEpisodesAnd(
+    _$KodiListFilterEpisodesAndImpl(
       (json['and'] as List<dynamic>)
           .map(
               (e) => KodiListFilterEpisodes.fromJson(e as Map<String, dynamic>))
@@ -16,16 +16,16 @@ _$_KodiListFilterEpisodesAnd _$$_KodiListFilterEpisodesAndFromJson(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterEpisodesAndToJson(
-        _$_KodiListFilterEpisodesAnd instance) =>
+Map<String, dynamic> _$$KodiListFilterEpisodesAndImplToJson(
+        _$KodiListFilterEpisodesAndImpl instance) =>
     <String, dynamic>{
       'and': instance.and.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterEpisodesOr _$$_KodiListFilterEpisodesOrFromJson(
+_$KodiListFilterEpisodesOrImpl _$$KodiListFilterEpisodesOrImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterEpisodesOr(
+    _$KodiListFilterEpisodesOrImpl(
       (json['or'] as List<dynamic>)
           .map(
               (e) => KodiListFilterEpisodes.fromJson(e as Map<String, dynamic>))
@@ -33,23 +33,23 @@ _$_KodiListFilterEpisodesOr _$$_KodiListFilterEpisodesOrFromJson(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterEpisodesOrToJson(
-        _$_KodiListFilterEpisodesOr instance) =>
+Map<String, dynamic> _$$KodiListFilterEpisodesOrImplToJson(
+        _$KodiListFilterEpisodesOrImpl instance) =>
     <String, dynamic>{
       'or': instance.or.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterEpisodesValue _$$_KodiListFilterEpisodesValueFromJson(
+_$KodiListFilterEpisodesValueImpl _$$KodiListFilterEpisodesValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterEpisodesValue(
+    _$KodiListFilterEpisodesValueImpl(
       KodiListFilterRuleEpisodes.fromJson(
           json['value'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterEpisodesValueToJson(
-        _$_KodiListFilterEpisodesValue instance) =>
+Map<String, dynamic> _$$KodiListFilterEpisodesValueImplToJson(
+        _$KodiListFilterEpisodesValueImpl instance) =>
     <String, dynamic>{
       'value': instance.value.toJson(),
       'runtimeType': instance.$type,

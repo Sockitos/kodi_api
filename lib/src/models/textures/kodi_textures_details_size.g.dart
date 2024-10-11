@@ -6,19 +6,21 @@ part of 'kodi_textures_details_size.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiTexturesDetailsSize _$$_KodiTexturesDetailsSizeFromJson(
+_$KodiTexturesDetailsSizeImpl _$$KodiTexturesDetailsSizeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiTexturesDetailsSize(
-      height: json['height'] as int?,
+    _$KodiTexturesDetailsSizeImpl(
+      height: (json['height'] as num?)?.toInt() ?? 0,
       lastUsed: const DateTimeConverter().fromJson(json['lastused']),
-      size: json['size'] as int?,
-      useCount: json['usecount'] as int?,
-      width: json['width'] as int?,
+      size: (json['size'] as num?)?.toInt() ?? 0,
+      useCount: (json['usecount'] as num?)?.toInt() ?? 0,
+      width: (json['width'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$_KodiTexturesDetailsSizeToJson(
-    _$_KodiTexturesDetailsSize instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$KodiTexturesDetailsSizeImplToJson(
+    _$KodiTexturesDetailsSizeImpl instance) {
+  final val = <String, dynamic>{
+    'height': instance.height,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -26,10 +28,9 @@ Map<String, dynamic> _$$_KodiTexturesDetailsSizeToJson(
     }
   }
 
-  writeNotNull('height', instance.height);
   writeNotNull('lastused', const DateTimeConverter().toJson(instance.lastUsed));
-  writeNotNull('size', instance.size);
-  writeNotNull('usecount', instance.useCount);
-  writeNotNull('width', instance.width);
+  val['size'] = instance.size;
+  val['usecount'] = instance.useCount;
+  val['width'] = instance.width;
   return val;
 }

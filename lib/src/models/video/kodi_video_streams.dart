@@ -6,9 +6,9 @@ part 'kodi_video_streams.g.dart';
 @freezed
 class KodiVideoStreams with _$KodiVideoStreams {
   const factory KodiVideoStreams({
-    List<KodiVideoStreamsAudio>? audio,
-    List<KodiVideoStreamsSubtitle>? subtitle,
-    List<KodiVideoStreamsVideo>? video,
+    required List<KodiVideoStreamsAudio> audio,
+    required List<KodiVideoStreamsSubtitle> subtitle,
+    required List<KodiVideoStreamsVideo> video,
   }) = _KodiVideoStreams;
 
   factory KodiVideoStreams.fromJson(Map<String, dynamic> json) =>
@@ -18,9 +18,9 @@ class KodiVideoStreams with _$KodiVideoStreams {
 @freezed
 class KodiVideoStreamsAudio with _$KodiVideoStreamsAudio {
   const factory KodiVideoStreamsAudio({
-    int? channels,
-    String? codec,
-    String? language,
+    @Default(0) int channels,
+    @Default('') String codec,
+    @Default('') String language,
   }) = _KodiVideoStreamsAudio;
 
   factory KodiVideoStreamsAudio.fromJson(Map<String, dynamic> json) =>
@@ -30,7 +30,7 @@ class KodiVideoStreamsAudio with _$KodiVideoStreamsAudio {
 @freezed
 class KodiVideoStreamsSubtitle with _$KodiVideoStreamsSubtitle {
   const factory KodiVideoStreamsSubtitle({
-    String? language,
+    @Default('') String language,
   }) = _KodiVideoStreamsSubtitle;
 
   factory KodiVideoStreamsSubtitle.fromJson(Map<String, dynamic> json) =>
@@ -40,11 +40,11 @@ class KodiVideoStreamsSubtitle with _$KodiVideoStreamsSubtitle {
 @freezed
 class KodiVideoStreamsVideo with _$KodiVideoStreamsVideo {
   const factory KodiVideoStreamsVideo({
-    double? aspect,
-    String? codec,
-    int? duration,
-    int? height,
-    int? width,
+    @Default(0.0) double aspect,
+    @Default('') String codec,
+    @Default(0) int duration,
+    @Default(0) int height,
+    @Default(0) int width,
   }) = _KodiVideoStreamsVideo;
 
   factory KodiVideoStreamsVideo.fromJson(Map<String, dynamic> json) =>

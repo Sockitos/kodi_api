@@ -12,7 +12,7 @@ part of 'get_song_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSongDetails _$GetSongDetailsFromJson(Map<String, dynamic> json) {
   return _GetSongDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetSongDetails {
   Set<KodiAudioFieldsSong>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetSongDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSongDetailsCopyWith<GetSongDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$GetSongDetailsCopyWithImpl<$Res, $Val extends GetSongDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,11 +77,11 @@ class _$GetSongDetailsCopyWithImpl<$Res, $Val extends GetSongDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetSongDetailsCopyWith<$Res>
+abstract class _$$GetSongDetailsImplCopyWith<$Res>
     implements $GetSongDetailsCopyWith<$Res> {
-  factory _$$_GetSongDetailsCopyWith(
-          _$_GetSongDetails value, $Res Function(_$_GetSongDetails) then) =
-      __$$_GetSongDetailsCopyWithImpl<$Res>;
+  factory _$$GetSongDetailsImplCopyWith(_$GetSongDetailsImpl value,
+          $Res Function(_$GetSongDetailsImpl) then) =
+      __$$GetSongDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -83,20 +89,22 @@ abstract class _$$_GetSongDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSongDetailsCopyWithImpl<$Res>
-    extends _$GetSongDetailsCopyWithImpl<$Res, _$_GetSongDetails>
-    implements _$$_GetSongDetailsCopyWith<$Res> {
-  __$$_GetSongDetailsCopyWithImpl(
-      _$_GetSongDetails _value, $Res Function(_$_GetSongDetails) _then)
+class __$$GetSongDetailsImplCopyWithImpl<$Res>
+    extends _$GetSongDetailsCopyWithImpl<$Res, _$GetSongDetailsImpl>
+    implements _$$GetSongDetailsImplCopyWith<$Res> {
+  __$$GetSongDetailsImplCopyWithImpl(
+      _$GetSongDetailsImpl _value, $Res Function(_$GetSongDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetSongDetails(
+    return _then(_$GetSongDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -111,14 +119,14 @@ class __$$_GetSongDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSongDetails extends _GetSongDetails {
-  const _$_GetSongDetails(@JsonKey(name: 'songid') this.id,
+class _$GetSongDetailsImpl extends _GetSongDetails {
+  const _$GetSongDetailsImpl(@JsonKey(name: 'songid') this.id,
       {final Set<KodiAudioFieldsSong>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetSongDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSongDetailsFromJson(json);
+  factory _$GetSongDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSongDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'songid')
@@ -139,29 +147,32 @@ class _$_GetSongDetails extends _GetSongDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSongDetails &&
+            other is _$GetSongDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSongDetailsCopyWith<_$_GetSongDetails> get copyWith =>
-      __$$_GetSongDetailsCopyWithImpl<_$_GetSongDetails>(this, _$identity);
+  _$$GetSongDetailsImplCopyWith<_$GetSongDetailsImpl> get copyWith =>
+      __$$GetSongDetailsImplCopyWithImpl<_$GetSongDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSongDetailsToJson(
+    return _$$GetSongDetailsImplToJson(
       this,
     );
   }
@@ -169,19 +180,22 @@ class _$_GetSongDetails extends _GetSongDetails {
 
 abstract class _GetSongDetails extends GetSongDetails {
   const factory _GetSongDetails(@JsonKey(name: 'songid') final int id,
-      {final Set<KodiAudioFieldsSong>? properties}) = _$_GetSongDetails;
+      {final Set<KodiAudioFieldsSong>? properties}) = _$GetSongDetailsImpl;
   const _GetSongDetails._() : super._();
 
   factory _GetSongDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetSongDetails.fromJson;
+      _$GetSongDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'songid')
   int get id;
   @override
   Set<KodiAudioFieldsSong>? get properties;
+
+  /// Create a copy of GetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSongDetailsCopyWith<_$_GetSongDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSongDetailsImplCopyWith<_$GetSongDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

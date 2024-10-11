@@ -12,7 +12,7 @@ part of 'kodi_list_filter_rule_textures.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListFilterRuleTextures _$KodiListFilterRuleTexturesFromJson(
     Map<String, dynamic> json) {
@@ -27,8 +27,12 @@ mixin _$KodiListFilterRuleTextures {
   KodiListFilterRuleTexturesValue get value =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListFilterRuleTextures to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListFilterRuleTextures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListFilterRuleTexturesCopyWith<KodiListFilterRuleTextures>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$KodiListFilterRuleTexturesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListFilterRuleTextures
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -83,6 +89,8 @@ class _$KodiListFilterRuleTexturesCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiListFilterRuleTextures
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterRuleTexturesValueCopyWith<$Res> get value {
@@ -94,12 +102,12 @@ class _$KodiListFilterRuleTexturesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleTexturesCopyWith<$Res>
+abstract class _$$KodiListFilterRuleTexturesImplCopyWith<$Res>
     implements $KodiListFilterRuleTexturesCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleTexturesCopyWith(
-          _$_KodiListFilterRuleTextures value,
-          $Res Function(_$_KodiListFilterRuleTextures) then) =
-      __$$_KodiListFilterRuleTexturesCopyWithImpl<$Res>;
+  factory _$$KodiListFilterRuleTexturesImplCopyWith(
+          _$KodiListFilterRuleTexturesImpl value,
+          $Res Function(_$KodiListFilterRuleTexturesImpl) then) =
+      __$$KodiListFilterRuleTexturesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -113,15 +121,17 @@ abstract class _$$_KodiListFilterRuleTexturesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleTexturesCopyWithImpl<$Res>
+class __$$KodiListFilterRuleTexturesImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleTexturesCopyWithImpl<$Res,
-        _$_KodiListFilterRuleTextures>
-    implements _$$_KodiListFilterRuleTexturesCopyWith<$Res> {
-  __$$_KodiListFilterRuleTexturesCopyWithImpl(
-      _$_KodiListFilterRuleTextures _value,
-      $Res Function(_$_KodiListFilterRuleTextures) _then)
+        _$KodiListFilterRuleTexturesImpl>
+    implements _$$KodiListFilterRuleTexturesImplCopyWith<$Res> {
+  __$$KodiListFilterRuleTexturesImplCopyWithImpl(
+      _$KodiListFilterRuleTexturesImpl _value,
+      $Res Function(_$KodiListFilterRuleTexturesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleTextures
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,7 +139,7 @@ class __$$_KodiListFilterRuleTexturesCopyWithImpl<$Res>
     Object? operator = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleTextures(
+    return _then(_$KodiListFilterRuleTexturesImpl(
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -148,14 +158,15 @@ class __$$_KodiListFilterRuleTexturesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleTextures implements _KodiListFilterRuleTextures {
-  const _$_KodiListFilterRuleTextures(
+class _$KodiListFilterRuleTexturesImpl implements _KodiListFilterRuleTextures {
+  const _$KodiListFilterRuleTexturesImpl(
       {required this.field,
       required this.operator,
       @KodiListFilterRuleTexturesValueConverter() required this.value});
 
-  factory _$_KodiListFilterRuleTextures.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleTexturesFromJson(json);
+  factory _$KodiListFilterRuleTexturesImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiListFilterRuleTexturesImplFromJson(json);
 
   @override
   final KodiListFilterFieldsTextures field;
@@ -171,30 +182,32 @@ class _$_KodiListFilterRuleTextures implements _KodiListFilterRuleTextures {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleTextures &&
+            other is _$KodiListFilterRuleTexturesImpl &&
             (identical(other.field, field) || other.field == field) &&
             (identical(other.operator, operator) ||
                 other.operator == operator) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, field, operator, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleTextures
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleTexturesCopyWith<_$_KodiListFilterRuleTextures>
-      get copyWith => __$$_KodiListFilterRuleTexturesCopyWithImpl<
-          _$_KodiListFilterRuleTextures>(this, _$identity);
+  _$$KodiListFilterRuleTexturesImplCopyWith<_$KodiListFilterRuleTexturesImpl>
+      get copyWith => __$$KodiListFilterRuleTexturesImplCopyWithImpl<
+          _$KodiListFilterRuleTexturesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleTexturesToJson(
+    return _$$KodiListFilterRuleTexturesImplToJson(
       this,
     );
   }
@@ -207,10 +220,10 @@ abstract class _KodiListFilterRuleTextures
           required final KodiListFilterOperators operator,
           @KodiListFilterRuleTexturesValueConverter()
           required final KodiListFilterRuleTexturesValue value}) =
-      _$_KodiListFilterRuleTextures;
+      _$KodiListFilterRuleTexturesImpl;
 
   factory _KodiListFilterRuleTextures.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterRuleTextures.fromJson;
+      _$KodiListFilterRuleTexturesImpl.fromJson;
 
   @override
   KodiListFilterFieldsTextures get field;
@@ -219,9 +232,12 @@ abstract class _KodiListFilterRuleTextures
   @override
   @KodiListFilterRuleTexturesValueConverter()
   KodiListFilterRuleTexturesValue get value;
+
+  /// Create a copy of KodiListFilterRuleTextures
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleTexturesCopyWith<_$_KodiListFilterRuleTextures>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleTexturesImplCopyWith<_$KodiListFilterRuleTexturesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -285,6 +301,8 @@ mixin _$KodiListFilterRuleTexturesValue {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiListFilterRuleTexturesValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -307,34 +325,39 @@ class _$KodiListFilterRuleTexturesValueCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiListFilterRuleTexturesValue
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleTexturesValueSingleCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleTexturesValueSingleCopyWith(
-          _$_KodiListFilterRuleTexturesValueSingle value,
-          $Res Function(_$_KodiListFilterRuleTexturesValueSingle) then) =
-      __$$_KodiListFilterRuleTexturesValueSingleCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterRuleTexturesValueSingleImplCopyWith<$Res> {
+  factory _$$KodiListFilterRuleTexturesValueSingleImplCopyWith(
+          _$KodiListFilterRuleTexturesValueSingleImpl value,
+          $Res Function(_$KodiListFilterRuleTexturesValueSingleImpl) then) =
+      __$$KodiListFilterRuleTexturesValueSingleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleTexturesValueSingleCopyWithImpl<$Res>
+class __$$KodiListFilterRuleTexturesValueSingleImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleTexturesValueCopyWithImpl<$Res,
-        _$_KodiListFilterRuleTexturesValueSingle>
-    implements _$$_KodiListFilterRuleTexturesValueSingleCopyWith<$Res> {
-  __$$_KodiListFilterRuleTexturesValueSingleCopyWithImpl(
-      _$_KodiListFilterRuleTexturesValueSingle _value,
-      $Res Function(_$_KodiListFilterRuleTexturesValueSingle) _then)
+        _$KodiListFilterRuleTexturesValueSingleImpl>
+    implements _$$KodiListFilterRuleTexturesValueSingleImplCopyWith<$Res> {
+  __$$KodiListFilterRuleTexturesValueSingleImplCopyWithImpl(
+      _$KodiListFilterRuleTexturesValueSingleImpl _value,
+      $Res Function(_$KodiListFilterRuleTexturesValueSingleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleTexturesValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleTexturesValueSingle(
+    return _then(_$KodiListFilterRuleTexturesValueSingleImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -345,15 +368,15 @@ class __$$_KodiListFilterRuleTexturesValueSingleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleTexturesValueSingle
+class _$KodiListFilterRuleTexturesValueSingleImpl
     implements _KodiListFilterRuleTexturesValueSingle {
-  const _$_KodiListFilterRuleTexturesValueSingle(this.value,
+  const _$KodiListFilterRuleTexturesValueSingleImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'single';
 
-  factory _$_KodiListFilterRuleTexturesValueSingle.fromJson(
+  factory _$KodiListFilterRuleTexturesValueSingleImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleTexturesValueSingleFromJson(json);
+      _$$KodiListFilterRuleTexturesValueSingleImplFromJson(json);
 
   @override
   final String value;
@@ -367,24 +390,26 @@ class _$_KodiListFilterRuleTexturesValueSingle
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleTexturesValueSingle &&
+            other is _$KodiListFilterRuleTexturesValueSingleImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleTexturesValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleTexturesValueSingleCopyWith<
-          _$_KodiListFilterRuleTexturesValueSingle>
-      get copyWith => __$$_KodiListFilterRuleTexturesValueSingleCopyWithImpl<
-          _$_KodiListFilterRuleTexturesValueSingle>(this, _$identity);
+  _$$KodiListFilterRuleTexturesValueSingleImplCopyWith<
+          _$KodiListFilterRuleTexturesValueSingleImpl>
+      get copyWith => __$$KodiListFilterRuleTexturesValueSingleImplCopyWithImpl<
+          _$KodiListFilterRuleTexturesValueSingleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -452,7 +477,7 @@ class _$_KodiListFilterRuleTexturesValueSingle
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleTexturesValueSingleToJson(
+    return _$$KodiListFilterRuleTexturesValueSingleImplToJson(
       this,
     );
   }
@@ -461,46 +486,51 @@ class _$_KodiListFilterRuleTexturesValueSingle
 abstract class _KodiListFilterRuleTexturesValueSingle
     implements KodiListFilterRuleTexturesValue {
   const factory _KodiListFilterRuleTexturesValueSingle(final String value) =
-      _$_KodiListFilterRuleTexturesValueSingle;
+      _$KodiListFilterRuleTexturesValueSingleImpl;
 
   factory _KodiListFilterRuleTexturesValueSingle.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiListFilterRuleTexturesValueSingle.fromJson;
+      _$KodiListFilterRuleTexturesValueSingleImpl.fromJson;
 
   @override
   String get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleTexturesValueSingleCopyWith<
-          _$_KodiListFilterRuleTexturesValueSingle>
+
+  /// Create a copy of KodiListFilterRuleTexturesValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleTexturesValueSingleImplCopyWith<
+          _$KodiListFilterRuleTexturesValueSingleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleTexturesValueGroupCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleTexturesValueGroupCopyWith(
-          _$_KodiListFilterRuleTexturesValueGroup value,
-          $Res Function(_$_KodiListFilterRuleTexturesValueGroup) then) =
-      __$$_KodiListFilterRuleTexturesValueGroupCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterRuleTexturesValueGroupImplCopyWith<$Res> {
+  factory _$$KodiListFilterRuleTexturesValueGroupImplCopyWith(
+          _$KodiListFilterRuleTexturesValueGroupImpl value,
+          $Res Function(_$KodiListFilterRuleTexturesValueGroupImpl) then) =
+      __$$KodiListFilterRuleTexturesValueGroupImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<String> value});
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleTexturesValueGroupCopyWithImpl<$Res>
+class __$$KodiListFilterRuleTexturesValueGroupImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleTexturesValueCopyWithImpl<$Res,
-        _$_KodiListFilterRuleTexturesValueGroup>
-    implements _$$_KodiListFilterRuleTexturesValueGroupCopyWith<$Res> {
-  __$$_KodiListFilterRuleTexturesValueGroupCopyWithImpl(
-      _$_KodiListFilterRuleTexturesValueGroup _value,
-      $Res Function(_$_KodiListFilterRuleTexturesValueGroup) _then)
+        _$KodiListFilterRuleTexturesValueGroupImpl>
+    implements _$$KodiListFilterRuleTexturesValueGroupImplCopyWith<$Res> {
+  __$$KodiListFilterRuleTexturesValueGroupImplCopyWithImpl(
+      _$KodiListFilterRuleTexturesValueGroupImpl _value,
+      $Res Function(_$KodiListFilterRuleTexturesValueGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleTexturesValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleTexturesValueGroup(
+    return _then(_$KodiListFilterRuleTexturesValueGroupImpl(
       null == value
           ? _value._value
           : value // ignore: cast_nullable_to_non_nullable
@@ -511,16 +541,16 @@ class __$$_KodiListFilterRuleTexturesValueGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleTexturesValueGroup
+class _$KodiListFilterRuleTexturesValueGroupImpl
     implements _KodiListFilterRuleTexturesValueGroup {
-  const _$_KodiListFilterRuleTexturesValueGroup(final List<String> value,
+  const _$KodiListFilterRuleTexturesValueGroupImpl(final List<String> value,
       {final String? $type})
       : _value = value,
         $type = $type ?? 'group';
 
-  factory _$_KodiListFilterRuleTexturesValueGroup.fromJson(
+  factory _$KodiListFilterRuleTexturesValueGroupImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleTexturesValueGroupFromJson(json);
+      _$$KodiListFilterRuleTexturesValueGroupImplFromJson(json);
 
   final List<String> _value;
   @override
@@ -539,25 +569,27 @@ class _$_KodiListFilterRuleTexturesValueGroup
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleTexturesValueGroup &&
+            other is _$KodiListFilterRuleTexturesValueGroupImpl &&
             const DeepCollectionEquality().equals(other._value, _value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleTexturesValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleTexturesValueGroupCopyWith<
-          _$_KodiListFilterRuleTexturesValueGroup>
-      get copyWith => __$$_KodiListFilterRuleTexturesValueGroupCopyWithImpl<
-          _$_KodiListFilterRuleTexturesValueGroup>(this, _$identity);
+  _$$KodiListFilterRuleTexturesValueGroupImplCopyWith<
+          _$KodiListFilterRuleTexturesValueGroupImpl>
+      get copyWith => __$$KodiListFilterRuleTexturesValueGroupImplCopyWithImpl<
+          _$KodiListFilterRuleTexturesValueGroupImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -625,7 +657,7 @@ class _$_KodiListFilterRuleTexturesValueGroup
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleTexturesValueGroupToJson(
+    return _$$KodiListFilterRuleTexturesValueGroupImplToJson(
       this,
     );
   }
@@ -634,16 +666,19 @@ class _$_KodiListFilterRuleTexturesValueGroup
 abstract class _KodiListFilterRuleTexturesValueGroup
     implements KodiListFilterRuleTexturesValue {
   const factory _KodiListFilterRuleTexturesValueGroup(
-      final List<String> value) = _$_KodiListFilterRuleTexturesValueGroup;
+      final List<String> value) = _$KodiListFilterRuleTexturesValueGroupImpl;
 
   factory _KodiListFilterRuleTexturesValueGroup.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiListFilterRuleTexturesValueGroup.fromJson;
+      _$KodiListFilterRuleTexturesValueGroupImpl.fromJson;
 
   @override
   List<String> get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleTexturesValueGroupCopyWith<
-          _$_KodiListFilterRuleTexturesValueGroup>
+
+  /// Create a copy of KodiListFilterRuleTexturesValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleTexturesValueGroupImplCopyWith<
+          _$KodiListFilterRuleTexturesValueGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

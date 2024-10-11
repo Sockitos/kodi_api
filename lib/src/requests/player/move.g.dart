@@ -6,12 +6,13 @@ part of 'move.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Move _$$_MoveFromJson(Map<String, dynamic> json) => _$_Move(
-      json['playerid'] as int,
+_$MoveImpl _$$MoveImplFromJson(Map<String, dynamic> json) => _$MoveImpl(
+      (json['playerid'] as num).toInt(),
       $enumDecode(_$KodiPlayerDirectionEnumMap, json['direction']),
     );
 
-Map<String, dynamic> _$$_MoveToJson(_$_Move instance) => <String, dynamic>{
+Map<String, dynamic> _$$MoveImplToJson(_$MoveImpl instance) =>
+    <String, dynamic>{
       'playerid': instance.id,
       'direction': _$KodiPlayerDirectionEnumMap[instance.direction]!,
     };

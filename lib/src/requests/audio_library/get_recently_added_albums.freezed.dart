@@ -12,7 +12,7 @@ part of 'get_recently_added_albums.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetRecentlyAddedAlbums _$GetRecentlyAddedAlbumsFromJson(
     Map<String, dynamic> json) {
@@ -26,8 +26,12 @@ mixin _$GetRecentlyAddedAlbums {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecentlyAddedAlbums to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecentlyAddedAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecentlyAddedAlbumsCopyWith<GetRecentlyAddedAlbums> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$GetRecentlyAddedAlbumsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecentlyAddedAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class _$GetRecentlyAddedAlbumsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetRecentlyAddedAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -93,6 +101,8 @@ class _$GetRecentlyAddedAlbumsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of GetRecentlyAddedAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -107,11 +117,12 @@ class _$GetRecentlyAddedAlbumsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRecentlyAddedAlbumsCopyWith<$Res>
+abstract class _$$GetRecentlyAddedAlbumsImplCopyWith<$Res>
     implements $GetRecentlyAddedAlbumsCopyWith<$Res> {
-  factory _$$_GetRecentlyAddedAlbumsCopyWith(_$_GetRecentlyAddedAlbums value,
-          $Res Function(_$_GetRecentlyAddedAlbums) then) =
-      __$$_GetRecentlyAddedAlbumsCopyWithImpl<$Res>;
+  factory _$$GetRecentlyAddedAlbumsImplCopyWith(
+          _$GetRecentlyAddedAlbumsImpl value,
+          $Res Function(_$GetRecentlyAddedAlbumsImpl) then) =
+      __$$GetRecentlyAddedAlbumsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -126,14 +137,17 @@ abstract class _$$_GetRecentlyAddedAlbumsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecentlyAddedAlbumsCopyWithImpl<$Res>
+class __$$GetRecentlyAddedAlbumsImplCopyWithImpl<$Res>
     extends _$GetRecentlyAddedAlbumsCopyWithImpl<$Res,
-        _$_GetRecentlyAddedAlbums>
-    implements _$$_GetRecentlyAddedAlbumsCopyWith<$Res> {
-  __$$_GetRecentlyAddedAlbumsCopyWithImpl(_$_GetRecentlyAddedAlbums _value,
-      $Res Function(_$_GetRecentlyAddedAlbums) _then)
+        _$GetRecentlyAddedAlbumsImpl>
+    implements _$$GetRecentlyAddedAlbumsImplCopyWith<$Res> {
+  __$$GetRecentlyAddedAlbumsImplCopyWithImpl(
+      _$GetRecentlyAddedAlbumsImpl _value,
+      $Res Function(_$GetRecentlyAddedAlbumsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecentlyAddedAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,7 +155,7 @@ class __$$_GetRecentlyAddedAlbumsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetRecentlyAddedAlbums(
+    return _then(_$GetRecentlyAddedAlbumsImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -160,14 +174,14 @@ class __$$_GetRecentlyAddedAlbumsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecentlyAddedAlbums extends _GetRecentlyAddedAlbums {
-  const _$_GetRecentlyAddedAlbums(
+class _$GetRecentlyAddedAlbumsImpl extends _GetRecentlyAddedAlbums {
+  const _$GetRecentlyAddedAlbumsImpl(
       {final Set<KodiAudioFieldsAlbum>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetRecentlyAddedAlbums.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRecentlyAddedAlbumsFromJson(json);
+  factory _$GetRecentlyAddedAlbumsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRecentlyAddedAlbumsImplFromJson(json);
 
   final Set<KodiAudioFieldsAlbum>? _properties;
   @override
@@ -190,31 +204,33 @@ class _$_GetRecentlyAddedAlbums extends _GetRecentlyAddedAlbums {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecentlyAddedAlbums &&
+            other is _$GetRecentlyAddedAlbumsImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecentlyAddedAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecentlyAddedAlbumsCopyWith<_$_GetRecentlyAddedAlbums> get copyWith =>
-      __$$_GetRecentlyAddedAlbumsCopyWithImpl<_$_GetRecentlyAddedAlbums>(
-          this, _$identity);
+  _$$GetRecentlyAddedAlbumsImplCopyWith<_$GetRecentlyAddedAlbumsImpl>
+      get copyWith => __$$GetRecentlyAddedAlbumsImplCopyWithImpl<
+          _$GetRecentlyAddedAlbumsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecentlyAddedAlbumsToJson(
+    return _$$GetRecentlyAddedAlbumsImplToJson(
       this,
     );
   }
@@ -224,11 +240,11 @@ abstract class _GetRecentlyAddedAlbums extends GetRecentlyAddedAlbums {
   const factory _GetRecentlyAddedAlbums(
       {final Set<KodiAudioFieldsAlbum>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetRecentlyAddedAlbums;
+      final KodiListSort? sort}) = _$GetRecentlyAddedAlbumsImpl;
   const _GetRecentlyAddedAlbums._() : super._();
 
   factory _GetRecentlyAddedAlbums.fromJson(Map<String, dynamic> json) =
-      _$_GetRecentlyAddedAlbums.fromJson;
+      _$GetRecentlyAddedAlbumsImpl.fromJson;
 
   @override
   Set<KodiAudioFieldsAlbum>? get properties;
@@ -236,10 +252,13 @@ abstract class _GetRecentlyAddedAlbums extends GetRecentlyAddedAlbums {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetRecentlyAddedAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecentlyAddedAlbumsCopyWith<_$_GetRecentlyAddedAlbums> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecentlyAddedAlbumsImplCopyWith<_$GetRecentlyAddedAlbumsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 GetRecentlyAddedAlbumsResponse _$GetRecentlyAddedAlbumsResponseFromJson(
@@ -252,8 +271,12 @@ mixin _$GetRecentlyAddedAlbumsResponse {
   List<KodiAudioDetailsAlbum> get albums => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecentlyAddedAlbumsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecentlyAddedAlbumsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecentlyAddedAlbumsResponseCopyWith<GetRecentlyAddedAlbumsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -283,6 +306,8 @@ class _$GetRecentlyAddedAlbumsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecentlyAddedAlbumsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -301,6 +326,8 @@ class _$GetRecentlyAddedAlbumsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetRecentlyAddedAlbumsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -311,12 +338,12 @@ class _$GetRecentlyAddedAlbumsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRecentlyAddedAlbumsResponseCopyWith<$Res>
+abstract class _$$GetRecentlyAddedAlbumsResponseImplCopyWith<$Res>
     implements $GetRecentlyAddedAlbumsResponseCopyWith<$Res> {
-  factory _$$_GetRecentlyAddedAlbumsResponseCopyWith(
-          _$_GetRecentlyAddedAlbumsResponse value,
-          $Res Function(_$_GetRecentlyAddedAlbumsResponse) then) =
-      __$$_GetRecentlyAddedAlbumsResponseCopyWithImpl<$Res>;
+  factory _$$GetRecentlyAddedAlbumsResponseImplCopyWith(
+          _$GetRecentlyAddedAlbumsResponseImpl value,
+          $Res Function(_$GetRecentlyAddedAlbumsResponseImpl) then) =
+      __$$GetRecentlyAddedAlbumsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -327,22 +354,24 @@ abstract class _$$_GetRecentlyAddedAlbumsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecentlyAddedAlbumsResponseCopyWithImpl<$Res>
+class __$$GetRecentlyAddedAlbumsResponseImplCopyWithImpl<$Res>
     extends _$GetRecentlyAddedAlbumsResponseCopyWithImpl<$Res,
-        _$_GetRecentlyAddedAlbumsResponse>
-    implements _$$_GetRecentlyAddedAlbumsResponseCopyWith<$Res> {
-  __$$_GetRecentlyAddedAlbumsResponseCopyWithImpl(
-      _$_GetRecentlyAddedAlbumsResponse _value,
-      $Res Function(_$_GetRecentlyAddedAlbumsResponse) _then)
+        _$GetRecentlyAddedAlbumsResponseImpl>
+    implements _$$GetRecentlyAddedAlbumsResponseImplCopyWith<$Res> {
+  __$$GetRecentlyAddedAlbumsResponseImplCopyWithImpl(
+      _$GetRecentlyAddedAlbumsResponseImpl _value,
+      $Res Function(_$GetRecentlyAddedAlbumsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecentlyAddedAlbumsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albums = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetRecentlyAddedAlbumsResponse(
+    return _then(_$GetRecentlyAddedAlbumsResponseImpl(
       albums: null == albums
           ? _value._albums
           : albums // ignore: cast_nullable_to_non_nullable
@@ -357,15 +386,15 @@ class __$$_GetRecentlyAddedAlbumsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecentlyAddedAlbumsResponse
+class _$GetRecentlyAddedAlbumsResponseImpl
     implements _GetRecentlyAddedAlbumsResponse {
-  const _$_GetRecentlyAddedAlbumsResponse(
+  const _$GetRecentlyAddedAlbumsResponseImpl(
       {required final List<KodiAudioDetailsAlbum> albums, required this.limits})
       : _albums = albums;
 
-  factory _$_GetRecentlyAddedAlbumsResponse.fromJson(
+  factory _$GetRecentlyAddedAlbumsResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_GetRecentlyAddedAlbumsResponseFromJson(json);
+      _$$GetRecentlyAddedAlbumsResponseImplFromJson(json);
 
   final List<KodiAudioDetailsAlbum> _albums;
   @override
@@ -384,29 +413,32 @@ class _$_GetRecentlyAddedAlbumsResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecentlyAddedAlbumsResponse &&
+            other is _$GetRecentlyAddedAlbumsResponseImpl &&
             const DeepCollectionEquality().equals(other._albums, _albums) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_albums), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecentlyAddedAlbumsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecentlyAddedAlbumsResponseCopyWith<_$_GetRecentlyAddedAlbumsResponse>
-      get copyWith => __$$_GetRecentlyAddedAlbumsResponseCopyWithImpl<
-          _$_GetRecentlyAddedAlbumsResponse>(this, _$identity);
+  _$$GetRecentlyAddedAlbumsResponseImplCopyWith<
+          _$GetRecentlyAddedAlbumsResponseImpl>
+      get copyWith => __$$GetRecentlyAddedAlbumsResponseImplCopyWithImpl<
+          _$GetRecentlyAddedAlbumsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecentlyAddedAlbumsResponseToJson(
+    return _$$GetRecentlyAddedAlbumsResponseImplToJson(
       this,
     );
   }
@@ -417,17 +449,21 @@ abstract class _GetRecentlyAddedAlbumsResponse
   const factory _GetRecentlyAddedAlbumsResponse(
           {required final List<KodiAudioDetailsAlbum> albums,
           required final KodiListLimitsReturned limits}) =
-      _$_GetRecentlyAddedAlbumsResponse;
+      _$GetRecentlyAddedAlbumsResponseImpl;
 
   factory _GetRecentlyAddedAlbumsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetRecentlyAddedAlbumsResponse.fromJson;
+      _$GetRecentlyAddedAlbumsResponseImpl.fromJson;
 
   @override
   List<KodiAudioDetailsAlbum> get albums;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetRecentlyAddedAlbumsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecentlyAddedAlbumsResponseCopyWith<_$_GetRecentlyAddedAlbumsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecentlyAddedAlbumsResponseImplCopyWith<
+          _$GetRecentlyAddedAlbumsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

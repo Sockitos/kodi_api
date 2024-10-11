@@ -6,12 +6,12 @@ part of 'go_to.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GoTo _$$_GoToFromJson(Map<String, dynamic> json) => _$_GoTo(
-      json['playerid'] as int,
+_$GoToImpl _$$GoToImplFromJson(Map<String, dynamic> json) => _$GoToImpl(
+      (json['playerid'] as num).toInt(),
       const GoToToConverter().fromJson(json['to']),
     );
 
-Map<String, dynamic> _$$_GoToToJson(_$_GoTo instance) {
+Map<String, dynamic> _$$GoToImplToJson(_$GoToImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };
@@ -26,24 +26,13 @@ Map<String, dynamic> _$$_GoToToJson(_$_GoTo instance) {
   return val;
 }
 
-_$_GoToToAbs _$$_GoToToAbsFromJson(Map<String, dynamic> json) => _$_GoToToAbs(
-      json['value'] as int,
-      $type: json['runtimeType'] as String?,
-    );
-
-Map<String, dynamic> _$$_GoToToAbsToJson(_$_GoToToAbs instance) =>
-    <String, dynamic>{
-      'value': instance.value,
-      'runtimeType': instance.$type,
-    };
-
-_$_GoToToEnum _$$_GoToToEnumFromJson(Map<String, dynamic> json) =>
-    _$_GoToToEnum(
+_$GoToToEnumImpl _$$GoToToEnumImplFromJson(Map<String, dynamic> json) =>
+    _$GoToToEnumImpl(
       $enumDecode(_$KodiPlayerGoToToEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_GoToToEnumToJson(_$_GoToToEnum instance) =>
+Map<String, dynamic> _$$GoToToEnumImplToJson(_$GoToToEnumImpl instance) =>
     <String, dynamic>{
       'value': _$KodiPlayerGoToToEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -53,3 +42,17 @@ const _$KodiPlayerGoToToEnumMap = {
   KodiPlayerGoToTo.previous: 'previous',
   KodiPlayerGoToTo.next: 'next',
 };
+
+_$GoToToPlaylistPosImpl _$$GoToToPlaylistPosImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GoToToPlaylistPosImpl(
+      (json['value'] as num).toInt(),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$GoToToPlaylistPosImplToJson(
+        _$GoToToPlaylistPosImpl instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+      'runtimeType': instance.$type,
+    };

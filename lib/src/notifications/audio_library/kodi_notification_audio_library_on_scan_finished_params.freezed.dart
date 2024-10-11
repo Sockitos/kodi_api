@@ -12,7 +12,7 @@ part of 'kodi_notification_audio_library_on_scan_finished_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationAudioLibraryOnScanFinishedParams
     _$KodiNotificationAudioLibraryOnScanFinishedParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationAudioLibraryOnScanFinishedParams {
   KodiNotificationAudioLibraryOnScanFinishedParamsData? get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationAudioLibraryOnScanFinishedParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith<
           KodiNotificationAudioLibraryOnScanFinishedParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -61,6 +65,8 @@ class _$KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<$Res>?
@@ -95,14 +103,15 @@ class _$KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith<
+abstract class _$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWith<
         $Res>
     implements $KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith(
-          _$_KodiNotificationAudioLibraryOnScanFinishedParams value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnScanFinishedParams)
+  factory _$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWith(
+          _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl value,
+          $Res Function(_$KodiNotificationAudioLibraryOnScanFinishedParamsImpl)
               then) =
-      __$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<$Res>;
+      __$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWithImpl<
+          $Res>;
   @override
   @useResult
   $Res call(
@@ -114,23 +123,26 @@ abstract class _$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith<
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<$Res>
+class __$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<$Res,
-        _$_KodiNotificationAudioLibraryOnScanFinishedParams>
+        _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl>
     implements
-        _$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnScanFinishedParams _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnScanFinishedParams) _then)
+        _$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWith<$Res> {
+  __$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnScanFinishedParamsImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = freezed,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnScanFinishedParams(
+    return _then(_$KodiNotificationAudioLibraryOnScanFinishedParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -145,14 +157,14 @@ class __$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnScanFinishedParams
+class _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl
     implements _KodiNotificationAudioLibraryOnScanFinishedParams {
-  const _$_KodiNotificationAudioLibraryOnScanFinishedParams(
+  const _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl(
       {required this.sender, this.data});
 
-  factory _$_KodiNotificationAudioLibraryOnScanFinishedParams.fromJson(
+  factory _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnScanFinishedParamsFromJson(json);
+      _$$KodiNotificationAudioLibraryOnScanFinishedParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -165,31 +177,33 @@ class _$_KodiNotificationAudioLibraryOnScanFinishedParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnScanFinishedParams &&
+            other is _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanFinishedParams>
+  _$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWithImpl<
-                  _$_KodiNotificationAudioLibraryOnScanFinishedParams>(
+          __$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnScanFinishedParamsToJson(
+    return _$$KodiNotificationAudioLibraryOnScanFinishedParamsImplToJson(
       this,
     );
   }
@@ -200,20 +214,23 @@ abstract class _KodiNotificationAudioLibraryOnScanFinishedParams
   const factory _KodiNotificationAudioLibraryOnScanFinishedParams(
           {required final String sender,
           final KodiNotificationAudioLibraryOnScanFinishedParamsData? data}) =
-      _$_KodiNotificationAudioLibraryOnScanFinishedParams;
+      _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl;
 
   factory _KodiNotificationAudioLibraryOnScanFinishedParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnScanFinishedParams.fromJson;
+      _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationAudioLibraryOnScanFinishedParamsData? get data;
+
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnScanFinishedParamsCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanFinishedParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnScanFinishedParamsImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanFinishedParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -227,8 +244,12 @@ KodiNotificationAudioLibraryOnScanFinishedParamsData
 mixin _$KodiNotificationAudioLibraryOnScanFinishedParamsData {
   String get test => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationAudioLibraryOnScanFinishedParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<
           KodiNotificationAudioLibraryOnScanFinishedParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -260,6 +281,8 @@ class _$KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -275,15 +298,16 @@ class _$KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<
+abstract class _$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWith<
         $Res>
     implements
         $KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith(
-          _$_KodiNotificationAudioLibraryOnScanFinishedParamsData value,
-          $Res Function(_$_KodiNotificationAudioLibraryOnScanFinishedParamsData)
+  factory _$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWith(
+          _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl value,
+          $Res Function(
+                  _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl)
               then) =
-      __$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl<
+      __$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWithImpl<
           $Res>;
   @override
   @useResult
@@ -291,24 +315,27 @@ abstract class _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<
 }
 
 /// @nodoc
-class __$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl<
+class __$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWithImpl<
         $Res>
     extends _$KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl<
-        $Res, _$_KodiNotificationAudioLibraryOnScanFinishedParamsData>
+        $Res, _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl>
     implements
-        _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl(
-      _$_KodiNotificationAudioLibraryOnScanFinishedParamsData _value,
-      $Res Function(_$_KodiNotificationAudioLibraryOnScanFinishedParamsData)
+        _$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWith<
+            $Res> {
+  __$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWithImpl(
+      _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl _value,
+      $Res Function(_$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl)
           _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? test = null,
   }) {
-    return _then(_$_KodiNotificationAudioLibraryOnScanFinishedParamsData(
+    return _then(_$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl(
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -319,14 +346,14 @@ class __$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl<
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationAudioLibraryOnScanFinishedParamsData
+class _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl
     implements _KodiNotificationAudioLibraryOnScanFinishedParamsData {
-  const _$_KodiNotificationAudioLibraryOnScanFinishedParamsData(
+  const _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl(
       {required this.test});
 
-  factory _$_KodiNotificationAudioLibraryOnScanFinishedParamsData.fromJson(
+  factory _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataFromJson(json);
+      _$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplFromJson(json);
 
   @override
   final String test;
@@ -337,30 +364,33 @@ class _$_KodiNotificationAudioLibraryOnScanFinishedParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationAudioLibraryOnScanFinishedParamsData &&
+            other
+                is _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl &&
             (identical(other.test, test) || other.test == test));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, test);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanFinishedParamsData>
+  _$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWithImpl<
-                  _$_KodiNotificationAudioLibraryOnScanFinishedParamsData>(
+          __$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWithImpl<
+                  _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataToJson(
+    return _$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplToJson(
       this,
     );
   }
@@ -370,17 +400,20 @@ abstract class _KodiNotificationAudioLibraryOnScanFinishedParamsData
     implements KodiNotificationAudioLibraryOnScanFinishedParamsData {
   const factory _KodiNotificationAudioLibraryOnScanFinishedParamsData(
           {required final String test}) =
-      _$_KodiNotificationAudioLibraryOnScanFinishedParamsData;
+      _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl;
 
   factory _KodiNotificationAudioLibraryOnScanFinishedParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationAudioLibraryOnScanFinishedParamsData.fromJson;
+      _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl.fromJson;
 
   @override
   String get test;
+
+  /// Create a copy of KodiNotificationAudioLibraryOnScanFinishedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationAudioLibraryOnScanFinishedParamsDataCopyWith<
-          _$_KodiNotificationAudioLibraryOnScanFinishedParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationAudioLibraryOnScanFinishedParamsDataImplCopyWith<
+          _$KodiNotificationAudioLibraryOnScanFinishedParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,9 +6,10 @@ part of 'set_album_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetAlbumDetails _$$_SetAlbumDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetAlbumDetails(
-      json['albumid'] as int,
+_$SetAlbumDetailsImpl _$$SetAlbumDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetAlbumDetailsImpl(
+      (json['albumid'] as num).toInt(),
       title: json['title'] as String?,
       artists:
           (json['artist'] as List<dynamic>?)?.map((e) => e as String).toList(),
@@ -22,10 +23,10 @@ _$_SetAlbumDetails _$$_SetAlbumDetailsFromJson(Map<String, dynamic> json) =>
           (json['style'] as List<dynamic>?)?.map((e) => e as String).toList(),
       type: json['type'] as String?,
       albumLabel: json['albumlabel'] as String?,
-      rating: json['rating'] as int?,
-      year: json['year'] as int?,
-      userRating: json['userrating'] as int?,
-      votes: json['votes'] as int?,
+      rating: (json['rating'] as num?)?.toInt(),
+      year: (json['year'] as num?)?.toInt(),
+      userRating: (json['userrating'] as num?)?.toInt(),
+      votes: (json['votes'] as num?)?.toInt(),
       musicBrainzAlbumId: json['musicbrainzalbumid'] as String?,
       musicBrainzReleaseGroupId: json['musicbrainzreleasegroupid'] as String?,
       sortArtist: json['sortartist'] as String?,
@@ -46,7 +47,8 @@ _$_SetAlbumDetails _$$_SetAlbumDetailsFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['originaldate'] as String),
     );
 
-Map<String, dynamic> _$$_SetAlbumDetailsToJson(_$_SetAlbumDetails instance) {
+Map<String, dynamic> _$$SetAlbumDetailsImplToJson(
+    _$SetAlbumDetailsImpl instance) {
   final val = <String, dynamic>{
     'albumid': instance.id,
   };

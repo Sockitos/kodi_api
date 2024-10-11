@@ -8,7 +8,7 @@ part 'refresh_music_video.g.dart';
 typedef RefreshMusicVideoBuilder = RefreshMusicVideo Function(
   int id, {
   bool ignoreNFO,
-  String? title,
+  String title,
 });
 
 @freezed
@@ -16,7 +16,7 @@ class RefreshMusicVideo with _$RefreshMusicVideo implements KodiRequest<void> {
   const factory RefreshMusicVideo(
     @JsonKey(name: 'musicvideoid') int id, {
     @JsonKey(name: 'ignorenfo') @Default(false) bool ignoreNFO,
-    String? title,
+    @Default('') String title,
   }) = _RefreshMusicVideo;
 
   const RefreshMusicVideo._();

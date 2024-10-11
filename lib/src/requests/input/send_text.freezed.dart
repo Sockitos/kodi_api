@@ -12,7 +12,7 @@ part of 'send_text.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SendText _$SendTextFromJson(Map<String, dynamic> json) {
   return _SendText.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$SendText {
   String get text => throw _privateConstructorUsedError;
   bool get done => throw _privateConstructorUsedError;
 
+  /// Serializes this SendText to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SendText
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SendTextCopyWith<SendText> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$SendTextCopyWithImpl<$Res, $Val extends SendText>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SendText
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,30 +73,33 @@ class _$SendTextCopyWithImpl<$Res, $Val extends SendText>
 }
 
 /// @nodoc
-abstract class _$$_SendTextCopyWith<$Res> implements $SendTextCopyWith<$Res> {
-  factory _$$_SendTextCopyWith(
-          _$_SendText value, $Res Function(_$_SendText) then) =
-      __$$_SendTextCopyWithImpl<$Res>;
+abstract class _$$SendTextImplCopyWith<$Res>
+    implements $SendTextCopyWith<$Res> {
+  factory _$$SendTextImplCopyWith(
+          _$SendTextImpl value, $Res Function(_$SendTextImpl) then) =
+      __$$SendTextImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String text, bool done});
 }
 
 /// @nodoc
-class __$$_SendTextCopyWithImpl<$Res>
-    extends _$SendTextCopyWithImpl<$Res, _$_SendText>
-    implements _$$_SendTextCopyWith<$Res> {
-  __$$_SendTextCopyWithImpl(
-      _$_SendText _value, $Res Function(_$_SendText) _then)
+class __$$SendTextImplCopyWithImpl<$Res>
+    extends _$SendTextCopyWithImpl<$Res, _$SendTextImpl>
+    implements _$$SendTextImplCopyWith<$Res> {
+  __$$SendTextImplCopyWithImpl(
+      _$SendTextImpl _value, $Res Function(_$SendTextImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SendText
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? text = null,
     Object? done = null,
   }) {
-    return _then(_$_SendText(
+    return _then(_$SendTextImpl(
       null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -105,11 +114,11 @@ class __$$_SendTextCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SendText extends _SendText {
-  const _$_SendText(this.text, {this.done = true}) : super._();
+class _$SendTextImpl extends _SendText {
+  const _$SendTextImpl(this.text, {this.done = true}) : super._();
 
-  factory _$_SendText.fromJson(Map<String, dynamic> json) =>
-      _$$_SendTextFromJson(json);
+  factory _$SendTextImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SendTextImplFromJson(json);
 
   @override
   final String text;
@@ -123,44 +132,51 @@ class _$_SendText extends _SendText {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendText &&
+            other is _$SendTextImpl &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.done, done) || other.done == done));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, text, done);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SendText
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendTextCopyWith<_$_SendText> get copyWith =>
-      __$$_SendTextCopyWithImpl<_$_SendText>(this, _$identity);
+  _$$SendTextImplCopyWith<_$SendTextImpl> get copyWith =>
+      __$$SendTextImplCopyWithImpl<_$SendTextImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SendTextToJson(
+    return _$$SendTextImplToJson(
       this,
     );
   }
 }
 
 abstract class _SendText extends SendText {
-  const factory _SendText(final String text, {final bool done}) = _$_SendText;
+  const factory _SendText(final String text, {final bool done}) =
+      _$SendTextImpl;
   const _SendText._() : super._();
 
-  factory _SendText.fromJson(Map<String, dynamic> json) = _$_SendText.fromJson;
+  factory _SendText.fromJson(Map<String, dynamic> json) =
+      _$SendTextImpl.fromJson;
 
   @override
   String get text;
   @override
   bool get done;
+
+  /// Create a copy of SendText
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SendTextCopyWith<_$_SendText> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SendTextImplCopyWith<_$SendTextImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

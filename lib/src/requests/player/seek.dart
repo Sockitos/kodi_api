@@ -47,32 +47,38 @@ class KodiPlayerSeekResponse with _$KodiPlayerSeekResponse {
 
 enum KodiPlayerSeekStep {
   @JsonValue('smallforward')
-  smallForward,
+  smallForward(key: 'smallforward'),
   @JsonValue('smallbackward')
-  smallBackward,
+  smallBackward(key: 'smallbackward'),
   @JsonValue('bigforward')
-  bigForward,
+  bigForward(key: 'bigforward'),
   @JsonValue('bigbackward')
-  bigBackward,
+  bigBackward(key: 'bigbackward');
+
+  const KodiPlayerSeekStep({
+    required this.key,
+  });
+
+  final String key;
 }
 
 @freezed
 class KodiPlayerSeekValue with _$KodiPlayerSeekValue {
-  const factory KodiPlayerSeekValue.percentage({
-    required double percentage,
-  }) = KodiPlayerSeekValuePercentage;
+  const factory KodiPlayerSeekValue.percentage(
+    double percentage,
+  ) = KodiPlayerSeekValuePercentage;
 
-  const factory KodiPlayerSeekValue.time({
-    required KodiPlayerPositionTime time,
-  }) = KodiPlayerSeekValueTime;
+  const factory KodiPlayerSeekValue.time(
+    KodiPlayerPositionTime time,
+  ) = KodiPlayerSeekValueTime;
 
-  const factory KodiPlayerSeekValue.step({
-    required KodiPlayerSeekStep step,
-  }) = KodiPlayerSeekValueStep;
+  const factory KodiPlayerSeekValue.step(
+    KodiPlayerSeekStep step,
+  ) = KodiPlayerSeekValueStep;
 
-  const factory KodiPlayerSeekValue.seconds({
-    required int seconds,
-  }) = KodiPlayerSeekValueSeconds;
+  const factory KodiPlayerSeekValue.seconds(
+    int seconds,
+  ) = KodiPlayerSeekValueSeconds;
 
   factory KodiPlayerSeekValue.fromJson(Map<String, dynamic> json) =>
       _$KodiPlayerSeekValueFromJson(json);
@@ -94,7 +100,7 @@ class KodiPlayerSeekValueConverter
           'time': value.toJson(),
         },
         step: (value) => <String, dynamic>{
-          'step': value.name,
+          'step': value.key,
         },
         seconds: (value) => <String, dynamic>{
           'seconds': value,

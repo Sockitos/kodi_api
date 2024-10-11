@@ -12,7 +12,7 @@ part of 'kodi_video_details_season.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiVideoDetailsSeason _$KodiVideoDetailsSeasonFromJson(
     Map<String, dynamic> json) {
@@ -21,28 +21,32 @@ KodiVideoDetailsSeason _$KodiVideoDetailsSeasonFromJson(
 
 /// @nodoc
 mixin _$KodiVideoDetailsSeason {
-  int? get episode => throw _privateConstructorUsedError;
-  int? get season => throw _privateConstructorUsedError;
+  int get episode => throw _privateConstructorUsedError;
+  int get season => throw _privateConstructorUsedError;
   @JsonKey(name: 'seasonid')
   int get seasonId => throw _privateConstructorUsedError;
   @JsonKey(name: 'showtitle')
-  String? get showTitle => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get showTitle => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'tvshowid')
-  int? get tvShowId => throw _privateConstructorUsedError;
+  int get tvShowId => throw _privateConstructorUsedError;
   @JsonKey(name: 'userrating')
-  int? get userRating => throw _privateConstructorUsedError;
+  int get userRating => throw _privateConstructorUsedError;
   @JsonKey(name: 'watchedepisodes')
-  int? get watchedEpisodes => throw _privateConstructorUsedError;
+  int get watchedEpisodes => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiVideoDetailsSeason to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiVideoDetailsSeason
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiVideoDetailsSeasonCopyWith<KodiVideoDetailsSeason> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,18 +58,18 @@ abstract class $KodiVideoDetailsSeasonCopyWith<$Res> {
       _$KodiVideoDetailsSeasonCopyWithImpl<$Res, KodiVideoDetailsSeason>;
   @useResult
   $Res call(
-      {int? episode,
-      int? season,
+      {int episode,
+      int season,
       @JsonKey(name: 'seasonid') int seasonId,
-      @JsonKey(name: 'showtitle') String? showTitle,
-      String? title,
-      @JsonKey(name: 'tvshowid') int? tvShowId,
-      @JsonKey(name: 'userrating') int? userRating,
-      @JsonKey(name: 'watchedepisodes') int? watchedEpisodes,
+      @JsonKey(name: 'showtitle') String showTitle,
+      String title,
+      @JsonKey(name: 'tvshowid') int tvShowId,
+      @JsonKey(name: 'userrating') int userRating,
+      @JsonKey(name: 'watchedepisodes') int watchedEpisodes,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiMediaArtworkCopyWith<$Res>? get art;
@@ -82,72 +86,74 @@ class _$KodiVideoDetailsSeasonCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiVideoDetailsSeason
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? episode = freezed,
-    Object? season = freezed,
+    Object? episode = null,
+    Object? season = null,
     Object? seasonId = null,
-    Object? showTitle = freezed,
-    Object? title = freezed,
-    Object? tvShowId = freezed,
-    Object? userRating = freezed,
-    Object? watchedEpisodes = freezed,
+    Object? showTitle = null,
+    Object? title = null,
+    Object? tvShowId = null,
+    Object? userRating = null,
+    Object? watchedEpisodes = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
-      episode: freezed == episode
+      episode: null == episode
           ? _value.episode
           : episode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
+              as int,
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       seasonId: null == seasonId
           ? _value.seasonId
           : seasonId // ignore: cast_nullable_to_non_nullable
               as int,
-      showTitle: freezed == showTitle
+      showTitle: null == showTitle
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      tvShowId: freezed == tvShowId
+              as String,
+      tvShowId: null == tvShowId
           ? _value.tvShowId
           : tvShowId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userRating: freezed == userRating
+              as int,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      watchedEpisodes: freezed == watchedEpisodes
+              as int,
+      watchedEpisodes: null == watchedEpisodes
           ? _value.watchedEpisodes
           : watchedEpisodes // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -155,6 +161,8 @@ class _$KodiVideoDetailsSeasonCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiVideoDetailsSeason
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -169,26 +177,27 @@ class _$KodiVideoDetailsSeasonCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoDetailsSeasonCopyWith<$Res>
+abstract class _$$KodiVideoDetailsSeasonImplCopyWith<$Res>
     implements $KodiVideoDetailsSeasonCopyWith<$Res> {
-  factory _$$_KodiVideoDetailsSeasonCopyWith(_$_KodiVideoDetailsSeason value,
-          $Res Function(_$_KodiVideoDetailsSeason) then) =
-      __$$_KodiVideoDetailsSeasonCopyWithImpl<$Res>;
+  factory _$$KodiVideoDetailsSeasonImplCopyWith(
+          _$KodiVideoDetailsSeasonImpl value,
+          $Res Function(_$KodiVideoDetailsSeasonImpl) then) =
+      __$$KodiVideoDetailsSeasonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int? episode,
-      int? season,
+      {int episode,
+      int season,
       @JsonKey(name: 'seasonid') int seasonId,
-      @JsonKey(name: 'showtitle') String? showTitle,
-      String? title,
-      @JsonKey(name: 'tvshowid') int? tvShowId,
-      @JsonKey(name: 'userrating') int? userRating,
-      @JsonKey(name: 'watchedepisodes') int? watchedEpisodes,
+      @JsonKey(name: 'showtitle') String showTitle,
+      String title,
+      @JsonKey(name: 'tvshowid') int tvShowId,
+      @JsonKey(name: 'userrating') int userRating,
+      @JsonKey(name: 'watchedepisodes') int watchedEpisodes,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -196,80 +205,83 @@ abstract class _$$_KodiVideoDetailsSeasonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiVideoDetailsSeasonCopyWithImpl<$Res>
+class __$$KodiVideoDetailsSeasonImplCopyWithImpl<$Res>
     extends _$KodiVideoDetailsSeasonCopyWithImpl<$Res,
-        _$_KodiVideoDetailsSeason>
-    implements _$$_KodiVideoDetailsSeasonCopyWith<$Res> {
-  __$$_KodiVideoDetailsSeasonCopyWithImpl(_$_KodiVideoDetailsSeason _value,
-      $Res Function(_$_KodiVideoDetailsSeason) _then)
+        _$KodiVideoDetailsSeasonImpl>
+    implements _$$KodiVideoDetailsSeasonImplCopyWith<$Res> {
+  __$$KodiVideoDetailsSeasonImplCopyWithImpl(
+      _$KodiVideoDetailsSeasonImpl _value,
+      $Res Function(_$KodiVideoDetailsSeasonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoDetailsSeason
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? episode = freezed,
-    Object? season = freezed,
+    Object? episode = null,
+    Object? season = null,
     Object? seasonId = null,
-    Object? showTitle = freezed,
-    Object? title = freezed,
-    Object? tvShowId = freezed,
-    Object? userRating = freezed,
-    Object? watchedEpisodes = freezed,
+    Object? showTitle = null,
+    Object? title = null,
+    Object? tvShowId = null,
+    Object? userRating = null,
+    Object? watchedEpisodes = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiVideoDetailsSeason(
-      episode: freezed == episode
+    return _then(_$KodiVideoDetailsSeasonImpl(
+      episode: null == episode
           ? _value.episode
           : episode // ignore: cast_nullable_to_non_nullable
-              as int?,
-      season: freezed == season
+              as int,
+      season: null == season
           ? _value.season
           : season // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       seasonId: null == seasonId
           ? _value.seasonId
           : seasonId // ignore: cast_nullable_to_non_nullable
               as int,
-      showTitle: freezed == showTitle
+      showTitle: null == showTitle
           ? _value.showTitle
           : showTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
-      title: freezed == title
+              as String,
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
-      tvShowId: freezed == tvShowId
+              as String,
+      tvShowId: null == tvShowId
           ? _value.tvShowId
           : tvShowId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      userRating: freezed == userRating
+              as int,
+      userRating: null == userRating
           ? _value.userRating
           : userRating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      watchedEpisodes: freezed == watchedEpisodes
+              as int,
+      watchedEpisodes: null == watchedEpisodes
           ? _value.watchedEpisodes
           : watchedEpisodes // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -280,55 +292,60 @@ class __$$_KodiVideoDetailsSeasonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoDetailsSeason implements _KodiVideoDetailsSeason {
-  const _$_KodiVideoDetailsSeason(
-      {this.episode,
-      this.season,
+class _$KodiVideoDetailsSeasonImpl implements _KodiVideoDetailsSeason {
+  const _$KodiVideoDetailsSeasonImpl(
+      {this.episode = 0,
+      this.season = 0,
       @JsonKey(name: 'seasonid') required this.seasonId,
-      @JsonKey(name: 'showtitle') this.showTitle,
-      this.title,
-      @JsonKey(name: 'tvshowid') this.tvShowId,
-      @JsonKey(name: 'userrating') this.userRating,
-      @JsonKey(name: 'watchedepisodes') this.watchedEpisodes,
+      @JsonKey(name: 'showtitle') this.showTitle = '',
+      this.title = '',
+      @JsonKey(name: 'tvshowid') this.tvShowId = -1,
+      @JsonKey(name: 'userrating') this.userRating = 0,
+      @JsonKey(name: 'watchedepisodes') this.watchedEpisodes = 0,
       this.art,
-      @JsonKey(name: 'playcount') this.playCount,
-      this.fanart,
-      this.thumbnail,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label});
 
-  factory _$_KodiVideoDetailsSeason.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiVideoDetailsSeasonFromJson(json);
+  factory _$KodiVideoDetailsSeasonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiVideoDetailsSeasonImplFromJson(json);
 
   @override
-  final int? episode;
+  @JsonKey()
+  final int episode;
   @override
-  final int? season;
+  @JsonKey()
+  final int season;
   @override
   @JsonKey(name: 'seasonid')
   final int seasonId;
   @override
   @JsonKey(name: 'showtitle')
-  final String? showTitle;
+  final String showTitle;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   @JsonKey(name: 'tvshowid')
-  final int? tvShowId;
+  final int tvShowId;
   @override
   @JsonKey(name: 'userrating')
-  final int? userRating;
+  final int userRating;
   @override
   @JsonKey(name: 'watchedepisodes')
-  final int? watchedEpisodes;
+  final int watchedEpisodes;
   @override
   final KodiMediaArtwork? art;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
@@ -338,10 +355,10 @@ class _$_KodiVideoDetailsSeason implements _KodiVideoDetailsSeason {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoDetailsSeason &&
+            other is _$KodiVideoDetailsSeasonImpl &&
             (identical(other.episode, episode) || other.episode == episode) &&
             (identical(other.season, season) || other.season == season) &&
             (identical(other.seasonId, seasonId) ||
@@ -364,7 +381,7 @@ class _$_KodiVideoDetailsSeason implements _KodiVideoDetailsSeason {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -382,16 +399,18 @@ class _$_KodiVideoDetailsSeason implements _KodiVideoDetailsSeason {
       thumbnail,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoDetailsSeason
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoDetailsSeasonCopyWith<_$_KodiVideoDetailsSeason> get copyWith =>
-      __$$_KodiVideoDetailsSeasonCopyWithImpl<_$_KodiVideoDetailsSeason>(
-          this, _$identity);
+  _$$KodiVideoDetailsSeasonImplCopyWith<_$KodiVideoDetailsSeasonImpl>
+      get copyWith => __$$KodiVideoDetailsSeasonImplCopyWithImpl<
+          _$KodiVideoDetailsSeasonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoDetailsSeasonToJson(
+    return _$$KodiVideoDetailsSeasonImplToJson(
       this,
     );
   }
@@ -399,57 +418,60 @@ class _$_KodiVideoDetailsSeason implements _KodiVideoDetailsSeason {
 
 abstract class _KodiVideoDetailsSeason implements KodiVideoDetailsSeason {
   const factory _KodiVideoDetailsSeason(
-      {final int? episode,
-      final int? season,
+      {final int episode,
+      final int season,
       @JsonKey(name: 'seasonid') required final int seasonId,
-      @JsonKey(name: 'showtitle') final String? showTitle,
-      final String? title,
-      @JsonKey(name: 'tvshowid') final int? tvShowId,
-      @JsonKey(name: 'userrating') final int? userRating,
-      @JsonKey(name: 'watchedepisodes') final int? watchedEpisodes,
+      @JsonKey(name: 'showtitle') final String showTitle,
+      final String title,
+      @JsonKey(name: 'tvshowid') final int tvShowId,
+      @JsonKey(name: 'userrating') final int userRating,
+      @JsonKey(name: 'watchedepisodes') final int watchedEpisodes,
       final KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') final int? playCount,
-      final String? fanart,
-      final String? thumbnail,
-      required final String label}) = _$_KodiVideoDetailsSeason;
+      @JsonKey(name: 'playcount') final int playCount,
+      final String fanart,
+      final String thumbnail,
+      required final String label}) = _$KodiVideoDetailsSeasonImpl;
 
   factory _KodiVideoDetailsSeason.fromJson(Map<String, dynamic> json) =
-      _$_KodiVideoDetailsSeason.fromJson;
+      _$KodiVideoDetailsSeasonImpl.fromJson;
 
   @override
-  int? get episode;
+  int get episode;
   @override
-  int? get season;
+  int get season;
   @override
   @JsonKey(name: 'seasonid')
   int get seasonId;
   @override
   @JsonKey(name: 'showtitle')
-  String? get showTitle;
+  String get showTitle;
   @override
-  String? get title;
+  String get title;
   @override
   @JsonKey(name: 'tvshowid')
-  int? get tvShowId;
+  int get tvShowId;
   @override
   @JsonKey(name: 'userrating')
-  int? get userRating;
+  int get userRating;
   @override
   @JsonKey(name: 'watchedepisodes')
-  int? get watchedEpisodes;
+  int get watchedEpisodes;
   @override
   KodiMediaArtwork? get art;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiVideoDetailsSeason
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiVideoDetailsSeasonCopyWith<_$_KodiVideoDetailsSeason> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoDetailsSeasonImplCopyWith<_$KodiVideoDetailsSeasonImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

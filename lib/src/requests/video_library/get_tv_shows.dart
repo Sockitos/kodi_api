@@ -56,29 +56,29 @@ class GetTVShowsResponse with _$GetTVShowsResponse {
 
 @freezed
 class KodiVideoLibraryGetTvShowsFilter with _$KodiVideoLibraryGetTvShowsFilter {
-  const factory KodiVideoLibraryGetTvShowsFilter.genreId({
-    @JsonKey(name: 'genreid') required int genreId,
-  }) = _KodiVideoLibraryGetTvShowsFilterGenreId;
+  const factory KodiVideoLibraryGetTvShowsFilter.genreId(
+    @JsonKey(name: 'genreid') int genreId,
+  ) = _KodiVideoLibraryGetTvShowsFilterGenreId;
 
-  const factory KodiVideoLibraryGetTvShowsFilter.genre({
-    required String genre,
-  }) = _KodiVideoLibraryGetTvShowsFilterGenre;
+  const factory KodiVideoLibraryGetTvShowsFilter.genre(
+    String genre,
+  ) = _KodiVideoLibraryGetTvShowsFilterGenre;
 
-  const factory KodiVideoLibraryGetTvShowsFilter.year({
-    required int year,
-  }) = _KodiVideoLibraryGeTvShowsFilterYear;
+  const factory KodiVideoLibraryGetTvShowsFilter.year(
+    int year,
+  ) = _KodiVideoLibraryGeTvShowsFilterYear;
 
-  const factory KodiVideoLibraryGetTvShowsFilter.actor({
-    required String actor,
-  }) = _KodiVideoLibraryGeTvShowsFilterActor;
+  const factory KodiVideoLibraryGetTvShowsFilter.actor(
+    String actor,
+  ) = _KodiVideoLibraryGeTvShowsFilterActor;
 
-  const factory KodiVideoLibraryGetTvShowsFilter.studio({
-    required String studio,
-  }) = _KodiVideoLibraryGeTvShowsFilterStudio;
+  const factory KodiVideoLibraryGetTvShowsFilter.studio(
+    String studio,
+  ) = _KodiVideoLibraryGeTvShowsFilterStudio;
 
-  const factory KodiVideoLibraryGetTvShowsFilter.tag({
-    required String tag,
-  }) = _KodiVideoLibraryGeTvShowsFilterTag;
+  const factory KodiVideoLibraryGetTvShowsFilter.tag(
+    String tag,
+  ) = _KodiVideoLibraryGeTvShowsFilterTag;
 
   const factory KodiVideoLibraryGetTvShowsFilter.filter(
     @KodiListFilterTvShowsConverter() KodiListFilterTvShows filter,

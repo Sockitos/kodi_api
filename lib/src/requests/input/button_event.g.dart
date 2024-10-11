@@ -6,14 +6,14 @@ part of 'button_event.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ButtonEvent _$$_ButtonEventFromJson(Map<String, dynamic> json) =>
-    _$_ButtonEvent(
+_$ButtonEventImpl _$$ButtonEventImplFromJson(Map<String, dynamic> json) =>
+    _$ButtonEventImpl(
       json['button'] as String,
       $enumDecode(_$KodiInputKeymapTypeEnumMap, json['keymap']),
-      holdTime: json['holdtime'] as int? ?? 0,
+      holdTime: (json['holdtime'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$_ButtonEventToJson(_$_ButtonEvent instance) =>
+Map<String, dynamic> _$$ButtonEventImplToJson(_$ButtonEventImpl instance) =>
     <String, dynamic>{
       'button': instance.button,
       'keymap': _$KodiInputKeymapTypeEnumMap[instance.keymap]!,

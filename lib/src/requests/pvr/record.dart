@@ -8,17 +8,18 @@ part 'record.g.dart';
 
 typedef RecordBuilder = Record Function({
   KodiGlobalToggle record,
-  RecordChannel channel,
+  KodiRecordChannel channel,
 });
 
 @freezed
 class Record with _$Record implements KodiRequest<void> {
   const factory Record({
+    @KodiGlobalToggleConverter()
     @Default(KodiGlobalToggle.enumerator(KodiGlobalToggleEnum.toggle))
     KodiGlobalToggle record,
-    @RecordChannelConverter()
-    @Default(RecordChannel.enumerator(KodiPVRChannel.current))
-    RecordChannel channel,
+    @KodiRecordChannelConverter()
+    @Default(KodiRecordChannel.enumerator(KodiPVRChannel.current))
+    KodiRecordChannel channel,
   }) = _Record;
 
   const Record._();
@@ -37,28 +38,29 @@ enum KodiPVRChannel {
 }
 
 @freezed
-class RecordChannel with _$RecordChannel {
-  const factory RecordChannel.int(
+class KodiRecordChannel with _$KodiRecordChannel {
+  const factory KodiRecordChannel.int(
     int channel,
-  ) = _RecordChannelInt;
+  ) = _KodiRecordChannelInt;
 
-  const factory RecordChannel.enumerator(
+  const factory KodiRecordChannel.enumerator(
     KodiPVRChannel channel,
-  ) = _RecordChannelEnum;
+  ) = _KodiRecordChannelEnum;
 
-  factory RecordChannel.fromJson(Map<String, dynamic> json) =>
-      _$RecordChannelFromJson(json);
+  factory KodiRecordChannel.fromJson(Map<String, dynamic> json) =>
+      _$KodiRecordChannelFromJson(json);
 }
 
-class RecordChannelConverter implements JsonConverter<RecordChannel, dynamic> {
-  const RecordChannelConverter();
+class KodiRecordChannelConverter
+    implements JsonConverter<KodiRecordChannel, dynamic> {
+  const KodiRecordChannelConverter();
 
   @override
-  RecordChannel fromJson(dynamic json) => throw UnimplementedError();
+  KodiRecordChannel fromJson(dynamic json) => throw UnimplementedError();
 
   @override
-  dynamic toJson(RecordChannel data) => data.map<dynamic>(
+  dynamic toJson(KodiRecordChannel data) => data.when(
         int: (value) => value,
-        enumerator: (value) => value,
+        enumerator: (value) => value.name,
       );
 }

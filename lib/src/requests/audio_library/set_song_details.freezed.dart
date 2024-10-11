@@ -12,7 +12,7 @@ part of 'set_song_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetSongDetails _$SetSongDetailsFromJson(Map<String, dynamic> json) {
   return _SetSongDetails.fromJson(json);
@@ -58,8 +58,12 @@ mixin _$SetSongDetails {
   DateTime? get originalDate => throw _privateConstructorUsedError;
   int? get bpm => throw _privateConstructorUsedError;
 
+  /// Serializes this SetSongDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetSongDetailsCopyWith<SetSongDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -109,6 +113,8 @@ class _$SetSongDetailsCopyWithImpl<$Res, $Val extends SetSongDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -237,6 +243,8 @@ class _$SetSongDetailsCopyWithImpl<$Res, $Val extends SetSongDetails>
     ) as $Val);
   }
 
+  /// Create a copy of SetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkSetCopyWith<$Res>? get art {
@@ -251,11 +259,11 @@ class _$SetSongDetailsCopyWithImpl<$Res, $Val extends SetSongDetails>
 }
 
 /// @nodoc
-abstract class _$$_SetSongDetailsCopyWith<$Res>
+abstract class _$$SetSongDetailsImplCopyWith<$Res>
     implements $SetSongDetailsCopyWith<$Res> {
-  factory _$$_SetSongDetailsCopyWith(
-          _$_SetSongDetails value, $Res Function(_$_SetSongDetails) then) =
-      __$$_SetSongDetailsCopyWithImpl<$Res>;
+  factory _$$SetSongDetailsImplCopyWith(_$SetSongDetailsImpl value,
+          $Res Function(_$SetSongDetailsImpl) then) =
+      __$$SetSongDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -289,13 +297,15 @@ abstract class _$$_SetSongDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetSongDetailsCopyWithImpl<$Res>
-    extends _$SetSongDetailsCopyWithImpl<$Res, _$_SetSongDetails>
-    implements _$$_SetSongDetailsCopyWith<$Res> {
-  __$$_SetSongDetailsCopyWithImpl(
-      _$_SetSongDetails _value, $Res Function(_$_SetSongDetails) _then)
+class __$$SetSongDetailsImplCopyWithImpl<$Res>
+    extends _$SetSongDetailsCopyWithImpl<$Res, _$SetSongDetailsImpl>
+    implements _$$SetSongDetailsImplCopyWith<$Res> {
+  __$$SetSongDetailsImplCopyWithImpl(
+      _$SetSongDetailsImpl _value, $Res Function(_$SetSongDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -324,7 +334,7 @@ class __$$_SetSongDetailsCopyWithImpl<$Res>
     Object? originalDate = freezed,
     Object? bpm = freezed,
   }) {
-    return _then(_$_SetSongDetails(
+    return _then(_$SetSongDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -427,8 +437,8 @@ class __$$_SetSongDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetSongDetails extends _SetSongDetails {
-  const _$_SetSongDetails(@JsonKey(name: 'songid') this.id,
+class _$SetSongDetailsImpl extends _SetSongDetails {
+  const _$SetSongDetailsImpl(@JsonKey(name: 'songid') this.id,
       {this.title,
       @JsonKey(name: 'artist') final List<String>? artists,
       @JsonKey(name: 'genre') final List<String>? genres,
@@ -456,8 +466,8 @@ class _$_SetSongDetails extends _SetSongDetails {
         _genres = genres,
         super._();
 
-  factory _$_SetSongDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_SetSongDetailsFromJson(json);
+  factory _$SetSongDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSongDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'songid')
@@ -543,10 +553,10 @@ class _$_SetSongDetails extends _SetSongDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSongDetails &&
+            other is _$SetSongDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             const DeepCollectionEquality().equals(other._artists, _artists) &&
@@ -584,7 +594,7 @@ class _$_SetSongDetails extends _SetSongDetails {
             (identical(other.bpm, bpm) || other.bpm == bpm));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -614,15 +624,18 @@ class _$_SetSongDetails extends _SetSongDetails {
         bpm
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetSongDetailsCopyWith<_$_SetSongDetails> get copyWith =>
-      __$$_SetSongDetailsCopyWithImpl<_$_SetSongDetails>(this, _$identity);
+  _$$SetSongDetailsImplCopyWith<_$SetSongDetailsImpl> get copyWith =>
+      __$$SetSongDetailsImplCopyWithImpl<_$SetSongDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetSongDetailsToJson(
+    return _$$SetSongDetailsImplToJson(
       this,
     );
   }
@@ -652,11 +665,11 @@ abstract class _SetSongDetails extends SetSongDetails {
       @JsonKey(name: 'disctitle') final String? discTitle,
       @JsonKey(name: 'releasedate') final DateTime? releaseDate,
       @JsonKey(name: 'originaldate') final DateTime? originalDate,
-      final int? bpm}) = _$_SetSongDetails;
+      final int? bpm}) = _$SetSongDetailsImpl;
   const _SetSongDetails._() : super._();
 
   factory _SetSongDetails.fromJson(Map<String, dynamic> json) =
-      _$_SetSongDetails.fromJson;
+      _$SetSongDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'songid')
@@ -719,8 +732,11 @@ abstract class _SetSongDetails extends SetSongDetails {
   DateTime? get originalDate;
   @override
   int? get bpm;
+
+  /// Create a copy of SetSongDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetSongDetailsCopyWith<_$_SetSongDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetSongDetailsImplCopyWith<_$SetSongDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

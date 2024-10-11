@@ -6,8 +6,8 @@ part 'kodi_profiles_details_profile.g.dart';
 @freezed
 class KodiProfilesDetailsProfile with _$KodiProfilesDetailsProfile {
   const factory KodiProfilesDetailsProfile({
-    @JsonKey(name: 'lockmode') int? lockMode,
-    String? thumbnail,
+    @JsonKey(name: 'lockmode') @Default(0) int lockMode,
+    @Default('') String thumbnail,
     required String label,
   }) = _KodiProfilesDetailsProfile;
 

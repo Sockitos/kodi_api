@@ -16,32 +16,32 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingBool;
 
   const factory KodiSettingDetailsSetting.integer({
     @JsonKey(name: 'default') required int defaultt,
-    int? maximum,
-    int? minimum,
+    @Default(0) int maximum,
+    @Default(0) int minimum,
     List<KodiSettingDetailsSettingIntOption>? options,
-    int? step,
+    @Default(0) int step,
     required int value,
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingInt;
 
   const factory KodiSettingDetailsSetting.number({
-    @JsonKey(name: 'default') required String defaultt,
+    @JsonKey(name: 'default') required double defaultt,
     required double maximum,
     required double minimum,
     required double step,
@@ -49,9 +49,9 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingNumber;
@@ -59,14 +59,14 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
   const factory KodiSettingDetailsSetting.string({
     @JsonKey(name: 'allowempty') required bool allowEmpty,
     @JsonKey(name: 'default') required String defaultt,
-    List<KodiSettingDetailsSettingIntOption>? options,
+    List<KodiSettingDetailsSettingStringOption>? options,
     required String value,
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingString;
@@ -76,9 +76,9 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingAction;
@@ -89,33 +89,33 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
     required List<KodiSettingValue> defaultt,
     required KodiSettingDetailsSetting definition,
     required String delimiter,
-    @JsonKey(name: 'elementtype') KodiSettingType? elementType,
-    @JsonKey(name: 'maximumitems') int? maximumItems,
-    @JsonKey(name: 'minimumitems') int? minimumItems,
+    @JsonKey(name: 'elementtype') required KodiSettingType elementType,
+    @JsonKey(name: 'maximumitems') @Default(0) int maximumItems,
+    @JsonKey(name: 'minimumitems') @Default(0) int minimumItems,
     @KodiSettingValueConverter() required List<KodiSettingValue> value,
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingList;
 
   const factory KodiSettingDetailsSetting.path({
     List<String>? sources,
-    bool? writeable,
+    required bool writable,
     @JsonKey(name: 'allowempty') required bool allowEmpty,
     @JsonKey(name: 'default') required String defaultt,
-    List<KodiSettingDetailsSettingIntOption>? options,
+    List<KodiSettingDetailsSettingPathOption>? options,
     required String value,
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingPath;
@@ -124,14 +124,14 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
     @JsonKey(name: 'addontype') required KodiAddonType addonType,
     @JsonKey(name: 'allowempty') required bool allowEmpty,
     @JsonKey(name: 'default') required String defaultt,
-    List<KodiSettingDetailsSettingIntOption>? options,
+    List<KodiSettingDetailsSettingAddonOption>? options,
     required String value,
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingAddon;
@@ -139,14 +139,14 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
   const factory KodiSettingDetailsSetting.date({
     @JsonKey(name: 'allowempty') required bool allowEmpty,
     @JsonKey(name: 'default') required String defaultt,
-    List<KodiSettingDetailsSettingIntOption>? options,
+    List<KodiSettingDetailsSettingDateOption>? options,
     required String value,
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingDate;
@@ -154,14 +154,14 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
   const factory KodiSettingDetailsSetting.time({
     @JsonKey(name: 'allowempty') required bool allowEmpty,
     @JsonKey(name: 'default') required String defaultt,
-    List<KodiSettingDetailsSettingIntOption>? options,
+    List<KodiSettingDetailsSettingTimeOption>? options,
     required String value,
     KodiSettingDetailsControl? control,
     required bool enabled,
     required KodiSettingLevel level,
-    String? parent,
+    @Default('') String parent,
     required KodiSettingType type,
-    String? help,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSettingTime;
@@ -170,18 +170,86 @@ class KodiSettingDetailsSetting with _$KodiSettingDetailsSetting {
       _$KodiSettingDetailsSettingFromJson(json);
 }
 
-String parseValue(dynamic value) => 'value';
-
 @freezed
 class KodiSettingDetailsSettingIntOption
     with _$KodiSettingDetailsSettingIntOption {
   const factory KodiSettingDetailsSettingIntOption({
     required String label,
-    @JsonKey(fromJson: parseValue) required String value,
+    required int value,
   }) = _KodiSettingDetailsSettingIntOption;
 
   factory KodiSettingDetailsSettingIntOption.fromJson(
     Map<String, dynamic> json,
   ) =>
       _$KodiSettingDetailsSettingIntOptionFromJson(json);
+}
+
+@freezed
+class KodiSettingDetailsSettingStringOption
+    with _$KodiSettingDetailsSettingStringOption {
+  const factory KodiSettingDetailsSettingStringOption({
+    required String label,
+    required String value,
+  }) = _KodiSettingDetailsSettingStringOption;
+
+  factory KodiSettingDetailsSettingStringOption.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$KodiSettingDetailsSettingStringOptionFromJson(json);
+}
+
+@freezed
+class KodiSettingDetailsSettingPathOption
+    with _$KodiSettingDetailsSettingPathOption {
+  const factory KodiSettingDetailsSettingPathOption({
+    required String label,
+    required String value,
+  }) = _KodiSettingDetailsSettingPathOption;
+
+  factory KodiSettingDetailsSettingPathOption.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$KodiSettingDetailsSettingPathOptionFromJson(json);
+}
+
+@freezed
+class KodiSettingDetailsSettingAddonOption
+    with _$KodiSettingDetailsSettingAddonOption {
+  const factory KodiSettingDetailsSettingAddonOption({
+    required String label,
+    required String value,
+  }) = _KodiSettingDetailsSettingAddonOption;
+
+  factory KodiSettingDetailsSettingAddonOption.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$KodiSettingDetailsSettingAddonOptionFromJson(json);
+}
+
+@freezed
+class KodiSettingDetailsSettingDateOption
+    with _$KodiSettingDetailsSettingDateOption {
+  const factory KodiSettingDetailsSettingDateOption({
+    required String label,
+    required String value,
+  }) = _KodiSettingDetailsSettingDateOption;
+
+  factory KodiSettingDetailsSettingDateOption.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$KodiSettingDetailsSettingDateOptionFromJson(json);
+}
+
+@freezed
+class KodiSettingDetailsSettingTimeOption
+    with _$KodiSettingDetailsSettingTimeOption {
+  const factory KodiSettingDetailsSettingTimeOption({
+    required String label,
+    required String value,
+  }) = _KodiSettingDetailsSettingTimeOption;
+
+  factory KodiSettingDetailsSettingTimeOption.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$KodiSettingDetailsSettingTimeOptionFromJson(json);
 }

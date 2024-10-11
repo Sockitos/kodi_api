@@ -6,8 +6,8 @@ part of 'get_movie_sets.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetMovieSets _$$_GetMovieSetsFromJson(Map<String, dynamic> json) =>
-    _$_GetMovieSets(
+_$GetMovieSetsImpl _$$GetMovieSetsImplFromJson(Map<String, dynamic> json) =>
+    _$GetMovieSetsImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsMovieSetEnumMap, e))
           .toSet(),
@@ -19,7 +19,7 @@ _$_GetMovieSets _$$_GetMovieSetsFromJson(Map<String, dynamic> json) =>
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetMovieSetsToJson(_$_GetMovieSets instance) {
+Map<String, dynamic> _$$GetMovieSetsImplToJson(_$GetMovieSetsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -47,9 +47,9 @@ const _$KodiVideoFieldsMovieSetEnumMap = {
   KodiVideoFieldsMovieSet.plot: 'plot',
 };
 
-_$_GetMovieSetsResponse _$$_GetMovieSetsResponseFromJson(
+_$GetMovieSetsResponseImpl _$$GetMovieSetsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetMovieSetsResponse(
+    _$GetMovieSetsResponseImpl(
       sets: (json['sets'] as List<dynamic>)
           .map((e) =>
               KodiVideoDetailsMovieSet.fromJson(e as Map<String, dynamic>))
@@ -58,8 +58,8 @@ _$_GetMovieSetsResponse _$$_GetMovieSetsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetMovieSetsResponseToJson(
-        _$_GetMovieSetsResponse instance) =>
+Map<String, dynamic> _$$GetMovieSetsResponseImplToJson(
+        _$GetMovieSetsResponseImpl instance) =>
     <String, dynamic>{
       'sets': instance.sets.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

@@ -12,7 +12,7 @@ part of 'execute_addon.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ExecuteAddon _$ExecuteAddonFromJson(Map<String, dynamic> json) {
   return _ExecuteAddon.fromJson(json);
@@ -20,14 +20,19 @@ ExecuteAddon _$ExecuteAddonFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ExecuteAddon {
+  @JsonKey(name: 'addonid')
   String get id => throw _privateConstructorUsedError;
   @KodiAddonsExecuteAddonParamsConverter()
   KodiAddonsExecuteAddonParams? get params =>
       throw _privateConstructorUsedError;
   bool get wait => throw _privateConstructorUsedError;
 
+  /// Serializes this ExecuteAddon to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ExecuteAddon
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExecuteAddonCopyWith<ExecuteAddon> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -39,7 +44,7 @@ abstract class $ExecuteAddonCopyWith<$Res> {
       _$ExecuteAddonCopyWithImpl<$Res, ExecuteAddon>;
   @useResult
   $Res call(
-      {String id,
+      {@JsonKey(name: 'addonid') String id,
       @KodiAddonsExecuteAddonParamsConverter()
       KodiAddonsExecuteAddonParams? params,
       bool wait});
@@ -57,6 +62,8 @@ class _$ExecuteAddonCopyWithImpl<$Res, $Val extends ExecuteAddon>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ExecuteAddon
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +87,8 @@ class _$ExecuteAddonCopyWithImpl<$Res, $Val extends ExecuteAddon>
     ) as $Val);
   }
 
+  /// Create a copy of ExecuteAddon
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiAddonsExecuteAddonParamsCopyWith<$Res>? get params {
@@ -94,15 +103,15 @@ class _$ExecuteAddonCopyWithImpl<$Res, $Val extends ExecuteAddon>
 }
 
 /// @nodoc
-abstract class _$$_ExecuteAddonCopyWith<$Res>
+abstract class _$$ExecuteAddonImplCopyWith<$Res>
     implements $ExecuteAddonCopyWith<$Res> {
-  factory _$$_ExecuteAddonCopyWith(
-          _$_ExecuteAddon value, $Res Function(_$_ExecuteAddon) then) =
-      __$$_ExecuteAddonCopyWithImpl<$Res>;
+  factory _$$ExecuteAddonImplCopyWith(
+          _$ExecuteAddonImpl value, $Res Function(_$ExecuteAddonImpl) then) =
+      __$$ExecuteAddonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {String id,
+      {@JsonKey(name: 'addonid') String id,
       @KodiAddonsExecuteAddonParamsConverter()
       KodiAddonsExecuteAddonParams? params,
       bool wait});
@@ -112,13 +121,15 @@ abstract class _$$_ExecuteAddonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ExecuteAddonCopyWithImpl<$Res>
-    extends _$ExecuteAddonCopyWithImpl<$Res, _$_ExecuteAddon>
-    implements _$$_ExecuteAddonCopyWith<$Res> {
-  __$$_ExecuteAddonCopyWithImpl(
-      _$_ExecuteAddon _value, $Res Function(_$_ExecuteAddon) _then)
+class __$$ExecuteAddonImplCopyWithImpl<$Res>
+    extends _$ExecuteAddonCopyWithImpl<$Res, _$ExecuteAddonImpl>
+    implements _$$ExecuteAddonImplCopyWith<$Res> {
+  __$$ExecuteAddonImplCopyWithImpl(
+      _$ExecuteAddonImpl _value, $Res Function(_$ExecuteAddonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExecuteAddon
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,7 +137,7 @@ class __$$_ExecuteAddonCopyWithImpl<$Res>
     Object? params = freezed,
     Object? wait = null,
   }) {
-    return _then(_$_ExecuteAddon(
+    return _then(_$ExecuteAddonImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -145,15 +156,16 @@ class __$$_ExecuteAddonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ExecuteAddon extends _ExecuteAddon {
-  const _$_ExecuteAddon(this.id,
+class _$ExecuteAddonImpl extends _ExecuteAddon {
+  const _$ExecuteAddonImpl(@JsonKey(name: 'addonid') this.id,
       {@KodiAddonsExecuteAddonParamsConverter() this.params, this.wait = false})
       : super._();
 
-  factory _$_ExecuteAddon.fromJson(Map<String, dynamic> json) =>
-      _$$_ExecuteAddonFromJson(json);
+  factory _$ExecuteAddonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExecuteAddonImplFromJson(json);
 
   @override
+  @JsonKey(name: 'addonid')
   final String id;
   @override
   @KodiAddonsExecuteAddonParamsConverter()
@@ -168,53 +180,59 @@ class _$_ExecuteAddon extends _ExecuteAddon {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ExecuteAddon &&
+            other is _$ExecuteAddonImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.params, params) || other.params == params) &&
             (identical(other.wait, wait) || other.wait == wait));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, params, wait);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExecuteAddon
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExecuteAddonCopyWith<_$_ExecuteAddon> get copyWith =>
-      __$$_ExecuteAddonCopyWithImpl<_$_ExecuteAddon>(this, _$identity);
+  _$$ExecuteAddonImplCopyWith<_$ExecuteAddonImpl> get copyWith =>
+      __$$ExecuteAddonImplCopyWithImpl<_$ExecuteAddonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExecuteAddonToJson(
+    return _$$ExecuteAddonImplToJson(
       this,
     );
   }
 }
 
 abstract class _ExecuteAddon extends ExecuteAddon {
-  const factory _ExecuteAddon(final String id,
+  const factory _ExecuteAddon(@JsonKey(name: 'addonid') final String id,
       {@KodiAddonsExecuteAddonParamsConverter()
       final KodiAddonsExecuteAddonParams? params,
-      final bool wait}) = _$_ExecuteAddon;
+      final bool wait}) = _$ExecuteAddonImpl;
   const _ExecuteAddon._() : super._();
 
   factory _ExecuteAddon.fromJson(Map<String, dynamic> json) =
-      _$_ExecuteAddon.fromJson;
+      _$ExecuteAddonImpl.fromJson;
 
   @override
+  @JsonKey(name: 'addonid')
   String get id;
   @override
   @KodiAddonsExecuteAddonParamsConverter()
   KodiAddonsExecuteAddonParams? get params;
   @override
   bool get wait;
+
+  /// Create a copy of ExecuteAddon
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ExecuteAddonCopyWith<_$_ExecuteAddon> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ExecuteAddonImplCopyWith<_$ExecuteAddonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -293,6 +311,8 @@ mixin _$KodiAddonsExecuteAddonParams {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiAddonsExecuteAddonParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -315,37 +335,44 @@ class _$KodiAddonsExecuteAddonParamsCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWith<
+abstract class _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWith<
     $Res> {
-  factory _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWith(
-          _$KodiAddonsExecuteAddonParamsAdditionalProperties value,
-          $Res Function(_$KodiAddonsExecuteAddonParamsAdditionalProperties)
+  factory _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWith(
+          _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl value,
+          $Res Function(_$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl)
               then) =
-      __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWithImpl<$Res>;
+      __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWithImpl<
+          $Res>;
   @useResult
   $Res call({Map<String, dynamic> additionalProperties});
 }
 
 /// @nodoc
-class __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWithImpl<$Res>
+class __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWithImpl<$Res>
     extends _$KodiAddonsExecuteAddonParamsCopyWithImpl<$Res,
-        _$KodiAddonsExecuteAddonParamsAdditionalProperties>
+        _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl>
     implements
-        _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWith<$Res> {
-  __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWithImpl(
-      _$KodiAddonsExecuteAddonParamsAdditionalProperties _value,
-      $Res Function(_$KodiAddonsExecuteAddonParamsAdditionalProperties) _then)
+        _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWith<$Res> {
+  __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWithImpl(
+      _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl _value,
+      $Res Function(_$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? additionalProperties = null,
   }) {
-    return _then(_$KodiAddonsExecuteAddonParamsAdditionalProperties(
+    return _then(_$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl(
       additionalProperties: null == additionalProperties
           ? _value._additionalProperties
           : additionalProperties // ignore: cast_nullable_to_non_nullable
@@ -356,17 +383,17 @@ class __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiAddonsExecuteAddonParamsAdditionalProperties
+class _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl
     implements KodiAddonsExecuteAddonParamsAdditionalProperties {
-  const _$KodiAddonsExecuteAddonParamsAdditionalProperties(
+  const _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl(
       {required final Map<String, dynamic> additionalProperties,
       final String? $type})
       : _additionalProperties = additionalProperties,
         $type = $type ?? 'additionalProperties';
 
-  factory _$KodiAddonsExecuteAddonParamsAdditionalProperties.fromJson(
+  factory _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesFromJson(json);
+      _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplFromJson(json);
 
   final Map<String, dynamic> _additionalProperties;
   @override
@@ -386,27 +413,29 @@ class _$KodiAddonsExecuteAddonParamsAdditionalProperties
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiAddonsExecuteAddonParamsAdditionalProperties &&
+            other is _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl &&
             const DeepCollectionEquality()
                 .equals(other._additionalProperties, _additionalProperties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_additionalProperties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWith<
-          _$KodiAddonsExecuteAddonParamsAdditionalProperties>
+  _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWith<
+          _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl>
       get copyWith =>
-          __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWithImpl<
-                  _$KodiAddonsExecuteAddonParamsAdditionalProperties>(
+          __$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWithImpl<
+                  _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl>(
               this, _$identity);
 
   @override
@@ -489,7 +518,7 @@ class _$KodiAddonsExecuteAddonParamsAdditionalProperties
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesToJson(
+    return _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplToJson(
       this,
     );
   }
@@ -499,45 +528,50 @@ abstract class KodiAddonsExecuteAddonParamsAdditionalProperties
     implements KodiAddonsExecuteAddonParams {
   const factory KodiAddonsExecuteAddonParamsAdditionalProperties(
           {required final Map<String, dynamic> additionalProperties}) =
-      _$KodiAddonsExecuteAddonParamsAdditionalProperties;
+      _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl;
 
   factory KodiAddonsExecuteAddonParamsAdditionalProperties.fromJson(
           Map<String, dynamic> json) =
-      _$KodiAddonsExecuteAddonParamsAdditionalProperties.fromJson;
+      _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl.fromJson;
 
   Map<String, dynamic> get additionalProperties;
-  @JsonKey(ignore: true)
-  _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesCopyWith<
-          _$KodiAddonsExecuteAddonParamsAdditionalProperties>
+
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonsExecuteAddonParamsAdditionalPropertiesImplCopyWith<
+          _$KodiAddonsExecuteAddonParamsAdditionalPropertiesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiAddonsExecuteAddonParamsItemsCopyWith<$Res> {
-  factory _$$KodiAddonsExecuteAddonParamsItemsCopyWith(
-          _$KodiAddonsExecuteAddonParamsItems value,
-          $Res Function(_$KodiAddonsExecuteAddonParamsItems) then) =
-      __$$KodiAddonsExecuteAddonParamsItemsCopyWithImpl<$Res>;
+abstract class _$$KodiAddonsExecuteAddonParamsItemsImplCopyWith<$Res> {
+  factory _$$KodiAddonsExecuteAddonParamsItemsImplCopyWith(
+          _$KodiAddonsExecuteAddonParamsItemsImpl value,
+          $Res Function(_$KodiAddonsExecuteAddonParamsItemsImpl) then) =
+      __$$KodiAddonsExecuteAddonParamsItemsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<String> items});
 }
 
 /// @nodoc
-class __$$KodiAddonsExecuteAddonParamsItemsCopyWithImpl<$Res>
+class __$$KodiAddonsExecuteAddonParamsItemsImplCopyWithImpl<$Res>
     extends _$KodiAddonsExecuteAddonParamsCopyWithImpl<$Res,
-        _$KodiAddonsExecuteAddonParamsItems>
-    implements _$$KodiAddonsExecuteAddonParamsItemsCopyWith<$Res> {
-  __$$KodiAddonsExecuteAddonParamsItemsCopyWithImpl(
-      _$KodiAddonsExecuteAddonParamsItems _value,
-      $Res Function(_$KodiAddonsExecuteAddonParamsItems) _then)
+        _$KodiAddonsExecuteAddonParamsItemsImpl>
+    implements _$$KodiAddonsExecuteAddonParamsItemsImplCopyWith<$Res> {
+  __$$KodiAddonsExecuteAddonParamsItemsImplCopyWithImpl(
+      _$KodiAddonsExecuteAddonParamsItemsImpl _value,
+      $Res Function(_$KodiAddonsExecuteAddonParamsItemsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? items = null,
   }) {
-    return _then(_$KodiAddonsExecuteAddonParamsItems(
+    return _then(_$KodiAddonsExecuteAddonParamsItemsImpl(
       items: null == items
           ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
@@ -548,16 +582,16 @@ class __$$KodiAddonsExecuteAddonParamsItemsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiAddonsExecuteAddonParamsItems
+class _$KodiAddonsExecuteAddonParamsItemsImpl
     implements KodiAddonsExecuteAddonParamsItems {
-  const _$KodiAddonsExecuteAddonParamsItems(
+  const _$KodiAddonsExecuteAddonParamsItemsImpl(
       {required final List<String> items, final String? $type})
       : _items = items,
         $type = $type ?? 'items';
 
-  factory _$KodiAddonsExecuteAddonParamsItems.fromJson(
+  factory _$KodiAddonsExecuteAddonParamsItemsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$KodiAddonsExecuteAddonParamsItemsFromJson(json);
+      _$$KodiAddonsExecuteAddonParamsItemsImplFromJson(json);
 
   final List<String> _items;
   @override
@@ -576,25 +610,27 @@ class _$KodiAddonsExecuteAddonParamsItems
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiAddonsExecuteAddonParamsItems &&
+            other is _$KodiAddonsExecuteAddonParamsItemsImpl &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_items));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiAddonsExecuteAddonParamsItemsCopyWith<
-          _$KodiAddonsExecuteAddonParamsItems>
-      get copyWith => __$$KodiAddonsExecuteAddonParamsItemsCopyWithImpl<
-          _$KodiAddonsExecuteAddonParamsItems>(this, _$identity);
+  _$$KodiAddonsExecuteAddonParamsItemsImplCopyWith<
+          _$KodiAddonsExecuteAddonParamsItemsImpl>
+      get copyWith => __$$KodiAddonsExecuteAddonParamsItemsImplCopyWithImpl<
+          _$KodiAddonsExecuteAddonParamsItemsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -676,7 +712,7 @@ class _$KodiAddonsExecuteAddonParamsItems
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiAddonsExecuteAddonParamsItemsToJson(
+    return _$$KodiAddonsExecuteAddonParamsItemsImplToJson(
       this,
     );
   }
@@ -686,44 +722,50 @@ abstract class KodiAddonsExecuteAddonParamsItems
     implements KodiAddonsExecuteAddonParams {
   const factory KodiAddonsExecuteAddonParamsItems(
           {required final List<String> items}) =
-      _$KodiAddonsExecuteAddonParamsItems;
+      _$KodiAddonsExecuteAddonParamsItemsImpl;
 
   factory KodiAddonsExecuteAddonParamsItems.fromJson(
-      Map<String, dynamic> json) = _$KodiAddonsExecuteAddonParamsItems.fromJson;
+          Map<String, dynamic> json) =
+      _$KodiAddonsExecuteAddonParamsItemsImpl.fromJson;
 
   List<String> get items;
-  @JsonKey(ignore: true)
-  _$$KodiAddonsExecuteAddonParamsItemsCopyWith<
-          _$KodiAddonsExecuteAddonParamsItems>
+
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonsExecuteAddonParamsItemsImplCopyWith<
+          _$KodiAddonsExecuteAddonParamsItemsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiAddonsExecuteAddonParamsDescriptionCopyWith<$Res> {
-  factory _$$KodiAddonsExecuteAddonParamsDescriptionCopyWith(
-          _$KodiAddonsExecuteAddonParamsDescription value,
-          $Res Function(_$KodiAddonsExecuteAddonParamsDescription) then) =
-      __$$KodiAddonsExecuteAddonParamsDescriptionCopyWithImpl<$Res>;
+abstract class _$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWith<$Res> {
+  factory _$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWith(
+          _$KodiAddonsExecuteAddonParamsDescriptionImpl value,
+          $Res Function(_$KodiAddonsExecuteAddonParamsDescriptionImpl) then) =
+      __$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String description});
 }
 
 /// @nodoc
-class __$$KodiAddonsExecuteAddonParamsDescriptionCopyWithImpl<$Res>
+class __$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWithImpl<$Res>
     extends _$KodiAddonsExecuteAddonParamsCopyWithImpl<$Res,
-        _$KodiAddonsExecuteAddonParamsDescription>
-    implements _$$KodiAddonsExecuteAddonParamsDescriptionCopyWith<$Res> {
-  __$$KodiAddonsExecuteAddonParamsDescriptionCopyWithImpl(
-      _$KodiAddonsExecuteAddonParamsDescription _value,
-      $Res Function(_$KodiAddonsExecuteAddonParamsDescription) _then)
+        _$KodiAddonsExecuteAddonParamsDescriptionImpl>
+    implements _$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWith<$Res> {
+  __$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWithImpl(
+      _$KodiAddonsExecuteAddonParamsDescriptionImpl _value,
+      $Res Function(_$KodiAddonsExecuteAddonParamsDescriptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? description = null,
   }) {
-    return _then(_$KodiAddonsExecuteAddonParamsDescription(
+    return _then(_$KodiAddonsExecuteAddonParamsDescriptionImpl(
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -734,15 +776,15 @@ class __$$KodiAddonsExecuteAddonParamsDescriptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiAddonsExecuteAddonParamsDescription
+class _$KodiAddonsExecuteAddonParamsDescriptionImpl
     implements KodiAddonsExecuteAddonParamsDescription {
-  const _$KodiAddonsExecuteAddonParamsDescription(
+  const _$KodiAddonsExecuteAddonParamsDescriptionImpl(
       {required this.description, final String? $type})
       : $type = $type ?? 'description';
 
-  factory _$KodiAddonsExecuteAddonParamsDescription.fromJson(
+  factory _$KodiAddonsExecuteAddonParamsDescriptionImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$KodiAddonsExecuteAddonParamsDescriptionFromJson(json);
+      _$$KodiAddonsExecuteAddonParamsDescriptionImplFromJson(json);
 
   @override
   final String description;
@@ -756,25 +798,28 @@ class _$KodiAddonsExecuteAddonParamsDescription
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiAddonsExecuteAddonParamsDescription &&
+            other is _$KodiAddonsExecuteAddonParamsDescriptionImpl &&
             (identical(other.description, description) ||
                 other.description == description));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, description);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiAddonsExecuteAddonParamsDescriptionCopyWith<
-          _$KodiAddonsExecuteAddonParamsDescription>
-      get copyWith => __$$KodiAddonsExecuteAddonParamsDescriptionCopyWithImpl<
-          _$KodiAddonsExecuteAddonParamsDescription>(this, _$identity);
+  _$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWith<
+          _$KodiAddonsExecuteAddonParamsDescriptionImpl>
+      get copyWith =>
+          __$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWithImpl<
+              _$KodiAddonsExecuteAddonParamsDescriptionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -856,7 +901,7 @@ class _$KodiAddonsExecuteAddonParamsDescription
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiAddonsExecuteAddonParamsDescriptionToJson(
+    return _$$KodiAddonsExecuteAddonParamsDescriptionImplToJson(
       this,
     );
   }
@@ -866,15 +911,18 @@ abstract class KodiAddonsExecuteAddonParamsDescription
     implements KodiAddonsExecuteAddonParams {
   const factory KodiAddonsExecuteAddonParamsDescription(
           {required final String description}) =
-      _$KodiAddonsExecuteAddonParamsDescription;
+      _$KodiAddonsExecuteAddonParamsDescriptionImpl;
 
   factory KodiAddonsExecuteAddonParamsDescription.fromJson(
           Map<String, dynamic> json) =
-      _$KodiAddonsExecuteAddonParamsDescription.fromJson;
+      _$KodiAddonsExecuteAddonParamsDescriptionImpl.fromJson;
 
   String get description;
-  @JsonKey(ignore: true)
-  _$$KodiAddonsExecuteAddonParamsDescriptionCopyWith<
-          _$KodiAddonsExecuteAddonParamsDescription>
+
+  /// Create a copy of KodiAddonsExecuteAddonParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAddonsExecuteAddonParamsDescriptionImplCopyWith<
+          _$KodiAddonsExecuteAddonParamsDescriptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,8 +6,8 @@ part of 'context_menu.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ContextMenu _$$_ContextMenuFromJson(Map<String, dynamic> json) =>
-    _$_ContextMenu();
+_$ContextMenuImpl _$$ContextMenuImplFromJson(Map<String, dynamic> json) =>
+    _$ContextMenuImpl();
 
-Map<String, dynamic> _$$_ContextMenuToJson(_$_ContextMenu instance) =>
+Map<String, dynamic> _$$ContextMenuImplToJson(_$ContextMenuImpl instance) =>
     <String, dynamic>{};

@@ -12,7 +12,7 @@ part of 'kodi_pvr_details_channel_group_extended.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRDetailsChannelGroupExtended _$KodiPVRDetailsChannelGroupExtendedFromJson(
     Map<String, dynamic> json) {
@@ -30,8 +30,12 @@ mixin _$KodiPVRDetailsChannelGroupExtended {
   KodiPVRChannelType get channelType => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRDetailsChannelGroupExtended to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRDetailsChannelGroupExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRDetailsChannelGroupExtendedCopyWith<
           KodiPVRDetailsChannelGroupExtended>
       get copyWith => throw _privateConstructorUsedError;
@@ -66,6 +70,8 @@ class _$KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRDetailsChannelGroupExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,6 +105,8 @@ class _$KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPVRDetailsChannelGroupExtended
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -109,12 +117,12 @@ class _$KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRDetailsChannelGroupExtendedCopyWith<$Res>
+abstract class _$$KodiPVRDetailsChannelGroupExtendedImplCopyWith<$Res>
     implements $KodiPVRDetailsChannelGroupExtendedCopyWith<$Res> {
-  factory _$$_KodiPVRDetailsChannelGroupExtendedCopyWith(
-          _$_KodiPVRDetailsChannelGroupExtended value,
-          $Res Function(_$_KodiPVRDetailsChannelGroupExtended) then) =
-      __$$_KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res>;
+  factory _$$KodiPVRDetailsChannelGroupExtendedImplCopyWith(
+          _$KodiPVRDetailsChannelGroupExtendedImpl value,
+          $Res Function(_$KodiPVRDetailsChannelGroupExtendedImpl) then) =
+      __$$KodiPVRDetailsChannelGroupExtendedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -129,15 +137,17 @@ abstract class _$$_KodiPVRDetailsChannelGroupExtendedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res>
+class __$$KodiPVRDetailsChannelGroupExtendedImplCopyWithImpl<$Res>
     extends _$KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res,
-        _$_KodiPVRDetailsChannelGroupExtended>
-    implements _$$_KodiPVRDetailsChannelGroupExtendedCopyWith<$Res> {
-  __$$_KodiPVRDetailsChannelGroupExtendedCopyWithImpl(
-      _$_KodiPVRDetailsChannelGroupExtended _value,
-      $Res Function(_$_KodiPVRDetailsChannelGroupExtended) _then)
+        _$KodiPVRDetailsChannelGroupExtendedImpl>
+    implements _$$KodiPVRDetailsChannelGroupExtendedImplCopyWith<$Res> {
+  __$$KodiPVRDetailsChannelGroupExtendedImplCopyWithImpl(
+      _$KodiPVRDetailsChannelGroupExtendedImpl _value,
+      $Res Function(_$KodiPVRDetailsChannelGroupExtendedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRDetailsChannelGroupExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -147,7 +157,7 @@ class __$$_KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res>
     Object? channelType = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiPVRDetailsChannelGroupExtended(
+    return _then(_$KodiPVRDetailsChannelGroupExtendedImpl(
       channels: null == channels
           ? _value._channels
           : channels // ignore: cast_nullable_to_non_nullable
@@ -174,9 +184,9 @@ class __$$_KodiPVRDetailsChannelGroupExtendedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRDetailsChannelGroupExtended
+class _$KodiPVRDetailsChannelGroupExtendedImpl
     implements _KodiPVRDetailsChannelGroupExtended {
-  const _$_KodiPVRDetailsChannelGroupExtended(
+  const _$KodiPVRDetailsChannelGroupExtendedImpl(
       {required final List<KodiPVRDetailsChannel> channels,
       required this.limits,
       @JsonKey(name: 'channelgroupid') required this.channelGroupId,
@@ -184,9 +194,9 @@ class _$_KodiPVRDetailsChannelGroupExtended
       required this.label})
       : _channels = channels;
 
-  factory _$_KodiPVRDetailsChannelGroupExtended.fromJson(
+  factory _$KodiPVRDetailsChannelGroupExtendedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPVRDetailsChannelGroupExtendedFromJson(json);
+      _$$KodiPVRDetailsChannelGroupExtendedImplFromJson(json);
 
   final List<KodiPVRDetailsChannel> _channels;
   @override
@@ -213,10 +223,10 @@ class _$_KodiPVRDetailsChannelGroupExtended
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRDetailsChannelGroupExtended &&
+            other is _$KodiPVRDetailsChannelGroupExtendedImpl &&
             const DeepCollectionEquality().equals(other._channels, _channels) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.channelGroupId, channelGroupId) ||
@@ -226,7 +236,7 @@ class _$_KodiPVRDetailsChannelGroupExtended
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -236,17 +246,19 @@ class _$_KodiPVRDetailsChannelGroupExtended
       channelType,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRDetailsChannelGroupExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRDetailsChannelGroupExtendedCopyWith<
-          _$_KodiPVRDetailsChannelGroupExtended>
-      get copyWith => __$$_KodiPVRDetailsChannelGroupExtendedCopyWithImpl<
-          _$_KodiPVRDetailsChannelGroupExtended>(this, _$identity);
+  _$$KodiPVRDetailsChannelGroupExtendedImplCopyWith<
+          _$KodiPVRDetailsChannelGroupExtendedImpl>
+      get copyWith => __$$KodiPVRDetailsChannelGroupExtendedImplCopyWithImpl<
+          _$KodiPVRDetailsChannelGroupExtendedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRDetailsChannelGroupExtendedToJson(
+    return _$$KodiPVRDetailsChannelGroupExtendedImplToJson(
       this,
     );
   }
@@ -260,11 +272,11 @@ abstract class _KodiPVRDetailsChannelGroupExtended
       @JsonKey(name: 'channelgroupid') required final int channelGroupId,
       @JsonKey(name: 'channeltype')
       required final KodiPVRChannelType channelType,
-      required final String label}) = _$_KodiPVRDetailsChannelGroupExtended;
+      required final String label}) = _$KodiPVRDetailsChannelGroupExtendedImpl;
 
   factory _KodiPVRDetailsChannelGroupExtended.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPVRDetailsChannelGroupExtended.fromJson;
+      _$KodiPVRDetailsChannelGroupExtendedImpl.fromJson;
 
   @override
   List<KodiPVRDetailsChannel> get channels;
@@ -278,9 +290,12 @@ abstract class _KodiPVRDetailsChannelGroupExtended
   KodiPVRChannelType get channelType;
   @override
   String get label;
+
+  /// Create a copy of KodiPVRDetailsChannelGroupExtended
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRDetailsChannelGroupExtendedCopyWith<
-          _$_KodiPVRDetailsChannelGroupExtended>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRDetailsChannelGroupExtendedImplCopyWith<
+          _$KodiPVRDetailsChannelGroupExtendedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

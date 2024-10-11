@@ -12,7 +12,7 @@ part of 'remove_tv_show.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RemoveTVShow _$RemoveTVShowFromJson(Map<String, dynamic> json) {
   return _RemoveTVShow.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$RemoveTVShow {
   @JsonKey(name: 'tvshowid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this RemoveTVShow to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoveTVShow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoveTVShowCopyWith<RemoveTVShow> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$RemoveTVShowCopyWithImpl<$Res, $Val extends RemoveTVShow>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoveTVShow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,30 +69,32 @@ class _$RemoveTVShowCopyWithImpl<$Res, $Val extends RemoveTVShow>
 }
 
 /// @nodoc
-abstract class _$$_RemoveTVShowCopyWith<$Res>
+abstract class _$$RemoveTVShowImplCopyWith<$Res>
     implements $RemoveTVShowCopyWith<$Res> {
-  factory _$$_RemoveTVShowCopyWith(
-          _$_RemoveTVShow value, $Res Function(_$_RemoveTVShow) then) =
-      __$$_RemoveTVShowCopyWithImpl<$Res>;
+  factory _$$RemoveTVShowImplCopyWith(
+          _$RemoveTVShowImpl value, $Res Function(_$RemoveTVShowImpl) then) =
+      __$$RemoveTVShowImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'tvshowid') int id});
 }
 
 /// @nodoc
-class __$$_RemoveTVShowCopyWithImpl<$Res>
-    extends _$RemoveTVShowCopyWithImpl<$Res, _$_RemoveTVShow>
-    implements _$$_RemoveTVShowCopyWith<$Res> {
-  __$$_RemoveTVShowCopyWithImpl(
-      _$_RemoveTVShow _value, $Res Function(_$_RemoveTVShow) _then)
+class __$$RemoveTVShowImplCopyWithImpl<$Res>
+    extends _$RemoveTVShowCopyWithImpl<$Res, _$RemoveTVShowImpl>
+    implements _$$RemoveTVShowImplCopyWith<$Res> {
+  __$$RemoveTVShowImplCopyWithImpl(
+      _$RemoveTVShowImpl _value, $Res Function(_$RemoveTVShowImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoveTVShow
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_RemoveTVShow(
+    return _then(_$RemoveTVShowImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -97,11 +105,11 @@ class __$$_RemoveTVShowCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RemoveTVShow extends _RemoveTVShow {
-  const _$_RemoveTVShow(@JsonKey(name: 'tvshowid') this.id) : super._();
+class _$RemoveTVShowImpl extends _RemoveTVShow {
+  const _$RemoveTVShowImpl(@JsonKey(name: 'tvshowid') this.id) : super._();
 
-  factory _$_RemoveTVShow.fromJson(Map<String, dynamic> json) =>
-      _$$_RemoveTVShowFromJson(json);
+  factory _$RemoveTVShowImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RemoveTVShowImplFromJson(json);
 
   @override
   @JsonKey(name: 'tvshowid')
@@ -113,26 +121,28 @@ class _$_RemoveTVShow extends _RemoveTVShow {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RemoveTVShow &&
+            other is _$RemoveTVShowImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoveTVShow
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RemoveTVShowCopyWith<_$_RemoveTVShow> get copyWith =>
-      __$$_RemoveTVShowCopyWithImpl<_$_RemoveTVShow>(this, _$identity);
+  _$$RemoveTVShowImplCopyWith<_$RemoveTVShowImpl> get copyWith =>
+      __$$RemoveTVShowImplCopyWithImpl<_$RemoveTVShowImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RemoveTVShowToJson(
+    return _$$RemoveTVShowImplToJson(
       this,
     );
   }
@@ -140,17 +150,20 @@ class _$_RemoveTVShow extends _RemoveTVShow {
 
 abstract class _RemoveTVShow extends RemoveTVShow {
   const factory _RemoveTVShow(@JsonKey(name: 'tvshowid') final int id) =
-      _$_RemoveTVShow;
+      _$RemoveTVShowImpl;
   const _RemoveTVShow._() : super._();
 
   factory _RemoveTVShow.fromJson(Map<String, dynamic> json) =
-      _$_RemoveTVShow.fromJson;
+      _$RemoveTVShowImpl.fromJson;
 
   @override
   @JsonKey(name: 'tvshowid')
   int get id;
+
+  /// Create a copy of RemoveTVShow
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RemoveTVShowCopyWith<_$_RemoveTVShow> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RemoveTVShowImplCopyWith<_$RemoveTVShowImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,12 +6,14 @@ part of 'get_setting_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSettingValue _$$_GetSettingValueFromJson(Map<String, dynamic> json) =>
-    _$_GetSettingValue(
+_$GetSettingValueImpl _$$GetSettingValueImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetSettingValueImpl(
       json['setting'] as String,
     );
 
-Map<String, dynamic> _$$_GetSettingValueToJson(_$_GetSettingValue instance) =>
+Map<String, dynamic> _$$GetSettingValueImplToJson(
+        _$GetSettingValueImpl instance) =>
     <String, dynamic>{
       'setting': instance.setting,
     };

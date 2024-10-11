@@ -12,7 +12,7 @@ part of 'kodi_library_details_source.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiLibraryDetailsSource _$KodiLibraryDetailsSourceFromJson(
     Map<String, dynamic> json) {
@@ -27,8 +27,12 @@ mixin _$KodiLibraryDetailsSource {
   int get sourceId => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiLibraryDetailsSource to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiLibraryDetailsSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiLibraryDetailsSourceCopyWith<KodiLibraryDetailsSource> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$KodiLibraryDetailsSourceCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiLibraryDetailsSource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,12 +93,12 @@ class _$KodiLibraryDetailsSourceCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiLibraryDetailsSourceCopyWith<$Res>
+abstract class _$$KodiLibraryDetailsSourceImplCopyWith<$Res>
     implements $KodiLibraryDetailsSourceCopyWith<$Res> {
-  factory _$$_KodiLibraryDetailsSourceCopyWith(
-          _$_KodiLibraryDetailsSource value,
-          $Res Function(_$_KodiLibraryDetailsSource) then) =
-      __$$_KodiLibraryDetailsSourceCopyWithImpl<$Res>;
+  factory _$$KodiLibraryDetailsSourceImplCopyWith(
+          _$KodiLibraryDetailsSourceImpl value,
+          $Res Function(_$KodiLibraryDetailsSourceImpl) then) =
+      __$$KodiLibraryDetailsSourceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -103,14 +109,17 @@ abstract class _$$_KodiLibraryDetailsSourceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiLibraryDetailsSourceCopyWithImpl<$Res>
+class __$$KodiLibraryDetailsSourceImplCopyWithImpl<$Res>
     extends _$KodiLibraryDetailsSourceCopyWithImpl<$Res,
-        _$_KodiLibraryDetailsSource>
-    implements _$$_KodiLibraryDetailsSourceCopyWith<$Res> {
-  __$$_KodiLibraryDetailsSourceCopyWithImpl(_$_KodiLibraryDetailsSource _value,
-      $Res Function(_$_KodiLibraryDetailsSource) _then)
+        _$KodiLibraryDetailsSourceImpl>
+    implements _$$KodiLibraryDetailsSourceImplCopyWith<$Res> {
+  __$$KodiLibraryDetailsSourceImplCopyWithImpl(
+      _$KodiLibraryDetailsSourceImpl _value,
+      $Res Function(_$KodiLibraryDetailsSourceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiLibraryDetailsSource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -119,7 +128,7 @@ class __$$_KodiLibraryDetailsSourceCopyWithImpl<$Res>
     Object? sourceId = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiLibraryDetailsSource(
+    return _then(_$KodiLibraryDetailsSourceImpl(
       file: null == file
           ? _value.file
           : file // ignore: cast_nullable_to_non_nullable
@@ -142,16 +151,16 @@ class __$$_KodiLibraryDetailsSourceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiLibraryDetailsSource implements _KodiLibraryDetailsSource {
-  const _$_KodiLibraryDetailsSource(
+class _$KodiLibraryDetailsSourceImpl implements _KodiLibraryDetailsSource {
+  const _$KodiLibraryDetailsSourceImpl(
       {required this.file,
       final List<String> paths = const <String>[],
       @JsonKey(name: 'sourceid') required this.sourceId,
       required this.label})
       : _paths = paths;
 
-  factory _$_KodiLibraryDetailsSource.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiLibraryDetailsSourceFromJson(json);
+  factory _$KodiLibraryDetailsSourceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiLibraryDetailsSourceImplFromJson(json);
 
   @override
   final String file;
@@ -176,10 +185,10 @@ class _$_KodiLibraryDetailsSource implements _KodiLibraryDetailsSource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiLibraryDetailsSource &&
+            other is _$KodiLibraryDetailsSourceImpl &&
             (identical(other.file, file) || other.file == file) &&
             const DeepCollectionEquality().equals(other._paths, _paths) &&
             (identical(other.sourceId, sourceId) ||
@@ -187,21 +196,23 @@ class _$_KodiLibraryDetailsSource implements _KodiLibraryDetailsSource {
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, file,
       const DeepCollectionEquality().hash(_paths), sourceId, label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiLibraryDetailsSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiLibraryDetailsSourceCopyWith<_$_KodiLibraryDetailsSource>
-      get copyWith => __$$_KodiLibraryDetailsSourceCopyWithImpl<
-          _$_KodiLibraryDetailsSource>(this, _$identity);
+  _$$KodiLibraryDetailsSourceImplCopyWith<_$KodiLibraryDetailsSourceImpl>
+      get copyWith => __$$KodiLibraryDetailsSourceImplCopyWithImpl<
+          _$KodiLibraryDetailsSourceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiLibraryDetailsSourceToJson(
+    return _$$KodiLibraryDetailsSourceImplToJson(
       this,
     );
   }
@@ -212,10 +223,10 @@ abstract class _KodiLibraryDetailsSource implements KodiLibraryDetailsSource {
       {required final String file,
       final List<String> paths,
       @JsonKey(name: 'sourceid') required final int sourceId,
-      required final String label}) = _$_KodiLibraryDetailsSource;
+      required final String label}) = _$KodiLibraryDetailsSourceImpl;
 
   factory _KodiLibraryDetailsSource.fromJson(Map<String, dynamic> json) =
-      _$_KodiLibraryDetailsSource.fromJson;
+      _$KodiLibraryDetailsSourceImpl.fromJson;
 
   @override
   String get file;
@@ -226,8 +237,11 @@ abstract class _KodiLibraryDetailsSource implements KodiLibraryDetailsSource {
   int get sourceId;
   @override
   String get label;
+
+  /// Create a copy of KodiLibraryDetailsSource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiLibraryDetailsSourceCopyWith<_$_KodiLibraryDetailsSource>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiLibraryDetailsSourceImplCopyWith<_$KodiLibraryDetailsSourceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

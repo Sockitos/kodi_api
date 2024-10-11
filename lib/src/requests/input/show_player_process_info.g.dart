@@ -6,10 +6,10 @@ part of 'show_player_process_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ShowPlayerProcessInfo _$$_ShowPlayerProcessInfoFromJson(
+_$ShowPlayerProcessInfoImpl _$$ShowPlayerProcessInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ShowPlayerProcessInfo();
+    _$ShowPlayerProcessInfoImpl();
 
-Map<String, dynamic> _$$_ShowPlayerProcessInfoToJson(
-        _$_ShowPlayerProcessInfo instance) =>
+Map<String, dynamic> _$$ShowPlayerProcessInfoImplToJson(
+        _$ShowPlayerProcessInfoImpl instance) =>
     <String, dynamic>{};

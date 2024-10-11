@@ -12,7 +12,7 @@ part of 'notify_all.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 NotifyAll _$NotifyAllFromJson(Map<String, dynamic> json) {
   return _NotifyAll.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$NotifyAll {
   String get message => throw _privateConstructorUsedError;
   Map<String, dynamic>? get data => throw _privateConstructorUsedError;
 
+  /// Serializes this NotifyAll to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NotifyAll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NotifyAllCopyWith<NotifyAll> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$NotifyAllCopyWithImpl<$Res, $Val extends NotifyAll>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NotifyAll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -73,23 +79,26 @@ class _$NotifyAllCopyWithImpl<$Res, $Val extends NotifyAll>
 }
 
 /// @nodoc
-abstract class _$$_NotifyAllCopyWith<$Res> implements $NotifyAllCopyWith<$Res> {
-  factory _$$_NotifyAllCopyWith(
-          _$_NotifyAll value, $Res Function(_$_NotifyAll) then) =
-      __$$_NotifyAllCopyWithImpl<$Res>;
+abstract class _$$NotifyAllImplCopyWith<$Res>
+    implements $NotifyAllCopyWith<$Res> {
+  factory _$$NotifyAllImplCopyWith(
+          _$NotifyAllImpl value, $Res Function(_$NotifyAllImpl) then) =
+      __$$NotifyAllImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, String message, Map<String, dynamic>? data});
 }
 
 /// @nodoc
-class __$$_NotifyAllCopyWithImpl<$Res>
-    extends _$NotifyAllCopyWithImpl<$Res, _$_NotifyAll>
-    implements _$$_NotifyAllCopyWith<$Res> {
-  __$$_NotifyAllCopyWithImpl(
-      _$_NotifyAll _value, $Res Function(_$_NotifyAll) _then)
+class __$$NotifyAllImplCopyWithImpl<$Res>
+    extends _$NotifyAllCopyWithImpl<$Res, _$NotifyAllImpl>
+    implements _$$NotifyAllImplCopyWith<$Res> {
+  __$$NotifyAllImplCopyWithImpl(
+      _$NotifyAllImpl _value, $Res Function(_$NotifyAllImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NotifyAll
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -97,7 +106,7 @@ class __$$_NotifyAllCopyWithImpl<$Res>
     Object? message = null,
     Object? data = freezed,
   }) {
-    return _then(_$_NotifyAll(
+    return _then(_$NotifyAllImpl(
       null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -116,14 +125,14 @@ class __$$_NotifyAllCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NotifyAll extends _NotifyAll {
-  const _$_NotifyAll(this.sender, this.message,
+class _$NotifyAllImpl extends _NotifyAll {
+  const _$NotifyAllImpl(this.sender, this.message,
       {final Map<String, dynamic>? data})
       : _data = data,
         super._();
 
-  factory _$_NotifyAll.fromJson(Map<String, dynamic> json) =>
-      _$$_NotifyAllFromJson(json);
+  factory _$NotifyAllImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NotifyAllImplFromJson(json);
 
   @override
   final String sender;
@@ -145,29 +154,31 @@ class _$_NotifyAll extends _NotifyAll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NotifyAll &&
+            other is _$NotifyAllImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.message, message) || other.message == message) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, sender, message, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NotifyAll
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NotifyAllCopyWith<_$_NotifyAll> get copyWith =>
-      __$$_NotifyAllCopyWithImpl<_$_NotifyAll>(this, _$identity);
+  _$$NotifyAllImplCopyWith<_$NotifyAllImpl> get copyWith =>
+      __$$NotifyAllImplCopyWithImpl<_$NotifyAllImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NotifyAllToJson(
+    return _$$NotifyAllImplToJson(
       this,
     );
   }
@@ -175,11 +186,11 @@ class _$_NotifyAll extends _NotifyAll {
 
 abstract class _NotifyAll extends NotifyAll {
   const factory _NotifyAll(final String sender, final String message,
-      {final Map<String, dynamic>? data}) = _$_NotifyAll;
+      {final Map<String, dynamic>? data}) = _$NotifyAllImpl;
   const _NotifyAll._() : super._();
 
   factory _NotifyAll.fromJson(Map<String, dynamic> json) =
-      _$_NotifyAll.fromJson;
+      _$NotifyAllImpl.fromJson;
 
   @override
   String get sender;
@@ -187,8 +198,11 @@ abstract class _NotifyAll extends NotifyAll {
   String get message;
   @override
   Map<String, dynamic>? get data;
+
+  /// Create a copy of NotifyAll
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_NotifyAllCopyWith<_$_NotifyAll> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$NotifyAllImplCopyWith<_$NotifyAllImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

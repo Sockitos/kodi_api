@@ -7,7 +7,7 @@ part 'kodi_library_details_tag.g.dart';
 class KodiLibraryDetailsTag with _$KodiLibraryDetailsTag {
   const factory KodiLibraryDetailsTag({
     @JsonKey(name: 'tagid') required int tagId,
-    String? title,
+    @Default('') String title,
     required String label,
   }) = _KodiLibraryDetailsTag;
 

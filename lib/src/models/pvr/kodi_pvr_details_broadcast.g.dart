@@ -6,80 +6,91 @@ part of 'kodi_pvr_details_broadcast.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsBroadcast _$$_KodiPVRDetailsBroadcastFromJson(
+_$KodiPVRDetailsBroadcastImpl _$$KodiPVRDetailsBroadcastImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsBroadcast(
-      broadcastId: json['broadcastid'] as int,
-      cast: json['cast'] as String,
-      clientId: json['clientid'] as int,
-      director: json['director'] as String,
-      endTime: DateTime.parse(json['endtime'] as String),
-      episodeName: json['episodename'] as String,
-      episodeNum: json['episodenum'] as int,
-      episodePart: json['episodepart'] as int,
-      firstAired: DateTime.parse(json['firstaired'] as String),
-      genre: json['genre'] as String,
-      hasRecording: json['hasrecording'] as bool,
-      hasReminder: json['hasreminder'] as bool,
-      hasTimer: json['hastimer'] as bool,
-      hasTimerRule: json['hastimerrule'] as bool,
-      imdbNumber: json['imdbnumber'] as int,
-      isActive: json['isactive'] as bool,
-      isPlayable: json['isplayable'] as bool,
-      isSeries: json['isseries'] as bool,
-      originalTitle: json['originaltitle'] as String,
-      parentalRating: json['parentalrating'] as int,
-      plot: json['plot'] as String,
-      plotOutline: json['plotoutline'] as String,
-      progress: json['progress'] as int,
-      progressPercentage: (json['progresspercentage'] as num).toDouble(),
-      rating: json['rating'] as int,
-      recording: json['recording'] as String,
-      runtime: json['runtime'] as int,
-      startTime: DateTime.parse(json['starttime'] as String),
-      thumbnail: json['thumbnail'] as String,
-      title: json['title'] as String,
-      wasActive: json['wasactive'] as bool,
-      writer: json['writer'] as String,
-      year: json['year'] as int,
+    _$KodiPVRDetailsBroadcastImpl(
+      broadcastId: (json['broadcastid'] as num).toInt(),
+      cast: json['cast'] as String? ?? '',
+      clientId: (json['clientid'] as num?)?.toInt(),
+      director: json['director'] as String? ?? '',
+      endTime: const DateTimeConverter().fromJson(json['endtime']),
+      episodeName: json['episodename'] as String? ?? '',
+      episodeNum: (json['episodenum'] as num?)?.toInt() ?? 0,
+      episodePart: (json['episodepart'] as num?)?.toInt() ?? 0,
+      firstAired: const DateTimeConverter().fromJson(json['firstaired']),
+      genre:
+          (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      hasRecording: json['hasrecording'] as bool? ?? false,
+      hasReminder: json['hasreminder'] as bool? ?? false,
+      hasTimer: json['hastimer'] as bool? ?? false,
+      hasTimerRule: json['hastimerrule'] as bool? ?? false,
+      imdbNumber: json['imdbnumber'] as String? ?? '',
+      isActive: json['isactive'] as bool? ?? false,
+      isSeries: json['isseries'] as bool? ?? false,
+      originalTitle: json['originaltitle'] as String? ?? '',
+      parentalRating: (json['parentalrating'] as num?)?.toInt() ?? 0,
+      plot: json['plot'] as String? ?? '',
+      plotOutline: json['plotoutline'] as String? ?? '',
+      progress: (json['progress'] as num?)?.toInt() ?? 0,
+      progressPercentage:
+          (json['progresspercentage'] as num?)?.toDouble() ?? 0.0,
+      rating: (json['rating'] as num?)?.toInt() ?? 0,
+      recording: json['recording'] as String? ?? '',
+      runtime: (json['runtime'] as num?)?.toInt() ?? 0,
+      startTime: const DateTimeConverter().fromJson(json['starttime']),
+      thumbnail: json['thumbnail'] as String? ?? '',
+      title: json['title'] as String? ?? '',
+      wasActive: json['wasactive'] as bool? ?? false,
+      writer: json['writer'] as String? ?? '',
+      year: (json['year'] as num?)?.toInt() ?? 0,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsBroadcastToJson(
-        _$_KodiPVRDetailsBroadcast instance) =>
-    <String, dynamic>{
-      'broadcastid': instance.broadcastId,
-      'cast': instance.cast,
-      'clientid': instance.clientId,
-      'director': instance.director,
-      'endtime': instance.endTime.toIso8601String(),
-      'episodename': instance.episodeName,
-      'episodenum': instance.episodeNum,
-      'episodepart': instance.episodePart,
-      'firstaired': instance.firstAired.toIso8601String(),
-      'genre': instance.genre,
-      'hasrecording': instance.hasRecording,
-      'hasreminder': instance.hasReminder,
-      'hastimer': instance.hasTimer,
-      'hastimerrule': instance.hasTimerRule,
-      'imdbnumber': instance.imdbNumber,
-      'isactive': instance.isActive,
-      'isplayable': instance.isPlayable,
-      'isseries': instance.isSeries,
-      'originaltitle': instance.originalTitle,
-      'parentalrating': instance.parentalRating,
-      'plot': instance.plot,
-      'plotoutline': instance.plotOutline,
-      'progress': instance.progress,
-      'progresspercentage': instance.progressPercentage,
-      'rating': instance.rating,
-      'recording': instance.recording,
-      'runtime': instance.runtime,
-      'starttime': instance.startTime.toIso8601String(),
-      'thumbnail': instance.thumbnail,
-      'title': instance.title,
-      'wasactive': instance.wasActive,
-      'writer': instance.writer,
-      'year': instance.year,
-      'label': instance.label,
-    };
+Map<String, dynamic> _$$KodiPVRDetailsBroadcastImplToJson(
+    _$KodiPVRDetailsBroadcastImpl instance) {
+  final val = <String, dynamic>{
+    'broadcastid': instance.broadcastId,
+    'cast': instance.cast,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('clientid', instance.clientId);
+  val['director'] = instance.director;
+  writeNotNull('endtime', const DateTimeConverter().toJson(instance.endTime));
+  val['episodename'] = instance.episodeName;
+  val['episodenum'] = instance.episodeNum;
+  val['episodepart'] = instance.episodePart;
+  writeNotNull(
+      'firstaired', const DateTimeConverter().toJson(instance.firstAired));
+  writeNotNull('genre', instance.genre);
+  val['hasrecording'] = instance.hasRecording;
+  val['hasreminder'] = instance.hasReminder;
+  val['hastimer'] = instance.hasTimer;
+  val['hastimerrule'] = instance.hasTimerRule;
+  val['imdbnumber'] = instance.imdbNumber;
+  val['isactive'] = instance.isActive;
+  val['isseries'] = instance.isSeries;
+  val['originaltitle'] = instance.originalTitle;
+  val['parentalrating'] = instance.parentalRating;
+  val['plot'] = instance.plot;
+  val['plotoutline'] = instance.plotOutline;
+  val['progress'] = instance.progress;
+  val['progresspercentage'] = instance.progressPercentage;
+  val['rating'] = instance.rating;
+  val['recording'] = instance.recording;
+  val['runtime'] = instance.runtime;
+  writeNotNull(
+      'starttime', const DateTimeConverter().toJson(instance.startTime));
+  val['thumbnail'] = instance.thumbnail;
+  val['title'] = instance.title;
+  val['wasactive'] = instance.wasActive;
+  val['writer'] = instance.writer;
+  val['year'] = instance.year;
+  val['label'] = instance.label;
+  return val;
+}

@@ -12,7 +12,7 @@ part of 'set_music_video_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetMusicVideoDetails _$SetMusicVideoDetailsFromJson(Map<String, dynamic> json) {
   return _SetMusicVideoDetails.fromJson(json);
@@ -53,8 +53,12 @@ mixin _$SetMusicVideoDetails {
   DateTime? get dateAdded => throw _privateConstructorUsedError;
   DateTime? get premiered => throw _privateConstructorUsedError;
 
+  /// Serializes this SetMusicVideoDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetMusicVideoDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetMusicVideoDetailsCopyWith<SetMusicVideoDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -104,6 +108,8 @@ class _$SetMusicVideoDetailsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetMusicVideoDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -222,6 +228,8 @@ class _$SetMusicVideoDetailsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of SetMusicVideoDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkSetCopyWith<$Res>? get art {
@@ -234,6 +242,8 @@ class _$SetMusicVideoDetailsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of SetMusicVideoDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiVideoResumeCopyWith<$Res>? get resume {
@@ -248,11 +258,11 @@ class _$SetMusicVideoDetailsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SetMusicVideoDetailsCopyWith<$Res>
+abstract class _$$SetMusicVideoDetailsImplCopyWith<$Res>
     implements $SetMusicVideoDetailsCopyWith<$Res> {
-  factory _$$_SetMusicVideoDetailsCopyWith(_$_SetMusicVideoDetails value,
-          $Res Function(_$_SetMusicVideoDetails) then) =
-      __$$_SetMusicVideoDetailsCopyWithImpl<$Res>;
+  factory _$$SetMusicVideoDetailsImplCopyWith(_$SetMusicVideoDetailsImpl value,
+          $Res Function(_$SetMusicVideoDetailsImpl) then) =
+      __$$SetMusicVideoDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -286,13 +296,15 @@ abstract class _$$_SetMusicVideoDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetMusicVideoDetailsCopyWithImpl<$Res>
-    extends _$SetMusicVideoDetailsCopyWithImpl<$Res, _$_SetMusicVideoDetails>
-    implements _$$_SetMusicVideoDetailsCopyWith<$Res> {
-  __$$_SetMusicVideoDetailsCopyWithImpl(_$_SetMusicVideoDetails _value,
-      $Res Function(_$_SetMusicVideoDetails) _then)
+class __$$SetMusicVideoDetailsImplCopyWithImpl<$Res>
+    extends _$SetMusicVideoDetailsCopyWithImpl<$Res, _$SetMusicVideoDetailsImpl>
+    implements _$$SetMusicVideoDetailsImplCopyWith<$Res> {
+  __$$SetMusicVideoDetailsImplCopyWithImpl(_$SetMusicVideoDetailsImpl _value,
+      $Res Function(_$SetMusicVideoDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetMusicVideoDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -319,7 +331,7 @@ class __$$_SetMusicVideoDetailsCopyWithImpl<$Res>
     Object? dateAdded = freezed,
     Object? premiered = freezed,
   }) {
-    return _then(_$_SetMusicVideoDetails(
+    return _then(_$SetMusicVideoDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -414,8 +426,8 @@ class __$$_SetMusicVideoDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetMusicVideoDetails extends _SetMusicVideoDetails {
-  const _$_SetMusicVideoDetails(@JsonKey(name: 'musicvideoid') this.id,
+class _$SetMusicVideoDetailsImpl extends _SetMusicVideoDetails {
+  const _$SetMusicVideoDetailsImpl(@JsonKey(name: 'musicvideoid') this.id,
       {this.title,
       @JsonKey(name: 'playcount') this.playCount,
       this.runtime,
@@ -444,8 +456,8 @@ class _$_SetMusicVideoDetails extends _SetMusicVideoDetails {
         _tags = tags,
         super._();
 
-  factory _$_SetMusicVideoDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_SetMusicVideoDetailsFromJson(json);
+  factory _$SetMusicVideoDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetMusicVideoDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'musicvideoid')
@@ -548,10 +560,10 @@ class _$_SetMusicVideoDetails extends _SetMusicVideoDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetMusicVideoDetails &&
+            other is _$SetMusicVideoDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.playCount, playCount) ||
@@ -583,7 +595,7 @@ class _$_SetMusicVideoDetails extends _SetMusicVideoDetails {
                 other.premiered == premiered));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -611,16 +623,19 @@ class _$_SetMusicVideoDetails extends _SetMusicVideoDetails {
         premiered
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetMusicVideoDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetMusicVideoDetailsCopyWith<_$_SetMusicVideoDetails> get copyWith =>
-      __$$_SetMusicVideoDetailsCopyWithImpl<_$_SetMusicVideoDetails>(
-          this, _$identity);
+  _$$SetMusicVideoDetailsImplCopyWith<_$SetMusicVideoDetailsImpl>
+      get copyWith =>
+          __$$SetMusicVideoDetailsImplCopyWithImpl<_$SetMusicVideoDetailsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetMusicVideoDetailsToJson(
+    return _$$SetMusicVideoDetailsImplToJson(
       this,
     );
   }
@@ -649,11 +664,11 @@ abstract class _SetMusicVideoDetails extends SetMusicVideoDetails {
       final double? rating,
       @JsonKey(name: 'userrating') final int? userRating,
       @JsonKey(name: 'dateadded') final DateTime? dateAdded,
-      final DateTime? premiered}) = _$_SetMusicVideoDetails;
+      final DateTime? premiered}) = _$SetMusicVideoDetailsImpl;
   const _SetMusicVideoDetails._() : super._();
 
   factory _SetMusicVideoDetails.fromJson(Map<String, dynamic> json) =
-      _$_SetMusicVideoDetails.fromJson;
+      _$SetMusicVideoDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'musicvideoid')
@@ -709,8 +724,11 @@ abstract class _SetMusicVideoDetails extends SetMusicVideoDetails {
   DateTime? get dateAdded;
   @override
   DateTime? get premiered;
+
+  /// Create a copy of SetMusicVideoDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetMusicVideoDetailsCopyWith<_$_SetMusicVideoDetails> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetMusicVideoDetailsImplCopyWith<_$SetMusicVideoDetailsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

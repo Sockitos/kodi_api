@@ -6,17 +6,17 @@ part of 'kodi_pvr_details_channel_group.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsChannelGroup _$$_KodiPVRDetailsChannelGroupFromJson(
+_$KodiPVRDetailsChannelGroupImpl _$$KodiPVRDetailsChannelGroupImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsChannelGroup(
-      channelGroupId: json['channelgroupid'] as int,
+    _$KodiPVRDetailsChannelGroupImpl(
+      channelGroupId: (json['channelgroupid'] as num).toInt(),
       channelType:
           $enumDecode(_$KodiPVRChannelTypeEnumMap, json['channeltype']),
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsChannelGroupToJson(
-        _$_KodiPVRDetailsChannelGroup instance) =>
+Map<String, dynamic> _$$KodiPVRDetailsChannelGroupImplToJson(
+        _$KodiPVRDetailsChannelGroupImpl instance) =>
     <String, dynamic>{
       'channelgroupid': instance.channelGroupId,
       'channeltype': _$KodiPVRChannelTypeEnumMap[instance.channelType]!,

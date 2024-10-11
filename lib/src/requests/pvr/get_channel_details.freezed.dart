@@ -12,7 +12,7 @@ part of 'get_channel_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetChannelDetails _$GetChannelDetailsFromJson(Map<String, dynamic> json) {
   return _GetChannelDetails.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetChannelDetails {
   Set<KodiPVRFieldsChannel>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetChannelDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetChannelDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetChannelDetailsCopyWith<GetChannelDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$GetChannelDetailsCopyWithImpl<$Res, $Val extends GetChannelDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetChannelDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,11 +78,11 @@ class _$GetChannelDetailsCopyWithImpl<$Res, $Val extends GetChannelDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetChannelDetailsCopyWith<$Res>
+abstract class _$$GetChannelDetailsImplCopyWith<$Res>
     implements $GetChannelDetailsCopyWith<$Res> {
-  factory _$$_GetChannelDetailsCopyWith(_$_GetChannelDetails value,
-          $Res Function(_$_GetChannelDetails) then) =
-      __$$_GetChannelDetailsCopyWithImpl<$Res>;
+  factory _$$GetChannelDetailsImplCopyWith(_$GetChannelDetailsImpl value,
+          $Res Function(_$GetChannelDetailsImpl) then) =
+      __$$GetChannelDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,20 +91,22 @@ abstract class _$$_GetChannelDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetChannelDetailsCopyWithImpl<$Res>
-    extends _$GetChannelDetailsCopyWithImpl<$Res, _$_GetChannelDetails>
-    implements _$$_GetChannelDetailsCopyWith<$Res> {
-  __$$_GetChannelDetailsCopyWithImpl(
-      _$_GetChannelDetails _value, $Res Function(_$_GetChannelDetails) _then)
+class __$$GetChannelDetailsImplCopyWithImpl<$Res>
+    extends _$GetChannelDetailsCopyWithImpl<$Res, _$GetChannelDetailsImpl>
+    implements _$$GetChannelDetailsImplCopyWith<$Res> {
+  __$$GetChannelDetailsImplCopyWithImpl(_$GetChannelDetailsImpl _value,
+      $Res Function(_$GetChannelDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetChannelDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetChannelDetails(
+    return _then(_$GetChannelDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -113,14 +121,14 @@ class __$$_GetChannelDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetChannelDetails extends _GetChannelDetails {
-  const _$_GetChannelDetails(@JsonKey(name: 'channelid') this.id,
+class _$GetChannelDetailsImpl extends _GetChannelDetails {
+  const _$GetChannelDetailsImpl(@JsonKey(name: 'channelid') this.id,
       {final Set<KodiPVRFieldsChannel>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetChannelDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetChannelDetailsFromJson(json);
+  factory _$GetChannelDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetChannelDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'channelid')
@@ -141,30 +149,32 @@ class _$_GetChannelDetails extends _GetChannelDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetChannelDetails &&
+            other is _$GetChannelDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetChannelDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetChannelDetailsCopyWith<_$_GetChannelDetails> get copyWith =>
-      __$$_GetChannelDetailsCopyWithImpl<_$_GetChannelDetails>(
+  _$$GetChannelDetailsImplCopyWith<_$GetChannelDetailsImpl> get copyWith =>
+      __$$GetChannelDetailsImplCopyWithImpl<_$GetChannelDetailsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetChannelDetailsToJson(
+    return _$$GetChannelDetailsImplToJson(
       this,
     );
   }
@@ -172,19 +182,22 @@ class _$_GetChannelDetails extends _GetChannelDetails {
 
 abstract class _GetChannelDetails extends GetChannelDetails {
   const factory _GetChannelDetails(@JsonKey(name: 'channelid') final int id,
-      {final Set<KodiPVRFieldsChannel>? properties}) = _$_GetChannelDetails;
+      {final Set<KodiPVRFieldsChannel>? properties}) = _$GetChannelDetailsImpl;
   const _GetChannelDetails._() : super._();
 
   factory _GetChannelDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetChannelDetails.fromJson;
+      _$GetChannelDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'channelid')
   int get id;
   @override
   Set<KodiPVRFieldsChannel>? get properties;
+
+  /// Create a copy of GetChannelDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetChannelDetailsCopyWith<_$_GetChannelDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetChannelDetailsImplCopyWith<_$GetChannelDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

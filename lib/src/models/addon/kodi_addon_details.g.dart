@@ -6,38 +6,40 @@ part of 'kodi_addon_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiAddonDetails _$$_KodiAddonDetailsFromJson(Map<String, dynamic> json) =>
-    _$_KodiAddonDetails(
+_$KodiAddonDetailsImpl _$$KodiAddonDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiAddonDetailsImpl(
       addonId: json['addonid'] as String,
-      author: json['author'] as String?,
-      broken: json['broken'] as bool?,
+      author: json['author'] as String? ?? '',
+      broken: const KodiBoolStringConverter().fromJson(json['broken']),
       dependencies: (json['dependencies'] as List<dynamic>?)
           ?.map((e) =>
               KodiAddonDetailsDependencies.fromJson(e as Map<String, dynamic>))
           .toList(),
-      deprecated: json['deprecated'] as bool?,
-      description: json['description'] as String?,
-      disclaimer: json['disclaimer'] as String?,
-      enabled: json['enabled'] as bool?,
+      deprecated: const KodiBoolStringConverter().fromJson(json['deprecated']),
+      description: json['description'] as String? ?? '',
+      disclaimer: json['disclaimer'] as String? ?? '',
+      enabled: json['enabled'] as bool? ?? false,
       extraInfo: (json['extrainfo'] as List<dynamic>?)
           ?.map((e) =>
               KodiAddonDetailsExtraInfo.fromJson(e as Map<String, dynamic>))
           .toList(),
-      fanart: json['fanart'] as String?,
-      installed: json['installed'] as bool?,
-      name: json['name'] as String?,
-      path: json['path'] as String?,
-      rating: json['rating'] as int?,
-      summary: json['summary'] as String?,
-      thumbnail: json['thumbnail'] as String?,
+      fanart: json['fanart'] as String? ?? '',
+      installed: json['installed'] as bool? ?? false,
+      name: json['name'] as String? ?? '',
+      path: json['path'] as String? ?? '',
+      rating: (json['rating'] as num?)?.toInt() ?? 0,
+      summary: json['summary'] as String? ?? '',
+      thumbnail: json['thumbnail'] as String? ?? '',
       type: $enumDecode(_$KodiAddonTypeEnumMap, json['type']),
-      version: json['version'] as String?,
-      label: json['label'] as String?,
+      version: json['version'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_KodiAddonDetailsToJson(_$_KodiAddonDetails instance) {
+Map<String, dynamic> _$$KodiAddonDetailsImplToJson(
+    _$KodiAddonDetailsImpl instance) {
   final val = <String, dynamic>{
     'addonid': instance.addonId,
+    'author': instance.author,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -46,26 +48,26 @@ Map<String, dynamic> _$$_KodiAddonDetailsToJson(_$_KodiAddonDetails instance) {
     }
   }
 
-  writeNotNull('author', instance.author);
-  writeNotNull('broken', instance.broken);
+  writeNotNull(
+      'broken', const KodiBoolStringConverter().toJson(instance.broken));
   writeNotNull(
       'dependencies', instance.dependencies?.map((e) => e.toJson()).toList());
-  writeNotNull('deprecated', instance.deprecated);
-  writeNotNull('description', instance.description);
-  writeNotNull('disclaimer', instance.disclaimer);
-  writeNotNull('enabled', instance.enabled);
+  writeNotNull('deprecated',
+      const KodiBoolStringConverter().toJson(instance.deprecated));
+  val['description'] = instance.description;
+  val['disclaimer'] = instance.disclaimer;
+  val['enabled'] = instance.enabled;
   writeNotNull(
       'extrainfo', instance.extraInfo?.map((e) => e.toJson()).toList());
-  writeNotNull('fanart', instance.fanart);
-  writeNotNull('installed', instance.installed);
-  writeNotNull('name', instance.name);
-  writeNotNull('path', instance.path);
-  writeNotNull('rating', instance.rating);
-  writeNotNull('summary', instance.summary);
-  writeNotNull('thumbnail', instance.thumbnail);
+  val['fanart'] = instance.fanart;
+  val['installed'] = instance.installed;
+  val['name'] = instance.name;
+  val['path'] = instance.path;
+  val['rating'] = instance.rating;
+  val['summary'] = instance.summary;
+  val['thumbnail'] = instance.thumbnail;
   val['type'] = _$KodiAddonTypeEnumMap[instance.type]!;
-  writeNotNull('version', instance.version);
-  writeNotNull('label', instance.label);
+  val['version'] = instance.version;
   return val;
 }
 
@@ -114,33 +116,31 @@ const _$KodiAddonTypeEnumMap = {
   KodiAddonType.kodiAddonGame: 'kodi.addon.game',
 };
 
-_$_KodiAddonDetailsDependencies _$$_KodiAddonDetailsDependenciesFromJson(
+_$KodiAddonDetailsDependenciesImpl _$$KodiAddonDetailsDependenciesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAddonDetailsDependencies(
+    _$KodiAddonDetailsDependenciesImpl(
       addonId: json['addonid'] as String,
-      minVersion: json['minversion'] as String,
       optional: json['optional'] as bool,
       version: json['version'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAddonDetailsDependenciesToJson(
-        _$_KodiAddonDetailsDependencies instance) =>
+Map<String, dynamic> _$$KodiAddonDetailsDependenciesImplToJson(
+        _$KodiAddonDetailsDependenciesImpl instance) =>
     <String, dynamic>{
       'addonid': instance.addonId,
-      'minversion': instance.minVersion,
       'optional': instance.optional,
       'version': instance.version,
     };
 
-_$_KodiAddonDetailsExtraInfo _$$_KodiAddonDetailsExtraInfoFromJson(
+_$KodiAddonDetailsExtraInfoImpl _$$KodiAddonDetailsExtraInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAddonDetailsExtraInfo(
+    _$KodiAddonDetailsExtraInfoImpl(
       key: json['key'] as String,
       value: json['value'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAddonDetailsExtraInfoToJson(
-        _$_KodiAddonDetailsExtraInfo instance) =>
+Map<String, dynamic> _$$KodiAddonDetailsExtraInfoImplToJson(
+        _$KodiAddonDetailsExtraInfoImpl instance) =>
     <String, dynamic>{
       'key': instance.key,
       'value': instance.value,

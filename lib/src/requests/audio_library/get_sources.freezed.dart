@@ -12,7 +12,7 @@ part of 'get_sources.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetSources _$GetSourcesFromJson(Map<String, dynamic> json) {
   return _GetSources.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetSources {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSources to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSources
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSourcesCopyWith<GetSources> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$GetSourcesCopyWithImpl<$Res, $Val extends GetSources>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSources
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$GetSourcesCopyWithImpl<$Res, $Val extends GetSources>
     ) as $Val);
   }
 
+  /// Create a copy of GetSources
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -91,6 +99,8 @@ class _$GetSourcesCopyWithImpl<$Res, $Val extends GetSources>
     });
   }
 
+  /// Create a copy of GetSources
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -105,11 +115,11 @@ class _$GetSourcesCopyWithImpl<$Res, $Val extends GetSources>
 }
 
 /// @nodoc
-abstract class _$$_GetSourcesCopyWith<$Res>
+abstract class _$$GetSourcesImplCopyWith<$Res>
     implements $GetSourcesCopyWith<$Res> {
-  factory _$$_GetSourcesCopyWith(
-          _$_GetSources value, $Res Function(_$_GetSources) then) =
-      __$$_GetSourcesCopyWithImpl<$Res>;
+  factory _$$GetSourcesImplCopyWith(
+          _$GetSourcesImpl value, $Res Function(_$GetSourcesImpl) then) =
+      __$$GetSourcesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,13 +134,15 @@ abstract class _$$_GetSourcesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSourcesCopyWithImpl<$Res>
-    extends _$GetSourcesCopyWithImpl<$Res, _$_GetSources>
-    implements _$$_GetSourcesCopyWith<$Res> {
-  __$$_GetSourcesCopyWithImpl(
-      _$_GetSources _value, $Res Function(_$_GetSources) _then)
+class __$$GetSourcesImplCopyWithImpl<$Res>
+    extends _$GetSourcesCopyWithImpl<$Res, _$GetSourcesImpl>
+    implements _$$GetSourcesImplCopyWith<$Res> {
+  __$$GetSourcesImplCopyWithImpl(
+      _$GetSourcesImpl _value, $Res Function(_$GetSourcesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSources
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,7 +150,7 @@ class __$$_GetSourcesCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetSources(
+    return _then(_$GetSourcesImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -157,14 +169,14 @@ class __$$_GetSourcesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSources extends _GetSources {
-  const _$_GetSources(
+class _$GetSourcesImpl extends _GetSources {
+  const _$GetSourcesImpl(
       {final Set<KodiLibraryFieldsSource>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetSources.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSourcesFromJson(json);
+  factory _$GetSourcesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSourcesImplFromJson(json);
 
   final Set<KodiLibraryFieldsSource>? _properties;
   @override
@@ -187,30 +199,32 @@ class _$_GetSources extends _GetSources {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSources &&
+            other is _$GetSourcesImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSources
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSourcesCopyWith<_$_GetSources> get copyWith =>
-      __$$_GetSourcesCopyWithImpl<_$_GetSources>(this, _$identity);
+  _$$GetSourcesImplCopyWith<_$GetSourcesImpl> get copyWith =>
+      __$$GetSourcesImplCopyWithImpl<_$GetSourcesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSourcesToJson(
+    return _$$GetSourcesImplToJson(
       this,
     );
   }
@@ -220,11 +234,11 @@ abstract class _GetSources extends GetSources {
   const factory _GetSources(
       {final Set<KodiLibraryFieldsSource>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetSources;
+      final KodiListSort? sort}) = _$GetSourcesImpl;
   const _GetSources._() : super._();
 
   factory _GetSources.fromJson(Map<String, dynamic> json) =
-      _$_GetSources.fromJson;
+      _$GetSourcesImpl.fromJson;
 
   @override
   Set<KodiLibraryFieldsSource>? get properties;
@@ -232,9 +246,12 @@ abstract class _GetSources extends GetSources {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetSources
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSourcesCopyWith<_$_GetSources> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSourcesImplCopyWith<_$GetSourcesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -248,8 +265,12 @@ mixin _$GetSourcesResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetSourcesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetSourcesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetSourcesResponseCopyWith<GetSourcesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -276,6 +297,8 @@ class _$GetSourcesResponseCopyWithImpl<$Res, $Val extends GetSourcesResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetSourcesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,6 +317,8 @@ class _$GetSourcesResponseCopyWithImpl<$Res, $Val extends GetSourcesResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetSourcesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -304,11 +329,11 @@ class _$GetSourcesResponseCopyWithImpl<$Res, $Val extends GetSourcesResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetSourcesResponseCopyWith<$Res>
+abstract class _$$GetSourcesResponseImplCopyWith<$Res>
     implements $GetSourcesResponseCopyWith<$Res> {
-  factory _$$_GetSourcesResponseCopyWith(_$_GetSourcesResponse value,
-          $Res Function(_$_GetSourcesResponse) then) =
-      __$$_GetSourcesResponseCopyWithImpl<$Res>;
+  factory _$$GetSourcesResponseImplCopyWith(_$GetSourcesResponseImpl value,
+          $Res Function(_$GetSourcesResponseImpl) then) =
+      __$$GetSourcesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -319,20 +344,22 @@ abstract class _$$_GetSourcesResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetSourcesResponseCopyWithImpl<$Res>
-    extends _$GetSourcesResponseCopyWithImpl<$Res, _$_GetSourcesResponse>
-    implements _$$_GetSourcesResponseCopyWith<$Res> {
-  __$$_GetSourcesResponseCopyWithImpl(
-      _$_GetSourcesResponse _value, $Res Function(_$_GetSourcesResponse) _then)
+class __$$GetSourcesResponseImplCopyWithImpl<$Res>
+    extends _$GetSourcesResponseCopyWithImpl<$Res, _$GetSourcesResponseImpl>
+    implements _$$GetSourcesResponseImplCopyWith<$Res> {
+  __$$GetSourcesResponseImplCopyWithImpl(_$GetSourcesResponseImpl _value,
+      $Res Function(_$GetSourcesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetSourcesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sources = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetSourcesResponse(
+    return _then(_$GetSourcesResponseImpl(
       sources: null == sources
           ? _value._sources
           : sources // ignore: cast_nullable_to_non_nullable
@@ -347,14 +374,14 @@ class __$$_GetSourcesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetSourcesResponse implements _GetSourcesResponse {
-  const _$_GetSourcesResponse(
+class _$GetSourcesResponseImpl implements _GetSourcesResponse {
+  const _$GetSourcesResponseImpl(
       {required final List<KodiLibraryDetailsSource> sources,
       required this.limits})
       : _sources = sources;
 
-  factory _$_GetSourcesResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetSourcesResponseFromJson(json);
+  factory _$GetSourcesResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetSourcesResponseImplFromJson(json);
 
   final List<KodiLibraryDetailsSource> _sources;
   @override
@@ -373,29 +400,31 @@ class _$_GetSourcesResponse implements _GetSourcesResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetSourcesResponse &&
+            other is _$GetSourcesResponseImpl &&
             const DeepCollectionEquality().equals(other._sources, _sources) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_sources), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetSourcesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetSourcesResponseCopyWith<_$_GetSourcesResponse> get copyWith =>
-      __$$_GetSourcesResponseCopyWithImpl<_$_GetSourcesResponse>(
+  _$$GetSourcesResponseImplCopyWith<_$GetSourcesResponseImpl> get copyWith =>
+      __$$GetSourcesResponseImplCopyWithImpl<_$GetSourcesResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSourcesResponseToJson(
+    return _$$GetSourcesResponseImplToJson(
       this,
     );
   }
@@ -404,17 +433,20 @@ class _$_GetSourcesResponse implements _GetSourcesResponse {
 abstract class _GetSourcesResponse implements GetSourcesResponse {
   const factory _GetSourcesResponse(
       {required final List<KodiLibraryDetailsSource> sources,
-      required final KodiListLimitsReturned limits}) = _$_GetSourcesResponse;
+      required final KodiListLimitsReturned limits}) = _$GetSourcesResponseImpl;
 
   factory _GetSourcesResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetSourcesResponse.fromJson;
+      _$GetSourcesResponseImpl.fromJson;
 
   @override
   List<KodiLibraryDetailsSource> get sources;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetSourcesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetSourcesResponseCopyWith<_$_GetSourcesResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetSourcesResponseImplCopyWith<_$GetSourcesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

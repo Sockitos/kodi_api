@@ -6,9 +6,10 @@ part of 'kodi_notification_system_on_wake_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationSystemOnWakeParams
-    _$$_KodiNotificationSystemOnWakeParamsFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnWakeParams(
+_$KodiNotificationSystemOnWakeParamsImpl
+    _$$KodiNotificationSystemOnWakeParamsImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationSystemOnWakeParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -16,8 +17,8 @@ _$_KodiNotificationSystemOnWakeParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnWakeParamsToJson(
-    _$_KodiNotificationSystemOnWakeParams instance) {
+Map<String, dynamic> _$$KodiNotificationSystemOnWakeParamsImplToJson(
+    _$KodiNotificationSystemOnWakeParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -32,15 +33,15 @@ Map<String, dynamic> _$$_KodiNotificationSystemOnWakeParamsToJson(
   return val;
 }
 
-_$_KodiNotificationSystemOnWakeParamsData
-    _$$_KodiNotificationSystemOnWakeParamsDataFromJson(
+_$KodiNotificationSystemOnWakeParamsDataImpl
+    _$$KodiNotificationSystemOnWakeParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnWakeParamsData(
+        _$KodiNotificationSystemOnWakeParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnWakeParamsDataToJson(
-        _$_KodiNotificationSystemOnWakeParamsData instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnWakeParamsDataImplToJson(
+        _$KodiNotificationSystemOnWakeParamsDataImpl instance) =>
     <String, dynamic>{
       'test': instance.test,
     };

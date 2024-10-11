@@ -6,14 +6,16 @@ part of 'kodi_video_rating.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiVideoRating _$$_KodiVideoRatingFromJson(Map<String, dynamic> json) =>
-    _$_KodiVideoRating(
+_$KodiVideoRatingImpl _$$KodiVideoRatingImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiVideoRatingImpl(
       defaultt: json['default'] as bool? ?? false,
       rating: (json['rating'] as num).toDouble(),
-      votes: json['votes'] as int? ?? 0,
+      votes: (json['votes'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$_KodiVideoRatingToJson(_$_KodiVideoRating instance) =>
+Map<String, dynamic> _$$KodiVideoRatingImplToJson(
+        _$KodiVideoRatingImpl instance) =>
     <String, dynamic>{
       'default': instance.defaultt,
       'rating': instance.rating,

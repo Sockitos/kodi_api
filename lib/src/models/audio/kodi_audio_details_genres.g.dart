@@ -6,15 +6,15 @@ part of 'kodi_audio_details_genres.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiAudioDetailsGenres _$$_KodiAudioDetailsGenresFromJson(
+_$KodiAudioDetailsGenresImpl _$$KodiAudioDetailsGenresImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAudioDetailsGenres(
-      genreId: json['genreid'] as int,
-      title: json['title'] as String,
+    _$KodiAudioDetailsGenresImpl(
+      genreId: (json['genreid'] as num).toInt(),
+      title: json['title'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_KodiAudioDetailsGenresToJson(
-        _$_KodiAudioDetailsGenres instance) =>
+Map<String, dynamic> _$$KodiAudioDetailsGenresImplToJson(
+        _$KodiAudioDetailsGenresImpl instance) =>
     <String, dynamic>{
       'genreid': instance.genreId,
       'title': instance.title,

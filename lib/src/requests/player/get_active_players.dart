@@ -34,8 +34,6 @@ enum KodiPlayerActivePlayerType {
   internal,
   external,
   remote,
-  video,
-  music,
 }
 
 @freezed

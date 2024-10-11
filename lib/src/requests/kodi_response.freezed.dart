@@ -12,7 +12,7 @@ part of 'kodi_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiResponse _$KodiResponseFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -70,8 +70,13 @@ mixin _$KodiResponse {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiResponseCopyWith<KodiResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -95,6 +100,8 @@ class _$KodiResponseCopyWithImpl<$Res, $Val extends KodiResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,24 +122,26 @@ class _$KodiResponseCopyWithImpl<$Res, $Val extends KodiResponse>
 }
 
 /// @nodoc
-abstract class _$$KodiResponseSuccessCopyWith<$Res>
+abstract class _$$KodiResponseSuccessImplCopyWith<$Res>
     implements $KodiResponseCopyWith<$Res> {
-  factory _$$KodiResponseSuccessCopyWith(_$KodiResponseSuccess value,
-          $Res Function(_$KodiResponseSuccess) then) =
-      __$$KodiResponseSuccessCopyWithImpl<$Res>;
+  factory _$$KodiResponseSuccessImplCopyWith(_$KodiResponseSuccessImpl value,
+          $Res Function(_$KodiResponseSuccessImpl) then) =
+      __$$KodiResponseSuccessImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String jsonrpc, String id, dynamic result});
 }
 
 /// @nodoc
-class __$$KodiResponseSuccessCopyWithImpl<$Res>
-    extends _$KodiResponseCopyWithImpl<$Res, _$KodiResponseSuccess>
-    implements _$$KodiResponseSuccessCopyWith<$Res> {
-  __$$KodiResponseSuccessCopyWithImpl(
-      _$KodiResponseSuccess _value, $Res Function(_$KodiResponseSuccess) _then)
+class __$$KodiResponseSuccessImplCopyWithImpl<$Res>
+    extends _$KodiResponseCopyWithImpl<$Res, _$KodiResponseSuccessImpl>
+    implements _$$KodiResponseSuccessImplCopyWith<$Res> {
+  __$$KodiResponseSuccessImplCopyWithImpl(_$KodiResponseSuccessImpl _value,
+      $Res Function(_$KodiResponseSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,7 +149,7 @@ class __$$KodiResponseSuccessCopyWithImpl<$Res>
     Object? id = null,
     Object? result = freezed,
   }) {
-    return _then(_$KodiResponseSuccess(
+    return _then(_$KodiResponseSuccessImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -159,16 +168,16 @@ class __$$KodiResponseSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiResponseSuccess implements KodiResponseSuccess {
-  const _$KodiResponseSuccess(
+class _$KodiResponseSuccessImpl implements KodiResponseSuccess {
+  const _$KodiResponseSuccessImpl(
       {required this.jsonrpc,
       required this.id,
       required this.result,
       final String? $type})
       : $type = $type ?? 'success';
 
-  factory _$KodiResponseSuccess.fromJson(Map<String, dynamic> json) =>
-      _$$KodiResponseSuccessFromJson(json);
+  factory _$KodiResponseSuccessImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiResponseSuccessImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -186,25 +195,27 @@ class _$KodiResponseSuccess implements KodiResponseSuccess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiResponseSuccess &&
+            other is _$KodiResponseSuccessImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality().equals(other.result, result));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, jsonrpc, id, const DeepCollectionEquality().hash(result));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiResponseSuccessCopyWith<_$KodiResponseSuccess> get copyWith =>
-      __$$KodiResponseSuccessCopyWithImpl<_$KodiResponseSuccess>(
+  _$$KodiResponseSuccessImplCopyWith<_$KodiResponseSuccessImpl> get copyWith =>
+      __$$KodiResponseSuccessImplCopyWithImpl<_$KodiResponseSuccessImpl>(
           this, _$identity);
 
   @override
@@ -272,7 +283,7 @@ class _$KodiResponseSuccess implements KodiResponseSuccess {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiResponseSuccessToJson(
+    return _$$KodiResponseSuccessImplToJson(
       this,
     );
   }
@@ -282,28 +293,31 @@ abstract class KodiResponseSuccess implements KodiResponse {
   const factory KodiResponseSuccess(
       {required final String jsonrpc,
       required final String id,
-      required final dynamic result}) = _$KodiResponseSuccess;
+      required final dynamic result}) = _$KodiResponseSuccessImpl;
 
   factory KodiResponseSuccess.fromJson(Map<String, dynamic> json) =
-      _$KodiResponseSuccess.fromJson;
+      _$KodiResponseSuccessImpl.fromJson;
 
   @override
   String get jsonrpc;
   @override
   String get id;
   dynamic get result;
+
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$KodiResponseSuccessCopyWith<_$KodiResponseSuccess> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiResponseSuccessImplCopyWith<_$KodiResponseSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$KodiResponseErrorCopyWith<$Res>
+abstract class _$$KodiResponseErrorImplCopyWith<$Res>
     implements $KodiResponseCopyWith<$Res> {
-  factory _$$KodiResponseErrorCopyWith(
-          _$KodiResponseError value, $Res Function(_$KodiResponseError) then) =
-      __$$KodiResponseErrorCopyWithImpl<$Res>;
+  factory _$$KodiResponseErrorImplCopyWith(_$KodiResponseErrorImpl value,
+          $Res Function(_$KodiResponseErrorImpl) then) =
+      __$$KodiResponseErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String jsonrpc, String id, KodiError error});
@@ -312,13 +326,15 @@ abstract class _$$KodiResponseErrorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$KodiResponseErrorCopyWithImpl<$Res>
-    extends _$KodiResponseCopyWithImpl<$Res, _$KodiResponseError>
-    implements _$$KodiResponseErrorCopyWith<$Res> {
-  __$$KodiResponseErrorCopyWithImpl(
-      _$KodiResponseError _value, $Res Function(_$KodiResponseError) _then)
+class __$$KodiResponseErrorImplCopyWithImpl<$Res>
+    extends _$KodiResponseCopyWithImpl<$Res, _$KodiResponseErrorImpl>
+    implements _$$KodiResponseErrorImplCopyWith<$Res> {
+  __$$KodiResponseErrorImplCopyWithImpl(_$KodiResponseErrorImpl _value,
+      $Res Function(_$KodiResponseErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -326,7 +342,7 @@ class __$$KodiResponseErrorCopyWithImpl<$Res>
     Object? id = null,
     Object? error = null,
   }) {
-    return _then(_$KodiResponseError(
+    return _then(_$KodiResponseErrorImpl(
       jsonrpc: null == jsonrpc
           ? _value.jsonrpc
           : jsonrpc // ignore: cast_nullable_to_non_nullable
@@ -342,6 +358,8 @@ class __$$KodiResponseErrorCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiErrorCopyWith<$Res> get error {
@@ -353,16 +371,16 @@ class __$$KodiResponseErrorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$KodiResponseError implements KodiResponseError {
-  const _$KodiResponseError(
+class _$KodiResponseErrorImpl implements KodiResponseError {
+  const _$KodiResponseErrorImpl(
       {required this.jsonrpc,
       required this.id,
       required this.error,
       final String? $type})
       : $type = $type ?? 'error';
 
-  factory _$KodiResponseError.fromJson(Map<String, dynamic> json) =>
-      _$$KodiResponseErrorFromJson(json);
+  factory _$KodiResponseErrorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiResponseErrorImplFromJson(json);
 
   @override
   final String jsonrpc;
@@ -380,24 +398,27 @@ class _$KodiResponseError implements KodiResponseError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$KodiResponseError &&
+            other is _$KodiResponseErrorImpl &&
             (identical(other.jsonrpc, jsonrpc) || other.jsonrpc == jsonrpc) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.error, error) || other.error == error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, jsonrpc, id, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$KodiResponseErrorCopyWith<_$KodiResponseError> get copyWith =>
-      __$$KodiResponseErrorCopyWithImpl<_$KodiResponseError>(this, _$identity);
+  _$$KodiResponseErrorImplCopyWith<_$KodiResponseErrorImpl> get copyWith =>
+      __$$KodiResponseErrorImplCopyWithImpl<_$KodiResponseErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -464,7 +485,7 @@ class _$KodiResponseError implements KodiResponseError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$KodiResponseErrorToJson(
+    return _$$KodiResponseErrorImplToJson(
       this,
     );
   }
@@ -474,19 +495,22 @@ abstract class KodiResponseError implements KodiResponse {
   const factory KodiResponseError(
       {required final String jsonrpc,
       required final String id,
-      required final KodiError error}) = _$KodiResponseError;
+      required final KodiError error}) = _$KodiResponseErrorImpl;
 
   factory KodiResponseError.fromJson(Map<String, dynamic> json) =
-      _$KodiResponseError.fromJson;
+      _$KodiResponseErrorImpl.fromJson;
 
   @override
   String get jsonrpc;
   @override
   String get id;
   KodiError get error;
+
+  /// Create a copy of KodiResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$KodiResponseErrorCopyWith<_$KodiResponseError> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiResponseErrorImplCopyWith<_$KodiResponseErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -500,8 +524,12 @@ mixin _$KodiError {
   KodiErrorData? get data => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiError to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiErrorCopyWith<KodiError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -526,6 +554,8 @@ class _$KodiErrorCopyWithImpl<$Res, $Val extends KodiError>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -549,6 +579,8 @@ class _$KodiErrorCopyWithImpl<$Res, $Val extends KodiError>
     ) as $Val);
   }
 
+  /// Create a copy of KodiError
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiErrorDataCopyWith<$Res>? get data {
@@ -563,10 +595,11 @@ class _$KodiErrorCopyWithImpl<$Res, $Val extends KodiError>
 }
 
 /// @nodoc
-abstract class _$$_KodiErrorCopyWith<$Res> implements $KodiErrorCopyWith<$Res> {
-  factory _$$_KodiErrorCopyWith(
-          _$_KodiError value, $Res Function(_$_KodiError) then) =
-      __$$_KodiErrorCopyWithImpl<$Res>;
+abstract class _$$KodiErrorImplCopyWith<$Res>
+    implements $KodiErrorCopyWith<$Res> {
+  factory _$$KodiErrorImplCopyWith(
+          _$KodiErrorImpl value, $Res Function(_$KodiErrorImpl) then) =
+      __$$KodiErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int code, KodiErrorData? data, String message});
@@ -576,13 +609,15 @@ abstract class _$$_KodiErrorCopyWith<$Res> implements $KodiErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiErrorCopyWithImpl<$Res>
-    extends _$KodiErrorCopyWithImpl<$Res, _$_KodiError>
-    implements _$$_KodiErrorCopyWith<$Res> {
-  __$$_KodiErrorCopyWithImpl(
-      _$_KodiError _value, $Res Function(_$_KodiError) _then)
+class __$$KodiErrorImplCopyWithImpl<$Res>
+    extends _$KodiErrorCopyWithImpl<$Res, _$KodiErrorImpl>
+    implements _$$KodiErrorImplCopyWith<$Res> {
+  __$$KodiErrorImplCopyWithImpl(
+      _$KodiErrorImpl _value, $Res Function(_$KodiErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -590,7 +625,7 @@ class __$$_KodiErrorCopyWithImpl<$Res>
     Object? data = freezed,
     Object? message = null,
   }) {
-    return _then(_$_KodiError(
+    return _then(_$KodiErrorImpl(
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -609,11 +644,11 @@ class __$$_KodiErrorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiError implements _KodiError {
-  const _$_KodiError({required this.code, this.data, required this.message});
+class _$KodiErrorImpl implements _KodiError {
+  const _$KodiErrorImpl({required this.code, this.data, required this.message});
 
-  factory _$_KodiError.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiErrorFromJson(json);
+  factory _$KodiErrorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiErrorImplFromJson(json);
 
   @override
   final int code;
@@ -628,28 +663,30 @@ class _$_KodiError implements _KodiError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiError &&
+            other is _$KodiErrorImpl &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.message, message) || other.message == message));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, code, data, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiErrorCopyWith<_$_KodiError> get copyWith =>
-      __$$_KodiErrorCopyWithImpl<_$_KodiError>(this, _$identity);
+  _$$KodiErrorImplCopyWith<_$KodiErrorImpl> get copyWith =>
+      __$$KodiErrorImplCopyWithImpl<_$KodiErrorImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiErrorToJson(
+    return _$$KodiErrorImplToJson(
       this,
     );
   }
@@ -659,10 +696,10 @@ abstract class _KodiError implements KodiError {
   const factory _KodiError(
       {required final int code,
       final KodiErrorData? data,
-      required final String message}) = _$_KodiError;
+      required final String message}) = _$KodiErrorImpl;
 
   factory _KodiError.fromJson(Map<String, dynamic> json) =
-      _$_KodiError.fromJson;
+      _$KodiErrorImpl.fromJson;
 
   @override
   int get code;
@@ -670,9 +707,12 @@ abstract class _KodiError implements KodiError {
   KodiErrorData? get data;
   @override
   String get message;
+
+  /// Create a copy of KodiError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiErrorCopyWith<_$_KodiError> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiErrorImplCopyWith<_$KodiErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -686,8 +726,12 @@ mixin _$KodiErrorData {
   String? get message => throw _privateConstructorUsedError;
   String get method => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiErrorData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiErrorData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiErrorDataCopyWith<KodiErrorData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -713,6 +757,8 @@ class _$KodiErrorDataCopyWithImpl<$Res, $Val extends KodiErrorData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiErrorData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -736,6 +782,8 @@ class _$KodiErrorDataCopyWithImpl<$Res, $Val extends KodiErrorData>
     ) as $Val);
   }
 
+  /// Create a copy of KodiErrorData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiErrorStackCopyWith<$Res> get stack {
@@ -746,11 +794,11 @@ class _$KodiErrorDataCopyWithImpl<$Res, $Val extends KodiErrorData>
 }
 
 /// @nodoc
-abstract class _$$_KodiErrorDataCopyWith<$Res>
+abstract class _$$KodiErrorDataImplCopyWith<$Res>
     implements $KodiErrorDataCopyWith<$Res> {
-  factory _$$_KodiErrorDataCopyWith(
-          _$_KodiErrorData value, $Res Function(_$_KodiErrorData) then) =
-      __$$_KodiErrorDataCopyWithImpl<$Res>;
+  factory _$$KodiErrorDataImplCopyWith(
+          _$KodiErrorDataImpl value, $Res Function(_$KodiErrorDataImpl) then) =
+      __$$KodiErrorDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiErrorStack stack, String? message, String method});
@@ -760,13 +808,15 @@ abstract class _$$_KodiErrorDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiErrorDataCopyWithImpl<$Res>
-    extends _$KodiErrorDataCopyWithImpl<$Res, _$_KodiErrorData>
-    implements _$$_KodiErrorDataCopyWith<$Res> {
-  __$$_KodiErrorDataCopyWithImpl(
-      _$_KodiErrorData _value, $Res Function(_$_KodiErrorData) _then)
+class __$$KodiErrorDataImplCopyWithImpl<$Res>
+    extends _$KodiErrorDataCopyWithImpl<$Res, _$KodiErrorDataImpl>
+    implements _$$KodiErrorDataImplCopyWith<$Res> {
+  __$$KodiErrorDataImplCopyWithImpl(
+      _$KodiErrorDataImpl _value, $Res Function(_$KodiErrorDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiErrorData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -774,7 +824,7 @@ class __$$_KodiErrorDataCopyWithImpl<$Res>
     Object? message = freezed,
     Object? method = null,
   }) {
-    return _then(_$_KodiErrorData(
+    return _then(_$KodiErrorDataImpl(
       stack: null == stack
           ? _value.stack
           : stack // ignore: cast_nullable_to_non_nullable
@@ -793,12 +843,12 @@ class __$$_KodiErrorDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiErrorData implements _KodiErrorData {
-  const _$_KodiErrorData(
+class _$KodiErrorDataImpl implements _KodiErrorData {
+  const _$KodiErrorDataImpl(
       {required this.stack, this.message, required this.method});
 
-  factory _$_KodiErrorData.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiErrorDataFromJson(json);
+  factory _$KodiErrorDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiErrorDataImplFromJson(json);
 
   @override
   final KodiErrorStack stack;
@@ -813,28 +863,30 @@ class _$_KodiErrorData implements _KodiErrorData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiErrorData &&
+            other is _$KodiErrorDataImpl &&
             (identical(other.stack, stack) || other.stack == stack) &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.method, method) || other.method == method));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, stack, message, method);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiErrorData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiErrorDataCopyWith<_$_KodiErrorData> get copyWith =>
-      __$$_KodiErrorDataCopyWithImpl<_$_KodiErrorData>(this, _$identity);
+  _$$KodiErrorDataImplCopyWith<_$KodiErrorDataImpl> get copyWith =>
+      __$$KodiErrorDataImplCopyWithImpl<_$KodiErrorDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiErrorDataToJson(
+    return _$$KodiErrorDataImplToJson(
       this,
     );
   }
@@ -844,10 +896,10 @@ abstract class _KodiErrorData implements KodiErrorData {
   const factory _KodiErrorData(
       {required final KodiErrorStack stack,
       final String? message,
-      required final String method}) = _$_KodiErrorData;
+      required final String method}) = _$KodiErrorDataImpl;
 
   factory _KodiErrorData.fromJson(Map<String, dynamic> json) =
-      _$_KodiErrorData.fromJson;
+      _$KodiErrorDataImpl.fromJson;
 
   @override
   KodiErrorStack get stack;
@@ -855,9 +907,12 @@ abstract class _KodiErrorData implements KodiErrorData {
   String? get message;
   @override
   String get method;
+
+  /// Create a copy of KodiErrorData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiErrorDataCopyWith<_$_KodiErrorData> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiErrorDataImplCopyWith<_$KodiErrorDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -871,8 +926,12 @@ mixin _$KodiErrorStack {
   dynamic get type => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiErrorStack to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiErrorStack
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiErrorStackCopyWith<KodiErrorStack> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -896,6 +955,8 @@ class _$KodiErrorStackCopyWithImpl<$Res, $Val extends KodiErrorStack>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiErrorStack
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -921,24 +982,26 @@ class _$KodiErrorStackCopyWithImpl<$Res, $Val extends KodiErrorStack>
 }
 
 /// @nodoc
-abstract class _$$_KodiErrorStackCopyWith<$Res>
+abstract class _$$KodiErrorStackImplCopyWith<$Res>
     implements $KodiErrorStackCopyWith<$Res> {
-  factory _$$_KodiErrorStackCopyWith(
-          _$_KodiErrorStack value, $Res Function(_$_KodiErrorStack) then) =
-      __$$_KodiErrorStackCopyWithImpl<$Res>;
+  factory _$$KodiErrorStackImplCopyWith(_$KodiErrorStackImpl value,
+          $Res Function(_$KodiErrorStackImpl) then) =
+      __$$KodiErrorStackImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, dynamic type, String? message});
 }
 
 /// @nodoc
-class __$$_KodiErrorStackCopyWithImpl<$Res>
-    extends _$KodiErrorStackCopyWithImpl<$Res, _$_KodiErrorStack>
-    implements _$$_KodiErrorStackCopyWith<$Res> {
-  __$$_KodiErrorStackCopyWithImpl(
-      _$_KodiErrorStack _value, $Res Function(_$_KodiErrorStack) _then)
+class __$$KodiErrorStackImplCopyWithImpl<$Res>
+    extends _$KodiErrorStackCopyWithImpl<$Res, _$KodiErrorStackImpl>
+    implements _$$KodiErrorStackImplCopyWith<$Res> {
+  __$$KodiErrorStackImplCopyWithImpl(
+      _$KodiErrorStackImpl _value, $Res Function(_$KodiErrorStackImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiErrorStack
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -946,7 +1009,7 @@ class __$$_KodiErrorStackCopyWithImpl<$Res>
     Object? type = freezed,
     Object? message = freezed,
   }) {
-    return _then(_$_KodiErrorStack(
+    return _then(_$KodiErrorStackImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -965,12 +1028,12 @@ class __$$_KodiErrorStackCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiErrorStack implements _KodiErrorStack {
-  const _$_KodiErrorStack(
+class _$KodiErrorStackImpl implements _KodiErrorStack {
+  const _$KodiErrorStackImpl(
       {required this.name, required this.type, this.message});
 
-  factory _$_KodiErrorStack.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiErrorStackFromJson(json);
+  factory _$KodiErrorStackImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiErrorStackImplFromJson(json);
 
   @override
   final String name;
@@ -985,29 +1048,32 @@ class _$_KodiErrorStack implements _KodiErrorStack {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiErrorStack &&
+            other is _$KodiErrorStackImpl &&
             (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.message, message) || other.message == message));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, name, const DeepCollectionEquality().hash(type), message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiErrorStack
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiErrorStackCopyWith<_$_KodiErrorStack> get copyWith =>
-      __$$_KodiErrorStackCopyWithImpl<_$_KodiErrorStack>(this, _$identity);
+  _$$KodiErrorStackImplCopyWith<_$KodiErrorStackImpl> get copyWith =>
+      __$$KodiErrorStackImplCopyWithImpl<_$KodiErrorStackImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiErrorStackToJson(
+    return _$$KodiErrorStackImplToJson(
       this,
     );
   }
@@ -1017,10 +1083,10 @@ abstract class _KodiErrorStack implements KodiErrorStack {
   const factory _KodiErrorStack(
       {required final String name,
       required final dynamic type,
-      final String? message}) = _$_KodiErrorStack;
+      final String? message}) = _$KodiErrorStackImpl;
 
   factory _KodiErrorStack.fromJson(Map<String, dynamic> json) =
-      _$_KodiErrorStack.fromJson;
+      _$KodiErrorStackImpl.fromJson;
 
   @override
   String get name;
@@ -1028,8 +1094,11 @@ abstract class _KodiErrorStack implements KodiErrorStack {
   dynamic get type;
   @override
   String? get message;
+
+  /// Create a copy of KodiErrorStack
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiErrorStackCopyWith<_$_KodiErrorStack> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiErrorStackImplCopyWith<_$KodiErrorStackImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

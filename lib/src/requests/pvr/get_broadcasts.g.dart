@@ -6,9 +6,9 @@ part of 'get_broadcasts.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBroadcasts _$$_GetBroadcastsFromJson(Map<String, dynamic> json) =>
-    _$_GetBroadcasts(
-      json['channelid'] as int,
+_$GetBroadcastsImpl _$$GetBroadcastsImplFromJson(Map<String, dynamic> json) =>
+    _$GetBroadcastsImpl(
+      (json['channelid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsBroadcastEnumMap, e))
           .toSet(),
@@ -17,7 +17,7 @@ _$_GetBroadcasts _$$_GetBroadcastsFromJson(Map<String, dynamic> json) =>
           : KodiListLimits.fromJson(json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetBroadcastsToJson(_$_GetBroadcasts instance) {
+Map<String, dynamic> _$$GetBroadcastsImplToJson(_$GetBroadcastsImpl instance) {
   final val = <String, dynamic>{
     'channelid': instance.id,
   };
@@ -72,9 +72,9 @@ const _$KodiPVRFieldsBroadcastEnumMap = {
   KodiPVRFieldsBroadcast.hasReminder: 'hasreminder',
 };
 
-_$_KodiPVRGetBroadcastsResponse _$$_KodiPVRGetBroadcastsResponseFromJson(
+_$KodiPVRGetBroadcastsResponseImpl _$$KodiPVRGetBroadcastsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRGetBroadcastsResponse(
+    _$KodiPVRGetBroadcastsResponseImpl(
       broadcasts: (json['broadcasts'] as List<dynamic>)
           .map((e) =>
               KodiPVRDetailsBroadcast.fromJson(e as Map<String, dynamic>))
@@ -83,8 +83,8 @@ _$_KodiPVRGetBroadcastsResponse _$$_KodiPVRGetBroadcastsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiPVRGetBroadcastsResponseToJson(
-        _$_KodiPVRGetBroadcastsResponse instance) =>
+Map<String, dynamic> _$$KodiPVRGetBroadcastsResponseImplToJson(
+        _$KodiPVRGetBroadcastsResponseImpl instance) =>
     <String, dynamic>{
       'broadcasts': instance.broadcasts.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

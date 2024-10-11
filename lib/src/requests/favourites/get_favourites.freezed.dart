@@ -12,7 +12,7 @@ part of 'get_favourites.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetFavourites _$GetFavouritesFromJson(Map<String, dynamic> json) {
   return _GetFavourites.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$GetFavourites {
   Set<KodiFavouriteFieldsFavourite>? get properties =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetFavourites to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetFavourites
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetFavouritesCopyWith<GetFavourites> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GetFavouritesCopyWithImpl<$Res, $Val extends GetFavourites>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetFavourites
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,11 +76,11 @@ class _$GetFavouritesCopyWithImpl<$Res, $Val extends GetFavourites>
 }
 
 /// @nodoc
-abstract class _$$_GetFavouritesCopyWith<$Res>
+abstract class _$$GetFavouritesImplCopyWith<$Res>
     implements $GetFavouritesCopyWith<$Res> {
-  factory _$$_GetFavouritesCopyWith(
-          _$_GetFavourites value, $Res Function(_$_GetFavourites) then) =
-      __$$_GetFavouritesCopyWithImpl<$Res>;
+  factory _$$GetFavouritesImplCopyWith(
+          _$GetFavouritesImpl value, $Res Function(_$GetFavouritesImpl) then) =
+      __$$GetFavouritesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -82,20 +88,22 @@ abstract class _$$_GetFavouritesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetFavouritesCopyWithImpl<$Res>
-    extends _$GetFavouritesCopyWithImpl<$Res, _$_GetFavourites>
-    implements _$$_GetFavouritesCopyWith<$Res> {
-  __$$_GetFavouritesCopyWithImpl(
-      _$_GetFavourites _value, $Res Function(_$_GetFavourites) _then)
+class __$$GetFavouritesImplCopyWithImpl<$Res>
+    extends _$GetFavouritesCopyWithImpl<$Res, _$GetFavouritesImpl>
+    implements _$$GetFavouritesImplCopyWith<$Res> {
+  __$$GetFavouritesImplCopyWithImpl(
+      _$GetFavouritesImpl _value, $Res Function(_$GetFavouritesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetFavourites
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetFavourites(
+    return _then(_$GetFavouritesImpl(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -110,14 +118,14 @@ class __$$_GetFavouritesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetFavourites extends _GetFavourites {
-  const _$_GetFavourites(
+class _$GetFavouritesImpl extends _GetFavourites {
+  const _$GetFavouritesImpl(
       {this.type, final Set<KodiFavouriteFieldsFavourite>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetFavourites.fromJson(Map<String, dynamic> json) =>
-      _$$_GetFavouritesFromJson(json);
+  factory _$GetFavouritesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetFavouritesImplFromJson(json);
 
   @override
   final KodiFavouriteType? type;
@@ -137,29 +145,31 @@ class _$_GetFavourites extends _GetFavourites {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetFavourites &&
+            other is _$GetFavouritesImpl &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, type, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetFavourites
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetFavouritesCopyWith<_$_GetFavourites> get copyWith =>
-      __$$_GetFavouritesCopyWithImpl<_$_GetFavourites>(this, _$identity);
+  _$$GetFavouritesImplCopyWith<_$GetFavouritesImpl> get copyWith =>
+      __$$GetFavouritesImplCopyWithImpl<_$GetFavouritesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetFavouritesToJson(
+    return _$$GetFavouritesImplToJson(
       this,
     );
   }
@@ -167,20 +177,24 @@ class _$_GetFavourites extends _GetFavourites {
 
 abstract class _GetFavourites extends GetFavourites {
   const factory _GetFavourites(
-      {final KodiFavouriteType? type,
-      final Set<KodiFavouriteFieldsFavourite>? properties}) = _$_GetFavourites;
+          {final KodiFavouriteType? type,
+          final Set<KodiFavouriteFieldsFavourite>? properties}) =
+      _$GetFavouritesImpl;
   const _GetFavourites._() : super._();
 
   factory _GetFavourites.fromJson(Map<String, dynamic> json) =
-      _$_GetFavourites.fromJson;
+      _$GetFavouritesImpl.fromJson;
 
   @override
   KodiFavouriteType? get type;
   @override
   Set<KodiFavouriteFieldsFavourite>? get properties;
+
+  /// Create a copy of GetFavourites
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetFavouritesCopyWith<_$_GetFavourites> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetFavouritesImplCopyWith<_$GetFavouritesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -195,8 +209,12 @@ mixin _$GetFavouritesResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetFavouritesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetFavouritesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetFavouritesResponseCopyWith<GetFavouritesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -225,6 +243,8 @@ class _$GetFavouritesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetFavouritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,6 +263,8 @@ class _$GetFavouritesResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetFavouritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -253,11 +275,12 @@ class _$GetFavouritesResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetFavouritesResponseCopyWith<$Res>
+abstract class _$$GetFavouritesResponseImplCopyWith<$Res>
     implements $GetFavouritesResponseCopyWith<$Res> {
-  factory _$$_GetFavouritesResponseCopyWith(_$_GetFavouritesResponse value,
-          $Res Function(_$_GetFavouritesResponse) then) =
-      __$$_GetFavouritesResponseCopyWithImpl<$Res>;
+  factory _$$GetFavouritesResponseImplCopyWith(
+          _$GetFavouritesResponseImpl value,
+          $Res Function(_$GetFavouritesResponseImpl) then) =
+      __$$GetFavouritesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -269,20 +292,23 @@ abstract class _$$_GetFavouritesResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetFavouritesResponseCopyWithImpl<$Res>
-    extends _$GetFavouritesResponseCopyWithImpl<$Res, _$_GetFavouritesResponse>
-    implements _$$_GetFavouritesResponseCopyWith<$Res> {
-  __$$_GetFavouritesResponseCopyWithImpl(_$_GetFavouritesResponse _value,
-      $Res Function(_$_GetFavouritesResponse) _then)
+class __$$GetFavouritesResponseImplCopyWithImpl<$Res>
+    extends _$GetFavouritesResponseCopyWithImpl<$Res,
+        _$GetFavouritesResponseImpl>
+    implements _$$GetFavouritesResponseImplCopyWith<$Res> {
+  __$$GetFavouritesResponseImplCopyWithImpl(_$GetFavouritesResponseImpl _value,
+      $Res Function(_$GetFavouritesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetFavouritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? favourites = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetFavouritesResponse(
+    return _then(_$GetFavouritesResponseImpl(
       favourites: null == favourites
           ? _value._favourites
           : favourites // ignore: cast_nullable_to_non_nullable
@@ -297,14 +323,14 @@ class __$$_GetFavouritesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetFavouritesResponse implements _GetFavouritesResponse {
-  const _$_GetFavouritesResponse(
+class _$GetFavouritesResponseImpl implements _GetFavouritesResponse {
+  const _$GetFavouritesResponseImpl(
       {required final List<KodiFavouriteDetailsFavourite> favourites,
       required this.limits})
       : _favourites = favourites;
 
-  factory _$_GetFavouritesResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetFavouritesResponseFromJson(json);
+  factory _$GetFavouritesResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetFavouritesResponseImplFromJson(json);
 
   final List<KodiFavouriteDetailsFavourite> _favourites;
   @override
@@ -323,30 +349,32 @@ class _$_GetFavouritesResponse implements _GetFavouritesResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetFavouritesResponse &&
+            other is _$GetFavouritesResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._favourites, _favourites) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_favourites), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetFavouritesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetFavouritesResponseCopyWith<_$_GetFavouritesResponse> get copyWith =>
-      __$$_GetFavouritesResponseCopyWithImpl<_$_GetFavouritesResponse>(
-          this, _$identity);
+  _$$GetFavouritesResponseImplCopyWith<_$GetFavouritesResponseImpl>
+      get copyWith => __$$GetFavouritesResponseImplCopyWithImpl<
+          _$GetFavouritesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetFavouritesResponseToJson(
+    return _$$GetFavouritesResponseImplToJson(
       this,
     );
   }
@@ -354,18 +382,22 @@ class _$_GetFavouritesResponse implements _GetFavouritesResponse {
 
 abstract class _GetFavouritesResponse implements GetFavouritesResponse {
   const factory _GetFavouritesResponse(
-      {required final List<KodiFavouriteDetailsFavourite> favourites,
-      required final KodiListLimitsReturned limits}) = _$_GetFavouritesResponse;
+          {required final List<KodiFavouriteDetailsFavourite> favourites,
+          required final KodiListLimitsReturned limits}) =
+      _$GetFavouritesResponseImpl;
 
   factory _GetFavouritesResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetFavouritesResponse.fromJson;
+      _$GetFavouritesResponseImpl.fromJson;
 
   @override
   List<KodiFavouriteDetailsFavourite> get favourites;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetFavouritesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetFavouritesResponseCopyWith<_$_GetFavouritesResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetFavouritesResponseImplCopyWith<_$GetFavouritesResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

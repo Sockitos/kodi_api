@@ -12,7 +12,7 @@ part of 'set_album_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetAlbumDetails _$SetAlbumDetailsFromJson(Map<String, dynamic> json) {
   return _SetAlbumDetails.fromJson(json);
@@ -61,8 +61,12 @@ mixin _$SetAlbumDetails {
   @JsonKey(name: 'originaldate')
   DateTime? get originalDate => throw _privateConstructorUsedError;
 
+  /// Serializes this SetAlbumDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetAlbumDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetAlbumDetailsCopyWith<SetAlbumDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -113,6 +117,8 @@ class _$SetAlbumDetailsCopyWithImpl<$Res, $Val extends SetAlbumDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetAlbumDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -236,6 +242,8 @@ class _$SetAlbumDetailsCopyWithImpl<$Res, $Val extends SetAlbumDetails>
     ) as $Val);
   }
 
+  /// Create a copy of SetAlbumDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkSetCopyWith<$Res>? get art {
@@ -250,11 +258,11 @@ class _$SetAlbumDetailsCopyWithImpl<$Res, $Val extends SetAlbumDetails>
 }
 
 /// @nodoc
-abstract class _$$_SetAlbumDetailsCopyWith<$Res>
+abstract class _$$SetAlbumDetailsImplCopyWith<$Res>
     implements $SetAlbumDetailsCopyWith<$Res> {
-  factory _$$_SetAlbumDetailsCopyWith(
-          _$_SetAlbumDetails value, $Res Function(_$_SetAlbumDetails) then) =
-      __$$_SetAlbumDetailsCopyWithImpl<$Res>;
+  factory _$$SetAlbumDetailsImplCopyWith(_$SetAlbumDetailsImpl value,
+          $Res Function(_$SetAlbumDetailsImpl) then) =
+      __$$SetAlbumDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -289,13 +297,15 @@ abstract class _$$_SetAlbumDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetAlbumDetailsCopyWithImpl<$Res>
-    extends _$SetAlbumDetailsCopyWithImpl<$Res, _$_SetAlbumDetails>
-    implements _$$_SetAlbumDetailsCopyWith<$Res> {
-  __$$_SetAlbumDetailsCopyWithImpl(
-      _$_SetAlbumDetails _value, $Res Function(_$_SetAlbumDetails) _then)
+class __$$SetAlbumDetailsImplCopyWithImpl<$Res>
+    extends _$SetAlbumDetailsCopyWithImpl<$Res, _$SetAlbumDetailsImpl>
+    implements _$$SetAlbumDetailsImplCopyWith<$Res> {
+  __$$SetAlbumDetailsImplCopyWithImpl(
+      _$SetAlbumDetailsImpl _value, $Res Function(_$SetAlbumDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetAlbumDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -323,7 +333,7 @@ class __$$_SetAlbumDetailsCopyWithImpl<$Res>
     Object? releaseDate = freezed,
     Object? originalDate = freezed,
   }) {
-    return _then(_$_SetAlbumDetails(
+    return _then(_$SetAlbumDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -422,8 +432,8 @@ class __$$_SetAlbumDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetAlbumDetails extends _SetAlbumDetails {
-  const _$_SetAlbumDetails(@JsonKey(name: 'albumid') this.id,
+class _$SetAlbumDetailsImpl extends _SetAlbumDetails {
+  const _$SetAlbumDetailsImpl(@JsonKey(name: 'albumid') this.id,
       {this.title,
       @JsonKey(name: 'artist') final List<String>? artists,
       this.description,
@@ -456,8 +466,8 @@ class _$_SetAlbumDetails extends _SetAlbumDetails {
         _musicBrainzAlbumArtistIds = musicBrainzAlbumArtistIds,
         super._();
 
-  factory _$_SetAlbumDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_SetAlbumDetailsFromJson(json);
+  factory _$SetAlbumDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetAlbumDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'albumid')
@@ -577,10 +587,10 @@ class _$_SetAlbumDetails extends _SetAlbumDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetAlbumDetails &&
+            other is _$SetAlbumDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             const DeepCollectionEquality().equals(other._artists, _artists) &&
@@ -618,7 +628,7 @@ class _$_SetAlbumDetails extends _SetAlbumDetails {
                 other.originalDate == originalDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -647,15 +657,18 @@ class _$_SetAlbumDetails extends _SetAlbumDetails {
         originalDate
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetAlbumDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetAlbumDetailsCopyWith<_$_SetAlbumDetails> get copyWith =>
-      __$$_SetAlbumDetailsCopyWithImpl<_$_SetAlbumDetails>(this, _$identity);
+  _$$SetAlbumDetailsImplCopyWith<_$SetAlbumDetailsImpl> get copyWith =>
+      __$$SetAlbumDetailsImplCopyWithImpl<_$SetAlbumDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetAlbumDetailsToJson(
+    return _$$SetAlbumDetailsImplToJson(
       this,
     );
   }
@@ -687,11 +700,11 @@ abstract class _SetAlbumDetails extends SetAlbumDetails {
           @JsonKey(name: 'isboxset') final bool? isBoxSet,
           @JsonKey(name: 'releasedate') final DateTime? releaseDate,
           @JsonKey(name: 'originaldate') final DateTime? originalDate}) =
-      _$_SetAlbumDetails;
+      _$SetAlbumDetailsImpl;
   const _SetAlbumDetails._() : super._();
 
   factory _SetAlbumDetails.fromJson(Map<String, dynamic> json) =
-      _$_SetAlbumDetails.fromJson;
+      _$SetAlbumDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'albumid')
@@ -755,8 +768,11 @@ abstract class _SetAlbumDetails extends SetAlbumDetails {
   @override
   @JsonKey(name: 'originaldate')
   DateTime? get originalDate;
+
+  /// Create a copy of SetAlbumDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetAlbumDetailsCopyWith<_$_SetAlbumDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetAlbumDetailsImplCopyWith<_$SetAlbumDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

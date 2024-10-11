@@ -12,7 +12,7 @@ part of 'back.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Back _$BackFromJson(Map<String, dynamic> json) {
   return _Back.fromJson(json);
@@ -20,6 +20,7 @@ Back _$BackFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Back {
+  /// Serializes this Back to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,27 +39,36 @@ class _$BackCopyWithImpl<$Res, $Val extends Back>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Back
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_BackCopyWith<$Res> {
-  factory _$$_BackCopyWith(_$_Back value, $Res Function(_$_Back) then) =
-      __$$_BackCopyWithImpl<$Res>;
+abstract class _$$BackImplCopyWith<$Res> {
+  factory _$$BackImplCopyWith(
+          _$BackImpl value, $Res Function(_$BackImpl) then) =
+      __$$BackImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_BackCopyWithImpl<$Res> extends _$BackCopyWithImpl<$Res, _$_Back>
-    implements _$$_BackCopyWith<$Res> {
-  __$$_BackCopyWithImpl(_$_Back _value, $Res Function(_$_Back) _then)
+class __$$BackImplCopyWithImpl<$Res>
+    extends _$BackCopyWithImpl<$Res, _$BackImpl>
+    implements _$$BackImplCopyWith<$Res> {
+  __$$BackImplCopyWithImpl(_$BackImpl _value, $Res Function(_$BackImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Back
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Back extends _Back {
-  const _$_Back() : super._();
+class _$BackImpl extends _Back {
+  const _$BackImpl() : super._();
 
-  factory _$_Back.fromJson(Map<String, dynamic> json) => _$$_BackFromJson(json);
+  factory _$BackImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BackImplFromJson(json);
 
   @override
   String toString() {
@@ -66,26 +76,26 @@ class _$_Back extends _Back {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Back);
+        (other.runtimeType == runtimeType && other is _$BackImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BackToJson(
+    return _$$BackImplToJson(
       this,
     );
   }
 }
 
 abstract class _Back extends Back {
-  const factory _Back() = _$_Back;
+  const factory _Back() = _$BackImpl;
   const _Back._() : super._();
 
-  factory _Back.fromJson(Map<String, dynamic> json) = _$_Back.fromJson;
+  factory _Back.fromJson(Map<String, dynamic> json) = _$BackImpl.fromJson;
 }

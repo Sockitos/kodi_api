@@ -6,9 +6,9 @@ part 'kodi_pvr_property_value.g.dart';
 @freezed
 class KodiPVRPropertyValue with _$KodiPVRPropertyValue {
   const factory KodiPVRPropertyValue({
-    required bool available,
-    required bool recording,
-    required bool scanning,
+    @Default(false) bool available,
+    @Default(false) bool recording,
+    @Default(false) bool scanning,
   }) = _KodiPVRPropertyValue;
 
   factory KodiPVRPropertyValue.fromJson(Map<String, dynamic> json) =>

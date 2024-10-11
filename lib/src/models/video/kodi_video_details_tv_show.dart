@@ -2,7 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kodi_api/src/converters/custom_converters.dart';
 import 'package:kodi_api/src/models/media/kodi_media_artwork.dart';
 import 'package:kodi_api/src/models/video/kodi_video_cast.dart';
-import 'package:kodi_api/src/requests/video_library/set_tv_show_details.dart';
 
 part 'kodi_video_details_tv_show.freezed.dart';
 part 'kodi_video_details_tv_show.g.dart';
@@ -12,39 +11,49 @@ class KodiVideoDetailsTvShow with _$KodiVideoDetailsTvShow {
   @JsonSerializable(converters: [DateTimeConverter()])
   const factory KodiVideoDetailsTvShow({
     List<KodiVideoCast>? cast,
-    @JsonKey(name: 'episode') int? episode,
-    @JsonKey(name: 'episodeguide') String? episodeGuide,
+    @JsonKey(name: 'episode') @Default(0) int episode,
+    @JsonKey(name: 'episodeguide') @Default('') String episodeGuide,
     List<String>? genre,
-    @JsonKey(name: 'imdbnumber') String? imdbNumber,
-    String? mpaa,
-    @JsonKey(name: 'originaltitle') String? originalTitle,
+    @JsonKey(name: 'imdbnumber') @Default('') String imdbNumber,
+    @Default('') String mpaa,
+    @JsonKey(name: 'originaltitle') @Default('') String originalTitle,
     DateTime? premiered,
-    double? rating,
+    @Default(0) double rating,
     Map<String, dynamic>? ratings,
-    int? runtime,
-    int? season,
-    @JsonKey(name: 'sorttitle') String? sortTitle,
-    KodiVideoLibrarySetTvShowDetailsStatus? status,
+    @Default(0) int runtime,
+    @Default(0) int season,
+    @JsonKey(name: 'sorttitle') @Default('') String sortTitle,
+    KodiVideoDetailsTvShowStatus? status,
     List<String>? studio,
     List<String>? tag,
     @JsonKey(name: 'tvshowid') required int tvShowId,
     @JsonKey(name: 'uniqueid') Map<String, dynamic>? uniqueId,
-    @JsonKey(name: 'userrating') int? userRating,
-    String? votes,
-    @JsonKey(name: 'watchedepisodes') int? watchedEpisodes,
-    int? year,
+    @JsonKey(name: 'userrating') @Default(0) int userRating,
+    @Default('') String votes,
+    @JsonKey(name: 'watchedepisodes') @Default(0) int watchedEpisodes,
+    @Default(0) int year,
     @JsonKey(name: 'dateadded') DateTime? dateAdded,
-    String? file,
+    @Default('') String file,
     @JsonKey(name: 'lastplayed') DateTime? lastPlayed,
-    String? plot,
-    String? title,
+    @Default('') String plot,
+    @Default('') String title,
     KodiMediaArtwork? art,
-    @JsonKey(name: 'playcount') int? playCount,
-    String? fanart,
-    String? thumbnail,
+    @JsonKey(name: 'playcount') @Default(0) int playCount,
+    @Default('') String fanart,
+    @Default('') String thumbnail,
     required String label,
   }) = _KodiVideoDetailsTvShow;
 
   factory KodiVideoDetailsTvShow.fromJson(Map<String, dynamic> json) =>
       _$KodiVideoDetailsTvShowFromJson(json);
+}
+
+enum KodiVideoDetailsTvShowStatus {
+  @JsonValue('returning series')
+  returningSeries,
+  @JsonValue('in production')
+  inProduction,
+  planned,
+  cancelled,
+  ended,
 }

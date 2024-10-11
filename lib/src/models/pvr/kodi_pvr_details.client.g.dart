@@ -6,23 +6,23 @@ part of 'kodi_pvr_details.client.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPVRDetailsClient _$$_KodiPVRDetailsClientFromJson(
+_$KodiPVRDetailsClientImpl _$$KodiPVRDetailsClientImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRDetailsClient(
-      addonId: json['addonid'] as String,
-      clientId: json['clientid'] as int,
-      supportsChannelGroups: json['supportschannelgroups'] as bool,
-      supportsChannelScan: json['supportschannelscan'] as bool,
-      supportsEpg: json['supportsepg'] as bool,
-      supportsRadio: json['supportsradio'] as bool,
-      supportsRecordings: json['supportsrecordings'] as bool,
-      supportsTimers: json['supportstimers'] as bool,
-      supportsTv: json['supportstv'] as bool,
+    _$KodiPVRDetailsClientImpl(
+      addonId: json['addonid'] as String? ?? '',
+      clientId: (json['clientid'] as num).toInt(),
+      supportsChannelGroups: json['supportschannelgroups'] as bool? ?? false,
+      supportsChannelScan: json['supportschannelscan'] as bool? ?? false,
+      supportsEpg: json['supportsepg'] as bool? ?? false,
+      supportsRadio: json['supportsradio'] as bool? ?? false,
+      supportsRecordings: json['supportsrecordings'] as bool? ?? false,
+      supportsTimers: json['supportstimers'] as bool? ?? false,
+      supportsTv: json['supportstv'] as bool? ?? false,
       label: json['label'] as String,
     );
 
-Map<String, dynamic> _$$_KodiPVRDetailsClientToJson(
-        _$_KodiPVRDetailsClient instance) =>
+Map<String, dynamic> _$$KodiPVRDetailsClientImplToJson(
+        _$KodiPVRDetailsClientImpl instance) =>
     <String, dynamic>{
       'addonid': instance.addonId,
       'clientid': instance.clientId,

@@ -6,47 +6,47 @@ part of 'kodi_list_filter_songs.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterSongsAnd _$$_KodiListFilterSongsAndFromJson(
+_$KodiListFilterSongsAndImpl _$$KodiListFilterSongsAndImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterSongsAnd(
+    _$KodiListFilterSongsAndImpl(
       (json['and'] as List<dynamic>)
           .map((e) => KodiListFilterSongs.fromJson(e as Map<String, dynamic>))
           .toList(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterSongsAndToJson(
-        _$_KodiListFilterSongsAnd instance) =>
+Map<String, dynamic> _$$KodiListFilterSongsAndImplToJson(
+        _$KodiListFilterSongsAndImpl instance) =>
     <String, dynamic>{
       'and': instance.and.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterSongsOr _$$_KodiListFilterSongsOrFromJson(
+_$KodiListFilterSongsOrImpl _$$KodiListFilterSongsOrImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterSongsOr(
+    _$KodiListFilterSongsOrImpl(
       (json['or'] as List<dynamic>)
           .map((e) => KodiListFilterSongs.fromJson(e as Map<String, dynamic>))
           .toList(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterSongsOrToJson(
-        _$_KodiListFilterSongsOr instance) =>
+Map<String, dynamic> _$$KodiListFilterSongsOrImplToJson(
+        _$KodiListFilterSongsOrImpl instance) =>
     <String, dynamic>{
       'or': instance.or.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterSongsValue _$$_KodiListFilterSongsValueFromJson(
+_$KodiListFilterSongsValueImpl _$$KodiListFilterSongsValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterSongsValue(
+    _$KodiListFilterSongsValueImpl(
       KodiListFilterRuleSongs.fromJson(json['value'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterSongsValueToJson(
-        _$_KodiListFilterSongsValue instance) =>
+Map<String, dynamic> _$$KodiListFilterSongsValueImplToJson(
+        _$KodiListFilterSongsValueImpl instance) =>
     <String, dynamic>{
       'value': instance.value.toJson(),
       'runtimeType': instance.$type,

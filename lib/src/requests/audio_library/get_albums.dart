@@ -1,7 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:kodi_api/kodi_api.dart';
 import 'package:kodi_api/src/models/audio/kodi_audio_details_album.dart';
+import 'package:kodi_api/src/models/audio/kodi_audio_fields_album.dart';
 import 'package:kodi_api/src/models/list/kodi_list_filter_albums.dart';
+import 'package:kodi_api/src/models/list/kodi_list_limits.dart';
 import 'package:kodi_api/src/models/list/kodi_list_limits_returned.dart';
 import 'package:kodi_api/src/models/list/kodi_list_sort.dart';
 import 'package:kodi_api/src/requests/kodi_request.dart';

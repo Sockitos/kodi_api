@@ -12,7 +12,7 @@ part of 'suspend.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Suspend _$SuspendFromJson(Map<String, dynamic> json) {
   return _Suspend.fromJson(json);
@@ -20,6 +20,7 @@ Suspend _$SuspendFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Suspend {
+  /// Serializes this Suspend to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,30 +39,37 @@ class _$SuspendCopyWithImpl<$Res, $Val extends Suspend>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Suspend
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SuspendCopyWith<$Res> {
-  factory _$$_SuspendCopyWith(
-          _$_Suspend value, $Res Function(_$_Suspend) then) =
-      __$$_SuspendCopyWithImpl<$Res>;
+abstract class _$$SuspendImplCopyWith<$Res> {
+  factory _$$SuspendImplCopyWith(
+          _$SuspendImpl value, $Res Function(_$SuspendImpl) then) =
+      __$$SuspendImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SuspendCopyWithImpl<$Res>
-    extends _$SuspendCopyWithImpl<$Res, _$_Suspend>
-    implements _$$_SuspendCopyWith<$Res> {
-  __$$_SuspendCopyWithImpl(_$_Suspend _value, $Res Function(_$_Suspend) _then)
+class __$$SuspendImplCopyWithImpl<$Res>
+    extends _$SuspendCopyWithImpl<$Res, _$SuspendImpl>
+    implements _$$SuspendImplCopyWith<$Res> {
+  __$$SuspendImplCopyWithImpl(
+      _$SuspendImpl _value, $Res Function(_$SuspendImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Suspend
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Suspend extends _Suspend {
-  const _$_Suspend() : super._();
+class _$SuspendImpl extends _Suspend {
+  const _$SuspendImpl() : super._();
 
-  factory _$_Suspend.fromJson(Map<String, dynamic> json) =>
-      _$$_SuspendFromJson(json);
+  factory _$SuspendImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SuspendImplFromJson(json);
 
   @override
   String toString() {
@@ -69,26 +77,26 @@ class _$_Suspend extends _Suspend {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Suspend);
+        (other.runtimeType == runtimeType && other is _$SuspendImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SuspendToJson(
+    return _$$SuspendImplToJson(
       this,
     );
   }
 }
 
 abstract class _Suspend extends Suspend {
-  const factory _Suspend() = _$_Suspend;
+  const factory _Suspend() = _$SuspendImpl;
   const _Suspend._() : super._();
 
-  factory _Suspend.fromJson(Map<String, dynamic> json) = _$_Suspend.fromJson;
+  factory _Suspend.fromJson(Map<String, dynamic> json) = _$SuspendImpl.fromJson;
 }

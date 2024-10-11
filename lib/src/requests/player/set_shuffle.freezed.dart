@@ -12,7 +12,7 @@ part of 'set_shuffle.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetShuffle _$SetShuffleFromJson(Map<String, dynamic> json) {
   return _SetShuffle.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$SetShuffle {
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get shuffle => throw _privateConstructorUsedError;
 
+  /// Serializes this SetShuffle to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetShuffle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetShuffleCopyWith<SetShuffle> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$SetShuffleCopyWithImpl<$Res, $Val extends SetShuffle>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetShuffle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$SetShuffleCopyWithImpl<$Res, $Val extends SetShuffle>
     ) as $Val);
   }
 
+  /// Create a copy of SetShuffle
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalToggleCopyWith<$Res> get shuffle {
@@ -82,11 +90,11 @@ class _$SetShuffleCopyWithImpl<$Res, $Val extends SetShuffle>
 }
 
 /// @nodoc
-abstract class _$$_SetShuffleCopyWith<$Res>
+abstract class _$$SetShuffleImplCopyWith<$Res>
     implements $SetShuffleCopyWith<$Res> {
-  factory _$$_SetShuffleCopyWith(
-          _$_SetShuffle value, $Res Function(_$_SetShuffle) then) =
-      __$$_SetShuffleCopyWithImpl<$Res>;
+  factory _$$SetShuffleImplCopyWith(
+          _$SetShuffleImpl value, $Res Function(_$SetShuffleImpl) then) =
+      __$$SetShuffleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -98,20 +106,22 @@ abstract class _$$_SetShuffleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetShuffleCopyWithImpl<$Res>
-    extends _$SetShuffleCopyWithImpl<$Res, _$_SetShuffle>
-    implements _$$_SetShuffleCopyWith<$Res> {
-  __$$_SetShuffleCopyWithImpl(
-      _$_SetShuffle _value, $Res Function(_$_SetShuffle) _then)
+class __$$SetShuffleImplCopyWithImpl<$Res>
+    extends _$SetShuffleCopyWithImpl<$Res, _$SetShuffleImpl>
+    implements _$$SetShuffleImplCopyWith<$Res> {
+  __$$SetShuffleImplCopyWithImpl(
+      _$SetShuffleImpl _value, $Res Function(_$SetShuffleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetShuffle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? shuffle = null,
   }) {
-    return _then(_$_SetShuffle(
+    return _then(_$SetShuffleImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,13 +136,13 @@ class __$$_SetShuffleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetShuffle extends _SetShuffle {
-  const _$_SetShuffle(@JsonKey(name: 'playerid') this.id,
+class _$SetShuffleImpl extends _SetShuffle {
+  const _$SetShuffleImpl(@JsonKey(name: 'playerid') this.id,
       @KodiGlobalToggleConverter() this.shuffle)
       : super._();
 
-  factory _$_SetShuffle.fromJson(Map<String, dynamic> json) =>
-      _$$_SetShuffleFromJson(json);
+  factory _$SetShuffleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetShuffleImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -147,27 +157,29 @@ class _$_SetShuffle extends _SetShuffle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetShuffle &&
+            other is _$SetShuffleImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.shuffle, shuffle) || other.shuffle == shuffle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, shuffle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetShuffle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetShuffleCopyWith<_$_SetShuffle> get copyWith =>
-      __$$_SetShuffleCopyWithImpl<_$_SetShuffle>(this, _$identity);
+  _$$SetShuffleImplCopyWith<_$SetShuffleImpl> get copyWith =>
+      __$$SetShuffleImplCopyWithImpl<_$SetShuffleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetShuffleToJson(
+    return _$$SetShuffleImplToJson(
       this,
     );
   }
@@ -176,11 +188,11 @@ class _$_SetShuffle extends _SetShuffle {
 abstract class _SetShuffle extends SetShuffle {
   const factory _SetShuffle(@JsonKey(name: 'playerid') final int id,
           @KodiGlobalToggleConverter() final KodiGlobalToggle shuffle) =
-      _$_SetShuffle;
+      _$SetShuffleImpl;
   const _SetShuffle._() : super._();
 
   factory _SetShuffle.fromJson(Map<String, dynamic> json) =
-      _$_SetShuffle.fromJson;
+      _$SetShuffleImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -188,8 +200,11 @@ abstract class _SetShuffle extends SetShuffle {
   @override
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get shuffle;
+
+  /// Create a copy of SetShuffle
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetShuffleCopyWith<_$_SetShuffle> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetShuffleImplCopyWith<_$SetShuffleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -59,33 +59,33 @@ class GetMusicVideosResponse with _$GetMusicVideosResponse {
 @freezed
 class KodiVideoLibraryGetMusicVideosFilter
     with _$KodiVideoLibraryGetMusicVideosFilter {
-  const factory KodiVideoLibraryGetMusicVideosFilter.artist({
-    required String artist,
-  }) = _KodiVideoLibraryGetMusicVideosFilterArtist;
+  const factory KodiVideoLibraryGetMusicVideosFilter.artist(
+    String artist,
+  ) = _KodiVideoLibraryGetMusicVideosFilterArtist;
 
-  const factory KodiVideoLibraryGetMusicVideosFilter.genreId({
-    @JsonKey(name: 'genreid') required int genreId,
-  }) = _KodiVideoLibraryGetMusicVideosFilterGenreId;
+  const factory KodiVideoLibraryGetMusicVideosFilter.genreId(
+    @JsonKey(name: 'genreid') int genreId,
+  ) = _KodiVideoLibraryGetMusicVideosFilterGenreId;
 
-  const factory KodiVideoLibraryGetMusicVideosFilter.genre({
-    required String genre,
-  }) = _KodiVideoLibraryGetMusicVideosFilterGenre;
+  const factory KodiVideoLibraryGetMusicVideosFilter.genre(
+    String genre,
+  ) = _KodiVideoLibraryGetMusicVideosFilterGenre;
 
-  const factory KodiVideoLibraryGetMusicVideosFilter.year({
-    required int year,
-  }) = _KodiVideoLibraryGetMusicVideosFilterYear;
+  const factory KodiVideoLibraryGetMusicVideosFilter.year(
+    int year,
+  ) = _KodiVideoLibraryGetMusicVideosFilterYear;
 
-  const factory KodiVideoLibraryGetMusicVideosFilter.director({
-    required String director,
-  }) = _KodiVideoLibraryGetMusicVideosFilterDirector;
+  const factory KodiVideoLibraryGetMusicVideosFilter.director(
+    String director,
+  ) = _KodiVideoLibraryGetMusicVideosFilterDirector;
 
-  const factory KodiVideoLibraryGetMusicVideosFilter.studio({
-    required String studio,
-  }) = _KodiVideoLibraryGetMusicVideosFilterStudio;
+  const factory KodiVideoLibraryGetMusicVideosFilter.studio(
+    String studio,
+  ) = _KodiVideoLibraryGetMusicVideosFilterStudio;
 
-  const factory KodiVideoLibraryGetMusicVideosFilter.tag({
-    required String tag,
-  }) = _KodiVideoLibraryGetMusicVideosFilterTag;
+  const factory KodiVideoLibraryGetMusicVideosFilter.tag(
+    String tag,
+  ) = _KodiVideoLibraryGetMusicVideosFilterTag;
 
   const factory KodiVideoLibraryGetMusicVideosFilter.filter(
     @KodiListFilterMusicVideosConverter() KodiListFilterMusicVideos filter,

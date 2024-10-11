@@ -6,17 +6,19 @@ part of 'set_season_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetSeasonDetails _$$_SetSeasonDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetSeasonDetails(
-      json['seasonid'] as int,
+_$SetSeasonDetailsImpl _$$SetSeasonDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetSeasonDetailsImpl(
+      (json['seasonid'] as num).toInt(),
       art: json['art'] == null
           ? null
           : KodiMediaArtworkSet.fromJson(json['art'] as Map<String, dynamic>),
-      userRating: json['userrating'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
       title: json['title'] as String?,
     );
 
-Map<String, dynamic> _$$_SetSeasonDetailsToJson(_$_SetSeasonDetails instance) {
+Map<String, dynamic> _$$SetSeasonDetailsImplToJson(
+    _$SetSeasonDetailsImpl instance) {
   final val = <String, dynamic>{
     'seasonid': instance.id,
   };

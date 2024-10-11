@@ -6,10 +6,10 @@ part of 'kodi_notification_video_library_on_export_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationVideoLibraryOnExportParams
-    _$$_KodiNotificationVideoLibraryOnExportParamsFromJson(
+_$KodiNotificationVideoLibraryOnExportParamsImpl
+    _$$KodiNotificationVideoLibraryOnExportParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnExportParams(
+        _$KodiNotificationVideoLibraryOnExportParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,8 @@ _$_KodiNotificationVideoLibraryOnExportParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnExportParamsToJson(
-    _$_KodiNotificationVideoLibraryOnExportParams instance) {
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnExportParamsImplToJson(
+    _$KodiNotificationVideoLibraryOnExportParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,17 +33,18 @@ Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnExportParamsToJson(
   return val;
 }
 
-_$_KodiNotificationVideoLibraryOnExportParamsData
-    _$$_KodiNotificationVideoLibraryOnExportParamsDataFromJson(
+_$KodiNotificationVideoLibraryOnExportParamsDataImpl
+    _$$KodiNotificationVideoLibraryOnExportParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnExportParamsData(
-          failCount: json['failcount'] as int,
+        _$KodiNotificationVideoLibraryOnExportParamsDataImpl(
+          failCount: (json['failcount'] as num).toInt(),
           file: json['file'] as String?,
           root: json['root'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnExportParamsDataToJson(
-    _$_KodiNotificationVideoLibraryOnExportParamsData instance) {
+Map<String, dynamic>
+    _$$KodiNotificationVideoLibraryOnExportParamsDataImplToJson(
+        _$KodiNotificationVideoLibraryOnExportParamsDataImpl instance) {
   final val = <String, dynamic>{
     'failcount': instance.failCount,
   };

@@ -12,7 +12,7 @@ part of 'kodi_player_notifications_player.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerNotificationsPlayer _$KodiPlayerNotificationsPlayerFromJson(
     Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiPlayerNotificationsPlayer {
   int get playerId => throw _privateConstructorUsedError;
   int? get speed => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerNotificationsPlayer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerNotificationsPlayer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerNotificationsPlayerCopyWith<KodiPlayerNotificationsPlayer>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$KodiPlayerNotificationsPlayerCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerNotificationsPlayer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -73,34 +79,36 @@ class _$KodiPlayerNotificationsPlayerCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerNotificationsPlayerCopyWith<$Res>
+abstract class _$$KodiPlayerNotificationsPlayerImplCopyWith<$Res>
     implements $KodiPlayerNotificationsPlayerCopyWith<$Res> {
-  factory _$$_KodiPlayerNotificationsPlayerCopyWith(
-          _$_KodiPlayerNotificationsPlayer value,
-          $Res Function(_$_KodiPlayerNotificationsPlayer) then) =
-      __$$_KodiPlayerNotificationsPlayerCopyWithImpl<$Res>;
+  factory _$$KodiPlayerNotificationsPlayerImplCopyWith(
+          _$KodiPlayerNotificationsPlayerImpl value,
+          $Res Function(_$KodiPlayerNotificationsPlayerImpl) then) =
+      __$$KodiPlayerNotificationsPlayerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'playerid') int playerId, int? speed});
 }
 
 /// @nodoc
-class __$$_KodiPlayerNotificationsPlayerCopyWithImpl<$Res>
+class __$$KodiPlayerNotificationsPlayerImplCopyWithImpl<$Res>
     extends _$KodiPlayerNotificationsPlayerCopyWithImpl<$Res,
-        _$_KodiPlayerNotificationsPlayer>
-    implements _$$_KodiPlayerNotificationsPlayerCopyWith<$Res> {
-  __$$_KodiPlayerNotificationsPlayerCopyWithImpl(
-      _$_KodiPlayerNotificationsPlayer _value,
-      $Res Function(_$_KodiPlayerNotificationsPlayer) _then)
+        _$KodiPlayerNotificationsPlayerImpl>
+    implements _$$KodiPlayerNotificationsPlayerImplCopyWith<$Res> {
+  __$$KodiPlayerNotificationsPlayerImplCopyWithImpl(
+      _$KodiPlayerNotificationsPlayerImpl _value,
+      $Res Function(_$KodiPlayerNotificationsPlayerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerNotificationsPlayer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playerId = null,
     Object? speed = freezed,
   }) {
-    return _then(_$_KodiPlayerNotificationsPlayer(
+    return _then(_$KodiPlayerNotificationsPlayerImpl(
       playerId: null == playerId
           ? _value.playerId
           : playerId // ignore: cast_nullable_to_non_nullable
@@ -115,14 +123,14 @@ class __$$_KodiPlayerNotificationsPlayerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerNotificationsPlayer
+class _$KodiPlayerNotificationsPlayerImpl
     implements _KodiPlayerNotificationsPlayer {
-  const _$_KodiPlayerNotificationsPlayer(
+  const _$KodiPlayerNotificationsPlayerImpl(
       {@JsonKey(name: 'playerid') required this.playerId, this.speed});
 
-  factory _$_KodiPlayerNotificationsPlayer.fromJson(
+  factory _$KodiPlayerNotificationsPlayerImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerNotificationsPlayerFromJson(json);
+      _$$KodiPlayerNotificationsPlayerImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -136,29 +144,32 @@ class _$_KodiPlayerNotificationsPlayer
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerNotificationsPlayer &&
+            other is _$KodiPlayerNotificationsPlayerImpl &&
             (identical(other.playerId, playerId) ||
                 other.playerId == playerId) &&
             (identical(other.speed, speed) || other.speed == speed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playerId, speed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerNotificationsPlayer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerNotificationsPlayerCopyWith<_$_KodiPlayerNotificationsPlayer>
-      get copyWith => __$$_KodiPlayerNotificationsPlayerCopyWithImpl<
-          _$_KodiPlayerNotificationsPlayer>(this, _$identity);
+  _$$KodiPlayerNotificationsPlayerImplCopyWith<
+          _$KodiPlayerNotificationsPlayerImpl>
+      get copyWith => __$$KodiPlayerNotificationsPlayerImplCopyWithImpl<
+          _$KodiPlayerNotificationsPlayerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerNotificationsPlayerToJson(
+    return _$$KodiPlayerNotificationsPlayerImplToJson(
       this,
     );
   }
@@ -168,18 +179,22 @@ abstract class _KodiPlayerNotificationsPlayer
     implements KodiPlayerNotificationsPlayer {
   const factory _KodiPlayerNotificationsPlayer(
       {@JsonKey(name: 'playerid') required final int playerId,
-      final int? speed}) = _$_KodiPlayerNotificationsPlayer;
+      final int? speed}) = _$KodiPlayerNotificationsPlayerImpl;
 
   factory _KodiPlayerNotificationsPlayer.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerNotificationsPlayer.fromJson;
+      _$KodiPlayerNotificationsPlayerImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
   int get playerId;
   @override
   int? get speed;
+
+  /// Create a copy of KodiPlayerNotificationsPlayer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerNotificationsPlayerCopyWith<_$_KodiPlayerNotificationsPlayer>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerNotificationsPlayerImplCopyWith<
+          _$KodiPlayerNotificationsPlayerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

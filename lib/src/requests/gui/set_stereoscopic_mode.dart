@@ -36,13 +36,17 @@ enum KodiGUIStereoscopicSetMode {
   previous,
   select,
   off,
+  @JsonValue('split_vertical')
   splitVertical,
+  @JsonValue('split_horizontal')
   splitHorizontal,
+  @JsonValue('row_interleaved')
   rowInterleaved,
+  @JsonValue('hardware_based')
   hardwareBased,
+  @JsonValue('anaglyph_cyan_red')
   anaglyphCyanRed,
+  @JsonValue('anaglyph_green_magenta')
   anaglyphGreenMagenta,
-  anaglyphYellowBlue,
-  checkerboard,
   monoscopic,
 }

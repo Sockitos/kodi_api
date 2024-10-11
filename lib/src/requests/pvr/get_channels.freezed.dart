@@ -12,7 +12,7 @@ part of 'get_channels.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetChannels _$GetChannelsFromJson(Map<String, dynamic> json) {
   return _GetChannels.fromJson(json);
@@ -20,6 +20,7 @@ GetChannels _$GetChannelsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetChannels {
+  @KodiPVRChannelGroupIdConverter()
   @JsonKey(name: 'channelgroupid')
   KodiPVRChannelGroupId get groupId => throw _privateConstructorUsedError;
   Set<KodiPVRFieldsChannel>? get properties =>
@@ -27,8 +28,12 @@ mixin _$GetChannels {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetChannels to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetChannelsCopyWith<GetChannels> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -40,7 +45,9 @@ abstract class $GetChannelsCopyWith<$Res> {
       _$GetChannelsCopyWithImpl<$Res, GetChannels>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'channelgroupid') KodiPVRChannelGroupId groupId,
+      {@KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      KodiPVRChannelGroupId groupId,
       Set<KodiPVRFieldsChannel>? properties,
       KodiListLimits? limits,
       KodiListSort? sort});
@@ -60,6 +67,8 @@ class _$GetChannelsCopyWithImpl<$Res, $Val extends GetChannels>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +97,8 @@ class _$GetChannelsCopyWithImpl<$Res, $Val extends GetChannels>
     ) as $Val);
   }
 
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPVRChannelGroupIdCopyWith<$Res> get groupId {
@@ -96,6 +107,8 @@ class _$GetChannelsCopyWithImpl<$Res, $Val extends GetChannels>
     });
   }
 
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -108,6 +121,8 @@ class _$GetChannelsCopyWithImpl<$Res, $Val extends GetChannels>
     });
   }
 
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -122,15 +137,17 @@ class _$GetChannelsCopyWithImpl<$Res, $Val extends GetChannels>
 }
 
 /// @nodoc
-abstract class _$$_GetChannelsCopyWith<$Res>
+abstract class _$$GetChannelsImplCopyWith<$Res>
     implements $GetChannelsCopyWith<$Res> {
-  factory _$$_GetChannelsCopyWith(
-          _$_GetChannels value, $Res Function(_$_GetChannels) then) =
-      __$$_GetChannelsCopyWithImpl<$Res>;
+  factory _$$GetChannelsImplCopyWith(
+          _$GetChannelsImpl value, $Res Function(_$GetChannelsImpl) then) =
+      __$$GetChannelsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'channelgroupid') KodiPVRChannelGroupId groupId,
+      {@KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      KodiPVRChannelGroupId groupId,
       Set<KodiPVRFieldsChannel>? properties,
       KodiListLimits? limits,
       KodiListSort? sort});
@@ -144,13 +161,15 @@ abstract class _$$_GetChannelsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetChannelsCopyWithImpl<$Res>
-    extends _$GetChannelsCopyWithImpl<$Res, _$_GetChannels>
-    implements _$$_GetChannelsCopyWith<$Res> {
-  __$$_GetChannelsCopyWithImpl(
-      _$_GetChannels _value, $Res Function(_$_GetChannels) _then)
+class __$$GetChannelsImplCopyWithImpl<$Res>
+    extends _$GetChannelsCopyWithImpl<$Res, _$GetChannelsImpl>
+    implements _$$GetChannelsImplCopyWith<$Res> {
+  __$$GetChannelsImplCopyWithImpl(
+      _$GetChannelsImpl _value, $Res Function(_$GetChannelsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -159,7 +178,7 @@ class __$$_GetChannelsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetChannels(
+    return _then(_$GetChannelsImpl(
       null == groupId
           ? _value.groupId
           : groupId // ignore: cast_nullable_to_non_nullable
@@ -182,16 +201,22 @@ class __$$_GetChannelsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetChannels extends _GetChannels {
-  const _$_GetChannels(@JsonKey(name: 'channelgroupid') this.groupId,
-      {final Set<KodiPVRFieldsChannel>? properties, this.limits, this.sort})
+class _$GetChannelsImpl extends _GetChannels {
+  const _$GetChannelsImpl(
+      @KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      this.groupId,
+      {final Set<KodiPVRFieldsChannel>? properties,
+      this.limits,
+      this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetChannels.fromJson(Map<String, dynamic> json) =>
-      _$$_GetChannelsFromJson(json);
+  factory _$GetChannelsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetChannelsImplFromJson(json);
 
   @override
+  @KodiPVRChannelGroupIdConverter()
   @JsonKey(name: 'channelgroupid')
   final KodiPVRChannelGroupId groupId;
   final Set<KodiPVRFieldsChannel>? _properties;
@@ -215,10 +240,10 @@ class _$_GetChannels extends _GetChannels {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetChannels &&
+            other is _$GetChannelsImpl &&
             (identical(other.groupId, groupId) || other.groupId == groupId) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
@@ -226,20 +251,22 @@ class _$_GetChannels extends _GetChannels {
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, groupId,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetChannelsCopyWith<_$_GetChannels> get copyWith =>
-      __$$_GetChannelsCopyWithImpl<_$_GetChannels>(this, _$identity);
+  _$$GetChannelsImplCopyWith<_$GetChannelsImpl> get copyWith =>
+      __$$GetChannelsImplCopyWithImpl<_$GetChannelsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetChannelsToJson(
+    return _$$GetChannelsImplToJson(
       this,
     );
   }
@@ -247,16 +274,19 @@ class _$_GetChannels extends _GetChannels {
 
 abstract class _GetChannels extends GetChannels {
   const factory _GetChannels(
-      @JsonKey(name: 'channelgroupid') final KodiPVRChannelGroupId groupId,
+      @KodiPVRChannelGroupIdConverter()
+      @JsonKey(name: 'channelgroupid')
+      final KodiPVRChannelGroupId groupId,
       {final Set<KodiPVRFieldsChannel>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetChannels;
+      final KodiListSort? sort}) = _$GetChannelsImpl;
   const _GetChannels._() : super._();
 
   factory _GetChannels.fromJson(Map<String, dynamic> json) =
-      _$_GetChannels.fromJson;
+      _$GetChannelsImpl.fromJson;
 
   @override
+  @KodiPVRChannelGroupIdConverter()
   @JsonKey(name: 'channelgroupid')
   KodiPVRChannelGroupId get groupId;
   @override
@@ -265,9 +295,12 @@ abstract class _GetChannels extends GetChannels {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetChannels
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetChannelsCopyWith<_$_GetChannels> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetChannelsImplCopyWith<_$GetChannelsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -282,8 +315,12 @@ mixin _$KodiPVRGetChannelsResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRGetChannelsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRGetChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRGetChannelsResponseCopyWith<KodiPVRGetChannelsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -312,6 +349,8 @@ class _$KodiPVRGetChannelsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRGetChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -330,6 +369,8 @@ class _$KodiPVRGetChannelsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPVRGetChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -340,12 +381,12 @@ class _$KodiPVRGetChannelsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRGetChannelsResponseCopyWith<$Res>
+abstract class _$$KodiPVRGetChannelsResponseImplCopyWith<$Res>
     implements $KodiPVRGetChannelsResponseCopyWith<$Res> {
-  factory _$$_KodiPVRGetChannelsResponseCopyWith(
-          _$_KodiPVRGetChannelsResponse value,
-          $Res Function(_$_KodiPVRGetChannelsResponse) then) =
-      __$$_KodiPVRGetChannelsResponseCopyWithImpl<$Res>;
+  factory _$$KodiPVRGetChannelsResponseImplCopyWith(
+          _$KodiPVRGetChannelsResponseImpl value,
+          $Res Function(_$KodiPVRGetChannelsResponseImpl) then) =
+      __$$KodiPVRGetChannelsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -356,22 +397,24 @@ abstract class _$$_KodiPVRGetChannelsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRGetChannelsResponseCopyWithImpl<$Res>
+class __$$KodiPVRGetChannelsResponseImplCopyWithImpl<$Res>
     extends _$KodiPVRGetChannelsResponseCopyWithImpl<$Res,
-        _$_KodiPVRGetChannelsResponse>
-    implements _$$_KodiPVRGetChannelsResponseCopyWith<$Res> {
-  __$$_KodiPVRGetChannelsResponseCopyWithImpl(
-      _$_KodiPVRGetChannelsResponse _value,
-      $Res Function(_$_KodiPVRGetChannelsResponse) _then)
+        _$KodiPVRGetChannelsResponseImpl>
+    implements _$$KodiPVRGetChannelsResponseImplCopyWith<$Res> {
+  __$$KodiPVRGetChannelsResponseImplCopyWithImpl(
+      _$KodiPVRGetChannelsResponseImpl _value,
+      $Res Function(_$KodiPVRGetChannelsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRGetChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? channels = null,
     Object? limits = null,
   }) {
-    return _then(_$_KodiPVRGetChannelsResponse(
+    return _then(_$KodiPVRGetChannelsResponseImpl(
       channels: null == channels
           ? _value._channels
           : channels // ignore: cast_nullable_to_non_nullable
@@ -386,14 +429,15 @@ class __$$_KodiPVRGetChannelsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRGetChannelsResponse implements _KodiPVRGetChannelsResponse {
-  const _$_KodiPVRGetChannelsResponse(
+class _$KodiPVRGetChannelsResponseImpl implements _KodiPVRGetChannelsResponse {
+  const _$KodiPVRGetChannelsResponseImpl(
       {required final List<KodiPVRDetailsChannel> channels,
       required this.limits})
       : _channels = channels;
 
-  factory _$_KodiPVRGetChannelsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRGetChannelsResponseFromJson(json);
+  factory _$KodiPVRGetChannelsResponseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPVRGetChannelsResponseImplFromJson(json);
 
   final List<KodiPVRDetailsChannel> _channels;
   @override
@@ -412,29 +456,31 @@ class _$_KodiPVRGetChannelsResponse implements _KodiPVRGetChannelsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRGetChannelsResponse &&
+            other is _$KodiPVRGetChannelsResponseImpl &&
             const DeepCollectionEquality().equals(other._channels, _channels) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_channels), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRGetChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRGetChannelsResponseCopyWith<_$_KodiPVRGetChannelsResponse>
-      get copyWith => __$$_KodiPVRGetChannelsResponseCopyWithImpl<
-          _$_KodiPVRGetChannelsResponse>(this, _$identity);
+  _$$KodiPVRGetChannelsResponseImplCopyWith<_$KodiPVRGetChannelsResponseImpl>
+      get copyWith => __$$KodiPVRGetChannelsResponseImplCopyWithImpl<
+          _$KodiPVRGetChannelsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRGetChannelsResponseToJson(
+    return _$$KodiPVRGetChannelsResponseImplToJson(
       this,
     );
   }
@@ -445,17 +491,20 @@ abstract class _KodiPVRGetChannelsResponse
   const factory _KodiPVRGetChannelsResponse(
           {required final List<KodiPVRDetailsChannel> channels,
           required final KodiListLimitsReturned limits}) =
-      _$_KodiPVRGetChannelsResponse;
+      _$KodiPVRGetChannelsResponseImpl;
 
   factory _KodiPVRGetChannelsResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRGetChannelsResponse.fromJson;
+      _$KodiPVRGetChannelsResponseImpl.fromJson;
 
   @override
   List<KodiPVRDetailsChannel> get channels;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of KodiPVRGetChannelsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRGetChannelsResponseCopyWith<_$_KodiPVRGetChannelsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRGetChannelsResponseImplCopyWith<_$KodiPVRGetChannelsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,32 +6,32 @@ part of 'kodi_notification_playlist_on_remove_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationPlaylistOnRemoveParams
-    _$$_KodiNotificationPlaylistOnRemoveParamsFromJson(
+_$KodiNotificationPlaylistOnRemoveParamsImpl
+    _$$KodiNotificationPlaylistOnRemoveParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlaylistOnRemoveParams(
+        _$KodiNotificationPlaylistOnRemoveParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationPlaylistOnRemoveParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlaylistOnRemoveParamsToJson(
-        _$_KodiNotificationPlaylistOnRemoveParams instance) =>
+Map<String, dynamic> _$$KodiNotificationPlaylistOnRemoveParamsImplToJson(
+        _$KodiNotificationPlaylistOnRemoveParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationPlaylistOnRemoveParamsData
-    _$$_KodiNotificationPlaylistOnRemoveParamsDataFromJson(
+_$KodiNotificationPlaylistOnRemoveParamsDataImpl
+    _$$KodiNotificationPlaylistOnRemoveParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlaylistOnRemoveParamsData(
-          playlistId: json['playlistid'] as int,
-          position: json['position'] as int,
+        _$KodiNotificationPlaylistOnRemoveParamsDataImpl(
+          playlistId: (json['playlistid'] as num).toInt(),
+          position: (json['position'] as num).toInt(),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlaylistOnRemoveParamsDataToJson(
-        _$_KodiNotificationPlaylistOnRemoveParamsData instance) =>
+Map<String, dynamic> _$$KodiNotificationPlaylistOnRemoveParamsDataImplToJson(
+        _$KodiNotificationPlaylistOnRemoveParamsDataImpl instance) =>
     <String, dynamic>{
       'playlistid': instance.playlistId,
       'position': instance.position,

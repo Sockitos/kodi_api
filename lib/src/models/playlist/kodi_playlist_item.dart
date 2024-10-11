@@ -6,43 +6,43 @@ part 'kodi_playlist_item.g.dart';
 
 @freezed
 class KodiPlaylistItem with _$KodiPlaylistItem {
-  const factory KodiPlaylistItem.file({
-    required String file,
-  }) = KodiPlaylistItemFile;
+  const factory KodiPlaylistItem.file(
+    String file,
+  ) = KodiPlaylistItemFile;
 
   const factory KodiPlaylistItem.directoryMediaRecursive({
     required String directory,
-    required KodiFilesMedia media,
-    required bool recursive,
+    @Default(KodiFilesMedia.files) KodiFilesMedia media,
+    @Default(false) bool recursive,
   }) = KodiPlaylistItemDirectoryMediaRecursive;
 
-  const factory KodiPlaylistItem.movieId({
-    required int movieId,
-  }) = KodiPlaylistItemMovieId;
+  const factory KodiPlaylistItem.movieId(
+    @JsonKey(name: 'movieid') int movieId,
+  ) = KodiPlaylistItemMovieId;
 
-  const factory KodiPlaylistItem.episodeId({
-    required int episodeId,
-  }) = KodiPlaylistItemEpisodeId;
+  const factory KodiPlaylistItem.episodeId(
+    @JsonKey(name: 'episodeid') int episodeId,
+  ) = KodiPlaylistItemEpisodeId;
 
-  const factory KodiPlaylistItem.musicVideoid({
-    required int musicVideoid,
-  }) = KodiPlaylistItemMusicVideoId;
+  const factory KodiPlaylistItem.musicVideoId(
+    @JsonKey(name: 'musicvideoid') int musicVideoId,
+  ) = KodiPlaylistItemMusicVideoId;
 
-  const factory KodiPlaylistItem.artistId({
-    required int artistId,
-  }) = KodiPlaylistItemArtistId;
+  const factory KodiPlaylistItem.artistId(
+    @JsonKey(name: 'artistid') int artistId,
+  ) = KodiPlaylistItemArtistId;
 
-  const factory KodiPlaylistItem.albumId({
-    required int albumId,
-  }) = KodiPlaylistItemAlbumId;
+  const factory KodiPlaylistItem.albumId(
+    @JsonKey(name: 'albumid') int albumId,
+  ) = KodiPlaylistItemAlbumId;
 
-  const factory KodiPlaylistItem.songId({
-    required int songId,
-  }) = KodiPlaylistItemSongId;
+  const factory KodiPlaylistItem.songId(
+    @JsonKey(name: 'songid') int songId,
+  ) = KodiPlaylistItemSongId;
 
-  const factory KodiPlaylistItem.genreId({
-    required int genreId,
-  }) = KodiPlaylistItemGenreId;
+  const factory KodiPlaylistItem.genreId(
+    @JsonKey(name: 'genreid') int genreId,
+  ) = KodiPlaylistItemGenreId;
 
   factory KodiPlaylistItem.fromJson(Map<String, dynamic> json) =>
       _$KodiPlaylistItemFromJson(json);
@@ -73,8 +73,8 @@ class KodiPlaylistItemConverter
         episodeId: (value) => <String, dynamic>{
           'episodeid': value.episodeId,
         },
-        musicVideoid: (value) => <String, dynamic>{
-          'musicvideoid': value.musicVideoid,
+        musicVideoId: (value) => <String, dynamic>{
+          'musicvideoid': value.musicVideoId,
         },
         artistId: (value) => <String, dynamic>{
           'artistid': value.artistId,

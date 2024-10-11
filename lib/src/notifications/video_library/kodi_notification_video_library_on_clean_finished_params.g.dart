@@ -6,10 +6,10 @@ part of 'kodi_notification_video_library_on_clean_finished_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationVideoLibraryOnCleanFinishedParams
-    _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsFromJson(
+_$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl
+    _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnCleanFinishedParams(
+        _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -18,8 +18,8 @@ _$_KodiNotificationVideoLibraryOnCleanFinishedParams
         );
 
 Map<String, dynamic>
-    _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsToJson(
-        _$_KodiNotificationVideoLibraryOnCleanFinishedParams instance) {
+    _$$KodiNotificationVideoLibraryOnCleanFinishedParamsImplToJson(
+        _$KodiNotificationVideoLibraryOnCleanFinishedParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -34,16 +34,16 @@ Map<String, dynamic>
   return val;
 }
 
-_$_KodiNotificationVideoLibraryOnCleanFinishedParamsData
-    _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataFromJson(
+_$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl
+    _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData(
+        _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl(
           test: json['test'] as String,
         );
 
 Map<String,
-    dynamic> _$$_KodiNotificationVideoLibraryOnCleanFinishedParamsDataToJson(
-        _$_KodiNotificationVideoLibraryOnCleanFinishedParamsData instance) =>
+    dynamic> _$$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImplToJson(
+        _$KodiNotificationVideoLibraryOnCleanFinishedParamsDataImpl instance) =>
     <String, dynamic>{
       'test': instance.test,
     };

@@ -6,19 +6,19 @@ part of 'kodi_player_video_stream.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiPlayerVideoStream _$$_KodiPlayerVideoStreamFromJson(
+_$KodiPlayerVideoStreamImpl _$$KodiPlayerVideoStreamImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerVideoStream(
+    _$KodiPlayerVideoStreamImpl(
       codec: json['codec'] as String,
-      height: json['height'] as int,
-      index: json['index'] as int,
+      height: (json['height'] as num).toInt(),
+      index: (json['index'] as num).toInt(),
       language: json['language'] as String,
       name: json['name'] as String,
-      width: json['width'] as int,
+      width: (json['width'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_KodiPlayerVideoStreamToJson(
-        _$_KodiPlayerVideoStream instance) =>
+Map<String, dynamic> _$$KodiPlayerVideoStreamImplToJson(
+        _$KodiPlayerVideoStreamImpl instance) =>
     <String, dynamic>{
       'codec': instance.codec,
       'height': instance.height,

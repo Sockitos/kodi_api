@@ -12,7 +12,7 @@ part of 'kodi_global_time.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiGlobalTime _$KodiGlobalTimeFromJson(Map<String, dynamic> json) {
   return _KodiGlobalTime.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$KodiGlobalTime {
   int get minutes => throw _privateConstructorUsedError;
   int get seconds => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGlobalTime to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGlobalTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGlobalTimeCopyWith<KodiGlobalTime> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$KodiGlobalTimeCopyWithImpl<$Res, $Val extends KodiGlobalTime>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGlobalTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,24 +86,26 @@ class _$KodiGlobalTimeCopyWithImpl<$Res, $Val extends KodiGlobalTime>
 }
 
 /// @nodoc
-abstract class _$$_KodiGlobalTimeCopyWith<$Res>
+abstract class _$$KodiGlobalTimeImplCopyWith<$Res>
     implements $KodiGlobalTimeCopyWith<$Res> {
-  factory _$$_KodiGlobalTimeCopyWith(
-          _$_KodiGlobalTime value, $Res Function(_$_KodiGlobalTime) then) =
-      __$$_KodiGlobalTimeCopyWithImpl<$Res>;
+  factory _$$KodiGlobalTimeImplCopyWith(_$KodiGlobalTimeImpl value,
+          $Res Function(_$KodiGlobalTimeImpl) then) =
+      __$$KodiGlobalTimeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int hours, int milliseconds, int minutes, int seconds});
 }
 
 /// @nodoc
-class __$$_KodiGlobalTimeCopyWithImpl<$Res>
-    extends _$KodiGlobalTimeCopyWithImpl<$Res, _$_KodiGlobalTime>
-    implements _$$_KodiGlobalTimeCopyWith<$Res> {
-  __$$_KodiGlobalTimeCopyWithImpl(
-      _$_KodiGlobalTime _value, $Res Function(_$_KodiGlobalTime) _then)
+class __$$KodiGlobalTimeImplCopyWithImpl<$Res>
+    extends _$KodiGlobalTimeCopyWithImpl<$Res, _$KodiGlobalTimeImpl>
+    implements _$$KodiGlobalTimeImplCopyWith<$Res> {
+  __$$KodiGlobalTimeImplCopyWithImpl(
+      _$KodiGlobalTimeImpl _value, $Res Function(_$KodiGlobalTimeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGlobalTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,7 +114,7 @@ class __$$_KodiGlobalTimeCopyWithImpl<$Res>
     Object? minutes = null,
     Object? seconds = null,
   }) {
-    return _then(_$_KodiGlobalTime(
+    return _then(_$KodiGlobalTimeImpl(
       hours: null == hours
           ? _value.hours
           : hours // ignore: cast_nullable_to_non_nullable
@@ -129,15 +137,15 @@ class __$$_KodiGlobalTimeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGlobalTime implements _KodiGlobalTime {
-  const _$_KodiGlobalTime(
+class _$KodiGlobalTimeImpl implements _KodiGlobalTime {
+  const _$KodiGlobalTimeImpl(
       {required this.hours,
       required this.milliseconds,
       required this.minutes,
       required this.seconds});
 
-  factory _$_KodiGlobalTime.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiGlobalTimeFromJson(json);
+  factory _$KodiGlobalTimeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiGlobalTimeImplFromJson(json);
 
   @override
   final int hours;
@@ -154,10 +162,10 @@ class _$_KodiGlobalTime implements _KodiGlobalTime {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGlobalTime &&
+            other is _$KodiGlobalTimeImpl &&
             (identical(other.hours, hours) || other.hours == hours) &&
             (identical(other.milliseconds, milliseconds) ||
                 other.milliseconds == milliseconds) &&
@@ -165,20 +173,23 @@ class _$_KodiGlobalTime implements _KodiGlobalTime {
             (identical(other.seconds, seconds) || other.seconds == seconds));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, hours, milliseconds, minutes, seconds);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGlobalTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGlobalTimeCopyWith<_$_KodiGlobalTime> get copyWith =>
-      __$$_KodiGlobalTimeCopyWithImpl<_$_KodiGlobalTime>(this, _$identity);
+  _$$KodiGlobalTimeImplCopyWith<_$KodiGlobalTimeImpl> get copyWith =>
+      __$$KodiGlobalTimeImplCopyWithImpl<_$KodiGlobalTimeImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGlobalTimeToJson(
+    return _$$KodiGlobalTimeImplToJson(
       this,
     );
   }
@@ -189,10 +200,10 @@ abstract class _KodiGlobalTime implements KodiGlobalTime {
       {required final int hours,
       required final int milliseconds,
       required final int minutes,
-      required final int seconds}) = _$_KodiGlobalTime;
+      required final int seconds}) = _$KodiGlobalTimeImpl;
 
   factory _KodiGlobalTime.fromJson(Map<String, dynamic> json) =
-      _$_KodiGlobalTime.fromJson;
+      _$KodiGlobalTimeImpl.fromJson;
 
   @override
   int get hours;
@@ -202,8 +213,11 @@ abstract class _KodiGlobalTime implements KodiGlobalTime {
   int get minutes;
   @override
   int get seconds;
+
+  /// Create a copy of KodiGlobalTime
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGlobalTimeCopyWith<_$_KodiGlobalTime> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGlobalTimeImplCopyWith<_$KodiGlobalTimeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

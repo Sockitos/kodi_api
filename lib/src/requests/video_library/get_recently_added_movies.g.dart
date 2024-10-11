@@ -6,9 +6,9 @@ part of 'get_recently_added_movies.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRecentlyAddedMovies _$$_GetRecentlyAddedMoviesFromJson(
+_$GetRecentlyAddedMoviesImpl _$$GetRecentlyAddedMoviesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRecentlyAddedMovies(
+    _$GetRecentlyAddedMoviesImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsMovieEnumMap, e))
           .toSet(),
@@ -20,8 +20,8 @@ _$_GetRecentlyAddedMovies _$$_GetRecentlyAddedMoviesFromJson(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetRecentlyAddedMoviesToJson(
-    _$_GetRecentlyAddedMovies instance) {
+Map<String, dynamic> _$$GetRecentlyAddedMoviesImplToJson(
+    _$GetRecentlyAddedMoviesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -80,18 +80,19 @@ const _$KodiVideoFieldsMovieEnumMap = {
   KodiVideoFieldsMovie.uniqueId: 'uniqueid',
 };
 
-_$_GetRecentlyAddedMoviesResponse _$$_GetRecentlyAddedMoviesResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_GetRecentlyAddedMoviesResponse(
-      movies: (json['movies'] as List<dynamic>)
-          .map((e) => KodiVideoDetailsMovie.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      limits: KodiListLimitsReturned.fromJson(
-          json['limits'] as Map<String, dynamic>),
-    );
+_$GetRecentlyAddedMoviesResponseImpl
+    _$$GetRecentlyAddedMoviesResponseImplFromJson(Map<String, dynamic> json) =>
+        _$GetRecentlyAddedMoviesResponseImpl(
+          movies: (json['movies'] as List<dynamic>)
+              .map((e) =>
+                  KodiVideoDetailsMovie.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          limits: KodiListLimitsReturned.fromJson(
+              json['limits'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_GetRecentlyAddedMoviesResponseToJson(
-        _$_GetRecentlyAddedMoviesResponse instance) =>
+Map<String, dynamic> _$$GetRecentlyAddedMoviesResponseImplToJson(
+        _$GetRecentlyAddedMoviesResponseImpl instance) =>
     <String, dynamic>{
       'movies': instance.movies.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

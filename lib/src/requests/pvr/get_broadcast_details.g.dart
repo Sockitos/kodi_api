@@ -6,17 +6,17 @@ part of 'get_broadcast_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetBroadcastDetails _$$_GetBroadcastDetailsFromJson(
+_$GetBroadcastDetailsImpl _$$GetBroadcastDetailsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetBroadcastDetails(
-      json['broadcastid'] as int,
+    _$GetBroadcastDetailsImpl(
+      (json['broadcastid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsBroadcastEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetBroadcastDetailsToJson(
-    _$_GetBroadcastDetails instance) {
+Map<String, dynamic> _$$GetBroadcastDetailsImplToJson(
+    _$GetBroadcastDetailsImpl instance) {
   final val = <String, dynamic>{
     'broadcastid': instance.id,
   };

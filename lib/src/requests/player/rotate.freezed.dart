@@ -12,7 +12,7 @@ part of 'rotate.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Rotate _$RotateFromJson(Map<String, dynamic> json) {
   return _Rotate.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$Rotate {
   int get id => throw _privateConstructorUsedError;
   KodiPlayerRotate get value => throw _privateConstructorUsedError;
 
+  /// Serializes this Rotate to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Rotate
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RotateCopyWith<Rotate> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$RotateCopyWithImpl<$Res, $Val extends Rotate>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Rotate
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -67,28 +73,32 @@ class _$RotateCopyWithImpl<$Res, $Val extends Rotate>
 }
 
 /// @nodoc
-abstract class _$$_RotateCopyWith<$Res> implements $RotateCopyWith<$Res> {
-  factory _$$_RotateCopyWith(_$_Rotate value, $Res Function(_$_Rotate) then) =
-      __$$_RotateCopyWithImpl<$Res>;
+abstract class _$$RotateImplCopyWith<$Res> implements $RotateCopyWith<$Res> {
+  factory _$$RotateImplCopyWith(
+          _$RotateImpl value, $Res Function(_$RotateImpl) then) =
+      __$$RotateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'playerid') int id, KodiPlayerRotate value});
 }
 
 /// @nodoc
-class __$$_RotateCopyWithImpl<$Res>
-    extends _$RotateCopyWithImpl<$Res, _$_Rotate>
-    implements _$$_RotateCopyWith<$Res> {
-  __$$_RotateCopyWithImpl(_$_Rotate _value, $Res Function(_$_Rotate) _then)
+class __$$RotateImplCopyWithImpl<$Res>
+    extends _$RotateCopyWithImpl<$Res, _$RotateImpl>
+    implements _$$RotateImplCopyWith<$Res> {
+  __$$RotateImplCopyWithImpl(
+      _$RotateImpl _value, $Res Function(_$RotateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Rotate
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? value = null,
   }) {
-    return _then(_$_Rotate(
+    return _then(_$RotateImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -103,13 +113,13 @@ class __$$_RotateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Rotate extends _Rotate {
-  const _$_Rotate(@JsonKey(name: 'playerid') this.id,
+class _$RotateImpl extends _Rotate {
+  const _$RotateImpl(@JsonKey(name: 'playerid') this.id,
       {this.value = KodiPlayerRotate.clockwise})
       : super._();
 
-  factory _$_Rotate.fromJson(Map<String, dynamic> json) =>
-      _$$_RotateFromJson(json);
+  factory _$RotateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RotateImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -124,27 +134,29 @@ class _$_Rotate extends _Rotate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Rotate &&
+            other is _$RotateImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Rotate
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RotateCopyWith<_$_Rotate> get copyWith =>
-      __$$_RotateCopyWithImpl<_$_Rotate>(this, _$identity);
+  _$$RotateImplCopyWith<_$RotateImpl> get copyWith =>
+      __$$RotateImplCopyWithImpl<_$RotateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RotateToJson(
+    return _$$RotateImplToJson(
       this,
     );
   }
@@ -152,18 +164,21 @@ class _$_Rotate extends _Rotate {
 
 abstract class _Rotate extends Rotate {
   const factory _Rotate(@JsonKey(name: 'playerid') final int id,
-      {final KodiPlayerRotate value}) = _$_Rotate;
+      {final KodiPlayerRotate value}) = _$RotateImpl;
   const _Rotate._() : super._();
 
-  factory _Rotate.fromJson(Map<String, dynamic> json) = _$_Rotate.fromJson;
+  factory _Rotate.fromJson(Map<String, dynamic> json) = _$RotateImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
   int get id;
   @override
   KodiPlayerRotate get value;
+
+  /// Create a copy of Rotate
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RotateCopyWith<_$_Rotate> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RotateImplCopyWith<_$RotateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

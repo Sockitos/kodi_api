@@ -12,7 +12,7 @@ part of 'add.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Add _$AddFromJson(Map<String, dynamic> json) {
   return _Add.fromJson(json);
@@ -26,8 +26,12 @@ mixin _$Add {
   @KodiPlaylistItemConverter()
   List<KodiPlaylistItem> get items => throw _privateConstructorUsedError;
 
+  /// Serializes this Add to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Add
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AddCopyWith<Add> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -52,6 +56,8 @@ class _$AddCopyWithImpl<$Res, $Val extends Add> implements $AddCopyWith<$Res> {
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Add
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,9 +78,9 @@ class _$AddCopyWithImpl<$Res, $Val extends Add> implements $AddCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_AddCopyWith<$Res> implements $AddCopyWith<$Res> {
-  factory _$$_AddCopyWith(_$_Add value, $Res Function(_$_Add) then) =
-      __$$_AddCopyWithImpl<$Res>;
+abstract class _$$AddImplCopyWith<$Res> implements $AddCopyWith<$Res> {
+  factory _$$AddImplCopyWith(_$AddImpl value, $Res Function(_$AddImpl) then) =
+      __$$AddImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,18 +91,20 @@ abstract class _$$_AddCopyWith<$Res> implements $AddCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AddCopyWithImpl<$Res> extends _$AddCopyWithImpl<$Res, _$_Add>
-    implements _$$_AddCopyWith<$Res> {
-  __$$_AddCopyWithImpl(_$_Add _value, $Res Function(_$_Add) _then)
+class __$$AddImplCopyWithImpl<$Res> extends _$AddCopyWithImpl<$Res, _$AddImpl>
+    implements _$$AddImplCopyWith<$Res> {
+  __$$AddImplCopyWithImpl(_$AddImpl _value, $Res Function(_$AddImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Add
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? items = null,
   }) {
-    return _then(_$_Add(
+    return _then(_$AddImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -111,8 +119,8 @@ class __$$_AddCopyWithImpl<$Res> extends _$AddCopyWithImpl<$Res, _$_Add>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Add extends _Add {
-  const _$_Add(
+class _$AddImpl extends _Add {
+  const _$AddImpl(
       @JsonKey(name: 'playlistid') this.id,
       @JsonKey(name: 'item')
       @KodiPlaylistItemConverter()
@@ -120,7 +128,8 @@ class _$_Add extends _Add {
       : _items = items,
         super._();
 
-  factory _$_Add.fromJson(Map<String, dynamic> json) => _$$_AddFromJson(json);
+  factory _$AddImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistid')
@@ -141,28 +150,30 @@ class _$_Add extends _Add {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Add &&
+            other is _$AddImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, const DeepCollectionEquality().hash(_items));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Add
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddCopyWith<_$_Add> get copyWith =>
-      __$$_AddCopyWithImpl<_$_Add>(this, _$identity);
+  _$$AddImplCopyWith<_$AddImpl> get copyWith =>
+      __$$AddImplCopyWithImpl<_$AddImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddToJson(
+    return _$$AddImplToJson(
       this,
     );
   }
@@ -173,10 +184,10 @@ abstract class _Add extends Add {
       @JsonKey(name: 'playlistid') final int id,
       @JsonKey(name: 'item')
       @KodiPlaylistItemConverter()
-      final List<KodiPlaylistItem> items) = _$_Add;
+      final List<KodiPlaylistItem> items) = _$AddImpl;
   const _Add._() : super._();
 
-  factory _Add.fromJson(Map<String, dynamic> json) = _$_Add.fromJson;
+  factory _Add.fromJson(Map<String, dynamic> json) = _$AddImpl.fromJson;
 
   @override
   @JsonKey(name: 'playlistid')
@@ -185,7 +196,11 @@ abstract class _Add extends Add {
   @JsonKey(name: 'item')
   @KodiPlaylistItemConverter()
   List<KodiPlaylistItem> get items;
+
+  /// Create a copy of Add
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_AddCopyWith<_$_Add> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddImplCopyWith<_$AddImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

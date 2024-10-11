@@ -9,7 +9,7 @@ class KodiVideoCast with _$KodiVideoCast {
     required String name,
     required int order,
     required String role,
-    String? thumbnail,
+    @Default('') String thumbnail,
   }) = _KodiVideoCast;
 
   factory KodiVideoCast.fromJson(Map<String, dynamic> json) =>

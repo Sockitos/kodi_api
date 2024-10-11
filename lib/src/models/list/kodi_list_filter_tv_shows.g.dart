@@ -6,47 +6,47 @@ part of 'kodi_list_filter_tv_shows.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterTvShowsAnd _$$_KodiListFilterTvShowsAndFromJson(
+_$KodiListFilterTvShowsAndImpl _$$KodiListFilterTvShowsAndImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterTvShowsAnd(
+    _$KodiListFilterTvShowsAndImpl(
       (json['and'] as List<dynamic>)
           .map((e) => KodiListFilterTvShows.fromJson(e as Map<String, dynamic>))
           .toList(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterTvShowsAndToJson(
-        _$_KodiListFilterTvShowsAnd instance) =>
+Map<String, dynamic> _$$KodiListFilterTvShowsAndImplToJson(
+        _$KodiListFilterTvShowsAndImpl instance) =>
     <String, dynamic>{
       'and': instance.and.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterTvShowsOr _$$_KodiListFilterTvShowsOrFromJson(
+_$KodiListFilterTvShowsOrImpl _$$KodiListFilterTvShowsOrImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterTvShowsOr(
+    _$KodiListFilterTvShowsOrImpl(
       (json['or'] as List<dynamic>)
           .map((e) => KodiListFilterTvShows.fromJson(e as Map<String, dynamic>))
           .toList(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterTvShowsOrToJson(
-        _$_KodiListFilterTvShowsOr instance) =>
+Map<String, dynamic> _$$KodiListFilterTvShowsOrImplToJson(
+        _$KodiListFilterTvShowsOrImpl instance) =>
     <String, dynamic>{
       'or': instance.or.map((e) => e.toJson()).toList(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterTvShowsValue _$$_KodiListFilterTvShowsValueFromJson(
+_$KodiListFilterTvShowsValueImpl _$$KodiListFilterTvShowsValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterTvShowsValue(
+    _$KodiListFilterTvShowsValueImpl(
       KodiListFilterRuleTvShows.fromJson(json['value'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiListFilterTvShowsValueToJson(
-        _$_KodiListFilterTvShowsValue instance) =>
+Map<String, dynamic> _$$KodiListFilterTvShowsValueImplToJson(
+        _$KodiListFilterTvShowsValueImpl instance) =>
     <String, dynamic>{
       'value': instance.value.toJson(),
       'runtimeType': instance.$type,

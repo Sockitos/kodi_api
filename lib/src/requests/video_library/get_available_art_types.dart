@@ -15,7 +15,7 @@ class GetAvailableArtTypes
     implements KodiRequest<List<String>> {
   const factory GetAvailableArtTypes(
     @KodiVideoLibraryGetAvailableArtTypesItemConverter()
-        KodiVideoLibraryGetAvailableArtTypesItem item,
+    KodiVideoLibraryGetAvailableArtTypesItem item,
   ) = _GetAvailableArtTypes;
 
   const GetAvailableArtTypes._();
@@ -59,9 +59,9 @@ class KodiVideoLibraryGetAvailableArtTypesItem
     @JsonKey(name: 'setid') int setId,
   ) = _KodiVideoLibraryGetAvailableArtTypesItemSetId;
 
-  const factory KodiVideoLibraryGetAvailableArtTypesItem.musicVideoId({
-    required int musicVideoId,
-  }) = _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId;
+  const factory KodiVideoLibraryGetAvailableArtTypesItem.musicVideoId(
+    @JsonKey(name: 'musicvideoid') int musicVideoId,
+  ) = _KodiVideoLibraryGetAvailableArtTypesItemMusicVideoId;
 
   factory KodiVideoLibraryGetAvailableArtTypesItem.fromJson(
     Map<String, dynamic> json,
@@ -97,7 +97,7 @@ class KodiVideoLibraryGetAvailableArtTypesItemConverter
           'movieid': value.movieId,
         },
         setId: (value) => <String, dynamic>{
-          'setId': value.setId,
+          'setid': value.setId,
         },
         musicVideoId: (value) => <String, dynamic>{
           'musicvideoid': value.musicVideoId,

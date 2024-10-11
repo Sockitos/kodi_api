@@ -7,8 +7,8 @@ part 'kodi_setting_details_section.g.dart';
 @freezed
 class KodiSettingDetailsSection with _$KodiSettingDetailsSection {
   const factory KodiSettingDetailsSection({
-    List<KodiSettingDetailsCategory>? categories,
-    String? help,
+    Set<KodiSettingDetailsCategory>? categories,
+    @Default('') String help,
     required String id,
     required String label,
   }) = _KodiSettingDetailsSection;

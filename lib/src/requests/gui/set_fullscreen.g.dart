@@ -6,12 +6,12 @@ part of 'set_fullscreen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetFullscreen _$$_SetFullscreenFromJson(Map<String, dynamic> json) =>
-    _$_SetFullscreen(
+_$SetFullscreenImpl _$$SetFullscreenImplFromJson(Map<String, dynamic> json) =>
+    _$SetFullscreenImpl(
       const KodiGlobalToggleConverter().fromJson(json['fullscreen']),
     );
 
-Map<String, dynamic> _$$_SetFullscreenToJson(_$_SetFullscreen instance) {
+Map<String, dynamic> _$$SetFullscreenImplToJson(_$SetFullscreenImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -6,10 +6,10 @@ part 'kodi_media_artwork.g.dart';
 @freezed
 class KodiMediaArtwork with _$KodiMediaArtwork {
   const factory KodiMediaArtwork({
-    String? banner,
-    String? fanart,
-    String? poster,
-    String? thumb,
+    @Default('') String banner,
+    @Default('') String fanart,
+    @Default('') String poster,
+    @Default('') String thumb,
   }) = _KodiMediaArtwork;
 
   factory KodiMediaArtwork.fromJson(Map<String, dynamic> json) =>

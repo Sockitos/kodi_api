@@ -12,7 +12,7 @@ part of 'shutdown.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Shutdown _$ShutdownFromJson(Map<String, dynamic> json) {
   return _Shutdown.fromJson(json);
@@ -20,6 +20,7 @@ Shutdown _$ShutdownFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Shutdown {
+  /// Serializes this Shutdown to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,31 +39,37 @@ class _$ShutdownCopyWithImpl<$Res, $Val extends Shutdown>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Shutdown
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_ShutdownCopyWith<$Res> {
-  factory _$$_ShutdownCopyWith(
-          _$_Shutdown value, $Res Function(_$_Shutdown) then) =
-      __$$_ShutdownCopyWithImpl<$Res>;
+abstract class _$$ShutdownImplCopyWith<$Res> {
+  factory _$$ShutdownImplCopyWith(
+          _$ShutdownImpl value, $Res Function(_$ShutdownImpl) then) =
+      __$$ShutdownImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ShutdownCopyWithImpl<$Res>
-    extends _$ShutdownCopyWithImpl<$Res, _$_Shutdown>
-    implements _$$_ShutdownCopyWith<$Res> {
-  __$$_ShutdownCopyWithImpl(
-      _$_Shutdown _value, $Res Function(_$_Shutdown) _then)
+class __$$ShutdownImplCopyWithImpl<$Res>
+    extends _$ShutdownCopyWithImpl<$Res, _$ShutdownImpl>
+    implements _$$ShutdownImplCopyWith<$Res> {
+  __$$ShutdownImplCopyWithImpl(
+      _$ShutdownImpl _value, $Res Function(_$ShutdownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Shutdown
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Shutdown extends _Shutdown {
-  const _$_Shutdown() : super._();
+class _$ShutdownImpl extends _Shutdown {
+  const _$ShutdownImpl() : super._();
 
-  factory _$_Shutdown.fromJson(Map<String, dynamic> json) =>
-      _$$_ShutdownFromJson(json);
+  factory _$ShutdownImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ShutdownImplFromJson(json);
 
   @override
   String toString() {
@@ -70,26 +77,27 @@ class _$_Shutdown extends _Shutdown {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Shutdown);
+        (other.runtimeType == runtimeType && other is _$ShutdownImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShutdownToJson(
+    return _$$ShutdownImplToJson(
       this,
     );
   }
 }
 
 abstract class _Shutdown extends Shutdown {
-  const factory _Shutdown() = _$_Shutdown;
+  const factory _Shutdown() = _$ShutdownImpl;
   const _Shutdown._() : super._();
 
-  factory _Shutdown.fromJson(Map<String, dynamic> json) = _$_Shutdown.fromJson;
+  factory _Shutdown.fromJson(Map<String, dynamic> json) =
+      _$ShutdownImpl.fromJson;
 }

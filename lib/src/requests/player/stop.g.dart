@@ -6,10 +6,11 @@ part of 'stop.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Stop _$$_StopFromJson(Map<String, dynamic> json) => _$_Stop(
-      json['playerid'] as int,
+_$StopImpl _$$StopImplFromJson(Map<String, dynamic> json) => _$StopImpl(
+      (json['playerid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_StopToJson(_$_Stop instance) => <String, dynamic>{
+Map<String, dynamic> _$$StopImplToJson(_$StopImpl instance) =>
+    <String, dynamic>{
       'playerid': instance.id,
     };

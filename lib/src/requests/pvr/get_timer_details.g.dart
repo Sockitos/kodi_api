@@ -6,15 +6,17 @@ part of 'get_timer_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTimerDetails _$$_GetTimerDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetTimerDetails(
-      json['timerid'] as int,
+_$GetTimerDetailsImpl _$$GetTimerDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetTimerDetailsImpl(
+      (json['timerid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsTimerEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetTimerDetailsToJson(_$_GetTimerDetails instance) {
+Map<String, dynamic> _$$GetTimerDetailsImplToJson(
+    _$GetTimerDetailsImpl instance) {
   final val = <String, dynamic>{
     'timerid': instance.id,
   };

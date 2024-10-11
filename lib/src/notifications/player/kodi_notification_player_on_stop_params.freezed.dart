@@ -12,7 +12,7 @@ part of 'kodi_notification_player_on_stop_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationPlayerOnStopParams _$KodiNotificationPlayerOnStopParamsFromJson(
     Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiNotificationPlayerOnStopParams {
   KodiNotificationPlayerOnStopParamsData get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlayerOnStopParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlayerOnStopParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlayerOnStopParamsCopyWith<
           KodiNotificationPlayerOnStopParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -56,6 +60,8 @@ class _$KodiNotificationPlayerOnStopParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlayerOnStopParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,6 +80,8 @@ class _$KodiNotificationPlayerOnStopParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlayerOnStopParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnStopParamsDataCopyWith<$Res> get data {
@@ -85,12 +93,12 @@ class _$KodiNotificationPlayerOnStopParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnStopParamsCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnStopParamsImplCopyWith<$Res>
     implements $KodiNotificationPlayerOnStopParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnStopParamsCopyWith(
-          _$_KodiNotificationPlayerOnStopParams value,
-          $Res Function(_$_KodiNotificationPlayerOnStopParams) then) =
-      __$$_KodiNotificationPlayerOnStopParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnStopParamsImplCopyWith(
+          _$KodiNotificationPlayerOnStopParamsImpl value,
+          $Res Function(_$KodiNotificationPlayerOnStopParamsImpl) then) =
+      __$$KodiNotificationPlayerOnStopParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiNotificationPlayerOnStopParamsData data});
@@ -100,22 +108,24 @@ abstract class _$$_KodiNotificationPlayerOnStopParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnStopParamsCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnStopParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlayerOnStopParamsCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnStopParams>
-    implements _$$_KodiNotificationPlayerOnStopParamsCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnStopParamsCopyWithImpl(
-      _$_KodiNotificationPlayerOnStopParams _value,
-      $Res Function(_$_KodiNotificationPlayerOnStopParams) _then)
+        _$KodiNotificationPlayerOnStopParamsImpl>
+    implements _$$KodiNotificationPlayerOnStopParamsImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnStopParamsImplCopyWithImpl(
+      _$KodiNotificationPlayerOnStopParamsImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnStopParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlayerOnStopParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnStopParams(
+    return _then(_$KodiNotificationPlayerOnStopParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -130,14 +140,14 @@ class __$$_KodiNotificationPlayerOnStopParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnStopParams
+class _$KodiNotificationPlayerOnStopParamsImpl
     implements _KodiNotificationPlayerOnStopParams {
-  const _$_KodiNotificationPlayerOnStopParams(
+  const _$KodiNotificationPlayerOnStopParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationPlayerOnStopParams.fromJson(
+  factory _$KodiNotificationPlayerOnStopParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnStopParamsFromJson(json);
+      _$$KodiNotificationPlayerOnStopParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -150,29 +160,31 @@ class _$_KodiNotificationPlayerOnStopParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnStopParams &&
+            other is _$KodiNotificationPlayerOnStopParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlayerOnStopParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnStopParamsCopyWith<
-          _$_KodiNotificationPlayerOnStopParams>
-      get copyWith => __$$_KodiNotificationPlayerOnStopParamsCopyWithImpl<
-          _$_KodiNotificationPlayerOnStopParams>(this, _$identity);
+  _$$KodiNotificationPlayerOnStopParamsImplCopyWith<
+          _$KodiNotificationPlayerOnStopParamsImpl>
+      get copyWith => __$$KodiNotificationPlayerOnStopParamsImplCopyWithImpl<
+          _$KodiNotificationPlayerOnStopParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnStopParamsToJson(
+    return _$$KodiNotificationPlayerOnStopParamsImplToJson(
       this,
     );
   }
@@ -183,20 +195,23 @@ abstract class _KodiNotificationPlayerOnStopParams
   const factory _KodiNotificationPlayerOnStopParams(
           {required final String sender,
           required final KodiNotificationPlayerOnStopParamsData data}) =
-      _$_KodiNotificationPlayerOnStopParams;
+      _$KodiNotificationPlayerOnStopParamsImpl;
 
   factory _KodiNotificationPlayerOnStopParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnStopParams.fromJson;
+      _$KodiNotificationPlayerOnStopParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationPlayerOnStopParamsData get data;
+
+  /// Create a copy of KodiNotificationPlayerOnStopParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnStopParamsCopyWith<
-          _$_KodiNotificationPlayerOnStopParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnStopParamsImplCopyWith<
+          _$KodiNotificationPlayerOnStopParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -211,8 +226,12 @@ mixin _$KodiNotificationPlayerOnStopParamsData {
   bool get end => throw _privateConstructorUsedError;
   KodiNotificationsItem get item => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlayerOnStopParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlayerOnStopParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlayerOnStopParamsDataCopyWith<
           KodiNotificationPlayerOnStopParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -242,6 +261,8 @@ class _$KodiNotificationPlayerOnStopParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlayerOnStopParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -260,6 +281,8 @@ class _$KodiNotificationPlayerOnStopParamsDataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlayerOnStopParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationsItemCopyWith<$Res> get item {
@@ -270,12 +293,12 @@ class _$KodiNotificationPlayerOnStopParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnStopParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnStopParamsDataImplCopyWith<$Res>
     implements $KodiNotificationPlayerOnStopParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnStopParamsDataCopyWith(
-          _$_KodiNotificationPlayerOnStopParamsData value,
-          $Res Function(_$_KodiNotificationPlayerOnStopParamsData) then) =
-      __$$_KodiNotificationPlayerOnStopParamsDataCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnStopParamsDataImplCopyWith(
+          _$KodiNotificationPlayerOnStopParamsDataImpl value,
+          $Res Function(_$KodiNotificationPlayerOnStopParamsDataImpl) then) =
+      __$$KodiNotificationPlayerOnStopParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool end, KodiNotificationsItem item});
@@ -285,22 +308,24 @@ abstract class _$$_KodiNotificationPlayerOnStopParamsDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnStopParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnStopParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlayerOnStopParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnStopParamsData>
-    implements _$$_KodiNotificationPlayerOnStopParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnStopParamsDataCopyWithImpl(
-      _$_KodiNotificationPlayerOnStopParamsData _value,
-      $Res Function(_$_KodiNotificationPlayerOnStopParamsData) _then)
+        _$KodiNotificationPlayerOnStopParamsDataImpl>
+    implements _$$KodiNotificationPlayerOnStopParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnStopParamsDataImplCopyWithImpl(
+      _$KodiNotificationPlayerOnStopParamsDataImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnStopParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlayerOnStopParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? end = null,
     Object? item = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnStopParamsData(
+    return _then(_$KodiNotificationPlayerOnStopParamsDataImpl(
       end: null == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
@@ -315,14 +340,14 @@ class __$$_KodiNotificationPlayerOnStopParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnStopParamsData
+class _$KodiNotificationPlayerOnStopParamsDataImpl
     implements _KodiNotificationPlayerOnStopParamsData {
-  const _$_KodiNotificationPlayerOnStopParamsData(
+  const _$KodiNotificationPlayerOnStopParamsDataImpl(
       {required this.end, required this.item});
 
-  factory _$_KodiNotificationPlayerOnStopParamsData.fromJson(
+  factory _$KodiNotificationPlayerOnStopParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnStopParamsDataFromJson(json);
+      _$$KodiNotificationPlayerOnStopParamsDataImplFromJson(json);
 
   @override
   final bool end;
@@ -335,29 +360,32 @@ class _$_KodiNotificationPlayerOnStopParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnStopParamsData &&
+            other is _$KodiNotificationPlayerOnStopParamsDataImpl &&
             (identical(other.end, end) || other.end == end) &&
             (identical(other.item, item) || other.item == item));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, end, item);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlayerOnStopParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnStopParamsDataCopyWith<
-          _$_KodiNotificationPlayerOnStopParamsData>
-      get copyWith => __$$_KodiNotificationPlayerOnStopParamsDataCopyWithImpl<
-          _$_KodiNotificationPlayerOnStopParamsData>(this, _$identity);
+  _$$KodiNotificationPlayerOnStopParamsDataImplCopyWith<
+          _$KodiNotificationPlayerOnStopParamsDataImpl>
+      get copyWith =>
+          __$$KodiNotificationPlayerOnStopParamsDataImplCopyWithImpl<
+              _$KodiNotificationPlayerOnStopParamsDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnStopParamsDataToJson(
+    return _$$KodiNotificationPlayerOnStopParamsDataImplToJson(
       this,
     );
   }
@@ -368,19 +396,22 @@ abstract class _KodiNotificationPlayerOnStopParamsData
   const factory _KodiNotificationPlayerOnStopParamsData(
           {required final bool end,
           required final KodiNotificationsItem item}) =
-      _$_KodiNotificationPlayerOnStopParamsData;
+      _$KodiNotificationPlayerOnStopParamsDataImpl;
 
   factory _KodiNotificationPlayerOnStopParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnStopParamsData.fromJson;
+      _$KodiNotificationPlayerOnStopParamsDataImpl.fromJson;
 
   @override
   bool get end;
   @override
   KodiNotificationsItem get item;
+
+  /// Create a copy of KodiNotificationPlayerOnStopParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnStopParamsDataCopyWith<
-          _$_KodiNotificationPlayerOnStopParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnStopParamsDataImplCopyWith<
+          _$KodiNotificationPlayerOnStopParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

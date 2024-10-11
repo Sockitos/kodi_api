@@ -12,7 +12,7 @@ part of 'kodi_audio_details_genres.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAudioDetailsGenres _$KodiAudioDetailsGenresFromJson(
     Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiAudioDetailsGenres {
   int get genreId => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAudioDetailsGenres to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAudioDetailsGenres
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAudioDetailsGenresCopyWith<KodiAudioDetailsGenres> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$KodiAudioDetailsGenresCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAudioDetailsGenres
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,32 +77,36 @@ class _$KodiAudioDetailsGenresCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioDetailsGenresCopyWith<$Res>
+abstract class _$$KodiAudioDetailsGenresImplCopyWith<$Res>
     implements $KodiAudioDetailsGenresCopyWith<$Res> {
-  factory _$$_KodiAudioDetailsGenresCopyWith(_$_KodiAudioDetailsGenres value,
-          $Res Function(_$_KodiAudioDetailsGenres) then) =
-      __$$_KodiAudioDetailsGenresCopyWithImpl<$Res>;
+  factory _$$KodiAudioDetailsGenresImplCopyWith(
+          _$KodiAudioDetailsGenresImpl value,
+          $Res Function(_$KodiAudioDetailsGenresImpl) then) =
+      __$$KodiAudioDetailsGenresImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'genreid') int genreId, String title});
 }
 
 /// @nodoc
-class __$$_KodiAudioDetailsGenresCopyWithImpl<$Res>
+class __$$KodiAudioDetailsGenresImplCopyWithImpl<$Res>
     extends _$KodiAudioDetailsGenresCopyWithImpl<$Res,
-        _$_KodiAudioDetailsGenres>
-    implements _$$_KodiAudioDetailsGenresCopyWith<$Res> {
-  __$$_KodiAudioDetailsGenresCopyWithImpl(_$_KodiAudioDetailsGenres _value,
-      $Res Function(_$_KodiAudioDetailsGenres) _then)
+        _$KodiAudioDetailsGenresImpl>
+    implements _$$KodiAudioDetailsGenresImplCopyWith<$Res> {
+  __$$KodiAudioDetailsGenresImplCopyWithImpl(
+      _$KodiAudioDetailsGenresImpl _value,
+      $Res Function(_$KodiAudioDetailsGenresImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioDetailsGenres
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? genreId = null,
     Object? title = null,
   }) {
-    return _then(_$_KodiAudioDetailsGenres(
+    return _then(_$KodiAudioDetailsGenresImpl(
       genreId: null == genreId
           ? _value.genreId
           : genreId // ignore: cast_nullable_to_non_nullable
@@ -111,17 +121,18 @@ class __$$_KodiAudioDetailsGenresCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioDetailsGenres implements _KodiAudioDetailsGenres {
-  const _$_KodiAudioDetailsGenres(
-      {@JsonKey(name: 'genreid') required this.genreId, required this.title});
+class _$KodiAudioDetailsGenresImpl implements _KodiAudioDetailsGenres {
+  const _$KodiAudioDetailsGenresImpl(
+      {@JsonKey(name: 'genreid') required this.genreId, this.title = ''});
 
-  factory _$_KodiAudioDetailsGenres.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAudioDetailsGenresFromJson(json);
+  factory _$KodiAudioDetailsGenresImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAudioDetailsGenresImplFromJson(json);
 
   @override
   @JsonKey(name: 'genreid')
   final int genreId;
   @override
+  @JsonKey()
   final String title;
 
   @override
@@ -130,28 +141,30 @@ class _$_KodiAudioDetailsGenres implements _KodiAudioDetailsGenres {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioDetailsGenres &&
+            other is _$KodiAudioDetailsGenresImpl &&
             (identical(other.genreId, genreId) || other.genreId == genreId) &&
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genreId, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioDetailsGenres
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioDetailsGenresCopyWith<_$_KodiAudioDetailsGenres> get copyWith =>
-      __$$_KodiAudioDetailsGenresCopyWithImpl<_$_KodiAudioDetailsGenres>(
-          this, _$identity);
+  _$$KodiAudioDetailsGenresImplCopyWith<_$KodiAudioDetailsGenresImpl>
+      get copyWith => __$$KodiAudioDetailsGenresImplCopyWithImpl<
+          _$KodiAudioDetailsGenresImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioDetailsGenresToJson(
+    return _$$KodiAudioDetailsGenresImplToJson(
       this,
     );
   }
@@ -160,18 +173,21 @@ class _$_KodiAudioDetailsGenres implements _KodiAudioDetailsGenres {
 abstract class _KodiAudioDetailsGenres implements KodiAudioDetailsGenres {
   const factory _KodiAudioDetailsGenres(
       {@JsonKey(name: 'genreid') required final int genreId,
-      required final String title}) = _$_KodiAudioDetailsGenres;
+      final String title}) = _$KodiAudioDetailsGenresImpl;
 
   factory _KodiAudioDetailsGenres.fromJson(Map<String, dynamic> json) =
-      _$_KodiAudioDetailsGenres.fromJson;
+      _$KodiAudioDetailsGenresImpl.fromJson;
 
   @override
   @JsonKey(name: 'genreid')
   int get genreId;
   @override
   String get title;
+
+  /// Create a copy of KodiAudioDetailsGenres
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAudioDetailsGenresCopyWith<_$_KodiAudioDetailsGenres> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioDetailsGenresImplCopyWith<_$KodiAudioDetailsGenresImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

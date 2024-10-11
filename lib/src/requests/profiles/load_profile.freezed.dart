@@ -12,7 +12,7 @@ part of 'load_profile.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LoadProfile _$LoadProfileFromJson(Map<String, dynamic> json) {
   return _LoadProfile.fromJson(json);
@@ -23,10 +23,14 @@ mixin _$LoadProfile {
   @JsonKey(name: 'profile')
   String get name => throw _privateConstructorUsedError;
   bool get prompt => throw _privateConstructorUsedError;
-  KodiProfilesPassword? get password => throw _privateConstructorUsedError;
+  KodiProfilesPassword get password => throw _privateConstructorUsedError;
 
+  /// Serializes this LoadProfile to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LoadProfile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LoadProfileCopyWith<LoadProfile> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -40,9 +44,9 @@ abstract class $LoadProfileCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'profile') String name,
       bool prompt,
-      KodiProfilesPassword? password});
+      KodiProfilesPassword password});
 
-  $KodiProfilesPasswordCopyWith<$Res>? get password;
+  $KodiProfilesPasswordCopyWith<$Res> get password;
 }
 
 /// @nodoc
@@ -55,12 +59,14 @@ class _$LoadProfileCopyWithImpl<$Res, $Val extends LoadProfile>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LoadProfile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = null,
     Object? prompt = null,
-    Object? password = freezed,
+    Object? password = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -71,59 +77,59 @@ class _$LoadProfileCopyWithImpl<$Res, $Val extends LoadProfile>
           ? _value.prompt
           : prompt // ignore: cast_nullable_to_non_nullable
               as bool,
-      password: freezed == password
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as KodiProfilesPassword?,
+              as KodiProfilesPassword,
     ) as $Val);
   }
 
+  /// Create a copy of LoadProfile
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $KodiProfilesPasswordCopyWith<$Res>? get password {
-    if (_value.password == null) {
-      return null;
-    }
-
-    return $KodiProfilesPasswordCopyWith<$Res>(_value.password!, (value) {
+  $KodiProfilesPasswordCopyWith<$Res> get password {
+    return $KodiProfilesPasswordCopyWith<$Res>(_value.password, (value) {
       return _then(_value.copyWith(password: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_LoadProfileCopyWith<$Res>
+abstract class _$$LoadProfileImplCopyWith<$Res>
     implements $LoadProfileCopyWith<$Res> {
-  factory _$$_LoadProfileCopyWith(
-          _$_LoadProfile value, $Res Function(_$_LoadProfile) then) =
-      __$$_LoadProfileCopyWithImpl<$Res>;
+  factory _$$LoadProfileImplCopyWith(
+          _$LoadProfileImpl value, $Res Function(_$LoadProfileImpl) then) =
+      __$$LoadProfileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'profile') String name,
       bool prompt,
-      KodiProfilesPassword? password});
+      KodiProfilesPassword password});
 
   @override
-  $KodiProfilesPasswordCopyWith<$Res>? get password;
+  $KodiProfilesPasswordCopyWith<$Res> get password;
 }
 
 /// @nodoc
-class __$$_LoadProfileCopyWithImpl<$Res>
-    extends _$LoadProfileCopyWithImpl<$Res, _$_LoadProfile>
-    implements _$$_LoadProfileCopyWith<$Res> {
-  __$$_LoadProfileCopyWithImpl(
-      _$_LoadProfile _value, $Res Function(_$_LoadProfile) _then)
+class __$$LoadProfileImplCopyWithImpl<$Res>
+    extends _$LoadProfileCopyWithImpl<$Res, _$LoadProfileImpl>
+    implements _$$LoadProfileImplCopyWith<$Res> {
+  __$$LoadProfileImplCopyWithImpl(
+      _$LoadProfileImpl _value, $Res Function(_$LoadProfileImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LoadProfile
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = null,
     Object? prompt = null,
-    Object? password = freezed,
+    Object? password = null,
   }) {
-    return _then(_$_LoadProfile(
+    return _then(_$LoadProfileImpl(
       null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -132,23 +138,23 @@ class __$$_LoadProfileCopyWithImpl<$Res>
           ? _value.prompt
           : prompt // ignore: cast_nullable_to_non_nullable
               as bool,
-      password: freezed == password
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as KodiProfilesPassword?,
+              as KodiProfilesPassword,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_LoadProfile extends _LoadProfile {
-  const _$_LoadProfile(@JsonKey(name: 'profile') this.name,
-      {this.prompt = false, this.password})
+class _$LoadProfileImpl extends _LoadProfile {
+  const _$LoadProfileImpl(@JsonKey(name: 'profile') this.name,
+      {this.prompt = false, required this.password})
       : super._();
 
-  factory _$_LoadProfile.fromJson(Map<String, dynamic> json) =>
-      _$$_LoadProfileFromJson(json);
+  factory _$LoadProfileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LoadProfileImplFromJson(json);
 
   @override
   @JsonKey(name: 'profile')
@@ -157,7 +163,7 @@ class _$_LoadProfile extends _LoadProfile {
   @JsonKey()
   final bool prompt;
   @override
-  final KodiProfilesPassword? password;
+  final KodiProfilesPassword password;
 
   @override
   String toString() {
@@ -165,29 +171,31 @@ class _$_LoadProfile extends _LoadProfile {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadProfile &&
+            other is _$LoadProfileImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.prompt, prompt) || other.prompt == prompt) &&
             (identical(other.password, password) ||
                 other.password == password));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, prompt, password);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoadProfile
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadProfileCopyWith<_$_LoadProfile> get copyWith =>
-      __$$_LoadProfileCopyWithImpl<_$_LoadProfile>(this, _$identity);
+  _$$LoadProfileImplCopyWith<_$LoadProfileImpl> get copyWith =>
+      __$$LoadProfileImplCopyWithImpl<_$LoadProfileImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LoadProfileToJson(
+    return _$$LoadProfileImplToJson(
       this,
     );
   }
@@ -196,11 +204,11 @@ class _$_LoadProfile extends _LoadProfile {
 abstract class _LoadProfile extends LoadProfile {
   const factory _LoadProfile(@JsonKey(name: 'profile') final String name,
       {final bool prompt,
-      final KodiProfilesPassword? password}) = _$_LoadProfile;
+      required final KodiProfilesPassword password}) = _$LoadProfileImpl;
   const _LoadProfile._() : super._();
 
   factory _LoadProfile.fromJson(Map<String, dynamic> json) =
-      _$_LoadProfile.fromJson;
+      _$LoadProfileImpl.fromJson;
 
   @override
   @JsonKey(name: 'profile')
@@ -208,9 +216,12 @@ abstract class _LoadProfile extends LoadProfile {
   @override
   bool get prompt;
   @override
-  KodiProfilesPassword? get password;
+  KodiProfilesPassword get password;
+
+  /// Create a copy of LoadProfile
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_LoadProfileCopyWith<_$_LoadProfile> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoadProfileImplCopyWith<_$LoadProfileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

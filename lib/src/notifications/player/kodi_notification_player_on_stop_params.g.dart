@@ -6,32 +6,33 @@ part of 'kodi_notification_player_on_stop_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationPlayerOnStopParams
-    _$$_KodiNotificationPlayerOnStopParamsFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnStopParams(
+_$KodiNotificationPlayerOnStopParamsImpl
+    _$$KodiNotificationPlayerOnStopParamsImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationPlayerOnStopParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationPlayerOnStopParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnStopParamsToJson(
-        _$_KodiNotificationPlayerOnStopParams instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnStopParamsImplToJson(
+        _$KodiNotificationPlayerOnStopParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationPlayerOnStopParamsData
-    _$$_KodiNotificationPlayerOnStopParamsDataFromJson(
+_$KodiNotificationPlayerOnStopParamsDataImpl
+    _$$KodiNotificationPlayerOnStopParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnStopParamsData(
+        _$KodiNotificationPlayerOnStopParamsDataImpl(
           end: json['end'] as bool,
           item: KodiNotificationsItem.fromJson(
               json['item'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnStopParamsDataToJson(
-        _$_KodiNotificationPlayerOnStopParamsData instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnStopParamsDataImplToJson(
+        _$KodiNotificationPlayerOnStopParamsDataImpl instance) =>
     <String, dynamic>{
       'end': instance.end,
       'item': instance.item.toJson(),

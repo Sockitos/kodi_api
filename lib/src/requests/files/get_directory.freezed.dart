@@ -12,7 +12,7 @@ part of 'get_directory.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetDirectory _$GetDirectoryFromJson(Map<String, dynamic> json) {
   return _GetDirectory.fromJson(json);
@@ -27,8 +27,12 @@ mixin _$GetDirectory {
   KodiListSort? get sort => throw _privateConstructorUsedError;
   KodiListLimits? get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetDirectory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetDirectory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetDirectoryCopyWith<GetDirectory> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -60,6 +64,8 @@ class _$GetDirectoryCopyWithImpl<$Res, $Val extends GetDirectory>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -93,6 +99,8 @@ class _$GetDirectoryCopyWithImpl<$Res, $Val extends GetDirectory>
     ) as $Val);
   }
 
+  /// Create a copy of GetDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -105,6 +113,8 @@ class _$GetDirectoryCopyWithImpl<$Res, $Val extends GetDirectory>
     });
   }
 
+  /// Create a copy of GetDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -119,11 +129,11 @@ class _$GetDirectoryCopyWithImpl<$Res, $Val extends GetDirectory>
 }
 
 /// @nodoc
-abstract class _$$_GetDirectoryCopyWith<$Res>
+abstract class _$$GetDirectoryImplCopyWith<$Res>
     implements $GetDirectoryCopyWith<$Res> {
-  factory _$$_GetDirectoryCopyWith(
-          _$_GetDirectory value, $Res Function(_$_GetDirectory) then) =
-      __$$_GetDirectoryCopyWithImpl<$Res>;
+  factory _$$GetDirectoryImplCopyWith(
+          _$GetDirectoryImpl value, $Res Function(_$GetDirectoryImpl) then) =
+      __$$GetDirectoryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -140,13 +150,15 @@ abstract class _$$_GetDirectoryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetDirectoryCopyWithImpl<$Res>
-    extends _$GetDirectoryCopyWithImpl<$Res, _$_GetDirectory>
-    implements _$$_GetDirectoryCopyWith<$Res> {
-  __$$_GetDirectoryCopyWithImpl(
-      _$_GetDirectory _value, $Res Function(_$_GetDirectory) _then)
+class __$$GetDirectoryImplCopyWithImpl<$Res>
+    extends _$GetDirectoryCopyWithImpl<$Res, _$GetDirectoryImpl>
+    implements _$$GetDirectoryImplCopyWith<$Res> {
+  __$$GetDirectoryImplCopyWithImpl(
+      _$GetDirectoryImpl _value, $Res Function(_$GetDirectoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -156,7 +168,7 @@ class __$$_GetDirectoryCopyWithImpl<$Res>
     Object? sort = freezed,
     Object? limits = freezed,
   }) {
-    return _then(_$_GetDirectory(
+    return _then(_$GetDirectoryImpl(
       null == directory
           ? _value.directory
           : directory // ignore: cast_nullable_to_non_nullable
@@ -183,8 +195,8 @@ class __$$_GetDirectoryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetDirectory extends _GetDirectory {
-  const _$_GetDirectory(this.directory,
+class _$GetDirectoryImpl extends _GetDirectory {
+  const _$GetDirectoryImpl(this.directory,
       {this.media = KodiFilesMedia.files,
       final Set<KodiListFieldsFiles>? properties,
       this.sort,
@@ -192,8 +204,8 @@ class _$_GetDirectory extends _GetDirectory {
       : _properties = properties,
         super._();
 
-  factory _$_GetDirectory.fromJson(Map<String, dynamic> json) =>
-      _$$_GetDirectoryFromJson(json);
+  factory _$GetDirectoryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetDirectoryImplFromJson(json);
 
   @override
   final String directory;
@@ -221,10 +233,10 @@ class _$_GetDirectory extends _GetDirectory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetDirectory &&
+            other is _$GetDirectoryImpl &&
             (identical(other.directory, directory) ||
                 other.directory == directory) &&
             (identical(other.media, media) || other.media == media) &&
@@ -234,20 +246,22 @@ class _$_GetDirectory extends _GetDirectory {
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, directory, media,
       const DeepCollectionEquality().hash(_properties), sort, limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetDirectory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetDirectoryCopyWith<_$_GetDirectory> get copyWith =>
-      __$$_GetDirectoryCopyWithImpl<_$_GetDirectory>(this, _$identity);
+  _$$GetDirectoryImplCopyWith<_$GetDirectoryImpl> get copyWith =>
+      __$$GetDirectoryImplCopyWithImpl<_$GetDirectoryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetDirectoryToJson(
+    return _$$GetDirectoryImplToJson(
       this,
     );
   }
@@ -258,11 +272,11 @@ abstract class _GetDirectory extends GetDirectory {
       {final KodiFilesMedia media,
       final Set<KodiListFieldsFiles>? properties,
       final KodiListSort? sort,
-      final KodiListLimits? limits}) = _$_GetDirectory;
+      final KodiListLimits? limits}) = _$GetDirectoryImpl;
   const _GetDirectory._() : super._();
 
   factory _GetDirectory.fromJson(Map<String, dynamic> json) =
-      _$_GetDirectory.fromJson;
+      _$GetDirectoryImpl.fromJson;
 
   @override
   String get directory;
@@ -274,9 +288,12 @@ abstract class _GetDirectory extends GetDirectory {
   KodiListSort? get sort;
   @override
   KodiListLimits? get limits;
+
+  /// Create a copy of GetDirectory
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetDirectoryCopyWith<_$_GetDirectory> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetDirectoryImplCopyWith<_$GetDirectoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -289,8 +306,12 @@ mixin _$GetDirectoryResponse {
   List<KodiListItemFile> get files => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetDirectoryResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetDirectoryResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetDirectoryResponseCopyWith<GetDirectoryResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -317,6 +338,8 @@ class _$GetDirectoryResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetDirectoryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -335,6 +358,8 @@ class _$GetDirectoryResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetDirectoryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -345,11 +370,11 @@ class _$GetDirectoryResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetDirectoryResponseCopyWith<$Res>
+abstract class _$$GetDirectoryResponseImplCopyWith<$Res>
     implements $GetDirectoryResponseCopyWith<$Res> {
-  factory _$$_GetDirectoryResponseCopyWith(_$_GetDirectoryResponse value,
-          $Res Function(_$_GetDirectoryResponse) then) =
-      __$$_GetDirectoryResponseCopyWithImpl<$Res>;
+  factory _$$GetDirectoryResponseImplCopyWith(_$GetDirectoryResponseImpl value,
+          $Res Function(_$GetDirectoryResponseImpl) then) =
+      __$$GetDirectoryResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiListItemFile> files, KodiListLimitsReturned limits});
@@ -359,20 +384,22 @@ abstract class _$$_GetDirectoryResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetDirectoryResponseCopyWithImpl<$Res>
-    extends _$GetDirectoryResponseCopyWithImpl<$Res, _$_GetDirectoryResponse>
-    implements _$$_GetDirectoryResponseCopyWith<$Res> {
-  __$$_GetDirectoryResponseCopyWithImpl(_$_GetDirectoryResponse _value,
-      $Res Function(_$_GetDirectoryResponse) _then)
+class __$$GetDirectoryResponseImplCopyWithImpl<$Res>
+    extends _$GetDirectoryResponseCopyWithImpl<$Res, _$GetDirectoryResponseImpl>
+    implements _$$GetDirectoryResponseImplCopyWith<$Res> {
+  __$$GetDirectoryResponseImplCopyWithImpl(_$GetDirectoryResponseImpl _value,
+      $Res Function(_$GetDirectoryResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetDirectoryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? files = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetDirectoryResponse(
+    return _then(_$GetDirectoryResponseImpl(
       files: null == files
           ? _value._files
           : files // ignore: cast_nullable_to_non_nullable
@@ -387,13 +414,13 @@ class __$$_GetDirectoryResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetDirectoryResponse implements _GetDirectoryResponse {
-  const _$_GetDirectoryResponse(
+class _$GetDirectoryResponseImpl implements _GetDirectoryResponse {
+  const _$GetDirectoryResponseImpl(
       {required final List<KodiListItemFile> files, required this.limits})
       : _files = files;
 
-  factory _$_GetDirectoryResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetDirectoryResponseFromJson(json);
+  factory _$GetDirectoryResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetDirectoryResponseImplFromJson(json);
 
   final List<KodiListItemFile> _files;
   @override
@@ -412,29 +439,32 @@ class _$_GetDirectoryResponse implements _GetDirectoryResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetDirectoryResponse &&
+            other is _$GetDirectoryResponseImpl &&
             const DeepCollectionEquality().equals(other._files, _files) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_files), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetDirectoryResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetDirectoryResponseCopyWith<_$_GetDirectoryResponse> get copyWith =>
-      __$$_GetDirectoryResponseCopyWithImpl<_$_GetDirectoryResponse>(
-          this, _$identity);
+  _$$GetDirectoryResponseImplCopyWith<_$GetDirectoryResponseImpl>
+      get copyWith =>
+          __$$GetDirectoryResponseImplCopyWithImpl<_$GetDirectoryResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetDirectoryResponseToJson(
+    return _$$GetDirectoryResponseImplToJson(
       this,
     );
   }
@@ -442,18 +472,22 @@ class _$_GetDirectoryResponse implements _GetDirectoryResponse {
 
 abstract class _GetDirectoryResponse implements GetDirectoryResponse {
   const factory _GetDirectoryResponse(
-      {required final List<KodiListItemFile> files,
-      required final KodiListLimitsReturned limits}) = _$_GetDirectoryResponse;
+          {required final List<KodiListItemFile> files,
+          required final KodiListLimitsReturned limits}) =
+      _$GetDirectoryResponseImpl;
 
   factory _GetDirectoryResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetDirectoryResponse.fromJson;
+      _$GetDirectoryResponseImpl.fromJson;
 
   @override
   List<KodiListItemFile> get files;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetDirectoryResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetDirectoryResponseCopyWith<_$_GetDirectoryResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetDirectoryResponseImplCopyWith<_$GetDirectoryResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

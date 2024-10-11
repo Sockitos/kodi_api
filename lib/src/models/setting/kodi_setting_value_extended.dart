@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_positional_boolean_parameters
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kodi_api/src/models/setting/kodi_setting_value.dart';
 

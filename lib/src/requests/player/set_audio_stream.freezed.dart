@@ -12,7 +12,7 @@ part of 'set_audio_stream.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetAudioStream _$SetAudioStreamFromJson(Map<String, dynamic> json) {
   return _SetAudioStream.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$SetAudioStream {
   @SetAudioStreamStreamConverter()
   SetAudioStreamStream get stream => throw _privateConstructorUsedError;
 
+  /// Serializes this SetAudioStream to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetAudioStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetAudioStreamCopyWith<SetAudioStream> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$SetAudioStreamCopyWithImpl<$Res, $Val extends SetAudioStream>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetAudioStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$SetAudioStreamCopyWithImpl<$Res, $Val extends SetAudioStream>
     ) as $Val);
   }
 
+  /// Create a copy of SetAudioStream
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SetAudioStreamStreamCopyWith<$Res> get stream {
@@ -82,11 +90,11 @@ class _$SetAudioStreamCopyWithImpl<$Res, $Val extends SetAudioStream>
 }
 
 /// @nodoc
-abstract class _$$_SetAudioStreamCopyWith<$Res>
+abstract class _$$SetAudioStreamImplCopyWith<$Res>
     implements $SetAudioStreamCopyWith<$Res> {
-  factory _$$_SetAudioStreamCopyWith(
-          _$_SetAudioStream value, $Res Function(_$_SetAudioStream) then) =
-      __$$_SetAudioStreamCopyWithImpl<$Res>;
+  factory _$$SetAudioStreamImplCopyWith(_$SetAudioStreamImpl value,
+          $Res Function(_$SetAudioStreamImpl) then) =
+      __$$SetAudioStreamImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -98,20 +106,22 @@ abstract class _$$_SetAudioStreamCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetAudioStreamCopyWithImpl<$Res>
-    extends _$SetAudioStreamCopyWithImpl<$Res, _$_SetAudioStream>
-    implements _$$_SetAudioStreamCopyWith<$Res> {
-  __$$_SetAudioStreamCopyWithImpl(
-      _$_SetAudioStream _value, $Res Function(_$_SetAudioStream) _then)
+class __$$SetAudioStreamImplCopyWithImpl<$Res>
+    extends _$SetAudioStreamCopyWithImpl<$Res, _$SetAudioStreamImpl>
+    implements _$$SetAudioStreamImplCopyWith<$Res> {
+  __$$SetAudioStreamImplCopyWithImpl(
+      _$SetAudioStreamImpl _value, $Res Function(_$SetAudioStreamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetAudioStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? stream = null,
   }) {
-    return _then(_$_SetAudioStream(
+    return _then(_$SetAudioStreamImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,13 +136,13 @@ class __$$_SetAudioStreamCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetAudioStream extends _SetAudioStream {
-  const _$_SetAudioStream(@JsonKey(name: 'playerid') this.id,
+class _$SetAudioStreamImpl extends _SetAudioStream {
+  const _$SetAudioStreamImpl(@JsonKey(name: 'playerid') this.id,
       @SetAudioStreamStreamConverter() this.stream)
       : super._();
 
-  factory _$_SetAudioStream.fromJson(Map<String, dynamic> json) =>
-      _$$_SetAudioStreamFromJson(json);
+  factory _$SetAudioStreamImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetAudioStreamImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -147,27 +157,30 @@ class _$_SetAudioStream extends _SetAudioStream {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetAudioStream &&
+            other is _$SetAudioStreamImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.stream, stream) || other.stream == stream));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, stream);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetAudioStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetAudioStreamCopyWith<_$_SetAudioStream> get copyWith =>
-      __$$_SetAudioStreamCopyWithImpl<_$_SetAudioStream>(this, _$identity);
+  _$$SetAudioStreamImplCopyWith<_$SetAudioStreamImpl> get copyWith =>
+      __$$SetAudioStreamImplCopyWithImpl<_$SetAudioStreamImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetAudioStreamToJson(
+    return _$$SetAudioStreamImplToJson(
       this,
     );
   }
@@ -176,11 +189,11 @@ class _$_SetAudioStream extends _SetAudioStream {
 abstract class _SetAudioStream extends SetAudioStream {
   const factory _SetAudioStream(@JsonKey(name: 'playerid') final int id,
           @SetAudioStreamStreamConverter() final SetAudioStreamStream stream) =
-      _$_SetAudioStream;
+      _$SetAudioStreamImpl;
   const _SetAudioStream._() : super._();
 
   factory _SetAudioStream.fromJson(Map<String, dynamic> json) =
-      _$_SetAudioStream.fromJson;
+      _$SetAudioStreamImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -188,9 +201,12 @@ abstract class _SetAudioStream extends SetAudioStream {
   @override
   @SetAudioStreamStreamConverter()
   SetAudioStreamStream get stream;
+
+  /// Create a copy of SetAudioStream
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetAudioStreamCopyWith<_$_SetAudioStream> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetAudioStreamImplCopyWith<_$SetAudioStreamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -251,6 +267,8 @@ mixin _$SetAudioStreamStream {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SetAudioStreamStream to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -271,33 +289,39 @@ class _$SetAudioStreamStreamCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SetAudioStreamStream
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SetAudioStreamStreamEnumCopyWith<$Res> {
-  factory _$$_SetAudioStreamStreamEnumCopyWith(
-          _$_SetAudioStreamStreamEnum value,
-          $Res Function(_$_SetAudioStreamStreamEnum) then) =
-      __$$_SetAudioStreamStreamEnumCopyWithImpl<$Res>;
+abstract class _$$SetAudioStreamStreamEnumImplCopyWith<$Res> {
+  factory _$$SetAudioStreamStreamEnumImplCopyWith(
+          _$SetAudioStreamStreamEnumImpl value,
+          $Res Function(_$SetAudioStreamStreamEnumImpl) then) =
+      __$$SetAudioStreamStreamEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiSetAudioStreamEnum value});
 }
 
 /// @nodoc
-class __$$_SetAudioStreamStreamEnumCopyWithImpl<$Res>
+class __$$SetAudioStreamStreamEnumImplCopyWithImpl<$Res>
     extends _$SetAudioStreamStreamCopyWithImpl<$Res,
-        _$_SetAudioStreamStreamEnum>
-    implements _$$_SetAudioStreamStreamEnumCopyWith<$Res> {
-  __$$_SetAudioStreamStreamEnumCopyWithImpl(_$_SetAudioStreamStreamEnum _value,
-      $Res Function(_$_SetAudioStreamStreamEnum) _then)
+        _$SetAudioStreamStreamEnumImpl>
+    implements _$$SetAudioStreamStreamEnumImplCopyWith<$Res> {
+  __$$SetAudioStreamStreamEnumImplCopyWithImpl(
+      _$SetAudioStreamStreamEnumImpl _value,
+      $Res Function(_$SetAudioStreamStreamEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetAudioStreamStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetAudioStreamStreamEnum(
+    return _then(_$SetAudioStreamStreamEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -308,12 +332,12 @@ class __$$_SetAudioStreamStreamEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetAudioStreamStreamEnum implements _SetAudioStreamStreamEnum {
-  const _$_SetAudioStreamStreamEnum(this.value, {final String? $type})
+class _$SetAudioStreamStreamEnumImpl implements _SetAudioStreamStreamEnum {
+  const _$SetAudioStreamStreamEnumImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_SetAudioStreamStreamEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_SetAudioStreamStreamEnumFromJson(json);
+  factory _$SetAudioStreamStreamEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetAudioStreamStreamEnumImplFromJson(json);
 
   @override
   final KodiSetAudioStreamEnum value;
@@ -327,23 +351,25 @@ class _$_SetAudioStreamStreamEnum implements _SetAudioStreamStreamEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetAudioStreamStreamEnum &&
+            other is _$SetAudioStreamStreamEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetAudioStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetAudioStreamStreamEnumCopyWith<_$_SetAudioStreamStreamEnum>
-      get copyWith => __$$_SetAudioStreamStreamEnumCopyWithImpl<
-          _$_SetAudioStreamStreamEnum>(this, _$identity);
+  _$$SetAudioStreamStreamEnumImplCopyWith<_$SetAudioStreamStreamEnumImpl>
+      get copyWith => __$$SetAudioStreamStreamEnumImplCopyWithImpl<
+          _$SetAudioStreamStreamEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -409,7 +435,7 @@ class _$_SetAudioStreamStreamEnum implements _SetAudioStreamStreamEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetAudioStreamStreamEnumToJson(
+    return _$$SetAudioStreamStreamEnumImplToJson(
       this,
     );
   }
@@ -417,41 +443,49 @@ class _$_SetAudioStreamStreamEnum implements _SetAudioStreamStreamEnum {
 
 abstract class _SetAudioStreamStreamEnum implements SetAudioStreamStream {
   const factory _SetAudioStreamStreamEnum(final KodiSetAudioStreamEnum value) =
-      _$_SetAudioStreamStreamEnum;
+      _$SetAudioStreamStreamEnumImpl;
 
   factory _SetAudioStreamStreamEnum.fromJson(Map<String, dynamic> json) =
-      _$_SetAudioStreamStreamEnum.fromJson;
+      _$SetAudioStreamStreamEnumImpl.fromJson;
 
   @override
   KodiSetAudioStreamEnum get value;
-  @JsonKey(ignore: true)
-  _$$_SetAudioStreamStreamEnumCopyWith<_$_SetAudioStreamStreamEnum>
+
+  /// Create a copy of SetAudioStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetAudioStreamStreamEnumImplCopyWith<_$SetAudioStreamStreamEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SetAudioStreamStreamIntCopyWith<$Res> {
-  factory _$$_SetAudioStreamStreamIntCopyWith(_$_SetAudioStreamStreamInt value,
-          $Res Function(_$_SetAudioStreamStreamInt) then) =
-      __$$_SetAudioStreamStreamIntCopyWithImpl<$Res>;
+abstract class _$$SetAudioStreamStreamIntImplCopyWith<$Res> {
+  factory _$$SetAudioStreamStreamIntImplCopyWith(
+          _$SetAudioStreamStreamIntImpl value,
+          $Res Function(_$SetAudioStreamStreamIntImpl) then) =
+      __$$SetAudioStreamStreamIntImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int value});
 }
 
 /// @nodoc
-class __$$_SetAudioStreamStreamIntCopyWithImpl<$Res>
-    extends _$SetAudioStreamStreamCopyWithImpl<$Res, _$_SetAudioStreamStreamInt>
-    implements _$$_SetAudioStreamStreamIntCopyWith<$Res> {
-  __$$_SetAudioStreamStreamIntCopyWithImpl(_$_SetAudioStreamStreamInt _value,
-      $Res Function(_$_SetAudioStreamStreamInt) _then)
+class __$$SetAudioStreamStreamIntImplCopyWithImpl<$Res>
+    extends _$SetAudioStreamStreamCopyWithImpl<$Res,
+        _$SetAudioStreamStreamIntImpl>
+    implements _$$SetAudioStreamStreamIntImplCopyWith<$Res> {
+  __$$SetAudioStreamStreamIntImplCopyWithImpl(
+      _$SetAudioStreamStreamIntImpl _value,
+      $Res Function(_$SetAudioStreamStreamIntImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetAudioStreamStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetAudioStreamStreamInt(
+    return _then(_$SetAudioStreamStreamIntImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -462,12 +496,12 @@ class __$$_SetAudioStreamStreamIntCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetAudioStreamStreamInt implements _SetAudioStreamStreamInt {
-  const _$_SetAudioStreamStreamInt(this.value, {final String? $type})
+class _$SetAudioStreamStreamIntImpl implements _SetAudioStreamStreamInt {
+  const _$SetAudioStreamStreamIntImpl(this.value, {final String? $type})
       : $type = $type ?? 'int';
 
-  factory _$_SetAudioStreamStreamInt.fromJson(Map<String, dynamic> json) =>
-      _$$_SetAudioStreamStreamIntFromJson(json);
+  factory _$SetAudioStreamStreamIntImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetAudioStreamStreamIntImplFromJson(json);
 
   @override
   final int value;
@@ -481,24 +515,25 @@ class _$_SetAudioStreamStreamInt implements _SetAudioStreamStreamInt {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetAudioStreamStreamInt &&
+            other is _$SetAudioStreamStreamIntImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetAudioStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetAudioStreamStreamIntCopyWith<_$_SetAudioStreamStreamInt>
-      get copyWith =>
-          __$$_SetAudioStreamStreamIntCopyWithImpl<_$_SetAudioStreamStreamInt>(
-              this, _$identity);
+  _$$SetAudioStreamStreamIntImplCopyWith<_$SetAudioStreamStreamIntImpl>
+      get copyWith => __$$SetAudioStreamStreamIntImplCopyWithImpl<
+          _$SetAudioStreamStreamIntImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -564,7 +599,7 @@ class _$_SetAudioStreamStreamInt implements _SetAudioStreamStreamInt {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetAudioStreamStreamIntToJson(
+    return _$$SetAudioStreamStreamIntImplToJson(
       this,
     );
   }
@@ -572,14 +607,17 @@ class _$_SetAudioStreamStreamInt implements _SetAudioStreamStreamInt {
 
 abstract class _SetAudioStreamStreamInt implements SetAudioStreamStream {
   const factory _SetAudioStreamStreamInt(final int value) =
-      _$_SetAudioStreamStreamInt;
+      _$SetAudioStreamStreamIntImpl;
 
   factory _SetAudioStreamStreamInt.fromJson(Map<String, dynamic> json) =
-      _$_SetAudioStreamStreamInt.fromJson;
+      _$SetAudioStreamStreamIntImpl.fromJson;
 
   @override
   int get value;
-  @JsonKey(ignore: true)
-  _$$_SetAudioStreamStreamIntCopyWith<_$_SetAudioStreamStreamInt>
+
+  /// Create a copy of SetAudioStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetAudioStreamStreamIntImplCopyWith<_$SetAudioStreamStreamIntImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -41,8 +41,8 @@ class GetAvailableArt
 @freezed
 class KodiVideoLibraryAvailableArt with _$KodiVideoLibraryAvailableArt {
   const factory KodiVideoLibraryAvailableArt({
-    @JsonKey(name: 'arttype') String? artType,
-    @JsonKey(name: 'previewurl') String? previewUrl,
+    @JsonKey(name: 'arttype') required String artType,
+    @JsonKey(name: 'previewurl') @Default('') String previewUrl,
     required String url,
   }) = _KodiVideoLibraryAvailableArtPath;
 
@@ -73,9 +73,9 @@ class KodiVideoLibraryGetAvailableArtItem
     @JsonKey(name: 'setid') int setId,
   ) = _KodiVideoLibraryGetAvailableArtItemSetId;
 
-  const factory KodiVideoLibraryGetAvailableArtItem.musicVideoId({
-    required int musicVideoId,
-  }) = _KodiVideoLibraryGetAvailableArtItemMusicVideoId;
+  const factory KodiVideoLibraryGetAvailableArtItem.musicVideoId(
+    @JsonKey(name: 'musicvideoid') int musicVideoId,
+  ) = _KodiVideoLibraryGetAvailableArtItemMusicVideoId;
 
   factory KodiVideoLibraryGetAvailableArtItem.fromJson(
     Map<String, dynamic> json,
@@ -109,7 +109,7 @@ class KodiVideoLibraryGetAvailableArtItemConverter
           'movieid': value.movieId,
         },
         setId: (value) => <String, dynamic>{
-          'setId': value.setId,
+          'setid': value.setId,
         },
         musicVideoId: (value) => <String, dynamic>{
           'musicvideoid': value.musicVideoId,

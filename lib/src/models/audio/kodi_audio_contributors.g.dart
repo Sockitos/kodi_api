@@ -6,17 +6,17 @@ part of 'kodi_audio_contributors.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiAudioContributors _$$_KodiAudioContributorsFromJson(
+_$KodiAudioContributorsImpl _$$KodiAudioContributorsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAudioContributors(
-      artistId: json['artistid'] as int,
+    _$KodiAudioContributorsImpl(
+      artistId: (json['artistid'] as num).toInt(),
       name: json['name'] as String,
       role: json['role'] as String,
-      roleId: json['roleid'] as int,
+      roleId: (json['roleid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_KodiAudioContributorsToJson(
-        _$_KodiAudioContributors instance) =>
+Map<String, dynamic> _$$KodiAudioContributorsImplToJson(
+        _$KodiAudioContributorsImpl instance) =>
     <String, dynamic>{
       'artistid': instance.artistId,
       'name': instance.name,

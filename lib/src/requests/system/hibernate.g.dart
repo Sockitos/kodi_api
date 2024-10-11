@@ -6,7 +6,8 @@ part of 'hibernate.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Hibernate _$$_HibernateFromJson(Map<String, dynamic> json) => _$_Hibernate();
+_$HibernateImpl _$$HibernateImplFromJson(Map<String, dynamic> json) =>
+    _$HibernateImpl();
 
-Map<String, dynamic> _$$_HibernateToJson(_$_Hibernate instance) =>
+Map<String, dynamic> _$$HibernateImplToJson(_$HibernateImpl instance) =>
     <String, dynamic>{};

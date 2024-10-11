@@ -6,7 +6,8 @@ part of 'get_songs.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSongs _$$_GetSongsFromJson(Map<String, dynamic> json) => _$_GetSongs(
+_$GetSongsImpl _$$GetSongsImplFromJson(Map<String, dynamic> json) =>
+    _$GetSongsImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiAudioFieldsSongEnumMap, e))
           .toSet(),
@@ -23,7 +24,7 @@ _$_GetSongs _$$_GetSongsFromJson(Map<String, dynamic> json) => _$_GetSongs(
       singlesOnly: json['singlesonly'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_GetSongsToJson(_$_GetSongs instance) {
+Map<String, dynamic> _$$GetSongsImplToJson(_$GetSongsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -107,8 +108,9 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_GetSongsResponse _$$_GetSongsResponseFromJson(Map<String, dynamic> json) =>
-    _$_GetSongsResponse(
+_$GetSongsResponseImpl _$$GetSongsResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetSongsResponseImpl(
       songs: (json['songs'] as List<dynamic>)
           .map((e) => KodiAudioDetailsSong.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -116,180 +118,181 @@ _$_GetSongsResponse _$$_GetSongsResponseFromJson(Map<String, dynamic> json) =>
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSongsResponseToJson(_$_GetSongsResponse instance) =>
+Map<String, dynamic> _$$GetSongsResponseImplToJson(
+        _$GetSongsResponseImpl instance) =>
     <String, dynamic>{
       'songs': instance.songs.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),
     };
 
-_$_KodiAudioLibraryGetSongsFilterGenreId
-    _$$_KodiAudioLibraryGetSongsFilterGenreIdFromJson(
+_$KodiAudioLibraryGetSongsFilterGenreIdImpl
+    _$$KodiAudioLibraryGetSongsFilterGenreIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterGenreId(
-          genreId: json['genreid'] as int,
+        _$KodiAudioLibraryGetSongsFilterGenreIdImpl(
+          genreId: (json['genreid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterGenreIdToJson(
-        _$_KodiAudioLibraryGetSongsFilterGenreId instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterGenreIdImplToJson(
+        _$KodiAudioLibraryGetSongsFilterGenreIdImpl instance) =>
     <String, dynamic>{
       'genreid': instance.genreId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterGenre
-    _$$_KodiAudioLibraryGetSongsFilterGenreFromJson(
+_$KodiAudioLibraryGetSongsFilterGenreImpl
+    _$$KodiAudioLibraryGetSongsFilterGenreImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterGenre(
+        _$KodiAudioLibraryGetSongsFilterGenreImpl(
           genre: json['genre'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterGenreToJson(
-        _$_KodiAudioLibraryGetSongsFilterGenre instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterGenreImplToJson(
+        _$KodiAudioLibraryGetSongsFilterGenreImpl instance) =>
     <String, dynamic>{
       'genre': instance.genre,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterArtistId
-    _$$_KodiAudioLibraryGetSongsFilterArtistIdFromJson(
+_$KodiAudioLibraryGetSongsFilterArtistIdImpl
+    _$$KodiAudioLibraryGetSongsFilterArtistIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterArtistId(
-          artistId: json['artistid'] as int,
+        _$KodiAudioLibraryGetSongsFilterArtistIdImpl(
+          artistId: (json['artistid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterArtistIdToJson(
-        _$_KodiAudioLibraryGetSongsFilterArtistId instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterArtistIdImplToJson(
+        _$KodiAudioLibraryGetSongsFilterArtistIdImpl instance) =>
     <String, dynamic>{
       'artistid': instance.artistId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterArtistIdRoleId
-    _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdFromJson(
+_$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl
+    _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId(
-          artistId: json['artistid'] as int,
-          roleId: json['roleid'] as int,
+        _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl(
+          artistId: (json['artistid'] as num).toInt(),
+          roleId: (json['roleid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleIdToJson(
-        _$_KodiAudioLibraryGetSongsFilterArtistIdRoleId instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImplToJson(
+        _$KodiAudioLibraryGetSongsFilterArtistIdRoleIdImpl instance) =>
     <String, dynamic>{
       'artistid': instance.artistId,
       'roleid': instance.roleId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterArtistIdRole
-    _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleFromJson(
+_$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl
+    _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterArtistIdRole(
-          artistId: json['artistid'] as int,
+        _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl(
+          artistId: (json['artistid'] as num).toInt(),
           role: json['role'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterArtistIdRoleToJson(
-        _$_KodiAudioLibraryGetSongsFilterArtistIdRole instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterArtistIdRoleImplToJson(
+        _$KodiAudioLibraryGetSongsFilterArtistIdRoleImpl instance) =>
     <String, dynamic>{
       'artistid': instance.artistId,
       'role': instance.role,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterArtist
-    _$$_KodiAudioLibraryGetSongsFilterArtistFromJson(
+_$KodiAudioLibraryGetSongsFilterArtistImpl
+    _$$KodiAudioLibraryGetSongsFilterArtistImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterArtist(
+        _$KodiAudioLibraryGetSongsFilterArtistImpl(
           artist: json['artist'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterArtistToJson(
-        _$_KodiAudioLibraryGetSongsFilterArtist instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterArtistImplToJson(
+        _$KodiAudioLibraryGetSongsFilterArtistImpl instance) =>
     <String, dynamic>{
       'artist': instance.artist,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterArtistRoleId
-    _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdFromJson(
+_$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl
+    _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterArtistRoleId(
+        _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl(
           artist: json['artist'] as String,
-          roleId: json['roleid'] as int,
+          roleId: (json['roleid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterArtistRoleIdToJson(
-        _$_KodiAudioLibraryGetSongsFilterArtistRoleId instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterArtistRoleIdImplToJson(
+        _$KodiAudioLibraryGetSongsFilterArtistRoleIdImpl instance) =>
     <String, dynamic>{
       'artist': instance.artist,
       'roleid': instance.roleId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterArtistRole
-    _$$_KodiAudioLibraryGetSongsFilterArtistRoleFromJson(
+_$KodiAudioLibraryGetSongsFilterArtistRoleImpl
+    _$$KodiAudioLibraryGetSongsFilterArtistRoleImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterArtistRole(
+        _$KodiAudioLibraryGetSongsFilterArtistRoleImpl(
           artist: json['artist'] as String,
           role: json['role'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterArtistRoleToJson(
-        _$_KodiAudioLibraryGetSongsFilterArtistRole instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterArtistRoleImplToJson(
+        _$KodiAudioLibraryGetSongsFilterArtistRoleImpl instance) =>
     <String, dynamic>{
       'artist': instance.artist,
       'role': instance.role,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterAlbumId
-    _$$_KodiAudioLibraryGetSongsFilterAlbumIdFromJson(
+_$KodiAudioLibraryGetSongsFilterAlbumIdImpl
+    _$$KodiAudioLibraryGetSongsFilterAlbumIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterAlbumId(
-          albumId: json['albumid'] as int,
+        _$KodiAudioLibraryGetSongsFilterAlbumIdImpl(
+          albumId: (json['albumid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterAlbumIdToJson(
-        _$_KodiAudioLibraryGetSongsFilterAlbumId instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterAlbumIdImplToJson(
+        _$KodiAudioLibraryGetSongsFilterAlbumIdImpl instance) =>
     <String, dynamic>{
       'albumid': instance.albumId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterAlbum
-    _$$_KodiAudioLibraryGetSongsFilterAlbumFromJson(
+_$KodiAudioLibraryGetSongsFilterAlbumImpl
+    _$$KodiAudioLibraryGetSongsFilterAlbumImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterAlbum(
+        _$KodiAudioLibraryGetSongsFilterAlbumImpl(
           album: json['album'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterAlbumToJson(
-        _$_KodiAudioLibraryGetSongsFilterAlbum instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterAlbumImplToJson(
+        _$KodiAudioLibraryGetSongsFilterAlbumImpl instance) =>
     <String, dynamic>{
       'album': instance.album,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetSongsFilterFilter
-    _$$_KodiAudioLibraryGetSongsFilterFilterFromJson(
+_$KodiAudioLibraryGetSongsFilterFilterImpl
+    _$$KodiAudioLibraryGetSongsFilterFilterImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetSongsFilterFilter(
+        _$KodiAudioLibraryGetSongsFilterFilterImpl(
           const KodiListFilterSongsConverter().fromJson(json['filter']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetSongsFilterFilterToJson(
-    _$_KodiAudioLibraryGetSongsFilterFilter instance) {
+Map<String, dynamic> _$$KodiAudioLibraryGetSongsFilterFilterImplToJson(
+    _$KodiAudioLibraryGetSongsFilterFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

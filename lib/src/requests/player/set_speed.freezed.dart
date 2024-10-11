@@ -12,7 +12,7 @@ part of 'set_speed.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetSpeed _$SetSpeedFromJson(Map<String, dynamic> json) {
   return _SetSpeed.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$SetSpeed {
   @SetSpeedSpeedConverter()
   SetSpeedSpeed get speed => throw _privateConstructorUsedError;
 
+  /// Serializes this SetSpeed to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetSpeedCopyWith<SetSpeed> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$SetSpeedCopyWithImpl<$Res, $Val extends SetSpeed>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$SetSpeedCopyWithImpl<$Res, $Val extends SetSpeed>
     ) as $Val);
   }
 
+  /// Create a copy of SetSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SetSpeedSpeedCopyWith<$Res> get speed {
@@ -81,10 +89,11 @@ class _$SetSpeedCopyWithImpl<$Res, $Val extends SetSpeed>
 }
 
 /// @nodoc
-abstract class _$$_SetSpeedCopyWith<$Res> implements $SetSpeedCopyWith<$Res> {
-  factory _$$_SetSpeedCopyWith(
-          _$_SetSpeed value, $Res Function(_$_SetSpeed) then) =
-      __$$_SetSpeedCopyWithImpl<$Res>;
+abstract class _$$SetSpeedImplCopyWith<$Res>
+    implements $SetSpeedCopyWith<$Res> {
+  factory _$$SetSpeedImplCopyWith(
+          _$SetSpeedImpl value, $Res Function(_$SetSpeedImpl) then) =
+      __$$SetSpeedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -96,20 +105,22 @@ abstract class _$$_SetSpeedCopyWith<$Res> implements $SetSpeedCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SetSpeedCopyWithImpl<$Res>
-    extends _$SetSpeedCopyWithImpl<$Res, _$_SetSpeed>
-    implements _$$_SetSpeedCopyWith<$Res> {
-  __$$_SetSpeedCopyWithImpl(
-      _$_SetSpeed _value, $Res Function(_$_SetSpeed) _then)
+class __$$SetSpeedImplCopyWithImpl<$Res>
+    extends _$SetSpeedCopyWithImpl<$Res, _$SetSpeedImpl>
+    implements _$$SetSpeedImplCopyWith<$Res> {
+  __$$SetSpeedImplCopyWithImpl(
+      _$SetSpeedImpl _value, $Res Function(_$SetSpeedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? speed = null,
   }) {
-    return _then(_$_SetSpeed(
+    return _then(_$SetSpeedImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -124,13 +135,13 @@ class __$$_SetSpeedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetSpeed extends _SetSpeed {
-  const _$_SetSpeed(
+class _$SetSpeedImpl extends _SetSpeed {
+  const _$SetSpeedImpl(
       @JsonKey(name: 'playerid') this.id, @SetSpeedSpeedConverter() this.speed)
       : super._();
 
-  factory _$_SetSpeed.fromJson(Map<String, dynamic> json) =>
-      _$$_SetSpeedFromJson(json);
+  factory _$SetSpeedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSpeedImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -145,27 +156,29 @@ class _$_SetSpeed extends _SetSpeed {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSpeed &&
+            other is _$SetSpeedImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.speed, speed) || other.speed == speed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, speed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetSpeedCopyWith<_$_SetSpeed> get copyWith =>
-      __$$_SetSpeedCopyWithImpl<_$_SetSpeed>(this, _$identity);
+  _$$SetSpeedImplCopyWith<_$SetSpeedImpl> get copyWith =>
+      __$$SetSpeedImplCopyWithImpl<_$SetSpeedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetSpeedToJson(
+    return _$$SetSpeedImplToJson(
       this,
     );
   }
@@ -173,10 +186,11 @@ class _$_SetSpeed extends _SetSpeed {
 
 abstract class _SetSpeed extends SetSpeed {
   const factory _SetSpeed(@JsonKey(name: 'playerid') final int id,
-      @SetSpeedSpeedConverter() final SetSpeedSpeed speed) = _$_SetSpeed;
+      @SetSpeedSpeedConverter() final SetSpeedSpeed speed) = _$SetSpeedImpl;
   const _SetSpeed._() : super._();
 
-  factory _SetSpeed.fromJson(Map<String, dynamic> json) = _$_SetSpeed.fromJson;
+  factory _SetSpeed.fromJson(Map<String, dynamic> json) =
+      _$SetSpeedImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -184,9 +198,12 @@ abstract class _SetSpeed extends SetSpeed {
   @override
   @SetSpeedSpeedConverter()
   SetSpeedSpeed get speed;
+
+  /// Create a copy of SetSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetSpeedCopyWith<_$_SetSpeed> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetSpeedImplCopyWith<_$SetSpeedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -198,8 +215,12 @@ KodiPlayerSpeed _$KodiPlayerSpeedFromJson(Map<String, dynamic> json) {
 mixin _$KodiPlayerSpeed {
   int get speed => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerSpeed to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerSpeedCopyWith<KodiPlayerSpeed> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -223,6 +244,8 @@ class _$KodiPlayerSpeedCopyWithImpl<$Res, $Val extends KodiPlayerSpeed>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -238,30 +261,32 @@ class _$KodiPlayerSpeedCopyWithImpl<$Res, $Val extends KodiPlayerSpeed>
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerSpeedCopyWith<$Res>
+abstract class _$$KodiPlayerSpeedImplCopyWith<$Res>
     implements $KodiPlayerSpeedCopyWith<$Res> {
-  factory _$$_KodiPlayerSpeedCopyWith(
-          _$_KodiPlayerSpeed value, $Res Function(_$_KodiPlayerSpeed) then) =
-      __$$_KodiPlayerSpeedCopyWithImpl<$Res>;
+  factory _$$KodiPlayerSpeedImplCopyWith(_$KodiPlayerSpeedImpl value,
+          $Res Function(_$KodiPlayerSpeedImpl) then) =
+      __$$KodiPlayerSpeedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int speed});
 }
 
 /// @nodoc
-class __$$_KodiPlayerSpeedCopyWithImpl<$Res>
-    extends _$KodiPlayerSpeedCopyWithImpl<$Res, _$_KodiPlayerSpeed>
-    implements _$$_KodiPlayerSpeedCopyWith<$Res> {
-  __$$_KodiPlayerSpeedCopyWithImpl(
-      _$_KodiPlayerSpeed _value, $Res Function(_$_KodiPlayerSpeed) _then)
+class __$$KodiPlayerSpeedImplCopyWithImpl<$Res>
+    extends _$KodiPlayerSpeedCopyWithImpl<$Res, _$KodiPlayerSpeedImpl>
+    implements _$$KodiPlayerSpeedImplCopyWith<$Res> {
+  __$$KodiPlayerSpeedImplCopyWithImpl(
+      _$KodiPlayerSpeedImpl _value, $Res Function(_$KodiPlayerSpeedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? speed = null,
   }) {
-    return _then(_$_KodiPlayerSpeed(
+    return _then(_$KodiPlayerSpeedImpl(
       speed: null == speed
           ? _value.speed
           : speed // ignore: cast_nullable_to_non_nullable
@@ -272,11 +297,11 @@ class __$$_KodiPlayerSpeedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerSpeed implements _KodiPlayerSpeed {
-  const _$_KodiPlayerSpeed({required this.speed});
+class _$KodiPlayerSpeedImpl implements _KodiPlayerSpeed {
+  const _$KodiPlayerSpeedImpl({required this.speed});
 
-  factory _$_KodiPlayerSpeed.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerSpeedFromJson(json);
+  factory _$KodiPlayerSpeedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerSpeedImplFromJson(json);
 
   @override
   final int speed;
@@ -287,26 +312,29 @@ class _$_KodiPlayerSpeed implements _KodiPlayerSpeed {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerSpeed &&
+            other is _$KodiPlayerSpeedImpl &&
             (identical(other.speed, speed) || other.speed == speed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, speed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerSpeedCopyWith<_$_KodiPlayerSpeed> get copyWith =>
-      __$$_KodiPlayerSpeedCopyWithImpl<_$_KodiPlayerSpeed>(this, _$identity);
+  _$$KodiPlayerSpeedImplCopyWith<_$KodiPlayerSpeedImpl> get copyWith =>
+      __$$KodiPlayerSpeedImplCopyWithImpl<_$KodiPlayerSpeedImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerSpeedToJson(
+    return _$$KodiPlayerSpeedImplToJson(
       this,
     );
   }
@@ -314,23 +342,26 @@ class _$_KodiPlayerSpeed implements _KodiPlayerSpeed {
 
 abstract class _KodiPlayerSpeed implements KodiPlayerSpeed {
   const factory _KodiPlayerSpeed({required final int speed}) =
-      _$_KodiPlayerSpeed;
+      _$KodiPlayerSpeedImpl;
 
   factory _KodiPlayerSpeed.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerSpeed.fromJson;
+      _$KodiPlayerSpeedImpl.fromJson;
 
   @override
   int get speed;
+
+  /// Create a copy of KodiPlayerSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerSpeedCopyWith<_$_KodiPlayerSpeed> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerSpeedImplCopyWith<_$KodiPlayerSpeedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 SetSpeedSpeed _$SetSpeedSpeedFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
-    case 'abs':
-      return _SetSpeedSpeedAbs.fromJson(json);
+    case 'step':
+      return _SetSpeedSpeedStep.fromJson(json);
     case 'enumerator':
       return _SetSpeedSpeedEnum.fromJson(json);
 
@@ -345,42 +376,44 @@ mixin _$SetSpeedSpeed {
   Enum get value => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(KodiPlayerSpeedStep value) abs,
+    required TResult Function(KodiPlayerSpeedStep value) step,
     required TResult Function(KodiGlobalIncrementDecrement value) enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(KodiPlayerSpeedStep value)? abs,
+    TResult? Function(KodiPlayerSpeedStep value)? step,
     TResult? Function(KodiGlobalIncrementDecrement value)? enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(KodiPlayerSpeedStep value)? abs,
+    TResult Function(KodiPlayerSpeedStep value)? step,
     TResult Function(KodiGlobalIncrementDecrement value)? enumerator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SetSpeedSpeedAbs value) abs,
+    required TResult Function(_SetSpeedSpeedStep value) step,
     required TResult Function(_SetSpeedSpeedEnum value) enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SetSpeedSpeedAbs value)? abs,
+    TResult? Function(_SetSpeedSpeedStep value)? step,
     TResult? Function(_SetSpeedSpeedEnum value)? enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SetSpeedSpeedAbs value)? abs,
+    TResult Function(_SetSpeedSpeedStep value)? step,
     TResult Function(_SetSpeedSpeedEnum value)? enumerator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SetSpeedSpeed to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -400,31 +433,36 @@ class _$SetSpeedSpeedCopyWithImpl<$Res, $Val extends SetSpeedSpeed>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SetSpeedSpeed
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SetSpeedSpeedAbsCopyWith<$Res> {
-  factory _$$_SetSpeedSpeedAbsCopyWith(
-          _$_SetSpeedSpeedAbs value, $Res Function(_$_SetSpeedSpeedAbs) then) =
-      __$$_SetSpeedSpeedAbsCopyWithImpl<$Res>;
+abstract class _$$SetSpeedSpeedStepImplCopyWith<$Res> {
+  factory _$$SetSpeedSpeedStepImplCopyWith(_$SetSpeedSpeedStepImpl value,
+          $Res Function(_$SetSpeedSpeedStepImpl) then) =
+      __$$SetSpeedSpeedStepImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPlayerSpeedStep value});
 }
 
 /// @nodoc
-class __$$_SetSpeedSpeedAbsCopyWithImpl<$Res>
-    extends _$SetSpeedSpeedCopyWithImpl<$Res, _$_SetSpeedSpeedAbs>
-    implements _$$_SetSpeedSpeedAbsCopyWith<$Res> {
-  __$$_SetSpeedSpeedAbsCopyWithImpl(
-      _$_SetSpeedSpeedAbs _value, $Res Function(_$_SetSpeedSpeedAbs) _then)
+class __$$SetSpeedSpeedStepImplCopyWithImpl<$Res>
+    extends _$SetSpeedSpeedCopyWithImpl<$Res, _$SetSpeedSpeedStepImpl>
+    implements _$$SetSpeedSpeedStepImplCopyWith<$Res> {
+  __$$SetSpeedSpeedStepImplCopyWithImpl(_$SetSpeedSpeedStepImpl _value,
+      $Res Function(_$SetSpeedSpeedStepImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSpeedSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetSpeedSpeedAbs(
+    return _then(_$SetSpeedSpeedStepImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -435,12 +473,12 @@ class __$$_SetSpeedSpeedAbsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetSpeedSpeedAbs implements _SetSpeedSpeedAbs {
-  const _$_SetSpeedSpeedAbs(this.value, {final String? $type})
-      : $type = $type ?? 'abs';
+class _$SetSpeedSpeedStepImpl implements _SetSpeedSpeedStep {
+  const _$SetSpeedSpeedStepImpl(this.value, {final String? $type})
+      : $type = $type ?? 'step';
 
-  factory _$_SetSpeedSpeedAbs.fromJson(Map<String, dynamic> json) =>
-      _$$_SetSpeedSpeedAbsFromJson(json);
+  factory _$SetSpeedSpeedStepImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSpeedSpeedStepImplFromJson(json);
 
   @override
   final KodiPlayerSpeedStep value;
@@ -450,54 +488,57 @@ class _$_SetSpeedSpeedAbs implements _SetSpeedSpeedAbs {
 
   @override
   String toString() {
-    return 'SetSpeedSpeed.abs(value: $value)';
+    return 'SetSpeedSpeed.step(value: $value)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSpeedSpeedAbs &&
+            other is _$SetSpeedSpeedStepImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSpeedSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetSpeedSpeedAbsCopyWith<_$_SetSpeedSpeedAbs> get copyWith =>
-      __$$_SetSpeedSpeedAbsCopyWithImpl<_$_SetSpeedSpeedAbs>(this, _$identity);
+  _$$SetSpeedSpeedStepImplCopyWith<_$SetSpeedSpeedStepImpl> get copyWith =>
+      __$$SetSpeedSpeedStepImplCopyWithImpl<_$SetSpeedSpeedStepImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(KodiPlayerSpeedStep value) abs,
+    required TResult Function(KodiPlayerSpeedStep value) step,
     required TResult Function(KodiGlobalIncrementDecrement value) enumerator,
   }) {
-    return abs(value);
+    return step(value);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(KodiPlayerSpeedStep value)? abs,
+    TResult? Function(KodiPlayerSpeedStep value)? step,
     TResult? Function(KodiGlobalIncrementDecrement value)? enumerator,
   }) {
-    return abs?.call(value);
+    return step?.call(value);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(KodiPlayerSpeedStep value)? abs,
+    TResult Function(KodiPlayerSpeedStep value)? step,
     TResult Function(KodiGlobalIncrementDecrement value)? enumerator,
     required TResult orElse(),
   }) {
-    if (abs != null) {
-      return abs(value);
+    if (step != null) {
+      return step(value);
     }
     return orElse();
   }
@@ -505,79 +546,84 @@ class _$_SetSpeedSpeedAbs implements _SetSpeedSpeedAbs {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SetSpeedSpeedAbs value) abs,
+    required TResult Function(_SetSpeedSpeedStep value) step,
     required TResult Function(_SetSpeedSpeedEnum value) enumerator,
   }) {
-    return abs(this);
+    return step(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SetSpeedSpeedAbs value)? abs,
+    TResult? Function(_SetSpeedSpeedStep value)? step,
     TResult? Function(_SetSpeedSpeedEnum value)? enumerator,
   }) {
-    return abs?.call(this);
+    return step?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SetSpeedSpeedAbs value)? abs,
+    TResult Function(_SetSpeedSpeedStep value)? step,
     TResult Function(_SetSpeedSpeedEnum value)? enumerator,
     required TResult orElse(),
   }) {
-    if (abs != null) {
-      return abs(this);
+    if (step != null) {
+      return step(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetSpeedSpeedAbsToJson(
+    return _$$SetSpeedSpeedStepImplToJson(
       this,
     );
   }
 }
 
-abstract class _SetSpeedSpeedAbs implements SetSpeedSpeed {
-  const factory _SetSpeedSpeedAbs(final KodiPlayerSpeedStep value) =
-      _$_SetSpeedSpeedAbs;
+abstract class _SetSpeedSpeedStep implements SetSpeedSpeed {
+  const factory _SetSpeedSpeedStep(final KodiPlayerSpeedStep value) =
+      _$SetSpeedSpeedStepImpl;
 
-  factory _SetSpeedSpeedAbs.fromJson(Map<String, dynamic> json) =
-      _$_SetSpeedSpeedAbs.fromJson;
+  factory _SetSpeedSpeedStep.fromJson(Map<String, dynamic> json) =
+      _$SetSpeedSpeedStepImpl.fromJson;
 
   @override
   KodiPlayerSpeedStep get value;
-  @JsonKey(ignore: true)
-  _$$_SetSpeedSpeedAbsCopyWith<_$_SetSpeedSpeedAbs> get copyWith =>
+
+  /// Create a copy of SetSpeedSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetSpeedSpeedStepImplCopyWith<_$SetSpeedSpeedStepImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SetSpeedSpeedEnumCopyWith<$Res> {
-  factory _$$_SetSpeedSpeedEnumCopyWith(_$_SetSpeedSpeedEnum value,
-          $Res Function(_$_SetSpeedSpeedEnum) then) =
-      __$$_SetSpeedSpeedEnumCopyWithImpl<$Res>;
+abstract class _$$SetSpeedSpeedEnumImplCopyWith<$Res> {
+  factory _$$SetSpeedSpeedEnumImplCopyWith(_$SetSpeedSpeedEnumImpl value,
+          $Res Function(_$SetSpeedSpeedEnumImpl) then) =
+      __$$SetSpeedSpeedEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiGlobalIncrementDecrement value});
 }
 
 /// @nodoc
-class __$$_SetSpeedSpeedEnumCopyWithImpl<$Res>
-    extends _$SetSpeedSpeedCopyWithImpl<$Res, _$_SetSpeedSpeedEnum>
-    implements _$$_SetSpeedSpeedEnumCopyWith<$Res> {
-  __$$_SetSpeedSpeedEnumCopyWithImpl(
-      _$_SetSpeedSpeedEnum _value, $Res Function(_$_SetSpeedSpeedEnum) _then)
+class __$$SetSpeedSpeedEnumImplCopyWithImpl<$Res>
+    extends _$SetSpeedSpeedCopyWithImpl<$Res, _$SetSpeedSpeedEnumImpl>
+    implements _$$SetSpeedSpeedEnumImplCopyWith<$Res> {
+  __$$SetSpeedSpeedEnumImplCopyWithImpl(_$SetSpeedSpeedEnumImpl _value,
+      $Res Function(_$SetSpeedSpeedEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSpeedSpeed
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetSpeedSpeedEnum(
+    return _then(_$SetSpeedSpeedEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -588,12 +634,12 @@ class __$$_SetSpeedSpeedEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
-  const _$_SetSpeedSpeedEnum(this.value, {final String? $type})
+class _$SetSpeedSpeedEnumImpl implements _SetSpeedSpeedEnum {
+  const _$SetSpeedSpeedEnumImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_SetSpeedSpeedEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_SetSpeedSpeedEnumFromJson(json);
+  factory _$SetSpeedSpeedEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetSpeedSpeedEnumImplFromJson(json);
 
   @override
   final KodiGlobalIncrementDecrement value;
@@ -607,28 +653,30 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetSpeedSpeedEnum &&
+            other is _$SetSpeedSpeedEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSpeedSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetSpeedSpeedEnumCopyWith<_$_SetSpeedSpeedEnum> get copyWith =>
-      __$$_SetSpeedSpeedEnumCopyWithImpl<_$_SetSpeedSpeedEnum>(
+  _$$SetSpeedSpeedEnumImplCopyWith<_$SetSpeedSpeedEnumImpl> get copyWith =>
+      __$$SetSpeedSpeedEnumImplCopyWithImpl<_$SetSpeedSpeedEnumImpl>(
           this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(KodiPlayerSpeedStep value) abs,
+    required TResult Function(KodiPlayerSpeedStep value) step,
     required TResult Function(KodiGlobalIncrementDecrement value) enumerator,
   }) {
     return enumerator(value);
@@ -637,7 +685,7 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(KodiPlayerSpeedStep value)? abs,
+    TResult? Function(KodiPlayerSpeedStep value)? step,
     TResult? Function(KodiGlobalIncrementDecrement value)? enumerator,
   }) {
     return enumerator?.call(value);
@@ -646,7 +694,7 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(KodiPlayerSpeedStep value)? abs,
+    TResult Function(KodiPlayerSpeedStep value)? step,
     TResult Function(KodiGlobalIncrementDecrement value)? enumerator,
     required TResult orElse(),
   }) {
@@ -659,7 +707,7 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SetSpeedSpeedAbs value) abs,
+    required TResult Function(_SetSpeedSpeedStep value) step,
     required TResult Function(_SetSpeedSpeedEnum value) enumerator,
   }) {
     return enumerator(this);
@@ -668,7 +716,7 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SetSpeedSpeedAbs value)? abs,
+    TResult? Function(_SetSpeedSpeedStep value)? step,
     TResult? Function(_SetSpeedSpeedEnum value)? enumerator,
   }) {
     return enumerator?.call(this);
@@ -677,7 +725,7 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SetSpeedSpeedAbs value)? abs,
+    TResult Function(_SetSpeedSpeedStep value)? step,
     TResult Function(_SetSpeedSpeedEnum value)? enumerator,
     required TResult orElse(),
   }) {
@@ -689,7 +737,7 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetSpeedSpeedEnumToJson(
+    return _$$SetSpeedSpeedEnumImplToJson(
       this,
     );
   }
@@ -697,14 +745,17 @@ class _$_SetSpeedSpeedEnum implements _SetSpeedSpeedEnum {
 
 abstract class _SetSpeedSpeedEnum implements SetSpeedSpeed {
   const factory _SetSpeedSpeedEnum(final KodiGlobalIncrementDecrement value) =
-      _$_SetSpeedSpeedEnum;
+      _$SetSpeedSpeedEnumImpl;
 
   factory _SetSpeedSpeedEnum.fromJson(Map<String, dynamic> json) =
-      _$_SetSpeedSpeedEnum.fromJson;
+      _$SetSpeedSpeedEnumImpl.fromJson;
 
   @override
   KodiGlobalIncrementDecrement get value;
-  @JsonKey(ignore: true)
-  _$$_SetSpeedSpeedEnumCopyWith<_$_SetSpeedSpeedEnum> get copyWith =>
+
+  /// Create a copy of SetSpeedSpeed
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetSpeedSpeedEnumImplCopyWith<_$SetSpeedSpeedEnumImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

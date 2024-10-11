@@ -6,13 +6,14 @@ part of 'notify_all.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_NotifyAll _$$_NotifyAllFromJson(Map<String, dynamic> json) => _$_NotifyAll(
+_$NotifyAllImpl _$$NotifyAllImplFromJson(Map<String, dynamic> json) =>
+    _$NotifyAllImpl(
       json['sender'] as String,
       json['message'] as String,
       data: json['data'] as Map<String, dynamic>?,
     );
 
-Map<String, dynamic> _$$_NotifyAllToJson(_$_NotifyAll instance) {
+Map<String, dynamic> _$$NotifyAllImplToJson(_$NotifyAllImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
     'message': instance.message,

@@ -82,6 +82,7 @@ enum KodiVideoLibrarySetTvShowDetailsStatus {
   returningSeries,
   @JsonValue('in production')
   inProduction,
+  planned,
   cancelled,
   ended,
 }

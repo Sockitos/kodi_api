@@ -8,7 +8,7 @@ part 'clean.g.dart';
 typedef CleanBuilder = Clean Function({
   bool showDialogs,
   KodiVideoLibraryContentType content,
-  String? directory,
+  String directory,
 });
 
 @freezed
@@ -17,7 +17,7 @@ class Clean with _$Clean implements KodiRequest<void> {
     @JsonKey(name: 'showdialogs') @Default(true) bool showDialogs,
     @Default(KodiVideoLibraryContentType.video)
     KodiVideoLibraryContentType content,
-    String? directory,
+    @Default('') String directory,
   }) = _Clean;
 
   const Clean._();

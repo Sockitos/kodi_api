@@ -12,7 +12,7 @@ part of 'set_video_stream.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetVideoStream _$SetVideoStreamFromJson(Map<String, dynamic> json) {
   return _SetVideoStream.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$SetVideoStream {
   @SetVideoStreamStreamConverter()
   SetVideoStreamStream get stream => throw _privateConstructorUsedError;
 
+  /// Serializes this SetVideoStream to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetVideoStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetVideoStreamCopyWith<SetVideoStream> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$SetVideoStreamCopyWithImpl<$Res, $Val extends SetVideoStream>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetVideoStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$SetVideoStreamCopyWithImpl<$Res, $Val extends SetVideoStream>
     ) as $Val);
   }
 
+  /// Create a copy of SetVideoStream
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SetVideoStreamStreamCopyWith<$Res> get stream {
@@ -82,11 +90,11 @@ class _$SetVideoStreamCopyWithImpl<$Res, $Val extends SetVideoStream>
 }
 
 /// @nodoc
-abstract class _$$_SetVideoStreamCopyWith<$Res>
+abstract class _$$SetVideoStreamImplCopyWith<$Res>
     implements $SetVideoStreamCopyWith<$Res> {
-  factory _$$_SetVideoStreamCopyWith(
-          _$_SetVideoStream value, $Res Function(_$_SetVideoStream) then) =
-      __$$_SetVideoStreamCopyWithImpl<$Res>;
+  factory _$$SetVideoStreamImplCopyWith(_$SetVideoStreamImpl value,
+          $Res Function(_$SetVideoStreamImpl) then) =
+      __$$SetVideoStreamImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -98,20 +106,22 @@ abstract class _$$_SetVideoStreamCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetVideoStreamCopyWithImpl<$Res>
-    extends _$SetVideoStreamCopyWithImpl<$Res, _$_SetVideoStream>
-    implements _$$_SetVideoStreamCopyWith<$Res> {
-  __$$_SetVideoStreamCopyWithImpl(
-      _$_SetVideoStream _value, $Res Function(_$_SetVideoStream) _then)
+class __$$SetVideoStreamImplCopyWithImpl<$Res>
+    extends _$SetVideoStreamCopyWithImpl<$Res, _$SetVideoStreamImpl>
+    implements _$$SetVideoStreamImplCopyWith<$Res> {
+  __$$SetVideoStreamImplCopyWithImpl(
+      _$SetVideoStreamImpl _value, $Res Function(_$SetVideoStreamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetVideoStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? stream = null,
   }) {
-    return _then(_$_SetVideoStream(
+    return _then(_$SetVideoStreamImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,13 +136,13 @@ class __$$_SetVideoStreamCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetVideoStream extends _SetVideoStream {
-  const _$_SetVideoStream(@JsonKey(name: 'playerid') this.id,
+class _$SetVideoStreamImpl extends _SetVideoStream {
+  const _$SetVideoStreamImpl(@JsonKey(name: 'playerid') this.id,
       @SetVideoStreamStreamConverter() this.stream)
       : super._();
 
-  factory _$_SetVideoStream.fromJson(Map<String, dynamic> json) =>
-      _$$_SetVideoStreamFromJson(json);
+  factory _$SetVideoStreamImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetVideoStreamImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -147,27 +157,30 @@ class _$_SetVideoStream extends _SetVideoStream {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetVideoStream &&
+            other is _$SetVideoStreamImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.stream, stream) || other.stream == stream));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, stream);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetVideoStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetVideoStreamCopyWith<_$_SetVideoStream> get copyWith =>
-      __$$_SetVideoStreamCopyWithImpl<_$_SetVideoStream>(this, _$identity);
+  _$$SetVideoStreamImplCopyWith<_$SetVideoStreamImpl> get copyWith =>
+      __$$SetVideoStreamImplCopyWithImpl<_$SetVideoStreamImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetVideoStreamToJson(
+    return _$$SetVideoStreamImplToJson(
       this,
     );
   }
@@ -176,11 +189,11 @@ class _$_SetVideoStream extends _SetVideoStream {
 abstract class _SetVideoStream extends SetVideoStream {
   const factory _SetVideoStream(@JsonKey(name: 'playerid') final int id,
           @SetVideoStreamStreamConverter() final SetVideoStreamStream stream) =
-      _$_SetVideoStream;
+      _$SetVideoStreamImpl;
   const _SetVideoStream._() : super._();
 
   factory _SetVideoStream.fromJson(Map<String, dynamic> json) =
-      _$_SetVideoStream.fromJson;
+      _$SetVideoStreamImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -188,9 +201,12 @@ abstract class _SetVideoStream extends SetVideoStream {
   @override
   @SetVideoStreamStreamConverter()
   SetVideoStreamStream get stream;
+
+  /// Create a copy of SetVideoStream
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetVideoStreamCopyWith<_$_SetVideoStream> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetVideoStreamImplCopyWith<_$SetVideoStreamImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -251,6 +267,8 @@ mixin _$SetVideoStreamStream {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SetVideoStreamStream to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -271,33 +289,39 @@ class _$SetVideoStreamStreamCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SetVideoStreamStream
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_SetVideoStreamStreamEnumCopyWith<$Res> {
-  factory _$$_SetVideoStreamStreamEnumCopyWith(
-          _$_SetVideoStreamStreamEnum value,
-          $Res Function(_$_SetVideoStreamStreamEnum) then) =
-      __$$_SetVideoStreamStreamEnumCopyWithImpl<$Res>;
+abstract class _$$SetVideoStreamStreamEnumImplCopyWith<$Res> {
+  factory _$$SetVideoStreamStreamEnumImplCopyWith(
+          _$SetVideoStreamStreamEnumImpl value,
+          $Res Function(_$SetVideoStreamStreamEnumImpl) then) =
+      __$$SetVideoStreamStreamEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({SetVideoStreamStreamEnum value});
 }
 
 /// @nodoc
-class __$$_SetVideoStreamStreamEnumCopyWithImpl<$Res>
+class __$$SetVideoStreamStreamEnumImplCopyWithImpl<$Res>
     extends _$SetVideoStreamStreamCopyWithImpl<$Res,
-        _$_SetVideoStreamStreamEnum>
-    implements _$$_SetVideoStreamStreamEnumCopyWith<$Res> {
-  __$$_SetVideoStreamStreamEnumCopyWithImpl(_$_SetVideoStreamStreamEnum _value,
-      $Res Function(_$_SetVideoStreamStreamEnum) _then)
+        _$SetVideoStreamStreamEnumImpl>
+    implements _$$SetVideoStreamStreamEnumImplCopyWith<$Res> {
+  __$$SetVideoStreamStreamEnumImplCopyWithImpl(
+      _$SetVideoStreamStreamEnumImpl _value,
+      $Res Function(_$SetVideoStreamStreamEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetVideoStreamStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetVideoStreamStreamEnum(
+    return _then(_$SetVideoStreamStreamEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -308,12 +332,12 @@ class __$$_SetVideoStreamStreamEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetVideoStreamStreamEnum implements _SetVideoStreamStreamEnum {
-  const _$_SetVideoStreamStreamEnum(this.value, {final String? $type})
+class _$SetVideoStreamStreamEnumImpl implements _SetVideoStreamStreamEnum {
+  const _$SetVideoStreamStreamEnumImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_SetVideoStreamStreamEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_SetVideoStreamStreamEnumFromJson(json);
+  factory _$SetVideoStreamStreamEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetVideoStreamStreamEnumImplFromJson(json);
 
   @override
   final SetVideoStreamStreamEnum value;
@@ -327,23 +351,25 @@ class _$_SetVideoStreamStreamEnum implements _SetVideoStreamStreamEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetVideoStreamStreamEnum &&
+            other is _$SetVideoStreamStreamEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetVideoStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetVideoStreamStreamEnumCopyWith<_$_SetVideoStreamStreamEnum>
-      get copyWith => __$$_SetVideoStreamStreamEnumCopyWithImpl<
-          _$_SetVideoStreamStreamEnum>(this, _$identity);
+  _$$SetVideoStreamStreamEnumImplCopyWith<_$SetVideoStreamStreamEnumImpl>
+      get copyWith => __$$SetVideoStreamStreamEnumImplCopyWithImpl<
+          _$SetVideoStreamStreamEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -409,7 +435,7 @@ class _$_SetVideoStreamStreamEnum implements _SetVideoStreamStreamEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetVideoStreamStreamEnumToJson(
+    return _$$SetVideoStreamStreamEnumImplToJson(
       this,
     );
   }
@@ -417,44 +443,49 @@ class _$_SetVideoStreamStreamEnum implements _SetVideoStreamStreamEnum {
 
 abstract class _SetVideoStreamStreamEnum implements SetVideoStreamStream {
   const factory _SetVideoStreamStreamEnum(
-      final SetVideoStreamStreamEnum value) = _$_SetVideoStreamStreamEnum;
+      final SetVideoStreamStreamEnum value) = _$SetVideoStreamStreamEnumImpl;
 
   factory _SetVideoStreamStreamEnum.fromJson(Map<String, dynamic> json) =
-      _$_SetVideoStreamStreamEnum.fromJson;
+      _$SetVideoStreamStreamEnumImpl.fromJson;
 
   @override
   SetVideoStreamStreamEnum get value;
-  @JsonKey(ignore: true)
-  _$$_SetVideoStreamStreamEnumCopyWith<_$_SetVideoStreamStreamEnum>
+
+  /// Create a copy of SetVideoStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetVideoStreamStreamEnumImplCopyWith<_$SetVideoStreamStreamEnumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SetVideoStreamStreamIndexCopyWith<$Res> {
-  factory _$$_SetVideoStreamStreamIndexCopyWith(
-          _$_SetVideoStreamStreamIndex value,
-          $Res Function(_$_SetVideoStreamStreamIndex) then) =
-      __$$_SetVideoStreamStreamIndexCopyWithImpl<$Res>;
+abstract class _$$SetVideoStreamStreamIndexImplCopyWith<$Res> {
+  factory _$$SetVideoStreamStreamIndexImplCopyWith(
+          _$SetVideoStreamStreamIndexImpl value,
+          $Res Function(_$SetVideoStreamStreamIndexImpl) then) =
+      __$$SetVideoStreamStreamIndexImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int value});
 }
 
 /// @nodoc
-class __$$_SetVideoStreamStreamIndexCopyWithImpl<$Res>
+class __$$SetVideoStreamStreamIndexImplCopyWithImpl<$Res>
     extends _$SetVideoStreamStreamCopyWithImpl<$Res,
-        _$_SetVideoStreamStreamIndex>
-    implements _$$_SetVideoStreamStreamIndexCopyWith<$Res> {
-  __$$_SetVideoStreamStreamIndexCopyWithImpl(
-      _$_SetVideoStreamStreamIndex _value,
-      $Res Function(_$_SetVideoStreamStreamIndex) _then)
+        _$SetVideoStreamStreamIndexImpl>
+    implements _$$SetVideoStreamStreamIndexImplCopyWith<$Res> {
+  __$$SetVideoStreamStreamIndexImplCopyWithImpl(
+      _$SetVideoStreamStreamIndexImpl _value,
+      $Res Function(_$SetVideoStreamStreamIndexImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetVideoStreamStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_SetVideoStreamStreamIndex(
+    return _then(_$SetVideoStreamStreamIndexImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -465,12 +496,12 @@ class __$$_SetVideoStreamStreamIndexCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetVideoStreamStreamIndex implements _SetVideoStreamStreamIndex {
-  const _$_SetVideoStreamStreamIndex(this.value, {final String? $type})
+class _$SetVideoStreamStreamIndexImpl implements _SetVideoStreamStreamIndex {
+  const _$SetVideoStreamStreamIndexImpl(this.value, {final String? $type})
       : $type = $type ?? 'index';
 
-  factory _$_SetVideoStreamStreamIndex.fromJson(Map<String, dynamic> json) =>
-      _$$_SetVideoStreamStreamIndexFromJson(json);
+  factory _$SetVideoStreamStreamIndexImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetVideoStreamStreamIndexImplFromJson(json);
 
   @override
   final int value;
@@ -484,23 +515,25 @@ class _$_SetVideoStreamStreamIndex implements _SetVideoStreamStreamIndex {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetVideoStreamStreamIndex &&
+            other is _$SetVideoStreamStreamIndexImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetVideoStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetVideoStreamStreamIndexCopyWith<_$_SetVideoStreamStreamIndex>
-      get copyWith => __$$_SetVideoStreamStreamIndexCopyWithImpl<
-          _$_SetVideoStreamStreamIndex>(this, _$identity);
+  _$$SetVideoStreamStreamIndexImplCopyWith<_$SetVideoStreamStreamIndexImpl>
+      get copyWith => __$$SetVideoStreamStreamIndexImplCopyWithImpl<
+          _$SetVideoStreamStreamIndexImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -566,7 +599,7 @@ class _$_SetVideoStreamStreamIndex implements _SetVideoStreamStreamIndex {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetVideoStreamStreamIndexToJson(
+    return _$$SetVideoStreamStreamIndexImplToJson(
       this,
     );
   }
@@ -574,14 +607,17 @@ class _$_SetVideoStreamStreamIndex implements _SetVideoStreamStreamIndex {
 
 abstract class _SetVideoStreamStreamIndex implements SetVideoStreamStream {
   const factory _SetVideoStreamStreamIndex(final int value) =
-      _$_SetVideoStreamStreamIndex;
+      _$SetVideoStreamStreamIndexImpl;
 
   factory _SetVideoStreamStreamIndex.fromJson(Map<String, dynamic> json) =
-      _$_SetVideoStreamStreamIndex.fromJson;
+      _$SetVideoStreamStreamIndexImpl.fromJson;
 
   @override
   int get value;
-  @JsonKey(ignore: true)
-  _$$_SetVideoStreamStreamIndexCopyWith<_$_SetVideoStreamStreamIndex>
+
+  /// Create a copy of SetVideoStreamStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetVideoStreamStreamIndexImplCopyWith<_$SetVideoStreamStreamIndexImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

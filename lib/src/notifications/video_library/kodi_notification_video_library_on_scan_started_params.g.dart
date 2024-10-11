@@ -6,10 +6,10 @@ part of 'kodi_notification_video_library_on_scan_started_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationVideoLibraryOnScanStartedParams
-    _$$_KodiNotificationVideoLibraryOnScanStartedParamsFromJson(
+_$KodiNotificationVideoLibraryOnScanStartedParamsImpl
+    _$$KodiNotificationVideoLibraryOnScanStartedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnScanStartedParams(
+        _$KodiNotificationVideoLibraryOnScanStartedParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,9 @@ _$_KodiNotificationVideoLibraryOnScanStartedParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnScanStartedParamsToJson(
-    _$_KodiNotificationVideoLibraryOnScanStartedParams instance) {
+Map<String, dynamic>
+    _$$KodiNotificationVideoLibraryOnScanStartedParamsImplToJson(
+        _$KodiNotificationVideoLibraryOnScanStartedParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,16 +34,16 @@ Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnScanStartedParamsToJson(
   return val;
 }
 
-_$_KodiNotificationVideoLibraryOnScanStartedParamsData
-    _$$_KodiNotificationVideoLibraryOnScanStartedParamsDataFromJson(
+_$KodiNotificationVideoLibraryOnScanStartedParamsDataImpl
+    _$$KodiNotificationVideoLibraryOnScanStartedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnScanStartedParamsData(
+        _$KodiNotificationVideoLibraryOnScanStartedParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic>
-    _$$_KodiNotificationVideoLibraryOnScanStartedParamsDataToJson(
-            _$_KodiNotificationVideoLibraryOnScanStartedParamsData instance) =>
-        <String, dynamic>{
-          'test': instance.test,
-        };
+Map<String,
+    dynamic> _$$KodiNotificationVideoLibraryOnScanStartedParamsDataImplToJson(
+        _$KodiNotificationVideoLibraryOnScanStartedParamsDataImpl instance) =>
+    <String, dynamic>{
+      'test': instance.test,
+    };

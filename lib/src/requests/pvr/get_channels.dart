@@ -23,7 +23,9 @@ class GetChannels
     with _$GetChannels
     implements KodiRequest<KodiPVRGetChannelsResponse> {
   const factory GetChannels(
-    @JsonKey(name: 'channelgroupid') KodiPVRChannelGroupId groupId, {
+    @KodiPVRChannelGroupIdConverter()
+    @JsonKey(name: 'channelgroupid')
+    KodiPVRChannelGroupId groupId, {
     Set<KodiPVRFieldsChannel>? properties,
     KodiListLimits? limits,
     KodiListSort? sort,

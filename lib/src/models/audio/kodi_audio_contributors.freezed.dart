@@ -12,7 +12,7 @@ part of 'kodi_audio_contributors.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiAudioContributors _$KodiAudioContributorsFromJson(
     Map<String, dynamic> json) {
@@ -28,8 +28,12 @@ mixin _$KodiAudioContributors {
   @JsonKey(name: 'roleid')
   int get roleId => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiAudioContributors to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiAudioContributors
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiAudioContributorsCopyWith<KodiAudioContributors> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$KodiAudioContributorsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiAudioContributors
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,11 +94,12 @@ class _$KodiAudioContributorsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiAudioContributorsCopyWith<$Res>
+abstract class _$$KodiAudioContributorsImplCopyWith<$Res>
     implements $KodiAudioContributorsCopyWith<$Res> {
-  factory _$$_KodiAudioContributorsCopyWith(_$_KodiAudioContributors value,
-          $Res Function(_$_KodiAudioContributors) then) =
-      __$$_KodiAudioContributorsCopyWithImpl<$Res>;
+  factory _$$KodiAudioContributorsImplCopyWith(
+          _$KodiAudioContributorsImpl value,
+          $Res Function(_$KodiAudioContributorsImpl) then) =
+      __$$KodiAudioContributorsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -103,13 +110,16 @@ abstract class _$$_KodiAudioContributorsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiAudioContributorsCopyWithImpl<$Res>
-    extends _$KodiAudioContributorsCopyWithImpl<$Res, _$_KodiAudioContributors>
-    implements _$$_KodiAudioContributorsCopyWith<$Res> {
-  __$$_KodiAudioContributorsCopyWithImpl(_$_KodiAudioContributors _value,
-      $Res Function(_$_KodiAudioContributors) _then)
+class __$$KodiAudioContributorsImplCopyWithImpl<$Res>
+    extends _$KodiAudioContributorsCopyWithImpl<$Res,
+        _$KodiAudioContributorsImpl>
+    implements _$$KodiAudioContributorsImplCopyWith<$Res> {
+  __$$KodiAudioContributorsImplCopyWithImpl(_$KodiAudioContributorsImpl _value,
+      $Res Function(_$KodiAudioContributorsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiAudioContributors
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,7 +128,7 @@ class __$$_KodiAudioContributorsCopyWithImpl<$Res>
     Object? role = null,
     Object? roleId = null,
   }) {
-    return _then(_$_KodiAudioContributors(
+    return _then(_$KodiAudioContributorsImpl(
       artistId: null == artistId
           ? _value.artistId
           : artistId // ignore: cast_nullable_to_non_nullable
@@ -141,15 +151,15 @@ class __$$_KodiAudioContributorsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiAudioContributors implements _KodiAudioContributors {
-  const _$_KodiAudioContributors(
+class _$KodiAudioContributorsImpl implements _KodiAudioContributors {
+  const _$KodiAudioContributorsImpl(
       {@JsonKey(name: 'artistid') required this.artistId,
       required this.name,
       required this.role,
       @JsonKey(name: 'roleid') required this.roleId});
 
-  factory _$_KodiAudioContributors.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiAudioContributorsFromJson(json);
+  factory _$KodiAudioContributorsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiAudioContributorsImplFromJson(json);
 
   @override
   @JsonKey(name: 'artistid')
@@ -168,10 +178,10 @@ class _$_KodiAudioContributors implements _KodiAudioContributors {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiAudioContributors &&
+            other is _$KodiAudioContributorsImpl &&
             (identical(other.artistId, artistId) ||
                 other.artistId == artistId) &&
             (identical(other.name, name) || other.name == name) &&
@@ -179,20 +189,22 @@ class _$_KodiAudioContributors implements _KodiAudioContributors {
             (identical(other.roleId, roleId) || other.roleId == roleId));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artistId, name, role, roleId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiAudioContributors
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiAudioContributorsCopyWith<_$_KodiAudioContributors> get copyWith =>
-      __$$_KodiAudioContributorsCopyWithImpl<_$_KodiAudioContributors>(
-          this, _$identity);
+  _$$KodiAudioContributorsImplCopyWith<_$KodiAudioContributorsImpl>
+      get copyWith => __$$KodiAudioContributorsImplCopyWithImpl<
+          _$KodiAudioContributorsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiAudioContributorsToJson(
+    return _$$KodiAudioContributorsImplToJson(
       this,
     );
   }
@@ -204,10 +216,10 @@ abstract class _KodiAudioContributors implements KodiAudioContributors {
           required final String name,
           required final String role,
           @JsonKey(name: 'roleid') required final int roleId}) =
-      _$_KodiAudioContributors;
+      _$KodiAudioContributorsImpl;
 
   factory _KodiAudioContributors.fromJson(Map<String, dynamic> json) =
-      _$_KodiAudioContributors.fromJson;
+      _$KodiAudioContributorsImpl.fromJson;
 
   @override
   @JsonKey(name: 'artistid')
@@ -219,8 +231,11 @@ abstract class _KodiAudioContributors implements KodiAudioContributors {
   @override
   @JsonKey(name: 'roleid')
   int get roleId;
+
+  /// Create a copy of KodiAudioContributors
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiAudioContributorsCopyWith<_$_KodiAudioContributors> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiAudioContributorsImplCopyWith<_$KodiAudioContributorsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

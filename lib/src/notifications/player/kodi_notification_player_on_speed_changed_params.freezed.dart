@@ -12,7 +12,7 @@ part of 'kodi_notification_player_on_speed_changed_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationPlayerOnSpeedChangedParams
     _$KodiNotificationPlayerOnSpeedChangedParamsFromJson(
@@ -25,8 +25,12 @@ mixin _$KodiNotificationPlayerOnSpeedChangedParams {
   String get sender => throw _privateConstructorUsedError;
   KodiPlayerNotificationsData get data => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlayerOnSpeedChangedParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlayerOnSpeedChangedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlayerOnSpeedChangedParamsCopyWith<
           KodiNotificationPlayerOnSpeedChangedParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -57,6 +61,8 @@ class _$KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlayerOnSpeedChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +81,8 @@ class _$KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlayerOnSpeedChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerNotificationsDataCopyWith<$Res> get data {
@@ -85,12 +93,13 @@ class _$KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWith<$Res>
     implements $KodiNotificationPlayerOnSpeedChangedParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWith(
-          _$_KodiNotificationPlayerOnSpeedChangedParams value,
-          $Res Function(_$_KodiNotificationPlayerOnSpeedChangedParams) then) =
-      __$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWith(
+          _$KodiNotificationPlayerOnSpeedChangedParamsImpl value,
+          $Res Function(_$KodiNotificationPlayerOnSpeedChangedParamsImpl)
+              then) =
+      __$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiPlayerNotificationsData data});
@@ -100,22 +109,24 @@ abstract class _$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnSpeedChangedParams>
-    implements _$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl(
-      _$_KodiNotificationPlayerOnSpeedChangedParams _value,
-      $Res Function(_$_KodiNotificationPlayerOnSpeedChangedParams) _then)
+        _$KodiNotificationPlayerOnSpeedChangedParamsImpl>
+    implements _$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWithImpl(
+      _$KodiNotificationPlayerOnSpeedChangedParamsImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnSpeedChangedParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlayerOnSpeedChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnSpeedChangedParams(
+    return _then(_$KodiNotificationPlayerOnSpeedChangedParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -130,14 +141,14 @@ class __$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnSpeedChangedParams
+class _$KodiNotificationPlayerOnSpeedChangedParamsImpl
     implements _KodiNotificationPlayerOnSpeedChangedParams {
-  const _$_KodiNotificationPlayerOnSpeedChangedParams(
+  const _$KodiNotificationPlayerOnSpeedChangedParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationPlayerOnSpeedChangedParams.fromJson(
+  factory _$KodiNotificationPlayerOnSpeedChangedParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnSpeedChangedParamsFromJson(json);
+      _$$KodiNotificationPlayerOnSpeedChangedParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -150,30 +161,33 @@ class _$_KodiNotificationPlayerOnSpeedChangedParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnSpeedChangedParams &&
+            other is _$KodiNotificationPlayerOnSpeedChangedParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlayerOnSpeedChangedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWith<
-          _$_KodiNotificationPlayerOnSpeedChangedParams>
+  _$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWith<
+          _$KodiNotificationPlayerOnSpeedChangedParamsImpl>
       get copyWith =>
-          __$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWithImpl<
-              _$_KodiNotificationPlayerOnSpeedChangedParams>(this, _$identity);
+          __$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWithImpl<
+                  _$KodiNotificationPlayerOnSpeedChangedParamsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnSpeedChangedParamsToJson(
+    return _$$KodiNotificationPlayerOnSpeedChangedParamsImplToJson(
       this,
     );
   }
@@ -184,19 +198,22 @@ abstract class _KodiNotificationPlayerOnSpeedChangedParams
   const factory _KodiNotificationPlayerOnSpeedChangedParams(
           {required final String sender,
           required final KodiPlayerNotificationsData data}) =
-      _$_KodiNotificationPlayerOnSpeedChangedParams;
+      _$KodiNotificationPlayerOnSpeedChangedParamsImpl;
 
   factory _KodiNotificationPlayerOnSpeedChangedParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnSpeedChangedParams.fromJson;
+      _$KodiNotificationPlayerOnSpeedChangedParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiPlayerNotificationsData get data;
+
+  /// Create a copy of KodiNotificationPlayerOnSpeedChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnSpeedChangedParamsCopyWith<
-          _$_KodiNotificationPlayerOnSpeedChangedParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnSpeedChangedParamsImplCopyWith<
+          _$KodiNotificationPlayerOnSpeedChangedParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

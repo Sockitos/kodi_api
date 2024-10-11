@@ -12,7 +12,7 @@ part of 'set_fullscreen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetFullscreen _$SetFullscreenFromJson(Map<String, dynamic> json) {
   return _SetFullscreen.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$SetFullscreen {
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get fullscreen => throw _privateConstructorUsedError;
 
+  /// Serializes this SetFullscreen to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetFullscreen
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetFullscreenCopyWith<SetFullscreen> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$SetFullscreenCopyWithImpl<$Res, $Val extends SetFullscreen>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetFullscreen
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,6 +69,8 @@ class _$SetFullscreenCopyWithImpl<$Res, $Val extends SetFullscreen>
     ) as $Val);
   }
 
+  /// Create a copy of SetFullscreen
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalToggleCopyWith<$Res> get fullscreen {
@@ -73,11 +81,11 @@ class _$SetFullscreenCopyWithImpl<$Res, $Val extends SetFullscreen>
 }
 
 /// @nodoc
-abstract class _$$_SetFullscreenCopyWith<$Res>
+abstract class _$$SetFullscreenImplCopyWith<$Res>
     implements $SetFullscreenCopyWith<$Res> {
-  factory _$$_SetFullscreenCopyWith(
-          _$_SetFullscreen value, $Res Function(_$_SetFullscreen) then) =
-      __$$_SetFullscreenCopyWithImpl<$Res>;
+  factory _$$SetFullscreenImplCopyWith(
+          _$SetFullscreenImpl value, $Res Function(_$SetFullscreenImpl) then) =
+      __$$SetFullscreenImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@KodiGlobalToggleConverter() KodiGlobalToggle fullscreen});
@@ -87,19 +95,21 @@ abstract class _$$_SetFullscreenCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetFullscreenCopyWithImpl<$Res>
-    extends _$SetFullscreenCopyWithImpl<$Res, _$_SetFullscreen>
-    implements _$$_SetFullscreenCopyWith<$Res> {
-  __$$_SetFullscreenCopyWithImpl(
-      _$_SetFullscreen _value, $Res Function(_$_SetFullscreen) _then)
+class __$$SetFullscreenImplCopyWithImpl<$Res>
+    extends _$SetFullscreenCopyWithImpl<$Res, _$SetFullscreenImpl>
+    implements _$$SetFullscreenImplCopyWith<$Res> {
+  __$$SetFullscreenImplCopyWithImpl(
+      _$SetFullscreenImpl _value, $Res Function(_$SetFullscreenImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetFullscreen
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? fullscreen = null,
   }) {
-    return _then(_$_SetFullscreen(
+    return _then(_$SetFullscreenImpl(
       null == fullscreen
           ? _value.fullscreen
           : fullscreen // ignore: cast_nullable_to_non_nullable
@@ -110,12 +120,12 @@ class __$$_SetFullscreenCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetFullscreen extends _SetFullscreen {
-  const _$_SetFullscreen(@KodiGlobalToggleConverter() this.fullscreen)
+class _$SetFullscreenImpl extends _SetFullscreen {
+  const _$SetFullscreenImpl(@KodiGlobalToggleConverter() this.fullscreen)
       : super._();
 
-  factory _$_SetFullscreen.fromJson(Map<String, dynamic> json) =>
-      _$$_SetFullscreenFromJson(json);
+  factory _$SetFullscreenImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetFullscreenImplFromJson(json);
 
   @override
   @KodiGlobalToggleConverter()
@@ -127,27 +137,29 @@ class _$_SetFullscreen extends _SetFullscreen {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetFullscreen &&
+            other is _$SetFullscreenImpl &&
             (identical(other.fullscreen, fullscreen) ||
                 other.fullscreen == fullscreen));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, fullscreen);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetFullscreen
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetFullscreenCopyWith<_$_SetFullscreen> get copyWith =>
-      __$$_SetFullscreenCopyWithImpl<_$_SetFullscreen>(this, _$identity);
+  _$$SetFullscreenImplCopyWith<_$SetFullscreenImpl> get copyWith =>
+      __$$SetFullscreenImplCopyWithImpl<_$SetFullscreenImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetFullscreenToJson(
+    return _$$SetFullscreenImplToJson(
       this,
     );
   }
@@ -156,17 +168,20 @@ class _$_SetFullscreen extends _SetFullscreen {
 abstract class _SetFullscreen extends SetFullscreen {
   const factory _SetFullscreen(
           @KodiGlobalToggleConverter() final KodiGlobalToggle fullscreen) =
-      _$_SetFullscreen;
+      _$SetFullscreenImpl;
   const _SetFullscreen._() : super._();
 
   factory _SetFullscreen.fromJson(Map<String, dynamic> json) =
-      _$_SetFullscreen.fromJson;
+      _$SetFullscreenImpl.fromJson;
 
   @override
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get fullscreen;
+
+  /// Create a copy of SetFullscreen
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetFullscreenCopyWith<_$_SetFullscreen> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetFullscreenImplCopyWith<_$SetFullscreenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

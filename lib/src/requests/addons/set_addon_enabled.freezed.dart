@@ -12,7 +12,7 @@ part of 'set_addon_enabled.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetAddonEnabled _$SetAddonEnabledFromJson(Map<String, dynamic> json) {
   return _SetAddonEnabled.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$SetAddonEnabled {
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get enabled => throw _privateConstructorUsedError;
 
+  /// Serializes this SetAddonEnabled to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetAddonEnabled
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetAddonEnabledCopyWith<SetAddonEnabled> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -54,6 +58,8 @@ class _$SetAddonEnabledCopyWithImpl<$Res, $Val extends SetAddonEnabled>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetAddonEnabled
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +78,8 @@ class _$SetAddonEnabledCopyWithImpl<$Res, $Val extends SetAddonEnabled>
     ) as $Val);
   }
 
+  /// Create a copy of SetAddonEnabled
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalToggleCopyWith<$Res> get enabled {
@@ -82,11 +90,11 @@ class _$SetAddonEnabledCopyWithImpl<$Res, $Val extends SetAddonEnabled>
 }
 
 /// @nodoc
-abstract class _$$_SetAddonEnabledCopyWith<$Res>
+abstract class _$$SetAddonEnabledImplCopyWith<$Res>
     implements $SetAddonEnabledCopyWith<$Res> {
-  factory _$$_SetAddonEnabledCopyWith(
-          _$_SetAddonEnabled value, $Res Function(_$_SetAddonEnabled) then) =
-      __$$_SetAddonEnabledCopyWithImpl<$Res>;
+  factory _$$SetAddonEnabledImplCopyWith(_$SetAddonEnabledImpl value,
+          $Res Function(_$SetAddonEnabledImpl) then) =
+      __$$SetAddonEnabledImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -98,20 +106,22 @@ abstract class _$$_SetAddonEnabledCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SetAddonEnabledCopyWithImpl<$Res>
-    extends _$SetAddonEnabledCopyWithImpl<$Res, _$_SetAddonEnabled>
-    implements _$$_SetAddonEnabledCopyWith<$Res> {
-  __$$_SetAddonEnabledCopyWithImpl(
-      _$_SetAddonEnabled _value, $Res Function(_$_SetAddonEnabled) _then)
+class __$$SetAddonEnabledImplCopyWithImpl<$Res>
+    extends _$SetAddonEnabledCopyWithImpl<$Res, _$SetAddonEnabledImpl>
+    implements _$$SetAddonEnabledImplCopyWith<$Res> {
+  __$$SetAddonEnabledImplCopyWithImpl(
+      _$SetAddonEnabledImpl _value, $Res Function(_$SetAddonEnabledImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetAddonEnabled
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? enabled = null,
   }) {
-    return _then(_$_SetAddonEnabled(
+    return _then(_$SetAddonEnabledImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,13 +136,13 @@ class __$$_SetAddonEnabledCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SetAddonEnabled extends _SetAddonEnabled {
-  const _$_SetAddonEnabled(@JsonKey(name: 'addonid') this.id,
+class _$SetAddonEnabledImpl extends _SetAddonEnabled {
+  const _$SetAddonEnabledImpl(@JsonKey(name: 'addonid') this.id,
       @KodiGlobalToggleConverter() this.enabled)
       : super._();
 
-  factory _$_SetAddonEnabled.fromJson(Map<String, dynamic> json) =>
-      _$$_SetAddonEnabledFromJson(json);
+  factory _$SetAddonEnabledImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SetAddonEnabledImplFromJson(json);
 
   @override
   @JsonKey(name: 'addonid')
@@ -147,27 +157,30 @@ class _$_SetAddonEnabled extends _SetAddonEnabled {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SetAddonEnabled &&
+            other is _$SetAddonEnabledImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.enabled, enabled) || other.enabled == enabled));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, enabled);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetAddonEnabled
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SetAddonEnabledCopyWith<_$_SetAddonEnabled> get copyWith =>
-      __$$_SetAddonEnabledCopyWithImpl<_$_SetAddonEnabled>(this, _$identity);
+  _$$SetAddonEnabledImplCopyWith<_$SetAddonEnabledImpl> get copyWith =>
+      __$$SetAddonEnabledImplCopyWithImpl<_$SetAddonEnabledImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SetAddonEnabledToJson(
+    return _$$SetAddonEnabledImplToJson(
       this,
     );
   }
@@ -176,11 +189,11 @@ class _$_SetAddonEnabled extends _SetAddonEnabled {
 abstract class _SetAddonEnabled extends SetAddonEnabled {
   const factory _SetAddonEnabled(@JsonKey(name: 'addonid') final String id,
           @KodiGlobalToggleConverter() final KodiGlobalToggle enabled) =
-      _$_SetAddonEnabled;
+      _$SetAddonEnabledImpl;
   const _SetAddonEnabled._() : super._();
 
   factory _SetAddonEnabled.fromJson(Map<String, dynamic> json) =
-      _$_SetAddonEnabled.fromJson;
+      _$SetAddonEnabledImpl.fromJson;
 
   @override
   @JsonKey(name: 'addonid')
@@ -188,8 +201,11 @@ abstract class _SetAddonEnabled extends SetAddonEnabled {
   @override
   @KodiGlobalToggleConverter()
   KodiGlobalToggle get enabled;
+
+  /// Create a copy of SetAddonEnabled
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_SetAddonEnabledCopyWith<_$_SetAddonEnabled> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SetAddonEnabledImplCopyWith<_$SetAddonEnabledImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

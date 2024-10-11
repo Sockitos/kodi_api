@@ -6,7 +6,8 @@ part of 'get_tags.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTags _$$_GetTagsFromJson(Map<String, dynamic> json) => _$_GetTags(
+_$GetTagsImpl _$$GetTagsImplFromJson(Map<String, dynamic> json) =>
+    _$GetTagsImpl(
       $enumDecode(_$KodiVideoLibraryGetTagsTypeEnumMap, json['type']),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiLibraryFieldsTagEnumMap, e))
@@ -19,7 +20,7 @@ _$_GetTags _$$_GetTagsFromJson(Map<String, dynamic> json) => _$_GetTags(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetTagsToJson(_$_GetTags instance) {
+Map<String, dynamic> _$$GetTagsImplToJson(_$GetTagsImpl instance) {
   final val = <String, dynamic>{
     'type': _$KodiVideoLibraryGetTagsTypeEnumMap[instance.type]!,
   };
@@ -50,8 +51,9 @@ const _$KodiLibraryFieldsTagEnumMap = {
   KodiLibraryFieldsTag.title: 'title',
 };
 
-_$_GetTagsResponse _$$_GetTagsResponseFromJson(Map<String, dynamic> json) =>
-    _$_GetTagsResponse(
+_$GetTagsResponseImpl _$$GetTagsResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetTagsResponseImpl(
       tags: (json['tags'] as List<dynamic>)
           .map((e) => KodiLibraryDetailsTag.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -59,7 +61,8 @@ _$_GetTagsResponse _$$_GetTagsResponseFromJson(Map<String, dynamic> json) =>
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetTagsResponseToJson(_$_GetTagsResponse instance) =>
+Map<String, dynamic> _$$GetTagsResponseImplToJson(
+        _$GetTagsResponseImpl instance) =>
     <String, dynamic>{
       'tags': instance.tags.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

@@ -6,7 +6,8 @@ part of 'get_roles.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRoles _$$_GetRolesFromJson(Map<String, dynamic> json) => _$_GetRoles(
+_$GetRolesImpl _$$GetRolesImplFromJson(Map<String, dynamic> json) =>
+    _$GetRolesImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiAudioFieldsRoleEnumMap, e))
           .toSet(),
@@ -18,7 +19,7 @@ _$_GetRoles _$$_GetRolesFromJson(Map<String, dynamic> json) => _$_GetRoles(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetRolesToJson(_$_GetRoles instance) {
+Map<String, dynamic> _$$GetRolesImplToJson(_$GetRolesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -41,8 +42,9 @@ const _$KodiAudioFieldsRoleEnumMap = {
   KodiAudioFieldsRole.title: 'title',
 };
 
-_$_GetRolesResponse _$$_GetRolesResponseFromJson(Map<String, dynamic> json) =>
-    _$_GetRolesResponse(
+_$GetRolesResponseImpl _$$GetRolesResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetRolesResponseImpl(
       roles: (json['roles'] as List<dynamic>)
           .map((e) => KodiAudioDetailsRole.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -50,7 +52,8 @@ _$_GetRolesResponse _$$_GetRolesResponseFromJson(Map<String, dynamic> json) =>
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetRolesResponseToJson(_$_GetRolesResponse instance) =>
+Map<String, dynamic> _$$GetRolesResponseImplToJson(
+        _$GetRolesResponseImpl instance) =>
     <String, dynamic>{
       'roles': instance.roles.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

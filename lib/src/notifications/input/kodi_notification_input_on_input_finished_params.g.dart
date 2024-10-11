@@ -6,10 +6,10 @@ part of 'kodi_notification_input_on_input_finished_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationInputOnInputFinishedParams
-    _$$_KodiNotificationInputOnInputFinishedParamsFromJson(
+_$KodiNotificationInputOnInputFinishedParamsImpl
+    _$$KodiNotificationInputOnInputFinishedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationInputOnInputFinishedParams(
+        _$KodiNotificationInputOnInputFinishedParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,8 @@ _$_KodiNotificationInputOnInputFinishedParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationInputOnInputFinishedParamsToJson(
-    _$_KodiNotificationInputOnInputFinishedParams instance) {
+Map<String, dynamic> _$$KodiNotificationInputOnInputFinishedParamsImplToJson(
+    _$KodiNotificationInputOnInputFinishedParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,15 +33,16 @@ Map<String, dynamic> _$$_KodiNotificationInputOnInputFinishedParamsToJson(
   return val;
 }
 
-_$_KodiNotificationInputOnInputFinishedParamsData
-    _$$_KodiNotificationInputOnInputFinishedParamsDataFromJson(
+_$KodiNotificationInputOnInputFinishedParamsDataImpl
+    _$$KodiNotificationInputOnInputFinishedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationInputOnInputFinishedParamsData(
+        _$KodiNotificationInputOnInputFinishedParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic> _$$_KodiNotificationInputOnInputFinishedParamsDataToJson(
-        _$_KodiNotificationInputOnInputFinishedParamsData instance) =>
-    <String, dynamic>{
-      'test': instance.test,
-    };
+Map<String, dynamic>
+    _$$KodiNotificationInputOnInputFinishedParamsDataImplToJson(
+            _$KodiNotificationInputOnInputFinishedParamsDataImpl instance) =>
+        <String, dynamic>{
+          'test': instance.test,
+        };

@@ -12,7 +12,7 @@ part of 'right.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Right _$RightFromJson(Map<String, dynamic> json) {
   return _Right.fromJson(json);
@@ -20,6 +20,7 @@ Right _$RightFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Right {
+  /// Serializes this Right to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,28 +39,37 @@ class _$RightCopyWithImpl<$Res, $Val extends Right>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Right
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_RightCopyWith<$Res> {
-  factory _$$_RightCopyWith(_$_Right value, $Res Function(_$_Right) then) =
-      __$$_RightCopyWithImpl<$Res>;
+abstract class _$$RightImplCopyWith<$Res> {
+  factory _$$RightImplCopyWith(
+          _$RightImpl value, $Res Function(_$RightImpl) then) =
+      __$$RightImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RightCopyWithImpl<$Res> extends _$RightCopyWithImpl<$Res, _$_Right>
-    implements _$$_RightCopyWith<$Res> {
-  __$$_RightCopyWithImpl(_$_Right _value, $Res Function(_$_Right) _then)
+class __$$RightImplCopyWithImpl<$Res>
+    extends _$RightCopyWithImpl<$Res, _$RightImpl>
+    implements _$$RightImplCopyWith<$Res> {
+  __$$RightImplCopyWithImpl(
+      _$RightImpl _value, $Res Function(_$RightImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Right
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Right extends _Right {
-  const _$_Right() : super._();
+class _$RightImpl extends _Right {
+  const _$RightImpl() : super._();
 
-  factory _$_Right.fromJson(Map<String, dynamic> json) =>
-      _$$_RightFromJson(json);
+  factory _$RightImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RightImplFromJson(json);
 
   @override
   String toString() {
@@ -67,26 +77,26 @@ class _$_Right extends _Right {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Right);
+        (other.runtimeType == runtimeType && other is _$RightImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RightToJson(
+    return _$$RightImplToJson(
       this,
     );
   }
 }
 
 abstract class _Right extends Right {
-  const factory _Right() = _$_Right;
+  const factory _Right() = _$RightImpl;
   const _Right._() : super._();
 
-  factory _Right.fromJson(Map<String, dynamic> json) = _$_Right.fromJson;
+  factory _Right.fromJson(Map<String, dynamic> json) = _$RightImpl.fromJson;
 }

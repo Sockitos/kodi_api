@@ -12,7 +12,7 @@ part of 'kodi_notification_system_on_quit_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationSystemOnQuitParams _$KodiNotificationSystemOnQuitParamsFromJson(
     Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiNotificationSystemOnQuitParams {
   KodiNotificationSystemOnQuitParamsData get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnQuitParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnQuitParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnQuitParamsCopyWith<
           KodiNotificationSystemOnQuitParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -56,6 +60,8 @@ class _$KodiNotificationSystemOnQuitParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnQuitParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,6 +80,8 @@ class _$KodiNotificationSystemOnQuitParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationSystemOnQuitParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationSystemOnQuitParamsDataCopyWith<$Res> get data {
@@ -85,12 +93,12 @@ class _$KodiNotificationSystemOnQuitParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnQuitParamsCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnQuitParamsImplCopyWith<$Res>
     implements $KodiNotificationSystemOnQuitParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnQuitParamsCopyWith(
-          _$_KodiNotificationSystemOnQuitParams value,
-          $Res Function(_$_KodiNotificationSystemOnQuitParams) then) =
-      __$$_KodiNotificationSystemOnQuitParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnQuitParamsImplCopyWith(
+          _$KodiNotificationSystemOnQuitParamsImpl value,
+          $Res Function(_$KodiNotificationSystemOnQuitParamsImpl) then) =
+      __$$KodiNotificationSystemOnQuitParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiNotificationSystemOnQuitParamsData data});
@@ -100,22 +108,24 @@ abstract class _$$_KodiNotificationSystemOnQuitParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnQuitParamsCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnQuitParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnQuitParamsCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnQuitParams>
-    implements _$$_KodiNotificationSystemOnQuitParamsCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnQuitParamsCopyWithImpl(
-      _$_KodiNotificationSystemOnQuitParams _value,
-      $Res Function(_$_KodiNotificationSystemOnQuitParams) _then)
+        _$KodiNotificationSystemOnQuitParamsImpl>
+    implements _$$KodiNotificationSystemOnQuitParamsImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnQuitParamsImplCopyWithImpl(
+      _$KodiNotificationSystemOnQuitParamsImpl _value,
+      $Res Function(_$KodiNotificationSystemOnQuitParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnQuitParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnQuitParams(
+    return _then(_$KodiNotificationSystemOnQuitParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -130,14 +140,14 @@ class __$$_KodiNotificationSystemOnQuitParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnQuitParams
+class _$KodiNotificationSystemOnQuitParamsImpl
     implements _KodiNotificationSystemOnQuitParams {
-  const _$_KodiNotificationSystemOnQuitParams(
+  const _$KodiNotificationSystemOnQuitParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationSystemOnQuitParams.fromJson(
+  factory _$KodiNotificationSystemOnQuitParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnQuitParamsFromJson(json);
+      _$$KodiNotificationSystemOnQuitParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -150,29 +160,31 @@ class _$_KodiNotificationSystemOnQuitParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnQuitParams &&
+            other is _$KodiNotificationSystemOnQuitParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnQuitParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnQuitParamsCopyWith<
-          _$_KodiNotificationSystemOnQuitParams>
-      get copyWith => __$$_KodiNotificationSystemOnQuitParamsCopyWithImpl<
-          _$_KodiNotificationSystemOnQuitParams>(this, _$identity);
+  _$$KodiNotificationSystemOnQuitParamsImplCopyWith<
+          _$KodiNotificationSystemOnQuitParamsImpl>
+      get copyWith => __$$KodiNotificationSystemOnQuitParamsImplCopyWithImpl<
+          _$KodiNotificationSystemOnQuitParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnQuitParamsToJson(
+    return _$$KodiNotificationSystemOnQuitParamsImplToJson(
       this,
     );
   }
@@ -183,20 +195,23 @@ abstract class _KodiNotificationSystemOnQuitParams
   const factory _KodiNotificationSystemOnQuitParams(
           {required final String sender,
           required final KodiNotificationSystemOnQuitParamsData data}) =
-      _$_KodiNotificationSystemOnQuitParams;
+      _$KodiNotificationSystemOnQuitParamsImpl;
 
   factory _KodiNotificationSystemOnQuitParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnQuitParams.fromJson;
+      _$KodiNotificationSystemOnQuitParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationSystemOnQuitParamsData get data;
+
+  /// Create a copy of KodiNotificationSystemOnQuitParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnQuitParamsCopyWith<
-          _$_KodiNotificationSystemOnQuitParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnQuitParamsImplCopyWith<
+          _$KodiNotificationSystemOnQuitParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -211,8 +226,12 @@ mixin _$KodiNotificationSystemOnQuitParamsData {
   @JsonKey(name: 'exitcode')
   int get exitCode => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnQuitParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnQuitParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnQuitParamsDataCopyWith<
           KodiNotificationSystemOnQuitParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -240,6 +259,8 @@ class _$KodiNotificationSystemOnQuitParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnQuitParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,33 +276,35 @@ class _$KodiNotificationSystemOnQuitParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnQuitParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnQuitParamsDataImplCopyWith<$Res>
     implements $KodiNotificationSystemOnQuitParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnQuitParamsDataCopyWith(
-          _$_KodiNotificationSystemOnQuitParamsData value,
-          $Res Function(_$_KodiNotificationSystemOnQuitParamsData) then) =
-      __$$_KodiNotificationSystemOnQuitParamsDataCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnQuitParamsDataImplCopyWith(
+          _$KodiNotificationSystemOnQuitParamsDataImpl value,
+          $Res Function(_$KodiNotificationSystemOnQuitParamsDataImpl) then) =
+      __$$KodiNotificationSystemOnQuitParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'exitcode') int exitCode});
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnQuitParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnQuitParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnQuitParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnQuitParamsData>
-    implements _$$_KodiNotificationSystemOnQuitParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnQuitParamsDataCopyWithImpl(
-      _$_KodiNotificationSystemOnQuitParamsData _value,
-      $Res Function(_$_KodiNotificationSystemOnQuitParamsData) _then)
+        _$KodiNotificationSystemOnQuitParamsDataImpl>
+    implements _$$KodiNotificationSystemOnQuitParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnQuitParamsDataImplCopyWithImpl(
+      _$KodiNotificationSystemOnQuitParamsDataImpl _value,
+      $Res Function(_$KodiNotificationSystemOnQuitParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnQuitParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? exitCode = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnQuitParamsData(
+    return _then(_$KodiNotificationSystemOnQuitParamsDataImpl(
       exitCode: null == exitCode
           ? _value.exitCode
           : exitCode // ignore: cast_nullable_to_non_nullable
@@ -292,14 +315,14 @@ class __$$_KodiNotificationSystemOnQuitParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnQuitParamsData
+class _$KodiNotificationSystemOnQuitParamsDataImpl
     implements _KodiNotificationSystemOnQuitParamsData {
-  const _$_KodiNotificationSystemOnQuitParamsData(
+  const _$KodiNotificationSystemOnQuitParamsDataImpl(
       {@JsonKey(name: 'exitcode') required this.exitCode});
 
-  factory _$_KodiNotificationSystemOnQuitParamsData.fromJson(
+  factory _$KodiNotificationSystemOnQuitParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnQuitParamsDataFromJson(json);
+      _$$KodiNotificationSystemOnQuitParamsDataImplFromJson(json);
 
   @override
   @JsonKey(name: 'exitcode')
@@ -311,29 +334,32 @@ class _$_KodiNotificationSystemOnQuitParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnQuitParamsData &&
+            other is _$KodiNotificationSystemOnQuitParamsDataImpl &&
             (identical(other.exitCode, exitCode) ||
                 other.exitCode == exitCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, exitCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnQuitParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnQuitParamsDataCopyWith<
-          _$_KodiNotificationSystemOnQuitParamsData>
-      get copyWith => __$$_KodiNotificationSystemOnQuitParamsDataCopyWithImpl<
-          _$_KodiNotificationSystemOnQuitParamsData>(this, _$identity);
+  _$$KodiNotificationSystemOnQuitParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnQuitParamsDataImpl>
+      get copyWith =>
+          __$$KodiNotificationSystemOnQuitParamsDataImplCopyWithImpl<
+              _$KodiNotificationSystemOnQuitParamsDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnQuitParamsDataToJson(
+    return _$$KodiNotificationSystemOnQuitParamsDataImplToJson(
       this,
     );
   }
@@ -343,18 +369,21 @@ abstract class _KodiNotificationSystemOnQuitParamsData
     implements KodiNotificationSystemOnQuitParamsData {
   const factory _KodiNotificationSystemOnQuitParamsData(
           {@JsonKey(name: 'exitcode') required final int exitCode}) =
-      _$_KodiNotificationSystemOnQuitParamsData;
+      _$KodiNotificationSystemOnQuitParamsDataImpl;
 
   factory _KodiNotificationSystemOnQuitParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnQuitParamsData.fromJson;
+      _$KodiNotificationSystemOnQuitParamsDataImpl.fromJson;
 
   @override
   @JsonKey(name: 'exitcode')
   int get exitCode;
+
+  /// Create a copy of KodiNotificationSystemOnQuitParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnQuitParamsDataCopyWith<
-          _$_KodiNotificationSystemOnQuitParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnQuitParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnQuitParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

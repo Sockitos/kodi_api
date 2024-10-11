@@ -6,8 +6,8 @@ part of 'get_profiles.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetProfiles _$$_GetProfilesFromJson(Map<String, dynamic> json) =>
-    _$_GetProfiles(
+_$GetProfilesImpl _$$GetProfilesImplFromJson(Map<String, dynamic> json) =>
+    _$GetProfilesImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiProfilesFieldsProfileEnumMap, e))
           .toSet(),
@@ -19,7 +19,7 @@ _$_GetProfiles _$$_GetProfilesFromJson(Map<String, dynamic> json) =>
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetProfilesToJson(_$_GetProfiles instance) {
+Map<String, dynamic> _$$GetProfilesImplToJson(_$GetProfilesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -43,19 +43,19 @@ const _$KodiProfilesFieldsProfileEnumMap = {
   KodiProfilesFieldsProfile.lockMode: 'lockmode',
 };
 
-_$_KodiProfilesGetProfilesResponse _$$_KodiProfilesGetProfilesResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiProfilesGetProfilesResponse(
-      profiles: (json['profiles'] as List<dynamic>)
-          .map((e) =>
-              KodiProfilesDetailsProfile.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      limits: KodiListLimitsReturned.fromJson(
-          json['limits'] as Map<String, dynamic>),
-    );
+_$KodiProfilesGetProfilesResponseImpl
+    _$$KodiProfilesGetProfilesResponseImplFromJson(Map<String, dynamic> json) =>
+        _$KodiProfilesGetProfilesResponseImpl(
+          profiles: (json['profiles'] as List<dynamic>)
+              .map((e) => KodiProfilesDetailsProfile.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+          limits: KodiListLimitsReturned.fromJson(
+              json['limits'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_KodiProfilesGetProfilesResponseToJson(
-        _$_KodiProfilesGetProfilesResponse instance) =>
+Map<String, dynamic> _$$KodiProfilesGetProfilesResponseImplToJson(
+        _$KodiProfilesGetProfilesResponseImpl instance) =>
     <String, dynamic>{
       'profiles': instance.profiles.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

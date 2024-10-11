@@ -12,7 +12,7 @@ part of 'kodi_video_details_movie_set_extended.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiVideoDetailsMovieSetExtended _$KodiVideoDetailsMovieSetExtendedFromJson(
     Map<String, dynamic> json) {
@@ -23,19 +23,23 @@ KodiVideoDetailsMovieSetExtended _$KodiVideoDetailsMovieSetExtendedFromJson(
 mixin _$KodiVideoDetailsMovieSetExtended {
   List<KodiVideoDetailsMovie>? get movies => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
-  String? get plot => throw _privateConstructorUsedError;
+  String get plot => throw _privateConstructorUsedError;
   @JsonKey(name: 'setid')
   int get setId => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   KodiMediaArtwork? get art => throw _privateConstructorUsedError;
   @JsonKey(name: 'playcount')
-  int? get playCount => throw _privateConstructorUsedError;
-  String? get fanart => throw _privateConstructorUsedError;
-  String? get thumbnail => throw _privateConstructorUsedError;
+  int get playCount => throw _privateConstructorUsedError;
+  String get fanart => throw _privateConstructorUsedError;
+  String get thumbnail => throw _privateConstructorUsedError;
   String get label => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiVideoDetailsMovieSetExtended to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiVideoDetailsMovieSetExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiVideoDetailsMovieSetExtendedCopyWith<KodiVideoDetailsMovieSetExtended>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -51,13 +55,13 @@ abstract class $KodiVideoDetailsMovieSetExtendedCopyWith<$Res> {
   $Res call(
       {List<KodiVideoDetailsMovie>? movies,
       KodiListLimitsReturned limits,
-      String? plot,
+      String plot,
       @JsonKey(name: 'setid') int setId,
-      String? title,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   $KodiListLimitsReturnedCopyWith<$Res> get limits;
@@ -75,18 +79,20 @@ class _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiVideoDetailsMovieSetExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? movies = freezed,
     Object? limits = null,
-    Object? plot = freezed,
+    Object? plot = null,
     Object? setId = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
     return _then(_value.copyWith(
@@ -98,34 +104,34 @@ class _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
           ? _value.limits
           : limits // ignore: cast_nullable_to_non_nullable
               as KodiListLimitsReturned,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       setId: null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -133,6 +139,8 @@ class _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiVideoDetailsMovieSetExtended
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -141,6 +149,8 @@ class _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiVideoDetailsMovieSetExtended
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiMediaArtworkCopyWith<$Res>? get art {
@@ -155,24 +165,24 @@ class _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoDetailsMovieSetExtendedCopyWith<$Res>
+abstract class _$$KodiVideoDetailsMovieSetExtendedImplCopyWith<$Res>
     implements $KodiVideoDetailsMovieSetExtendedCopyWith<$Res> {
-  factory _$$_KodiVideoDetailsMovieSetExtendedCopyWith(
-          _$_KodiVideoDetailsMovieSetExtended value,
-          $Res Function(_$_KodiVideoDetailsMovieSetExtended) then) =
-      __$$_KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res>;
+  factory _$$KodiVideoDetailsMovieSetExtendedImplCopyWith(
+          _$KodiVideoDetailsMovieSetExtendedImpl value,
+          $Res Function(_$KodiVideoDetailsMovieSetExtendedImpl) then) =
+      __$$KodiVideoDetailsMovieSetExtendedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {List<KodiVideoDetailsMovie>? movies,
       KodiListLimitsReturned limits,
-      String? plot,
+      String plot,
       @JsonKey(name: 'setid') int setId,
-      String? title,
+      String title,
       KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') int? playCount,
-      String? fanart,
-      String? thumbnail,
+      @JsonKey(name: 'playcount') int playCount,
+      String fanart,
+      String thumbnail,
       String label});
 
   @override
@@ -182,30 +192,32 @@ abstract class _$$_KodiVideoDetailsMovieSetExtendedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res>
+class __$$KodiVideoDetailsMovieSetExtendedImplCopyWithImpl<$Res>
     extends _$KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res,
-        _$_KodiVideoDetailsMovieSetExtended>
-    implements _$$_KodiVideoDetailsMovieSetExtendedCopyWith<$Res> {
-  __$$_KodiVideoDetailsMovieSetExtendedCopyWithImpl(
-      _$_KodiVideoDetailsMovieSetExtended _value,
-      $Res Function(_$_KodiVideoDetailsMovieSetExtended) _then)
+        _$KodiVideoDetailsMovieSetExtendedImpl>
+    implements _$$KodiVideoDetailsMovieSetExtendedImplCopyWith<$Res> {
+  __$$KodiVideoDetailsMovieSetExtendedImplCopyWithImpl(
+      _$KodiVideoDetailsMovieSetExtendedImpl _value,
+      $Res Function(_$KodiVideoDetailsMovieSetExtendedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoDetailsMovieSetExtended
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? movies = freezed,
     Object? limits = null,
-    Object? plot = freezed,
+    Object? plot = null,
     Object? setId = null,
-    Object? title = freezed,
+    Object? title = null,
     Object? art = freezed,
-    Object? playCount = freezed,
-    Object? fanart = freezed,
-    Object? thumbnail = freezed,
+    Object? playCount = null,
+    Object? fanart = null,
+    Object? thumbnail = null,
     Object? label = null,
   }) {
-    return _then(_$_KodiVideoDetailsMovieSetExtended(
+    return _then(_$KodiVideoDetailsMovieSetExtendedImpl(
       movies: freezed == movies
           ? _value._movies
           : movies // ignore: cast_nullable_to_non_nullable
@@ -214,34 +226,34 @@ class __$$_KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res>
           ? _value.limits
           : limits // ignore: cast_nullable_to_non_nullable
               as KodiListLimitsReturned,
-      plot: freezed == plot
+      plot: null == plot
           ? _value.plot
           : plot // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       setId: null == setId
           ? _value.setId
           : setId // ignore: cast_nullable_to_non_nullable
               as int,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       art: freezed == art
           ? _value.art
           : art // ignore: cast_nullable_to_non_nullable
               as KodiMediaArtwork?,
-      playCount: freezed == playCount
+      playCount: null == playCount
           ? _value.playCount
           : playCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fanart: freezed == fanart
+              as int,
+      fanart: null == fanart
           ? _value.fanart
           : fanart // ignore: cast_nullable_to_non_nullable
-              as String?,
-      thumbnail: freezed == thumbnail
+              as String,
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -252,24 +264,24 @@ class __$$_KodiVideoDetailsMovieSetExtendedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoDetailsMovieSetExtended
+class _$KodiVideoDetailsMovieSetExtendedImpl
     implements _KodiVideoDetailsMovieSetExtended {
-  const _$_KodiVideoDetailsMovieSetExtended(
+  const _$KodiVideoDetailsMovieSetExtendedImpl(
       {final List<KodiVideoDetailsMovie>? movies,
       required this.limits,
-      this.plot,
+      this.plot = '',
       @JsonKey(name: 'setid') required this.setId,
-      this.title,
+      this.title = '',
       this.art,
-      @JsonKey(name: 'playcount') this.playCount,
-      this.fanart,
-      this.thumbnail,
+      @JsonKey(name: 'playcount') this.playCount = 0,
+      this.fanart = '',
+      this.thumbnail = '',
       required this.label})
       : _movies = movies;
 
-  factory _$_KodiVideoDetailsMovieSetExtended.fromJson(
+  factory _$KodiVideoDetailsMovieSetExtendedImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiVideoDetailsMovieSetExtendedFromJson(json);
+      _$$KodiVideoDetailsMovieSetExtendedImplFromJson(json);
 
   final List<KodiVideoDetailsMovie>? _movies;
   @override
@@ -284,21 +296,25 @@ class _$_KodiVideoDetailsMovieSetExtended
   @override
   final KodiListLimitsReturned limits;
   @override
-  final String? plot;
+  @JsonKey()
+  final String plot;
   @override
   @JsonKey(name: 'setid')
   final int setId;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
   @override
   final KodiMediaArtwork? art;
   @override
   @JsonKey(name: 'playcount')
-  final int? playCount;
+  final int playCount;
   @override
-  final String? fanart;
+  @JsonKey()
+  final String fanart;
   @override
-  final String? thumbnail;
+  @JsonKey()
+  final String thumbnail;
   @override
   final String label;
 
@@ -308,10 +324,10 @@ class _$_KodiVideoDetailsMovieSetExtended
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoDetailsMovieSetExtended &&
+            other is _$KodiVideoDetailsMovieSetExtendedImpl &&
             const DeepCollectionEquality().equals(other._movies, _movies) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.plot, plot) || other.plot == plot) &&
@@ -326,7 +342,7 @@ class _$_KodiVideoDetailsMovieSetExtended
             (identical(other.label, label) || other.label == label));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -341,17 +357,19 @@ class _$_KodiVideoDetailsMovieSetExtended
       thumbnail,
       label);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoDetailsMovieSetExtended
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoDetailsMovieSetExtendedCopyWith<
-          _$_KodiVideoDetailsMovieSetExtended>
-      get copyWith => __$$_KodiVideoDetailsMovieSetExtendedCopyWithImpl<
-          _$_KodiVideoDetailsMovieSetExtended>(this, _$identity);
+  _$$KodiVideoDetailsMovieSetExtendedImplCopyWith<
+          _$KodiVideoDetailsMovieSetExtendedImpl>
+      get copyWith => __$$KodiVideoDetailsMovieSetExtendedImplCopyWithImpl<
+          _$KodiVideoDetailsMovieSetExtendedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoDetailsMovieSetExtendedToJson(
+    return _$$KodiVideoDetailsMovieSetExtendedImplToJson(
       this,
     );
   }
@@ -362,43 +380,47 @@ abstract class _KodiVideoDetailsMovieSetExtended
   const factory _KodiVideoDetailsMovieSetExtended(
       {final List<KodiVideoDetailsMovie>? movies,
       required final KodiListLimitsReturned limits,
-      final String? plot,
+      final String plot,
       @JsonKey(name: 'setid') required final int setId,
-      final String? title,
+      final String title,
       final KodiMediaArtwork? art,
-      @JsonKey(name: 'playcount') final int? playCount,
-      final String? fanart,
-      final String? thumbnail,
-      required final String label}) = _$_KodiVideoDetailsMovieSetExtended;
+      @JsonKey(name: 'playcount') final int playCount,
+      final String fanart,
+      final String thumbnail,
+      required final String label}) = _$KodiVideoDetailsMovieSetExtendedImpl;
 
   factory _KodiVideoDetailsMovieSetExtended.fromJson(
-      Map<String, dynamic> json) = _$_KodiVideoDetailsMovieSetExtended.fromJson;
+          Map<String, dynamic> json) =
+      _$KodiVideoDetailsMovieSetExtendedImpl.fromJson;
 
   @override
   List<KodiVideoDetailsMovie>? get movies;
   @override
   KodiListLimitsReturned get limits;
   @override
-  String? get plot;
+  String get plot;
   @override
   @JsonKey(name: 'setid')
   int get setId;
   @override
-  String? get title;
+  String get title;
   @override
   KodiMediaArtwork? get art;
   @override
   @JsonKey(name: 'playcount')
-  int? get playCount;
+  int get playCount;
   @override
-  String? get fanart;
+  String get fanart;
   @override
-  String? get thumbnail;
+  String get thumbnail;
   @override
   String get label;
+
+  /// Create a copy of KodiVideoDetailsMovieSetExtended
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiVideoDetailsMovieSetExtendedCopyWith<
-          _$_KodiVideoDetailsMovieSetExtended>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoDetailsMovieSetExtendedImplCopyWith<
+          _$KodiVideoDetailsMovieSetExtendedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'refresh_movie.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RefreshMovie _$RefreshMovieFromJson(Map<String, dynamic> json) {
   return _RefreshMovie.fromJson(json);
@@ -24,10 +24,14 @@ mixin _$RefreshMovie {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'ignorenfo')
   bool get ignoreNFO => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
 
+  /// Serializes this RefreshMovie to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RefreshMovie
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RefreshMovieCopyWith<RefreshMovie> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -41,7 +45,7 @@ abstract class $RefreshMovieCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'movieid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
-      String? title});
+      String title});
 }
 
 /// @nodoc
@@ -54,12 +58,14 @@ class _$RefreshMovieCopyWithImpl<$Res, $Val extends RefreshMovie>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RefreshMovie
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? ignoreNFO = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -70,44 +76,46 @@ class _$RefreshMovieCopyWithImpl<$Res, $Val extends RefreshMovie>
           ? _value.ignoreNFO
           : ignoreNFO // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_RefreshMovieCopyWith<$Res>
+abstract class _$$RefreshMovieImplCopyWith<$Res>
     implements $RefreshMovieCopyWith<$Res> {
-  factory _$$_RefreshMovieCopyWith(
-          _$_RefreshMovie value, $Res Function(_$_RefreshMovie) then) =
-      __$$_RefreshMovieCopyWithImpl<$Res>;
+  factory _$$RefreshMovieImplCopyWith(
+          _$RefreshMovieImpl value, $Res Function(_$RefreshMovieImpl) then) =
+      __$$RefreshMovieImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'movieid') int id,
       @JsonKey(name: 'ignorenfo') bool ignoreNFO,
-      String? title});
+      String title});
 }
 
 /// @nodoc
-class __$$_RefreshMovieCopyWithImpl<$Res>
-    extends _$RefreshMovieCopyWithImpl<$Res, _$_RefreshMovie>
-    implements _$$_RefreshMovieCopyWith<$Res> {
-  __$$_RefreshMovieCopyWithImpl(
-      _$_RefreshMovie _value, $Res Function(_$_RefreshMovie) _then)
+class __$$RefreshMovieImplCopyWithImpl<$Res>
+    extends _$RefreshMovieCopyWithImpl<$Res, _$RefreshMovieImpl>
+    implements _$$RefreshMovieImplCopyWith<$Res> {
+  __$$RefreshMovieImplCopyWithImpl(
+      _$RefreshMovieImpl _value, $Res Function(_$RefreshMovieImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RefreshMovie
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? ignoreNFO = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
-    return _then(_$_RefreshMovie(
+    return _then(_$RefreshMovieImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -116,23 +124,23 @@ class __$$_RefreshMovieCopyWithImpl<$Res>
           ? _value.ignoreNFO
           : ignoreNFO // ignore: cast_nullable_to_non_nullable
               as bool,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_RefreshMovie extends _RefreshMovie {
-  const _$_RefreshMovie(@JsonKey(name: 'movieid') this.id,
-      {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false, this.title})
+class _$RefreshMovieImpl extends _RefreshMovie {
+  const _$RefreshMovieImpl(@JsonKey(name: 'movieid') this.id,
+      {@JsonKey(name: 'ignorenfo') this.ignoreNFO = false, this.title = ''})
       : super._();
 
-  factory _$_RefreshMovie.fromJson(Map<String, dynamic> json) =>
-      _$$_RefreshMovieFromJson(json);
+  factory _$RefreshMovieImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RefreshMovieImplFromJson(json);
 
   @override
   @JsonKey(name: 'movieid')
@@ -141,7 +149,8 @@ class _$_RefreshMovie extends _RefreshMovie {
   @JsonKey(name: 'ignorenfo')
   final bool ignoreNFO;
   @override
-  final String? title;
+  @JsonKey()
+  final String title;
 
   @override
   String toString() {
@@ -149,29 +158,31 @@ class _$_RefreshMovie extends _RefreshMovie {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RefreshMovie &&
+            other is _$RefreshMovieImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.ignoreNFO, ignoreNFO) ||
                 other.ignoreNFO == ignoreNFO) &&
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, ignoreNFO, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RefreshMovie
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RefreshMovieCopyWith<_$_RefreshMovie> get copyWith =>
-      __$$_RefreshMovieCopyWithImpl<_$_RefreshMovie>(this, _$identity);
+  _$$RefreshMovieImplCopyWith<_$RefreshMovieImpl> get copyWith =>
+      __$$RefreshMovieImplCopyWithImpl<_$RefreshMovieImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RefreshMovieToJson(
+    return _$$RefreshMovieImplToJson(
       this,
     );
   }
@@ -180,11 +191,11 @@ class _$_RefreshMovie extends _RefreshMovie {
 abstract class _RefreshMovie extends RefreshMovie {
   const factory _RefreshMovie(@JsonKey(name: 'movieid') final int id,
       {@JsonKey(name: 'ignorenfo') final bool ignoreNFO,
-      final String? title}) = _$_RefreshMovie;
+      final String title}) = _$RefreshMovieImpl;
   const _RefreshMovie._() : super._();
 
   factory _RefreshMovie.fromJson(Map<String, dynamic> json) =
-      _$_RefreshMovie.fromJson;
+      _$RefreshMovieImpl.fromJson;
 
   @override
   @JsonKey(name: 'movieid')
@@ -193,9 +204,12 @@ abstract class _RefreshMovie extends RefreshMovie {
   @JsonKey(name: 'ignorenfo')
   bool get ignoreNFO;
   @override
-  String? get title;
+  String get title;
+
+  /// Create a copy of RefreshMovie
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RefreshMovieCopyWith<_$_RefreshMovie> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RefreshMovieImplCopyWith<_$RefreshMovieImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

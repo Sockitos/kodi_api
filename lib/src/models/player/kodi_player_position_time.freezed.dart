@@ -12,7 +12,7 @@ part of 'kodi_player_position_time.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerPositionTime _$KodiPlayerPositionTimeFromJson(
     Map<String, dynamic> json) {
@@ -26,8 +26,12 @@ mixin _$KodiPlayerPositionTime {
   int get minutes => throw _privateConstructorUsedError;
   int get seconds => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerPositionTime to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerPositionTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerPositionTimeCopyWith<KodiPlayerPositionTime> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +56,8 @@ class _$KodiPlayerPositionTimeCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerPositionTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,25 +88,29 @@ class _$KodiPlayerPositionTimeCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPositionTimeCopyWith<$Res>
+abstract class _$$KodiPlayerPositionTimeImplCopyWith<$Res>
     implements $KodiPlayerPositionTimeCopyWith<$Res> {
-  factory _$$_KodiPlayerPositionTimeCopyWith(_$_KodiPlayerPositionTime value,
-          $Res Function(_$_KodiPlayerPositionTime) then) =
-      __$$_KodiPlayerPositionTimeCopyWithImpl<$Res>;
+  factory _$$KodiPlayerPositionTimeImplCopyWith(
+          _$KodiPlayerPositionTimeImpl value,
+          $Res Function(_$KodiPlayerPositionTimeImpl) then) =
+      __$$KodiPlayerPositionTimeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int hours, int milliseconds, int minutes, int seconds});
 }
 
 /// @nodoc
-class __$$_KodiPlayerPositionTimeCopyWithImpl<$Res>
+class __$$KodiPlayerPositionTimeImplCopyWithImpl<$Res>
     extends _$KodiPlayerPositionTimeCopyWithImpl<$Res,
-        _$_KodiPlayerPositionTime>
-    implements _$$_KodiPlayerPositionTimeCopyWith<$Res> {
-  __$$_KodiPlayerPositionTimeCopyWithImpl(_$_KodiPlayerPositionTime _value,
-      $Res Function(_$_KodiPlayerPositionTime) _then)
+        _$KodiPlayerPositionTimeImpl>
+    implements _$$KodiPlayerPositionTimeImplCopyWith<$Res> {
+  __$$KodiPlayerPositionTimeImplCopyWithImpl(
+      _$KodiPlayerPositionTimeImpl _value,
+      $Res Function(_$KodiPlayerPositionTimeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPositionTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -109,7 +119,7 @@ class __$$_KodiPlayerPositionTimeCopyWithImpl<$Res>
     Object? minutes = null,
     Object? seconds = null,
   }) {
-    return _then(_$_KodiPlayerPositionTime(
+    return _then(_$KodiPlayerPositionTimeImpl(
       hours: null == hours
           ? _value.hours
           : hours // ignore: cast_nullable_to_non_nullable
@@ -132,23 +142,27 @@ class __$$_KodiPlayerPositionTimeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPositionTime implements _KodiPlayerPositionTime {
-  const _$_KodiPlayerPositionTime(
-      {required this.hours,
-      required this.milliseconds,
-      required this.minutes,
-      required this.seconds});
+class _$KodiPlayerPositionTimeImpl implements _KodiPlayerPositionTime {
+  const _$KodiPlayerPositionTimeImpl(
+      {this.hours = 0,
+      this.milliseconds = 0,
+      this.minutes = 0,
+      this.seconds = 0});
 
-  factory _$_KodiPlayerPositionTime.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerPositionTimeFromJson(json);
+  factory _$KodiPlayerPositionTimeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerPositionTimeImplFromJson(json);
 
   @override
+  @JsonKey()
   final int hours;
   @override
+  @JsonKey()
   final int milliseconds;
   @override
+  @JsonKey()
   final int minutes;
   @override
+  @JsonKey()
   final int seconds;
 
   @override
@@ -157,10 +171,10 @@ class _$_KodiPlayerPositionTime implements _KodiPlayerPositionTime {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPositionTime &&
+            other is _$KodiPlayerPositionTimeImpl &&
             (identical(other.hours, hours) || other.hours == hours) &&
             (identical(other.milliseconds, milliseconds) ||
                 other.milliseconds == milliseconds) &&
@@ -168,21 +182,23 @@ class _$_KodiPlayerPositionTime implements _KodiPlayerPositionTime {
             (identical(other.seconds, seconds) || other.seconds == seconds));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, hours, milliseconds, minutes, seconds);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPositionTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPositionTimeCopyWith<_$_KodiPlayerPositionTime> get copyWith =>
-      __$$_KodiPlayerPositionTimeCopyWithImpl<_$_KodiPlayerPositionTime>(
-          this, _$identity);
+  _$$KodiPlayerPositionTimeImplCopyWith<_$KodiPlayerPositionTimeImpl>
+      get copyWith => __$$KodiPlayerPositionTimeImplCopyWithImpl<
+          _$KodiPlayerPositionTimeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPositionTimeToJson(
+    return _$$KodiPlayerPositionTimeImplToJson(
       this,
     );
   }
@@ -190,13 +206,13 @@ class _$_KodiPlayerPositionTime implements _KodiPlayerPositionTime {
 
 abstract class _KodiPlayerPositionTime implements KodiPlayerPositionTime {
   const factory _KodiPlayerPositionTime(
-      {required final int hours,
-      required final int milliseconds,
-      required final int minutes,
-      required final int seconds}) = _$_KodiPlayerPositionTime;
+      {final int hours,
+      final int milliseconds,
+      final int minutes,
+      final int seconds}) = _$KodiPlayerPositionTimeImpl;
 
   factory _KodiPlayerPositionTime.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerPositionTime.fromJson;
+      _$KodiPlayerPositionTimeImpl.fromJson;
 
   @override
   int get hours;
@@ -206,8 +222,11 @@ abstract class _KodiPlayerPositionTime implements KodiPlayerPositionTime {
   int get minutes;
   @override
   int get seconds;
+
+  /// Create a copy of KodiPlayerPositionTime
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPositionTimeCopyWith<_$_KodiPlayerPositionTime> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPositionTimeImplCopyWith<_$KodiPlayerPositionTimeImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

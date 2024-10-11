@@ -6,7 +6,8 @@ part of 'get_timers.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetTimers _$$_GetTimersFromJson(Map<String, dynamic> json) => _$_GetTimers(
+_$GetTimersImpl _$$GetTimersImplFromJson(Map<String, dynamic> json) =>
+    _$GetTimersImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsTimerEnumMap, e))
           .toSet(),
@@ -18,7 +19,7 @@ _$_GetTimers _$$_GetTimersFromJson(Map<String, dynamic> json) => _$_GetTimers(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetTimersToJson(_$_GetTimers instance) {
+Map<String, dynamic> _$$GetTimersImplToJson(_$GetTimersImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -70,9 +71,9 @@ const _$KodiPVRFieldsTimerEnumMap = {
   KodiPVRFieldsTimer.broadcastId: 'broadcastid',
 };
 
-_$_KodiPVRGetTimersResponse _$$_KodiPVRGetTimersResponseFromJson(
+_$KodiPVRGetTimersResponseImpl _$$KodiPVRGetTimersResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRGetTimersResponse(
+    _$KodiPVRGetTimersResponseImpl(
       timers: (json['timers'] as List<dynamic>)
           .map((e) => KodiPVRDetailsTimer.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -80,8 +81,8 @@ _$_KodiPVRGetTimersResponse _$$_KodiPVRGetTimersResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiPVRGetTimersResponseToJson(
-        _$_KodiPVRGetTimersResponse instance) =>
+Map<String, dynamic> _$$KodiPVRGetTimersResponseImplToJson(
+        _$KodiPVRGetTimersResponseImpl instance) =>
     <String, dynamic>{
       'timers': instance.timers.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

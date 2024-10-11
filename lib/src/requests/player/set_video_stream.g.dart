@@ -6,13 +6,14 @@ part of 'set_video_stream.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetVideoStream _$$_SetVideoStreamFromJson(Map<String, dynamic> json) =>
-    _$_SetVideoStream(
-      json['playerid'] as int,
+_$SetVideoStreamImpl _$$SetVideoStreamImplFromJson(Map<String, dynamic> json) =>
+    _$SetVideoStreamImpl(
+      (json['playerid'] as num).toInt(),
       const SetVideoStreamStreamConverter().fromJson(json['stream']),
     );
 
-Map<String, dynamic> _$$_SetVideoStreamToJson(_$_SetVideoStream instance) {
+Map<String, dynamic> _$$SetVideoStreamImplToJson(
+    _$SetVideoStreamImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };
@@ -28,15 +29,15 @@ Map<String, dynamic> _$$_SetVideoStreamToJson(_$_SetVideoStream instance) {
   return val;
 }
 
-_$_SetVideoStreamStreamEnum _$$_SetVideoStreamStreamEnumFromJson(
+_$SetVideoStreamStreamEnumImpl _$$SetVideoStreamStreamEnumImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetVideoStreamStreamEnum(
+    _$SetVideoStreamStreamEnumImpl(
       $enumDecode(_$SetVideoStreamStreamEnumEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetVideoStreamStreamEnumToJson(
-        _$_SetVideoStreamStreamEnum instance) =>
+Map<String, dynamic> _$$SetVideoStreamStreamEnumImplToJson(
+        _$SetVideoStreamStreamEnumImpl instance) =>
     <String, dynamic>{
       'value': _$SetVideoStreamStreamEnumEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -47,15 +48,15 @@ const _$SetVideoStreamStreamEnumEnumMap = {
   SetVideoStreamStreamEnum.next: 'next',
 };
 
-_$_SetVideoStreamStreamIndex _$$_SetVideoStreamStreamIndexFromJson(
+_$SetVideoStreamStreamIndexImpl _$$SetVideoStreamStreamIndexImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetVideoStreamStreamIndex(
-      json['value'] as int,
+    _$SetVideoStreamStreamIndexImpl(
+      (json['value'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetVideoStreamStreamIndexToJson(
-        _$_SetVideoStreamStreamIndex instance) =>
+Map<String, dynamic> _$$SetVideoStreamStreamIndexImplToJson(
+        _$SetVideoStreamStreamIndexImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

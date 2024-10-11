@@ -6,8 +6,8 @@ part of 'get_file_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetFileDetails _$$_GetFileDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetFileDetails(
+_$GetFileDetailsImpl _$$GetFileDetailsImplFromJson(Map<String, dynamic> json) =>
+    _$GetFileDetailsImpl(
       json['file'] as String,
       media: $enumDecodeNullable(_$KodiFilesMediaEnumMap, json['media']) ??
           KodiFilesMedia.files,
@@ -16,7 +16,8 @@ _$_GetFileDetails _$$_GetFileDetailsFromJson(Map<String, dynamic> json) =>
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetFileDetailsToJson(_$_GetFileDetails instance) {
+Map<String, dynamic> _$$GetFileDetailsImplToJson(
+    _$GetFileDetailsImpl instance) {
   final val = <String, dynamic>{
     'file': instance.file,
     'media': _$KodiFilesMediaEnumMap[instance.media]!,

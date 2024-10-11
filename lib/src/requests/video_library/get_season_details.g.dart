@@ -6,15 +6,17 @@ part of 'get_season_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSeasonDetails _$$_GetSeasonDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetSeasonDetails(
-      json['seasonid'] as int,
+_$GetSeasonDetailsImpl _$$GetSeasonDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetSeasonDetailsImpl(
+      (json['seasonid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsSeasonEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetSeasonDetailsToJson(_$_GetSeasonDetails instance) {
+Map<String, dynamic> _$$GetSeasonDetailsImplToJson(
+    _$GetSeasonDetailsImpl instance) {
   final val = <String, dynamic>{
     'seasonid': instance.id,
   };

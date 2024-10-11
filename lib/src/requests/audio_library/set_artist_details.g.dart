@@ -6,9 +6,10 @@ part of 'set_artist_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetArtistDetails _$$_SetArtistDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetArtistDetails(
-      json['artistid'] as int,
+_$SetArtistDetailsImpl _$$SetArtistDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetArtistDetailsImpl(
+      (json['artistid'] as num).toInt(),
       artist: json['artist'] as String?,
       instruments: (json['instrument'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -40,7 +41,8 @@ _$_SetArtistDetails _$$_SetArtistDetailsFromJson(Map<String, dynamic> json) =>
           : KodiMediaArtworkSet.fromJson(json['art'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SetArtistDetailsToJson(_$_SetArtistDetails instance) {
+Map<String, dynamic> _$$SetArtistDetailsImplToJson(
+    _$SetArtistDetailsImpl instance) {
   final val = <String, dynamic>{
     'artistid': instance.id,
   };

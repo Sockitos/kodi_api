@@ -12,7 +12,7 @@ part of 'kodi_notification_player_on_pause_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationPlayerOnPauseParams
     _$KodiNotificationPlayerOnPauseParamsFromJson(Map<String, dynamic> json) {
@@ -24,8 +24,12 @@ mixin _$KodiNotificationPlayerOnPauseParams {
   String get sender => throw _privateConstructorUsedError;
   KodiPlayerNotificationsData get data => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlayerOnPauseParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlayerOnPauseParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlayerOnPauseParamsCopyWith<
           KodiNotificationPlayerOnPauseParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -55,6 +59,8 @@ class _$KodiNotificationPlayerOnPauseParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlayerOnPauseParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -73,6 +79,8 @@ class _$KodiNotificationPlayerOnPauseParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlayerOnPauseParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerNotificationsDataCopyWith<$Res> get data {
@@ -83,12 +91,12 @@ class _$KodiNotificationPlayerOnPauseParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnPauseParamsCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnPauseParamsImplCopyWith<$Res>
     implements $KodiNotificationPlayerOnPauseParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnPauseParamsCopyWith(
-          _$_KodiNotificationPlayerOnPauseParams value,
-          $Res Function(_$_KodiNotificationPlayerOnPauseParams) then) =
-      __$$_KodiNotificationPlayerOnPauseParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlayerOnPauseParamsImplCopyWith(
+          _$KodiNotificationPlayerOnPauseParamsImpl value,
+          $Res Function(_$KodiNotificationPlayerOnPauseParamsImpl) then) =
+      __$$KodiNotificationPlayerOnPauseParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiPlayerNotificationsData data});
@@ -98,22 +106,24 @@ abstract class _$$_KodiNotificationPlayerOnPauseParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnPauseParamsCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnPauseParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlayerOnPauseParamsCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnPauseParams>
-    implements _$$_KodiNotificationPlayerOnPauseParamsCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnPauseParamsCopyWithImpl(
-      _$_KodiNotificationPlayerOnPauseParams _value,
-      $Res Function(_$_KodiNotificationPlayerOnPauseParams) _then)
+        _$KodiNotificationPlayerOnPauseParamsImpl>
+    implements _$$KodiNotificationPlayerOnPauseParamsImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnPauseParamsImplCopyWithImpl(
+      _$KodiNotificationPlayerOnPauseParamsImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnPauseParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlayerOnPauseParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnPauseParams(
+    return _then(_$KodiNotificationPlayerOnPauseParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -128,14 +138,14 @@ class __$$_KodiNotificationPlayerOnPauseParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnPauseParams
+class _$KodiNotificationPlayerOnPauseParamsImpl
     implements _KodiNotificationPlayerOnPauseParams {
-  const _$_KodiNotificationPlayerOnPauseParams(
+  const _$KodiNotificationPlayerOnPauseParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationPlayerOnPauseParams.fromJson(
+  factory _$KodiNotificationPlayerOnPauseParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnPauseParamsFromJson(json);
+      _$$KodiNotificationPlayerOnPauseParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -148,29 +158,31 @@ class _$_KodiNotificationPlayerOnPauseParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnPauseParams &&
+            other is _$KodiNotificationPlayerOnPauseParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlayerOnPauseParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnPauseParamsCopyWith<
-          _$_KodiNotificationPlayerOnPauseParams>
-      get copyWith => __$$_KodiNotificationPlayerOnPauseParamsCopyWithImpl<
-          _$_KodiNotificationPlayerOnPauseParams>(this, _$identity);
+  _$$KodiNotificationPlayerOnPauseParamsImplCopyWith<
+          _$KodiNotificationPlayerOnPauseParamsImpl>
+      get copyWith => __$$KodiNotificationPlayerOnPauseParamsImplCopyWithImpl<
+          _$KodiNotificationPlayerOnPauseParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnPauseParamsToJson(
+    return _$$KodiNotificationPlayerOnPauseParamsImplToJson(
       this,
     );
   }
@@ -181,19 +193,22 @@ abstract class _KodiNotificationPlayerOnPauseParams
   const factory _KodiNotificationPlayerOnPauseParams(
           {required final String sender,
           required final KodiPlayerNotificationsData data}) =
-      _$_KodiNotificationPlayerOnPauseParams;
+      _$KodiNotificationPlayerOnPauseParamsImpl;
 
   factory _KodiNotificationPlayerOnPauseParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnPauseParams.fromJson;
+      _$KodiNotificationPlayerOnPauseParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiPlayerNotificationsData get data;
+
+  /// Create a copy of KodiNotificationPlayerOnPauseParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnPauseParamsCopyWith<
-          _$_KodiNotificationPlayerOnPauseParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnPauseParamsImplCopyWith<
+          _$KodiNotificationPlayerOnPauseParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

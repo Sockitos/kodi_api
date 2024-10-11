@@ -6,6 +6,7 @@ part of 'left.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Left _$$_LeftFromJson(Map<String, dynamic> json) => _$_Left();
+_$LeftImpl _$$LeftImplFromJson(Map<String, dynamic> json) => _$LeftImpl();
 
-Map<String, dynamic> _$$_LeftToJson(_$_Left instance) => <String, dynamic>{};
+Map<String, dynamic> _$$LeftImplToJson(_$LeftImpl instance) =>
+    <String, dynamic>{};

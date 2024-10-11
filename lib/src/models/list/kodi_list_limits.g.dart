@@ -6,13 +6,14 @@ part of 'kodi_list_limits.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListLimits _$$_KodiListLimitsFromJson(Map<String, dynamic> json) =>
-    _$_KodiListLimits(
-      end: json['end'] as int,
-      start: json['start'] as int? ?? 0,
+_$KodiListLimitsImpl _$$KodiListLimitsImplFromJson(Map<String, dynamic> json) =>
+    _$KodiListLimitsImpl(
+      end: (json['end'] as num?)?.toInt() ?? -1,
+      start: (json['start'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$_KodiListLimitsToJson(_$_KodiListLimits instance) =>
+Map<String, dynamic> _$$KodiListLimitsImplToJson(
+        _$KodiListLimitsImpl instance) =>
     <String, dynamic>{
       'end': instance.end,
       'start': instance.start,

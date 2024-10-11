@@ -6,32 +6,32 @@ part of 'kodi_notification_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationResponseRequest _$$_KodiNotificationResponseRequestFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiNotificationResponseRequest(
-      const KodiResponseConverter()
-          .fromJson(json['response'] as Map<String, dynamic>),
-      $type: json['runtimeType'] as String?,
-    );
+_$KodiNotificationResponseRequestImpl
+    _$$KodiNotificationResponseRequestImplFromJson(Map<String, dynamic> json) =>
+        _$KodiNotificationResponseRequestImpl(
+          const KodiResponseConverter()
+              .fromJson(json['response'] as Map<String, dynamic>),
+          $type: json['runtimeType'] as String?,
+        );
 
-Map<String, dynamic> _$$_KodiNotificationResponseRequestToJson(
-        _$_KodiNotificationResponseRequest instance) =>
+Map<String, dynamic> _$$KodiNotificationResponseRequestImplToJson(
+        _$KodiNotificationResponseRequestImpl instance) =>
     <String, dynamic>{
       'response': const KodiResponseConverter().toJson(instance.response),
       'runtimeType': instance.$type,
     };
 
-_$_KodiNotificationResponseNotification
-    _$$_KodiNotificationResponseNotificationFromJson(
+_$KodiNotificationResponseNotificationImpl
+    _$$KodiNotificationResponseNotificationImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationResponseNotification(
+        _$KodiNotificationResponseNotificationImpl(
           KodiNotification.fromJson(
               json['notification'] as Map<String, dynamic>),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiNotificationResponseNotificationToJson(
-        _$_KodiNotificationResponseNotification instance) =>
+Map<String, dynamic> _$$KodiNotificationResponseNotificationImplToJson(
+        _$KodiNotificationResponseNotificationImpl instance) =>
     <String, dynamic>{
       'notification': instance.notification.toJson(),
       'runtimeType': instance.$type,

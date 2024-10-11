@@ -6,16 +6,17 @@ part of 'kodi_notification_player_on_play_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationPlayerOnPlayParams
-    _$$_KodiNotificationPlayerOnPlayParamsFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationPlayerOnPlayParams(
+_$KodiNotificationPlayerOnPlayParamsImpl
+    _$$KodiNotificationPlayerOnPlayParamsImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationPlayerOnPlayParamsImpl(
           sender: json['sender'] as String,
           data: KodiPlayerNotificationsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationPlayerOnPlayParamsToJson(
-        _$_KodiNotificationPlayerOnPlayParams instance) =>
+Map<String, dynamic> _$$KodiNotificationPlayerOnPlayParamsImplToJson(
+        _$KodiNotificationPlayerOnPlayParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),

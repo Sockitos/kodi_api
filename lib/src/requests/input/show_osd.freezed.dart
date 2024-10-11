@@ -12,7 +12,7 @@ part of 'show_osd.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ShowOSD _$ShowOSDFromJson(Map<String, dynamic> json) {
   return _ShowOSD.fromJson(json);
@@ -20,6 +20,7 @@ ShowOSD _$ShowOSDFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ShowOSD {
+  /// Serializes this ShowOSD to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,30 +39,37 @@ class _$ShowOSDCopyWithImpl<$Res, $Val extends ShowOSD>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ShowOSD
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_ShowOSDCopyWith<$Res> {
-  factory _$$_ShowOSDCopyWith(
-          _$_ShowOSD value, $Res Function(_$_ShowOSD) then) =
-      __$$_ShowOSDCopyWithImpl<$Res>;
+abstract class _$$ShowOSDImplCopyWith<$Res> {
+  factory _$$ShowOSDImplCopyWith(
+          _$ShowOSDImpl value, $Res Function(_$ShowOSDImpl) then) =
+      __$$ShowOSDImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ShowOSDCopyWithImpl<$Res>
-    extends _$ShowOSDCopyWithImpl<$Res, _$_ShowOSD>
-    implements _$$_ShowOSDCopyWith<$Res> {
-  __$$_ShowOSDCopyWithImpl(_$_ShowOSD _value, $Res Function(_$_ShowOSD) _then)
+class __$$ShowOSDImplCopyWithImpl<$Res>
+    extends _$ShowOSDCopyWithImpl<$Res, _$ShowOSDImpl>
+    implements _$$ShowOSDImplCopyWith<$Res> {
+  __$$ShowOSDImplCopyWithImpl(
+      _$ShowOSDImpl _value, $Res Function(_$ShowOSDImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ShowOSD
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShowOSD extends _ShowOSD {
-  const _$_ShowOSD() : super._();
+class _$ShowOSDImpl extends _ShowOSD {
+  const _$ShowOSDImpl() : super._();
 
-  factory _$_ShowOSD.fromJson(Map<String, dynamic> json) =>
-      _$$_ShowOSDFromJson(json);
+  factory _$ShowOSDImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ShowOSDImplFromJson(json);
 
   @override
   String toString() {
@@ -69,26 +77,26 @@ class _$_ShowOSD extends _ShowOSD {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ShowOSD);
+        (other.runtimeType == runtimeType && other is _$ShowOSDImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShowOSDToJson(
+    return _$$ShowOSDImplToJson(
       this,
     );
   }
 }
 
 abstract class _ShowOSD extends ShowOSD {
-  const factory _ShowOSD() = _$_ShowOSD;
+  const factory _ShowOSD() = _$ShowOSDImpl;
   const _ShowOSD._() : super._();
 
-  factory _ShowOSD.fromJson(Map<String, dynamic> json) = _$_ShowOSD.fromJson;
+  factory _ShowOSD.fromJson(Map<String, dynamic> json) = _$ShowOSDImpl.fromJson;
 }

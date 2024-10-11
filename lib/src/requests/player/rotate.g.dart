@@ -6,13 +6,14 @@ part of 'rotate.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Rotate _$$_RotateFromJson(Map<String, dynamic> json) => _$_Rotate(
-      json['playerid'] as int,
+_$RotateImpl _$$RotateImplFromJson(Map<String, dynamic> json) => _$RotateImpl(
+      (json['playerid'] as num).toInt(),
       value: $enumDecodeNullable(_$KodiPlayerRotateEnumMap, json['value']) ??
           KodiPlayerRotate.clockwise,
     );
 
-Map<String, dynamic> _$$_RotateToJson(_$_Rotate instance) => <String, dynamic>{
+Map<String, dynamic> _$$RotateImplToJson(_$RotateImpl instance) =>
+    <String, dynamic>{
       'playerid': instance.id,
       'value': _$KodiPlayerRotateEnumMap[instance.value]!,
     };

@@ -12,7 +12,7 @@ part of 'record.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Record _$RecordFromJson(Map<String, dynamic> json) {
   return _Record.fromJson(json);
@@ -20,12 +20,17 @@ Record _$RecordFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Record {
+  @KodiGlobalToggleConverter()
   KodiGlobalToggle get record => throw _privateConstructorUsedError;
-  @RecordChannelConverter()
-  RecordChannel get channel => throw _privateConstructorUsedError;
+  @KodiRecordChannelConverter()
+  KodiRecordChannel get channel => throw _privateConstructorUsedError;
 
+  /// Serializes this Record to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Record
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RecordCopyWith<Record> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -35,11 +40,11 @@ abstract class $RecordCopyWith<$Res> {
       _$RecordCopyWithImpl<$Res, Record>;
   @useResult
   $Res call(
-      {KodiGlobalToggle record,
-      @RecordChannelConverter() RecordChannel channel});
+      {@KodiGlobalToggleConverter() KodiGlobalToggle record,
+      @KodiRecordChannelConverter() KodiRecordChannel channel});
 
   $KodiGlobalToggleCopyWith<$Res> get record;
-  $RecordChannelCopyWith<$Res> get channel;
+  $KodiRecordChannelCopyWith<$Res> get channel;
 }
 
 /// @nodoc
@@ -52,6 +57,8 @@ class _$RecordCopyWithImpl<$Res, $Val extends Record>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Record
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -66,10 +73,12 @@ class _$RecordCopyWithImpl<$Res, $Val extends Record>
       channel: null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
-              as RecordChannel,
+              as KodiRecordChannel,
     ) as $Val);
   }
 
+  /// Create a copy of Record
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalToggleCopyWith<$Res> get record {
@@ -78,45 +87,51 @@ class _$RecordCopyWithImpl<$Res, $Val extends Record>
     });
   }
 
+  /// Create a copy of Record
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $RecordChannelCopyWith<$Res> get channel {
-    return $RecordChannelCopyWith<$Res>(_value.channel, (value) {
+  $KodiRecordChannelCopyWith<$Res> get channel {
+    return $KodiRecordChannelCopyWith<$Res>(_value.channel, (value) {
       return _then(_value.copyWith(channel: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_RecordCopyWith<$Res> implements $RecordCopyWith<$Res> {
-  factory _$$_RecordCopyWith(_$_Record value, $Res Function(_$_Record) then) =
-      __$$_RecordCopyWithImpl<$Res>;
+abstract class _$$RecordImplCopyWith<$Res> implements $RecordCopyWith<$Res> {
+  factory _$$RecordImplCopyWith(
+          _$RecordImpl value, $Res Function(_$RecordImpl) then) =
+      __$$RecordImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {KodiGlobalToggle record,
-      @RecordChannelConverter() RecordChannel channel});
+      {@KodiGlobalToggleConverter() KodiGlobalToggle record,
+      @KodiRecordChannelConverter() KodiRecordChannel channel});
 
   @override
   $KodiGlobalToggleCopyWith<$Res> get record;
   @override
-  $RecordChannelCopyWith<$Res> get channel;
+  $KodiRecordChannelCopyWith<$Res> get channel;
 }
 
 /// @nodoc
-class __$$_RecordCopyWithImpl<$Res>
-    extends _$RecordCopyWithImpl<$Res, _$_Record>
-    implements _$$_RecordCopyWith<$Res> {
-  __$$_RecordCopyWithImpl(_$_Record _value, $Res Function(_$_Record) _then)
+class __$$RecordImplCopyWithImpl<$Res>
+    extends _$RecordCopyWithImpl<$Res, _$RecordImpl>
+    implements _$$RecordImplCopyWith<$Res> {
+  __$$RecordImplCopyWithImpl(
+      _$RecordImpl _value, $Res Function(_$RecordImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Record
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? record = null,
     Object? channel = null,
   }) {
-    return _then(_$_Record(
+    return _then(_$RecordImpl(
       record: null == record
           ? _value.record
           : record // ignore: cast_nullable_to_non_nullable
@@ -124,31 +139,32 @@ class __$$_RecordCopyWithImpl<$Res>
       channel: null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
-              as RecordChannel,
+              as KodiRecordChannel,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Record extends _Record {
-  const _$_Record(
-      {this.record =
+class _$RecordImpl extends _Record {
+  const _$RecordImpl(
+      {@KodiGlobalToggleConverter() this.record =
           const KodiGlobalToggle.enumerator(KodiGlobalToggleEnum.toggle),
-      @RecordChannelConverter()
-      this.channel = const RecordChannel.enumerator(KodiPVRChannel.current)})
+      @KodiRecordChannelConverter() this.channel =
+          const KodiRecordChannel.enumerator(KodiPVRChannel.current)})
       : super._();
 
-  factory _$_Record.fromJson(Map<String, dynamic> json) =>
-      _$$_RecordFromJson(json);
+  factory _$RecordImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RecordImplFromJson(json);
 
   @override
   @JsonKey()
+  @KodiGlobalToggleConverter()
   final KodiGlobalToggle record;
   @override
   @JsonKey()
-  @RecordChannelConverter()
-  final RecordChannel channel;
+  @KodiRecordChannelConverter()
+  final KodiRecordChannel channel;
 
   @override
   String toString() {
@@ -156,27 +172,29 @@ class _$_Record extends _Record {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Record &&
+            other is _$RecordImpl &&
             (identical(other.record, record) || other.record == record) &&
             (identical(other.channel, channel) || other.channel == channel));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, record, channel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Record
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecordCopyWith<_$_Record> get copyWith =>
-      __$$_RecordCopyWithImpl<_$_Record>(this, _$identity);
+  _$$RecordImplCopyWith<_$RecordImpl> get copyWith =>
+      __$$RecordImplCopyWithImpl<_$RecordImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RecordToJson(
+    return _$$RecordImplToJson(
       this,
     );
   }
@@ -184,38 +202,43 @@ class _$_Record extends _Record {
 
 abstract class _Record extends Record {
   const factory _Record(
-      {final KodiGlobalToggle record,
-      @RecordChannelConverter() final RecordChannel channel}) = _$_Record;
+          {@KodiGlobalToggleConverter() final KodiGlobalToggle record,
+          @KodiRecordChannelConverter() final KodiRecordChannel channel}) =
+      _$RecordImpl;
   const _Record._() : super._();
 
-  factory _Record.fromJson(Map<String, dynamic> json) = _$_Record.fromJson;
+  factory _Record.fromJson(Map<String, dynamic> json) = _$RecordImpl.fromJson;
 
   @override
+  @KodiGlobalToggleConverter()
   KodiGlobalToggle get record;
   @override
-  @RecordChannelConverter()
-  RecordChannel get channel;
+  @KodiRecordChannelConverter()
+  KodiRecordChannel get channel;
+
+  /// Create a copy of Record
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_RecordCopyWith<_$_Record> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RecordImplCopyWith<_$RecordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-RecordChannel _$RecordChannelFromJson(Map<String, dynamic> json) {
+KodiRecordChannel _$KodiRecordChannelFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
     case 'int':
-      return _RecordChannelInt.fromJson(json);
+      return _KodiRecordChannelInt.fromJson(json);
     case 'enumerator':
-      return _RecordChannelEnum.fromJson(json);
+      return _KodiRecordChannelEnum.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'RecordChannel',
+      throw CheckedFromJsonException(json, 'runtimeType', 'KodiRecordChannel',
           'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
 /// @nodoc
-mixin _$RecordChannel {
+mixin _$KodiRecordChannel {
   Object get channel => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -238,67 +261,74 @@ mixin _$RecordChannel {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RecordChannelInt value) int,
-    required TResult Function(_RecordChannelEnum value) enumerator,
+    required TResult Function(_KodiRecordChannelInt value) int,
+    required TResult Function(_KodiRecordChannelEnum value) enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RecordChannelInt value)? int,
-    TResult? Function(_RecordChannelEnum value)? enumerator,
+    TResult? Function(_KodiRecordChannelInt value)? int,
+    TResult? Function(_KodiRecordChannelEnum value)? enumerator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RecordChannelInt value)? int,
-    TResult Function(_RecordChannelEnum value)? enumerator,
+    TResult Function(_KodiRecordChannelInt value)? int,
+    TResult Function(_KodiRecordChannelEnum value)? enumerator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiRecordChannel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RecordChannelCopyWith<$Res> {
-  factory $RecordChannelCopyWith(
-          RecordChannel value, $Res Function(RecordChannel) then) =
-      _$RecordChannelCopyWithImpl<$Res, RecordChannel>;
+abstract class $KodiRecordChannelCopyWith<$Res> {
+  factory $KodiRecordChannelCopyWith(
+          KodiRecordChannel value, $Res Function(KodiRecordChannel) then) =
+      _$KodiRecordChannelCopyWithImpl<$Res, KodiRecordChannel>;
 }
 
 /// @nodoc
-class _$RecordChannelCopyWithImpl<$Res, $Val extends RecordChannel>
-    implements $RecordChannelCopyWith<$Res> {
-  _$RecordChannelCopyWithImpl(this._value, this._then);
+class _$KodiRecordChannelCopyWithImpl<$Res, $Val extends KodiRecordChannel>
+    implements $KodiRecordChannelCopyWith<$Res> {
+  _$KodiRecordChannelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiRecordChannel
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_RecordChannelIntCopyWith<$Res> {
-  factory _$$_RecordChannelIntCopyWith(
-          _$_RecordChannelInt value, $Res Function(_$_RecordChannelInt) then) =
-      __$$_RecordChannelIntCopyWithImpl<$Res>;
+abstract class _$$KodiRecordChannelIntImplCopyWith<$Res> {
+  factory _$$KodiRecordChannelIntImplCopyWith(_$KodiRecordChannelIntImpl value,
+          $Res Function(_$KodiRecordChannelIntImpl) then) =
+      __$$KodiRecordChannelIntImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int channel});
 }
 
 /// @nodoc
-class __$$_RecordChannelIntCopyWithImpl<$Res>
-    extends _$RecordChannelCopyWithImpl<$Res, _$_RecordChannelInt>
-    implements _$$_RecordChannelIntCopyWith<$Res> {
-  __$$_RecordChannelIntCopyWithImpl(
-      _$_RecordChannelInt _value, $Res Function(_$_RecordChannelInt) _then)
+class __$$KodiRecordChannelIntImplCopyWithImpl<$Res>
+    extends _$KodiRecordChannelCopyWithImpl<$Res, _$KodiRecordChannelIntImpl>
+    implements _$$KodiRecordChannelIntImplCopyWith<$Res> {
+  __$$KodiRecordChannelIntImplCopyWithImpl(_$KodiRecordChannelIntImpl _value,
+      $Res Function(_$KodiRecordChannelIntImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiRecordChannel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? channel = null,
   }) {
-    return _then(_$_RecordChannelInt(
+    return _then(_$KodiRecordChannelIntImpl(
       null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
@@ -309,12 +339,12 @@ class __$$_RecordChannelIntCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RecordChannelInt implements _RecordChannelInt {
-  const _$_RecordChannelInt(this.channel, {final String? $type})
+class _$KodiRecordChannelIntImpl implements _KodiRecordChannelInt {
+  const _$KodiRecordChannelIntImpl(this.channel, {final String? $type})
       : $type = $type ?? 'int';
 
-  factory _$_RecordChannelInt.fromJson(Map<String, dynamic> json) =>
-      _$$_RecordChannelIntFromJson(json);
+  factory _$KodiRecordChannelIntImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiRecordChannelIntImplFromJson(json);
 
   @override
   final int channel;
@@ -324,26 +354,30 @@ class _$_RecordChannelInt implements _RecordChannelInt {
 
   @override
   String toString() {
-    return 'RecordChannel.int(channel: $channel)';
+    return 'KodiRecordChannel.int(channel: $channel)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RecordChannelInt &&
+            other is _$KodiRecordChannelIntImpl &&
             (identical(other.channel, channel) || other.channel == channel));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, channel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiRecordChannel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecordChannelIntCopyWith<_$_RecordChannelInt> get copyWith =>
-      __$$_RecordChannelIntCopyWithImpl<_$_RecordChannelInt>(this, _$identity);
+  _$$KodiRecordChannelIntImplCopyWith<_$KodiRecordChannelIntImpl>
+      get copyWith =>
+          __$$KodiRecordChannelIntImplCopyWithImpl<_$KodiRecordChannelIntImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -379,8 +413,8 @@ class _$_RecordChannelInt implements _RecordChannelInt {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RecordChannelInt value) int,
-    required TResult Function(_RecordChannelEnum value) enumerator,
+    required TResult Function(_KodiRecordChannelInt value) int,
+    required TResult Function(_KodiRecordChannelEnum value) enumerator,
   }) {
     return int(this);
   }
@@ -388,8 +422,8 @@ class _$_RecordChannelInt implements _RecordChannelInt {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RecordChannelInt value)? int,
-    TResult? Function(_RecordChannelEnum value)? enumerator,
+    TResult? Function(_KodiRecordChannelInt value)? int,
+    TResult? Function(_KodiRecordChannelEnum value)? enumerator,
   }) {
     return int?.call(this);
   }
@@ -397,8 +431,8 @@ class _$_RecordChannelInt implements _RecordChannelInt {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RecordChannelInt value)? int,
-    TResult Function(_RecordChannelEnum value)? enumerator,
+    TResult Function(_KodiRecordChannelInt value)? int,
+    TResult Function(_KodiRecordChannelEnum value)? enumerator,
     required TResult orElse(),
   }) {
     if (int != null) {
@@ -409,48 +443,55 @@ class _$_RecordChannelInt implements _RecordChannelInt {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RecordChannelIntToJson(
+    return _$$KodiRecordChannelIntImplToJson(
       this,
     );
   }
 }
 
-abstract class _RecordChannelInt implements RecordChannel {
-  const factory _RecordChannelInt(final int channel) = _$_RecordChannelInt;
+abstract class _KodiRecordChannelInt implements KodiRecordChannel {
+  const factory _KodiRecordChannelInt(final int channel) =
+      _$KodiRecordChannelIntImpl;
 
-  factory _RecordChannelInt.fromJson(Map<String, dynamic> json) =
-      _$_RecordChannelInt.fromJson;
+  factory _KodiRecordChannelInt.fromJson(Map<String, dynamic> json) =
+      _$KodiRecordChannelIntImpl.fromJson;
 
   @override
   int get channel;
-  @JsonKey(ignore: true)
-  _$$_RecordChannelIntCopyWith<_$_RecordChannelInt> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiRecordChannel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiRecordChannelIntImplCopyWith<_$KodiRecordChannelIntImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_RecordChannelEnumCopyWith<$Res> {
-  factory _$$_RecordChannelEnumCopyWith(_$_RecordChannelEnum value,
-          $Res Function(_$_RecordChannelEnum) then) =
-      __$$_RecordChannelEnumCopyWithImpl<$Res>;
+abstract class _$$KodiRecordChannelEnumImplCopyWith<$Res> {
+  factory _$$KodiRecordChannelEnumImplCopyWith(
+          _$KodiRecordChannelEnumImpl value,
+          $Res Function(_$KodiRecordChannelEnumImpl) then) =
+      __$$KodiRecordChannelEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiPVRChannel channel});
 }
 
 /// @nodoc
-class __$$_RecordChannelEnumCopyWithImpl<$Res>
-    extends _$RecordChannelCopyWithImpl<$Res, _$_RecordChannelEnum>
-    implements _$$_RecordChannelEnumCopyWith<$Res> {
-  __$$_RecordChannelEnumCopyWithImpl(
-      _$_RecordChannelEnum _value, $Res Function(_$_RecordChannelEnum) _then)
+class __$$KodiRecordChannelEnumImplCopyWithImpl<$Res>
+    extends _$KodiRecordChannelCopyWithImpl<$Res, _$KodiRecordChannelEnumImpl>
+    implements _$$KodiRecordChannelEnumImplCopyWith<$Res> {
+  __$$KodiRecordChannelEnumImplCopyWithImpl(_$KodiRecordChannelEnumImpl _value,
+      $Res Function(_$KodiRecordChannelEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiRecordChannel
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? channel = null,
   }) {
-    return _then(_$_RecordChannelEnum(
+    return _then(_$KodiRecordChannelEnumImpl(
       null == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
@@ -461,12 +502,12 @@ class __$$_RecordChannelEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RecordChannelEnum implements _RecordChannelEnum {
-  const _$_RecordChannelEnum(this.channel, {final String? $type})
+class _$KodiRecordChannelEnumImpl implements _KodiRecordChannelEnum {
+  const _$KodiRecordChannelEnumImpl(this.channel, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_RecordChannelEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_RecordChannelEnumFromJson(json);
+  factory _$KodiRecordChannelEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiRecordChannelEnumImplFromJson(json);
 
   @override
   final KodiPVRChannel channel;
@@ -476,27 +517,29 @@ class _$_RecordChannelEnum implements _RecordChannelEnum {
 
   @override
   String toString() {
-    return 'RecordChannel.enumerator(channel: $channel)';
+    return 'KodiRecordChannel.enumerator(channel: $channel)';
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RecordChannelEnum &&
+            other is _$KodiRecordChannelEnumImpl &&
             (identical(other.channel, channel) || other.channel == channel));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, channel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiRecordChannel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecordChannelEnumCopyWith<_$_RecordChannelEnum> get copyWith =>
-      __$$_RecordChannelEnumCopyWithImpl<_$_RecordChannelEnum>(
-          this, _$identity);
+  _$$KodiRecordChannelEnumImplCopyWith<_$KodiRecordChannelEnumImpl>
+      get copyWith => __$$KodiRecordChannelEnumImplCopyWithImpl<
+          _$KodiRecordChannelEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -532,8 +575,8 @@ class _$_RecordChannelEnum implements _RecordChannelEnum {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RecordChannelInt value) int,
-    required TResult Function(_RecordChannelEnum value) enumerator,
+    required TResult Function(_KodiRecordChannelInt value) int,
+    required TResult Function(_KodiRecordChannelEnum value) enumerator,
   }) {
     return enumerator(this);
   }
@@ -541,8 +584,8 @@ class _$_RecordChannelEnum implements _RecordChannelEnum {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RecordChannelInt value)? int,
-    TResult? Function(_RecordChannelEnum value)? enumerator,
+    TResult? Function(_KodiRecordChannelInt value)? int,
+    TResult? Function(_KodiRecordChannelEnum value)? enumerator,
   }) {
     return enumerator?.call(this);
   }
@@ -550,8 +593,8 @@ class _$_RecordChannelEnum implements _RecordChannelEnum {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RecordChannelInt value)? int,
-    TResult Function(_RecordChannelEnum value)? enumerator,
+    TResult Function(_KodiRecordChannelInt value)? int,
+    TResult Function(_KodiRecordChannelEnum value)? enumerator,
     required TResult orElse(),
   }) {
     if (enumerator != null) {
@@ -562,22 +605,25 @@ class _$_RecordChannelEnum implements _RecordChannelEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RecordChannelEnumToJson(
+    return _$$KodiRecordChannelEnumImplToJson(
       this,
     );
   }
 }
 
-abstract class _RecordChannelEnum implements RecordChannel {
-  const factory _RecordChannelEnum(final KodiPVRChannel channel) =
-      _$_RecordChannelEnum;
+abstract class _KodiRecordChannelEnum implements KodiRecordChannel {
+  const factory _KodiRecordChannelEnum(final KodiPVRChannel channel) =
+      _$KodiRecordChannelEnumImpl;
 
-  factory _RecordChannelEnum.fromJson(Map<String, dynamic> json) =
-      _$_RecordChannelEnum.fromJson;
+  factory _KodiRecordChannelEnum.fromJson(Map<String, dynamic> json) =
+      _$KodiRecordChannelEnumImpl.fromJson;
 
   @override
   KodiPVRChannel get channel;
-  @JsonKey(ignore: true)
-  _$$_RecordChannelEnumCopyWith<_$_RecordChannelEnum> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiRecordChannel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiRecordChannelEnumImplCopyWith<_$KodiRecordChannelEnumImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

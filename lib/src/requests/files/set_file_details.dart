@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:kodi_api/src/converters/custom_converters.dart';
 import 'package:kodi_api/src/models/files/kodi_files_media.dart';
 import 'package:kodi_api/src/models/video/kodi_video_resume.dart';
 import 'package:kodi_api/src/requests/kodi_request.dart';
@@ -18,7 +17,6 @@ typedef SetFileDetailsBuilder = SetFileDetails Function(
 
 @freezed
 class SetFileDetails with _$SetFileDetails implements KodiRequest<void> {
-  @JsonSerializable(converters: [DateTimeConverter()])
   const factory SetFileDetails(
     String file,
     KodiFilesMedia media, {

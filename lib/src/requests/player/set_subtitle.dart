@@ -16,7 +16,7 @@ class SetSubtitle with _$SetSubtitle implements KodiRequest<void> {
   const factory SetSubtitle(
     @JsonKey(name: 'playerid') int id,
     @SetSubtitleSubtitleConverter() SetSubtitleSubtitle subtitle, {
-    @Default(true) bool enable,
+    @Default(false) bool enable,
   }) = _SetSubtitle;
 
   const SetSubtitle._();

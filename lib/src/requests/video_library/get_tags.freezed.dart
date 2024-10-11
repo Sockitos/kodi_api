@@ -12,7 +12,7 @@ part of 'get_tags.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetTags _$GetTagsFromJson(Map<String, dynamic> json) {
   return _GetTags.fromJson(json);
@@ -26,8 +26,12 @@ mixin _$GetTags {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetTags to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetTags
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetTagsCopyWith<GetTags> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -56,6 +60,8 @@ class _$GetTagsCopyWithImpl<$Res, $Val extends GetTags>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetTags
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -84,6 +90,8 @@ class _$GetTagsCopyWithImpl<$Res, $Val extends GetTags>
     ) as $Val);
   }
 
+  /// Create a copy of GetTags
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -96,6 +104,8 @@ class _$GetTagsCopyWithImpl<$Res, $Val extends GetTags>
     });
   }
 
+  /// Create a copy of GetTags
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -110,10 +120,10 @@ class _$GetTagsCopyWithImpl<$Res, $Val extends GetTags>
 }
 
 /// @nodoc
-abstract class _$$_GetTagsCopyWith<$Res> implements $GetTagsCopyWith<$Res> {
-  factory _$$_GetTagsCopyWith(
-          _$_GetTags value, $Res Function(_$_GetTags) then) =
-      __$$_GetTagsCopyWithImpl<$Res>;
+abstract class _$$GetTagsImplCopyWith<$Res> implements $GetTagsCopyWith<$Res> {
+  factory _$$GetTagsImplCopyWith(
+          _$GetTagsImpl value, $Res Function(_$GetTagsImpl) then) =
+      __$$GetTagsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -129,12 +139,15 @@ abstract class _$$_GetTagsCopyWith<$Res> implements $GetTagsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetTagsCopyWithImpl<$Res>
-    extends _$GetTagsCopyWithImpl<$Res, _$_GetTags>
-    implements _$$_GetTagsCopyWith<$Res> {
-  __$$_GetTagsCopyWithImpl(_$_GetTags _value, $Res Function(_$_GetTags) _then)
+class __$$GetTagsImplCopyWithImpl<$Res>
+    extends _$GetTagsCopyWithImpl<$Res, _$GetTagsImpl>
+    implements _$$GetTagsImplCopyWith<$Res> {
+  __$$GetTagsImplCopyWithImpl(
+      _$GetTagsImpl _value, $Res Function(_$GetTagsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetTags
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,7 +156,7 @@ class __$$_GetTagsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetTags(
+    return _then(_$GetTagsImpl(
       null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -166,14 +179,14 @@ class __$$_GetTagsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTags extends _GetTags {
-  const _$_GetTags(this.type,
+class _$GetTagsImpl extends _GetTags {
+  const _$GetTagsImpl(this.type,
       {final Set<KodiLibraryFieldsTag>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetTags.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTagsFromJson(json);
+  factory _$GetTagsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTagsImplFromJson(json);
 
   @override
   final KodiVideoLibraryGetTagsType type;
@@ -198,10 +211,10 @@ class _$_GetTags extends _GetTags {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTags &&
+            other is _$GetTagsImpl &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
@@ -209,20 +222,22 @@ class _$_GetTags extends _GetTags {
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, type,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetTags
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTagsCopyWith<_$_GetTags> get copyWith =>
-      __$$_GetTagsCopyWithImpl<_$_GetTags>(this, _$identity);
+  _$$GetTagsImplCopyWith<_$GetTagsImpl> get copyWith =>
+      __$$GetTagsImplCopyWithImpl<_$GetTagsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTagsToJson(
+    return _$$GetTagsImplToJson(
       this,
     );
   }
@@ -232,10 +247,10 @@ abstract class _GetTags extends GetTags {
   const factory _GetTags(final KodiVideoLibraryGetTagsType type,
       {final Set<KodiLibraryFieldsTag>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetTags;
+      final KodiListSort? sort}) = _$GetTagsImpl;
   const _GetTags._() : super._();
 
-  factory _GetTags.fromJson(Map<String, dynamic> json) = _$_GetTags.fromJson;
+  factory _GetTags.fromJson(Map<String, dynamic> json) = _$GetTagsImpl.fromJson;
 
   @override
   KodiVideoLibraryGetTagsType get type;
@@ -245,9 +260,12 @@ abstract class _GetTags extends GetTags {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetTags
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetTagsCopyWith<_$_GetTags> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTagsImplCopyWith<_$GetTagsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -260,8 +278,12 @@ mixin _$GetTagsResponse {
   List<KodiLibraryDetailsTag> get tags => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetTagsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetTagsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetTagsResponseCopyWith<GetTagsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -287,6 +309,8 @@ class _$GetTagsResponseCopyWithImpl<$Res, $Val extends GetTagsResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetTagsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -305,6 +329,8 @@ class _$GetTagsResponseCopyWithImpl<$Res, $Val extends GetTagsResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetTagsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -315,11 +341,11 @@ class _$GetTagsResponseCopyWithImpl<$Res, $Val extends GetTagsResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetTagsResponseCopyWith<$Res>
+abstract class _$$GetTagsResponseImplCopyWith<$Res>
     implements $GetTagsResponseCopyWith<$Res> {
-  factory _$$_GetTagsResponseCopyWith(
-          _$_GetTagsResponse value, $Res Function(_$_GetTagsResponse) then) =
-      __$$_GetTagsResponseCopyWithImpl<$Res>;
+  factory _$$GetTagsResponseImplCopyWith(_$GetTagsResponseImpl value,
+          $Res Function(_$GetTagsResponseImpl) then) =
+      __$$GetTagsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiLibraryDetailsTag> tags, KodiListLimitsReturned limits});
@@ -329,20 +355,22 @@ abstract class _$$_GetTagsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTagsResponseCopyWithImpl<$Res>
-    extends _$GetTagsResponseCopyWithImpl<$Res, _$_GetTagsResponse>
-    implements _$$_GetTagsResponseCopyWith<$Res> {
-  __$$_GetTagsResponseCopyWithImpl(
-      _$_GetTagsResponse _value, $Res Function(_$_GetTagsResponse) _then)
+class __$$GetTagsResponseImplCopyWithImpl<$Res>
+    extends _$GetTagsResponseCopyWithImpl<$Res, _$GetTagsResponseImpl>
+    implements _$$GetTagsResponseImplCopyWith<$Res> {
+  __$$GetTagsResponseImplCopyWithImpl(
+      _$GetTagsResponseImpl _value, $Res Function(_$GetTagsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetTagsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tags = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetTagsResponse(
+    return _then(_$GetTagsResponseImpl(
       tags: null == tags
           ? _value._tags
           : tags // ignore: cast_nullable_to_non_nullable
@@ -357,13 +385,13 @@ class __$$_GetTagsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTagsResponse implements _GetTagsResponse {
-  const _$_GetTagsResponse(
+class _$GetTagsResponseImpl implements _GetTagsResponse {
+  const _$GetTagsResponseImpl(
       {required final List<KodiLibraryDetailsTag> tags, required this.limits})
       : _tags = tags;
 
-  factory _$_GetTagsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTagsResponseFromJson(json);
+  factory _$GetTagsResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTagsResponseImplFromJson(json);
 
   final List<KodiLibraryDetailsTag> _tags;
   @override
@@ -382,28 +410,31 @@ class _$_GetTagsResponse implements _GetTagsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTagsResponse &&
+            other is _$GetTagsResponseImpl &&
             const DeepCollectionEquality().equals(other._tags, _tags) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_tags), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetTagsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTagsResponseCopyWith<_$_GetTagsResponse> get copyWith =>
-      __$$_GetTagsResponseCopyWithImpl<_$_GetTagsResponse>(this, _$identity);
+  _$$GetTagsResponseImplCopyWith<_$GetTagsResponseImpl> get copyWith =>
+      __$$GetTagsResponseImplCopyWithImpl<_$GetTagsResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTagsResponseToJson(
+    return _$$GetTagsResponseImplToJson(
       this,
     );
   }
@@ -412,17 +443,20 @@ class _$_GetTagsResponse implements _GetTagsResponse {
 abstract class _GetTagsResponse implements GetTagsResponse {
   const factory _GetTagsResponse(
       {required final List<KodiLibraryDetailsTag> tags,
-      required final KodiListLimitsReturned limits}) = _$_GetTagsResponse;
+      required final KodiListLimitsReturned limits}) = _$GetTagsResponseImpl;
 
   factory _GetTagsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetTagsResponse.fromJson;
+      _$GetTagsResponseImpl.fromJson;
 
   @override
   List<KodiLibraryDetailsTag> get tags;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetTagsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetTagsResponseCopyWith<_$_GetTagsResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTagsResponseImplCopyWith<_$GetTagsResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

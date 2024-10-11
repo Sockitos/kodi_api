@@ -12,7 +12,7 @@ part of 'zoom.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Zoom _$ZoomFromJson(Map<String, dynamic> json) {
   return _Zoom.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$Zoom {
   @ZoomZoomConverter()
   ZoomZoom get zoom => throw _privateConstructorUsedError;
 
+  /// Serializes this Zoom to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Zoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ZoomCopyWith<Zoom> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -51,6 +55,8 @@ class _$ZoomCopyWithImpl<$Res, $Val extends Zoom>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Zoom
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -69,6 +75,8 @@ class _$ZoomCopyWithImpl<$Res, $Val extends Zoom>
     ) as $Val);
   }
 
+  /// Create a copy of Zoom
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ZoomZoomCopyWith<$Res> get zoom {
@@ -79,9 +87,10 @@ class _$ZoomCopyWithImpl<$Res, $Val extends Zoom>
 }
 
 /// @nodoc
-abstract class _$$_ZoomCopyWith<$Res> implements $ZoomCopyWith<$Res> {
-  factory _$$_ZoomCopyWith(_$_Zoom value, $Res Function(_$_Zoom) then) =
-      __$$_ZoomCopyWithImpl<$Res>;
+abstract class _$$ZoomImplCopyWith<$Res> implements $ZoomCopyWith<$Res> {
+  factory _$$ZoomImplCopyWith(
+          _$ZoomImpl value, $Res Function(_$ZoomImpl) then) =
+      __$$ZoomImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -92,18 +101,21 @@ abstract class _$$_ZoomCopyWith<$Res> implements $ZoomCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ZoomCopyWithImpl<$Res> extends _$ZoomCopyWithImpl<$Res, _$_Zoom>
-    implements _$$_ZoomCopyWith<$Res> {
-  __$$_ZoomCopyWithImpl(_$_Zoom _value, $Res Function(_$_Zoom) _then)
+class __$$ZoomImplCopyWithImpl<$Res>
+    extends _$ZoomCopyWithImpl<$Res, _$ZoomImpl>
+    implements _$$ZoomImplCopyWith<$Res> {
+  __$$ZoomImplCopyWithImpl(_$ZoomImpl _value, $Res Function(_$ZoomImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Zoom
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? zoom = null,
   }) {
-    return _then(_$_Zoom(
+    return _then(_$ZoomImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -118,12 +130,13 @@ class __$$_ZoomCopyWithImpl<$Res> extends _$ZoomCopyWithImpl<$Res, _$_Zoom>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Zoom extends _Zoom {
-  const _$_Zoom(
+class _$ZoomImpl extends _Zoom {
+  const _$ZoomImpl(
       @JsonKey(name: 'playerid') this.id, @ZoomZoomConverter() this.zoom)
       : super._();
 
-  factory _$_Zoom.fromJson(Map<String, dynamic> json) => _$$_ZoomFromJson(json);
+  factory _$ZoomImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ZoomImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -138,27 +151,29 @@ class _$_Zoom extends _Zoom {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Zoom &&
+            other is _$ZoomImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.zoom, zoom) || other.zoom == zoom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, zoom);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Zoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ZoomCopyWith<_$_Zoom> get copyWith =>
-      __$$_ZoomCopyWithImpl<_$_Zoom>(this, _$identity);
+  _$$ZoomImplCopyWith<_$ZoomImpl> get copyWith =>
+      __$$ZoomImplCopyWithImpl<_$ZoomImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ZoomToJson(
+    return _$$ZoomImplToJson(
       this,
     );
   }
@@ -166,10 +181,10 @@ class _$_Zoom extends _Zoom {
 
 abstract class _Zoom extends Zoom {
   const factory _Zoom(@JsonKey(name: 'playerid') final int id,
-      @ZoomZoomConverter() final ZoomZoom zoom) = _$_Zoom;
+      @ZoomZoomConverter() final ZoomZoom zoom) = _$ZoomImpl;
   const _Zoom._() : super._();
 
-  factory _Zoom.fromJson(Map<String, dynamic> json) = _$_Zoom.fromJson;
+  factory _Zoom.fromJson(Map<String, dynamic> json) = _$ZoomImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -177,9 +192,13 @@ abstract class _Zoom extends Zoom {
   @override
   @ZoomZoomConverter()
   ZoomZoom get zoom;
+
+  /// Create a copy of Zoom
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ZoomCopyWith<_$_Zoom> get copyWith => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ZoomImplCopyWith<_$ZoomImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ZoomZoom _$ZoomZoomFromJson(Map<String, dynamic> json) {
@@ -236,6 +255,8 @@ mixin _$ZoomZoom {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this ZoomZoom to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -254,31 +275,36 @@ class _$ZoomZoomCopyWithImpl<$Res, $Val extends ZoomZoom>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ZoomZoom
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_ZoomZoomEnumCopyWith<$Res> {
-  factory _$$_ZoomZoomEnumCopyWith(
-          _$_ZoomZoomEnum value, $Res Function(_$_ZoomZoomEnum) then) =
-      __$$_ZoomZoomEnumCopyWithImpl<$Res>;
+abstract class _$$ZoomZoomEnumImplCopyWith<$Res> {
+  factory _$$ZoomZoomEnumImplCopyWith(
+          _$ZoomZoomEnumImpl value, $Res Function(_$ZoomZoomEnumImpl) then) =
+      __$$ZoomZoomEnumImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ZoomZoomEnum value});
 }
 
 /// @nodoc
-class __$$_ZoomZoomEnumCopyWithImpl<$Res>
-    extends _$ZoomZoomCopyWithImpl<$Res, _$_ZoomZoomEnum>
-    implements _$$_ZoomZoomEnumCopyWith<$Res> {
-  __$$_ZoomZoomEnumCopyWithImpl(
-      _$_ZoomZoomEnum _value, $Res Function(_$_ZoomZoomEnum) _then)
+class __$$ZoomZoomEnumImplCopyWithImpl<$Res>
+    extends _$ZoomZoomCopyWithImpl<$Res, _$ZoomZoomEnumImpl>
+    implements _$$ZoomZoomEnumImplCopyWith<$Res> {
+  __$$ZoomZoomEnumImplCopyWithImpl(
+      _$ZoomZoomEnumImpl _value, $Res Function(_$ZoomZoomEnumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ZoomZoom
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_ZoomZoomEnum(
+    return _then(_$ZoomZoomEnumImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -289,12 +315,12 @@ class __$$_ZoomZoomEnumCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ZoomZoomEnum implements _ZoomZoomEnum {
-  const _$_ZoomZoomEnum(this.value, {final String? $type})
+class _$ZoomZoomEnumImpl implements _ZoomZoomEnum {
+  const _$ZoomZoomEnumImpl(this.value, {final String? $type})
       : $type = $type ?? 'enumerator';
 
-  factory _$_ZoomZoomEnum.fromJson(Map<String, dynamic> json) =>
-      _$$_ZoomZoomEnumFromJson(json);
+  factory _$ZoomZoomEnumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ZoomZoomEnumImplFromJson(json);
 
   @override
   final ZoomZoomEnum value;
@@ -308,22 +334,24 @@ class _$_ZoomZoomEnum implements _ZoomZoomEnum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ZoomZoomEnum &&
+            other is _$ZoomZoomEnumImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ZoomZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ZoomZoomEnumCopyWith<_$_ZoomZoomEnum> get copyWith =>
-      __$$_ZoomZoomEnumCopyWithImpl<_$_ZoomZoomEnum>(this, _$identity);
+  _$$ZoomZoomEnumImplCopyWith<_$ZoomZoomEnumImpl> get copyWith =>
+      __$$ZoomZoomEnumImplCopyWithImpl<_$ZoomZoomEnumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -389,48 +417,53 @@ class _$_ZoomZoomEnum implements _ZoomZoomEnum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ZoomZoomEnumToJson(
+    return _$$ZoomZoomEnumImplToJson(
       this,
     );
   }
 }
 
 abstract class _ZoomZoomEnum implements ZoomZoom {
-  const factory _ZoomZoomEnum(final ZoomZoomEnum value) = _$_ZoomZoomEnum;
+  const factory _ZoomZoomEnum(final ZoomZoomEnum value) = _$ZoomZoomEnumImpl;
 
   factory _ZoomZoomEnum.fromJson(Map<String, dynamic> json) =
-      _$_ZoomZoomEnum.fromJson;
+      _$ZoomZoomEnumImpl.fromJson;
 
   @override
   ZoomZoomEnum get value;
-  @JsonKey(ignore: true)
-  _$$_ZoomZoomEnumCopyWith<_$_ZoomZoomEnum> get copyWith =>
+
+  /// Create a copy of ZoomZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ZoomZoomEnumImplCopyWith<_$ZoomZoomEnumImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ZoomZoomAbsCopyWith<$Res> {
-  factory _$$_ZoomZoomAbsCopyWith(
-          _$_ZoomZoomAbs value, $Res Function(_$_ZoomZoomAbs) then) =
-      __$$_ZoomZoomAbsCopyWithImpl<$Res>;
+abstract class _$$ZoomZoomAbsImplCopyWith<$Res> {
+  factory _$$ZoomZoomAbsImplCopyWith(
+          _$ZoomZoomAbsImpl value, $Res Function(_$ZoomZoomAbsImpl) then) =
+      __$$ZoomZoomAbsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int value});
 }
 
 /// @nodoc
-class __$$_ZoomZoomAbsCopyWithImpl<$Res>
-    extends _$ZoomZoomCopyWithImpl<$Res, _$_ZoomZoomAbs>
-    implements _$$_ZoomZoomAbsCopyWith<$Res> {
-  __$$_ZoomZoomAbsCopyWithImpl(
-      _$_ZoomZoomAbs _value, $Res Function(_$_ZoomZoomAbs) _then)
+class __$$ZoomZoomAbsImplCopyWithImpl<$Res>
+    extends _$ZoomZoomCopyWithImpl<$Res, _$ZoomZoomAbsImpl>
+    implements _$$ZoomZoomAbsImplCopyWith<$Res> {
+  __$$ZoomZoomAbsImplCopyWithImpl(
+      _$ZoomZoomAbsImpl _value, $Res Function(_$ZoomZoomAbsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ZoomZoom
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_ZoomZoomAbs(
+    return _then(_$ZoomZoomAbsImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -441,14 +474,14 @@ class __$$_ZoomZoomAbsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ZoomZoomAbs implements _ZoomZoomAbs {
-  const _$_ZoomZoomAbs(this.value, {final String? $type})
+class _$ZoomZoomAbsImpl implements _ZoomZoomAbs {
+  const _$ZoomZoomAbsImpl(this.value, {final String? $type})
       : assert(value >= 1 && value <= 10,
             'Zoom value must be between 1 and 10, inclusive'),
         $type = $type ?? 'abs';
 
-  factory _$_ZoomZoomAbs.fromJson(Map<String, dynamic> json) =>
-      _$$_ZoomZoomAbsFromJson(json);
+  factory _$ZoomZoomAbsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ZoomZoomAbsImplFromJson(json);
 
   @override
   final int value;
@@ -462,22 +495,24 @@ class _$_ZoomZoomAbs implements _ZoomZoomAbs {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ZoomZoomAbs &&
+            other is _$ZoomZoomAbsImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ZoomZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ZoomZoomAbsCopyWith<_$_ZoomZoomAbs> get copyWith =>
-      __$$_ZoomZoomAbsCopyWithImpl<_$_ZoomZoomAbs>(this, _$identity);
+  _$$ZoomZoomAbsImplCopyWith<_$ZoomZoomAbsImpl> get copyWith =>
+      __$$ZoomZoomAbsImplCopyWithImpl<_$ZoomZoomAbsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -543,21 +578,24 @@ class _$_ZoomZoomAbs implements _ZoomZoomAbs {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ZoomZoomAbsToJson(
+    return _$$ZoomZoomAbsImplToJson(
       this,
     );
   }
 }
 
 abstract class _ZoomZoomAbs implements ZoomZoom {
-  const factory _ZoomZoomAbs(final int value) = _$_ZoomZoomAbs;
+  const factory _ZoomZoomAbs(final int value) = _$ZoomZoomAbsImpl;
 
   factory _ZoomZoomAbs.fromJson(Map<String, dynamic> json) =
-      _$_ZoomZoomAbs.fromJson;
+      _$ZoomZoomAbsImpl.fromJson;
 
   @override
   int get value;
-  @JsonKey(ignore: true)
-  _$$_ZoomZoomAbsCopyWith<_$_ZoomZoomAbs> get copyWith =>
+
+  /// Create a copy of ZoomZoom
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ZoomZoomAbsImplCopyWith<_$ZoomZoomAbsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

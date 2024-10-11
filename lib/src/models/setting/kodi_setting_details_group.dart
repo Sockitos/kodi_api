@@ -8,7 +8,7 @@ part 'kodi_setting_details_group.g.dart';
 class KodiSettingDetailsGroup with _$KodiSettingDetailsGroup {
   const factory KodiSettingDetailsGroup({
     required String id,
-    List<KodiSettingDetailsSetting>? settings,
+    Set<KodiSettingDetailsSetting>? settings,
   }) = _KodiSettingDetailsGroup;
 
   factory KodiSettingDetailsGroup.fromJson(Map<String, dynamic> json) =>

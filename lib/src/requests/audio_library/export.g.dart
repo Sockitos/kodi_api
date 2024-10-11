@@ -6,41 +6,43 @@ part of 'export.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Export _$$_ExportFromJson(Map<String, dynamic> json) => _$_Export(
+_$ExportImpl _$$ExportImplFromJson(Map<String, dynamic> json) => _$ExportImpl(
       options: const KodiAudioLibraryExportOptionsConverter()
           .fromJson(json['options'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExportToJson(_$_Export instance) => <String, dynamic>{
+Map<String, dynamic> _$$ExportImplToJson(_$ExportImpl instance) =>
+    <String, dynamic>{
       'options': const KodiAudioLibraryExportOptionsConverter()
           .toJson(instance.options),
     };
 
-_$_KodiAudioLibraryExportOptionsPath
-    _$$_KodiAudioLibraryExportOptionsPathFromJson(Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryExportOptionsPath(
+_$KodiAudioLibraryExportOptionsPathImpl
+    _$$KodiAudioLibraryExportOptionsPathImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiAudioLibraryExportOptionsPathImpl(
           json['path'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryExportOptionsPathToJson(
-        _$_KodiAudioLibraryExportOptionsPath instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryExportOptionsPathImplToJson(
+        _$KodiAudioLibraryExportOptionsPathImpl instance) =>
     <String, dynamic>{
       'path': instance.path,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryExportOptionsImagesOverwrite
-    _$$_KodiAudioLibraryExportOptionsImagesOverwriteFromJson(
+_$KodiAudioLibraryExportOptionsImagesOverwriteImpl
+    _$$KodiAudioLibraryExportOptionsImagesOverwriteImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryExportOptionsImagesOverwrite(
+        _$KodiAudioLibraryExportOptionsImagesOverwriteImpl(
           images: json['images'] as bool? ?? false,
           overwrite: json['overwrite'] as bool? ?? false,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryExportOptionsImagesOverwriteToJson(
-        _$_KodiAudioLibraryExportOptionsImagesOverwrite instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryExportOptionsImagesOverwriteImplToJson(
+        _$KodiAudioLibraryExportOptionsImagesOverwriteImpl instance) =>
     <String, dynamic>{
       'images': instance.images,
       'overwrite': instance.overwrite,

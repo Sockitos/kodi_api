@@ -6,12 +6,12 @@ part of 'delete_timer.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteTimer _$$_DeleteTimerFromJson(Map<String, dynamic> json) =>
-    _$_DeleteTimer(
-      json['timerid'] as int,
+_$DeleteTimerImpl _$$DeleteTimerImplFromJson(Map<String, dynamic> json) =>
+    _$DeleteTimerImpl(
+      (json['timerid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_DeleteTimerToJson(_$_DeleteTimer instance) =>
+Map<String, dynamic> _$$DeleteTimerImplToJson(_$DeleteTimerImpl instance) =>
     <String, dynamic>{
       'timerid': instance.id,
     };

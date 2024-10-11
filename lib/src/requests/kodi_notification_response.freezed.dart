@@ -12,7 +12,7 @@ part of 'kodi_notification_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationResponse _$KodiNotificationResponseFromJson(
     Map<String, dynamic> json) {
@@ -74,6 +74,8 @@ mixin _$KodiNotificationResponse {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiNotificationResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -94,14 +96,17 @@ class _$KodiNotificationResponseCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationResponseRequestCopyWith<$Res> {
-  factory _$$_KodiNotificationResponseRequestCopyWith(
-          _$_KodiNotificationResponseRequest value,
-          $Res Function(_$_KodiNotificationResponseRequest) then) =
-      __$$_KodiNotificationResponseRequestCopyWithImpl<$Res>;
+abstract class _$$KodiNotificationResponseRequestImplCopyWith<$Res> {
+  factory _$$KodiNotificationResponseRequestImplCopyWith(
+          _$KodiNotificationResponseRequestImpl value,
+          $Res Function(_$KodiNotificationResponseRequestImpl) then) =
+      __$$KodiNotificationResponseRequestImplCopyWithImpl<$Res>;
   @useResult
   $Res call({@KodiResponseConverter() KodiResponse response});
 
@@ -109,21 +114,23 @@ abstract class _$$_KodiNotificationResponseRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiNotificationResponseRequestCopyWithImpl<$Res>
+class __$$KodiNotificationResponseRequestImplCopyWithImpl<$Res>
     extends _$KodiNotificationResponseCopyWithImpl<$Res,
-        _$_KodiNotificationResponseRequest>
-    implements _$$_KodiNotificationResponseRequestCopyWith<$Res> {
-  __$$_KodiNotificationResponseRequestCopyWithImpl(
-      _$_KodiNotificationResponseRequest _value,
-      $Res Function(_$_KodiNotificationResponseRequest) _then)
+        _$KodiNotificationResponseRequestImpl>
+    implements _$$KodiNotificationResponseRequestImplCopyWith<$Res> {
+  __$$KodiNotificationResponseRequestImplCopyWithImpl(
+      _$KodiNotificationResponseRequestImpl _value,
+      $Res Function(_$KodiNotificationResponseRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? response = null,
   }) {
-    return _then(_$_KodiNotificationResponseRequest(
+    return _then(_$KodiNotificationResponseRequestImpl(
       null == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
@@ -131,6 +138,8 @@ class __$$_KodiNotificationResponseRequestCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiResponseCopyWith<$Res> get response {
@@ -142,16 +151,16 @@ class __$$_KodiNotificationResponseRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationResponseRequest
+class _$KodiNotificationResponseRequestImpl
     implements _KodiNotificationResponseRequest {
-  const _$_KodiNotificationResponseRequest(
+  const _$KodiNotificationResponseRequestImpl(
       @KodiResponseConverter() this.response,
       {final String? $type})
       : $type = $type ?? 'request';
 
-  factory _$_KodiNotificationResponseRequest.fromJson(
+  factory _$KodiNotificationResponseRequestImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationResponseRequestFromJson(json);
+      _$$KodiNotificationResponseRequestImplFromJson(json);
 
   @override
   @KodiResponseConverter()
@@ -166,25 +175,27 @@ class _$_KodiNotificationResponseRequest
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationResponseRequest &&
+            other is _$KodiNotificationResponseRequestImpl &&
             (identical(other.response, response) ||
                 other.response == response));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, response);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationResponseRequestCopyWith<
-          _$_KodiNotificationResponseRequest>
-      get copyWith => __$$_KodiNotificationResponseRequestCopyWithImpl<
-          _$_KodiNotificationResponseRequest>(this, _$identity);
+  _$$KodiNotificationResponseRequestImplCopyWith<
+          _$KodiNotificationResponseRequestImpl>
+      get copyWith => __$$KodiNotificationResponseRequestImplCopyWithImpl<
+          _$KodiNotificationResponseRequestImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -253,7 +264,7 @@ class _$_KodiNotificationResponseRequest
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationResponseRequestToJson(
+    return _$$KodiNotificationResponseRequestImplToJson(
       this,
     );
   }
@@ -263,25 +274,28 @@ abstract class _KodiNotificationResponseRequest
     implements KodiNotificationResponse {
   const factory _KodiNotificationResponseRequest(
           @KodiResponseConverter() final KodiResponse response) =
-      _$_KodiNotificationResponseRequest;
+      _$KodiNotificationResponseRequestImpl;
 
   factory _KodiNotificationResponseRequest.fromJson(Map<String, dynamic> json) =
-      _$_KodiNotificationResponseRequest.fromJson;
+      _$KodiNotificationResponseRequestImpl.fromJson;
 
   @KodiResponseConverter()
   KodiResponse get response;
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationResponseRequestCopyWith<
-          _$_KodiNotificationResponseRequest>
+
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationResponseRequestImplCopyWith<
+          _$KodiNotificationResponseRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationResponseNotificationCopyWith<$Res> {
-  factory _$$_KodiNotificationResponseNotificationCopyWith(
-          _$_KodiNotificationResponseNotification value,
-          $Res Function(_$_KodiNotificationResponseNotification) then) =
-      __$$_KodiNotificationResponseNotificationCopyWithImpl<$Res>;
+abstract class _$$KodiNotificationResponseNotificationImplCopyWith<$Res> {
+  factory _$$KodiNotificationResponseNotificationImplCopyWith(
+          _$KodiNotificationResponseNotificationImpl value,
+          $Res Function(_$KodiNotificationResponseNotificationImpl) then) =
+      __$$KodiNotificationResponseNotificationImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiNotification notification});
 
@@ -289,21 +303,23 @@ abstract class _$$_KodiNotificationResponseNotificationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiNotificationResponseNotificationCopyWithImpl<$Res>
+class __$$KodiNotificationResponseNotificationImplCopyWithImpl<$Res>
     extends _$KodiNotificationResponseCopyWithImpl<$Res,
-        _$_KodiNotificationResponseNotification>
-    implements _$$_KodiNotificationResponseNotificationCopyWith<$Res> {
-  __$$_KodiNotificationResponseNotificationCopyWithImpl(
-      _$_KodiNotificationResponseNotification _value,
-      $Res Function(_$_KodiNotificationResponseNotification) _then)
+        _$KodiNotificationResponseNotificationImpl>
+    implements _$$KodiNotificationResponseNotificationImplCopyWith<$Res> {
+  __$$KodiNotificationResponseNotificationImplCopyWithImpl(
+      _$KodiNotificationResponseNotificationImpl _value,
+      $Res Function(_$KodiNotificationResponseNotificationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? notification = null,
   }) {
-    return _then(_$_KodiNotificationResponseNotification(
+    return _then(_$KodiNotificationResponseNotificationImpl(
       null == notification
           ? _value.notification
           : notification // ignore: cast_nullable_to_non_nullable
@@ -311,6 +327,8 @@ class __$$_KodiNotificationResponseNotificationCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationCopyWith<$Res> get notification {
@@ -322,15 +340,15 @@ class __$$_KodiNotificationResponseNotificationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationResponseNotification
+class _$KodiNotificationResponseNotificationImpl
     implements _KodiNotificationResponseNotification {
-  const _$_KodiNotificationResponseNotification(this.notification,
+  const _$KodiNotificationResponseNotificationImpl(this.notification,
       {final String? $type})
       : $type = $type ?? 'notification';
 
-  factory _$_KodiNotificationResponseNotification.fromJson(
+  factory _$KodiNotificationResponseNotificationImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationResponseNotificationFromJson(json);
+      _$$KodiNotificationResponseNotificationImplFromJson(json);
 
   @override
   final KodiNotification notification;
@@ -344,25 +362,27 @@ class _$_KodiNotificationResponseNotification
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationResponseNotification &&
+            other is _$KodiNotificationResponseNotificationImpl &&
             (identical(other.notification, notification) ||
                 other.notification == notification));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, notification);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationResponseNotificationCopyWith<
-          _$_KodiNotificationResponseNotification>
-      get copyWith => __$$_KodiNotificationResponseNotificationCopyWithImpl<
-          _$_KodiNotificationResponseNotification>(this, _$identity);
+  _$$KodiNotificationResponseNotificationImplCopyWith<
+          _$KodiNotificationResponseNotificationImpl>
+      get copyWith => __$$KodiNotificationResponseNotificationImplCopyWithImpl<
+          _$KodiNotificationResponseNotificationImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -431,7 +451,7 @@ class _$_KodiNotificationResponseNotification
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationResponseNotificationToJson(
+    return _$$KodiNotificationResponseNotificationImplToJson(
       this,
     );
   }
@@ -441,15 +461,18 @@ abstract class _KodiNotificationResponseNotification
     implements KodiNotificationResponse {
   const factory _KodiNotificationResponseNotification(
           final KodiNotification notification) =
-      _$_KodiNotificationResponseNotification;
+      _$KodiNotificationResponseNotificationImpl;
 
   factory _KodiNotificationResponseNotification.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationResponseNotification.fromJson;
+      _$KodiNotificationResponseNotificationImpl.fromJson;
 
   KodiNotification get notification;
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationResponseNotificationCopyWith<
-          _$_KodiNotificationResponseNotification>
+
+  /// Create a copy of KodiNotificationResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationResponseNotificationImplCopyWith<
+          _$KodiNotificationResponseNotificationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

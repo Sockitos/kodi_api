@@ -8,7 +8,7 @@ part 'refresh_movie.g.dart';
 typedef RefreshMovieBuilder = RefreshMovie Function(
   int id, {
   bool ignoreNFO,
-  String? title,
+  String title,
 });
 
 @freezed
@@ -16,7 +16,7 @@ class RefreshMovie with _$RefreshMovie implements KodiRequest<void> {
   const factory RefreshMovie(
     @JsonKey(name: 'movieid') int id, {
     @JsonKey(name: 'ignorenfo') @Default(false) bool ignoreNFO,
-    String? title,
+    @Default('') String title,
   }) = _RefreshMovie;
 
   const RefreshMovie._();

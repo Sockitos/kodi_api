@@ -11,13 +11,13 @@ class KodiVideoDetailsMovieSetExtended with _$KodiVideoDetailsMovieSetExtended {
   const factory KodiVideoDetailsMovieSetExtended({
     List<KodiVideoDetailsMovie>? movies,
     required KodiListLimitsReturned limits,
-    String? plot,
+    @Default('') String plot,
     @JsonKey(name: 'setid') required int setId,
-    String? title,
+    @Default('') String title,
     KodiMediaArtwork? art,
-    @JsonKey(name: 'playcount') int? playCount,
-    String? fanart,
-    String? thumbnail,
+    @JsonKey(name: 'playcount') @Default(0) int playCount,
+    @Default('') String fanart,
+    @Default('') String thumbnail,
     required String label,
   }) = _KodiVideoDetailsMovieSetExtended;
 

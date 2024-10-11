@@ -9,7 +9,7 @@ typedef RefreshTVShowBuilder = RefreshTVShow Function(
   int id, {
   bool ignoreNFO,
   bool refreshEpisodes,
-  String? title,
+  String title,
 });
 
 @freezed
@@ -18,7 +18,7 @@ class RefreshTVShow with _$RefreshTVShow implements KodiRequest<void> {
     @JsonKey(name: 'tvshowid') int id, {
     @JsonKey(name: 'ignorenfo') @Default(false) bool ignoreNFO,
     @JsonKey(name: 'refreshepisodes') @Default(false) bool refreshEpisodes,
-    String? title,
+    @Default('') String title,
   }) = _RefreshTVShow;
 
   const RefreshTVShow._();

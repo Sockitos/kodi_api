@@ -5,3 +5,4 @@ export 'button_event.dart'
         KodiR1Button,
         KodiR2Button,
         KodiXGButton;
+export 'input.dart' show Input;

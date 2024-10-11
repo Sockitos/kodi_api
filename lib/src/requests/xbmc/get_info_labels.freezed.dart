@@ -12,7 +12,7 @@ part of 'get_info_labels.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetInfoLabels _$GetInfoLabelsFromJson(Map<String, dynamic> json) {
   return _GetInfoLabels.fromJson(json);
@@ -22,8 +22,12 @@ GetInfoLabels _$GetInfoLabelsFromJson(Map<String, dynamic> json) {
 mixin _$GetInfoLabels {
   List<String> get labels => throw _privateConstructorUsedError;
 
+  /// Serializes this GetInfoLabels to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetInfoLabels
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetInfoLabelsCopyWith<GetInfoLabels> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$GetInfoLabelsCopyWithImpl<$Res, $Val extends GetInfoLabels>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetInfoLabels
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,30 +68,32 @@ class _$GetInfoLabelsCopyWithImpl<$Res, $Val extends GetInfoLabels>
 }
 
 /// @nodoc
-abstract class _$$_GetInfoLabelsCopyWith<$Res>
+abstract class _$$GetInfoLabelsImplCopyWith<$Res>
     implements $GetInfoLabelsCopyWith<$Res> {
-  factory _$$_GetInfoLabelsCopyWith(
-          _$_GetInfoLabels value, $Res Function(_$_GetInfoLabels) then) =
-      __$$_GetInfoLabelsCopyWithImpl<$Res>;
+  factory _$$GetInfoLabelsImplCopyWith(
+          _$GetInfoLabelsImpl value, $Res Function(_$GetInfoLabelsImpl) then) =
+      __$$GetInfoLabelsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<String> labels});
 }
 
 /// @nodoc
-class __$$_GetInfoLabelsCopyWithImpl<$Res>
-    extends _$GetInfoLabelsCopyWithImpl<$Res, _$_GetInfoLabels>
-    implements _$$_GetInfoLabelsCopyWith<$Res> {
-  __$$_GetInfoLabelsCopyWithImpl(
-      _$_GetInfoLabels _value, $Res Function(_$_GetInfoLabels) _then)
+class __$$GetInfoLabelsImplCopyWithImpl<$Res>
+    extends _$GetInfoLabelsCopyWithImpl<$Res, _$GetInfoLabelsImpl>
+    implements _$$GetInfoLabelsImplCopyWith<$Res> {
+  __$$GetInfoLabelsImplCopyWithImpl(
+      _$GetInfoLabelsImpl _value, $Res Function(_$GetInfoLabelsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetInfoLabels
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? labels = null,
   }) {
-    return _then(_$_GetInfoLabels(
+    return _then(_$GetInfoLabelsImpl(
       null == labels
           ? _value._labels
           : labels // ignore: cast_nullable_to_non_nullable
@@ -96,13 +104,13 @@ class __$$_GetInfoLabelsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetInfoLabels extends _GetInfoLabels {
-  const _$_GetInfoLabels(final List<String> labels)
+class _$GetInfoLabelsImpl extends _GetInfoLabels {
+  const _$GetInfoLabelsImpl(final List<String> labels)
       : _labels = labels,
         super._();
 
-  factory _$_GetInfoLabels.fromJson(Map<String, dynamic> json) =>
-      _$$_GetInfoLabelsFromJson(json);
+  factory _$GetInfoLabelsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetInfoLabelsImplFromJson(json);
 
   final List<String> _labels;
   @override
@@ -118,43 +126,48 @@ class _$_GetInfoLabels extends _GetInfoLabels {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetInfoLabels &&
+            other is _$GetInfoLabelsImpl &&
             const DeepCollectionEquality().equals(other._labels, _labels));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_labels));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetInfoLabels
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetInfoLabelsCopyWith<_$_GetInfoLabels> get copyWith =>
-      __$$_GetInfoLabelsCopyWithImpl<_$_GetInfoLabels>(this, _$identity);
+  _$$GetInfoLabelsImplCopyWith<_$GetInfoLabelsImpl> get copyWith =>
+      __$$GetInfoLabelsImplCopyWithImpl<_$GetInfoLabelsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetInfoLabelsToJson(
+    return _$$GetInfoLabelsImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetInfoLabels extends GetInfoLabels {
-  const factory _GetInfoLabels(final List<String> labels) = _$_GetInfoLabels;
+  const factory _GetInfoLabels(final List<String> labels) = _$GetInfoLabelsImpl;
   const _GetInfoLabels._() : super._();
 
   factory _GetInfoLabels.fromJson(Map<String, dynamic> json) =
-      _$_GetInfoLabels.fromJson;
+      _$GetInfoLabelsImpl.fromJson;
 
   @override
   List<String> get labels;
+
+  /// Create a copy of GetInfoLabels
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetInfoLabelsCopyWith<_$_GetInfoLabels> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetInfoLabelsImplCopyWith<_$GetInfoLabelsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

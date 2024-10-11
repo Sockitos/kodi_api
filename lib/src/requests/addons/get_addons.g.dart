@@ -6,7 +6,8 @@ part of 'get_addons.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetAddons _$$_GetAddonsFromJson(Map<String, dynamic> json) => _$_GetAddons(
+_$GetAddonsImpl _$$GetAddonsImplFromJson(Map<String, dynamic> json) =>
+    _$GetAddonsImpl(
       type: $enumDecodeNullable(_$KodiAddonTypeEnumMap, json['type']) ??
           KodiAddonType.unknown,
       content:
@@ -27,7 +28,7 @@ _$_GetAddons _$$_GetAddonsFromJson(Map<String, dynamic> json) => _$_GetAddons(
           : const KodiAllOptionConverter().fromJson(json['installed']),
     );
 
-Map<String, dynamic> _$$_GetAddonsToJson(_$_GetAddons instance) {
+Map<String, dynamic> _$$GetAddonsImplToJson(_$GetAddonsImpl instance) {
   final val = <String, dynamic>{
     'type': _$KodiAddonTypeEnumMap[instance.type]!,
     'content': _$KodiAddonContentEnumMap[instance.content]!,
@@ -121,8 +122,9 @@ const _$KodiAddonFieldsEnumMap = {
   KodiAddonFields.deprecated: 'deprecated',
 };
 
-_$_GetAddonsResponse _$$_GetAddonsResponseFromJson(Map<String, dynamic> json) =>
-    _$_GetAddonsResponse(
+_$GetAddonsResponseImpl _$$GetAddonsResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetAddonsResponseImpl(
       addons: (json['addons'] as List<dynamic>?)
               ?.map((e) => KodiAddonDetails.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -131,35 +133,36 @@ _$_GetAddonsResponse _$$_GetAddonsResponseFromJson(Map<String, dynamic> json) =>
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetAddonsResponseToJson(
-        _$_GetAddonsResponse instance) =>
+Map<String, dynamic> _$$GetAddonsResponseImplToJson(
+        _$GetAddonsResponseImpl instance) =>
     <String, dynamic>{
       'addons': instance.addons.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),
     };
 
-_$_KodiAllOptionBool _$$_KodiAllOptionBoolFromJson(Map<String, dynamic> json) =>
-    _$_KodiAllOptionBool(
+_$KodiAllOptionBoolImpl _$$KodiAllOptionBoolImplFromJson(
+        Map<String, dynamic> json) =>
+    _$KodiAllOptionBoolImpl(
       json['value'] as bool,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiAllOptionBoolToJson(
-        _$_KodiAllOptionBool instance) =>
+Map<String, dynamic> _$$KodiAllOptionBoolImplToJson(
+        _$KodiAllOptionBoolImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAllOptionEnumerator _$$_KodiAllOptionEnumeratorFromJson(
+_$KodiAllOptionEnumeratorImpl _$$KodiAllOptionEnumeratorImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAllOptionEnumerator(
+    _$KodiAllOptionEnumeratorImpl(
       $enumDecode(_$KodiAllOptionEnumEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_KodiAllOptionEnumeratorToJson(
-        _$_KodiAllOptionEnumerator instance) =>
+Map<String, dynamic> _$$KodiAllOptionEnumeratorImplToJson(
+        _$KodiAllOptionEnumeratorImpl instance) =>
     <String, dynamic>{
       'value': _$KodiAllOptionEnumEnumMap[instance.value]!,
       'runtimeType': instance.$type,

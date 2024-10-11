@@ -6,12 +6,12 @@ part of 'remove_episode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RemoveEpisode _$$_RemoveEpisodeFromJson(Map<String, dynamic> json) =>
-    _$_RemoveEpisode(
-      json['episodeid'] as int,
+_$RemoveEpisodeImpl _$$RemoveEpisodeImplFromJson(Map<String, dynamic> json) =>
+    _$RemoveEpisodeImpl(
+      (json['episodeid'] as num).toInt(),
     );
 
-Map<String, dynamic> _$$_RemoveEpisodeToJson(_$_RemoveEpisode instance) =>
+Map<String, dynamic> _$$RemoveEpisodeImplToJson(_$RemoveEpisodeImpl instance) =>
     <String, dynamic>{
       'episodeid': instance.id,
     };

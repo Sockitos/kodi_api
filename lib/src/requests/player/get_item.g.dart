@@ -6,14 +6,15 @@ part of 'get_item.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetItem _$$_GetItemFromJson(Map<String, dynamic> json) => _$_GetItem(
-      json['playerid'] as int,
+_$GetItemImpl _$$GetItemImplFromJson(Map<String, dynamic> json) =>
+    _$GetItemImpl(
+      (json['playerid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiListFieldsAllEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetItemToJson(_$_GetItem instance) {
+Map<String, dynamic> _$$GetItemImplToJson(_$GetItemImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };

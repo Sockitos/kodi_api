@@ -6,26 +6,26 @@ part of 'set_music_video_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetMusicVideoDetails _$$_SetMusicVideoDetailsFromJson(
+_$SetMusicVideoDetailsImpl _$$SetMusicVideoDetailsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetMusicVideoDetails(
-      json['musicvideoid'] as int,
+    _$SetMusicVideoDetailsImpl(
+      (json['musicvideoid'] as num).toInt(),
       title: json['title'] as String?,
-      playCount: json['playcount'] as int?,
-      runtime: json['runtime'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
+      runtime: (json['runtime'] as num?)?.toInt(),
       directors: (json['director'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       studios:
           (json['studio'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      year: json['year'] as int?,
+      year: (json['year'] as num?)?.toInt(),
       plot: json['plot'] as String?,
       album: json['album'] as String?,
       artists:
           (json['artist'] as List<dynamic>?)?.map((e) => e as String).toList(),
       genres:
           (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      track: json['track'] as int?,
+      track: (json['track'] as num?)?.toInt(),
       lastPlayed: json['lastplayed'] == null
           ? null
           : DateTime.parse(json['lastplayed'] as String),
@@ -39,7 +39,7 @@ _$_SetMusicVideoDetails _$$_SetMusicVideoDetailsFromJson(
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
       rating: (json['rating'] as num?)?.toDouble(),
-      userRating: json['userrating'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
       dateAdded: json['dateadded'] == null
           ? null
           : DateTime.parse(json['dateadded'] as String),
@@ -48,8 +48,8 @@ _$_SetMusicVideoDetails _$$_SetMusicVideoDetailsFromJson(
           : DateTime.parse(json['premiered'] as String),
     );
 
-Map<String, dynamic> _$$_SetMusicVideoDetailsToJson(
-    _$_SetMusicVideoDetails instance) {
+Map<String, dynamic> _$$SetMusicVideoDetailsImplToJson(
+    _$SetMusicVideoDetailsImpl instance) {
   final val = <String, dynamic>{
     'musicvideoid': instance.id,
   };

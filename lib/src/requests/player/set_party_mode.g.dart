@@ -6,13 +6,13 @@ part of 'set_party_mode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetPartyMode _$$_SetPartyModeFromJson(Map<String, dynamic> json) =>
-    _$_SetPartyMode(
-      json['playerid'] as int,
+_$SetPartyModeImpl _$$SetPartyModeImplFromJson(Map<String, dynamic> json) =>
+    _$SetPartyModeImpl(
+      (json['playerid'] as num).toInt(),
       const KodiGlobalToggleConverter().fromJson(json['partymode']),
     );
 
-Map<String, dynamic> _$$_SetPartyModeToJson(_$_SetPartyMode instance) {
+Map<String, dynamic> _$$SetPartyModeImplToJson(_$SetPartyModeImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };

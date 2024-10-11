@@ -6,8 +6,9 @@ part of 'get_items.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetItems _$$_GetItemsFromJson(Map<String, dynamic> json) => _$_GetItems(
-      json['playlistid'] as int,
+_$GetItemsImpl _$$GetItemsImplFromJson(Map<String, dynamic> json) =>
+    _$GetItemsImpl(
+      (json['playlistid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiListFieldsAllEnumMap, e))
           .toSet(),
@@ -19,7 +20,7 @@ _$_GetItems _$$_GetItemsFromJson(Map<String, dynamic> json) => _$_GetItems(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetItemsToJson(_$_GetItems instance) {
+Map<String, dynamic> _$$GetItemsImplToJson(_$GetItemsImpl instance) {
   final val = <String, dynamic>{
     'playlistid': instance.id,
   };
@@ -142,9 +143,9 @@ const _$KodiListFieldsAllEnumMap = {
   KodiListFieldsAll.albumDuration: 'albumduration',
 };
 
-_$_KodiPlaylistGetItemsResponse _$$_KodiPlaylistGetItemsResponseFromJson(
+_$KodiPlaylistGetItemsResponseImpl _$$KodiPlaylistGetItemsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlaylistGetItemsResponse(
+    _$KodiPlaylistGetItemsResponseImpl(
       items: (json['items'] as List<dynamic>)
           .map((e) => KodiListItemAll.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -152,8 +153,8 @@ _$_KodiPlaylistGetItemsResponse _$$_KodiPlaylistGetItemsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiPlaylistGetItemsResponseToJson(
-        _$_KodiPlaylistGetItemsResponse instance) =>
+Map<String, dynamic> _$$KodiPlaylistGetItemsResponseImplToJson(
+        _$KodiPlaylistGetItemsResponseImpl instance) =>
     <String, dynamic>{
       'items': instance.items.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

@@ -6,13 +6,15 @@ part of 'set_setting_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SsetSettingValue _$$SsetSettingValueFromJson(Map<String, dynamic> json) =>
-    _$SsetSettingValue(
+_$SsetSettingValueImpl _$$SsetSettingValueImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SsetSettingValueImpl(
       json['setting'] as String,
       const KodiSettingValueExtendedConverter().fromJson(json['value']),
     );
 
-Map<String, dynamic> _$$SsetSettingValueToJson(_$SsetSettingValue instance) {
+Map<String, dynamic> _$$SsetSettingValueImplToJson(
+    _$SsetSettingValueImpl instance) {
   final val = <String, dynamic>{
     'setting': instance.setting,
   };

@@ -12,7 +12,7 @@ part of 'kodi_player_audio_stream.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerAudioStream _$KodiPlayerAudioStreamFromJson(
     Map<String, dynamic> json) {
@@ -36,8 +36,12 @@ mixin _$KodiPlayerAudioStream {
   @JsonKey(name: 'samplerate')
   int get sampleRate => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerAudioStream to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerAudioStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerAudioStreamCopyWith<KodiPlayerAudioStream> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -72,6 +76,8 @@ class _$KodiPlayerAudioStreamCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerAudioStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +138,12 @@ class _$KodiPlayerAudioStreamCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerAudioStreamCopyWith<$Res>
+abstract class _$$KodiPlayerAudioStreamImplCopyWith<$Res>
     implements $KodiPlayerAudioStreamCopyWith<$Res> {
-  factory _$$_KodiPlayerAudioStreamCopyWith(_$_KodiPlayerAudioStream value,
-          $Res Function(_$_KodiPlayerAudioStream) then) =
-      __$$_KodiPlayerAudioStreamCopyWithImpl<$Res>;
+  factory _$$KodiPlayerAudioStreamImplCopyWith(
+          _$KodiPlayerAudioStreamImpl value,
+          $Res Function(_$KodiPlayerAudioStreamImpl) then) =
+      __$$KodiPlayerAudioStreamImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -153,13 +160,16 @@ abstract class _$$_KodiPlayerAudioStreamCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerAudioStreamCopyWithImpl<$Res>
-    extends _$KodiPlayerAudioStreamCopyWithImpl<$Res, _$_KodiPlayerAudioStream>
-    implements _$$_KodiPlayerAudioStreamCopyWith<$Res> {
-  __$$_KodiPlayerAudioStreamCopyWithImpl(_$_KodiPlayerAudioStream _value,
-      $Res Function(_$_KodiPlayerAudioStream) _then)
+class __$$KodiPlayerAudioStreamImplCopyWithImpl<$Res>
+    extends _$KodiPlayerAudioStreamCopyWithImpl<$Res,
+        _$KodiPlayerAudioStreamImpl>
+    implements _$$KodiPlayerAudioStreamImplCopyWith<$Res> {
+  __$$KodiPlayerAudioStreamImplCopyWithImpl(_$KodiPlayerAudioStreamImpl _value,
+      $Res Function(_$KodiPlayerAudioStreamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerAudioStream
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -174,7 +184,7 @@ class __$$_KodiPlayerAudioStreamCopyWithImpl<$Res>
     Object? name = null,
     Object? sampleRate = null,
   }) {
-    return _then(_$_KodiPlayerAudioStream(
+    return _then(_$KodiPlayerAudioStreamImpl(
       bitrate: null == bitrate
           ? _value.bitrate
           : bitrate // ignore: cast_nullable_to_non_nullable
@@ -221,8 +231,8 @@ class __$$_KodiPlayerAudioStreamCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerAudioStream implements _KodiPlayerAudioStream {
-  const _$_KodiPlayerAudioStream(
+class _$KodiPlayerAudioStreamImpl implements _KodiPlayerAudioStream {
+  const _$KodiPlayerAudioStreamImpl(
       {required this.bitrate,
       required this.channels,
       required this.codec,
@@ -234,8 +244,8 @@ class _$_KodiPlayerAudioStream implements _KodiPlayerAudioStream {
       required this.name,
       @JsonKey(name: 'samplerate') required this.sampleRate});
 
-  factory _$_KodiPlayerAudioStream.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerAudioStreamFromJson(json);
+  factory _$KodiPlayerAudioStreamImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerAudioStreamImplFromJson(json);
 
   @override
   final int bitrate;
@@ -268,10 +278,10 @@ class _$_KodiPlayerAudioStream implements _KodiPlayerAudioStream {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerAudioStream &&
+            other is _$KodiPlayerAudioStreamImpl &&
             (identical(other.bitrate, bitrate) || other.bitrate == bitrate) &&
             (identical(other.channels, channels) ||
                 other.channels == channels) &&
@@ -290,21 +300,23 @@ class _$_KodiPlayerAudioStream implements _KodiPlayerAudioStream {
                 other.sampleRate == sampleRate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, bitrate, channels, codec, index,
       isDefault, isImpaired, isOriginal, language, name, sampleRate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerAudioStream
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerAudioStreamCopyWith<_$_KodiPlayerAudioStream> get copyWith =>
-      __$$_KodiPlayerAudioStreamCopyWithImpl<_$_KodiPlayerAudioStream>(
-          this, _$identity);
+  _$$KodiPlayerAudioStreamImplCopyWith<_$KodiPlayerAudioStreamImpl>
+      get copyWith => __$$KodiPlayerAudioStreamImplCopyWithImpl<
+          _$KodiPlayerAudioStreamImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerAudioStreamToJson(
+    return _$$KodiPlayerAudioStreamImplToJson(
       this,
     );
   }
@@ -322,10 +334,10 @@ abstract class _KodiPlayerAudioStream implements KodiPlayerAudioStream {
           required final String language,
           required final String name,
           @JsonKey(name: 'samplerate') required final int sampleRate}) =
-      _$_KodiPlayerAudioStream;
+      _$KodiPlayerAudioStreamImpl;
 
   factory _KodiPlayerAudioStream.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerAudioStream.fromJson;
+      _$KodiPlayerAudioStreamImpl.fromJson;
 
   @override
   int get bitrate;
@@ -351,8 +363,11 @@ abstract class _KodiPlayerAudioStream implements KodiPlayerAudioStream {
   @override
   @JsonKey(name: 'samplerate')
   int get sampleRate;
+
+  /// Create a copy of KodiPlayerAudioStream
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerAudioStreamCopyWith<_$_KodiPlayerAudioStream> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerAudioStreamImplCopyWith<_$KodiPlayerAudioStreamImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

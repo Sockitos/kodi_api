@@ -6,14 +6,14 @@ part of 'get_properties.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetProperties _$$_GetPropertiesFromJson(Map<String, dynamic> json) =>
-    _$_GetProperties(
+_$GetPropertiesImpl _$$GetPropertiesImplFromJson(Map<String, dynamic> json) =>
+    _$GetPropertiesImpl(
       (json['properties'] as List<dynamic>)
           .map((e) => $enumDecode(_$KodiAudioPropertyNameEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetPropertiesToJson(_$_GetProperties instance) =>
+Map<String, dynamic> _$$GetPropertiesImplToJson(_$GetPropertiesImpl instance) =>
     <String, dynamic>{
       'properties': instance.properties
           .map((e) => _$KodiAudioPropertyNameEnumMap[e]!)
@@ -21,15 +21,15 @@ Map<String, dynamic> _$$_GetPropertiesToJson(_$_GetProperties instance) =>
     };
 
 const _$KodiAudioPropertyNameEnumMap = {
-  KodiAudioPropertyName.albumsLastAdded: 'albumslastadded',
-  KodiAudioPropertyName.albumsModified: 'albumsmodified',
-  KodiAudioPropertyName.artistLinksUpdated: 'artistlinksupdated',
-  KodiAudioPropertyName.artistsLastAdded: 'artistslastadded',
-  KodiAudioPropertyName.artistsModified: 'artistsmodified',
-  KodiAudioPropertyName.genresLastAdded: 'genreslastadded',
-  KodiAudioPropertyName.libraryLastCleaned: 'librarylastcleaned',
-  KodiAudioPropertyName.libraryLastUpdated: 'librarylastupdated',
   KodiAudioPropertyName.missingArtistId: 'missingartistid',
+  KodiAudioPropertyName.libraryLastUpdated: 'librarylastupdated',
+  KodiAudioPropertyName.libraryLastCleaned: 'librarylastcleaned',
+  KodiAudioPropertyName.artistLinksUpdated: 'artistlinksupdated',
   KodiAudioPropertyName.songsLastAdded: 'songslastadded',
+  KodiAudioPropertyName.albumsLastAdded: 'albumslastadded',
+  KodiAudioPropertyName.artistsLastAdded: 'artistslastadded',
+  KodiAudioPropertyName.genresLastAdded: 'genreslastadded',
   KodiAudioPropertyName.songsModified: 'songsmodified',
+  KodiAudioPropertyName.albumsModified: 'albumsmodified',
+  KodiAudioPropertyName.artistsModified: 'artistsmodified',
 };

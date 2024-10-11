@@ -6,8 +6,8 @@ part of 'get_sources.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSources _$$_GetSourcesFromJson(Map<String, dynamic> json) =>
-    _$_GetSources(
+_$GetSourcesImpl _$$GetSourcesImplFromJson(Map<String, dynamic> json) =>
+    _$GetSourcesImpl(
       $enumDecode(_$KodiFilesMediaEnumMap, json['media']),
       limits: json['limits'] == null
           ? null
@@ -17,7 +17,7 @@ _$_GetSources _$$_GetSourcesFromJson(Map<String, dynamic> json) =>
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSourcesToJson(_$_GetSources instance) {
+Map<String, dynamic> _$$GetSourcesImplToJson(_$GetSourcesImpl instance) {
   final val = <String, dynamic>{
     'media': _$KodiFilesMediaEnumMap[instance.media]!,
   };
@@ -41,9 +41,9 @@ const _$KodiFilesMediaEnumMap = {
   KodiFilesMedia.programs: 'programs',
 };
 
-_$_GetSourcesResponse _$$_GetSourcesResponseFromJson(
+_$GetSourcesResponseImpl _$$GetSourcesResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetSourcesResponse(
+    _$GetSourcesResponseImpl(
       sources: (json['sources'] as List<dynamic>)
           .map((e) => KodiListItemsSources.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -51,8 +51,8 @@ _$_GetSourcesResponse _$$_GetSourcesResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetSourcesResponseToJson(
-        _$_GetSourcesResponse instance) =>
+Map<String, dynamic> _$$GetSourcesResponseImplToJson(
+        _$GetSourcesResponseImpl instance) =>
     <String, dynamic>{
       'sources': instance.sources.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

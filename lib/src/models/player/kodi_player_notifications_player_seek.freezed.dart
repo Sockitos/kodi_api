@@ -12,7 +12,7 @@ part of 'kodi_player_notifications_player_seek.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPlayerNotificationsPlayerSeek _$KodiPlayerNotificationsPlayerSeekFromJson(
     Map<String, dynamic> json) {
@@ -28,8 +28,12 @@ mixin _$KodiPlayerNotificationsPlayerSeek {
   int get playerId => throw _privateConstructorUsedError;
   int? get speed => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerNotificationsPlayerSeek to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerNotificationsPlayerSeek
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerNotificationsPlayerSeekCopyWith<KodiPlayerNotificationsPlayerSeek>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -63,6 +67,8 @@ class _$KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerNotificationsPlayerSeek
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class _$KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPlayerNotificationsPlayerSeek
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res>? get seekOffset {
@@ -103,6 +111,8 @@ class _$KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiPlayerNotificationsPlayerSeek
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiGlobalTimeCopyWith<$Res>? get time {
@@ -117,12 +127,12 @@ class _$KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerNotificationsPlayerSeekCopyWith<$Res>
+abstract class _$$KodiPlayerNotificationsPlayerSeekImplCopyWith<$Res>
     implements $KodiPlayerNotificationsPlayerSeekCopyWith<$Res> {
-  factory _$$_KodiPlayerNotificationsPlayerSeekCopyWith(
-          _$_KodiPlayerNotificationsPlayerSeek value,
-          $Res Function(_$_KodiPlayerNotificationsPlayerSeek) then) =
-      __$$_KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res>;
+  factory _$$KodiPlayerNotificationsPlayerSeekImplCopyWith(
+          _$KodiPlayerNotificationsPlayerSeekImpl value,
+          $Res Function(_$KodiPlayerNotificationsPlayerSeekImpl) then) =
+      __$$KodiPlayerNotificationsPlayerSeekImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -138,15 +148,17 @@ abstract class _$$_KodiPlayerNotificationsPlayerSeekCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res>
+class __$$KodiPlayerNotificationsPlayerSeekImplCopyWithImpl<$Res>
     extends _$KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res,
-        _$_KodiPlayerNotificationsPlayerSeek>
-    implements _$$_KodiPlayerNotificationsPlayerSeekCopyWith<$Res> {
-  __$$_KodiPlayerNotificationsPlayerSeekCopyWithImpl(
-      _$_KodiPlayerNotificationsPlayerSeek _value,
-      $Res Function(_$_KodiPlayerNotificationsPlayerSeek) _then)
+        _$KodiPlayerNotificationsPlayerSeekImpl>
+    implements _$$KodiPlayerNotificationsPlayerSeekImplCopyWith<$Res> {
+  __$$KodiPlayerNotificationsPlayerSeekImplCopyWithImpl(
+      _$KodiPlayerNotificationsPlayerSeekImpl _value,
+      $Res Function(_$KodiPlayerNotificationsPlayerSeekImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerNotificationsPlayerSeek
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,7 +167,7 @@ class __$$_KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res>
     Object? playerId = null,
     Object? speed = freezed,
   }) {
-    return _then(_$_KodiPlayerNotificationsPlayerSeek(
+    return _then(_$KodiPlayerNotificationsPlayerSeekImpl(
       seekOffset: freezed == seekOffset
           ? _value.seekOffset
           : seekOffset // ignore: cast_nullable_to_non_nullable
@@ -178,17 +190,17 @@ class __$$_KodiPlayerNotificationsPlayerSeekCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerNotificationsPlayerSeek
+class _$KodiPlayerNotificationsPlayerSeekImpl
     implements _KodiPlayerNotificationsPlayerSeek {
-  const _$_KodiPlayerNotificationsPlayerSeek(
+  const _$KodiPlayerNotificationsPlayerSeekImpl(
       {@JsonKey(name: 'seekoffset') this.seekOffset,
       this.time,
       @JsonKey(name: 'playerid') required this.playerId,
       this.speed});
 
-  factory _$_KodiPlayerNotificationsPlayerSeek.fromJson(
+  factory _$KodiPlayerNotificationsPlayerSeekImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerNotificationsPlayerSeekFromJson(json);
+      _$$KodiPlayerNotificationsPlayerSeekImplFromJson(json);
 
   @override
   @JsonKey(name: 'seekoffset')
@@ -207,10 +219,10 @@ class _$_KodiPlayerNotificationsPlayerSeek
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerNotificationsPlayerSeek &&
+            other is _$KodiPlayerNotificationsPlayerSeekImpl &&
             (identical(other.seekOffset, seekOffset) ||
                 other.seekOffset == seekOffset) &&
             (identical(other.time, time) || other.time == time) &&
@@ -219,22 +231,24 @@ class _$_KodiPlayerNotificationsPlayerSeek
             (identical(other.speed, speed) || other.speed == speed));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, seekOffset, time, playerId, speed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerNotificationsPlayerSeek
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerNotificationsPlayerSeekCopyWith<
-          _$_KodiPlayerNotificationsPlayerSeek>
-      get copyWith => __$$_KodiPlayerNotificationsPlayerSeekCopyWithImpl<
-          _$_KodiPlayerNotificationsPlayerSeek>(this, _$identity);
+  _$$KodiPlayerNotificationsPlayerSeekImplCopyWith<
+          _$KodiPlayerNotificationsPlayerSeekImpl>
+      get copyWith => __$$KodiPlayerNotificationsPlayerSeekImplCopyWithImpl<
+          _$KodiPlayerNotificationsPlayerSeekImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerNotificationsPlayerSeekToJson(
+    return _$$KodiPlayerNotificationsPlayerSeekImplToJson(
       this,
     );
   }
@@ -246,11 +260,11 @@ abstract class _KodiPlayerNotificationsPlayerSeek
       {@JsonKey(name: 'seekoffset') final KodiGlobalTime? seekOffset,
       final KodiGlobalTime? time,
       @JsonKey(name: 'playerid') required final int playerId,
-      final int? speed}) = _$_KodiPlayerNotificationsPlayerSeek;
+      final int? speed}) = _$KodiPlayerNotificationsPlayerSeekImpl;
 
   factory _KodiPlayerNotificationsPlayerSeek.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiPlayerNotificationsPlayerSeek.fromJson;
+      _$KodiPlayerNotificationsPlayerSeekImpl.fromJson;
 
   @override
   @JsonKey(name: 'seekoffset')
@@ -262,9 +276,12 @@ abstract class _KodiPlayerNotificationsPlayerSeek
   int get playerId;
   @override
   int? get speed;
+
+  /// Create a copy of KodiPlayerNotificationsPlayerSeek
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerNotificationsPlayerSeekCopyWith<
-          _$_KodiPlayerNotificationsPlayerSeek>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerNotificationsPlayerSeekImplCopyWith<
+          _$KodiPlayerNotificationsPlayerSeekImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

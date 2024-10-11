@@ -12,7 +12,7 @@ part of 'get_players.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetPlayers _$GetPlayersFromJson(Map<String, dynamic> json) {
   return _GetPlayers.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$GetPlayers {
   KodiPlayerAvailablePlayersType get media =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GetPlayers to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetPlayers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetPlayersCopyWith<GetPlayers> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$GetPlayersCopyWithImpl<$Res, $Val extends GetPlayers>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetPlayers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63,30 +69,32 @@ class _$GetPlayersCopyWithImpl<$Res, $Val extends GetPlayers>
 }
 
 /// @nodoc
-abstract class _$$_GetPlayersCopyWith<$Res>
+abstract class _$$GetPlayersImplCopyWith<$Res>
     implements $GetPlayersCopyWith<$Res> {
-  factory _$$_GetPlayersCopyWith(
-          _$_GetPlayers value, $Res Function(_$_GetPlayers) then) =
-      __$$_GetPlayersCopyWithImpl<$Res>;
+  factory _$$GetPlayersImplCopyWith(
+          _$GetPlayersImpl value, $Res Function(_$GetPlayersImpl) then) =
+      __$$GetPlayersImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({KodiPlayerAvailablePlayersType media});
 }
 
 /// @nodoc
-class __$$_GetPlayersCopyWithImpl<$Res>
-    extends _$GetPlayersCopyWithImpl<$Res, _$_GetPlayers>
-    implements _$$_GetPlayersCopyWith<$Res> {
-  __$$_GetPlayersCopyWithImpl(
-      _$_GetPlayers _value, $Res Function(_$_GetPlayers) _then)
+class __$$GetPlayersImplCopyWithImpl<$Res>
+    extends _$GetPlayersCopyWithImpl<$Res, _$GetPlayersImpl>
+    implements _$$GetPlayersImplCopyWith<$Res> {
+  __$$GetPlayersImplCopyWithImpl(
+      _$GetPlayersImpl _value, $Res Function(_$GetPlayersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetPlayers
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? media = null,
   }) {
-    return _then(_$_GetPlayers(
+    return _then(_$GetPlayersImpl(
       media: null == media
           ? _value.media
           : media // ignore: cast_nullable_to_non_nullable
@@ -97,12 +105,12 @@ class __$$_GetPlayersCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetPlayers extends _GetPlayers {
-  const _$_GetPlayers({this.media = KodiPlayerAvailablePlayersType.all})
+class _$GetPlayersImpl extends _GetPlayers {
+  const _$GetPlayersImpl({this.media = KodiPlayerAvailablePlayersType.all})
       : super._();
 
-  factory _$_GetPlayers.fromJson(Map<String, dynamic> json) =>
-      _$$_GetPlayersFromJson(json);
+  factory _$GetPlayersImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetPlayersImplFromJson(json);
 
   @override
   @JsonKey()
@@ -114,26 +122,28 @@ class _$_GetPlayers extends _GetPlayers {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetPlayers &&
+            other is _$GetPlayersImpl &&
             (identical(other.media, media) || other.media == media));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, media);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetPlayers
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetPlayersCopyWith<_$_GetPlayers> get copyWith =>
-      __$$_GetPlayersCopyWithImpl<_$_GetPlayers>(this, _$identity);
+  _$$GetPlayersImplCopyWith<_$GetPlayersImpl> get copyWith =>
+      __$$GetPlayersImplCopyWithImpl<_$GetPlayersImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPlayersToJson(
+    return _$$GetPlayersImplToJson(
       this,
     );
   }
@@ -141,17 +151,20 @@ class _$_GetPlayers extends _GetPlayers {
 
 abstract class _GetPlayers extends GetPlayers {
   const factory _GetPlayers({final KodiPlayerAvailablePlayersType media}) =
-      _$_GetPlayers;
+      _$GetPlayersImpl;
   const _GetPlayers._() : super._();
 
   factory _GetPlayers.fromJson(Map<String, dynamic> json) =
-      _$_GetPlayers.fromJson;
+      _$GetPlayersImpl.fromJson;
 
   @override
   KodiPlayerAvailablePlayersType get media;
+
+  /// Create a copy of GetPlayers
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetPlayersCopyWith<_$_GetPlayers> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetPlayersImplCopyWith<_$GetPlayersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -168,8 +181,12 @@ mixin _$KodiPlayerPlayer {
   bool get playsVideo => throw _privateConstructorUsedError;
   KodiPlayerPlayerType get type => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerPlayer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerPlayer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerPlayerCopyWith<KodiPlayerPlayer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -197,6 +214,8 @@ class _$KodiPlayerPlayerCopyWithImpl<$Res, $Val extends KodiPlayerPlayer>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerPlayer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -227,11 +246,11 @@ class _$KodiPlayerPlayerCopyWithImpl<$Res, $Val extends KodiPlayerPlayer>
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerPlayerCopyWith<$Res>
+abstract class _$$KodiPlayerPlayerImplCopyWith<$Res>
     implements $KodiPlayerPlayerCopyWith<$Res> {
-  factory _$$_KodiPlayerPlayerCopyWith(
-          _$_KodiPlayerPlayer value, $Res Function(_$_KodiPlayerPlayer) then) =
-      __$$_KodiPlayerPlayerCopyWithImpl<$Res>;
+  factory _$$KodiPlayerPlayerImplCopyWith(_$KodiPlayerPlayerImpl value,
+          $Res Function(_$KodiPlayerPlayerImpl) then) =
+      __$$KodiPlayerPlayerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -242,13 +261,15 @@ abstract class _$$_KodiPlayerPlayerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerPlayerCopyWithImpl<$Res>
-    extends _$KodiPlayerPlayerCopyWithImpl<$Res, _$_KodiPlayerPlayer>
-    implements _$$_KodiPlayerPlayerCopyWith<$Res> {
-  __$$_KodiPlayerPlayerCopyWithImpl(
-      _$_KodiPlayerPlayer _value, $Res Function(_$_KodiPlayerPlayer) _then)
+class __$$KodiPlayerPlayerImplCopyWithImpl<$Res>
+    extends _$KodiPlayerPlayerCopyWithImpl<$Res, _$KodiPlayerPlayerImpl>
+    implements _$$KodiPlayerPlayerImplCopyWith<$Res> {
+  __$$KodiPlayerPlayerImplCopyWithImpl(_$KodiPlayerPlayerImpl _value,
+      $Res Function(_$KodiPlayerPlayerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerPlayer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -257,7 +278,7 @@ class __$$_KodiPlayerPlayerCopyWithImpl<$Res>
     Object? playsVideo = null,
     Object? type = null,
   }) {
-    return _then(_$_KodiPlayerPlayer(
+    return _then(_$KodiPlayerPlayerImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -280,15 +301,15 @@ class __$$_KodiPlayerPlayerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerPlayer implements _KodiPlayerPlayer {
-  const _$_KodiPlayerPlayer(
+class _$KodiPlayerPlayerImpl implements _KodiPlayerPlayer {
+  const _$KodiPlayerPlayerImpl(
       {required this.name,
       @JsonKey(name: 'playsaudio') required this.playsAudio,
       @JsonKey(name: 'playsvideo') required this.playsVideo,
       required this.type});
 
-  factory _$_KodiPlayerPlayer.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerPlayerFromJson(json);
+  factory _$KodiPlayerPlayerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerPlayerImplFromJson(json);
 
   @override
   final String name;
@@ -307,10 +328,10 @@ class _$_KodiPlayerPlayer implements _KodiPlayerPlayer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerPlayer &&
+            other is _$KodiPlayerPlayerImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.playsAudio, playsAudio) ||
                 other.playsAudio == playsAudio) &&
@@ -319,20 +340,23 @@ class _$_KodiPlayerPlayer implements _KodiPlayerPlayer {
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, playsAudio, playsVideo, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerPlayer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerPlayerCopyWith<_$_KodiPlayerPlayer> get copyWith =>
-      __$$_KodiPlayerPlayerCopyWithImpl<_$_KodiPlayerPlayer>(this, _$identity);
+  _$$KodiPlayerPlayerImplCopyWith<_$KodiPlayerPlayerImpl> get copyWith =>
+      __$$KodiPlayerPlayerImplCopyWithImpl<_$KodiPlayerPlayerImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerPlayerToJson(
+    return _$$KodiPlayerPlayerImplToJson(
       this,
     );
   }
@@ -343,10 +367,10 @@ abstract class _KodiPlayerPlayer implements KodiPlayerPlayer {
       {required final String name,
       @JsonKey(name: 'playsaudio') required final bool playsAudio,
       @JsonKey(name: 'playsvideo') required final bool playsVideo,
-      required final KodiPlayerPlayerType type}) = _$_KodiPlayerPlayer;
+      required final KodiPlayerPlayerType type}) = _$KodiPlayerPlayerImpl;
 
   factory _KodiPlayerPlayer.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerPlayer.fromJson;
+      _$KodiPlayerPlayerImpl.fromJson;
 
   @override
   String get name;
@@ -358,8 +382,11 @@ abstract class _KodiPlayerPlayer implements KodiPlayerPlayer {
   bool get playsVideo;
   @override
   KodiPlayerPlayerType get type;
+
+  /// Create a copy of KodiPlayerPlayer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerPlayerCopyWith<_$_KodiPlayerPlayer> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerPlayerImplCopyWith<_$KodiPlayerPlayerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

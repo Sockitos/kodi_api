@@ -6,10 +6,10 @@ part of 'kodi_notification_system_on_restart_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationSystemOnRestartParams
-    _$$_KodiNotificationSystemOnRestartParamsFromJson(
+_$KodiNotificationSystemOnRestartParamsImpl
+    _$$KodiNotificationSystemOnRestartParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnRestartParams(
+        _$KodiNotificationSystemOnRestartParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,8 @@ _$_KodiNotificationSystemOnRestartParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnRestartParamsToJson(
-    _$_KodiNotificationSystemOnRestartParams instance) {
+Map<String, dynamic> _$$KodiNotificationSystemOnRestartParamsImplToJson(
+    _$KodiNotificationSystemOnRestartParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,15 +33,15 @@ Map<String, dynamic> _$$_KodiNotificationSystemOnRestartParamsToJson(
   return val;
 }
 
-_$_KodiNotificationSystemOnRestartParamsData
-    _$$_KodiNotificationSystemOnRestartParamsDataFromJson(
+_$KodiNotificationSystemOnRestartParamsDataImpl
+    _$$KodiNotificationSystemOnRestartParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnRestartParamsData(
+        _$KodiNotificationSystemOnRestartParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnRestartParamsDataToJson(
-        _$_KodiNotificationSystemOnRestartParamsData instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnRestartParamsDataImplToJson(
+        _$KodiNotificationSystemOnRestartParamsDataImpl instance) =>
     <String, dynamic>{
       'test': instance.test,
     };

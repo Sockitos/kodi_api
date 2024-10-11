@@ -12,7 +12,7 @@ part of 'set_setting_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SetSettingValue _$SetSettingValueFromJson(Map<String, dynamic> json) {
   return SsetSettingValue.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$SetSettingValue {
   @KodiSettingValueExtendedConverter()
   KodiSettingValueExtended get value => throw _privateConstructorUsedError;
 
+  /// Serializes this SetSettingValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SetSettingValueCopyWith<SetSettingValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$SetSettingValueCopyWithImpl<$Res, $Val extends SetSettingValue>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -71,6 +77,8 @@ class _$SetSettingValueCopyWithImpl<$Res, $Val extends SetSettingValue>
     ) as $Val);
   }
 
+  /// Create a copy of SetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiSettingValueExtendedCopyWith<$Res> get value {
@@ -81,11 +89,11 @@ class _$SetSettingValueCopyWithImpl<$Res, $Val extends SetSettingValue>
 }
 
 /// @nodoc
-abstract class _$$SsetSettingValueCopyWith<$Res>
+abstract class _$$SsetSettingValueImplCopyWith<$Res>
     implements $SetSettingValueCopyWith<$Res> {
-  factory _$$SsetSettingValueCopyWith(
-          _$SsetSettingValue value, $Res Function(_$SsetSettingValue) then) =
-      __$$SsetSettingValueCopyWithImpl<$Res>;
+  factory _$$SsetSettingValueImplCopyWith(_$SsetSettingValueImpl value,
+          $Res Function(_$SsetSettingValueImpl) then) =
+      __$$SsetSettingValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -97,20 +105,22 @@ abstract class _$$SsetSettingValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SsetSettingValueCopyWithImpl<$Res>
-    extends _$SetSettingValueCopyWithImpl<$Res, _$SsetSettingValue>
-    implements _$$SsetSettingValueCopyWith<$Res> {
-  __$$SsetSettingValueCopyWithImpl(
-      _$SsetSettingValue _value, $Res Function(_$SsetSettingValue) _then)
+class __$$SsetSettingValueImplCopyWithImpl<$Res>
+    extends _$SetSettingValueCopyWithImpl<$Res, _$SsetSettingValueImpl>
+    implements _$$SsetSettingValueImplCopyWith<$Res> {
+  __$$SsetSettingValueImplCopyWithImpl(_$SsetSettingValueImpl _value,
+      $Res Function(_$SsetSettingValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? setting = null,
     Object? value = null,
   }) {
-    return _then(_$SsetSettingValue(
+    return _then(_$SsetSettingValueImpl(
       null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -125,13 +135,13 @@ class __$$SsetSettingValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SsetSettingValue extends SsetSettingValue {
-  const _$SsetSettingValue(
+class _$SsetSettingValueImpl extends SsetSettingValue {
+  const _$SsetSettingValueImpl(
       this.setting, @KodiSettingValueExtendedConverter() this.value)
       : super._();
 
-  factory _$SsetSettingValue.fromJson(Map<String, dynamic> json) =>
-      _$$SsetSettingValueFromJson(json);
+  factory _$SsetSettingValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SsetSettingValueImplFromJson(json);
 
   @override
   final String setting;
@@ -145,27 +155,30 @@ class _$SsetSettingValue extends SsetSettingValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SsetSettingValue &&
+            other is _$SsetSettingValueImpl &&
             (identical(other.setting, setting) || other.setting == setting) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, setting, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SsetSettingValueCopyWith<_$SsetSettingValue> get copyWith =>
-      __$$SsetSettingValueCopyWithImpl<_$SsetSettingValue>(this, _$identity);
+  _$$SsetSettingValueImplCopyWith<_$SsetSettingValueImpl> get copyWith =>
+      __$$SsetSettingValueImplCopyWithImpl<_$SsetSettingValueImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SsetSettingValueToJson(
+    return _$$SsetSettingValueImplToJson(
       this,
     );
   }
@@ -175,19 +188,22 @@ abstract class SsetSettingValue extends SetSettingValue {
   const factory SsetSettingValue(
       final String setting,
       @KodiSettingValueExtendedConverter()
-      final KodiSettingValueExtended value) = _$SsetSettingValue;
+      final KodiSettingValueExtended value) = _$SsetSettingValueImpl;
   const SsetSettingValue._() : super._();
 
   factory SsetSettingValue.fromJson(Map<String, dynamic> json) =
-      _$SsetSettingValue.fromJson;
+      _$SsetSettingValueImpl.fromJson;
 
   @override
   String get setting;
   @override
   @KodiSettingValueExtendedConverter()
   KodiSettingValueExtended get value;
+
+  /// Create a copy of SetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$SsetSettingValueCopyWith<_$SsetSettingValue> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SsetSettingValueImplCopyWith<_$SsetSettingValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

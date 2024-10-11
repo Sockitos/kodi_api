@@ -12,7 +12,7 @@ part of 'reset_setting_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResetSettingValue _$ResetSettingValueFromJson(Map<String, dynamic> json) {
   return _ResetSettingValue.fromJson(json);
@@ -22,8 +22,12 @@ ResetSettingValue _$ResetSettingValueFromJson(Map<String, dynamic> json) {
 mixin _$ResetSettingValue {
   String get setting => throw _privateConstructorUsedError;
 
+  /// Serializes this ResetSettingValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResetSettingValueCopyWith<ResetSettingValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +51,8 @@ class _$ResetSettingValueCopyWithImpl<$Res, $Val extends ResetSettingValue>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -62,30 +68,32 @@ class _$ResetSettingValueCopyWithImpl<$Res, $Val extends ResetSettingValue>
 }
 
 /// @nodoc
-abstract class _$$_ResetSettingValueCopyWith<$Res>
+abstract class _$$ResetSettingValueImplCopyWith<$Res>
     implements $ResetSettingValueCopyWith<$Res> {
-  factory _$$_ResetSettingValueCopyWith(_$_ResetSettingValue value,
-          $Res Function(_$_ResetSettingValue) then) =
-      __$$_ResetSettingValueCopyWithImpl<$Res>;
+  factory _$$ResetSettingValueImplCopyWith(_$ResetSettingValueImpl value,
+          $Res Function(_$ResetSettingValueImpl) then) =
+      __$$ResetSettingValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String setting});
 }
 
 /// @nodoc
-class __$$_ResetSettingValueCopyWithImpl<$Res>
-    extends _$ResetSettingValueCopyWithImpl<$Res, _$_ResetSettingValue>
-    implements _$$_ResetSettingValueCopyWith<$Res> {
-  __$$_ResetSettingValueCopyWithImpl(
-      _$_ResetSettingValue _value, $Res Function(_$_ResetSettingValue) _then)
+class __$$ResetSettingValueImplCopyWithImpl<$Res>
+    extends _$ResetSettingValueCopyWithImpl<$Res, _$ResetSettingValueImpl>
+    implements _$$ResetSettingValueImplCopyWith<$Res> {
+  __$$ResetSettingValueImplCopyWithImpl(_$ResetSettingValueImpl _value,
+      $Res Function(_$ResetSettingValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? setting = null,
   }) {
-    return _then(_$_ResetSettingValue(
+    return _then(_$ResetSettingValueImpl(
       null == setting
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -96,11 +104,11 @@ class __$$_ResetSettingValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResetSettingValue extends _ResetSettingValue {
-  const _$_ResetSettingValue(this.setting) : super._();
+class _$ResetSettingValueImpl extends _ResetSettingValue {
+  const _$ResetSettingValueImpl(this.setting) : super._();
 
-  factory _$_ResetSettingValue.fromJson(Map<String, dynamic> json) =>
-      _$$_ResetSettingValueFromJson(json);
+  factory _$ResetSettingValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResetSettingValueImplFromJson(json);
 
   @override
   final String setting;
@@ -111,43 +119,49 @@ class _$_ResetSettingValue extends _ResetSettingValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResetSettingValue &&
+            other is _$ResetSettingValueImpl &&
             (identical(other.setting, setting) || other.setting == setting));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, setting);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResetSettingValueCopyWith<_$_ResetSettingValue> get copyWith =>
-      __$$_ResetSettingValueCopyWithImpl<_$_ResetSettingValue>(
+  _$$ResetSettingValueImplCopyWith<_$ResetSettingValueImpl> get copyWith =>
+      __$$ResetSettingValueImplCopyWithImpl<_$ResetSettingValueImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResetSettingValueToJson(
+    return _$$ResetSettingValueImplToJson(
       this,
     );
   }
 }
 
 abstract class _ResetSettingValue extends ResetSettingValue {
-  const factory _ResetSettingValue(final String setting) = _$_ResetSettingValue;
+  const factory _ResetSettingValue(final String setting) =
+      _$ResetSettingValueImpl;
   const _ResetSettingValue._() : super._();
 
   factory _ResetSettingValue.fromJson(Map<String, dynamic> json) =
-      _$_ResetSettingValue.fromJson;
+      _$ResetSettingValueImpl.fromJson;
 
   @override
   String get setting;
+
+  /// Create a copy of ResetSettingValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ResetSettingValueCopyWith<_$_ResetSettingValue> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResetSettingValueImplCopyWith<_$ResetSettingValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

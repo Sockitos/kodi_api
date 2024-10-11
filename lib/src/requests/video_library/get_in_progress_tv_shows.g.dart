@@ -6,9 +6,9 @@ part of 'get_in_progress_tv_shows.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetInProgressTVShows _$$_GetInProgressTVShowsFromJson(
+_$GetInProgressTVShowsImpl _$$GetInProgressTVShowsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetInProgressTVShows(
+    _$GetInProgressTVShowsImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsTvShowEnumMap, e))
           .toSet(),
@@ -20,8 +20,8 @@ _$_GetInProgressTVShows _$$_GetInProgressTVShowsFromJson(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetInProgressTVShowsToJson(
-    _$_GetInProgressTVShows instance) {
+Map<String, dynamic> _$$GetInProgressTVShowsImplToJson(
+    _$GetInProgressTVShowsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -72,9 +72,9 @@ const _$KodiVideoFieldsTvShowEnumMap = {
   KodiVideoFieldsTvShow.uniqueId: 'uniqueid',
 };
 
-_$_GetInProgressTVShowsResponse _$$_GetInProgressTVShowsResponseFromJson(
+_$GetInProgressTVShowsResponseImpl _$$GetInProgressTVShowsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetInProgressTVShowsResponse(
+    _$GetInProgressTVShowsResponseImpl(
       tvShows: (json['tvshows'] as List<dynamic>)
           .map(
               (e) => KodiVideoDetailsTvShow.fromJson(e as Map<String, dynamic>))
@@ -83,8 +83,8 @@ _$_GetInProgressTVShowsResponse _$$_GetInProgressTVShowsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetInProgressTVShowsResponseToJson(
-        _$_GetInProgressTVShowsResponse instance) =>
+Map<String, dynamic> _$$GetInProgressTVShowsResponseImplToJson(
+        _$GetInProgressTVShowsResponseImpl instance) =>
     <String, dynamic>{
       'tvshows': instance.tvShows.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

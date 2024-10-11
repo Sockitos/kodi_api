@@ -6,14 +6,15 @@ part of 'play_pause.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PlayPause _$$_PlayPauseFromJson(Map<String, dynamic> json) => _$_PlayPause(
-      json['playerid'] as int,
+_$PlayPauseImpl _$$PlayPauseImplFromJson(Map<String, dynamic> json) =>
+    _$PlayPauseImpl(
+      (json['playerid'] as num).toInt(),
       play: json['play'] == null
           ? const KodiGlobalToggle.enumerator(KodiGlobalToggleEnum.toggle)
           : const KodiGlobalToggleConverter().fromJson(json['play']),
     );
 
-Map<String, dynamic> _$$_PlayPauseToJson(_$_PlayPause instance) {
+Map<String, dynamic> _$$PlayPauseImplToJson(_$PlayPauseImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };

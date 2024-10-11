@@ -12,7 +12,7 @@ part of 'context_menu.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ContextMenu _$ContextMenuFromJson(Map<String, dynamic> json) {
   return _ContextMenu.fromJson(json);
@@ -20,6 +20,7 @@ ContextMenu _$ContextMenuFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ContextMenu {
+  /// Serializes this ContextMenu to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -39,31 +40,37 @@ class _$ContextMenuCopyWithImpl<$Res, $Val extends ContextMenu>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ContextMenu
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_ContextMenuCopyWith<$Res> {
-  factory _$$_ContextMenuCopyWith(
-          _$_ContextMenu value, $Res Function(_$_ContextMenu) then) =
-      __$$_ContextMenuCopyWithImpl<$Res>;
+abstract class _$$ContextMenuImplCopyWith<$Res> {
+  factory _$$ContextMenuImplCopyWith(
+          _$ContextMenuImpl value, $Res Function(_$ContextMenuImpl) then) =
+      __$$ContextMenuImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ContextMenuCopyWithImpl<$Res>
-    extends _$ContextMenuCopyWithImpl<$Res, _$_ContextMenu>
-    implements _$$_ContextMenuCopyWith<$Res> {
-  __$$_ContextMenuCopyWithImpl(
-      _$_ContextMenu _value, $Res Function(_$_ContextMenu) _then)
+class __$$ContextMenuImplCopyWithImpl<$Res>
+    extends _$ContextMenuCopyWithImpl<$Res, _$ContextMenuImpl>
+    implements _$$ContextMenuImplCopyWith<$Res> {
+  __$$ContextMenuImplCopyWithImpl(
+      _$ContextMenuImpl _value, $Res Function(_$ContextMenuImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ContextMenu
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ContextMenu extends _ContextMenu {
-  const _$_ContextMenu() : super._();
+class _$ContextMenuImpl extends _ContextMenu {
+  const _$ContextMenuImpl() : super._();
 
-  factory _$_ContextMenu.fromJson(Map<String, dynamic> json) =>
-      _$$_ContextMenuFromJson(json);
+  factory _$ContextMenuImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ContextMenuImplFromJson(json);
 
   @override
   String toString() {
@@ -71,27 +78,27 @@ class _$_ContextMenu extends _ContextMenu {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ContextMenu);
+        (other.runtimeType == runtimeType && other is _$ContextMenuImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContextMenuToJson(
+    return _$$ContextMenuImplToJson(
       this,
     );
   }
 }
 
 abstract class _ContextMenu extends ContextMenu {
-  const factory _ContextMenu() = _$_ContextMenu;
+  const factory _ContextMenu() = _$ContextMenuImpl;
   const _ContextMenu._() : super._();
 
   factory _ContextMenu.fromJson(Map<String, dynamic> json) =
-      _$_ContextMenu.fromJson;
+      _$ContextMenuImpl.fromJson;
 }

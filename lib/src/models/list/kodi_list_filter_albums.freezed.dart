@@ -12,7 +12,7 @@ part of 'kodi_list_filter_albums.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListFilterAlbums _$KodiListFilterAlbumsFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -78,6 +78,8 @@ mixin _$KodiListFilterAlbums {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiListFilterAlbums to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -98,31 +100,39 @@ class _$KodiListFilterAlbumsCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterAlbumsAndCopyWith<$Res> {
-  factory _$$_KodiListFilterAlbumsAndCopyWith(_$_KodiListFilterAlbumsAnd value,
-          $Res Function(_$_KodiListFilterAlbumsAnd) then) =
-      __$$_KodiListFilterAlbumsAndCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterAlbumsAndImplCopyWith<$Res> {
+  factory _$$KodiListFilterAlbumsAndImplCopyWith(
+          _$KodiListFilterAlbumsAndImpl value,
+          $Res Function(_$KodiListFilterAlbumsAndImpl) then) =
+      __$$KodiListFilterAlbumsAndImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<KodiListFilterAlbums> and});
 }
 
 /// @nodoc
-class __$$_KodiListFilterAlbumsAndCopyWithImpl<$Res>
-    extends _$KodiListFilterAlbumsCopyWithImpl<$Res, _$_KodiListFilterAlbumsAnd>
-    implements _$$_KodiListFilterAlbumsAndCopyWith<$Res> {
-  __$$_KodiListFilterAlbumsAndCopyWithImpl(_$_KodiListFilterAlbumsAnd _value,
-      $Res Function(_$_KodiListFilterAlbumsAnd) _then)
+class __$$KodiListFilterAlbumsAndImplCopyWithImpl<$Res>
+    extends _$KodiListFilterAlbumsCopyWithImpl<$Res,
+        _$KodiListFilterAlbumsAndImpl>
+    implements _$$KodiListFilterAlbumsAndImplCopyWith<$Res> {
+  __$$KodiListFilterAlbumsAndImplCopyWithImpl(
+      _$KodiListFilterAlbumsAndImpl _value,
+      $Res Function(_$KodiListFilterAlbumsAndImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? and = null,
   }) {
-    return _then(_$_KodiListFilterAlbumsAnd(
+    return _then(_$KodiListFilterAlbumsAndImpl(
       null == and
           ? _value._and
           : and // ignore: cast_nullable_to_non_nullable
@@ -133,15 +143,15 @@ class __$$_KodiListFilterAlbumsAndCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterAlbumsAnd implements _KodiListFilterAlbumsAnd {
-  const _$_KodiListFilterAlbumsAnd(final List<KodiListFilterAlbums> and,
+class _$KodiListFilterAlbumsAndImpl implements _KodiListFilterAlbumsAnd {
+  const _$KodiListFilterAlbumsAndImpl(final List<KodiListFilterAlbums> and,
       {final String? $type})
       : assert(and.length > 0, 'List must not be empty!'),
         _and = and,
         $type = $type ?? 'and';
 
-  factory _$_KodiListFilterAlbumsAnd.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterAlbumsAndFromJson(json);
+  factory _$KodiListFilterAlbumsAndImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListFilterAlbumsAndImplFromJson(json);
 
   final List<KodiListFilterAlbums> _and;
   @override
@@ -160,25 +170,26 @@ class _$_KodiListFilterAlbumsAnd implements _KodiListFilterAlbumsAnd {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterAlbumsAnd &&
+            other is _$KodiListFilterAlbumsAndImpl &&
             const DeepCollectionEquality().equals(other._and, _and));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_and));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterAlbumsAndCopyWith<_$_KodiListFilterAlbumsAnd>
-      get copyWith =>
-          __$$_KodiListFilterAlbumsAndCopyWithImpl<_$_KodiListFilterAlbumsAnd>(
-              this, _$identity);
+  _$$KodiListFilterAlbumsAndImplCopyWith<_$KodiListFilterAlbumsAndImpl>
+      get copyWith => __$$KodiListFilterAlbumsAndImplCopyWithImpl<
+          _$KodiListFilterAlbumsAndImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -250,7 +261,7 @@ class _$_KodiListFilterAlbumsAnd implements _KodiListFilterAlbumsAnd {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterAlbumsAndToJson(
+    return _$$KodiListFilterAlbumsAndImplToJson(
       this,
     );
   }
@@ -258,40 +269,48 @@ class _$_KodiListFilterAlbumsAnd implements _KodiListFilterAlbumsAnd {
 
 abstract class _KodiListFilterAlbumsAnd implements KodiListFilterAlbums {
   const factory _KodiListFilterAlbumsAnd(final List<KodiListFilterAlbums> and) =
-      _$_KodiListFilterAlbumsAnd;
+      _$KodiListFilterAlbumsAndImpl;
 
   factory _KodiListFilterAlbumsAnd.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterAlbumsAnd.fromJson;
+      _$KodiListFilterAlbumsAndImpl.fromJson;
 
   List<KodiListFilterAlbums> get and;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterAlbumsAndCopyWith<_$_KodiListFilterAlbumsAnd>
+
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterAlbumsAndImplCopyWith<_$KodiListFilterAlbumsAndImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterAlbumsOrCopyWith<$Res> {
-  factory _$$_KodiListFilterAlbumsOrCopyWith(_$_KodiListFilterAlbumsOr value,
-          $Res Function(_$_KodiListFilterAlbumsOr) then) =
-      __$$_KodiListFilterAlbumsOrCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterAlbumsOrImplCopyWith<$Res> {
+  factory _$$KodiListFilterAlbumsOrImplCopyWith(
+          _$KodiListFilterAlbumsOrImpl value,
+          $Res Function(_$KodiListFilterAlbumsOrImpl) then) =
+      __$$KodiListFilterAlbumsOrImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<KodiListFilterAlbums> or});
 }
 
 /// @nodoc
-class __$$_KodiListFilterAlbumsOrCopyWithImpl<$Res>
-    extends _$KodiListFilterAlbumsCopyWithImpl<$Res, _$_KodiListFilterAlbumsOr>
-    implements _$$_KodiListFilterAlbumsOrCopyWith<$Res> {
-  __$$_KodiListFilterAlbumsOrCopyWithImpl(_$_KodiListFilterAlbumsOr _value,
-      $Res Function(_$_KodiListFilterAlbumsOr) _then)
+class __$$KodiListFilterAlbumsOrImplCopyWithImpl<$Res>
+    extends _$KodiListFilterAlbumsCopyWithImpl<$Res,
+        _$KodiListFilterAlbumsOrImpl>
+    implements _$$KodiListFilterAlbumsOrImplCopyWith<$Res> {
+  __$$KodiListFilterAlbumsOrImplCopyWithImpl(
+      _$KodiListFilterAlbumsOrImpl _value,
+      $Res Function(_$KodiListFilterAlbumsOrImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? or = null,
   }) {
-    return _then(_$_KodiListFilterAlbumsOr(
+    return _then(_$KodiListFilterAlbumsOrImpl(
       null == or
           ? _value._or
           : or // ignore: cast_nullable_to_non_nullable
@@ -302,15 +321,15 @@ class __$$_KodiListFilterAlbumsOrCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterAlbumsOr implements _KodiListFilterAlbumsOr {
-  const _$_KodiListFilterAlbumsOr(final List<KodiListFilterAlbums> or,
+class _$KodiListFilterAlbumsOrImpl implements _KodiListFilterAlbumsOr {
+  const _$KodiListFilterAlbumsOrImpl(final List<KodiListFilterAlbums> or,
       {final String? $type})
       : assert(or.length > 0, 'List must not be empty!'),
         _or = or,
         $type = $type ?? 'or';
 
-  factory _$_KodiListFilterAlbumsOr.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterAlbumsOrFromJson(json);
+  factory _$KodiListFilterAlbumsOrImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListFilterAlbumsOrImplFromJson(json);
 
   final List<KodiListFilterAlbums> _or;
   @override
@@ -329,24 +348,26 @@ class _$_KodiListFilterAlbumsOr implements _KodiListFilterAlbumsOr {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterAlbumsOr &&
+            other is _$KodiListFilterAlbumsOrImpl &&
             const DeepCollectionEquality().equals(other._or, _or));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_or));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterAlbumsOrCopyWith<_$_KodiListFilterAlbumsOr> get copyWith =>
-      __$$_KodiListFilterAlbumsOrCopyWithImpl<_$_KodiListFilterAlbumsOr>(
-          this, _$identity);
+  _$$KodiListFilterAlbumsOrImplCopyWith<_$KodiListFilterAlbumsOrImpl>
+      get copyWith => __$$KodiListFilterAlbumsOrImplCopyWithImpl<
+          _$KodiListFilterAlbumsOrImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -418,7 +439,7 @@ class _$_KodiListFilterAlbumsOr implements _KodiListFilterAlbumsOr {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterAlbumsOrToJson(
+    return _$$KodiListFilterAlbumsOrImplToJson(
       this,
     );
   }
@@ -426,23 +447,26 @@ class _$_KodiListFilterAlbumsOr implements _KodiListFilterAlbumsOr {
 
 abstract class _KodiListFilterAlbumsOr implements KodiListFilterAlbums {
   const factory _KodiListFilterAlbumsOr(final List<KodiListFilterAlbums> or) =
-      _$_KodiListFilterAlbumsOr;
+      _$KodiListFilterAlbumsOrImpl;
 
   factory _KodiListFilterAlbumsOr.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterAlbumsOr.fromJson;
+      _$KodiListFilterAlbumsOrImpl.fromJson;
 
   List<KodiListFilterAlbums> get or;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterAlbumsOrCopyWith<_$_KodiListFilterAlbumsOr> get copyWith =>
-      throw _privateConstructorUsedError;
+
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterAlbumsOrImplCopyWith<_$KodiListFilterAlbumsOrImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterAlbumsValueCopyWith<$Res> {
-  factory _$$_KodiListFilterAlbumsValueCopyWith(
-          _$_KodiListFilterAlbumsValue value,
-          $Res Function(_$_KodiListFilterAlbumsValue) then) =
-      __$$_KodiListFilterAlbumsValueCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterAlbumsValueImplCopyWith<$Res> {
+  factory _$$KodiListFilterAlbumsValueImplCopyWith(
+          _$KodiListFilterAlbumsValueImpl value,
+          $Res Function(_$KodiListFilterAlbumsValueImpl) then) =
+      __$$KodiListFilterAlbumsValueImplCopyWithImpl<$Res>;
   @useResult
   $Res call({KodiListFilterRuleAlbums value});
 
@@ -450,21 +474,23 @@ abstract class _$$_KodiListFilterAlbumsValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_KodiListFilterAlbumsValueCopyWithImpl<$Res>
+class __$$KodiListFilterAlbumsValueImplCopyWithImpl<$Res>
     extends _$KodiListFilterAlbumsCopyWithImpl<$Res,
-        _$_KodiListFilterAlbumsValue>
-    implements _$$_KodiListFilterAlbumsValueCopyWith<$Res> {
-  __$$_KodiListFilterAlbumsValueCopyWithImpl(
-      _$_KodiListFilterAlbumsValue _value,
-      $Res Function(_$_KodiListFilterAlbumsValue) _then)
+        _$KodiListFilterAlbumsValueImpl>
+    implements _$$KodiListFilterAlbumsValueImplCopyWith<$Res> {
+  __$$KodiListFilterAlbumsValueImplCopyWithImpl(
+      _$KodiListFilterAlbumsValueImpl _value,
+      $Res Function(_$KodiListFilterAlbumsValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterAlbumsValue(
+    return _then(_$KodiListFilterAlbumsValueImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -472,6 +498,8 @@ class __$$_KodiListFilterAlbumsValueCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterRuleAlbumsCopyWith<$Res> get value {
@@ -483,12 +511,12 @@ class __$$_KodiListFilterAlbumsValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterAlbumsValue implements _KodiListFilterAlbumsValue {
-  const _$_KodiListFilterAlbumsValue(this.value, {final String? $type})
+class _$KodiListFilterAlbumsValueImpl implements _KodiListFilterAlbumsValue {
+  const _$KodiListFilterAlbumsValueImpl(this.value, {final String? $type})
       : $type = $type ?? 'value';
 
-  factory _$_KodiListFilterAlbumsValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterAlbumsValueFromJson(json);
+  factory _$KodiListFilterAlbumsValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListFilterAlbumsValueImplFromJson(json);
 
   @override
   final KodiListFilterRuleAlbums value;
@@ -502,23 +530,25 @@ class _$_KodiListFilterAlbumsValue implements _KodiListFilterAlbumsValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterAlbumsValue &&
+            other is _$KodiListFilterAlbumsValueImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterAlbumsValueCopyWith<_$_KodiListFilterAlbumsValue>
-      get copyWith => __$$_KodiListFilterAlbumsValueCopyWithImpl<
-          _$_KodiListFilterAlbumsValue>(this, _$identity);
+  _$$KodiListFilterAlbumsValueImplCopyWith<_$KodiListFilterAlbumsValueImpl>
+      get copyWith => __$$KodiListFilterAlbumsValueImplCopyWithImpl<
+          _$KodiListFilterAlbumsValueImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -590,7 +620,7 @@ class _$_KodiListFilterAlbumsValue implements _KodiListFilterAlbumsValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterAlbumsValueToJson(
+    return _$$KodiListFilterAlbumsValueImplToJson(
       this,
     );
   }
@@ -598,13 +628,16 @@ class _$_KodiListFilterAlbumsValue implements _KodiListFilterAlbumsValue {
 
 abstract class _KodiListFilterAlbumsValue implements KodiListFilterAlbums {
   const factory _KodiListFilterAlbumsValue(
-      final KodiListFilterRuleAlbums value) = _$_KodiListFilterAlbumsValue;
+      final KodiListFilterRuleAlbums value) = _$KodiListFilterAlbumsValueImpl;
 
   factory _KodiListFilterAlbumsValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterAlbumsValue.fromJson;
+      _$KodiListFilterAlbumsValueImpl.fromJson;
 
   KodiListFilterRuleAlbums get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterAlbumsValueCopyWith<_$_KodiListFilterAlbumsValue>
+
+  /// Create a copy of KodiListFilterAlbums
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterAlbumsValueImplCopyWith<_$KodiListFilterAlbumsValueImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

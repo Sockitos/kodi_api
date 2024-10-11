@@ -12,7 +12,7 @@ part of 'get_active_players.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetActivePlayers _$GetActivePlayersFromJson(Map<String, dynamic> json) {
   return _GetActivePlayers.fromJson(json);
@@ -20,6 +20,7 @@ GetActivePlayers _$GetActivePlayersFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetActivePlayers {
+  /// Serializes this GetActivePlayers to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -39,31 +40,37 @@ class _$GetActivePlayersCopyWithImpl<$Res, $Val extends GetActivePlayers>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of GetActivePlayers
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_GetActivePlayersCopyWith<$Res> {
-  factory _$$_GetActivePlayersCopyWith(
-          _$_GetActivePlayers value, $Res Function(_$_GetActivePlayers) then) =
-      __$$_GetActivePlayersCopyWithImpl<$Res>;
+abstract class _$$GetActivePlayersImplCopyWith<$Res> {
+  factory _$$GetActivePlayersImplCopyWith(_$GetActivePlayersImpl value,
+          $Res Function(_$GetActivePlayersImpl) then) =
+      __$$GetActivePlayersImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetActivePlayersCopyWithImpl<$Res>
-    extends _$GetActivePlayersCopyWithImpl<$Res, _$_GetActivePlayers>
-    implements _$$_GetActivePlayersCopyWith<$Res> {
-  __$$_GetActivePlayersCopyWithImpl(
-      _$_GetActivePlayers _value, $Res Function(_$_GetActivePlayers) _then)
+class __$$GetActivePlayersImplCopyWithImpl<$Res>
+    extends _$GetActivePlayersCopyWithImpl<$Res, _$GetActivePlayersImpl>
+    implements _$$GetActivePlayersImplCopyWith<$Res> {
+  __$$GetActivePlayersImplCopyWithImpl(_$GetActivePlayersImpl _value,
+      $Res Function(_$GetActivePlayersImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GetActivePlayers
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetActivePlayers extends _GetActivePlayers {
-  const _$_GetActivePlayers() : super._();
+class _$GetActivePlayersImpl extends _GetActivePlayers {
+  const _$GetActivePlayersImpl() : super._();
 
-  factory _$_GetActivePlayers.fromJson(Map<String, dynamic> json) =>
-      _$$_GetActivePlayersFromJson(json);
+  factory _$GetActivePlayersImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetActivePlayersImplFromJson(json);
 
   @override
   String toString() {
@@ -71,29 +78,29 @@ class _$_GetActivePlayers extends _GetActivePlayers {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GetActivePlayers);
+        (other.runtimeType == runtimeType && other is _$GetActivePlayersImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetActivePlayersToJson(
+    return _$$GetActivePlayersImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetActivePlayers extends GetActivePlayers {
-  const factory _GetActivePlayers() = _$_GetActivePlayers;
+  const factory _GetActivePlayers() = _$GetActivePlayersImpl;
   const _GetActivePlayers._() : super._();
 
   factory _GetActivePlayers.fromJson(Map<String, dynamic> json) =
-      _$_GetActivePlayers.fromJson;
+      _$GetActivePlayersImpl.fromJson;
 }
 
 KodiPlayerActivePlayer _$KodiPlayerActivePlayerFromJson(
@@ -110,8 +117,12 @@ mixin _$KodiPlayerActivePlayer {
       throw _privateConstructorUsedError;
   KodiPlayerType get type => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerActivePlayer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerActivePlayer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerActivePlayerCopyWith<KodiPlayerActivePlayer> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -139,6 +150,8 @@ class _$KodiPlayerActivePlayerCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerActivePlayer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -164,11 +177,12 @@ class _$KodiPlayerActivePlayerCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerActivePlayerCopyWith<$Res>
+abstract class _$$KodiPlayerActivePlayerImplCopyWith<$Res>
     implements $KodiPlayerActivePlayerCopyWith<$Res> {
-  factory _$$_KodiPlayerActivePlayerCopyWith(_$_KodiPlayerActivePlayer value,
-          $Res Function(_$_KodiPlayerActivePlayer) then) =
-      __$$_KodiPlayerActivePlayerCopyWithImpl<$Res>;
+  factory _$$KodiPlayerActivePlayerImplCopyWith(
+          _$KodiPlayerActivePlayerImpl value,
+          $Res Function(_$KodiPlayerActivePlayerImpl) then) =
+      __$$KodiPlayerActivePlayerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -178,14 +192,17 @@ abstract class _$$_KodiPlayerActivePlayerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerActivePlayerCopyWithImpl<$Res>
+class __$$KodiPlayerActivePlayerImplCopyWithImpl<$Res>
     extends _$KodiPlayerActivePlayerCopyWithImpl<$Res,
-        _$_KodiPlayerActivePlayer>
-    implements _$$_KodiPlayerActivePlayerCopyWith<$Res> {
-  __$$_KodiPlayerActivePlayerCopyWithImpl(_$_KodiPlayerActivePlayer _value,
-      $Res Function(_$_KodiPlayerActivePlayer) _then)
+        _$KodiPlayerActivePlayerImpl>
+    implements _$$KodiPlayerActivePlayerImplCopyWith<$Res> {
+  __$$KodiPlayerActivePlayerImplCopyWithImpl(
+      _$KodiPlayerActivePlayerImpl _value,
+      $Res Function(_$KodiPlayerActivePlayerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerActivePlayer
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -193,7 +210,7 @@ class __$$_KodiPlayerActivePlayerCopyWithImpl<$Res>
     Object? playerType = null,
     Object? type = null,
   }) {
-    return _then(_$_KodiPlayerActivePlayer(
+    return _then(_$KodiPlayerActivePlayerImpl(
       playerId: null == playerId
           ? _value.playerId
           : playerId // ignore: cast_nullable_to_non_nullable
@@ -212,14 +229,14 @@ class __$$_KodiPlayerActivePlayerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerActivePlayer implements _KodiPlayerActivePlayer {
-  const _$_KodiPlayerActivePlayer(
+class _$KodiPlayerActivePlayerImpl implements _KodiPlayerActivePlayer {
+  const _$KodiPlayerActivePlayerImpl(
       {@JsonKey(name: 'playerid') required this.playerId,
       @JsonKey(name: 'playertype') required this.playerType,
       required this.type});
 
-  factory _$_KodiPlayerActivePlayer.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPlayerActivePlayerFromJson(json);
+  factory _$KodiPlayerActivePlayerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPlayerActivePlayerImplFromJson(json);
 
   @override
   @JsonKey(name: 'playerid')
@@ -236,10 +253,10 @@ class _$_KodiPlayerActivePlayer implements _KodiPlayerActivePlayer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerActivePlayer &&
+            other is _$KodiPlayerActivePlayerImpl &&
             (identical(other.playerId, playerId) ||
                 other.playerId == playerId) &&
             (identical(other.playerType, playerType) ||
@@ -247,20 +264,22 @@ class _$_KodiPlayerActivePlayer implements _KodiPlayerActivePlayer {
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playerId, playerType, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerActivePlayer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerActivePlayerCopyWith<_$_KodiPlayerActivePlayer> get copyWith =>
-      __$$_KodiPlayerActivePlayerCopyWithImpl<_$_KodiPlayerActivePlayer>(
-          this, _$identity);
+  _$$KodiPlayerActivePlayerImplCopyWith<_$KodiPlayerActivePlayerImpl>
+      get copyWith => __$$KodiPlayerActivePlayerImplCopyWithImpl<
+          _$KodiPlayerActivePlayerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerActivePlayerToJson(
+    return _$$KodiPlayerActivePlayerImplToJson(
       this,
     );
   }
@@ -271,10 +290,10 @@ abstract class _KodiPlayerActivePlayer implements KodiPlayerActivePlayer {
       {@JsonKey(name: 'playerid') required final int playerId,
       @JsonKey(name: 'playertype')
       required final KodiPlayerActivePlayerType playerType,
-      required final KodiPlayerType type}) = _$_KodiPlayerActivePlayer;
+      required final KodiPlayerType type}) = _$KodiPlayerActivePlayerImpl;
 
   factory _KodiPlayerActivePlayer.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerActivePlayer.fromJson;
+      _$KodiPlayerActivePlayerImpl.fromJson;
 
   @override
   @JsonKey(name: 'playerid')
@@ -284,8 +303,11 @@ abstract class _KodiPlayerActivePlayer implements KodiPlayerActivePlayer {
   KodiPlayerActivePlayerType get playerType;
   @override
   KodiPlayerType get type;
+
+  /// Create a copy of KodiPlayerActivePlayer
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerActivePlayerCopyWith<_$_KodiPlayerActivePlayer> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerActivePlayerImplCopyWith<_$KodiPlayerActivePlayerImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

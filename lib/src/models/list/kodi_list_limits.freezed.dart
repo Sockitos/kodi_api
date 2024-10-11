@@ -12,7 +12,7 @@ part of 'kodi_list_limits.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListLimits _$KodiListLimitsFromJson(Map<String, dynamic> json) {
   return _KodiListLimits.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$KodiListLimits {
   int get end => throw _privateConstructorUsedError;
   int get start => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListLimits to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListLimits
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListLimitsCopyWith<KodiListLimits> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$KodiListLimitsCopyWithImpl<$Res, $Val extends KodiListLimits>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListLimits
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,31 +74,33 @@ class _$KodiListLimitsCopyWithImpl<$Res, $Val extends KodiListLimits>
 }
 
 /// @nodoc
-abstract class _$$_KodiListLimitsCopyWith<$Res>
+abstract class _$$KodiListLimitsImplCopyWith<$Res>
     implements $KodiListLimitsCopyWith<$Res> {
-  factory _$$_KodiListLimitsCopyWith(
-          _$_KodiListLimits value, $Res Function(_$_KodiListLimits) then) =
-      __$$_KodiListLimitsCopyWithImpl<$Res>;
+  factory _$$KodiListLimitsImplCopyWith(_$KodiListLimitsImpl value,
+          $Res Function(_$KodiListLimitsImpl) then) =
+      __$$KodiListLimitsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int end, int start});
 }
 
 /// @nodoc
-class __$$_KodiListLimitsCopyWithImpl<$Res>
-    extends _$KodiListLimitsCopyWithImpl<$Res, _$_KodiListLimits>
-    implements _$$_KodiListLimitsCopyWith<$Res> {
-  __$$_KodiListLimitsCopyWithImpl(
-      _$_KodiListLimits _value, $Res Function(_$_KodiListLimits) _then)
+class __$$KodiListLimitsImplCopyWithImpl<$Res>
+    extends _$KodiListLimitsCopyWithImpl<$Res, _$KodiListLimitsImpl>
+    implements _$$KodiListLimitsImplCopyWith<$Res> {
+  __$$KodiListLimitsImplCopyWithImpl(
+      _$KodiListLimitsImpl _value, $Res Function(_$KodiListLimitsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListLimits
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? end = null,
     Object? start = null,
   }) {
-    return _then(_$_KodiListLimits(
+    return _then(_$KodiListLimitsImpl(
       end: null == end
           ? _value.end
           : end // ignore: cast_nullable_to_non_nullable
@@ -107,15 +115,16 @@ class __$$_KodiListLimitsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListLimits implements _KodiListLimits {
-  const _$_KodiListLimits({required this.end, this.start = 0})
-      : assert(start >= 0),
-        assert(end >= 0);
+class _$KodiListLimitsImpl implements _KodiListLimits {
+  const _$KodiListLimitsImpl({this.end = -1, this.start = 0})
+      : assert(end >= 0),
+        assert(start >= 0);
 
-  factory _$_KodiListLimits.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListLimitsFromJson(json);
+  factory _$KodiListLimitsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListLimitsImplFromJson(json);
 
   @override
+  @JsonKey()
   final int end;
   @override
   @JsonKey()
@@ -127,45 +136,51 @@ class _$_KodiListLimits implements _KodiListLimits {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListLimits &&
+            other is _$KodiListLimitsImpl &&
             (identical(other.end, end) || other.end == end) &&
             (identical(other.start, start) || other.start == start));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, end, start);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListLimits
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListLimitsCopyWith<_$_KodiListLimits> get copyWith =>
-      __$$_KodiListLimitsCopyWithImpl<_$_KodiListLimits>(this, _$identity);
+  _$$KodiListLimitsImplCopyWith<_$KodiListLimitsImpl> get copyWith =>
+      __$$KodiListLimitsImplCopyWithImpl<_$KodiListLimitsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListLimitsToJson(
+    return _$$KodiListLimitsImplToJson(
       this,
     );
   }
 }
 
 abstract class _KodiListLimits implements KodiListLimits {
-  const factory _KodiListLimits({required final int end, final int start}) =
-      _$_KodiListLimits;
+  const factory _KodiListLimits({final int end, final int start}) =
+      _$KodiListLimitsImpl;
 
   factory _KodiListLimits.fromJson(Map<String, dynamic> json) =
-      _$_KodiListLimits.fromJson;
+      _$KodiListLimitsImpl.fromJson;
 
   @override
   int get end;
   @override
   int get start;
+
+  /// Create a copy of KodiListLimits
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListLimitsCopyWith<_$_KodiListLimits> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListLimitsImplCopyWith<_$KodiListLimitsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

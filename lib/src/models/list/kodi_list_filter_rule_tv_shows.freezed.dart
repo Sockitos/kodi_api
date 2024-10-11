@@ -12,7 +12,7 @@ part of 'kodi_list_filter_rule_tv_shows.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiListFilterRuleTvShows _$KodiListFilterRuleTvShowsFromJson(
     Map<String, dynamic> json) {
@@ -27,8 +27,12 @@ mixin _$KodiListFilterRuleTvShows {
   KodiListFilterRuleTvShowsValue get value =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiListFilterRuleTvShows to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiListFilterRuleTvShows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiListFilterRuleTvShowsCopyWith<KodiListFilterRuleTvShows> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$KodiListFilterRuleTvShowsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiListFilterRuleTvShows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,6 +88,8 @@ class _$KodiListFilterRuleTvShowsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiListFilterRuleTvShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListFilterRuleTvShowsValueCopyWith<$Res> get value {
@@ -92,12 +100,12 @@ class _$KodiListFilterRuleTvShowsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleTvShowsCopyWith<$Res>
+abstract class _$$KodiListFilterRuleTvShowsImplCopyWith<$Res>
     implements $KodiListFilterRuleTvShowsCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleTvShowsCopyWith(
-          _$_KodiListFilterRuleTvShows value,
-          $Res Function(_$_KodiListFilterRuleTvShows) then) =
-      __$$_KodiListFilterRuleTvShowsCopyWithImpl<$Res>;
+  factory _$$KodiListFilterRuleTvShowsImplCopyWith(
+          _$KodiListFilterRuleTvShowsImpl value,
+          $Res Function(_$KodiListFilterRuleTvShowsImpl) then) =
+      __$$KodiListFilterRuleTvShowsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -111,15 +119,17 @@ abstract class _$$_KodiListFilterRuleTvShowsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleTvShowsCopyWithImpl<$Res>
+class __$$KodiListFilterRuleTvShowsImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleTvShowsCopyWithImpl<$Res,
-        _$_KodiListFilterRuleTvShows>
-    implements _$$_KodiListFilterRuleTvShowsCopyWith<$Res> {
-  __$$_KodiListFilterRuleTvShowsCopyWithImpl(
-      _$_KodiListFilterRuleTvShows _value,
-      $Res Function(_$_KodiListFilterRuleTvShows) _then)
+        _$KodiListFilterRuleTvShowsImpl>
+    implements _$$KodiListFilterRuleTvShowsImplCopyWith<$Res> {
+  __$$KodiListFilterRuleTvShowsImplCopyWithImpl(
+      _$KodiListFilterRuleTvShowsImpl _value,
+      $Res Function(_$KodiListFilterRuleTvShowsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleTvShows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,7 +137,7 @@ class __$$_KodiListFilterRuleTvShowsCopyWithImpl<$Res>
     Object? operator = null,
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleTvShows(
+    return _then(_$KodiListFilterRuleTvShowsImpl(
       field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
@@ -146,14 +156,14 @@ class __$$_KodiListFilterRuleTvShowsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleTvShows implements _KodiListFilterRuleTvShows {
-  const _$_KodiListFilterRuleTvShows(
+class _$KodiListFilterRuleTvShowsImpl implements _KodiListFilterRuleTvShows {
+  const _$KodiListFilterRuleTvShowsImpl(
       {required this.field,
       required this.operator,
       @KodiListFilterRuleTvShowsValueConverter() required this.value});
 
-  factory _$_KodiListFilterRuleTvShows.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleTvShowsFromJson(json);
+  factory _$KodiListFilterRuleTvShowsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiListFilterRuleTvShowsImplFromJson(json);
 
   @override
   final KodiListFilterFieldsTVShows field;
@@ -169,30 +179,32 @@ class _$_KodiListFilterRuleTvShows implements _KodiListFilterRuleTvShows {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleTvShows &&
+            other is _$KodiListFilterRuleTvShowsImpl &&
             (identical(other.field, field) || other.field == field) &&
             (identical(other.operator, operator) ||
                 other.operator == operator) &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, field, operator, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleTvShows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleTvShowsCopyWith<_$_KodiListFilterRuleTvShows>
-      get copyWith => __$$_KodiListFilterRuleTvShowsCopyWithImpl<
-          _$_KodiListFilterRuleTvShows>(this, _$identity);
+  _$$KodiListFilterRuleTvShowsImplCopyWith<_$KodiListFilterRuleTvShowsImpl>
+      get copyWith => __$$KodiListFilterRuleTvShowsImplCopyWithImpl<
+          _$KodiListFilterRuleTvShowsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleTvShowsToJson(
+    return _$$KodiListFilterRuleTvShowsImplToJson(
       this,
     );
   }
@@ -204,10 +216,10 @@ abstract class _KodiListFilterRuleTvShows implements KodiListFilterRuleTvShows {
           required final KodiListFilterOperators operator,
           @KodiListFilterRuleTvShowsValueConverter()
           required final KodiListFilterRuleTvShowsValue value}) =
-      _$_KodiListFilterRuleTvShows;
+      _$KodiListFilterRuleTvShowsImpl;
 
   factory _KodiListFilterRuleTvShows.fromJson(Map<String, dynamic> json) =
-      _$_KodiListFilterRuleTvShows.fromJson;
+      _$KodiListFilterRuleTvShowsImpl.fromJson;
 
   @override
   KodiListFilterFieldsTVShows get field;
@@ -216,9 +228,12 @@ abstract class _KodiListFilterRuleTvShows implements KodiListFilterRuleTvShows {
   @override
   @KodiListFilterRuleTvShowsValueConverter()
   KodiListFilterRuleTvShowsValue get value;
+
+  /// Create a copy of KodiListFilterRuleTvShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleTvShowsCopyWith<_$_KodiListFilterRuleTvShows>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleTvShowsImplCopyWith<_$KodiListFilterRuleTvShowsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -281,6 +296,8 @@ mixin _$KodiListFilterRuleTvShowsValue {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this KodiListFilterRuleTvShowsValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -303,34 +320,39 @@ class _$KodiListFilterRuleTvShowsValueCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of KodiListFilterRuleTvShowsValue
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleTvShowsValueSingleCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleTvShowsValueSingleCopyWith(
-          _$_KodiListFilterRuleTvShowsValueSingle value,
-          $Res Function(_$_KodiListFilterRuleTvShowsValueSingle) then) =
-      __$$_KodiListFilterRuleTvShowsValueSingleCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterRuleTvShowsValueSingleImplCopyWith<$Res> {
+  factory _$$KodiListFilterRuleTvShowsValueSingleImplCopyWith(
+          _$KodiListFilterRuleTvShowsValueSingleImpl value,
+          $Res Function(_$KodiListFilterRuleTvShowsValueSingleImpl) then) =
+      __$$KodiListFilterRuleTvShowsValueSingleImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleTvShowsValueSingleCopyWithImpl<$Res>
+class __$$KodiListFilterRuleTvShowsValueSingleImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleTvShowsValueCopyWithImpl<$Res,
-        _$_KodiListFilterRuleTvShowsValueSingle>
-    implements _$$_KodiListFilterRuleTvShowsValueSingleCopyWith<$Res> {
-  __$$_KodiListFilterRuleTvShowsValueSingleCopyWithImpl(
-      _$_KodiListFilterRuleTvShowsValueSingle _value,
-      $Res Function(_$_KodiListFilterRuleTvShowsValueSingle) _then)
+        _$KodiListFilterRuleTvShowsValueSingleImpl>
+    implements _$$KodiListFilterRuleTvShowsValueSingleImplCopyWith<$Res> {
+  __$$KodiListFilterRuleTvShowsValueSingleImplCopyWithImpl(
+      _$KodiListFilterRuleTvShowsValueSingleImpl _value,
+      $Res Function(_$KodiListFilterRuleTvShowsValueSingleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleTvShowsValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleTvShowsValueSingle(
+    return _then(_$KodiListFilterRuleTvShowsValueSingleImpl(
       null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -341,15 +363,15 @@ class __$$_KodiListFilterRuleTvShowsValueSingleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleTvShowsValueSingle
+class _$KodiListFilterRuleTvShowsValueSingleImpl
     implements _KodiListFilterRuleTvShowsValueSingle {
-  const _$_KodiListFilterRuleTvShowsValueSingle(this.value,
+  const _$KodiListFilterRuleTvShowsValueSingleImpl(this.value,
       {final String? $type})
       : $type = $type ?? 'single';
 
-  factory _$_KodiListFilterRuleTvShowsValueSingle.fromJson(
+  factory _$KodiListFilterRuleTvShowsValueSingleImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleTvShowsValueSingleFromJson(json);
+      _$$KodiListFilterRuleTvShowsValueSingleImplFromJson(json);
 
   @override
   final String value;
@@ -363,24 +385,26 @@ class _$_KodiListFilterRuleTvShowsValueSingle
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleTvShowsValueSingle &&
+            other is _$KodiListFilterRuleTvShowsValueSingleImpl &&
             (identical(other.value, value) || other.value == value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleTvShowsValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleTvShowsValueSingleCopyWith<
-          _$_KodiListFilterRuleTvShowsValueSingle>
-      get copyWith => __$$_KodiListFilterRuleTvShowsValueSingleCopyWithImpl<
-          _$_KodiListFilterRuleTvShowsValueSingle>(this, _$identity);
+  _$$KodiListFilterRuleTvShowsValueSingleImplCopyWith<
+          _$KodiListFilterRuleTvShowsValueSingleImpl>
+      get copyWith => __$$KodiListFilterRuleTvShowsValueSingleImplCopyWithImpl<
+          _$KodiListFilterRuleTvShowsValueSingleImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -447,7 +471,7 @@ class _$_KodiListFilterRuleTvShowsValueSingle
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleTvShowsValueSingleToJson(
+    return _$$KodiListFilterRuleTvShowsValueSingleImplToJson(
       this,
     );
   }
@@ -456,46 +480,51 @@ class _$_KodiListFilterRuleTvShowsValueSingle
 abstract class _KodiListFilterRuleTvShowsValueSingle
     implements KodiListFilterRuleTvShowsValue {
   const factory _KodiListFilterRuleTvShowsValueSingle(final String value) =
-      _$_KodiListFilterRuleTvShowsValueSingle;
+      _$KodiListFilterRuleTvShowsValueSingleImpl;
 
   factory _KodiListFilterRuleTvShowsValueSingle.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiListFilterRuleTvShowsValueSingle.fromJson;
+      _$KodiListFilterRuleTvShowsValueSingleImpl.fromJson;
 
   @override
   String get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleTvShowsValueSingleCopyWith<
-          _$_KodiListFilterRuleTvShowsValueSingle>
+
+  /// Create a copy of KodiListFilterRuleTvShowsValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleTvShowsValueSingleImplCopyWith<
+          _$KodiListFilterRuleTvShowsValueSingleImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_KodiListFilterRuleTvShowsValueGroupCopyWith<$Res> {
-  factory _$$_KodiListFilterRuleTvShowsValueGroupCopyWith(
-          _$_KodiListFilterRuleTvShowsValueGroup value,
-          $Res Function(_$_KodiListFilterRuleTvShowsValueGroup) then) =
-      __$$_KodiListFilterRuleTvShowsValueGroupCopyWithImpl<$Res>;
+abstract class _$$KodiListFilterRuleTvShowsValueGroupImplCopyWith<$Res> {
+  factory _$$KodiListFilterRuleTvShowsValueGroupImplCopyWith(
+          _$KodiListFilterRuleTvShowsValueGroupImpl value,
+          $Res Function(_$KodiListFilterRuleTvShowsValueGroupImpl) then) =
+      __$$KodiListFilterRuleTvShowsValueGroupImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<String> value});
 }
 
 /// @nodoc
-class __$$_KodiListFilterRuleTvShowsValueGroupCopyWithImpl<$Res>
+class __$$KodiListFilterRuleTvShowsValueGroupImplCopyWithImpl<$Res>
     extends _$KodiListFilterRuleTvShowsValueCopyWithImpl<$Res,
-        _$_KodiListFilterRuleTvShowsValueGroup>
-    implements _$$_KodiListFilterRuleTvShowsValueGroupCopyWith<$Res> {
-  __$$_KodiListFilterRuleTvShowsValueGroupCopyWithImpl(
-      _$_KodiListFilterRuleTvShowsValueGroup _value,
-      $Res Function(_$_KodiListFilterRuleTvShowsValueGroup) _then)
+        _$KodiListFilterRuleTvShowsValueGroupImpl>
+    implements _$$KodiListFilterRuleTvShowsValueGroupImplCopyWith<$Res> {
+  __$$KodiListFilterRuleTvShowsValueGroupImplCopyWithImpl(
+      _$KodiListFilterRuleTvShowsValueGroupImpl _value,
+      $Res Function(_$KodiListFilterRuleTvShowsValueGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiListFilterRuleTvShowsValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = null,
   }) {
-    return _then(_$_KodiListFilterRuleTvShowsValueGroup(
+    return _then(_$KodiListFilterRuleTvShowsValueGroupImpl(
       null == value
           ? _value._value
           : value // ignore: cast_nullable_to_non_nullable
@@ -506,16 +535,16 @@ class __$$_KodiListFilterRuleTvShowsValueGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiListFilterRuleTvShowsValueGroup
+class _$KodiListFilterRuleTvShowsValueGroupImpl
     implements _KodiListFilterRuleTvShowsValueGroup {
-  const _$_KodiListFilterRuleTvShowsValueGroup(final List<String> value,
+  const _$KodiListFilterRuleTvShowsValueGroupImpl(final List<String> value,
       {final String? $type})
       : _value = value,
         $type = $type ?? 'group';
 
-  factory _$_KodiListFilterRuleTvShowsValueGroup.fromJson(
+  factory _$KodiListFilterRuleTvShowsValueGroupImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiListFilterRuleTvShowsValueGroupFromJson(json);
+      _$$KodiListFilterRuleTvShowsValueGroupImplFromJson(json);
 
   final List<String> _value;
   @override
@@ -534,25 +563,27 @@ class _$_KodiListFilterRuleTvShowsValueGroup
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiListFilterRuleTvShowsValueGroup &&
+            other is _$KodiListFilterRuleTvShowsValueGroupImpl &&
             const DeepCollectionEquality().equals(other._value, _value));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiListFilterRuleTvShowsValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiListFilterRuleTvShowsValueGroupCopyWith<
-          _$_KodiListFilterRuleTvShowsValueGroup>
-      get copyWith => __$$_KodiListFilterRuleTvShowsValueGroupCopyWithImpl<
-          _$_KodiListFilterRuleTvShowsValueGroup>(this, _$identity);
+  _$$KodiListFilterRuleTvShowsValueGroupImplCopyWith<
+          _$KodiListFilterRuleTvShowsValueGroupImpl>
+      get copyWith => __$$KodiListFilterRuleTvShowsValueGroupImplCopyWithImpl<
+          _$KodiListFilterRuleTvShowsValueGroupImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -619,7 +650,7 @@ class _$_KodiListFilterRuleTvShowsValueGroup
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiListFilterRuleTvShowsValueGroupToJson(
+    return _$$KodiListFilterRuleTvShowsValueGroupImplToJson(
       this,
     );
   }
@@ -628,16 +659,19 @@ class _$_KodiListFilterRuleTvShowsValueGroup
 abstract class _KodiListFilterRuleTvShowsValueGroup
     implements KodiListFilterRuleTvShowsValue {
   const factory _KodiListFilterRuleTvShowsValueGroup(final List<String> value) =
-      _$_KodiListFilterRuleTvShowsValueGroup;
+      _$KodiListFilterRuleTvShowsValueGroupImpl;
 
   factory _KodiListFilterRuleTvShowsValueGroup.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiListFilterRuleTvShowsValueGroup.fromJson;
+      _$KodiListFilterRuleTvShowsValueGroupImpl.fromJson;
 
   @override
   List<String> get value;
-  @JsonKey(ignore: true)
-  _$$_KodiListFilterRuleTvShowsValueGroupCopyWith<
-          _$_KodiListFilterRuleTvShowsValueGroup>
+
+  /// Create a copy of KodiListFilterRuleTvShowsValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiListFilterRuleTvShowsValueGroupImplCopyWith<
+          _$KodiListFilterRuleTvShowsValueGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

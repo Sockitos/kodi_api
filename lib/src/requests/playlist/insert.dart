@@ -19,7 +19,7 @@ class Insert with _$Insert implements KodiRequest<void> {
     int position,
     @JsonKey(name: 'item')
     @KodiPlaylistItemConverter()
-        List<KodiPlaylistItem> items,
+    List<KodiPlaylistItem> items,
   ) = _Insert;
 
   const Insert._();

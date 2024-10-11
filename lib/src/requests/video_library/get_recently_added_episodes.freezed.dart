@@ -12,7 +12,7 @@ part of 'get_recently_added_episodes.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetRecentlyAddedEpisodes _$GetRecentlyAddedEpisodesFromJson(
     Map<String, dynamic> json) {
@@ -26,8 +26,12 @@ mixin _$GetRecentlyAddedEpisodes {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecentlyAddedEpisodes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecentlyAddedEpisodes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecentlyAddedEpisodesCopyWith<GetRecentlyAddedEpisodes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$GetRecentlyAddedEpisodesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecentlyAddedEpisodes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class _$GetRecentlyAddedEpisodesCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetRecentlyAddedEpisodes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -93,6 +101,8 @@ class _$GetRecentlyAddedEpisodesCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of GetRecentlyAddedEpisodes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -107,12 +117,12 @@ class _$GetRecentlyAddedEpisodesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRecentlyAddedEpisodesCopyWith<$Res>
+abstract class _$$GetRecentlyAddedEpisodesImplCopyWith<$Res>
     implements $GetRecentlyAddedEpisodesCopyWith<$Res> {
-  factory _$$_GetRecentlyAddedEpisodesCopyWith(
-          _$_GetRecentlyAddedEpisodes value,
-          $Res Function(_$_GetRecentlyAddedEpisodes) then) =
-      __$$_GetRecentlyAddedEpisodesCopyWithImpl<$Res>;
+  factory _$$GetRecentlyAddedEpisodesImplCopyWith(
+          _$GetRecentlyAddedEpisodesImpl value,
+          $Res Function(_$GetRecentlyAddedEpisodesImpl) then) =
+      __$$GetRecentlyAddedEpisodesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -127,14 +137,17 @@ abstract class _$$_GetRecentlyAddedEpisodesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecentlyAddedEpisodesCopyWithImpl<$Res>
+class __$$GetRecentlyAddedEpisodesImplCopyWithImpl<$Res>
     extends _$GetRecentlyAddedEpisodesCopyWithImpl<$Res,
-        _$_GetRecentlyAddedEpisodes>
-    implements _$$_GetRecentlyAddedEpisodesCopyWith<$Res> {
-  __$$_GetRecentlyAddedEpisodesCopyWithImpl(_$_GetRecentlyAddedEpisodes _value,
-      $Res Function(_$_GetRecentlyAddedEpisodes) _then)
+        _$GetRecentlyAddedEpisodesImpl>
+    implements _$$GetRecentlyAddedEpisodesImplCopyWith<$Res> {
+  __$$GetRecentlyAddedEpisodesImplCopyWithImpl(
+      _$GetRecentlyAddedEpisodesImpl _value,
+      $Res Function(_$GetRecentlyAddedEpisodesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecentlyAddedEpisodes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -142,7 +155,7 @@ class __$$_GetRecentlyAddedEpisodesCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetRecentlyAddedEpisodes(
+    return _then(_$GetRecentlyAddedEpisodesImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -161,14 +174,14 @@ class __$$_GetRecentlyAddedEpisodesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecentlyAddedEpisodes extends _GetRecentlyAddedEpisodes {
-  const _$_GetRecentlyAddedEpisodes(
+class _$GetRecentlyAddedEpisodesImpl extends _GetRecentlyAddedEpisodes {
+  const _$GetRecentlyAddedEpisodesImpl(
       {final Set<KodiVideoFieldsEpisode>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetRecentlyAddedEpisodes.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRecentlyAddedEpisodesFromJson(json);
+  factory _$GetRecentlyAddedEpisodesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRecentlyAddedEpisodesImplFromJson(json);
 
   final Set<KodiVideoFieldsEpisode>? _properties;
   @override
@@ -191,31 +204,33 @@ class _$_GetRecentlyAddedEpisodes extends _GetRecentlyAddedEpisodes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecentlyAddedEpisodes &&
+            other is _$GetRecentlyAddedEpisodesImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecentlyAddedEpisodes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecentlyAddedEpisodesCopyWith<_$_GetRecentlyAddedEpisodes>
-      get copyWith => __$$_GetRecentlyAddedEpisodesCopyWithImpl<
-          _$_GetRecentlyAddedEpisodes>(this, _$identity);
+  _$$GetRecentlyAddedEpisodesImplCopyWith<_$GetRecentlyAddedEpisodesImpl>
+      get copyWith => __$$GetRecentlyAddedEpisodesImplCopyWithImpl<
+          _$GetRecentlyAddedEpisodesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecentlyAddedEpisodesToJson(
+    return _$$GetRecentlyAddedEpisodesImplToJson(
       this,
     );
   }
@@ -225,11 +240,11 @@ abstract class _GetRecentlyAddedEpisodes extends GetRecentlyAddedEpisodes {
   const factory _GetRecentlyAddedEpisodes(
       {final Set<KodiVideoFieldsEpisode>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetRecentlyAddedEpisodes;
+      final KodiListSort? sort}) = _$GetRecentlyAddedEpisodesImpl;
   const _GetRecentlyAddedEpisodes._() : super._();
 
   factory _GetRecentlyAddedEpisodes.fromJson(Map<String, dynamic> json) =
-      _$_GetRecentlyAddedEpisodes.fromJson;
+      _$GetRecentlyAddedEpisodesImpl.fromJson;
 
   @override
   Set<KodiVideoFieldsEpisode>? get properties;
@@ -237,9 +252,12 @@ abstract class _GetRecentlyAddedEpisodes extends GetRecentlyAddedEpisodes {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetRecentlyAddedEpisodes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecentlyAddedEpisodesCopyWith<_$_GetRecentlyAddedEpisodes>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecentlyAddedEpisodesImplCopyWith<_$GetRecentlyAddedEpisodesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -254,8 +272,12 @@ mixin _$GetRecentlyAddedEpisodesResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecentlyAddedEpisodesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecentlyAddedEpisodesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecentlyAddedEpisodesResponseCopyWith<GetRecentlyAddedEpisodesResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -285,6 +307,8 @@ class _$GetRecentlyAddedEpisodesResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecentlyAddedEpisodesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -303,6 +327,8 @@ class _$GetRecentlyAddedEpisodesResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetRecentlyAddedEpisodesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -313,12 +339,12 @@ class _$GetRecentlyAddedEpisodesResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRecentlyAddedEpisodesResponseCopyWith<$Res>
+abstract class _$$GetRecentlyAddedEpisodesResponseImplCopyWith<$Res>
     implements $GetRecentlyAddedEpisodesResponseCopyWith<$Res> {
-  factory _$$_GetRecentlyAddedEpisodesResponseCopyWith(
-          _$_GetRecentlyAddedEpisodesResponse value,
-          $Res Function(_$_GetRecentlyAddedEpisodesResponse) then) =
-      __$$_GetRecentlyAddedEpisodesResponseCopyWithImpl<$Res>;
+  factory _$$GetRecentlyAddedEpisodesResponseImplCopyWith(
+          _$GetRecentlyAddedEpisodesResponseImpl value,
+          $Res Function(_$GetRecentlyAddedEpisodesResponseImpl) then) =
+      __$$GetRecentlyAddedEpisodesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -329,22 +355,24 @@ abstract class _$$_GetRecentlyAddedEpisodesResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecentlyAddedEpisodesResponseCopyWithImpl<$Res>
+class __$$GetRecentlyAddedEpisodesResponseImplCopyWithImpl<$Res>
     extends _$GetRecentlyAddedEpisodesResponseCopyWithImpl<$Res,
-        _$_GetRecentlyAddedEpisodesResponse>
-    implements _$$_GetRecentlyAddedEpisodesResponseCopyWith<$Res> {
-  __$$_GetRecentlyAddedEpisodesResponseCopyWithImpl(
-      _$_GetRecentlyAddedEpisodesResponse _value,
-      $Res Function(_$_GetRecentlyAddedEpisodesResponse) _then)
+        _$GetRecentlyAddedEpisodesResponseImpl>
+    implements _$$GetRecentlyAddedEpisodesResponseImplCopyWith<$Res> {
+  __$$GetRecentlyAddedEpisodesResponseImplCopyWithImpl(
+      _$GetRecentlyAddedEpisodesResponseImpl _value,
+      $Res Function(_$GetRecentlyAddedEpisodesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecentlyAddedEpisodesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? episodes = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetRecentlyAddedEpisodesResponse(
+    return _then(_$GetRecentlyAddedEpisodesResponseImpl(
       episodes: null == episodes
           ? _value._episodes
           : episodes // ignore: cast_nullable_to_non_nullable
@@ -359,16 +387,16 @@ class __$$_GetRecentlyAddedEpisodesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecentlyAddedEpisodesResponse
+class _$GetRecentlyAddedEpisodesResponseImpl
     implements _GetRecentlyAddedEpisodesResponse {
-  const _$_GetRecentlyAddedEpisodesResponse(
+  const _$GetRecentlyAddedEpisodesResponseImpl(
       {required final List<KodiVideoDetailsEpisode> episodes,
       required this.limits})
       : _episodes = episodes;
 
-  factory _$_GetRecentlyAddedEpisodesResponse.fromJson(
+  factory _$GetRecentlyAddedEpisodesResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_GetRecentlyAddedEpisodesResponseFromJson(json);
+      _$$GetRecentlyAddedEpisodesResponseImplFromJson(json);
 
   final List<KodiVideoDetailsEpisode> _episodes;
   @override
@@ -387,30 +415,32 @@ class _$_GetRecentlyAddedEpisodesResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecentlyAddedEpisodesResponse &&
+            other is _$GetRecentlyAddedEpisodesResponseImpl &&
             const DeepCollectionEquality().equals(other._episodes, _episodes) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_episodes), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecentlyAddedEpisodesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecentlyAddedEpisodesResponseCopyWith<
-          _$_GetRecentlyAddedEpisodesResponse>
-      get copyWith => __$$_GetRecentlyAddedEpisodesResponseCopyWithImpl<
-          _$_GetRecentlyAddedEpisodesResponse>(this, _$identity);
+  _$$GetRecentlyAddedEpisodesResponseImplCopyWith<
+          _$GetRecentlyAddedEpisodesResponseImpl>
+      get copyWith => __$$GetRecentlyAddedEpisodesResponseImplCopyWithImpl<
+          _$GetRecentlyAddedEpisodesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecentlyAddedEpisodesResponseToJson(
+    return _$$GetRecentlyAddedEpisodesResponseImplToJson(
       this,
     );
   }
@@ -421,18 +451,22 @@ abstract class _GetRecentlyAddedEpisodesResponse
   const factory _GetRecentlyAddedEpisodesResponse(
           {required final List<KodiVideoDetailsEpisode> episodes,
           required final KodiListLimitsReturned limits}) =
-      _$_GetRecentlyAddedEpisodesResponse;
+      _$GetRecentlyAddedEpisodesResponseImpl;
 
   factory _GetRecentlyAddedEpisodesResponse.fromJson(
-      Map<String, dynamic> json) = _$_GetRecentlyAddedEpisodesResponse.fromJson;
+          Map<String, dynamic> json) =
+      _$GetRecentlyAddedEpisodesResponseImpl.fromJson;
 
   @override
   List<KodiVideoDetailsEpisode> get episodes;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetRecentlyAddedEpisodesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecentlyAddedEpisodesResponseCopyWith<
-          _$_GetRecentlyAddedEpisodesResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecentlyAddedEpisodesResponseImplCopyWith<
+          _$GetRecentlyAddedEpisodesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

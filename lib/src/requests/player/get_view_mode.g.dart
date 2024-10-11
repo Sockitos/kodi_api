@@ -6,24 +6,24 @@ part of 'get_view_mode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetViewMode _$$_GetViewModeFromJson(Map<String, dynamic> json) =>
-    _$_GetViewMode();
+_$GetViewModeImpl _$$GetViewModeImplFromJson(Map<String, dynamic> json) =>
+    _$GetViewModeImpl();
 
-Map<String, dynamic> _$$_GetViewModeToJson(_$_GetViewMode instance) =>
+Map<String, dynamic> _$$GetViewModeImplToJson(_$GetViewModeImpl instance) =>
     <String, dynamic>{};
 
-_$_KodiPlayerGetViewModeResponse _$$_KodiPlayerGetViewModeResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiPlayerGetViewModeResponse(
-      nonLinearStretch: json['nonlinearstretch'] as bool,
-      pixelRatio: (json['pixelratio'] as num).toDouble(),
-      verticalShift: (json['verticalshift'] as num).toDouble(),
-      viewMode: $enumDecode(_$KodiPlayerViewModeEnumMap, json['viewmode']),
-      zoom: (json['zoom'] as num).toDouble(),
-    );
+_$KodiPlayerGetViewModeResponseImpl
+    _$$KodiPlayerGetViewModeResponseImplFromJson(Map<String, dynamic> json) =>
+        _$KodiPlayerGetViewModeResponseImpl(
+          nonLinearStretch: json['nonlinearstretch'] as bool,
+          pixelRatio: (json['pixelratio'] as num).toDouble(),
+          verticalShift: (json['verticalshift'] as num).toDouble(),
+          viewMode: $enumDecode(_$KodiPlayerViewModeEnumMap, json['viewmode']),
+          zoom: (json['zoom'] as num).toDouble(),
+        );
 
-Map<String, dynamic> _$$_KodiPlayerGetViewModeResponseToJson(
-        _$_KodiPlayerGetViewModeResponse instance) =>
+Map<String, dynamic> _$$KodiPlayerGetViewModeResponseImplToJson(
+        _$KodiPlayerGetViewModeResponseImpl instance) =>
     <String, dynamic>{
       'nonlinearstretch': instance.nonLinearStretch,
       'pixelratio': instance.pixelRatio,

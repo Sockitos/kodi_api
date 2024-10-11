@@ -12,7 +12,7 @@ part of 'get_roles.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetRoles _$GetRolesFromJson(Map<String, dynamic> json) {
   return _GetRoles.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetRoles {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRoles to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRoles
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRolesCopyWith<GetRoles> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$GetRolesCopyWithImpl<$Res, $Val extends GetRoles>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRoles
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,6 +84,8 @@ class _$GetRolesCopyWithImpl<$Res, $Val extends GetRoles>
     ) as $Val);
   }
 
+  /// Create a copy of GetRoles
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -90,6 +98,8 @@ class _$GetRolesCopyWithImpl<$Res, $Val extends GetRoles>
     });
   }
 
+  /// Create a copy of GetRoles
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -104,10 +114,11 @@ class _$GetRolesCopyWithImpl<$Res, $Val extends GetRoles>
 }
 
 /// @nodoc
-abstract class _$$_GetRolesCopyWith<$Res> implements $GetRolesCopyWith<$Res> {
-  factory _$$_GetRolesCopyWith(
-          _$_GetRoles value, $Res Function(_$_GetRoles) then) =
-      __$$_GetRolesCopyWithImpl<$Res>;
+abstract class _$$GetRolesImplCopyWith<$Res>
+    implements $GetRolesCopyWith<$Res> {
+  factory _$$GetRolesImplCopyWith(
+          _$GetRolesImpl value, $Res Function(_$GetRolesImpl) then) =
+      __$$GetRolesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -122,13 +133,15 @@ abstract class _$$_GetRolesCopyWith<$Res> implements $GetRolesCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GetRolesCopyWithImpl<$Res>
-    extends _$GetRolesCopyWithImpl<$Res, _$_GetRoles>
-    implements _$$_GetRolesCopyWith<$Res> {
-  __$$_GetRolesCopyWithImpl(
-      _$_GetRoles _value, $Res Function(_$_GetRoles) _then)
+class __$$GetRolesImplCopyWithImpl<$Res>
+    extends _$GetRolesCopyWithImpl<$Res, _$GetRolesImpl>
+    implements _$$GetRolesImplCopyWith<$Res> {
+  __$$GetRolesImplCopyWithImpl(
+      _$GetRolesImpl _value, $Res Function(_$GetRolesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRoles
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,7 +149,7 @@ class __$$_GetRolesCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetRoles(
+    return _then(_$GetRolesImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -155,14 +168,14 @@ class __$$_GetRolesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRoles extends _GetRoles {
-  const _$_GetRoles(
+class _$GetRolesImpl extends _GetRoles {
+  const _$GetRolesImpl(
       {final Set<KodiAudioFieldsRole>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetRoles.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRolesFromJson(json);
+  factory _$GetRolesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRolesImplFromJson(json);
 
   final Set<KodiAudioFieldsRole>? _properties;
   @override
@@ -185,30 +198,32 @@ class _$_GetRoles extends _GetRoles {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRoles &&
+            other is _$GetRolesImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRoles
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRolesCopyWith<_$_GetRoles> get copyWith =>
-      __$$_GetRolesCopyWithImpl<_$_GetRoles>(this, _$identity);
+  _$$GetRolesImplCopyWith<_$GetRolesImpl> get copyWith =>
+      __$$GetRolesImplCopyWithImpl<_$GetRolesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRolesToJson(
+    return _$$GetRolesImplToJson(
       this,
     );
   }
@@ -218,10 +233,11 @@ abstract class _GetRoles extends GetRoles {
   const factory _GetRoles(
       {final Set<KodiAudioFieldsRole>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetRoles;
+      final KodiListSort? sort}) = _$GetRolesImpl;
   const _GetRoles._() : super._();
 
-  factory _GetRoles.fromJson(Map<String, dynamic> json) = _$_GetRoles.fromJson;
+  factory _GetRoles.fromJson(Map<String, dynamic> json) =
+      _$GetRolesImpl.fromJson;
 
   @override
   Set<KodiAudioFieldsRole>? get properties;
@@ -229,9 +245,12 @@ abstract class _GetRoles extends GetRoles {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetRoles
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRolesCopyWith<_$_GetRoles> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRolesImplCopyWith<_$GetRolesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -244,8 +263,12 @@ mixin _$GetRolesResponse {
   List<KodiAudioDetailsRole> get roles => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRolesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRolesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRolesResponseCopyWith<GetRolesResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -271,6 +294,8 @@ class _$GetRolesResponseCopyWithImpl<$Res, $Val extends GetRolesResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRolesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -289,6 +314,8 @@ class _$GetRolesResponseCopyWithImpl<$Res, $Val extends GetRolesResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GetRolesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -299,11 +326,11 @@ class _$GetRolesResponseCopyWithImpl<$Res, $Val extends GetRolesResponse>
 }
 
 /// @nodoc
-abstract class _$$_GetRolesResponseCopyWith<$Res>
+abstract class _$$GetRolesResponseImplCopyWith<$Res>
     implements $GetRolesResponseCopyWith<$Res> {
-  factory _$$_GetRolesResponseCopyWith(
-          _$_GetRolesResponse value, $Res Function(_$_GetRolesResponse) then) =
-      __$$_GetRolesResponseCopyWithImpl<$Res>;
+  factory _$$GetRolesResponseImplCopyWith(_$GetRolesResponseImpl value,
+          $Res Function(_$GetRolesResponseImpl) then) =
+      __$$GetRolesResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiAudioDetailsRole> roles, KodiListLimitsReturned limits});
@@ -313,20 +340,22 @@ abstract class _$$_GetRolesResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRolesResponseCopyWithImpl<$Res>
-    extends _$GetRolesResponseCopyWithImpl<$Res, _$_GetRolesResponse>
-    implements _$$_GetRolesResponseCopyWith<$Res> {
-  __$$_GetRolesResponseCopyWithImpl(
-      _$_GetRolesResponse _value, $Res Function(_$_GetRolesResponse) _then)
+class __$$GetRolesResponseImplCopyWithImpl<$Res>
+    extends _$GetRolesResponseCopyWithImpl<$Res, _$GetRolesResponseImpl>
+    implements _$$GetRolesResponseImplCopyWith<$Res> {
+  __$$GetRolesResponseImplCopyWithImpl(_$GetRolesResponseImpl _value,
+      $Res Function(_$GetRolesResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRolesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? roles = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetRolesResponse(
+    return _then(_$GetRolesResponseImpl(
       roles: null == roles
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -341,13 +370,13 @@ class __$$_GetRolesResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRolesResponse implements _GetRolesResponse {
-  const _$_GetRolesResponse(
+class _$GetRolesResponseImpl implements _GetRolesResponse {
+  const _$GetRolesResponseImpl(
       {required final List<KodiAudioDetailsRole> roles, required this.limits})
       : _roles = roles;
 
-  factory _$_GetRolesResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRolesResponseFromJson(json);
+  factory _$GetRolesResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRolesResponseImplFromJson(json);
 
   final List<KodiAudioDetailsRole> _roles;
   @override
@@ -366,28 +395,31 @@ class _$_GetRolesResponse implements _GetRolesResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRolesResponse &&
+            other is _$GetRolesResponseImpl &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_roles), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRolesResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRolesResponseCopyWith<_$_GetRolesResponse> get copyWith =>
-      __$$_GetRolesResponseCopyWithImpl<_$_GetRolesResponse>(this, _$identity);
+  _$$GetRolesResponseImplCopyWith<_$GetRolesResponseImpl> get copyWith =>
+      __$$GetRolesResponseImplCopyWithImpl<_$GetRolesResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRolesResponseToJson(
+    return _$$GetRolesResponseImplToJson(
       this,
     );
   }
@@ -396,17 +428,20 @@ class _$_GetRolesResponse implements _GetRolesResponse {
 abstract class _GetRolesResponse implements GetRolesResponse {
   const factory _GetRolesResponse(
       {required final List<KodiAudioDetailsRole> roles,
-      required final KodiListLimitsReturned limits}) = _$_GetRolesResponse;
+      required final KodiListLimitsReturned limits}) = _$GetRolesResponseImpl;
 
   factory _GetRolesResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetRolesResponse.fromJson;
+      _$GetRolesResponseImpl.fromJson;
 
   @override
   List<KodiAudioDetailsRole> get roles;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetRolesResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRolesResponseCopyWith<_$_GetRolesResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRolesResponseImplCopyWith<_$GetRolesResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

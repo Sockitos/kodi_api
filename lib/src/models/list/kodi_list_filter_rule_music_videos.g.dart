@@ -6,18 +6,19 @@ part of 'kodi_list_filter_rule_music_videos.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterRuleMusicVideos _$$_KodiListFilterRuleMusicVideosFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiListFilterRuleMusicVideos(
-      field:
-          $enumDecode(_$KodiListFilterFieldsMusicVideosEnumMap, json['field']),
-      operator: $enumDecode(_$KodiListFilterOperatorsEnumMap, json['operator']),
-      value: const KodiListFilterRuleMusicVideosValueConverter()
-          .fromJson(json['value']),
-    );
+_$KodiListFilterRuleMusicVideosImpl
+    _$$KodiListFilterRuleMusicVideosImplFromJson(Map<String, dynamic> json) =>
+        _$KodiListFilterRuleMusicVideosImpl(
+          field: $enumDecode(
+              _$KodiListFilterFieldsMusicVideosEnumMap, json['field']),
+          operator:
+              $enumDecode(_$KodiListFilterOperatorsEnumMap, json['operator']),
+          value: const KodiListFilterRuleMusicVideosValueConverter()
+              .fromJson(json['value']),
+        );
 
-Map<String, dynamic> _$$_KodiListFilterRuleMusicVideosToJson(
-    _$_KodiListFilterRuleMusicVideos instance) {
+Map<String, dynamic> _$$KodiListFilterRuleMusicVideosImplToJson(
+    _$KodiListFilterRuleMusicVideosImpl instance) {
   final val = <String, dynamic>{
     'field': _$KodiListFilterFieldsMusicVideosEnumMap[instance.field]!,
     'operator': _$KodiListFilterOperatorsEnumMap[instance.operator]!,
@@ -85,31 +86,31 @@ const _$KodiListFilterOperatorsEnumMap = {
   KodiListFilterOperators.between: 'between',
 };
 
-_$_KodiListFilterRuleMusicVideosValueSingle
-    _$$_KodiListFilterRuleMusicVideosValueSingleFromJson(
+_$KodiListFilterRuleMusicVideosValueSingleImpl
+    _$$KodiListFilterRuleMusicVideosValueSingleImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleMusicVideosValueSingle(
+        _$KodiListFilterRuleMusicVideosValueSingleImpl(
           json['value'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleMusicVideosValueSingleToJson(
-        _$_KodiListFilterRuleMusicVideosValueSingle instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleMusicVideosValueSingleImplToJson(
+        _$KodiListFilterRuleMusicVideosValueSingleImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterRuleMusicVideosValueGroup
-    _$$_KodiListFilterRuleMusicVideosValueGroupFromJson(
+_$KodiListFilterRuleMusicVideosValueGroupImpl
+    _$$KodiListFilterRuleMusicVideosValueGroupImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleMusicVideosValueGroup(
+        _$KodiListFilterRuleMusicVideosValueGroupImpl(
           (json['value'] as List<dynamic>).map((e) => e as String).toList(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleMusicVideosValueGroupToJson(
-        _$_KodiListFilterRuleMusicVideosValueGroup instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleMusicVideosValueGroupImplToJson(
+        _$KodiListFilterRuleMusicVideosValueGroupImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

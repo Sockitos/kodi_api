@@ -6,8 +6,8 @@ part of 'get_recordings.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRecordings _$$_GetRecordingsFromJson(Map<String, dynamic> json) =>
-    _$_GetRecordings(
+_$GetRecordingsImpl _$$GetRecordingsImplFromJson(Map<String, dynamic> json) =>
+    _$GetRecordingsImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsRecordingEnumMap, e))
           .toSet(),
@@ -19,7 +19,7 @@ _$_GetRecordings _$$_GetRecordingsFromJson(Map<String, dynamic> json) =>
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetRecordingsToJson(_$_GetRecordings instance) {
+Map<String, dynamic> _$$GetRecordingsImplToJson(_$GetRecordingsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -65,9 +65,9 @@ const _$KodiPVRFieldsRecordingEnumMap = {
   KodiPVRFieldsRecording.clientId: 'clientid',
 };
 
-_$_KodiPVRGetRecordingsResponse _$$_KodiPVRGetRecordingsResponseFromJson(
+_$KodiPVRGetRecordingsResponseImpl _$$KodiPVRGetRecordingsResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPVRGetRecordingsResponse(
+    _$KodiPVRGetRecordingsResponseImpl(
       recordings: (json['recordings'] as List<dynamic>)
           .map((e) =>
               KodiPVRDetailsRecording.fromJson(e as Map<String, dynamic>))
@@ -76,8 +76,8 @@ _$_KodiPVRGetRecordingsResponse _$$_KodiPVRGetRecordingsResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_KodiPVRGetRecordingsResponseToJson(
-        _$_KodiPVRGetRecordingsResponse instance) =>
+Map<String, dynamic> _$$KodiPVRGetRecordingsResponseImplToJson(
+        _$KodiPVRGetRecordingsResponseImpl instance) =>
     <String, dynamic>{
       'recordings': instance.recordings.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

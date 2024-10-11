@@ -6,12 +6,12 @@ part of 'set_view_mode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetViewMode _$$_SetViewModeFromJson(Map<String, dynamic> json) =>
-    _$_SetViewMode(
+_$SetViewModeImpl _$$SetViewModeImplFromJson(Map<String, dynamic> json) =>
+    _$SetViewModeImpl(
       const SetViewModeViewModeConverter().fromJson(json['viewmode']),
     );
 
-Map<String, dynamic> _$$_SetViewModeToJson(_$_SetViewMode instance) {
+Map<String, dynamic> _$$SetViewModeImplToJson(_$SetViewModeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -25,30 +25,30 @@ Map<String, dynamic> _$$_SetViewModeToJson(_$_SetViewMode instance) {
   return val;
 }
 
-_$_SetViewModeViewModeCustom _$$_SetViewModeViewModeCustomFromJson(
+_$SetViewModeViewModeCustomImpl _$$SetViewModeViewModeCustomImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetViewModeViewModeCustom(
+    _$SetViewModeViewModeCustomImpl(
       KodiPlayerCustomViewMode.fromJson(
           json['view_mode'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetViewModeViewModeCustomToJson(
-        _$_SetViewModeViewModeCustom instance) =>
+Map<String, dynamic> _$$SetViewModeViewModeCustomImplToJson(
+        _$SetViewModeViewModeCustomImpl instance) =>
     <String, dynamic>{
       'view_mode': instance.viewMode.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$_SetViewModeViewModeEnum _$$_SetViewModeViewModeEnumFromJson(
+_$SetViewModeViewModeEnumImpl _$$SetViewModeViewModeEnumImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetViewModeViewModeEnum(
+    _$SetViewModeViewModeEnumImpl(
       $enumDecode(_$KodiPlayerViewModeEnumMap, json['view_mode_enum']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetViewModeViewModeEnumToJson(
-        _$_SetViewModeViewModeEnum instance) =>
+Map<String, dynamic> _$$SetViewModeViewModeEnumImplToJson(
+        _$SetViewModeViewModeEnumImpl instance) =>
     <String, dynamic>{
       'view_mode_enum': _$KodiPlayerViewModeEnumMap[instance.viewModeEnum]!,
       'runtimeType': instance.$type,

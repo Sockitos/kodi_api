@@ -6,17 +6,17 @@ part of 'kodi_list_filter_rule_episodes.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiListFilterRuleEpisodes _$$_KodiListFilterRuleEpisodesFromJson(
+_$KodiListFilterRuleEpisodesImpl _$$KodiListFilterRuleEpisodesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiListFilterRuleEpisodes(
+    _$KodiListFilterRuleEpisodesImpl(
       field: $enumDecode(_$KodiListFilterFieldsEpisodesEnumMap, json['field']),
       operator: $enumDecode(_$KodiListFilterOperatorsEnumMap, json['operator']),
       value: const KodiListFilterRuleEpisodesValueConverter()
           .fromJson(json['value']),
     );
 
-Map<String, dynamic> _$$_KodiListFilterRuleEpisodesToJson(
-    _$_KodiListFilterRuleEpisodes instance) {
+Map<String, dynamic> _$$KodiListFilterRuleEpisodesImplToJson(
+    _$KodiListFilterRuleEpisodesImpl instance) {
   final val = <String, dynamic>{
     'field': _$KodiListFilterFieldsEpisodesEnumMap[instance.field]!,
     'operator': _$KodiListFilterOperatorsEnumMap[instance.operator]!,
@@ -90,31 +90,31 @@ const _$KodiListFilterOperatorsEnumMap = {
   KodiListFilterOperators.between: 'between',
 };
 
-_$_KodiListFilterRuleEpisodesValueSingle
-    _$$_KodiListFilterRuleEpisodesValueSingleFromJson(
+_$KodiListFilterRuleEpisodesValueSingleImpl
+    _$$KodiListFilterRuleEpisodesValueSingleImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleEpisodesValueSingle(
+        _$KodiListFilterRuleEpisodesValueSingleImpl(
           json['value'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleEpisodesValueSingleToJson(
-        _$_KodiListFilterRuleEpisodesValueSingle instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleEpisodesValueSingleImplToJson(
+        _$KodiListFilterRuleEpisodesValueSingleImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiListFilterRuleEpisodesValueGroup
-    _$$_KodiListFilterRuleEpisodesValueGroupFromJson(
+_$KodiListFilterRuleEpisodesValueGroupImpl
+    _$$KodiListFilterRuleEpisodesValueGroupImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiListFilterRuleEpisodesValueGroup(
+        _$KodiListFilterRuleEpisodesValueGroupImpl(
           (json['value'] as List<dynamic>).map((e) => e as String).toList(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiListFilterRuleEpisodesValueGroupToJson(
-        _$_KodiListFilterRuleEpisodesValueGroup instance) =>
+Map<String, dynamic> _$$KodiListFilterRuleEpisodesValueGroupImplToJson(
+        _$KodiListFilterRuleEpisodesValueGroupImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

@@ -12,7 +12,7 @@ part of 'insert.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Insert _$InsertFromJson(Map<String, dynamic> json) {
   return _Insert.fromJson(json);
@@ -27,8 +27,12 @@ mixin _$Insert {
   @KodiPlaylistItemConverter()
   List<KodiPlaylistItem> get items => throw _privateConstructorUsedError;
 
+  /// Serializes this Insert to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Insert
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InsertCopyWith<Insert> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -55,6 +59,8 @@ class _$InsertCopyWithImpl<$Res, $Val extends Insert>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Insert
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,9 +86,10 @@ class _$InsertCopyWithImpl<$Res, $Val extends Insert>
 }
 
 /// @nodoc
-abstract class _$$_InsertCopyWith<$Res> implements $InsertCopyWith<$Res> {
-  factory _$$_InsertCopyWith(_$_Insert value, $Res Function(_$_Insert) then) =
-      __$$_InsertCopyWithImpl<$Res>;
+abstract class _$$InsertImplCopyWith<$Res> implements $InsertCopyWith<$Res> {
+  factory _$$InsertImplCopyWith(
+          _$InsertImpl value, $Res Function(_$InsertImpl) then) =
+      __$$InsertImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,12 +101,15 @@ abstract class _$$_InsertCopyWith<$Res> implements $InsertCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertCopyWithImpl<$Res>
-    extends _$InsertCopyWithImpl<$Res, _$_Insert>
-    implements _$$_InsertCopyWith<$Res> {
-  __$$_InsertCopyWithImpl(_$_Insert _value, $Res Function(_$_Insert) _then)
+class __$$InsertImplCopyWithImpl<$Res>
+    extends _$InsertCopyWithImpl<$Res, _$InsertImpl>
+    implements _$$InsertImplCopyWith<$Res> {
+  __$$InsertImplCopyWithImpl(
+      _$InsertImpl _value, $Res Function(_$InsertImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Insert
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,7 +117,7 @@ class __$$_InsertCopyWithImpl<$Res>
     Object? position = null,
     Object? items = null,
   }) {
-    return _then(_$_Insert(
+    return _then(_$InsertImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,8 +136,8 @@ class __$$_InsertCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Insert extends _Insert {
-  const _$_Insert(
+class _$InsertImpl extends _Insert {
+  const _$InsertImpl(
       @JsonKey(name: 'playlistid') this.id,
       this.position,
       @JsonKey(name: 'item')
@@ -136,8 +146,8 @@ class _$_Insert extends _Insert {
       : _items = items,
         super._();
 
-  factory _$_Insert.fromJson(Map<String, dynamic> json) =>
-      _$$_InsertFromJson(json);
+  factory _$InsertImpl.fromJson(Map<String, dynamic> json) =>
+      _$$InsertImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistid')
@@ -160,30 +170,32 @@ class _$_Insert extends _Insert {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Insert &&
+            other is _$InsertImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.position, position) ||
                 other.position == position) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, position, const DeepCollectionEquality().hash(_items));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Insert
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertCopyWith<_$_Insert> get copyWith =>
-      __$$_InsertCopyWithImpl<_$_Insert>(this, _$identity);
+  _$$InsertImplCopyWith<_$InsertImpl> get copyWith =>
+      __$$InsertImplCopyWithImpl<_$InsertImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_InsertToJson(
+    return _$$InsertImplToJson(
       this,
     );
   }
@@ -195,10 +207,10 @@ abstract class _Insert extends Insert {
       final int position,
       @JsonKey(name: 'item')
       @KodiPlaylistItemConverter()
-      final List<KodiPlaylistItem> items) = _$_Insert;
+      final List<KodiPlaylistItem> items) = _$InsertImpl;
   const _Insert._() : super._();
 
-  factory _Insert.fromJson(Map<String, dynamic> json) = _$_Insert.fromJson;
+  factory _Insert.fromJson(Map<String, dynamic> json) = _$InsertImpl.fromJson;
 
   @override
   @JsonKey(name: 'playlistid')
@@ -209,8 +221,11 @@ abstract class _Insert extends Insert {
   @JsonKey(name: 'item')
   @KodiPlaylistItemConverter()
   List<KodiPlaylistItem> get items;
+
+  /// Create a copy of Insert
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_InsertCopyWith<_$_Insert> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$InsertImplCopyWith<_$InsertImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

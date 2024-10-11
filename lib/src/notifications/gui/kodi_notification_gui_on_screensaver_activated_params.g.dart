@@ -6,10 +6,10 @@ part of 'kodi_notification_gui_on_screensaver_activated_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationGUIOnScreensaverActivatedParams
-    _$$_KodiNotificationGUIOnScreensaverActivatedParamsFromJson(
+_$KodiNotificationGUIOnScreensaverActivatedParamsImpl
+    _$$KodiNotificationGUIOnScreensaverActivatedParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnScreensaverActivatedParams(
+        _$KodiNotificationGUIOnScreensaverActivatedParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,9 @@ _$_KodiNotificationGUIOnScreensaverActivatedParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationGUIOnScreensaverActivatedParamsToJson(
-    _$_KodiNotificationGUIOnScreensaverActivatedParams instance) {
+Map<String, dynamic>
+    _$$KodiNotificationGUIOnScreensaverActivatedParamsImplToJson(
+        _$KodiNotificationGUIOnScreensaverActivatedParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,16 +34,16 @@ Map<String, dynamic> _$$_KodiNotificationGUIOnScreensaverActivatedParamsToJson(
   return val;
 }
 
-_$_KodiNotificationGUIOnScreensaverActivatedParamsData
-    _$$_KodiNotificationGUIOnScreensaverActivatedParamsDataFromJson(
+_$KodiNotificationGUIOnScreensaverActivatedParamsDataImpl
+    _$$KodiNotificationGUIOnScreensaverActivatedParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationGUIOnScreensaverActivatedParamsData(
+        _$KodiNotificationGUIOnScreensaverActivatedParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic>
-    _$$_KodiNotificationGUIOnScreensaverActivatedParamsDataToJson(
-            _$_KodiNotificationGUIOnScreensaverActivatedParamsData instance) =>
-        <String, dynamic>{
-          'test': instance.test,
-        };
+Map<String,
+    dynamic> _$$KodiNotificationGUIOnScreensaverActivatedParamsDataImplToJson(
+        _$KodiNotificationGUIOnScreensaverActivatedParamsDataImpl instance) =>
+    <String, dynamic>{
+      'test': instance.test,
+    };

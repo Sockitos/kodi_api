@@ -12,7 +12,7 @@ part of 'kodi_notification_system_on_wake_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationSystemOnWakeParams _$KodiNotificationSystemOnWakeParamsFromJson(
     Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiNotificationSystemOnWakeParams {
   KodiNotificationSystemOnWakeParamsData? get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnWakeParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnWakeParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnWakeParamsCopyWith<
           KodiNotificationSystemOnWakeParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -56,6 +60,8 @@ class _$KodiNotificationSystemOnWakeParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnWakeParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,6 +80,8 @@ class _$KodiNotificationSystemOnWakeParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationSystemOnWakeParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationSystemOnWakeParamsDataCopyWith<$Res>? get data {
@@ -89,12 +97,12 @@ class _$KodiNotificationSystemOnWakeParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnWakeParamsCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnWakeParamsImplCopyWith<$Res>
     implements $KodiNotificationSystemOnWakeParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnWakeParamsCopyWith(
-          _$_KodiNotificationSystemOnWakeParams value,
-          $Res Function(_$_KodiNotificationSystemOnWakeParams) then) =
-      __$$_KodiNotificationSystemOnWakeParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnWakeParamsImplCopyWith(
+          _$KodiNotificationSystemOnWakeParamsImpl value,
+          $Res Function(_$KodiNotificationSystemOnWakeParamsImpl) then) =
+      __$$KodiNotificationSystemOnWakeParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiNotificationSystemOnWakeParamsData? data});
@@ -104,22 +112,24 @@ abstract class _$$_KodiNotificationSystemOnWakeParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnWakeParamsCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnWakeParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnWakeParamsCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnWakeParams>
-    implements _$$_KodiNotificationSystemOnWakeParamsCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnWakeParamsCopyWithImpl(
-      _$_KodiNotificationSystemOnWakeParams _value,
-      $Res Function(_$_KodiNotificationSystemOnWakeParams) _then)
+        _$KodiNotificationSystemOnWakeParamsImpl>
+    implements _$$KodiNotificationSystemOnWakeParamsImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnWakeParamsImplCopyWithImpl(
+      _$KodiNotificationSystemOnWakeParamsImpl _value,
+      $Res Function(_$KodiNotificationSystemOnWakeParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnWakeParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = freezed,
   }) {
-    return _then(_$_KodiNotificationSystemOnWakeParams(
+    return _then(_$KodiNotificationSystemOnWakeParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -134,14 +144,14 @@ class __$$_KodiNotificationSystemOnWakeParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnWakeParams
+class _$KodiNotificationSystemOnWakeParamsImpl
     implements _KodiNotificationSystemOnWakeParams {
-  const _$_KodiNotificationSystemOnWakeParams(
+  const _$KodiNotificationSystemOnWakeParamsImpl(
       {required this.sender, this.data});
 
-  factory _$_KodiNotificationSystemOnWakeParams.fromJson(
+  factory _$KodiNotificationSystemOnWakeParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnWakeParamsFromJson(json);
+      _$$KodiNotificationSystemOnWakeParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -154,29 +164,31 @@ class _$_KodiNotificationSystemOnWakeParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnWakeParams &&
+            other is _$KodiNotificationSystemOnWakeParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnWakeParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnWakeParamsCopyWith<
-          _$_KodiNotificationSystemOnWakeParams>
-      get copyWith => __$$_KodiNotificationSystemOnWakeParamsCopyWithImpl<
-          _$_KodiNotificationSystemOnWakeParams>(this, _$identity);
+  _$$KodiNotificationSystemOnWakeParamsImplCopyWith<
+          _$KodiNotificationSystemOnWakeParamsImpl>
+      get copyWith => __$$KodiNotificationSystemOnWakeParamsImplCopyWithImpl<
+          _$KodiNotificationSystemOnWakeParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnWakeParamsToJson(
+    return _$$KodiNotificationSystemOnWakeParamsImplToJson(
       this,
     );
   }
@@ -187,20 +199,23 @@ abstract class _KodiNotificationSystemOnWakeParams
   const factory _KodiNotificationSystemOnWakeParams(
           {required final String sender,
           final KodiNotificationSystemOnWakeParamsData? data}) =
-      _$_KodiNotificationSystemOnWakeParams;
+      _$KodiNotificationSystemOnWakeParamsImpl;
 
   factory _KodiNotificationSystemOnWakeParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnWakeParams.fromJson;
+      _$KodiNotificationSystemOnWakeParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationSystemOnWakeParamsData? get data;
+
+  /// Create a copy of KodiNotificationSystemOnWakeParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnWakeParamsCopyWith<
-          _$_KodiNotificationSystemOnWakeParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnWakeParamsImplCopyWith<
+          _$KodiNotificationSystemOnWakeParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -214,8 +229,12 @@ KodiNotificationSystemOnWakeParamsData
 mixin _$KodiNotificationSystemOnWakeParamsData {
   String get test => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationSystemOnWakeParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationSystemOnWakeParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationSystemOnWakeParamsDataCopyWith<
           KodiNotificationSystemOnWakeParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -243,6 +262,8 @@ class _$KodiNotificationSystemOnWakeParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationSystemOnWakeParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,33 +279,35 @@ class _$KodiNotificationSystemOnWakeParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationSystemOnWakeParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationSystemOnWakeParamsDataImplCopyWith<$Res>
     implements $KodiNotificationSystemOnWakeParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationSystemOnWakeParamsDataCopyWith(
-          _$_KodiNotificationSystemOnWakeParamsData value,
-          $Res Function(_$_KodiNotificationSystemOnWakeParamsData) then) =
-      __$$_KodiNotificationSystemOnWakeParamsDataCopyWithImpl<$Res>;
+  factory _$$KodiNotificationSystemOnWakeParamsDataImplCopyWith(
+          _$KodiNotificationSystemOnWakeParamsDataImpl value,
+          $Res Function(_$KodiNotificationSystemOnWakeParamsDataImpl) then) =
+      __$$KodiNotificationSystemOnWakeParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String test});
 }
 
 /// @nodoc
-class __$$_KodiNotificationSystemOnWakeParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationSystemOnWakeParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationSystemOnWakeParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationSystemOnWakeParamsData>
-    implements _$$_KodiNotificationSystemOnWakeParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationSystemOnWakeParamsDataCopyWithImpl(
-      _$_KodiNotificationSystemOnWakeParamsData _value,
-      $Res Function(_$_KodiNotificationSystemOnWakeParamsData) _then)
+        _$KodiNotificationSystemOnWakeParamsDataImpl>
+    implements _$$KodiNotificationSystemOnWakeParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationSystemOnWakeParamsDataImplCopyWithImpl(
+      _$KodiNotificationSystemOnWakeParamsDataImpl _value,
+      $Res Function(_$KodiNotificationSystemOnWakeParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationSystemOnWakeParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? test = null,
   }) {
-    return _then(_$_KodiNotificationSystemOnWakeParamsData(
+    return _then(_$KodiNotificationSystemOnWakeParamsDataImpl(
       test: null == test
           ? _value.test
           : test // ignore: cast_nullable_to_non_nullable
@@ -295,13 +318,13 @@ class __$$_KodiNotificationSystemOnWakeParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationSystemOnWakeParamsData
+class _$KodiNotificationSystemOnWakeParamsDataImpl
     implements _KodiNotificationSystemOnWakeParamsData {
-  const _$_KodiNotificationSystemOnWakeParamsData({required this.test});
+  const _$KodiNotificationSystemOnWakeParamsDataImpl({required this.test});
 
-  factory _$_KodiNotificationSystemOnWakeParamsData.fromJson(
+  factory _$KodiNotificationSystemOnWakeParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationSystemOnWakeParamsDataFromJson(json);
+      _$$KodiNotificationSystemOnWakeParamsDataImplFromJson(json);
 
   @override
   final String test;
@@ -312,28 +335,31 @@ class _$_KodiNotificationSystemOnWakeParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationSystemOnWakeParamsData &&
+            other is _$KodiNotificationSystemOnWakeParamsDataImpl &&
             (identical(other.test, test) || other.test == test));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, test);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationSystemOnWakeParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationSystemOnWakeParamsDataCopyWith<
-          _$_KodiNotificationSystemOnWakeParamsData>
-      get copyWith => __$$_KodiNotificationSystemOnWakeParamsDataCopyWithImpl<
-          _$_KodiNotificationSystemOnWakeParamsData>(this, _$identity);
+  _$$KodiNotificationSystemOnWakeParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnWakeParamsDataImpl>
+      get copyWith =>
+          __$$KodiNotificationSystemOnWakeParamsDataImplCopyWithImpl<
+              _$KodiNotificationSystemOnWakeParamsDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationSystemOnWakeParamsDataToJson(
+    return _$$KodiNotificationSystemOnWakeParamsDataImplToJson(
       this,
     );
   }
@@ -342,17 +368,21 @@ class _$_KodiNotificationSystemOnWakeParamsData
 abstract class _KodiNotificationSystemOnWakeParamsData
     implements KodiNotificationSystemOnWakeParamsData {
   const factory _KodiNotificationSystemOnWakeParamsData(
-      {required final String test}) = _$_KodiNotificationSystemOnWakeParamsData;
+          {required final String test}) =
+      _$KodiNotificationSystemOnWakeParamsDataImpl;
 
   factory _KodiNotificationSystemOnWakeParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationSystemOnWakeParamsData.fromJson;
+      _$KodiNotificationSystemOnWakeParamsDataImpl.fromJson;
 
   @override
   String get test;
+
+  /// Create a copy of KodiNotificationSystemOnWakeParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationSystemOnWakeParamsDataCopyWith<
-          _$_KodiNotificationSystemOnWakeParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationSystemOnWakeParamsDataImplCopyWith<
+          _$KodiNotificationSystemOnWakeParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

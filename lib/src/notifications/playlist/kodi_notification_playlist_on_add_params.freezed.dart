@@ -12,7 +12,7 @@ part of 'kodi_notification_playlist_on_add_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationPlaylistOnAddParams
     _$KodiNotificationPlaylistOnAddParamsFromJson(Map<String, dynamic> json) {
@@ -25,8 +25,12 @@ mixin _$KodiNotificationPlaylistOnAddParams {
   KodiNotificationPlaylistOnAddParamsData get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlaylistOnAddParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlaylistOnAddParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlaylistOnAddParamsCopyWith<
           KodiNotificationPlaylistOnAddParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -56,6 +60,8 @@ class _$KodiNotificationPlaylistOnAddParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlaylistOnAddParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,6 +80,8 @@ class _$KodiNotificationPlaylistOnAddParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlaylistOnAddParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlaylistOnAddParamsDataCopyWith<$Res> get data {
@@ -85,12 +93,12 @@ class _$KodiNotificationPlaylistOnAddParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlaylistOnAddParamsCopyWith<$Res>
+abstract class _$$KodiNotificationPlaylistOnAddParamsImplCopyWith<$Res>
     implements $KodiNotificationPlaylistOnAddParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationPlaylistOnAddParamsCopyWith(
-          _$_KodiNotificationPlaylistOnAddParams value,
-          $Res Function(_$_KodiNotificationPlaylistOnAddParams) then) =
-      __$$_KodiNotificationPlaylistOnAddParamsCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlaylistOnAddParamsImplCopyWith(
+          _$KodiNotificationPlaylistOnAddParamsImpl value,
+          $Res Function(_$KodiNotificationPlaylistOnAddParamsImpl) then) =
+      __$$KodiNotificationPlaylistOnAddParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String sender, KodiNotificationPlaylistOnAddParamsData data});
@@ -100,22 +108,24 @@ abstract class _$$_KodiNotificationPlaylistOnAddParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlaylistOnAddParamsCopyWithImpl<$Res>
+class __$$KodiNotificationPlaylistOnAddParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlaylistOnAddParamsCopyWithImpl<$Res,
-        _$_KodiNotificationPlaylistOnAddParams>
-    implements _$$_KodiNotificationPlaylistOnAddParamsCopyWith<$Res> {
-  __$$_KodiNotificationPlaylistOnAddParamsCopyWithImpl(
-      _$_KodiNotificationPlaylistOnAddParams _value,
-      $Res Function(_$_KodiNotificationPlaylistOnAddParams) _then)
+        _$KodiNotificationPlaylistOnAddParamsImpl>
+    implements _$$KodiNotificationPlaylistOnAddParamsImplCopyWith<$Res> {
+  __$$KodiNotificationPlaylistOnAddParamsImplCopyWithImpl(
+      _$KodiNotificationPlaylistOnAddParamsImpl _value,
+      $Res Function(_$KodiNotificationPlaylistOnAddParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlaylistOnAddParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationPlaylistOnAddParams(
+    return _then(_$KodiNotificationPlaylistOnAddParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -130,14 +140,14 @@ class __$$_KodiNotificationPlaylistOnAddParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlaylistOnAddParams
+class _$KodiNotificationPlaylistOnAddParamsImpl
     implements _KodiNotificationPlaylistOnAddParams {
-  const _$_KodiNotificationPlaylistOnAddParams(
+  const _$KodiNotificationPlaylistOnAddParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationPlaylistOnAddParams.fromJson(
+  factory _$KodiNotificationPlaylistOnAddParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlaylistOnAddParamsFromJson(json);
+      _$$KodiNotificationPlaylistOnAddParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -150,29 +160,31 @@ class _$_KodiNotificationPlaylistOnAddParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlaylistOnAddParams &&
+            other is _$KodiNotificationPlaylistOnAddParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlaylistOnAddParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlaylistOnAddParamsCopyWith<
-          _$_KodiNotificationPlaylistOnAddParams>
-      get copyWith => __$$_KodiNotificationPlaylistOnAddParamsCopyWithImpl<
-          _$_KodiNotificationPlaylistOnAddParams>(this, _$identity);
+  _$$KodiNotificationPlaylistOnAddParamsImplCopyWith<
+          _$KodiNotificationPlaylistOnAddParamsImpl>
+      get copyWith => __$$KodiNotificationPlaylistOnAddParamsImplCopyWithImpl<
+          _$KodiNotificationPlaylistOnAddParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlaylistOnAddParamsToJson(
+    return _$$KodiNotificationPlaylistOnAddParamsImplToJson(
       this,
     );
   }
@@ -183,20 +195,23 @@ abstract class _KodiNotificationPlaylistOnAddParams
   const factory _KodiNotificationPlaylistOnAddParams(
           {required final String sender,
           required final KodiNotificationPlaylistOnAddParamsData data}) =
-      _$_KodiNotificationPlaylistOnAddParams;
+      _$KodiNotificationPlaylistOnAddParamsImpl;
 
   factory _KodiNotificationPlaylistOnAddParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlaylistOnAddParams.fromJson;
+      _$KodiNotificationPlaylistOnAddParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationPlaylistOnAddParamsData get data;
+
+  /// Create a copy of KodiNotificationPlaylistOnAddParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlaylistOnAddParamsCopyWith<
-          _$_KodiNotificationPlaylistOnAddParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlaylistOnAddParamsImplCopyWith<
+          _$KodiNotificationPlaylistOnAddParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -213,8 +228,12 @@ mixin _$KodiNotificationPlaylistOnAddParamsData {
   int get playlistId => throw _privateConstructorUsedError;
   int get position => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlaylistOnAddParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlaylistOnAddParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlaylistOnAddParamsDataCopyWith<
           KodiNotificationPlaylistOnAddParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -248,6 +267,8 @@ class _$KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlaylistOnAddParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -271,6 +292,8 @@ class _$KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlaylistOnAddParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationsItemCopyWith<$Res> get item {
@@ -281,12 +304,12 @@ class _$KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlaylistOnAddParamsDataCopyWith<$Res>
+abstract class _$$KodiNotificationPlaylistOnAddParamsDataImplCopyWith<$Res>
     implements $KodiNotificationPlaylistOnAddParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationPlaylistOnAddParamsDataCopyWith(
-          _$_KodiNotificationPlaylistOnAddParamsData value,
-          $Res Function(_$_KodiNotificationPlaylistOnAddParamsData) then) =
-      __$$_KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res>;
+  factory _$$KodiNotificationPlaylistOnAddParamsDataImplCopyWith(
+          _$KodiNotificationPlaylistOnAddParamsDataImpl value,
+          $Res Function(_$KodiNotificationPlaylistOnAddParamsDataImpl) then) =
+      __$$KodiNotificationPlaylistOnAddParamsDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -299,15 +322,17 @@ abstract class _$$_KodiNotificationPlaylistOnAddParamsDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationPlaylistOnAddParamsDataImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res,
-        _$_KodiNotificationPlaylistOnAddParamsData>
-    implements _$$_KodiNotificationPlaylistOnAddParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationPlaylistOnAddParamsDataCopyWithImpl(
-      _$_KodiNotificationPlaylistOnAddParamsData _value,
-      $Res Function(_$_KodiNotificationPlaylistOnAddParamsData) _then)
+        _$KodiNotificationPlaylistOnAddParamsDataImpl>
+    implements _$$KodiNotificationPlaylistOnAddParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationPlaylistOnAddParamsDataImplCopyWithImpl(
+      _$KodiNotificationPlaylistOnAddParamsDataImpl _value,
+      $Res Function(_$KodiNotificationPlaylistOnAddParamsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlaylistOnAddParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -315,7 +340,7 @@ class __$$_KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res>
     Object? playlistId = null,
     Object? position = null,
   }) {
-    return _then(_$_KodiNotificationPlaylistOnAddParamsData(
+    return _then(_$KodiNotificationPlaylistOnAddParamsDataImpl(
       item: null == item
           ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
@@ -334,16 +359,16 @@ class __$$_KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlaylistOnAddParamsData
+class _$KodiNotificationPlaylistOnAddParamsDataImpl
     implements _KodiNotificationPlaylistOnAddParamsData {
-  const _$_KodiNotificationPlaylistOnAddParamsData(
+  const _$KodiNotificationPlaylistOnAddParamsDataImpl(
       {required this.item,
       @JsonKey(name: 'playlistid') required this.playlistId,
       required this.position});
 
-  factory _$_KodiNotificationPlaylistOnAddParamsData.fromJson(
+  factory _$KodiNotificationPlaylistOnAddParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlaylistOnAddParamsDataFromJson(json);
+      _$$KodiNotificationPlaylistOnAddParamsDataImplFromJson(json);
 
   @override
   final KodiNotificationsItem item;
@@ -359,10 +384,10 @@ class _$_KodiNotificationPlaylistOnAddParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlaylistOnAddParamsData &&
+            other is _$KodiNotificationPlaylistOnAddParamsDataImpl &&
             (identical(other.item, item) || other.item == item) &&
             (identical(other.playlistId, playlistId) ||
                 other.playlistId == playlistId) &&
@@ -370,21 +395,24 @@ class _$_KodiNotificationPlaylistOnAddParamsData
                 other.position == position));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, item, playlistId, position);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlaylistOnAddParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlaylistOnAddParamsDataCopyWith<
-          _$_KodiNotificationPlaylistOnAddParamsData>
-      get copyWith => __$$_KodiNotificationPlaylistOnAddParamsDataCopyWithImpl<
-          _$_KodiNotificationPlaylistOnAddParamsData>(this, _$identity);
+  _$$KodiNotificationPlaylistOnAddParamsDataImplCopyWith<
+          _$KodiNotificationPlaylistOnAddParamsDataImpl>
+      get copyWith =>
+          __$$KodiNotificationPlaylistOnAddParamsDataImplCopyWithImpl<
+              _$KodiNotificationPlaylistOnAddParamsDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlaylistOnAddParamsDataToJson(
+    return _$$KodiNotificationPlaylistOnAddParamsDataImplToJson(
       this,
     );
   }
@@ -396,11 +424,11 @@ abstract class _KodiNotificationPlaylistOnAddParamsData
           {required final KodiNotificationsItem item,
           @JsonKey(name: 'playlistid') required final int playlistId,
           required final int position}) =
-      _$_KodiNotificationPlaylistOnAddParamsData;
+      _$KodiNotificationPlaylistOnAddParamsDataImpl;
 
   factory _KodiNotificationPlaylistOnAddParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlaylistOnAddParamsData.fromJson;
+      _$KodiNotificationPlaylistOnAddParamsDataImpl.fromJson;
 
   @override
   KodiNotificationsItem get item;
@@ -409,9 +437,12 @@ abstract class _KodiNotificationPlaylistOnAddParamsData
   int get playlistId;
   @override
   int get position;
+
+  /// Create a copy of KodiNotificationPlaylistOnAddParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlaylistOnAddParamsDataCopyWith<
-          _$_KodiNotificationPlaylistOnAddParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlaylistOnAddParamsDataImplCopyWith<
+          _$KodiNotificationPlaylistOnAddParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

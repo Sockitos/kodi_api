@@ -6,7 +6,7 @@ part of 'select.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Select _$$_SelectFromJson(Map<String, dynamic> json) => _$_Select();
+_$SelectImpl _$$SelectImplFromJson(Map<String, dynamic> json) => _$SelectImpl();
 
-Map<String, dynamic> _$$_SelectToJson(_$_Select instance) =>
+Map<String, dynamic> _$$SelectImplToJson(_$SelectImpl instance) =>
     <String, dynamic>{};

@@ -6,17 +6,17 @@ part of 'get_music_video_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetMusicVideoDetails _$$_GetMusicVideoDetailsFromJson(
+_$GetMusicVideoDetailsImpl _$$GetMusicVideoDetailsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetMusicVideoDetails(
-      json['musicvideoid'] as int,
+    _$GetMusicVideoDetailsImpl(
+      (json['musicvideoid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsMusicVideoEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetMusicVideoDetailsToJson(
-    _$_GetMusicVideoDetails instance) {
+Map<String, dynamic> _$$GetMusicVideoDetailsImplToJson(
+    _$GetMusicVideoDetailsImpl instance) {
   final val = <String, dynamic>{
     'musicvideoid': instance.id,
   };

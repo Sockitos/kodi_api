@@ -6,8 +6,10 @@ part of 'get_configuration.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetConfiguration _$$_GetConfigurationFromJson(Map<String, dynamic> json) =>
-    _$_GetConfiguration();
+_$GetConfigurationImpl _$$GetConfigurationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetConfigurationImpl();
 
-Map<String, dynamic> _$$_GetConfigurationToJson(_$_GetConfiguration instance) =>
+Map<String, dynamic> _$$GetConfigurationImplToJson(
+        _$GetConfigurationImpl instance) =>
     <String, dynamic>{};

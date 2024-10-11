@@ -12,7 +12,7 @@ part of 'introspect.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Introspect _$IntrospectFromJson(Map<String, dynamic> json) {
   return _Introspect.fromJson(json);
@@ -28,8 +28,12 @@ mixin _$Introspect {
   bool get filterByTransport => throw _privateConstructorUsedError;
   KodiJSONRPCIntrospectFilter? get filter => throw _privateConstructorUsedError;
 
+  /// Serializes this Introspect to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Introspect
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IntrospectCopyWith<Introspect> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,6 +63,8 @@ class _$IntrospectCopyWithImpl<$Res, $Val extends Introspect>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Introspect
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class _$IntrospectCopyWithImpl<$Res, $Val extends Introspect>
     ) as $Val);
   }
 
+  /// Create a copy of Introspect
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiJSONRPCIntrospectFilterCopyWith<$Res>? get filter {
@@ -101,11 +109,11 @@ class _$IntrospectCopyWithImpl<$Res, $Val extends Introspect>
 }
 
 /// @nodoc
-abstract class _$$_IntrospectCopyWith<$Res>
+abstract class _$$IntrospectImplCopyWith<$Res>
     implements $IntrospectCopyWith<$Res> {
-  factory _$$_IntrospectCopyWith(
-          _$_Introspect value, $Res Function(_$_Introspect) then) =
-      __$$_IntrospectCopyWithImpl<$Res>;
+  factory _$$IntrospectImplCopyWith(
+          _$IntrospectImpl value, $Res Function(_$IntrospectImpl) then) =
+      __$$IntrospectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -119,13 +127,15 @@ abstract class _$$_IntrospectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IntrospectCopyWithImpl<$Res>
-    extends _$IntrospectCopyWithImpl<$Res, _$_Introspect>
-    implements _$$_IntrospectCopyWith<$Res> {
-  __$$_IntrospectCopyWithImpl(
-      _$_Introspect _value, $Res Function(_$_Introspect) _then)
+class __$$IntrospectImplCopyWithImpl<$Res>
+    extends _$IntrospectCopyWithImpl<$Res, _$IntrospectImpl>
+    implements _$$IntrospectImplCopyWith<$Res> {
+  __$$IntrospectImplCopyWithImpl(
+      _$IntrospectImpl _value, $Res Function(_$IntrospectImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Introspect
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,7 +144,7 @@ class __$$_IntrospectCopyWithImpl<$Res>
     Object? filterByTransport = null,
     Object? filter = freezed,
   }) {
-    return _then(_$_Introspect(
+    return _then(_$IntrospectImpl(
       getDescriptions: null == getDescriptions
           ? _value.getDescriptions
           : getDescriptions // ignore: cast_nullable_to_non_nullable
@@ -157,16 +167,16 @@ class __$$_IntrospectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Introspect extends _Introspect {
-  const _$_Introspect(
+class _$IntrospectImpl extends _Introspect {
+  const _$IntrospectImpl(
       {@JsonKey(name: 'getdescriptions') this.getDescriptions = true,
       @JsonKey(name: 'getmetadata') this.getMetadata = false,
       @JsonKey(name: 'filterbytransport') this.filterByTransport = true,
       this.filter})
       : super._();
 
-  factory _$_Introspect.fromJson(Map<String, dynamic> json) =>
-      _$$_IntrospectFromJson(json);
+  factory _$IntrospectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IntrospectImplFromJson(json);
 
   @override
   @JsonKey(name: 'getdescriptions')
@@ -186,10 +196,10 @@ class _$_Introspect extends _Introspect {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Introspect &&
+            other is _$IntrospectImpl &&
             (identical(other.getDescriptions, getDescriptions) ||
                 other.getDescriptions == getDescriptions) &&
             (identical(other.getMetadata, getMetadata) ||
@@ -199,20 +209,22 @@ class _$_Introspect extends _Introspect {
             (identical(other.filter, filter) || other.filter == filter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, getDescriptions, getMetadata, filterByTransport, filter);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Introspect
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IntrospectCopyWith<_$_Introspect> get copyWith =>
-      __$$_IntrospectCopyWithImpl<_$_Introspect>(this, _$identity);
+  _$$IntrospectImplCopyWith<_$IntrospectImpl> get copyWith =>
+      __$$IntrospectImplCopyWithImpl<_$IntrospectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IntrospectToJson(
+    return _$$IntrospectImplToJson(
       this,
     );
   }
@@ -223,11 +235,11 @@ abstract class _Introspect extends Introspect {
       {@JsonKey(name: 'getdescriptions') final bool getDescriptions,
       @JsonKey(name: 'getmetadata') final bool getMetadata,
       @JsonKey(name: 'filterbytransport') final bool filterByTransport,
-      final KodiJSONRPCIntrospectFilter? filter}) = _$_Introspect;
+      final KodiJSONRPCIntrospectFilter? filter}) = _$IntrospectImpl;
   const _Introspect._() : super._();
 
   factory _Introspect.fromJson(Map<String, dynamic> json) =
-      _$_Introspect.fromJson;
+      _$IntrospectImpl.fromJson;
 
   @override
   @JsonKey(name: 'getdescriptions')
@@ -240,9 +252,12 @@ abstract class _Introspect extends Introspect {
   bool get filterByTransport;
   @override
   KodiJSONRPCIntrospectFilter? get filter;
+
+  /// Create a copy of Introspect
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_IntrospectCopyWith<_$_Introspect> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$IntrospectImplCopyWith<_$IntrospectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -259,8 +274,12 @@ mixin _$IntrospectResponse {
   Map<String, dynamic> get types => throw _privateConstructorUsedError;
   String get version => throw _privateConstructorUsedError;
 
+  /// Serializes this IntrospectResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of IntrospectResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $IntrospectResponseCopyWith<IntrospectResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -290,6 +309,8 @@ class _$IntrospectResponseCopyWithImpl<$Res, $Val extends IntrospectResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of IntrospectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -330,11 +351,11 @@ class _$IntrospectResponseCopyWithImpl<$Res, $Val extends IntrospectResponse>
 }
 
 /// @nodoc
-abstract class _$$_IntrospectResponseCopyWith<$Res>
+abstract class _$$IntrospectResponseImplCopyWith<$Res>
     implements $IntrospectResponseCopyWith<$Res> {
-  factory _$$_IntrospectResponseCopyWith(_$_IntrospectResponse value,
-          $Res Function(_$_IntrospectResponse) then) =
-      __$$_IntrospectResponseCopyWithImpl<$Res>;
+  factory _$$IntrospectResponseImplCopyWith(_$IntrospectResponseImpl value,
+          $Res Function(_$IntrospectResponseImpl) then) =
+      __$$IntrospectResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -347,13 +368,15 @@ abstract class _$$_IntrospectResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IntrospectResponseCopyWithImpl<$Res>
-    extends _$IntrospectResponseCopyWithImpl<$Res, _$_IntrospectResponse>
-    implements _$$_IntrospectResponseCopyWith<$Res> {
-  __$$_IntrospectResponseCopyWithImpl(
-      _$_IntrospectResponse _value, $Res Function(_$_IntrospectResponse) _then)
+class __$$IntrospectResponseImplCopyWithImpl<$Res>
+    extends _$IntrospectResponseCopyWithImpl<$Res, _$IntrospectResponseImpl>
+    implements _$$IntrospectResponseImplCopyWith<$Res> {
+  __$$IntrospectResponseImplCopyWithImpl(_$IntrospectResponseImpl _value,
+      $Res Function(_$IntrospectResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of IntrospectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -364,7 +387,7 @@ class __$$_IntrospectResponseCopyWithImpl<$Res>
     Object? types = null,
     Object? version = null,
   }) {
-    return _then(_$_IntrospectResponse(
+    return _then(_$IntrospectResponseImpl(
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -395,8 +418,8 @@ class __$$_IntrospectResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_IntrospectResponse implements _IntrospectResponse {
-  const _$_IntrospectResponse(
+class _$IntrospectResponseImpl implements _IntrospectResponse {
+  const _$IntrospectResponseImpl(
       {required this.description,
       required this.id,
       required final Map<String, dynamic> methods,
@@ -407,8 +430,8 @@ class _$_IntrospectResponse implements _IntrospectResponse {
         _notifications = notifications,
         _types = types;
 
-  factory _$_IntrospectResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_IntrospectResponseFromJson(json);
+  factory _$IntrospectResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IntrospectResponseImplFromJson(json);
 
   @override
   final String description;
@@ -447,10 +470,10 @@ class _$_IntrospectResponse implements _IntrospectResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IntrospectResponse &&
+            other is _$IntrospectResponseImpl &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.id, id) || other.id == id) &&
@@ -461,7 +484,7 @@ class _$_IntrospectResponse implements _IntrospectResponse {
             (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -472,16 +495,18 @@ class _$_IntrospectResponse implements _IntrospectResponse {
       const DeepCollectionEquality().hash(_types),
       version);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of IntrospectResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IntrospectResponseCopyWith<_$_IntrospectResponse> get copyWith =>
-      __$$_IntrospectResponseCopyWithImpl<_$_IntrospectResponse>(
+  _$$IntrospectResponseImplCopyWith<_$IntrospectResponseImpl> get copyWith =>
+      __$$IntrospectResponseImplCopyWithImpl<_$IntrospectResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_IntrospectResponseToJson(
+    return _$$IntrospectResponseImplToJson(
       this,
     );
   }
@@ -494,10 +519,10 @@ abstract class _IntrospectResponse implements IntrospectResponse {
       required final Map<String, dynamic> methods,
       required final Map<String, dynamic> notifications,
       required final Map<String, dynamic> types,
-      required final String version}) = _$_IntrospectResponse;
+      required final String version}) = _$IntrospectResponseImpl;
 
   factory _IntrospectResponse.fromJson(Map<String, dynamic> json) =
-      _$_IntrospectResponse.fromJson;
+      _$IntrospectResponseImpl.fromJson;
 
   @override
   String get description;
@@ -511,9 +536,12 @@ abstract class _IntrospectResponse implements IntrospectResponse {
   Map<String, dynamic> get types;
   @override
   String get version;
+
+  /// Create a copy of IntrospectResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_IntrospectResponseCopyWith<_$_IntrospectResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$IntrospectResponseImplCopyWith<_$IntrospectResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -530,8 +558,12 @@ mixin _$KodiJSONRPCIntrospectFilter {
   KodiJSONRPCIntrospectFilterType get type =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiJSONRPCIntrospectFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiJSONRPCIntrospectFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiJSONRPCIntrospectFilterCopyWith<KodiJSONRPCIntrospectFilter>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -561,6 +593,8 @@ class _$KodiJSONRPCIntrospectFilterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiJSONRPCIntrospectFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -586,12 +620,12 @@ class _$KodiJSONRPCIntrospectFilterCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiJSONRPCIntrospectFilterCopyWith<$Res>
+abstract class _$$KodiJSONRPCIntrospectFilterImplCopyWith<$Res>
     implements $KodiJSONRPCIntrospectFilterCopyWith<$Res> {
-  factory _$$_KodiJSONRPCIntrospectFilterCopyWith(
-          _$_KodiJSONRPCIntrospectFilter value,
-          $Res Function(_$_KodiJSONRPCIntrospectFilter) then) =
-      __$$_KodiJSONRPCIntrospectFilterCopyWithImpl<$Res>;
+  factory _$$KodiJSONRPCIntrospectFilterImplCopyWith(
+          _$KodiJSONRPCIntrospectFilterImpl value,
+          $Res Function(_$KodiJSONRPCIntrospectFilterImpl) then) =
+      __$$KodiJSONRPCIntrospectFilterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -601,15 +635,17 @@ abstract class _$$_KodiJSONRPCIntrospectFilterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiJSONRPCIntrospectFilterCopyWithImpl<$Res>
+class __$$KodiJSONRPCIntrospectFilterImplCopyWithImpl<$Res>
     extends _$KodiJSONRPCIntrospectFilterCopyWithImpl<$Res,
-        _$_KodiJSONRPCIntrospectFilter>
-    implements _$$_KodiJSONRPCIntrospectFilterCopyWith<$Res> {
-  __$$_KodiJSONRPCIntrospectFilterCopyWithImpl(
-      _$_KodiJSONRPCIntrospectFilter _value,
-      $Res Function(_$_KodiJSONRPCIntrospectFilter) _then)
+        _$KodiJSONRPCIntrospectFilterImpl>
+    implements _$$KodiJSONRPCIntrospectFilterImplCopyWith<$Res> {
+  __$$KodiJSONRPCIntrospectFilterImplCopyWithImpl(
+      _$KodiJSONRPCIntrospectFilterImpl _value,
+      $Res Function(_$KodiJSONRPCIntrospectFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiJSONRPCIntrospectFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -617,7 +653,7 @@ class __$$_KodiJSONRPCIntrospectFilterCopyWithImpl<$Res>
     Object? id = null,
     Object? type = null,
   }) {
-    return _then(_$_KodiJSONRPCIntrospectFilter(
+    return _then(_$KodiJSONRPCIntrospectFilterImpl(
       getReferences: null == getReferences
           ? _value.getReferences
           : getReferences // ignore: cast_nullable_to_non_nullable
@@ -636,14 +672,16 @@ class __$$_KodiJSONRPCIntrospectFilterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiJSONRPCIntrospectFilter implements _KodiJSONRPCIntrospectFilter {
-  const _$_KodiJSONRPCIntrospectFilter(
+class _$KodiJSONRPCIntrospectFilterImpl
+    implements _KodiJSONRPCIntrospectFilter {
+  const _$KodiJSONRPCIntrospectFilterImpl(
       {@JsonKey(name: 'getreferences') this.getReferences = true,
       required this.id,
       required this.type});
 
-  factory _$_KodiJSONRPCIntrospectFilter.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiJSONRPCIntrospectFilterFromJson(json);
+  factory _$KodiJSONRPCIntrospectFilterImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiJSONRPCIntrospectFilterImplFromJson(json);
 
   @override
   @JsonKey(name: 'getreferences')
@@ -659,30 +697,32 @@ class _$_KodiJSONRPCIntrospectFilter implements _KodiJSONRPCIntrospectFilter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiJSONRPCIntrospectFilter &&
+            other is _$KodiJSONRPCIntrospectFilterImpl &&
             (identical(other.getReferences, getReferences) ||
                 other.getReferences == getReferences) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, getReferences, id, type);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiJSONRPCIntrospectFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiJSONRPCIntrospectFilterCopyWith<_$_KodiJSONRPCIntrospectFilter>
-      get copyWith => __$$_KodiJSONRPCIntrospectFilterCopyWithImpl<
-          _$_KodiJSONRPCIntrospectFilter>(this, _$identity);
+  _$$KodiJSONRPCIntrospectFilterImplCopyWith<_$KodiJSONRPCIntrospectFilterImpl>
+      get copyWith => __$$KodiJSONRPCIntrospectFilterImplCopyWithImpl<
+          _$KodiJSONRPCIntrospectFilterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiJSONRPCIntrospectFilterToJson(
+    return _$$KodiJSONRPCIntrospectFilterImplToJson(
       this,
     );
   }
@@ -694,10 +734,10 @@ abstract class _KodiJSONRPCIntrospectFilter
           {@JsonKey(name: 'getreferences') final bool getReferences,
           required final String id,
           required final KodiJSONRPCIntrospectFilterType type}) =
-      _$_KodiJSONRPCIntrospectFilter;
+      _$KodiJSONRPCIntrospectFilterImpl;
 
   factory _KodiJSONRPCIntrospectFilter.fromJson(Map<String, dynamic> json) =
-      _$_KodiJSONRPCIntrospectFilter.fromJson;
+      _$KodiJSONRPCIntrospectFilterImpl.fromJson;
 
   @override
   @JsonKey(name: 'getreferences')
@@ -706,8 +746,11 @@ abstract class _KodiJSONRPCIntrospectFilter
   String get id;
   @override
   KodiJSONRPCIntrospectFilterType get type;
+
+  /// Create a copy of KodiJSONRPCIntrospectFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiJSONRPCIntrospectFilterCopyWith<_$_KodiJSONRPCIntrospectFilter>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiJSONRPCIntrospectFilterImplCopyWith<_$KodiJSONRPCIntrospectFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

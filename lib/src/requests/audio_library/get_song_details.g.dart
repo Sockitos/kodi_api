@@ -6,15 +6,16 @@ part of 'get_song_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetSongDetails _$$_GetSongDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetSongDetails(
-      json['songid'] as int,
+_$GetSongDetailsImpl _$$GetSongDetailsImplFromJson(Map<String, dynamic> json) =>
+    _$GetSongDetailsImpl(
+      (json['songid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiAudioFieldsSongEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetSongDetailsToJson(_$_GetSongDetails instance) {
+Map<String, dynamic> _$$GetSongDetailsImplToJson(
+    _$GetSongDetailsImpl instance) {
   final val = <String, dynamic>{
     'songid': instance.id,
   };

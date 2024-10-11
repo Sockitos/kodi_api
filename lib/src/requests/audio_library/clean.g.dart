@@ -6,10 +6,11 @@ part of 'clean.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Clean _$$_CleanFromJson(Map<String, dynamic> json) => _$_Clean(
+_$CleanImpl _$$CleanImplFromJson(Map<String, dynamic> json) => _$CleanImpl(
       showDialogs: json['showdialogs'] as bool? ?? true,
     );
 
-Map<String, dynamic> _$$_CleanToJson(_$_Clean instance) => <String, dynamic>{
+Map<String, dynamic> _$$CleanImplToJson(_$CleanImpl instance) =>
+    <String, dynamic>{
       'showdialogs': instance.showDialogs,
     };

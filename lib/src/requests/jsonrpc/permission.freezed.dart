@@ -12,7 +12,7 @@ part of 'permission.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Permission _$PermissionFromJson(Map<String, dynamic> json) {
   return _Permission.fromJson(json);
@@ -20,6 +20,7 @@ Permission _$PermissionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Permission {
+  /// Serializes this Permission to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -39,31 +40,37 @@ class _$PermissionCopyWithImpl<$Res, $Val extends Permission>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Permission
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_PermissionCopyWith<$Res> {
-  factory _$$_PermissionCopyWith(
-          _$_Permission value, $Res Function(_$_Permission) then) =
-      __$$_PermissionCopyWithImpl<$Res>;
+abstract class _$$PermissionImplCopyWith<$Res> {
+  factory _$$PermissionImplCopyWith(
+          _$PermissionImpl value, $Res Function(_$PermissionImpl) then) =
+      __$$PermissionImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_PermissionCopyWithImpl<$Res>
-    extends _$PermissionCopyWithImpl<$Res, _$_Permission>
-    implements _$$_PermissionCopyWith<$Res> {
-  __$$_PermissionCopyWithImpl(
-      _$_Permission _value, $Res Function(_$_Permission) _then)
+class __$$PermissionImplCopyWithImpl<$Res>
+    extends _$PermissionCopyWithImpl<$Res, _$PermissionImpl>
+    implements _$$PermissionImplCopyWith<$Res> {
+  __$$PermissionImplCopyWithImpl(
+      _$PermissionImpl _value, $Res Function(_$PermissionImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Permission
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Permission extends _Permission {
-  const _$_Permission() : super._();
+class _$PermissionImpl extends _Permission {
+  const _$PermissionImpl() : super._();
 
-  factory _$_Permission.fromJson(Map<String, dynamic> json) =>
-      _$$_PermissionFromJson(json);
+  factory _$PermissionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PermissionImplFromJson(json);
 
   @override
   String toString() {
@@ -71,29 +78,29 @@ class _$_Permission extends _Permission {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Permission);
+        (other.runtimeType == runtimeType && other is _$PermissionImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PermissionToJson(
+    return _$$PermissionImplToJson(
       this,
     );
   }
 }
 
 abstract class _Permission extends Permission {
-  const factory _Permission() = _$_Permission;
+  const factory _Permission() = _$PermissionImpl;
   const _Permission._() : super._();
 
   factory _Permission.fromJson(Map<String, dynamic> json) =
-      _$_Permission.fromJson;
+      _$PermissionImpl.fromJson;
 }
 
 PermissionResponse _$PermissionResponseFromJson(Map<String, dynamic> json) {
@@ -129,8 +136,12 @@ mixin _$PermissionResponse {
   @JsonKey(name: 'WriteFile')
   bool get writeFile => throw _privateConstructorUsedError;
 
+  /// Serializes this PermissionResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PermissionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PermissionResponseCopyWith<PermissionResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -167,6 +178,8 @@ class _$PermissionResponseCopyWithImpl<$Res, $Val extends PermissionResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PermissionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -242,11 +255,11 @@ class _$PermissionResponseCopyWithImpl<$Res, $Val extends PermissionResponse>
 }
 
 /// @nodoc
-abstract class _$$_PermissionResponseCopyWith<$Res>
+abstract class _$$PermissionResponseImplCopyWith<$Res>
     implements $PermissionResponseCopyWith<$Res> {
-  factory _$$_PermissionResponseCopyWith(_$_PermissionResponse value,
-          $Res Function(_$_PermissionResponse) then) =
-      __$$_PermissionResponseCopyWithImpl<$Res>;
+  factory _$$PermissionResponseImplCopyWith(_$PermissionResponseImpl value,
+          $Res Function(_$PermissionResponseImpl) then) =
+      __$$PermissionResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -266,13 +279,15 @@ abstract class _$$_PermissionResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PermissionResponseCopyWithImpl<$Res>
-    extends _$PermissionResponseCopyWithImpl<$Res, _$_PermissionResponse>
-    implements _$$_PermissionResponseCopyWith<$Res> {
-  __$$_PermissionResponseCopyWithImpl(
-      _$_PermissionResponse _value, $Res Function(_$_PermissionResponse) _then)
+class __$$PermissionResponseImplCopyWithImpl<$Res>
+    extends _$PermissionResponseCopyWithImpl<$Res, _$PermissionResponseImpl>
+    implements _$$PermissionResponseImplCopyWith<$Res> {
+  __$$PermissionResponseImplCopyWithImpl(_$PermissionResponseImpl _value,
+      $Res Function(_$PermissionResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PermissionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -290,7 +305,7 @@ class __$$_PermissionResponseCopyWithImpl<$Res>
     Object? updateData = null,
     Object? writeFile = null,
   }) {
-    return _then(_$_PermissionResponse(
+    return _then(_$PermissionResponseImpl(
       controlGUI: null == controlGUI
           ? _value.controlGUI
           : controlGUI // ignore: cast_nullable_to_non_nullable
@@ -349,8 +364,8 @@ class __$$_PermissionResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PermissionResponse implements _PermissionResponse {
-  const _$_PermissionResponse(
+class _$PermissionResponseImpl implements _PermissionResponse {
+  const _$PermissionResponseImpl(
       {@JsonKey(name: 'ControlGUI') required this.controlGUI,
       @JsonKey(name: 'ControlNotify') required this.controlNotify,
       @JsonKey(name: 'ControlPlayback') required this.controlPlayback,
@@ -365,8 +380,8 @@ class _$_PermissionResponse implements _PermissionResponse {
       @JsonKey(name: 'UpdateData') required this.updateData,
       @JsonKey(name: 'WriteFile') required this.writeFile});
 
-  factory _$_PermissionResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PermissionResponseFromJson(json);
+  factory _$PermissionResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PermissionResponseImplFromJson(json);
 
   @override
   @JsonKey(name: 'ControlGUI')
@@ -414,10 +429,10 @@ class _$_PermissionResponse implements _PermissionResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PermissionResponse &&
+            other is _$PermissionResponseImpl &&
             (identical(other.controlGUI, controlGUI) ||
                 other.controlGUI == controlGUI) &&
             (identical(other.controlNotify, controlNotify) ||
@@ -446,7 +461,7 @@ class _$_PermissionResponse implements _PermissionResponse {
                 other.writeFile == writeFile));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -464,16 +479,18 @@ class _$_PermissionResponse implements _PermissionResponse {
       updateData,
       writeFile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PermissionResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PermissionResponseCopyWith<_$_PermissionResponse> get copyWith =>
-      __$$_PermissionResponseCopyWithImpl<_$_PermissionResponse>(
+  _$$PermissionResponseImplCopyWith<_$PermissionResponseImpl> get copyWith =>
+      __$$PermissionResponseImplCopyWithImpl<_$PermissionResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PermissionResponseToJson(
+    return _$$PermissionResponseImplToJson(
       this,
     );
   }
@@ -494,10 +511,10 @@ abstract class _PermissionResponse implements PermissionResponse {
           @JsonKey(name: 'RemoveData') required final bool removeData,
           @JsonKey(name: 'UpdateData') required final bool updateData,
           @JsonKey(name: 'WriteFile') required final bool writeFile}) =
-      _$_PermissionResponse;
+      _$PermissionResponseImpl;
 
   factory _PermissionResponse.fromJson(Map<String, dynamic> json) =
-      _$_PermissionResponse.fromJson;
+      _$PermissionResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'ControlGUI')
@@ -538,8 +555,11 @@ abstract class _PermissionResponse implements PermissionResponse {
   @override
   @JsonKey(name: 'WriteFile')
   bool get writeFile;
+
+  /// Create a copy of PermissionResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_PermissionResponseCopyWith<_$_PermissionResponse> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PermissionResponseImplCopyWith<_$PermissionResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

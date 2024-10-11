@@ -6,13 +6,13 @@ part of 'toggle_timer.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ToggleTimer _$$_ToggleTimerFromJson(Map<String, dynamic> json) =>
-    _$_ToggleTimer(
-      json['broadcastid'] as int,
+_$ToggleTimerImpl _$$ToggleTimerImplFromJson(Map<String, dynamic> json) =>
+    _$ToggleTimerImpl(
+      (json['broadcastid'] as num).toInt(),
       timerRule: json['timerrule'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_ToggleTimerToJson(_$_ToggleTimer instance) =>
+Map<String, dynamic> _$$ToggleTimerImplToJson(_$ToggleTimerImpl instance) =>
     <String, dynamic>{
       'broadcastid': instance.id,
       'timerrule': instance.timerRule,

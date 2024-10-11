@@ -12,7 +12,7 @@ part of 'get_view_mode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetViewMode _$GetViewModeFromJson(Map<String, dynamic> json) {
   return _GetViewMode.fromJson(json);
@@ -20,6 +20,7 @@ GetViewMode _$GetViewModeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetViewMode {
+  /// Serializes this GetViewMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -39,31 +40,37 @@ class _$GetViewModeCopyWithImpl<$Res, $Val extends GetViewMode>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of GetViewMode
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_GetViewModeCopyWith<$Res> {
-  factory _$$_GetViewModeCopyWith(
-          _$_GetViewMode value, $Res Function(_$_GetViewMode) then) =
-      __$$_GetViewModeCopyWithImpl<$Res>;
+abstract class _$$GetViewModeImplCopyWith<$Res> {
+  factory _$$GetViewModeImplCopyWith(
+          _$GetViewModeImpl value, $Res Function(_$GetViewModeImpl) then) =
+      __$$GetViewModeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetViewModeCopyWithImpl<$Res>
-    extends _$GetViewModeCopyWithImpl<$Res, _$_GetViewMode>
-    implements _$$_GetViewModeCopyWith<$Res> {
-  __$$_GetViewModeCopyWithImpl(
-      _$_GetViewMode _value, $Res Function(_$_GetViewMode) _then)
+class __$$GetViewModeImplCopyWithImpl<$Res>
+    extends _$GetViewModeCopyWithImpl<$Res, _$GetViewModeImpl>
+    implements _$$GetViewModeImplCopyWith<$Res> {
+  __$$GetViewModeImplCopyWithImpl(
+      _$GetViewModeImpl _value, $Res Function(_$GetViewModeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GetViewMode
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetViewMode extends _GetViewMode {
-  const _$_GetViewMode() : super._();
+class _$GetViewModeImpl extends _GetViewMode {
+  const _$GetViewModeImpl() : super._();
 
-  factory _$_GetViewMode.fromJson(Map<String, dynamic> json) =>
-      _$$_GetViewModeFromJson(json);
+  factory _$GetViewModeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetViewModeImplFromJson(json);
 
   @override
   String toString() {
@@ -71,29 +78,29 @@ class _$_GetViewMode extends _GetViewMode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GetViewMode);
+        (other.runtimeType == runtimeType && other is _$GetViewModeImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetViewModeToJson(
+    return _$$GetViewModeImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetViewMode extends GetViewMode {
-  const factory _GetViewMode() = _$_GetViewMode;
+  const factory _GetViewMode() = _$GetViewModeImpl;
   const _GetViewMode._() : super._();
 
   factory _GetViewMode.fromJson(Map<String, dynamic> json) =
-      _$_GetViewMode.fromJson;
+      _$GetViewModeImpl.fromJson;
 }
 
 KodiPlayerGetViewModeResponse _$KodiPlayerGetViewModeResponseFromJson(
@@ -113,8 +120,12 @@ mixin _$KodiPlayerGetViewModeResponse {
   KodiPlayerViewMode get viewMode => throw _privateConstructorUsedError;
   double get zoom => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPlayerGetViewModeResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPlayerGetViewModeResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPlayerGetViewModeResponseCopyWith<KodiPlayerGetViewModeResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -146,6 +157,8 @@ class _$KodiPlayerGetViewModeResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPlayerGetViewModeResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,12 +194,12 @@ class _$KodiPlayerGetViewModeResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPlayerGetViewModeResponseCopyWith<$Res>
+abstract class _$$KodiPlayerGetViewModeResponseImplCopyWith<$Res>
     implements $KodiPlayerGetViewModeResponseCopyWith<$Res> {
-  factory _$$_KodiPlayerGetViewModeResponseCopyWith(
-          _$_KodiPlayerGetViewModeResponse value,
-          $Res Function(_$_KodiPlayerGetViewModeResponse) then) =
-      __$$_KodiPlayerGetViewModeResponseCopyWithImpl<$Res>;
+  factory _$$KodiPlayerGetViewModeResponseImplCopyWith(
+          _$KodiPlayerGetViewModeResponseImpl value,
+          $Res Function(_$KodiPlayerGetViewModeResponseImpl) then) =
+      __$$KodiPlayerGetViewModeResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -198,15 +211,17 @@ abstract class _$$_KodiPlayerGetViewModeResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPlayerGetViewModeResponseCopyWithImpl<$Res>
+class __$$KodiPlayerGetViewModeResponseImplCopyWithImpl<$Res>
     extends _$KodiPlayerGetViewModeResponseCopyWithImpl<$Res,
-        _$_KodiPlayerGetViewModeResponse>
-    implements _$$_KodiPlayerGetViewModeResponseCopyWith<$Res> {
-  __$$_KodiPlayerGetViewModeResponseCopyWithImpl(
-      _$_KodiPlayerGetViewModeResponse _value,
-      $Res Function(_$_KodiPlayerGetViewModeResponse) _then)
+        _$KodiPlayerGetViewModeResponseImpl>
+    implements _$$KodiPlayerGetViewModeResponseImplCopyWith<$Res> {
+  __$$KodiPlayerGetViewModeResponseImplCopyWithImpl(
+      _$KodiPlayerGetViewModeResponseImpl _value,
+      $Res Function(_$KodiPlayerGetViewModeResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPlayerGetViewModeResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -216,7 +231,7 @@ class __$$_KodiPlayerGetViewModeResponseCopyWithImpl<$Res>
     Object? viewMode = null,
     Object? zoom = null,
   }) {
-    return _then(_$_KodiPlayerGetViewModeResponse(
+    return _then(_$KodiPlayerGetViewModeResponseImpl(
       nonLinearStretch: null == nonLinearStretch
           ? _value.nonLinearStretch
           : nonLinearStretch // ignore: cast_nullable_to_non_nullable
@@ -243,18 +258,18 @@ class __$$_KodiPlayerGetViewModeResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPlayerGetViewModeResponse
+class _$KodiPlayerGetViewModeResponseImpl
     implements _KodiPlayerGetViewModeResponse {
-  const _$_KodiPlayerGetViewModeResponse(
+  const _$KodiPlayerGetViewModeResponseImpl(
       {@JsonKey(name: 'nonlinearstretch') required this.nonLinearStretch,
       @JsonKey(name: 'pixelratio') required this.pixelRatio,
       @JsonKey(name: 'verticalshift') required this.verticalShift,
       @JsonKey(name: 'viewmode') required this.viewMode,
       required this.zoom});
 
-  factory _$_KodiPlayerGetViewModeResponse.fromJson(
+  factory _$KodiPlayerGetViewModeResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiPlayerGetViewModeResponseFromJson(json);
+      _$$KodiPlayerGetViewModeResponseImplFromJson(json);
 
   @override
   @JsonKey(name: 'nonlinearstretch')
@@ -277,10 +292,10 @@ class _$_KodiPlayerGetViewModeResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPlayerGetViewModeResponse &&
+            other is _$KodiPlayerGetViewModeResponseImpl &&
             (identical(other.nonLinearStretch, nonLinearStretch) ||
                 other.nonLinearStretch == nonLinearStretch) &&
             (identical(other.pixelRatio, pixelRatio) ||
@@ -292,21 +307,24 @@ class _$_KodiPlayerGetViewModeResponse
             (identical(other.zoom, zoom) || other.zoom == zoom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, nonLinearStretch, pixelRatio, verticalShift, viewMode, zoom);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPlayerGetViewModeResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPlayerGetViewModeResponseCopyWith<_$_KodiPlayerGetViewModeResponse>
-      get copyWith => __$$_KodiPlayerGetViewModeResponseCopyWithImpl<
-          _$_KodiPlayerGetViewModeResponse>(this, _$identity);
+  _$$KodiPlayerGetViewModeResponseImplCopyWith<
+          _$KodiPlayerGetViewModeResponseImpl>
+      get copyWith => __$$KodiPlayerGetViewModeResponseImplCopyWithImpl<
+          _$KodiPlayerGetViewModeResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPlayerGetViewModeResponseToJson(
+    return _$$KodiPlayerGetViewModeResponseImplToJson(
       this,
     );
   }
@@ -319,10 +337,10 @@ abstract class _KodiPlayerGetViewModeResponse
       @JsonKey(name: 'pixelratio') required final double pixelRatio,
       @JsonKey(name: 'verticalshift') required final double verticalShift,
       @JsonKey(name: 'viewmode') required final KodiPlayerViewMode viewMode,
-      required final double zoom}) = _$_KodiPlayerGetViewModeResponse;
+      required final double zoom}) = _$KodiPlayerGetViewModeResponseImpl;
 
   factory _KodiPlayerGetViewModeResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiPlayerGetViewModeResponse.fromJson;
+      _$KodiPlayerGetViewModeResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'nonlinearstretch')
@@ -338,8 +356,12 @@ abstract class _KodiPlayerGetViewModeResponse
   KodiPlayerViewMode get viewMode;
   @override
   double get zoom;
+
+  /// Create a copy of KodiPlayerGetViewModeResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPlayerGetViewModeResponseCopyWith<_$_KodiPlayerGetViewModeResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPlayerGetViewModeResponseImplCopyWith<
+          _$KodiPlayerGetViewModeResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

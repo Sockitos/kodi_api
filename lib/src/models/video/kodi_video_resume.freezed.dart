@@ -12,7 +12,7 @@ part of 'kodi_video_resume.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiVideoResume _$KodiVideoResumeFromJson(Map<String, dynamic> json) {
   return _KodiVideoResume.fromJson(json);
@@ -20,11 +20,15 @@ KodiVideoResume _$KodiVideoResumeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$KodiVideoResume {
-  double? get position => throw _privateConstructorUsedError;
-  double? get total => throw _privateConstructorUsedError;
+  double get position => throw _privateConstructorUsedError;
+  double get total => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiVideoResume to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiVideoResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiVideoResumeCopyWith<KodiVideoResume> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -35,7 +39,7 @@ abstract class $KodiVideoResumeCopyWith<$Res> {
           KodiVideoResume value, $Res Function(KodiVideoResume) then) =
       _$KodiVideoResumeCopyWithImpl<$Res, KodiVideoResume>;
   @useResult
-  $Res call({double? position, double? total});
+  $Res call({double position, double total});
 }
 
 /// @nodoc
@@ -48,75 +52,81 @@ class _$KodiVideoResumeCopyWithImpl<$Res, $Val extends KodiVideoResume>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiVideoResume
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? position = freezed,
-    Object? total = freezed,
+    Object? position = null,
+    Object? total = null,
   }) {
     return _then(_value.copyWith(
-      position: freezed == position
+      position: null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
-              as double?,
-      total: freezed == total
+              as double,
+      total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_KodiVideoResumeCopyWith<$Res>
+abstract class _$$KodiVideoResumeImplCopyWith<$Res>
     implements $KodiVideoResumeCopyWith<$Res> {
-  factory _$$_KodiVideoResumeCopyWith(
-          _$_KodiVideoResume value, $Res Function(_$_KodiVideoResume) then) =
-      __$$_KodiVideoResumeCopyWithImpl<$Res>;
+  factory _$$KodiVideoResumeImplCopyWith(_$KodiVideoResumeImpl value,
+          $Res Function(_$KodiVideoResumeImpl) then) =
+      __$$KodiVideoResumeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double? position, double? total});
+  $Res call({double position, double total});
 }
 
 /// @nodoc
-class __$$_KodiVideoResumeCopyWithImpl<$Res>
-    extends _$KodiVideoResumeCopyWithImpl<$Res, _$_KodiVideoResume>
-    implements _$$_KodiVideoResumeCopyWith<$Res> {
-  __$$_KodiVideoResumeCopyWithImpl(
-      _$_KodiVideoResume _value, $Res Function(_$_KodiVideoResume) _then)
+class __$$KodiVideoResumeImplCopyWithImpl<$Res>
+    extends _$KodiVideoResumeCopyWithImpl<$Res, _$KodiVideoResumeImpl>
+    implements _$$KodiVideoResumeImplCopyWith<$Res> {
+  __$$KodiVideoResumeImplCopyWithImpl(
+      _$KodiVideoResumeImpl _value, $Res Function(_$KodiVideoResumeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiVideoResume
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? position = freezed,
-    Object? total = freezed,
+    Object? position = null,
+    Object? total = null,
   }) {
-    return _then(_$_KodiVideoResume(
-      position: freezed == position
+    return _then(_$KodiVideoResumeImpl(
+      position: null == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
-              as double?,
-      total: freezed == total
+              as double,
+      total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as double,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiVideoResume implements _KodiVideoResume {
-  const _$_KodiVideoResume({this.position, this.total});
+class _$KodiVideoResumeImpl implements _KodiVideoResume {
+  const _$KodiVideoResumeImpl({this.position = 0.0, this.total = 0.0});
 
-  factory _$_KodiVideoResume.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiVideoResumeFromJson(json);
+  factory _$KodiVideoResumeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiVideoResumeImplFromJson(json);
 
   @override
-  final double? position;
+  @JsonKey()
+  final double position;
   @override
-  final double? total;
+  @JsonKey()
+  final double total;
 
   @override
   String toString() {
@@ -124,46 +134,52 @@ class _$_KodiVideoResume implements _KodiVideoResume {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiVideoResume &&
+            other is _$KodiVideoResumeImpl &&
             (identical(other.position, position) ||
                 other.position == position) &&
             (identical(other.total, total) || other.total == total));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, position, total);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiVideoResume
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiVideoResumeCopyWith<_$_KodiVideoResume> get copyWith =>
-      __$$_KodiVideoResumeCopyWithImpl<_$_KodiVideoResume>(this, _$identity);
+  _$$KodiVideoResumeImplCopyWith<_$KodiVideoResumeImpl> get copyWith =>
+      __$$KodiVideoResumeImplCopyWithImpl<_$KodiVideoResumeImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiVideoResumeToJson(
+    return _$$KodiVideoResumeImplToJson(
       this,
     );
   }
 }
 
 abstract class _KodiVideoResume implements KodiVideoResume {
-  const factory _KodiVideoResume(
-      {final double? position, final double? total}) = _$_KodiVideoResume;
+  const factory _KodiVideoResume({final double position, final double total}) =
+      _$KodiVideoResumeImpl;
 
   factory _KodiVideoResume.fromJson(Map<String, dynamic> json) =
-      _$_KodiVideoResume.fromJson;
+      _$KodiVideoResumeImpl.fromJson;
 
   @override
-  double? get position;
+  double get position;
   @override
-  double? get total;
+  double get total;
+
+  /// Create a copy of KodiVideoResume
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiVideoResumeCopyWith<_$_KodiVideoResume> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiVideoResumeImplCopyWith<_$KodiVideoResumeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

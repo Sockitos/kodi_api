@@ -6,9 +6,9 @@ part of 'get_recently_added_music_videos.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRecentlyAddedMusicVideos _$$_GetRecentlyAddedMusicVideosFromJson(
+_$GetRecentlyAddedMusicVideosImpl _$$GetRecentlyAddedMusicVideosImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRecentlyAddedMusicVideos(
+    _$GetRecentlyAddedMusicVideosImpl(
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsMusicVideoEnumMap, e))
           .toSet(),
@@ -20,8 +20,8 @@ _$_GetRecentlyAddedMusicVideos _$$_GetRecentlyAddedMusicVideosFromJson(
           : KodiListSort.fromJson(json['sort'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetRecentlyAddedMusicVideosToJson(
-    _$_GetRecentlyAddedMusicVideos instance) {
+Map<String, dynamic> _$$GetRecentlyAddedMusicVideosImplToJson(
+    _$GetRecentlyAddedMusicVideosImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -66,10 +66,10 @@ const _$KodiVideoFieldsMusicVideoEnumMap = {
   KodiVideoFieldsMusicVideo.premiered: 'premiered',
 };
 
-_$_GetRecentlyAddedMusicVideosResponse
-    _$$_GetRecentlyAddedMusicVideosResponseFromJson(
+_$GetRecentlyAddedMusicVideosResponseImpl
+    _$$GetRecentlyAddedMusicVideosResponseImplFromJson(
             Map<String, dynamic> json) =>
-        _$_GetRecentlyAddedMusicVideosResponse(
+        _$GetRecentlyAddedMusicVideosResponseImpl(
           musicVideos: (json['musicvideos'] as List<dynamic>)
               .map((e) => KodiVideoDetailsMusicVideo.fromJson(
                   e as Map<String, dynamic>))
@@ -78,8 +78,8 @@ _$_GetRecentlyAddedMusicVideosResponse
               json['limits'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_GetRecentlyAddedMusicVideosResponseToJson(
-        _$_GetRecentlyAddedMusicVideosResponse instance) =>
+Map<String, dynamic> _$$GetRecentlyAddedMusicVideosResponseImplToJson(
+        _$GetRecentlyAddedMusicVideosResponseImpl instance) =>
     <String, dynamic>{
       'musicvideos': instance.musicVideos.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

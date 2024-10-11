@@ -12,7 +12,7 @@ part of 'get_timer_details.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetTimerDetails _$GetTimerDetailsFromJson(Map<String, dynamic> json) {
   return _GetTimerDetails.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$GetTimerDetails {
   int get id => throw _privateConstructorUsedError;
   Set<KodiPVRFieldsTimer>? get properties => throw _privateConstructorUsedError;
 
+  /// Serializes this GetTimerDetails to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetTimerDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetTimerDetailsCopyWith<GetTimerDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$GetTimerDetailsCopyWithImpl<$Res, $Val extends GetTimerDetails>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetTimerDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,11 +76,11 @@ class _$GetTimerDetailsCopyWithImpl<$Res, $Val extends GetTimerDetails>
 }
 
 /// @nodoc
-abstract class _$$_GetTimerDetailsCopyWith<$Res>
+abstract class _$$GetTimerDetailsImplCopyWith<$Res>
     implements $GetTimerDetailsCopyWith<$Res> {
-  factory _$$_GetTimerDetailsCopyWith(
-          _$_GetTimerDetails value, $Res Function(_$_GetTimerDetails) then) =
-      __$$_GetTimerDetailsCopyWithImpl<$Res>;
+  factory _$$GetTimerDetailsImplCopyWith(_$GetTimerDetailsImpl value,
+          $Res Function(_$GetTimerDetailsImpl) then) =
+      __$$GetTimerDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -82,20 +88,22 @@ abstract class _$$_GetTimerDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetTimerDetailsCopyWithImpl<$Res>
-    extends _$GetTimerDetailsCopyWithImpl<$Res, _$_GetTimerDetails>
-    implements _$$_GetTimerDetailsCopyWith<$Res> {
-  __$$_GetTimerDetailsCopyWithImpl(
-      _$_GetTimerDetails _value, $Res Function(_$_GetTimerDetails) _then)
+class __$$GetTimerDetailsImplCopyWithImpl<$Res>
+    extends _$GetTimerDetailsCopyWithImpl<$Res, _$GetTimerDetailsImpl>
+    implements _$$GetTimerDetailsImplCopyWith<$Res> {
+  __$$GetTimerDetailsImplCopyWithImpl(
+      _$GetTimerDetailsImpl _value, $Res Function(_$GetTimerDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetTimerDetails
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? properties = freezed,
   }) {
-    return _then(_$_GetTimerDetails(
+    return _then(_$GetTimerDetailsImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -110,14 +118,14 @@ class __$$_GetTimerDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetTimerDetails extends _GetTimerDetails {
-  const _$_GetTimerDetails(@JsonKey(name: 'timerid') this.id,
+class _$GetTimerDetailsImpl extends _GetTimerDetails {
+  const _$GetTimerDetailsImpl(@JsonKey(name: 'timerid') this.id,
       {final Set<KodiPVRFieldsTimer>? properties})
       : _properties = properties,
         super._();
 
-  factory _$_GetTimerDetails.fromJson(Map<String, dynamic> json) =>
-      _$$_GetTimerDetailsFromJson(json);
+  factory _$GetTimerDetailsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetTimerDetailsImplFromJson(json);
 
   @override
   @JsonKey(name: 'timerid')
@@ -138,29 +146,32 @@ class _$_GetTimerDetails extends _GetTimerDetails {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetTimerDetails &&
+            other is _$GetTimerDetailsImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_properties));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetTimerDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetTimerDetailsCopyWith<_$_GetTimerDetails> get copyWith =>
-      __$$_GetTimerDetailsCopyWithImpl<_$_GetTimerDetails>(this, _$identity);
+  _$$GetTimerDetailsImplCopyWith<_$GetTimerDetailsImpl> get copyWith =>
+      __$$GetTimerDetailsImplCopyWithImpl<_$GetTimerDetailsImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetTimerDetailsToJson(
+    return _$$GetTimerDetailsImplToJson(
       this,
     );
   }
@@ -168,19 +179,22 @@ class _$_GetTimerDetails extends _GetTimerDetails {
 
 abstract class _GetTimerDetails extends GetTimerDetails {
   const factory _GetTimerDetails(@JsonKey(name: 'timerid') final int id,
-      {final Set<KodiPVRFieldsTimer>? properties}) = _$_GetTimerDetails;
+      {final Set<KodiPVRFieldsTimer>? properties}) = _$GetTimerDetailsImpl;
   const _GetTimerDetails._() : super._();
 
   factory _GetTimerDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetTimerDetails.fromJson;
+      _$GetTimerDetailsImpl.fromJson;
 
   @override
   @JsonKey(name: 'timerid')
   int get id;
   @override
   Set<KodiPVRFieldsTimer>? get properties;
+
+  /// Create a copy of GetTimerDetails
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetTimerDetailsCopyWith<_$_GetTimerDetails> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetTimerDetailsImplCopyWith<_$GetTimerDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

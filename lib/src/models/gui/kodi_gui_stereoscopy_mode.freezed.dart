@@ -12,7 +12,7 @@ part of 'kodi_gui_stereoscopy_mode.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiGUIStereoscopyMode _$KodiGUIStereoscopyModeFromJson(
     Map<String, dynamic> json) {
@@ -24,8 +24,12 @@ mixin _$KodiGUIStereoscopyMode {
   String get label => throw _privateConstructorUsedError;
   KodiGUIStereoscopicMode get mode => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiGUIStereoscopyMode to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiGUIStereoscopyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiGUIStereoscopyModeCopyWith<KodiGUIStereoscopyMode> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$KodiGUIStereoscopyModeCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiGUIStereoscopyMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,32 +76,36 @@ class _$KodiGUIStereoscopyModeCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiGUIStereoscopyModeCopyWith<$Res>
+abstract class _$$KodiGUIStereoscopyModeImplCopyWith<$Res>
     implements $KodiGUIStereoscopyModeCopyWith<$Res> {
-  factory _$$_KodiGUIStereoscopyModeCopyWith(_$_KodiGUIStereoscopyMode value,
-          $Res Function(_$_KodiGUIStereoscopyMode) then) =
-      __$$_KodiGUIStereoscopyModeCopyWithImpl<$Res>;
+  factory _$$KodiGUIStereoscopyModeImplCopyWith(
+          _$KodiGUIStereoscopyModeImpl value,
+          $Res Function(_$KodiGUIStereoscopyModeImpl) then) =
+      __$$KodiGUIStereoscopyModeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String label, KodiGUIStereoscopicMode mode});
 }
 
 /// @nodoc
-class __$$_KodiGUIStereoscopyModeCopyWithImpl<$Res>
+class __$$KodiGUIStereoscopyModeImplCopyWithImpl<$Res>
     extends _$KodiGUIStereoscopyModeCopyWithImpl<$Res,
-        _$_KodiGUIStereoscopyMode>
-    implements _$$_KodiGUIStereoscopyModeCopyWith<$Res> {
-  __$$_KodiGUIStereoscopyModeCopyWithImpl(_$_KodiGUIStereoscopyMode _value,
-      $Res Function(_$_KodiGUIStereoscopyMode) _then)
+        _$KodiGUIStereoscopyModeImpl>
+    implements _$$KodiGUIStereoscopyModeImplCopyWith<$Res> {
+  __$$KodiGUIStereoscopyModeImplCopyWithImpl(
+      _$KodiGUIStereoscopyModeImpl _value,
+      $Res Function(_$KodiGUIStereoscopyModeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiGUIStereoscopyMode
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? label = null,
     Object? mode = null,
   }) {
-    return _then(_$_KodiGUIStereoscopyMode(
+    return _then(_$KodiGUIStereoscopyModeImpl(
       label: null == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -110,11 +120,11 @@ class __$$_KodiGUIStereoscopyModeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiGUIStereoscopyMode implements _KodiGUIStereoscopyMode {
-  const _$_KodiGUIStereoscopyMode({required this.label, required this.mode});
+class _$KodiGUIStereoscopyModeImpl implements _KodiGUIStereoscopyMode {
+  const _$KodiGUIStereoscopyModeImpl({required this.label, required this.mode});
 
-  factory _$_KodiGUIStereoscopyMode.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiGUIStereoscopyModeFromJson(json);
+  factory _$KodiGUIStereoscopyModeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiGUIStereoscopyModeImplFromJson(json);
 
   @override
   final String label;
@@ -127,28 +137,30 @@ class _$_KodiGUIStereoscopyMode implements _KodiGUIStereoscopyMode {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiGUIStereoscopyMode &&
+            other is _$KodiGUIStereoscopyModeImpl &&
             (identical(other.label, label) || other.label == label) &&
             (identical(other.mode, mode) || other.mode == mode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, label, mode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiGUIStereoscopyMode
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiGUIStereoscopyModeCopyWith<_$_KodiGUIStereoscopyMode> get copyWith =>
-      __$$_KodiGUIStereoscopyModeCopyWithImpl<_$_KodiGUIStereoscopyMode>(
-          this, _$identity);
+  _$$KodiGUIStereoscopyModeImplCopyWith<_$KodiGUIStereoscopyModeImpl>
+      get copyWith => __$$KodiGUIStereoscopyModeImplCopyWithImpl<
+          _$KodiGUIStereoscopyModeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiGUIStereoscopyModeToJson(
+    return _$$KodiGUIStereoscopyModeImplToJson(
       this,
     );
   }
@@ -156,18 +168,22 @@ class _$_KodiGUIStereoscopyMode implements _KodiGUIStereoscopyMode {
 
 abstract class _KodiGUIStereoscopyMode implements KodiGUIStereoscopyMode {
   const factory _KodiGUIStereoscopyMode(
-      {required final String label,
-      required final KodiGUIStereoscopicMode mode}) = _$_KodiGUIStereoscopyMode;
+          {required final String label,
+          required final KodiGUIStereoscopicMode mode}) =
+      _$KodiGUIStereoscopyModeImpl;
 
   factory _KodiGUIStereoscopyMode.fromJson(Map<String, dynamic> json) =
-      _$_KodiGUIStereoscopyMode.fromJson;
+      _$KodiGUIStereoscopyModeImpl.fromJson;
 
   @override
   String get label;
   @override
   KodiGUIStereoscopicMode get mode;
+
+  /// Create a copy of KodiGUIStereoscopyMode
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiGUIStereoscopyModeCopyWith<_$_KodiGUIStereoscopyMode> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiGUIStereoscopyModeImplCopyWith<_$KodiGUIStereoscopyModeImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

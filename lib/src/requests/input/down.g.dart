@@ -6,6 +6,7 @@ part of 'down.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Down _$$_DownFromJson(Map<String, dynamic> json) => _$_Down();
+_$DownImpl _$$DownImplFromJson(Map<String, dynamic> json) => _$DownImpl();
 
-Map<String, dynamic> _$$_DownToJson(_$_Down instance) => <String, dynamic>{};
+Map<String, dynamic> _$$DownImplToJson(_$DownImpl instance) =>
+    <String, dynamic>{};

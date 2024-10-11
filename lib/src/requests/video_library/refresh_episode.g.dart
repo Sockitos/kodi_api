@@ -6,25 +6,17 @@ part of 'refresh_episode.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RefreshEpisode _$$_RefreshEpisodeFromJson(Map<String, dynamic> json) =>
-    _$_RefreshEpisode(
-      json['episodeid'] as int,
+_$RefreshEpisodeImpl _$$RefreshEpisodeImplFromJson(Map<String, dynamic> json) =>
+    _$RefreshEpisodeImpl(
+      (json['episodeid'] as num).toInt(),
       ignoreNFO: json['ignorenfo'] as bool? ?? false,
-      title: json['title'] as String?,
+      title: json['title'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_RefreshEpisodeToJson(_$_RefreshEpisode instance) {
-  final val = <String, dynamic>{
-    'episodeid': instance.id,
-    'ignorenfo': instance.ignoreNFO,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('title', instance.title);
-  return val;
-}
+Map<String, dynamic> _$$RefreshEpisodeImplToJson(
+        _$RefreshEpisodeImpl instance) =>
+    <String, dynamic>{
+      'episodeid': instance.id,
+      'ignorenfo': instance.ignoreNFO,
+      'title': instance.title,
+    };

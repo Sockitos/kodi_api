@@ -6,7 +6,7 @@ part of 'open.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Open _$$_OpenFromJson(Map<String, dynamic> json) => _$_Open(
+_$OpenImpl _$$OpenImplFromJson(Map<String, dynamic> json) => _$OpenImpl(
       const KodiPlayerPlayerOpenItemConverter()
           .fromJson(json['item'] as Map<String, dynamic>),
       options: json['options'] == null
@@ -15,7 +15,7 @@ _$_Open _$$_OpenFromJson(Map<String, dynamic> json) => _$_Open(
               json['options'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OpenToJson(_$_Open instance) {
+Map<String, dynamic> _$$OpenImplToJson(_$OpenImpl instance) {
   final val = <String, dynamic>{
     'item': const KodiPlayerPlayerOpenItemConverter().toJson(instance.item),
   };
@@ -30,126 +30,127 @@ Map<String, dynamic> _$$_OpenToJson(_$_Open instance) {
   return val;
 }
 
-_$_KodiPlayerPlayerOpenItemPlaylistIdPosition
-    _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionFromJson(
+_$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl
+    _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemPlaylistIdPosition(
-          playlistId: json['playlistid'] as int,
-          position: json['position'] as int,
+        _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl(
+          playlistId: (json['playlistid'] as num).toInt(),
+          position: (json['position'] as num?)?.toInt() ?? 0,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemPlaylistIdPositionToJson(
-        _$_KodiPlayerPlayerOpenItemPlaylistIdPosition instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemPlaylistIdPositionImplToJson(
+        _$KodiPlayerPlayerOpenItemPlaylistIdPositionImpl instance) =>
     <String, dynamic>{
       'playlistid': instance.playlistId,
       'position': instance.position,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenItemPlaylistItem
-    _$$_KodiPlayerPlayerOpenItemPlaylistItemFromJson(
+_$KodiPlayerPlayerOpenItemPlaylistItemImpl
+    _$$KodiPlayerPlayerOpenItemPlaylistItemImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemPlaylistItem(
+        _$KodiPlayerPlayerOpenItemPlaylistItemImpl(
           KodiPlaylistItem.fromJson(
               json['playlistitem'] as Map<String, dynamic>),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemPlaylistItemToJson(
-        _$_KodiPlayerPlayerOpenItemPlaylistItem instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemPlaylistItemImplToJson(
+        _$KodiPlayerPlayerOpenItemPlaylistItemImpl instance) =>
     <String, dynamic>{
       'playlistitem': instance.playlistItem.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenItemPathRecursive
-    _$$_KodiPlayerPlayerOpenItemPathRecursiveFromJson(
+_$KodiPlayerPlayerOpenItemPathRecursiveImpl
+    _$$KodiPlayerPlayerOpenItemPathRecursiveImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemPathRecursive(
+        _$KodiPlayerPlayerOpenItemPathRecursiveImpl(
           path: json['path'] as String,
           recursive: json['recursive'] as bool? ?? true,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemPathRecursiveToJson(
-        _$_KodiPlayerPlayerOpenItemPathRecursive instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemPathRecursiveImplToJson(
+        _$KodiPlayerPlayerOpenItemPathRecursiveImpl instance) =>
     <String, dynamic>{
       'path': instance.path,
       'recursive': instance.recursive,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenItemPathPartyMode
-    _$$_KodiPlayerPlayerOpenItemPathPartyModeFromJson(
+_$KodiPlayerPlayerOpenItemPathPartyModeImpl
+    _$$KodiPlayerPlayerOpenItemPathPartyModeImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemPathPartyMode(
+        _$KodiPlayerPlayerOpenItemPathPartyModeImpl(
           KodiPlayerPlayerOpenItemPartyMode.fromJson(
               json['partymode'] as Map<String, dynamic>),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemPathPartyModeToJson(
-        _$_KodiPlayerPlayerOpenItemPathPartyMode instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemPathPartyModeImplToJson(
+        _$KodiPlayerPlayerOpenItemPathPartyModeImpl instance) =>
     <String, dynamic>{
       'partymode': instance.partyMode.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenItemBroadcastId
-    _$$_KodiPlayerPlayerOpenItemBroadcastIdFromJson(
+_$KodiPlayerPlayerOpenItemBroadcastIdImpl
+    _$$KodiPlayerPlayerOpenItemBroadcastIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemBroadcastId(
-          json['broadcastid'] as int,
+        _$KodiPlayerPlayerOpenItemBroadcastIdImpl(
+          (json['broadcastid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemBroadcastIdToJson(
-        _$_KodiPlayerPlayerOpenItemBroadcastId instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemBroadcastIdImplToJson(
+        _$KodiPlayerPlayerOpenItemBroadcastIdImpl instance) =>
     <String, dynamic>{
       'broadcastid': instance.broadcastId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenItemChannelId
-    _$$_KodiPlayerPlayerOpenItemChannelIdFromJson(Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemChannelId(
-          json['channelid'] as int,
+_$KodiPlayerPlayerOpenItemChannelIdImpl
+    _$$KodiPlayerPlayerOpenItemChannelIdImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiPlayerPlayerOpenItemChannelIdImpl(
+          (json['channelid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemChannelIdToJson(
-        _$_KodiPlayerPlayerOpenItemChannelId instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemChannelIdImplToJson(
+        _$KodiPlayerPlayerOpenItemChannelIdImpl instance) =>
     <String, dynamic>{
       'channelid': instance.channelId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenItemRecordingId
-    _$$_KodiPlayerPlayerOpenItemRecordingIdFromJson(
+_$KodiPlayerPlayerOpenItemRecordingIdImpl
+    _$$KodiPlayerPlayerOpenItemRecordingIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemRecordingId(
-          json['recordingid'] as int,
+        _$KodiPlayerPlayerOpenItemRecordingIdImpl(
+          (json['recordingid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemRecordingIdToJson(
-        _$_KodiPlayerPlayerOpenItemRecordingId instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemRecordingIdImplToJson(
+        _$KodiPlayerPlayerOpenItemRecordingIdImpl instance) =>
     <String, dynamic>{
       'recordingid': instance.recordingId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenItemPartyModeEnum
-    _$$_KodiPlayerPlayerOpenItemPartyModeEnumFromJson(
+_$KodiPlayerPlayerOpenItemPartyModeEnumImpl
+    _$$KodiPlayerPlayerOpenItemPartyModeEnumImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemPartyModeEnum(
+        _$KodiPlayerPlayerOpenItemPartyModeEnumImpl(
           $enumDecode(_$KodiPlayerPartyModeEnumMap, json['mode']),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemPartyModeEnumToJson(
-        _$_KodiPlayerPlayerOpenItemPartyModeEnum instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemPartyModeEnumImplToJson(
+        _$KodiPlayerPlayerOpenItemPartyModeEnumImpl instance) =>
     <String, dynamic>{
       'mode': _$KodiPlayerPartyModeEnumMap[instance.mode]!,
       'runtimeType': instance.$type,
@@ -160,24 +161,24 @@ const _$KodiPlayerPartyModeEnumMap = {
   KodiPlayerPartyMode.video: 'video',
 };
 
-_$_KodiPlayerPlayerOpenItemPartyModePath
-    _$$_KodiPlayerPlayerOpenItemPartyModePathFromJson(
+_$KodiPlayerPlayerOpenItemPartyModePathImpl
+    _$$KodiPlayerPlayerOpenItemPartyModePathImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenItemPartyModePath(
+        _$KodiPlayerPlayerOpenItemPartyModePathImpl(
           json['path'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenItemPartyModePathToJson(
-        _$_KodiPlayerPlayerOpenItemPartyModePath instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenItemPartyModePathImplToJson(
+        _$KodiPlayerPlayerOpenItemPartyModePathImpl instance) =>
     <String, dynamic>{
       'path': instance.path,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenOptions _$$_KodiPlayerPlayerOpenOptionsFromJson(
+_$KodiPlayerPlayerOpenOptionsImpl _$$KodiPlayerPlayerOpenOptionsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiPlayerPlayerOpenOptions(
+    _$KodiPlayerPlayerOpenOptionsImpl(
       playerName:
           _$JsonConverterFromJson<String, KodiPlayerOpenOptionsPlayerName>(
               json['playername'],
@@ -190,8 +191,8 @@ _$_KodiPlayerPlayerOpenOptions _$$_KodiPlayerPlayerOpenOptionsFromJson(
       shuffled: json['shuffled'] as bool?,
     );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenOptionsToJson(
-    _$_KodiPlayerPlayerOpenOptions instance) {
+Map<String, dynamic> _$$KodiPlayerPlayerOpenOptionsImplToJson(
+    _$KodiPlayerPlayerOpenOptionsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -233,18 +234,18 @@ Json? _$JsonConverterToJson<Json, Value>(
 ) =>
     value == null ? null : toJson(value);
 
-_$_KodiPlayerOpenOptionsPlayerNameEnumerator
-    _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorFromJson(
+_$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl
+    _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerOpenOptionsPlayerNameEnumerator(
+        _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl(
           playerName: $enumDecodeNullable(
                   _$KodiPlayerDefaultEnumMap, json['player_name']) ??
               KodiPlayerDefault.defaultt,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerOpenOptionsPlayerNameEnumeratorToJson(
-        _$_KodiPlayerOpenOptionsPlayerNameEnumerator instance) =>
+Map<String, dynamic> _$$KodiPlayerOpenOptionsPlayerNameEnumeratorImplToJson(
+        _$KodiPlayerOpenOptionsPlayerNameEnumeratorImpl instance) =>
     <String, dynamic>{
       'player_name': _$KodiPlayerDefaultEnumMap[instance.playerName]!,
       'runtimeType': instance.$type,
@@ -254,62 +255,62 @@ const _$KodiPlayerDefaultEnumMap = {
   KodiPlayerDefault.defaultt: 'default',
 };
 
-_$_KodiPlayerOpenOptionsPlayerNameName
-    _$$_KodiPlayerOpenOptionsPlayerNameNameFromJson(
+_$KodiPlayerOpenOptionsPlayerNameNameImpl
+    _$$KodiPlayerOpenOptionsPlayerNameNameImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerOpenOptionsPlayerNameName(
+        _$KodiPlayerOpenOptionsPlayerNameNameImpl(
           json['player_name'] as String,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerOpenOptionsPlayerNameNameToJson(
-        _$_KodiPlayerOpenOptionsPlayerNameName instance) =>
+Map<String, dynamic> _$$KodiPlayerOpenOptionsPlayerNameNameImplToJson(
+        _$KodiPlayerOpenOptionsPlayerNameNameImpl instance) =>
     <String, dynamic>{
       'player_name': instance.playerName,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenOptionsResumeBool
-    _$$_KodiPlayerPlayerOpenOptionsResumeBoolFromJson(
+_$KodiPlayerPlayerOpenOptionsResumeBoolImpl
+    _$$KodiPlayerPlayerOpenOptionsResumeBoolImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenOptionsResumeBool(
+        _$KodiPlayerPlayerOpenOptionsResumeBoolImpl(
           json['value'] as bool,
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenOptionsResumeBoolToJson(
-        _$_KodiPlayerPlayerOpenOptionsResumeBool instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenOptionsResumeBoolImplToJson(
+        _$KodiPlayerPlayerOpenOptionsResumeBoolImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenOptionsResumePercentage
-    _$$_KodiPlayerPlayerOpenOptionsResumePercentageFromJson(
+_$KodiPlayerPlayerOpenOptionsResumePercentageImpl
+    _$$KodiPlayerPlayerOpenOptionsResumePercentageImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenOptionsResumePercentage(
+        _$KodiPlayerPlayerOpenOptionsResumePercentageImpl(
           (json['value'] as num).toDouble(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenOptionsResumePercentageToJson(
-        _$_KodiPlayerPlayerOpenOptionsResumePercentage instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenOptionsResumePercentageImplToJson(
+        _$KodiPlayerPlayerOpenOptionsResumePercentageImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,
     };
 
-_$_KodiPlayerPlayerOpenOptionsResumeTime
-    _$$_KodiPlayerPlayerOpenOptionsResumeTimeFromJson(
+_$KodiPlayerPlayerOpenOptionsResumeTimeImpl
+    _$$KodiPlayerPlayerOpenOptionsResumeTimeImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiPlayerPlayerOpenOptionsResumeTime(
+        _$KodiPlayerPlayerOpenOptionsResumeTimeImpl(
           KodiPlayerPositionTime.fromJson(
               json['value'] as Map<String, dynamic>),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiPlayerPlayerOpenOptionsResumeTimeToJson(
-        _$_KodiPlayerPlayerOpenOptionsResumeTime instance) =>
+Map<String, dynamic> _$$KodiPlayerPlayerOpenOptionsResumeTimeImplToJson(
+        _$KodiPlayerPlayerOpenOptionsResumeTimeImpl instance) =>
     <String, dynamic>{
       'value': instance.value.toJson(),
       'runtimeType': instance.$type,

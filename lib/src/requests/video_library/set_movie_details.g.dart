@@ -6,18 +6,19 @@ part of 'set_movie_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetMovieDetails _$$_SetMovieDetailsFromJson(Map<String, dynamic> json) =>
-    _$_SetMovieDetails(
-      json['movieid'] as int,
+_$SetMovieDetailsImpl _$$SetMovieDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetMovieDetailsImpl(
+      (json['movieid'] as num).toInt(),
       title: json['title'] as String?,
-      playCount: json['playcount'] as int?,
-      runtime: json['runtime'] as int?,
+      playCount: (json['playcount'] as num?)?.toInt(),
+      runtime: (json['runtime'] as num?)?.toInt(),
       directors: (json['director'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       studios:
           (json['studio'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      year: json['year'] as int?,
+      year: (json['year'] as num?)?.toInt(),
       plot: json['plot'] as String?,
       genres:
           (json['genre'] as List<dynamic>?)?.map((e) => e as String).toList(),
@@ -36,7 +37,7 @@ _$_SetMovieDetails _$$_SetMovieDetailsFromJson(Map<String, dynamic> json) =>
           (json['writer'] as List<dynamic>?)?.map((e) => e as String).toList(),
       countries:
           (json['country'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      top250: json['top250'] as int?,
+      top250: (json['top250'] as num?)?.toInt(),
       sortTitle: json['sorttitle'] as String?,
       set: json['set'] as String?,
       showLinks: (json['showlink'] as List<dynamic>?)
@@ -51,7 +52,7 @@ _$_SetMovieDetails _$$_SetMovieDetailsFromJson(Map<String, dynamic> json) =>
       resume: json['resume'] == null
           ? null
           : KodiVideoResume.fromJson(json['resume'] as Map<String, dynamic>),
-      userRating: json['userrating'] as int?,
+      userRating: (json['userrating'] as num?)?.toInt(),
       ratings: (json['ratings'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, KodiVideoRating.fromJson(e as Map<String, dynamic>)),
@@ -67,7 +68,8 @@ _$_SetMovieDetails _$$_SetMovieDetailsFromJson(Map<String, dynamic> json) =>
       ),
     );
 
-Map<String, dynamic> _$$_SetMovieDetailsToJson(_$_SetMovieDetails instance) {
+Map<String, dynamic> _$$SetMovieDetailsImplToJson(
+    _$SetMovieDetailsImpl instance) {
   final val = <String, dynamic>{
     'movieid': instance.id,
   };

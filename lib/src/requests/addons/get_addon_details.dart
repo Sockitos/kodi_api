@@ -39,7 +39,7 @@ class GetAddonDetails
 class GetAddonDetailsResponse with _$GetAddonDetailsResponse {
   const factory GetAddonDetailsResponse({
     required KodiAddonDetails addon,
-    required KodiListLimitsReturned limits,
+    KodiListLimitsReturned? limits,
   }) = _GetAddonDetailsResponse;
 
   factory GetAddonDetailsResponse.fromJson(Map<String, dynamic> json) =>

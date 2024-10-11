@@ -6,15 +6,17 @@ part of 'get_channel_groups.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetChannelGroups _$$_GetChannelGroupsFromJson(Map<String, dynamic> json) =>
-    _$_GetChannelGroups(
+_$GetChannelGroupsImpl _$$GetChannelGroupsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetChannelGroupsImpl(
       $enumDecode(_$KodiPVRChannelTypeEnumMap, json['channeltype']),
       limits: json['limits'] == null
           ? null
           : KodiListLimits.fromJson(json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetChannelGroupsToJson(_$_GetChannelGroups instance) {
+Map<String, dynamic> _$$GetChannelGroupsImplToJson(
+    _$GetChannelGroupsImpl instance) {
   final val = <String, dynamic>{
     'channeltype': _$KodiPVRChannelTypeEnumMap[instance.type]!,
   };
@@ -34,19 +36,19 @@ const _$KodiPVRChannelTypeEnumMap = {
   KodiPVRChannelType.radio: 'radio',
 };
 
-_$_KodiPVRGetChannelGroupsResponse _$$_KodiPVRGetChannelGroupsResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_KodiPVRGetChannelGroupsResponse(
-      channelGroups: (json['channelgroups'] as List<dynamic>)
-          .map((e) =>
-              KodiPVRDetailsChannelGroup.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      limits: KodiListLimitsReturned.fromJson(
-          json['limits'] as Map<String, dynamic>),
-    );
+_$KodiPVRGetChannelGroupsResponseImpl
+    _$$KodiPVRGetChannelGroupsResponseImplFromJson(Map<String, dynamic> json) =>
+        _$KodiPVRGetChannelGroupsResponseImpl(
+          channelGroups: (json['channelgroups'] as List<dynamic>)
+              .map((e) => KodiPVRDetailsChannelGroup.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+          limits: KodiListLimitsReturned.fromJson(
+              json['limits'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_KodiPVRGetChannelGroupsResponseToJson(
-        _$_KodiPVRGetChannelGroupsResponse instance) =>
+Map<String, dynamic> _$$KodiPVRGetChannelGroupsResponseImplToJson(
+        _$KodiPVRGetChannelGroupsResponseImpl instance) =>
     <String, dynamic>{
       'channelgroups': instance.channelGroups.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

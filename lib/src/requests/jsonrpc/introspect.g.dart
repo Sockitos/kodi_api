@@ -6,8 +6,8 @@ part of 'introspect.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Introspect _$$_IntrospectFromJson(Map<String, dynamic> json) =>
-    _$_Introspect(
+_$IntrospectImpl _$$IntrospectImplFromJson(Map<String, dynamic> json) =>
+    _$IntrospectImpl(
       getDescriptions: json['getdescriptions'] as bool? ?? true,
       getMetadata: json['getmetadata'] as bool? ?? false,
       filterByTransport: json['filterbytransport'] as bool? ?? true,
@@ -17,7 +17,7 @@ _$_Introspect _$$_IntrospectFromJson(Map<String, dynamic> json) =>
               json['filter'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_IntrospectToJson(_$_Introspect instance) {
+Map<String, dynamic> _$$IntrospectImplToJson(_$IntrospectImpl instance) {
   final val = <String, dynamic>{
     'getdescriptions': instance.getDescriptions,
     'getmetadata': instance.getMetadata,
@@ -34,9 +34,9 @@ Map<String, dynamic> _$$_IntrospectToJson(_$_Introspect instance) {
   return val;
 }
 
-_$_IntrospectResponse _$$_IntrospectResponseFromJson(
+_$IntrospectResponseImpl _$$IntrospectResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_IntrospectResponse(
+    _$IntrospectResponseImpl(
       description: json['description'] as String,
       id: json['id'] as String,
       methods: json['methods'] as Map<String, dynamic>,
@@ -45,8 +45,8 @@ _$_IntrospectResponse _$$_IntrospectResponseFromJson(
       version: json['version'] as String,
     );
 
-Map<String, dynamic> _$$_IntrospectResponseToJson(
-        _$_IntrospectResponse instance) =>
+Map<String, dynamic> _$$IntrospectResponseImplToJson(
+        _$IntrospectResponseImpl instance) =>
     <String, dynamic>{
       'description': instance.description,
       'id': instance.id,
@@ -56,16 +56,16 @@ Map<String, dynamic> _$$_IntrospectResponseToJson(
       'version': instance.version,
     };
 
-_$_KodiJSONRPCIntrospectFilter _$$_KodiJSONRPCIntrospectFilterFromJson(
+_$KodiJSONRPCIntrospectFilterImpl _$$KodiJSONRPCIntrospectFilterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiJSONRPCIntrospectFilter(
+    _$KodiJSONRPCIntrospectFilterImpl(
       getReferences: json['getreferences'] as bool? ?? true,
       id: json['id'] as String,
       type: $enumDecode(_$KodiJSONRPCIntrospectFilterTypeEnumMap, json['type']),
     );
 
-Map<String, dynamic> _$$_KodiJSONRPCIntrospectFilterToJson(
-        _$_KodiJSONRPCIntrospectFilter instance) =>
+Map<String, dynamic> _$$KodiJSONRPCIntrospectFilterImplToJson(
+        _$KodiJSONRPCIntrospectFilterImpl instance) =>
     <String, dynamic>{
       'getreferences': instance.getReferences,
       'id': instance.id,

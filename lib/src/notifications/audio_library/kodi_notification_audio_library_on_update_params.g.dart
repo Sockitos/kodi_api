@@ -6,35 +6,36 @@ part of 'kodi_notification_audio_library_on_update_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationAudioLibraryOnUpdateParams
-    _$$_KodiNotificationAudioLibraryOnUpdateParamsFromJson(
+_$KodiNotificationAudioLibraryOnUpdateParamsImpl
+    _$$KodiNotificationAudioLibraryOnUpdateParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnUpdateParams(
+        _$KodiNotificationAudioLibraryOnUpdateParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationAudioLibraryOnUpdateParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnUpdateParamsToJson(
-        _$_KodiNotificationAudioLibraryOnUpdateParams instance) =>
+Map<String, dynamic> _$$KodiNotificationAudioLibraryOnUpdateParamsImplToJson(
+        _$KodiNotificationAudioLibraryOnUpdateParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationAudioLibraryOnUpdateParamsData
-    _$$_KodiNotificationAudioLibraryOnUpdateParamsDataFromJson(
+_$KodiNotificationAudioLibraryOnUpdateParamsDataImpl
+    _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationAudioLibraryOnUpdateParamsData(
+        _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl(
           added: json['added'] as bool?,
-          id: json['id'] as int,
+          id: (json['id'] as num).toInt(),
           transaction: json['transaction'] as bool?,
           type: $enumDecode(
               _$KodiNotificationsLibraryAudioTypeEnumMap, json['type']),
         );
 
-Map<String, dynamic> _$$_KodiNotificationAudioLibraryOnUpdateParamsDataToJson(
-    _$_KodiNotificationAudioLibraryOnUpdateParamsData instance) {
+Map<String, dynamic>
+    _$$KodiNotificationAudioLibraryOnUpdateParamsDataImplToJson(
+        _$KodiNotificationAudioLibraryOnUpdateParamsDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

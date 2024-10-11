@@ -6,7 +6,8 @@ part of 'suspend.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Suspend _$$_SuspendFromJson(Map<String, dynamic> json) => _$_Suspend();
+_$SuspendImpl _$$SuspendImplFromJson(Map<String, dynamic> json) =>
+    _$SuspendImpl();
 
-Map<String, dynamic> _$$_SuspendToJson(_$_Suspend instance) =>
+Map<String, dynamic> _$$SuspendImplToJson(_$SuspendImpl instance) =>
     <String, dynamic>{};

@@ -12,7 +12,7 @@ part of 'kodi_pvr_property_value.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiPVRPropertyValue _$KodiPVRPropertyValueFromJson(Map<String, dynamic> json) {
   return _KodiPVRPropertyValue.fromJson(json);
@@ -24,8 +24,12 @@ mixin _$KodiPVRPropertyValue {
   bool get recording => throw _privateConstructorUsedError;
   bool get scanning => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRPropertyValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRPropertyValueCopyWith<KodiPVRPropertyValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$KodiPVRPropertyValueCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,24 +81,26 @@ class _$KodiPVRPropertyValueCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRPropertyValueCopyWith<$Res>
+abstract class _$$KodiPVRPropertyValueImplCopyWith<$Res>
     implements $KodiPVRPropertyValueCopyWith<$Res> {
-  factory _$$_KodiPVRPropertyValueCopyWith(_$_KodiPVRPropertyValue value,
-          $Res Function(_$_KodiPVRPropertyValue) then) =
-      __$$_KodiPVRPropertyValueCopyWithImpl<$Res>;
+  factory _$$KodiPVRPropertyValueImplCopyWith(_$KodiPVRPropertyValueImpl value,
+          $Res Function(_$KodiPVRPropertyValueImpl) then) =
+      __$$KodiPVRPropertyValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool available, bool recording, bool scanning});
 }
 
 /// @nodoc
-class __$$_KodiPVRPropertyValueCopyWithImpl<$Res>
-    extends _$KodiPVRPropertyValueCopyWithImpl<$Res, _$_KodiPVRPropertyValue>
-    implements _$$_KodiPVRPropertyValueCopyWith<$Res> {
-  __$$_KodiPVRPropertyValueCopyWithImpl(_$_KodiPVRPropertyValue _value,
-      $Res Function(_$_KodiPVRPropertyValue) _then)
+class __$$KodiPVRPropertyValueImplCopyWithImpl<$Res>
+    extends _$KodiPVRPropertyValueCopyWithImpl<$Res, _$KodiPVRPropertyValueImpl>
+    implements _$$KodiPVRPropertyValueImplCopyWith<$Res> {
+  __$$KodiPVRPropertyValueImplCopyWithImpl(_$KodiPVRPropertyValueImpl _value,
+      $Res Function(_$KodiPVRPropertyValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -100,7 +108,7 @@ class __$$_KodiPVRPropertyValueCopyWithImpl<$Res>
     Object? recording = null,
     Object? scanning = null,
   }) {
-    return _then(_$_KodiPVRPropertyValue(
+    return _then(_$KodiPVRPropertyValueImpl(
       available: null == available
           ? _value.available
           : available // ignore: cast_nullable_to_non_nullable
@@ -119,20 +127,21 @@ class __$$_KodiPVRPropertyValueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRPropertyValue implements _KodiPVRPropertyValue {
-  const _$_KodiPVRPropertyValue(
-      {required this.available,
-      required this.recording,
-      required this.scanning});
+class _$KodiPVRPropertyValueImpl implements _KodiPVRPropertyValue {
+  const _$KodiPVRPropertyValueImpl(
+      {this.available = false, this.recording = false, this.scanning = false});
 
-  factory _$_KodiPVRPropertyValue.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRPropertyValueFromJson(json);
+  factory _$KodiPVRPropertyValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiPVRPropertyValueImplFromJson(json);
 
   @override
+  @JsonKey()
   final bool available;
   @override
+  @JsonKey()
   final bool recording;
   @override
+  @JsonKey()
   final bool scanning;
 
   @override
@@ -141,10 +150,10 @@ class _$_KodiPVRPropertyValue implements _KodiPVRPropertyValue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRPropertyValue &&
+            other is _$KodiPVRPropertyValueImpl &&
             (identical(other.available, available) ||
                 other.available == available) &&
             (identical(other.recording, recording) ||
@@ -153,20 +162,23 @@ class _$_KodiPVRPropertyValue implements _KodiPVRPropertyValue {
                 other.scanning == scanning));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, available, recording, scanning);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRPropertyValueCopyWith<_$_KodiPVRPropertyValue> get copyWith =>
-      __$$_KodiPVRPropertyValueCopyWithImpl<_$_KodiPVRPropertyValue>(
-          this, _$identity);
+  _$$KodiPVRPropertyValueImplCopyWith<_$KodiPVRPropertyValueImpl>
+      get copyWith =>
+          __$$KodiPVRPropertyValueImplCopyWithImpl<_$KodiPVRPropertyValueImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRPropertyValueToJson(
+    return _$$KodiPVRPropertyValueImplToJson(
       this,
     );
   }
@@ -174,12 +186,12 @@ class _$_KodiPVRPropertyValue implements _KodiPVRPropertyValue {
 
 abstract class _KodiPVRPropertyValue implements KodiPVRPropertyValue {
   const factory _KodiPVRPropertyValue(
-      {required final bool available,
-      required final bool recording,
-      required final bool scanning}) = _$_KodiPVRPropertyValue;
+      {final bool available,
+      final bool recording,
+      final bool scanning}) = _$KodiPVRPropertyValueImpl;
 
   factory _KodiPVRPropertyValue.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRPropertyValue.fromJson;
+      _$KodiPVRPropertyValueImpl.fromJson;
 
   @override
   bool get available;
@@ -187,8 +199,11 @@ abstract class _KodiPVRPropertyValue implements KodiPVRPropertyValue {
   bool get recording;
   @override
   bool get scanning;
+
+  /// Create a copy of KodiPVRPropertyValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRPropertyValueCopyWith<_$_KodiPVRPropertyValue> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRPropertyValueImplCopyWith<_$KodiPVRPropertyValueImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,16 +6,17 @@ part of 'get_channel_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetChannelDetails _$$_GetChannelDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetChannelDetails(
-      json['channelid'] as int,
+_$GetChannelDetailsImpl _$$GetChannelDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetChannelDetailsImpl(
+      (json['channelid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiPVRFieldsChannelEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetChannelDetailsToJson(
-    _$_GetChannelDetails instance) {
+Map<String, dynamic> _$$GetChannelDetailsImplToJson(
+    _$GetChannelDetailsImpl instance) {
   final val = <String, dynamic>{
     'channelid': instance.id,
   };

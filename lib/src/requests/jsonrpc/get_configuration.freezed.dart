@@ -12,7 +12,7 @@ part of 'get_configuration.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetConfiguration _$GetConfigurationFromJson(Map<String, dynamic> json) {
   return _GetConfiguration.fromJson(json);
@@ -20,6 +20,7 @@ GetConfiguration _$GetConfigurationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GetConfiguration {
+  /// Serializes this GetConfiguration to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -39,31 +40,37 @@ class _$GetConfigurationCopyWithImpl<$Res, $Val extends GetConfiguration>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of GetConfiguration
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_GetConfigurationCopyWith<$Res> {
-  factory _$$_GetConfigurationCopyWith(
-          _$_GetConfiguration value, $Res Function(_$_GetConfiguration) then) =
-      __$$_GetConfigurationCopyWithImpl<$Res>;
+abstract class _$$GetConfigurationImplCopyWith<$Res> {
+  factory _$$GetConfigurationImplCopyWith(_$GetConfigurationImpl value,
+          $Res Function(_$GetConfigurationImpl) then) =
+      __$$GetConfigurationImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetConfigurationCopyWithImpl<$Res>
-    extends _$GetConfigurationCopyWithImpl<$Res, _$_GetConfiguration>
-    implements _$$_GetConfigurationCopyWith<$Res> {
-  __$$_GetConfigurationCopyWithImpl(
-      _$_GetConfiguration _value, $Res Function(_$_GetConfiguration) _then)
+class __$$GetConfigurationImplCopyWithImpl<$Res>
+    extends _$GetConfigurationCopyWithImpl<$Res, _$GetConfigurationImpl>
+    implements _$$GetConfigurationImplCopyWith<$Res> {
+  __$$GetConfigurationImplCopyWithImpl(_$GetConfigurationImpl _value,
+      $Res Function(_$GetConfigurationImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of GetConfiguration
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetConfiguration extends _GetConfiguration {
-  const _$_GetConfiguration() : super._();
+class _$GetConfigurationImpl extends _GetConfiguration {
+  const _$GetConfigurationImpl() : super._();
 
-  factory _$_GetConfiguration.fromJson(Map<String, dynamic> json) =>
-      _$$_GetConfigurationFromJson(json);
+  factory _$GetConfigurationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetConfigurationImplFromJson(json);
 
   @override
   String toString() {
@@ -71,27 +78,27 @@ class _$_GetConfiguration extends _GetConfiguration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GetConfiguration);
+        (other.runtimeType == runtimeType && other is _$GetConfigurationImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetConfigurationToJson(
+    return _$$GetConfigurationImplToJson(
       this,
     );
   }
 }
 
 abstract class _GetConfiguration extends GetConfiguration {
-  const factory _GetConfiguration() = _$_GetConfiguration;
+  const factory _GetConfiguration() = _$GetConfigurationImpl;
   const _GetConfiguration._() : super._();
 
   factory _GetConfiguration.fromJson(Map<String, dynamic> json) =
-      _$_GetConfiguration.fromJson;
+      _$GetConfigurationImpl.fromJson;
 }

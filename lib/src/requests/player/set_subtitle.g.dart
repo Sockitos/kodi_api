@@ -6,14 +6,14 @@ part of 'set_subtitle.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetSubtitle _$$_SetSubtitleFromJson(Map<String, dynamic> json) =>
-    _$_SetSubtitle(
-      json['playerid'] as int,
+_$SetSubtitleImpl _$$SetSubtitleImplFromJson(Map<String, dynamic> json) =>
+    _$SetSubtitleImpl(
+      (json['playerid'] as num).toInt(),
       const SetSubtitleSubtitleConverter().fromJson(json['subtitle']),
-      enable: json['enable'] as bool? ?? true,
+      enable: json['enable'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_SetSubtitleToJson(_$_SetSubtitle instance) {
+Map<String, dynamic> _$$SetSubtitleImplToJson(_$SetSubtitleImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };
@@ -30,15 +30,15 @@ Map<String, dynamic> _$$_SetSubtitleToJson(_$_SetSubtitle instance) {
   return val;
 }
 
-_$_SetSubtitleSubtitleEnum _$$_SetSubtitleSubtitleEnumFromJson(
+_$SetSubtitleSubtitleEnumImpl _$$SetSubtitleSubtitleEnumImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetSubtitleSubtitleEnum(
+    _$SetSubtitleSubtitleEnumImpl(
       $enumDecode(_$KodiPlayerGoToOnOffEnumMap, json['value']),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetSubtitleSubtitleEnumToJson(
-        _$_SetSubtitleSubtitleEnum instance) =>
+Map<String, dynamic> _$$SetSubtitleSubtitleEnumImplToJson(
+        _$SetSubtitleSubtitleEnumImpl instance) =>
     <String, dynamic>{
       'value': _$KodiPlayerGoToOnOffEnumMap[instance.value]!,
       'runtimeType': instance.$type,
@@ -51,15 +51,15 @@ const _$KodiPlayerGoToOnOffEnumMap = {
   KodiPlayerGoToOnOff.on: 'on',
 };
 
-_$_SetSubtitleSubtitleIndex _$$_SetSubtitleSubtitleIndexFromJson(
+_$SetSubtitleSubtitleIndexImpl _$$SetSubtitleSubtitleIndexImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SetSubtitleSubtitleIndex(
-      json['value'] as int,
+    _$SetSubtitleSubtitleIndexImpl(
+      (json['value'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$_SetSubtitleSubtitleIndexToJson(
-        _$_SetSubtitleSubtitleIndex instance) =>
+Map<String, dynamic> _$$SetSubtitleSubtitleIndexImplToJson(
+        _$SetSubtitleSubtitleIndexImpl instance) =>
     <String, dynamic>{
       'value': instance.value,
       'runtimeType': instance.$type,

@@ -6,70 +6,63 @@ part of 'get_available_art.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetAvailableArt _$$_GetAvailableArtFromJson(Map<String, dynamic> json) =>
-    _$_GetAvailableArt(
+_$GetAvailableArtImpl _$$GetAvailableArtImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetAvailableArtImpl(
       const KodiAudioLibraryGetAvailableArtItemConverter()
           .fromJson(json['item'] as Map<String, dynamic>),
       artType: json['arttype'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_GetAvailableArtToJson(_$_GetAvailableArt instance) {
-  final val = <String, dynamic>{
-    'item': const KodiAudioLibraryGetAvailableArtItemConverter()
-        .toJson(instance.item),
-  };
+Map<String, dynamic> _$$GetAvailableArtImplToJson(
+        _$GetAvailableArtImpl instance) =>
+    <String, dynamic>{
+      'item': const KodiAudioLibraryGetAvailableArtItemConverter()
+          .toJson(instance.item),
+      'arttype': instance.artType,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('arttype', instance.artType);
-  return val;
-}
-
-_$_KodiAudioLibraryAvailableArt _$$_KodiAudioLibraryAvailableArtFromJson(
+_$KodiAudioLibraryAvailableArtImpl _$$KodiAudioLibraryAvailableArtImplFromJson(
         Map<String, dynamic> json) =>
-    _$_KodiAudioLibraryAvailableArt(
+    _$KodiAudioLibraryAvailableArtImpl(
       artType: json['arttype'] as String,
       previewUrl: json['previewurl'] as String? ?? '',
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$$_KodiAudioLibraryAvailableArtToJson(
-        _$_KodiAudioLibraryAvailableArt instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryAvailableArtImplToJson(
+        _$KodiAudioLibraryAvailableArtImpl instance) =>
     <String, dynamic>{
       'arttype': instance.artType,
       'previewurl': instance.previewUrl,
       'url': instance.url,
     };
 
-_$_KodiAudioLibraryGetAvailableArtItemAlbumId
-    _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdFromJson(
+_$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl
+    _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetAvailableArtItemAlbumId(
-          json['albumid'] as int,
+        _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl(
+          (json['albumid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetAvailableArtItemAlbumIdToJson(
-        _$_KodiAudioLibraryGetAvailableArtItemAlbumId instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetAvailableArtItemAlbumIdImplToJson(
+        _$KodiAudioLibraryGetAvailableArtItemAlbumIdImpl instance) =>
     <String, dynamic>{
       'albumid': instance.albumId,
       'runtimeType': instance.$type,
     };
 
-_$_KodiAudioLibraryGetAvailableArtItemArtistId
-    _$$_KodiAudioLibraryGetAvailableArtItemArtistIdFromJson(
+_$KodiAudioLibraryGetAvailableArtItemArtistIdImpl
+    _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiAudioLibraryGetAvailableArtItemArtistId(
-          json['artistid'] as int,
+        _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl(
+          (json['artistid'] as num).toInt(),
           $type: json['runtimeType'] as String?,
         );
 
-Map<String, dynamic> _$$_KodiAudioLibraryGetAvailableArtItemArtistIdToJson(
-        _$_KodiAudioLibraryGetAvailableArtItemArtistId instance) =>
+Map<String, dynamic> _$$KodiAudioLibraryGetAvailableArtItemArtistIdImplToJson(
+        _$KodiAudioLibraryGetAvailableArtItemArtistIdImpl instance) =>
     <String, dynamic>{
       'artistid': instance.artistId,
       'runtimeType': instance.$type,

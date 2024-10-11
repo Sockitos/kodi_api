@@ -6,30 +6,31 @@ part of 'kodi_notification_system_on_quit_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationSystemOnQuitParams
-    _$$_KodiNotificationSystemOnQuitParamsFromJson(Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnQuitParams(
+_$KodiNotificationSystemOnQuitParamsImpl
+    _$$KodiNotificationSystemOnQuitParamsImplFromJson(
+            Map<String, dynamic> json) =>
+        _$KodiNotificationSystemOnQuitParamsImpl(
           sender: json['sender'] as String,
           data: KodiNotificationSystemOnQuitParamsData.fromJson(
               json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnQuitParamsToJson(
-        _$_KodiNotificationSystemOnQuitParams instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnQuitParamsImplToJson(
+        _$KodiNotificationSystemOnQuitParamsImpl instance) =>
     <String, dynamic>{
       'sender': instance.sender,
       'data': instance.data.toJson(),
     };
 
-_$_KodiNotificationSystemOnQuitParamsData
-    _$$_KodiNotificationSystemOnQuitParamsDataFromJson(
+_$KodiNotificationSystemOnQuitParamsDataImpl
+    _$$KodiNotificationSystemOnQuitParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationSystemOnQuitParamsData(
-          exitCode: json['exitcode'] as int,
+        _$KodiNotificationSystemOnQuitParamsDataImpl(
+          exitCode: (json['exitcode'] as num).toInt(),
         );
 
-Map<String, dynamic> _$$_KodiNotificationSystemOnQuitParamsDataToJson(
-        _$_KodiNotificationSystemOnQuitParamsData instance) =>
+Map<String, dynamic> _$$KodiNotificationSystemOnQuitParamsDataImplToJson(
+        _$KodiNotificationSystemOnQuitParamsDataImpl instance) =>
     <String, dynamic>{
       'exitcode': instance.exitCode,
     };

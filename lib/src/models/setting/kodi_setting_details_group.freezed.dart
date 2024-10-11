@@ -12,7 +12,7 @@ part of 'kodi_setting_details_group.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiSettingDetailsGroup _$KodiSettingDetailsGroupFromJson(
     Map<String, dynamic> json) {
@@ -22,11 +22,15 @@ KodiSettingDetailsGroup _$KodiSettingDetailsGroupFromJson(
 /// @nodoc
 mixin _$KodiSettingDetailsGroup {
   String get id => throw _privateConstructorUsedError;
-  List<KodiSettingDetailsSetting>? get settings =>
+  Set<KodiSettingDetailsSetting>? get settings =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiSettingDetailsGroup to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiSettingDetailsGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiSettingDetailsGroupCopyWith<KodiSettingDetailsGroup> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -37,7 +41,7 @@ abstract class $KodiSettingDetailsGroupCopyWith<$Res> {
           $Res Function(KodiSettingDetailsGroup) then) =
       _$KodiSettingDetailsGroupCopyWithImpl<$Res, KodiSettingDetailsGroup>;
   @useResult
-  $Res call({String id, List<KodiSettingDetailsSetting>? settings});
+  $Res call({String id, Set<KodiSettingDetailsSetting>? settings});
 }
 
 /// @nodoc
@@ -51,6 +55,8 @@ class _$KodiSettingDetailsGroupCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiSettingDetailsGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -65,38 +71,42 @@ class _$KodiSettingDetailsGroupCopyWithImpl<$Res,
       settings: freezed == settings
           ? _value.settings
           : settings // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSetting>?,
+              as Set<KodiSettingDetailsSetting>?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_KodiSettingDetailsGroupCopyWith<$Res>
+abstract class _$$KodiSettingDetailsGroupImplCopyWith<$Res>
     implements $KodiSettingDetailsGroupCopyWith<$Res> {
-  factory _$$_KodiSettingDetailsGroupCopyWith(_$_KodiSettingDetailsGroup value,
-          $Res Function(_$_KodiSettingDetailsGroup) then) =
-      __$$_KodiSettingDetailsGroupCopyWithImpl<$Res>;
+  factory _$$KodiSettingDetailsGroupImplCopyWith(
+          _$KodiSettingDetailsGroupImpl value,
+          $Res Function(_$KodiSettingDetailsGroupImpl) then) =
+      __$$KodiSettingDetailsGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, List<KodiSettingDetailsSetting>? settings});
+  $Res call({String id, Set<KodiSettingDetailsSetting>? settings});
 }
 
 /// @nodoc
-class __$$_KodiSettingDetailsGroupCopyWithImpl<$Res>
+class __$$KodiSettingDetailsGroupImplCopyWithImpl<$Res>
     extends _$KodiSettingDetailsGroupCopyWithImpl<$Res,
-        _$_KodiSettingDetailsGroup>
-    implements _$$_KodiSettingDetailsGroupCopyWith<$Res> {
-  __$$_KodiSettingDetailsGroupCopyWithImpl(_$_KodiSettingDetailsGroup _value,
-      $Res Function(_$_KodiSettingDetailsGroup) _then)
+        _$KodiSettingDetailsGroupImpl>
+    implements _$$KodiSettingDetailsGroupImplCopyWith<$Res> {
+  __$$KodiSettingDetailsGroupImplCopyWithImpl(
+      _$KodiSettingDetailsGroupImpl _value,
+      $Res Function(_$KodiSettingDetailsGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiSettingDetailsGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
     Object? settings = freezed,
   }) {
-    return _then(_$_KodiSettingDetailsGroup(
+    return _then(_$KodiSettingDetailsGroupImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -104,31 +114,31 @@ class __$$_KodiSettingDetailsGroupCopyWithImpl<$Res>
       settings: freezed == settings
           ? _value._settings
           : settings // ignore: cast_nullable_to_non_nullable
-              as List<KodiSettingDetailsSetting>?,
+              as Set<KodiSettingDetailsSetting>?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiSettingDetailsGroup implements _KodiSettingDetailsGroup {
-  const _$_KodiSettingDetailsGroup(
-      {required this.id, final List<KodiSettingDetailsSetting>? settings})
+class _$KodiSettingDetailsGroupImpl implements _KodiSettingDetailsGroup {
+  const _$KodiSettingDetailsGroupImpl(
+      {required this.id, final Set<KodiSettingDetailsSetting>? settings})
       : _settings = settings;
 
-  factory _$_KodiSettingDetailsGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiSettingDetailsGroupFromJson(json);
+  factory _$KodiSettingDetailsGroupImpl.fromJson(Map<String, dynamic> json) =>
+      _$$KodiSettingDetailsGroupImplFromJson(json);
 
   @override
   final String id;
-  final List<KodiSettingDetailsSetting>? _settings;
+  final Set<KodiSettingDetailsSetting>? _settings;
   @override
-  List<KodiSettingDetailsSetting>? get settings {
+  Set<KodiSettingDetailsSetting>? get settings {
     final value = _settings;
     if (value == null) return null;
-    if (_settings is EqualUnmodifiableListView) return _settings;
+    if (_settings is EqualUnmodifiableSetView) return _settings;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableSetView(value);
   }
 
   @override
@@ -137,30 +147,31 @@ class _$_KodiSettingDetailsGroup implements _KodiSettingDetailsGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiSettingDetailsGroup &&
+            other is _$KodiSettingDetailsGroupImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality().equals(other._settings, _settings));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(_settings));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiSettingDetailsGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiSettingDetailsGroupCopyWith<_$_KodiSettingDetailsGroup>
-      get copyWith =>
-          __$$_KodiSettingDetailsGroupCopyWithImpl<_$_KodiSettingDetailsGroup>(
-              this, _$identity);
+  _$$KodiSettingDetailsGroupImplCopyWith<_$KodiSettingDetailsGroupImpl>
+      get copyWith => __$$KodiSettingDetailsGroupImplCopyWithImpl<
+          _$KodiSettingDetailsGroupImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiSettingDetailsGroupToJson(
+    return _$$KodiSettingDetailsGroupImplToJson(
       this,
     );
   }
@@ -169,18 +180,21 @@ class _$_KodiSettingDetailsGroup implements _KodiSettingDetailsGroup {
 abstract class _KodiSettingDetailsGroup implements KodiSettingDetailsGroup {
   const factory _KodiSettingDetailsGroup(
           {required final String id,
-          final List<KodiSettingDetailsSetting>? settings}) =
-      _$_KodiSettingDetailsGroup;
+          final Set<KodiSettingDetailsSetting>? settings}) =
+      _$KodiSettingDetailsGroupImpl;
 
   factory _KodiSettingDetailsGroup.fromJson(Map<String, dynamic> json) =
-      _$_KodiSettingDetailsGroup.fromJson;
+      _$KodiSettingDetailsGroupImpl.fromJson;
 
   @override
   String get id;
   @override
-  List<KodiSettingDetailsSetting>? get settings;
+  Set<KodiSettingDetailsSetting>? get settings;
+
+  /// Create a copy of KodiSettingDetailsGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiSettingDetailsGroupCopyWith<_$_KodiSettingDetailsGroup>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiSettingDetailsGroupImplCopyWith<_$KodiSettingDetailsGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

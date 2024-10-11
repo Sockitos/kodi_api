@@ -12,7 +12,7 @@ part of 'clear.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Clear _$ClearFromJson(Map<String, dynamic> json) {
   return _Clear.fromJson(json);
@@ -23,8 +23,12 @@ mixin _$Clear {
   @JsonKey(name: 'playlistid')
   int get id => throw _privateConstructorUsedError;
 
+  /// Serializes this Clear to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Clear
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ClearCopyWith<Clear> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$ClearCopyWithImpl<$Res, $Val extends Clear>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Clear
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -61,26 +67,31 @@ class _$ClearCopyWithImpl<$Res, $Val extends Clear>
 }
 
 /// @nodoc
-abstract class _$$_ClearCopyWith<$Res> implements $ClearCopyWith<$Res> {
-  factory _$$_ClearCopyWith(_$_Clear value, $Res Function(_$_Clear) then) =
-      __$$_ClearCopyWithImpl<$Res>;
+abstract class _$$ClearImplCopyWith<$Res> implements $ClearCopyWith<$Res> {
+  factory _$$ClearImplCopyWith(
+          _$ClearImpl value, $Res Function(_$ClearImpl) then) =
+      __$$ClearImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'playlistid') int id});
 }
 
 /// @nodoc
-class __$$_ClearCopyWithImpl<$Res> extends _$ClearCopyWithImpl<$Res, _$_Clear>
-    implements _$$_ClearCopyWith<$Res> {
-  __$$_ClearCopyWithImpl(_$_Clear _value, $Res Function(_$_Clear) _then)
+class __$$ClearImplCopyWithImpl<$Res>
+    extends _$ClearCopyWithImpl<$Res, _$ClearImpl>
+    implements _$$ClearImplCopyWith<$Res> {
+  __$$ClearImplCopyWithImpl(
+      _$ClearImpl _value, $Res Function(_$ClearImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Clear
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_Clear(
+    return _then(_$ClearImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -91,11 +102,11 @@ class __$$_ClearCopyWithImpl<$Res> extends _$ClearCopyWithImpl<$Res, _$_Clear>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Clear extends _Clear {
-  const _$_Clear(@JsonKey(name: 'playlistid') this.id) : super._();
+class _$ClearImpl extends _Clear {
+  const _$ClearImpl(@JsonKey(name: 'playlistid') this.id) : super._();
 
-  factory _$_Clear.fromJson(Map<String, dynamic> json) =>
-      _$$_ClearFromJson(json);
+  factory _$ClearImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ClearImplFromJson(json);
 
   @override
   @JsonKey(name: 'playlistid')
@@ -107,42 +118,47 @@ class _$_Clear extends _Clear {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Clear &&
+            other is _$ClearImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Clear
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ClearCopyWith<_$_Clear> get copyWith =>
-      __$$_ClearCopyWithImpl<_$_Clear>(this, _$identity);
+  _$$ClearImplCopyWith<_$ClearImpl> get copyWith =>
+      __$$ClearImplCopyWithImpl<_$ClearImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ClearToJson(
+    return _$$ClearImplToJson(
       this,
     );
   }
 }
 
 abstract class _Clear extends Clear {
-  const factory _Clear(@JsonKey(name: 'playlistid') final int id) = _$_Clear;
+  const factory _Clear(@JsonKey(name: 'playlistid') final int id) = _$ClearImpl;
   const _Clear._() : super._();
 
-  factory _Clear.fromJson(Map<String, dynamic> json) = _$_Clear.fromJson;
+  factory _Clear.fromJson(Map<String, dynamic> json) = _$ClearImpl.fromJson;
 
   @override
   @JsonKey(name: 'playlistid')
   int get id;
+
+  /// Create a copy of Clear
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_ClearCopyWith<_$_Clear> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ClearImplCopyWith<_$ClearImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

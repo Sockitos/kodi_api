@@ -12,7 +12,7 @@ part of 'down.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Down _$DownFromJson(Map<String, dynamic> json) {
   return _Down.fromJson(json);
@@ -20,6 +20,7 @@ Down _$DownFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Down {
+  /// Serializes this Down to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,27 +39,36 @@ class _$DownCopyWithImpl<$Res, $Val extends Down>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Down
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_DownCopyWith<$Res> {
-  factory _$$_DownCopyWith(_$_Down value, $Res Function(_$_Down) then) =
-      __$$_DownCopyWithImpl<$Res>;
+abstract class _$$DownImplCopyWith<$Res> {
+  factory _$$DownImplCopyWith(
+          _$DownImpl value, $Res Function(_$DownImpl) then) =
+      __$$DownImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_DownCopyWithImpl<$Res> extends _$DownCopyWithImpl<$Res, _$_Down>
-    implements _$$_DownCopyWith<$Res> {
-  __$$_DownCopyWithImpl(_$_Down _value, $Res Function(_$_Down) _then)
+class __$$DownImplCopyWithImpl<$Res>
+    extends _$DownCopyWithImpl<$Res, _$DownImpl>
+    implements _$$DownImplCopyWith<$Res> {
+  __$$DownImplCopyWithImpl(_$DownImpl _value, $Res Function(_$DownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Down
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Down extends _Down {
-  const _$_Down() : super._();
+class _$DownImpl extends _Down {
+  const _$DownImpl() : super._();
 
-  factory _$_Down.fromJson(Map<String, dynamic> json) => _$$_DownFromJson(json);
+  factory _$DownImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DownImplFromJson(json);
 
   @override
   String toString() {
@@ -66,26 +76,26 @@ class _$_Down extends _Down {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Down);
+        (other.runtimeType == runtimeType && other is _$DownImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DownToJson(
+    return _$$DownImplToJson(
       this,
     );
   }
 }
 
 abstract class _Down extends Down {
-  const factory _Down() = _$_Down;
+  const factory _Down() = _$DownImpl;
   const _Down._() : super._();
 
-  factory _Down.fromJson(Map<String, dynamic> json) = _$_Down.fromJson;
+  factory _Down.fromJson(Map<String, dynamic> json) = _$DownImpl.fromJson;
 }

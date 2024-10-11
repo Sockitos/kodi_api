@@ -6,6 +6,7 @@ part of 'right.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Right _$$_RightFromJson(Map<String, dynamic> json) => _$_Right();
+_$RightImpl _$$RightImplFromJson(Map<String, dynamic> json) => _$RightImpl();
 
-Map<String, dynamic> _$$_RightToJson(_$_Right instance) => <String, dynamic>{};
+Map<String, dynamic> _$$RightImplToJson(_$RightImpl instance) =>
+    <String, dynamic>{};

@@ -6,15 +6,17 @@ part of 'get_movie_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetMovieDetails _$$_GetMovieDetailsFromJson(Map<String, dynamic> json) =>
-    _$_GetMovieDetails(
-      json['movieid'] as int,
+_$GetMovieDetailsImpl _$$GetMovieDetailsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetMovieDetailsImpl(
+      (json['movieid'] as num).toInt(),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiVideoFieldsMovieEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetMovieDetailsToJson(_$_GetMovieDetails instance) {
+Map<String, dynamic> _$$GetMovieDetailsImplToJson(
+    _$GetMovieDetailsImpl instance) {
   final val = <String, dynamic>{
     'movieid': instance.id,
   };

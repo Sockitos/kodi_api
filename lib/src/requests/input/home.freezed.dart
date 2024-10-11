@@ -12,7 +12,7 @@ part of 'home.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Home _$HomeFromJson(Map<String, dynamic> json) {
   return _Home.fromJson(json);
@@ -20,6 +20,7 @@ Home _$HomeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Home {
+  /// Serializes this Home to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -38,27 +39,36 @@ class _$HomeCopyWithImpl<$Res, $Val extends Home>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Home
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$_HomeCopyWith<$Res> {
-  factory _$$_HomeCopyWith(_$_Home value, $Res Function(_$_Home) then) =
-      __$$_HomeCopyWithImpl<$Res>;
+abstract class _$$HomeImplCopyWith<$Res> {
+  factory _$$HomeImplCopyWith(
+          _$HomeImpl value, $Res Function(_$HomeImpl) then) =
+      __$$HomeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_HomeCopyWithImpl<$Res> extends _$HomeCopyWithImpl<$Res, _$_Home>
-    implements _$$_HomeCopyWith<$Res> {
-  __$$_HomeCopyWithImpl(_$_Home _value, $Res Function(_$_Home) _then)
+class __$$HomeImplCopyWithImpl<$Res>
+    extends _$HomeCopyWithImpl<$Res, _$HomeImpl>
+    implements _$$HomeImplCopyWith<$Res> {
+  __$$HomeImplCopyWithImpl(_$HomeImpl _value, $Res Function(_$HomeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of Home
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Home extends _Home {
-  const _$_Home() : super._();
+class _$HomeImpl extends _Home {
+  const _$HomeImpl() : super._();
 
-  factory _$_Home.fromJson(Map<String, dynamic> json) => _$$_HomeFromJson(json);
+  factory _$HomeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HomeImplFromJson(json);
 
   @override
   String toString() {
@@ -66,26 +76,26 @@ class _$_Home extends _Home {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Home);
+        (other.runtimeType == runtimeType && other is _$HomeImpl);
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomeToJson(
+    return _$$HomeImplToJson(
       this,
     );
   }
 }
 
 abstract class _Home extends Home {
-  const factory _Home() = _$_Home;
+  const factory _Home() = _$HomeImpl;
   const _Home._() : super._();
 
-  factory _Home.fromJson(Map<String, dynamic> json) = _$_Home.fromJson;
+  factory _Home.fromJson(Map<String, dynamic> json) = _$HomeImpl.fromJson;
 }

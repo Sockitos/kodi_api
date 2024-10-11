@@ -6,6 +6,7 @@ part of 'home.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Home _$$_HomeFromJson(Map<String, dynamic> json) => _$_Home();
+_$HomeImpl _$$HomeImplFromJson(Map<String, dynamic> json) => _$HomeImpl();
 
-Map<String, dynamic> _$$_HomeToJson(_$_Home instance) => <String, dynamic>{};
+Map<String, dynamic> _$$HomeImplToJson(_$HomeImpl instance) =>
+    <String, dynamic>{};

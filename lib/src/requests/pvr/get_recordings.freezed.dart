@@ -12,7 +12,7 @@ part of 'get_recordings.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetRecordings _$GetRecordingsFromJson(Map<String, dynamic> json) {
   return _GetRecordings.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetRecordings {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecordings to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecordings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecordingsCopyWith<GetRecordings> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$GetRecordingsCopyWithImpl<$Res, $Val extends GetRecordings>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecordings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$GetRecordingsCopyWithImpl<$Res, $Val extends GetRecordings>
     ) as $Val);
   }
 
+  /// Create a copy of GetRecordings
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -91,6 +99,8 @@ class _$GetRecordingsCopyWithImpl<$Res, $Val extends GetRecordings>
     });
   }
 
+  /// Create a copy of GetRecordings
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -105,11 +115,11 @@ class _$GetRecordingsCopyWithImpl<$Res, $Val extends GetRecordings>
 }
 
 /// @nodoc
-abstract class _$$_GetRecordingsCopyWith<$Res>
+abstract class _$$GetRecordingsImplCopyWith<$Res>
     implements $GetRecordingsCopyWith<$Res> {
-  factory _$$_GetRecordingsCopyWith(
-          _$_GetRecordings value, $Res Function(_$_GetRecordings) then) =
-      __$$_GetRecordingsCopyWithImpl<$Res>;
+  factory _$$GetRecordingsImplCopyWith(
+          _$GetRecordingsImpl value, $Res Function(_$GetRecordingsImpl) then) =
+      __$$GetRecordingsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,13 +134,15 @@ abstract class _$$_GetRecordingsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecordingsCopyWithImpl<$Res>
-    extends _$GetRecordingsCopyWithImpl<$Res, _$_GetRecordings>
-    implements _$$_GetRecordingsCopyWith<$Res> {
-  __$$_GetRecordingsCopyWithImpl(
-      _$_GetRecordings _value, $Res Function(_$_GetRecordings) _then)
+class __$$GetRecordingsImplCopyWithImpl<$Res>
+    extends _$GetRecordingsCopyWithImpl<$Res, _$GetRecordingsImpl>
+    implements _$$GetRecordingsImplCopyWith<$Res> {
+  __$$GetRecordingsImplCopyWithImpl(
+      _$GetRecordingsImpl _value, $Res Function(_$GetRecordingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecordings
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,7 +150,7 @@ class __$$_GetRecordingsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetRecordings(
+    return _then(_$GetRecordingsImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -157,14 +169,14 @@ class __$$_GetRecordingsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecordings extends _GetRecordings {
-  const _$_GetRecordings(
+class _$GetRecordingsImpl extends _GetRecordings {
+  const _$GetRecordingsImpl(
       {final Set<KodiPVRFieldsRecording>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetRecordings.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRecordingsFromJson(json);
+  factory _$GetRecordingsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRecordingsImplFromJson(json);
 
   final Set<KodiPVRFieldsRecording>? _properties;
   @override
@@ -187,30 +199,32 @@ class _$_GetRecordings extends _GetRecordings {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecordings &&
+            other is _$GetRecordingsImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecordings
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecordingsCopyWith<_$_GetRecordings> get copyWith =>
-      __$$_GetRecordingsCopyWithImpl<_$_GetRecordings>(this, _$identity);
+  _$$GetRecordingsImplCopyWith<_$GetRecordingsImpl> get copyWith =>
+      __$$GetRecordingsImplCopyWithImpl<_$GetRecordingsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecordingsToJson(
+    return _$$GetRecordingsImplToJson(
       this,
     );
   }
@@ -220,11 +234,11 @@ abstract class _GetRecordings extends GetRecordings {
   const factory _GetRecordings(
       {final Set<KodiPVRFieldsRecording>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetRecordings;
+      final KodiListSort? sort}) = _$GetRecordingsImpl;
   const _GetRecordings._() : super._();
 
   factory _GetRecordings.fromJson(Map<String, dynamic> json) =
-      _$_GetRecordings.fromJson;
+      _$GetRecordingsImpl.fromJson;
 
   @override
   Set<KodiPVRFieldsRecording>? get properties;
@@ -232,9 +246,12 @@ abstract class _GetRecordings extends GetRecordings {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetRecordings
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecordingsCopyWith<_$_GetRecordings> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecordingsImplCopyWith<_$GetRecordingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -249,8 +266,12 @@ mixin _$KodiPVRGetRecordingsResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiPVRGetRecordingsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiPVRGetRecordingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiPVRGetRecordingsResponseCopyWith<KodiPVRGetRecordingsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -281,6 +302,8 @@ class _$KodiPVRGetRecordingsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiPVRGetRecordingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -299,6 +322,8 @@ class _$KodiPVRGetRecordingsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiPVRGetRecordingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -309,12 +334,12 @@ class _$KodiPVRGetRecordingsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiPVRGetRecordingsResponseCopyWith<$Res>
+abstract class _$$KodiPVRGetRecordingsResponseImplCopyWith<$Res>
     implements $KodiPVRGetRecordingsResponseCopyWith<$Res> {
-  factory _$$_KodiPVRGetRecordingsResponseCopyWith(
-          _$_KodiPVRGetRecordingsResponse value,
-          $Res Function(_$_KodiPVRGetRecordingsResponse) then) =
-      __$$_KodiPVRGetRecordingsResponseCopyWithImpl<$Res>;
+  factory _$$KodiPVRGetRecordingsResponseImplCopyWith(
+          _$KodiPVRGetRecordingsResponseImpl value,
+          $Res Function(_$KodiPVRGetRecordingsResponseImpl) then) =
+      __$$KodiPVRGetRecordingsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -326,22 +351,24 @@ abstract class _$$_KodiPVRGetRecordingsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiPVRGetRecordingsResponseCopyWithImpl<$Res>
+class __$$KodiPVRGetRecordingsResponseImplCopyWithImpl<$Res>
     extends _$KodiPVRGetRecordingsResponseCopyWithImpl<$Res,
-        _$_KodiPVRGetRecordingsResponse>
-    implements _$$_KodiPVRGetRecordingsResponseCopyWith<$Res> {
-  __$$_KodiPVRGetRecordingsResponseCopyWithImpl(
-      _$_KodiPVRGetRecordingsResponse _value,
-      $Res Function(_$_KodiPVRGetRecordingsResponse) _then)
+        _$KodiPVRGetRecordingsResponseImpl>
+    implements _$$KodiPVRGetRecordingsResponseImplCopyWith<$Res> {
+  __$$KodiPVRGetRecordingsResponseImplCopyWithImpl(
+      _$KodiPVRGetRecordingsResponseImpl _value,
+      $Res Function(_$KodiPVRGetRecordingsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiPVRGetRecordingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? recordings = null,
     Object? limits = null,
   }) {
-    return _then(_$_KodiPVRGetRecordingsResponse(
+    return _then(_$KodiPVRGetRecordingsResponseImpl(
       recordings: null == recordings
           ? _value._recordings
           : recordings // ignore: cast_nullable_to_non_nullable
@@ -356,14 +383,16 @@ class __$$_KodiPVRGetRecordingsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiPVRGetRecordingsResponse implements _KodiPVRGetRecordingsResponse {
-  const _$_KodiPVRGetRecordingsResponse(
+class _$KodiPVRGetRecordingsResponseImpl
+    implements _KodiPVRGetRecordingsResponse {
+  const _$KodiPVRGetRecordingsResponseImpl(
       {required final List<KodiPVRDetailsRecording> recordings,
       required this.limits})
       : _recordings = recordings;
 
-  factory _$_KodiPVRGetRecordingsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_KodiPVRGetRecordingsResponseFromJson(json);
+  factory _$KodiPVRGetRecordingsResponseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$KodiPVRGetRecordingsResponseImplFromJson(json);
 
   final List<KodiPVRDetailsRecording> _recordings;
   @override
@@ -382,30 +411,33 @@ class _$_KodiPVRGetRecordingsResponse implements _KodiPVRGetRecordingsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiPVRGetRecordingsResponse &&
+            other is _$KodiPVRGetRecordingsResponseImpl &&
             const DeepCollectionEquality()
                 .equals(other._recordings, _recordings) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_recordings), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiPVRGetRecordingsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiPVRGetRecordingsResponseCopyWith<_$_KodiPVRGetRecordingsResponse>
-      get copyWith => __$$_KodiPVRGetRecordingsResponseCopyWithImpl<
-          _$_KodiPVRGetRecordingsResponse>(this, _$identity);
+  _$$KodiPVRGetRecordingsResponseImplCopyWith<
+          _$KodiPVRGetRecordingsResponseImpl>
+      get copyWith => __$$KodiPVRGetRecordingsResponseImplCopyWithImpl<
+          _$KodiPVRGetRecordingsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiPVRGetRecordingsResponseToJson(
+    return _$$KodiPVRGetRecordingsResponseImplToJson(
       this,
     );
   }
@@ -416,17 +448,21 @@ abstract class _KodiPVRGetRecordingsResponse
   const factory _KodiPVRGetRecordingsResponse(
           {required final List<KodiPVRDetailsRecording> recordings,
           required final KodiListLimitsReturned limits}) =
-      _$_KodiPVRGetRecordingsResponse;
+      _$KodiPVRGetRecordingsResponseImpl;
 
   factory _KodiPVRGetRecordingsResponse.fromJson(Map<String, dynamic> json) =
-      _$_KodiPVRGetRecordingsResponse.fromJson;
+      _$KodiPVRGetRecordingsResponseImpl.fromJson;
 
   @override
   List<KodiPVRDetailsRecording> get recordings;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of KodiPVRGetRecordingsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiPVRGetRecordingsResponseCopyWith<_$_KodiPVRGetRecordingsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiPVRGetRecordingsResponseImplCopyWith<
+          _$KodiPVRGetRecordingsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

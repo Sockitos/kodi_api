@@ -6,10 +6,10 @@ part of 'kodi_notification_video_library_on_refresh_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_KodiNotificationVideoLibraryOnRefreshParams
-    _$$_KodiNotificationVideoLibraryOnRefreshParamsFromJson(
+_$KodiNotificationVideoLibraryOnRefreshParamsImpl
+    _$$KodiNotificationVideoLibraryOnRefreshParamsImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnRefreshParams(
+        _$KodiNotificationVideoLibraryOnRefreshParamsImpl(
           sender: json['sender'] as String,
           data: json['data'] == null
               ? null
@@ -17,8 +17,8 @@ _$_KodiNotificationVideoLibraryOnRefreshParams
                   json['data'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnRefreshParamsToJson(
-    _$_KodiNotificationVideoLibraryOnRefreshParams instance) {
+Map<String, dynamic> _$$KodiNotificationVideoLibraryOnRefreshParamsImplToJson(
+    _$KodiNotificationVideoLibraryOnRefreshParamsImpl instance) {
   final val = <String, dynamic>{
     'sender': instance.sender,
   };
@@ -33,15 +33,16 @@ Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnRefreshParamsToJson(
   return val;
 }
 
-_$_KodiNotificationVideoLibraryOnRefreshParamsData
-    _$$_KodiNotificationVideoLibraryOnRefreshParamsDataFromJson(
+_$KodiNotificationVideoLibraryOnRefreshParamsDataImpl
+    _$$KodiNotificationVideoLibraryOnRefreshParamsDataImplFromJson(
             Map<String, dynamic> json) =>
-        _$_KodiNotificationVideoLibraryOnRefreshParamsData(
+        _$KodiNotificationVideoLibraryOnRefreshParamsDataImpl(
           test: json['test'] as String,
         );
 
-Map<String, dynamic> _$$_KodiNotificationVideoLibraryOnRefreshParamsDataToJson(
-        _$_KodiNotificationVideoLibraryOnRefreshParamsData instance) =>
-    <String, dynamic>{
-      'test': instance.test,
-    };
+Map<String, dynamic>
+    _$$KodiNotificationVideoLibraryOnRefreshParamsDataImplToJson(
+            _$KodiNotificationVideoLibraryOnRefreshParamsDataImpl instance) =>
+        <String, dynamic>{
+          'test': instance.test,
+        };

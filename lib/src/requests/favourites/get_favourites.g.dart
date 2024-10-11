@@ -6,15 +6,15 @@ part of 'get_favourites.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetFavourites _$$_GetFavouritesFromJson(Map<String, dynamic> json) =>
-    _$_GetFavourites(
+_$GetFavouritesImpl _$$GetFavouritesImplFromJson(Map<String, dynamic> json) =>
+    _$GetFavouritesImpl(
       type: $enumDecodeNullable(_$KodiFavouriteTypeEnumMap, json['type']),
       properties: (json['properties'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$KodiFavouriteFieldsFavouriteEnumMap, e))
           .toSet(),
     );
 
-Map<String, dynamic> _$$_GetFavouritesToJson(_$_GetFavourites instance) {
+Map<String, dynamic> _$$GetFavouritesImplToJson(_$GetFavouritesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -47,9 +47,9 @@ const _$KodiFavouriteFieldsFavouriteEnumMap = {
   KodiFavouriteFieldsFavourite.path: 'path',
 };
 
-_$_GetFavouritesResponse _$$_GetFavouritesResponseFromJson(
+_$GetFavouritesResponseImpl _$$GetFavouritesResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetFavouritesResponse(
+    _$GetFavouritesResponseImpl(
       favourites: (json['favourites'] as List<dynamic>)
           .map((e) =>
               KodiFavouriteDetailsFavourite.fromJson(e as Map<String, dynamic>))
@@ -58,8 +58,8 @@ _$_GetFavouritesResponse _$$_GetFavouritesResponseFromJson(
           json['limits'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GetFavouritesResponseToJson(
-        _$_GetFavouritesResponse instance) =>
+Map<String, dynamic> _$$GetFavouritesResponseImplToJson(
+        _$GetFavouritesResponseImpl instance) =>
     <String, dynamic>{
       'favourites': instance.favourites.map((e) => e.toJson()).toList(),
       'limits': instance.limits.toJson(),

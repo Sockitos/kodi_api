@@ -6,13 +6,13 @@ part of 'set_shuffle.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetShuffle _$$_SetShuffleFromJson(Map<String, dynamic> json) =>
-    _$_SetShuffle(
-      json['playerid'] as int,
+_$SetShuffleImpl _$$SetShuffleImplFromJson(Map<String, dynamic> json) =>
+    _$SetShuffleImpl(
+      (json['playerid'] as num).toInt(),
       const KodiGlobalToggleConverter().fromJson(json['shuffle']),
     );
 
-Map<String, dynamic> _$$_SetShuffleToJson(_$_SetShuffle instance) {
+Map<String, dynamic> _$$SetShuffleImplToJson(_$SetShuffleImpl instance) {
   final val = <String, dynamic>{
     'playerid': instance.id,
   };

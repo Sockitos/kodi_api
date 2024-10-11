@@ -6,13 +6,15 @@ part of 'set_addon_enabled.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SetAddonEnabled _$$_SetAddonEnabledFromJson(Map<String, dynamic> json) =>
-    _$_SetAddonEnabled(
+_$SetAddonEnabledImpl _$$SetAddonEnabledImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SetAddonEnabledImpl(
       json['addonid'] as String,
       const KodiGlobalToggleConverter().fromJson(json['enabled']),
     );
 
-Map<String, dynamic> _$$_SetAddonEnabledToJson(_$_SetAddonEnabled instance) {
+Map<String, dynamic> _$$SetAddonEnabledImplToJson(
+    _$SetAddonEnabledImpl instance) {
   final val = <String, dynamic>{
     'addonid': instance.id,
   };

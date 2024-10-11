@@ -6,6 +6,6 @@ part of 'up.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Up _$$_UpFromJson(Map<String, dynamic> json) => _$_Up();
+_$UpImpl _$$UpImplFromJson(Map<String, dynamic> json) => _$UpImpl();
 
-Map<String, dynamic> _$$_UpToJson(_$_Up instance) => <String, dynamic>{};
+Map<String, dynamic> _$$UpImplToJson(_$UpImpl instance) => <String, dynamic>{};

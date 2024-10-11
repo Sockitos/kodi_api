@@ -12,7 +12,7 @@ part of 'get_in_progress_tv_shows.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetInProgressTVShows _$GetInProgressTVShowsFromJson(Map<String, dynamic> json) {
   return _GetInProgressTVShows.fromJson(json);
@@ -25,8 +25,12 @@ mixin _$GetInProgressTVShows {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetInProgressTVShows to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetInProgressTVShows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetInProgressTVShowsCopyWith<GetInProgressTVShows> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +61,8 @@ class _$GetInProgressTVShowsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetInProgressTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +86,8 @@ class _$GetInProgressTVShowsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetInProgressTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -92,6 +100,8 @@ class _$GetInProgressTVShowsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of GetInProgressTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -106,11 +116,11 @@ class _$GetInProgressTVShowsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetInProgressTVShowsCopyWith<$Res>
+abstract class _$$GetInProgressTVShowsImplCopyWith<$Res>
     implements $GetInProgressTVShowsCopyWith<$Res> {
-  factory _$$_GetInProgressTVShowsCopyWith(_$_GetInProgressTVShows value,
-          $Res Function(_$_GetInProgressTVShows) then) =
-      __$$_GetInProgressTVShowsCopyWithImpl<$Res>;
+  factory _$$GetInProgressTVShowsImplCopyWith(_$GetInProgressTVShowsImpl value,
+          $Res Function(_$GetInProgressTVShowsImpl) then) =
+      __$$GetInProgressTVShowsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -125,13 +135,15 @@ abstract class _$$_GetInProgressTVShowsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetInProgressTVShowsCopyWithImpl<$Res>
-    extends _$GetInProgressTVShowsCopyWithImpl<$Res, _$_GetInProgressTVShows>
-    implements _$$_GetInProgressTVShowsCopyWith<$Res> {
-  __$$_GetInProgressTVShowsCopyWithImpl(_$_GetInProgressTVShows _value,
-      $Res Function(_$_GetInProgressTVShows) _then)
+class __$$GetInProgressTVShowsImplCopyWithImpl<$Res>
+    extends _$GetInProgressTVShowsCopyWithImpl<$Res, _$GetInProgressTVShowsImpl>
+    implements _$$GetInProgressTVShowsImplCopyWith<$Res> {
+  __$$GetInProgressTVShowsImplCopyWithImpl(_$GetInProgressTVShowsImpl _value,
+      $Res Function(_$GetInProgressTVShowsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetInProgressTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,7 +151,7 @@ class __$$_GetInProgressTVShowsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetInProgressTVShows(
+    return _then(_$GetInProgressTVShowsImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -158,14 +170,14 @@ class __$$_GetInProgressTVShowsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetInProgressTVShows extends _GetInProgressTVShows {
-  const _$_GetInProgressTVShows(
+class _$GetInProgressTVShowsImpl extends _GetInProgressTVShows {
+  const _$GetInProgressTVShowsImpl(
       {final Set<KodiVideoFieldsTvShow>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetInProgressTVShows.fromJson(Map<String, dynamic> json) =>
-      _$$_GetInProgressTVShowsFromJson(json);
+  factory _$GetInProgressTVShowsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetInProgressTVShowsImplFromJson(json);
 
   final Set<KodiVideoFieldsTvShow>? _properties;
   @override
@@ -188,31 +200,34 @@ class _$_GetInProgressTVShows extends _GetInProgressTVShows {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetInProgressTVShows &&
+            other is _$GetInProgressTVShowsImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetInProgressTVShows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetInProgressTVShowsCopyWith<_$_GetInProgressTVShows> get copyWith =>
-      __$$_GetInProgressTVShowsCopyWithImpl<_$_GetInProgressTVShows>(
-          this, _$identity);
+  _$$GetInProgressTVShowsImplCopyWith<_$GetInProgressTVShowsImpl>
+      get copyWith =>
+          __$$GetInProgressTVShowsImplCopyWithImpl<_$GetInProgressTVShowsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetInProgressTVShowsToJson(
+    return _$$GetInProgressTVShowsImplToJson(
       this,
     );
   }
@@ -222,11 +237,11 @@ abstract class _GetInProgressTVShows extends GetInProgressTVShows {
   const factory _GetInProgressTVShows(
       {final Set<KodiVideoFieldsTvShow>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetInProgressTVShows;
+      final KodiListSort? sort}) = _$GetInProgressTVShowsImpl;
   const _GetInProgressTVShows._() : super._();
 
   factory _GetInProgressTVShows.fromJson(Map<String, dynamic> json) =
-      _$_GetInProgressTVShows.fromJson;
+      _$GetInProgressTVShowsImpl.fromJson;
 
   @override
   Set<KodiVideoFieldsTvShow>? get properties;
@@ -234,10 +249,13 @@ abstract class _GetInProgressTVShows extends GetInProgressTVShows {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetInProgressTVShows
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetInProgressTVShowsCopyWith<_$_GetInProgressTVShows> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetInProgressTVShowsImplCopyWith<_$GetInProgressTVShowsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 GetInProgressTVShowsResponse _$GetInProgressTVShowsResponseFromJson(
@@ -252,8 +270,12 @@ mixin _$GetInProgressTVShowsResponse {
       throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetInProgressTVShowsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetInProgressTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetInProgressTVShowsResponseCopyWith<GetInProgressTVShowsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -284,6 +306,8 @@ class _$GetInProgressTVShowsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetInProgressTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -302,6 +326,8 @@ class _$GetInProgressTVShowsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetInProgressTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -312,12 +338,12 @@ class _$GetInProgressTVShowsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetInProgressTVShowsResponseCopyWith<$Res>
+abstract class _$$GetInProgressTVShowsResponseImplCopyWith<$Res>
     implements $GetInProgressTVShowsResponseCopyWith<$Res> {
-  factory _$$_GetInProgressTVShowsResponseCopyWith(
-          _$_GetInProgressTVShowsResponse value,
-          $Res Function(_$_GetInProgressTVShowsResponse) then) =
-      __$$_GetInProgressTVShowsResponseCopyWithImpl<$Res>;
+  factory _$$GetInProgressTVShowsResponseImplCopyWith(
+          _$GetInProgressTVShowsResponseImpl value,
+          $Res Function(_$GetInProgressTVShowsResponseImpl) then) =
+      __$$GetInProgressTVShowsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -329,22 +355,24 @@ abstract class _$$_GetInProgressTVShowsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetInProgressTVShowsResponseCopyWithImpl<$Res>
+class __$$GetInProgressTVShowsResponseImplCopyWithImpl<$Res>
     extends _$GetInProgressTVShowsResponseCopyWithImpl<$Res,
-        _$_GetInProgressTVShowsResponse>
-    implements _$$_GetInProgressTVShowsResponseCopyWith<$Res> {
-  __$$_GetInProgressTVShowsResponseCopyWithImpl(
-      _$_GetInProgressTVShowsResponse _value,
-      $Res Function(_$_GetInProgressTVShowsResponse) _then)
+        _$GetInProgressTVShowsResponseImpl>
+    implements _$$GetInProgressTVShowsResponseImplCopyWith<$Res> {
+  __$$GetInProgressTVShowsResponseImplCopyWithImpl(
+      _$GetInProgressTVShowsResponseImpl _value,
+      $Res Function(_$GetInProgressTVShowsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetInProgressTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tvShows = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetInProgressTVShowsResponse(
+    return _then(_$GetInProgressTVShowsResponseImpl(
       tvShows: null == tvShows
           ? _value._tvShows
           : tvShows // ignore: cast_nullable_to_non_nullable
@@ -359,15 +387,17 @@ class __$$_GetInProgressTVShowsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetInProgressTVShowsResponse implements _GetInProgressTVShowsResponse {
-  const _$_GetInProgressTVShowsResponse(
+class _$GetInProgressTVShowsResponseImpl
+    implements _GetInProgressTVShowsResponse {
+  const _$GetInProgressTVShowsResponseImpl(
       {@JsonKey(name: 'tvshows')
       required final List<KodiVideoDetailsTvShow> tvShows,
       required this.limits})
       : _tvShows = tvShows;
 
-  factory _$_GetInProgressTVShowsResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetInProgressTVShowsResponseFromJson(json);
+  factory _$GetInProgressTVShowsResponseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$GetInProgressTVShowsResponseImplFromJson(json);
 
   final List<KodiVideoDetailsTvShow> _tvShows;
   @override
@@ -387,29 +417,32 @@ class _$_GetInProgressTVShowsResponse implements _GetInProgressTVShowsResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetInProgressTVShowsResponse &&
+            other is _$GetInProgressTVShowsResponseImpl &&
             const DeepCollectionEquality().equals(other._tvShows, _tvShows) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_tvShows), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetInProgressTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetInProgressTVShowsResponseCopyWith<_$_GetInProgressTVShowsResponse>
-      get copyWith => __$$_GetInProgressTVShowsResponseCopyWithImpl<
-          _$_GetInProgressTVShowsResponse>(this, _$identity);
+  _$$GetInProgressTVShowsResponseImplCopyWith<
+          _$GetInProgressTVShowsResponseImpl>
+      get copyWith => __$$GetInProgressTVShowsResponseImplCopyWithImpl<
+          _$GetInProgressTVShowsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetInProgressTVShowsResponseToJson(
+    return _$$GetInProgressTVShowsResponseImplToJson(
       this,
     );
   }
@@ -421,18 +454,22 @@ abstract class _GetInProgressTVShowsResponse
           {@JsonKey(name: 'tvshows')
           required final List<KodiVideoDetailsTvShow> tvShows,
           required final KodiListLimitsReturned limits}) =
-      _$_GetInProgressTVShowsResponse;
+      _$GetInProgressTVShowsResponseImpl;
 
   factory _GetInProgressTVShowsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetInProgressTVShowsResponse.fromJson;
+      _$GetInProgressTVShowsResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'tvshows')
   List<KodiVideoDetailsTvShow> get tvShows;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetInProgressTVShowsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetInProgressTVShowsResponseCopyWith<_$_GetInProgressTVShowsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetInProgressTVShowsResponseImplCopyWith<
+          _$GetInProgressTVShowsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

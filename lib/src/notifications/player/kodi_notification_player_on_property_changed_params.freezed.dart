@@ -12,7 +12,7 @@ part of 'kodi_notification_player_on_property_changed_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 KodiNotificationPlayerOnPropertyChangedParams
     _$KodiNotificationPlayerOnPropertyChangedParamsFromJson(
@@ -26,8 +26,12 @@ mixin _$KodiNotificationPlayerOnPropertyChangedParams {
   KodiNotificationPlayerOnPropertyChangedParamsData get data =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlayerOnPropertyChangedParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlayerOnPropertyChangedParamsCopyWith<
           KodiNotificationPlayerOnPropertyChangedParams>
       get copyWith => throw _privateConstructorUsedError;
@@ -59,6 +63,8 @@ class _$KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +83,8 @@ class _$KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<$Res> get data {
@@ -88,13 +96,14 @@ class _$KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWith<$Res>
+abstract class _$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWith<
+        $Res>
     implements $KodiNotificationPlayerOnPropertyChangedParamsCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWith(
-          _$_KodiNotificationPlayerOnPropertyChangedParams value,
-          $Res Function(_$_KodiNotificationPlayerOnPropertyChangedParams)
+  factory _$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWith(
+          _$KodiNotificationPlayerOnPropertyChangedParamsImpl value,
+          $Res Function(_$KodiNotificationPlayerOnPropertyChangedParamsImpl)
               then) =
-      __$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<$Res>;
+      __$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -105,22 +114,25 @@ abstract class _$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWithImpl<$Res>
     extends _$KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<$Res,
-        _$_KodiNotificationPlayerOnPropertyChangedParams>
-    implements _$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl(
-      _$_KodiNotificationPlayerOnPropertyChangedParams _value,
-      $Res Function(_$_KodiNotificationPlayerOnPropertyChangedParams) _then)
+        _$KodiNotificationPlayerOnPropertyChangedParamsImpl>
+    implements
+        _$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWithImpl(
+      _$KodiNotificationPlayerOnPropertyChangedParamsImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnPropertyChangedParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? sender = null,
     Object? data = null,
   }) {
-    return _then(_$_KodiNotificationPlayerOnPropertyChangedParams(
+    return _then(_$KodiNotificationPlayerOnPropertyChangedParamsImpl(
       sender: null == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
@@ -135,14 +147,14 @@ class __$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnPropertyChangedParams
+class _$KodiNotificationPlayerOnPropertyChangedParamsImpl
     implements _KodiNotificationPlayerOnPropertyChangedParams {
-  const _$_KodiNotificationPlayerOnPropertyChangedParams(
+  const _$KodiNotificationPlayerOnPropertyChangedParamsImpl(
       {required this.sender, required this.data});
 
-  factory _$_KodiNotificationPlayerOnPropertyChangedParams.fromJson(
+  factory _$KodiNotificationPlayerOnPropertyChangedParamsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnPropertyChangedParamsFromJson(json);
+      _$$KodiNotificationPlayerOnPropertyChangedParamsImplFromJson(json);
 
   @override
   final String sender;
@@ -155,31 +167,33 @@ class _$_KodiNotificationPlayerOnPropertyChangedParams
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnPropertyChangedParams &&
+            other is _$KodiNotificationPlayerOnPropertyChangedParamsImpl &&
             (identical(other.sender, sender) || other.sender == sender) &&
             (identical(other.data, data) || other.data == data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, sender, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWith<
-          _$_KodiNotificationPlayerOnPropertyChangedParams>
+  _$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWith<
+          _$KodiNotificationPlayerOnPropertyChangedParamsImpl>
       get copyWith =>
-          __$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWithImpl<
-                  _$_KodiNotificationPlayerOnPropertyChangedParams>(
+          __$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWithImpl<
+                  _$KodiNotificationPlayerOnPropertyChangedParamsImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnPropertyChangedParamsToJson(
+    return _$$KodiNotificationPlayerOnPropertyChangedParamsImplToJson(
       this,
     );
   }
@@ -190,20 +204,23 @@ abstract class _KodiNotificationPlayerOnPropertyChangedParams
   const factory _KodiNotificationPlayerOnPropertyChangedParams(
       {required final String sender,
       required final KodiNotificationPlayerOnPropertyChangedParamsData
-          data}) = _$_KodiNotificationPlayerOnPropertyChangedParams;
+          data}) = _$KodiNotificationPlayerOnPropertyChangedParamsImpl;
 
   factory _KodiNotificationPlayerOnPropertyChangedParams.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnPropertyChangedParams.fromJson;
+      _$KodiNotificationPlayerOnPropertyChangedParamsImpl.fromJson;
 
   @override
   String get sender;
   @override
   KodiNotificationPlayerOnPropertyChangedParamsData get data;
+
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnPropertyChangedParamsCopyWith<
-          _$_KodiNotificationPlayerOnPropertyChangedParams>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnPropertyChangedParamsImplCopyWith<
+          _$KodiNotificationPlayerOnPropertyChangedParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -219,8 +236,12 @@ mixin _$KodiNotificationPlayerOnPropertyChangedParamsData {
       throw _privateConstructorUsedError;
   KodiPlayerPropertyValue? get property => throw _privateConstructorUsedError;
 
+  /// Serializes this KodiNotificationPlayerOnPropertyChangedParamsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<
           KodiNotificationPlayerOnPropertyChangedParamsData>
       get copyWith => throw _privateConstructorUsedError;
@@ -257,6 +278,8 @@ class _$KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -275,6 +298,8 @@ class _$KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerNotificationsPlayerCopyWith<$Res> get player {
@@ -283,6 +308,8 @@ class _$KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiPlayerPropertyValueCopyWith<$Res>? get property {
@@ -297,15 +324,16 @@ class _$KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<
+abstract class _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWith<
         $Res>
     implements
         $KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<$Res> {
-  factory _$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith(
-          _$_KodiNotificationPlayerOnPropertyChangedParamsData value,
-          $Res Function(_$_KodiNotificationPlayerOnPropertyChangedParamsData)
+  factory _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWith(
+          _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl value,
+          $Res Function(_$KodiNotificationPlayerOnPropertyChangedParamsDataImpl)
               then) =
-      __$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<$Res>;
+      __$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWithImpl<
+          $Res>;
   @override
   @useResult
   $Res call(
@@ -319,23 +347,27 @@ abstract class _$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<
 }
 
 /// @nodoc
-class __$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<$Res>
+class __$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWithImpl<
+        $Res>
     extends _$KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<
-        $Res, _$_KodiNotificationPlayerOnPropertyChangedParamsData>
+        $Res, _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl>
     implements
-        _$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<$Res> {
-  __$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl(
-      _$_KodiNotificationPlayerOnPropertyChangedParamsData _value,
-      $Res Function(_$_KodiNotificationPlayerOnPropertyChangedParamsData) _then)
+        _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWith<$Res> {
+  __$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWithImpl(
+      _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl _value,
+      $Res Function(_$KodiNotificationPlayerOnPropertyChangedParamsDataImpl)
+          _then)
       : super(_value, _then);
 
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? player = null,
     Object? property = freezed,
   }) {
-    return _then(_$_KodiNotificationPlayerOnPropertyChangedParamsData(
+    return _then(_$KodiNotificationPlayerOnPropertyChangedParamsDataImpl(
       player: null == player
           ? _value.player
           : player // ignore: cast_nullable_to_non_nullable
@@ -350,14 +382,14 @@ class __$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_KodiNotificationPlayerOnPropertyChangedParamsData
+class _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl
     implements _KodiNotificationPlayerOnPropertyChangedParamsData {
-  const _$_KodiNotificationPlayerOnPropertyChangedParamsData(
+  const _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl(
       {required this.player, this.property});
 
-  factory _$_KodiNotificationPlayerOnPropertyChangedParamsData.fromJson(
+  factory _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_KodiNotificationPlayerOnPropertyChangedParamsDataFromJson(json);
+      _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplFromJson(json);
 
   @override
   final KodiPlayerNotificationsPlayer player;
@@ -370,32 +402,34 @@ class _$_KodiNotificationPlayerOnPropertyChangedParamsData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KodiNotificationPlayerOnPropertyChangedParamsData &&
+            other is _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl &&
             (identical(other.player, player) || other.player == player) &&
             (identical(other.property, property) ||
                 other.property == property));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, player, property);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<
-          _$_KodiNotificationPlayerOnPropertyChangedParamsData>
+  _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWith<
+          _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl>
       get copyWith =>
-          __$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWithImpl<
-                  _$_KodiNotificationPlayerOnPropertyChangedParamsData>(
+          __$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWithImpl<
+                  _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl>(
               this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_KodiNotificationPlayerOnPropertyChangedParamsDataToJson(
+    return _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplToJson(
       this,
     );
   }
@@ -406,19 +440,22 @@ abstract class _KodiNotificationPlayerOnPropertyChangedParamsData
   const factory _KodiNotificationPlayerOnPropertyChangedParamsData(
           {required final KodiPlayerNotificationsPlayer player,
           final KodiPlayerPropertyValue? property}) =
-      _$_KodiNotificationPlayerOnPropertyChangedParamsData;
+      _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl;
 
   factory _KodiNotificationPlayerOnPropertyChangedParamsData.fromJson(
           Map<String, dynamic> json) =
-      _$_KodiNotificationPlayerOnPropertyChangedParamsData.fromJson;
+      _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl.fromJson;
 
   @override
   KodiPlayerNotificationsPlayer get player;
   @override
   KodiPlayerPropertyValue? get property;
+
+  /// Create a copy of KodiNotificationPlayerOnPropertyChangedParamsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_KodiNotificationPlayerOnPropertyChangedParamsDataCopyWith<
-          _$_KodiNotificationPlayerOnPropertyChangedParamsData>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$KodiNotificationPlayerOnPropertyChangedParamsDataImplCopyWith<
+          _$KodiNotificationPlayerOnPropertyChangedParamsDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

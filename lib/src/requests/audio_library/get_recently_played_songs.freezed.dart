@@ -12,7 +12,7 @@ part of 'get_recently_played_songs.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetRecentlyPlayedSongs _$GetRecentlyPlayedSongsFromJson(
     Map<String, dynamic> json) {
@@ -26,8 +26,12 @@ mixin _$GetRecentlyPlayedSongs {
   KodiListLimits? get limits => throw _privateConstructorUsedError;
   KodiListSort? get sort => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecentlyPlayedSongs to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecentlyPlayedSongs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecentlyPlayedSongsCopyWith<GetRecentlyPlayedSongs> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -58,6 +62,8 @@ class _$GetRecentlyPlayedSongsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecentlyPlayedSongs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class _$GetRecentlyPlayedSongsCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetRecentlyPlayedSongs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsCopyWith<$Res>? get limits {
@@ -93,6 +101,8 @@ class _$GetRecentlyPlayedSongsCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of GetRecentlyPlayedSongs
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListSortCopyWith<$Res>? get sort {
@@ -107,11 +117,12 @@ class _$GetRecentlyPlayedSongsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRecentlyPlayedSongsCopyWith<$Res>
+abstract class _$$GetRecentlyPlayedSongsImplCopyWith<$Res>
     implements $GetRecentlyPlayedSongsCopyWith<$Res> {
-  factory _$$_GetRecentlyPlayedSongsCopyWith(_$_GetRecentlyPlayedSongs value,
-          $Res Function(_$_GetRecentlyPlayedSongs) then) =
-      __$$_GetRecentlyPlayedSongsCopyWithImpl<$Res>;
+  factory _$$GetRecentlyPlayedSongsImplCopyWith(
+          _$GetRecentlyPlayedSongsImpl value,
+          $Res Function(_$GetRecentlyPlayedSongsImpl) then) =
+      __$$GetRecentlyPlayedSongsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -126,14 +137,17 @@ abstract class _$$_GetRecentlyPlayedSongsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecentlyPlayedSongsCopyWithImpl<$Res>
+class __$$GetRecentlyPlayedSongsImplCopyWithImpl<$Res>
     extends _$GetRecentlyPlayedSongsCopyWithImpl<$Res,
-        _$_GetRecentlyPlayedSongs>
-    implements _$$_GetRecentlyPlayedSongsCopyWith<$Res> {
-  __$$_GetRecentlyPlayedSongsCopyWithImpl(_$_GetRecentlyPlayedSongs _value,
-      $Res Function(_$_GetRecentlyPlayedSongs) _then)
+        _$GetRecentlyPlayedSongsImpl>
+    implements _$$GetRecentlyPlayedSongsImplCopyWith<$Res> {
+  __$$GetRecentlyPlayedSongsImplCopyWithImpl(
+      _$GetRecentlyPlayedSongsImpl _value,
+      $Res Function(_$GetRecentlyPlayedSongsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecentlyPlayedSongs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,7 +155,7 @@ class __$$_GetRecentlyPlayedSongsCopyWithImpl<$Res>
     Object? limits = freezed,
     Object? sort = freezed,
   }) {
-    return _then(_$_GetRecentlyPlayedSongs(
+    return _then(_$GetRecentlyPlayedSongsImpl(
       properties: freezed == properties
           ? _value._properties
           : properties // ignore: cast_nullable_to_non_nullable
@@ -160,14 +174,14 @@ class __$$_GetRecentlyPlayedSongsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecentlyPlayedSongs extends _GetRecentlyPlayedSongs {
-  const _$_GetRecentlyPlayedSongs(
+class _$GetRecentlyPlayedSongsImpl extends _GetRecentlyPlayedSongs {
+  const _$GetRecentlyPlayedSongsImpl(
       {final Set<KodiAudioFieldsSong>? properties, this.limits, this.sort})
       : _properties = properties,
         super._();
 
-  factory _$_GetRecentlyPlayedSongs.fromJson(Map<String, dynamic> json) =>
-      _$$_GetRecentlyPlayedSongsFromJson(json);
+  factory _$GetRecentlyPlayedSongsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetRecentlyPlayedSongsImplFromJson(json);
 
   final Set<KodiAudioFieldsSong>? _properties;
   @override
@@ -190,31 +204,33 @@ class _$_GetRecentlyPlayedSongs extends _GetRecentlyPlayedSongs {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecentlyPlayedSongs &&
+            other is _$GetRecentlyPlayedSongsImpl &&
             const DeepCollectionEquality()
                 .equals(other._properties, _properties) &&
             (identical(other.limits, limits) || other.limits == limits) &&
             (identical(other.sort, sort) || other.sort == sort));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_properties), limits, sort);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecentlyPlayedSongs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecentlyPlayedSongsCopyWith<_$_GetRecentlyPlayedSongs> get copyWith =>
-      __$$_GetRecentlyPlayedSongsCopyWithImpl<_$_GetRecentlyPlayedSongs>(
-          this, _$identity);
+  _$$GetRecentlyPlayedSongsImplCopyWith<_$GetRecentlyPlayedSongsImpl>
+      get copyWith => __$$GetRecentlyPlayedSongsImplCopyWithImpl<
+          _$GetRecentlyPlayedSongsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecentlyPlayedSongsToJson(
+    return _$$GetRecentlyPlayedSongsImplToJson(
       this,
     );
   }
@@ -224,11 +240,11 @@ abstract class _GetRecentlyPlayedSongs extends GetRecentlyPlayedSongs {
   const factory _GetRecentlyPlayedSongs(
       {final Set<KodiAudioFieldsSong>? properties,
       final KodiListLimits? limits,
-      final KodiListSort? sort}) = _$_GetRecentlyPlayedSongs;
+      final KodiListSort? sort}) = _$GetRecentlyPlayedSongsImpl;
   const _GetRecentlyPlayedSongs._() : super._();
 
   factory _GetRecentlyPlayedSongs.fromJson(Map<String, dynamic> json) =
-      _$_GetRecentlyPlayedSongs.fromJson;
+      _$GetRecentlyPlayedSongsImpl.fromJson;
 
   @override
   Set<KodiAudioFieldsSong>? get properties;
@@ -236,10 +252,13 @@ abstract class _GetRecentlyPlayedSongs extends GetRecentlyPlayedSongs {
   KodiListLimits? get limits;
   @override
   KodiListSort? get sort;
+
+  /// Create a copy of GetRecentlyPlayedSongs
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecentlyPlayedSongsCopyWith<_$_GetRecentlyPlayedSongs> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecentlyPlayedSongsImplCopyWith<_$GetRecentlyPlayedSongsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 GetRecentlyPlayedSongsResponse _$GetRecentlyPlayedSongsResponseFromJson(
@@ -252,8 +271,12 @@ mixin _$GetRecentlyPlayedSongsResponse {
   List<KodiAudioDetailsSong> get songs => throw _privateConstructorUsedError;
   KodiListLimitsReturned get limits => throw _privateConstructorUsedError;
 
+  /// Serializes this GetRecentlyPlayedSongsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GetRecentlyPlayedSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GetRecentlyPlayedSongsResponseCopyWith<GetRecentlyPlayedSongsResponse>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -282,6 +305,8 @@ class _$GetRecentlyPlayedSongsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GetRecentlyPlayedSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -300,6 +325,8 @@ class _$GetRecentlyPlayedSongsResponseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of GetRecentlyPlayedSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $KodiListLimitsReturnedCopyWith<$Res> get limits {
@@ -310,12 +337,12 @@ class _$GetRecentlyPlayedSongsResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetRecentlyPlayedSongsResponseCopyWith<$Res>
+abstract class _$$GetRecentlyPlayedSongsResponseImplCopyWith<$Res>
     implements $GetRecentlyPlayedSongsResponseCopyWith<$Res> {
-  factory _$$_GetRecentlyPlayedSongsResponseCopyWith(
-          _$_GetRecentlyPlayedSongsResponse value,
-          $Res Function(_$_GetRecentlyPlayedSongsResponse) then) =
-      __$$_GetRecentlyPlayedSongsResponseCopyWithImpl<$Res>;
+  factory _$$GetRecentlyPlayedSongsResponseImplCopyWith(
+          _$GetRecentlyPlayedSongsResponseImpl value,
+          $Res Function(_$GetRecentlyPlayedSongsResponseImpl) then) =
+      __$$GetRecentlyPlayedSongsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<KodiAudioDetailsSong> songs, KodiListLimitsReturned limits});
@@ -325,22 +352,24 @@ abstract class _$$_GetRecentlyPlayedSongsResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetRecentlyPlayedSongsResponseCopyWithImpl<$Res>
+class __$$GetRecentlyPlayedSongsResponseImplCopyWithImpl<$Res>
     extends _$GetRecentlyPlayedSongsResponseCopyWithImpl<$Res,
-        _$_GetRecentlyPlayedSongsResponse>
-    implements _$$_GetRecentlyPlayedSongsResponseCopyWith<$Res> {
-  __$$_GetRecentlyPlayedSongsResponseCopyWithImpl(
-      _$_GetRecentlyPlayedSongsResponse _value,
-      $Res Function(_$_GetRecentlyPlayedSongsResponse) _then)
+        _$GetRecentlyPlayedSongsResponseImpl>
+    implements _$$GetRecentlyPlayedSongsResponseImplCopyWith<$Res> {
+  __$$GetRecentlyPlayedSongsResponseImplCopyWithImpl(
+      _$GetRecentlyPlayedSongsResponseImpl _value,
+      $Res Function(_$GetRecentlyPlayedSongsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GetRecentlyPlayedSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? songs = null,
     Object? limits = null,
   }) {
-    return _then(_$_GetRecentlyPlayedSongsResponse(
+    return _then(_$GetRecentlyPlayedSongsResponseImpl(
       songs: null == songs
           ? _value._songs
           : songs // ignore: cast_nullable_to_non_nullable
@@ -355,15 +384,15 @@ class __$$_GetRecentlyPlayedSongsResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GetRecentlyPlayedSongsResponse
+class _$GetRecentlyPlayedSongsResponseImpl
     implements _GetRecentlyPlayedSongsResponse {
-  const _$_GetRecentlyPlayedSongsResponse(
+  const _$GetRecentlyPlayedSongsResponseImpl(
       {required final List<KodiAudioDetailsSong> songs, required this.limits})
       : _songs = songs;
 
-  factory _$_GetRecentlyPlayedSongsResponse.fromJson(
+  factory _$GetRecentlyPlayedSongsResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_GetRecentlyPlayedSongsResponseFromJson(json);
+      _$$GetRecentlyPlayedSongsResponseImplFromJson(json);
 
   final List<KodiAudioDetailsSong> _songs;
   @override
@@ -382,29 +411,32 @@ class _$_GetRecentlyPlayedSongsResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetRecentlyPlayedSongsResponse &&
+            other is _$GetRecentlyPlayedSongsResponseImpl &&
             const DeepCollectionEquality().equals(other._songs, _songs) &&
             (identical(other.limits, limits) || other.limits == limits));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_songs), limits);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GetRecentlyPlayedSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetRecentlyPlayedSongsResponseCopyWith<_$_GetRecentlyPlayedSongsResponse>
-      get copyWith => __$$_GetRecentlyPlayedSongsResponseCopyWithImpl<
-          _$_GetRecentlyPlayedSongsResponse>(this, _$identity);
+  _$$GetRecentlyPlayedSongsResponseImplCopyWith<
+          _$GetRecentlyPlayedSongsResponseImpl>
+      get copyWith => __$$GetRecentlyPlayedSongsResponseImplCopyWithImpl<
+          _$GetRecentlyPlayedSongsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRecentlyPlayedSongsResponseToJson(
+    return _$$GetRecentlyPlayedSongsResponseImplToJson(
       this,
     );
   }
@@ -415,17 +447,21 @@ abstract class _GetRecentlyPlayedSongsResponse
   const factory _GetRecentlyPlayedSongsResponse(
           {required final List<KodiAudioDetailsSong> songs,
           required final KodiListLimitsReturned limits}) =
-      _$_GetRecentlyPlayedSongsResponse;
+      _$GetRecentlyPlayedSongsResponseImpl;
 
   factory _GetRecentlyPlayedSongsResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetRecentlyPlayedSongsResponse.fromJson;
+      _$GetRecentlyPlayedSongsResponseImpl.fromJson;
 
   @override
   List<KodiAudioDetailsSong> get songs;
   @override
   KodiListLimitsReturned get limits;
+
+  /// Create a copy of GetRecentlyPlayedSongsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_GetRecentlyPlayedSongsResponseCopyWith<_$_GetRecentlyPlayedSongsResponse>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetRecentlyPlayedSongsResponseImplCopyWith<
+          _$GetRecentlyPlayedSongsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

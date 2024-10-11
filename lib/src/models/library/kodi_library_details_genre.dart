@@ -8,8 +8,8 @@ class KodiLibraryDetailsGenre with _$KodiLibraryDetailsGenre {
   const factory KodiLibraryDetailsGenre({
     @JsonKey(name: 'genreid') required int genreId,
     @JsonKey(name: 'sourceid') List<int>? sourceId,
-    String? thumbnail,
-    String? title,
+    @Default('') String thumbnail,
+    @Default('') String title,
     required String label,
   }) = _KodiLibraryDetailsGenre;
 
