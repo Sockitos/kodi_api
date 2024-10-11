@@ -15,8 +15,7 @@ class GetAvailableArtTypes extends ConsumerWidget {
         final request = AudioLibrary.getAvailableArtTypes(
           const KodiAudioLibraryGetAvailableArtTypesItem.albumId(1),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Available Art Types',
     );

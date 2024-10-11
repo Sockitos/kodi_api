@@ -15,8 +15,7 @@ class GetCurrentProfile extends ConsumerWidget {
         final request = Profiles.getCurrentProfile(
           properties: KodiProfilesFieldsProfile.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Current Profile',
     );

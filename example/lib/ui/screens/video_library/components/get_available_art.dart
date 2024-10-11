@@ -20,8 +20,7 @@ class GetAvailableArt extends ConsumerWidget {
           // const KodiVideoLibraryGetAvailableArtItem.musicVideoId(1),
           // const KodiVideoLibraryGetAvailableArtItem.setId(2),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Available Art',
     );

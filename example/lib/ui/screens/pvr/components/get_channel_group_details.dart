@@ -15,8 +15,7 @@ class GetChannelGroupDetails extends ConsumerWidget {
         final request = PVR.getChannelGroupDetails(
           const KodiPVRChannelGroupId.integer(id: 1),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Channel Group Details',
     );

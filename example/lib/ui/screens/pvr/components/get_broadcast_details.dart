@@ -16,8 +16,7 @@ class GetBroadcastDetails extends ConsumerWidget {
           371,
           properties: KodiPVRFieldsBroadcast.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Broadcast Details',
     );

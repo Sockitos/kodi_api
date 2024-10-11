@@ -17,8 +17,7 @@ class GetEpisodes extends ConsumerWidget {
           season: 1,
           properties: KodiVideoFieldsEpisode.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Episodes',
     );

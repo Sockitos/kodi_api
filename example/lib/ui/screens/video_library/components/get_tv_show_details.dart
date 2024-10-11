@@ -16,8 +16,7 @@ class GetTVShowDetails extends ConsumerWidget {
           1,
           properties: KodiVideoFieldsTvShow.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get TV Show Details',
     );

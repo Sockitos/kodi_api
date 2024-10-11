@@ -13,8 +13,7 @@ class GetSources extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Files.getSources(KodiFilesMedia.music);
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Sources',
     );

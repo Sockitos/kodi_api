@@ -16,8 +16,7 @@ class GetMusicVideoDetails extends ConsumerWidget {
           1,
           properties: KodiVideoFieldsMusicVideo.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Music Video Details',
     );

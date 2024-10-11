@@ -15,8 +15,7 @@ class GetRoles extends ConsumerWidget {
         final request = AudioLibrary.getRoles(
           properties: KodiAudioFieldsRole.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Roles',
     );

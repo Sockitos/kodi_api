@@ -13,8 +13,7 @@ class Recordd extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = PVR.record();
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Record',
     );

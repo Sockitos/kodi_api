@@ -15,8 +15,7 @@ class GetTextures extends ConsumerWidget {
         final request = Textures.getTextures(
           properties: KodiTexturesFieldsTexture.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Textures',
     );

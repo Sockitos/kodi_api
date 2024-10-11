@@ -7,11 +7,11 @@ part 'service_providers.g.dart';
 KodiAPI kodiAPI(KodiAPIRef ref) {
   return KodiAPI(
     host: const KodiHost(
-      ip: '192.168.1.68',
-      port: 8080,
-      name: 'Kodi',
-      username: 'kodi',
-      password: 'kodi',
+      ip: 'IP Address',
+      port: 1234,
+      name: 'Name',
+      username: 'Username',
+      password: 'Password',
     ),
   );
 }

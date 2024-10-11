@@ -16,8 +16,7 @@ class SetSpeed extends ConsumerWidget {
           0,
           const SetSpeedSpeed.step(KodiPlayerSpeedStep.resume),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Set Speed',
     );

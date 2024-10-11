@@ -16,8 +16,7 @@ class SetAddonEnabled extends ConsumerWidget {
           'plugin.video.youtube',
           const KodiGlobalToggle.bool(true),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Set Addon Enabled',
     );

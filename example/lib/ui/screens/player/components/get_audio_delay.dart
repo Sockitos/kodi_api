@@ -13,8 +13,7 @@ class GetAudioDelay extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Player.getAudioDelay();
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Audio Delay',
     );

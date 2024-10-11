@@ -16,9 +16,7 @@ class Insert extends ConsumerWidget {
           1,
           1,
           [
-            const KodiPlaylistItem.file(
-              'https://randomangelrelation-sto.energycdn.com/dl/9U6caQZo04_CKZ5XDKw-_w/1728842646/975034649/6301947feb9681.87548770/%5BSubsPlease%5D%20One%20Piece%20-%201030%20%281080p%29%20%5B719AF31C%5D.mkv',
-            ),
+            const KodiPlaylistItem.file('Path to file'),
           ],
         );
         await kodiAPI.sendRequest<dynamic>(request);

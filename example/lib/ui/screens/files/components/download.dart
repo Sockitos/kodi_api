@@ -12,10 +12,9 @@ class Download extends ConsumerWidget {
     return AppButton(
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
-        //TODO: clean this
         //TODO: Error Method not found
         final request = Files.download(
-          r'E:\Users\tomas\Desktop\kodi_audio_library_export\kodi_musicdb20240928_125215.xml',
+          'Path to file',
         );
         await kodiAPI.sendRequest<dynamic>(request);
       },

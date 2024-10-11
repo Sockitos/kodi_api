@@ -13,10 +13,9 @@ class PrepareDownload extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Files.prepareDownload(
-          r'E:\Users\tomas\Desktop\kodi_audio_library\01-live-learn.mp3',
+          'Path to file',
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Prepare Download',
     );

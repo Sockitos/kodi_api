@@ -15,8 +15,7 @@ class GetInfoLabels extends ConsumerWidget {
         final request = XBMC.getInfoLabels(
           ['ListItem.DiscNumber'],
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Info Labels',
     );

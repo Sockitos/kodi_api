@@ -15,8 +15,7 @@ class GetInfoBooleans extends ConsumerWidget {
         final request = XBMC.getInfoBooleans(
           ['Container.HasThumb'],
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Info Booleans',
     );

@@ -13,8 +13,7 @@ class GetClients extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = PVR.getClients();
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Clients',
     );

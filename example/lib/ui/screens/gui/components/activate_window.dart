@@ -12,11 +12,10 @@ class ActivateWindow extends ConsumerWidget {
     return AppButton(
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
-
         final request = GUI.activateWindow(
           KodiGUIWindow.videos,
           [
-            'plugin://plugin.video.youtube/?path=/root/search/new&feed=search&login=false&'
+            'plugin://plugin.video.youtube/?path=/root/search/new&feed=search&login=false&',
           ],
         );
         await kodiAPI.sendRequest<dynamic>(request);

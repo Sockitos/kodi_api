@@ -16,8 +16,7 @@ class GetFavourites extends ConsumerWidget {
           properties: KodiFavouriteFieldsFavourite.values.toSet(),
           type: KodiFavouriteType.media,
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Favourites',
     );

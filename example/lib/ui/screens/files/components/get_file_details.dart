@@ -13,11 +13,10 @@ class GetFileDetails extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Files.getFileDetails(
-          r'E:\Users\tomas\Desktop\kodi_audio_library\01-live-learn.mp3',
+          'Path to file',
           properties: KodiListFieldsFiles.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get File Details',
     );

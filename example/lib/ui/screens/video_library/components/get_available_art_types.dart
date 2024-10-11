@@ -20,8 +20,7 @@ class GetAvailableArtTypes extends ConsumerWidget {
           // const KodiVideoLibraryGetAvailableArtTypesItem.musicVideoId(1),
           // const KodiVideoLibraryGetAvailableArtTypesItem.setId(2),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Available Art Types',
     );

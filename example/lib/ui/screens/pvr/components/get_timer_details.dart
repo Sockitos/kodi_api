@@ -16,8 +16,7 @@ class GetTimerDetails extends ConsumerWidget {
           1,
           properties: KodiPVRFieldsTimer.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Timer Details',
     );

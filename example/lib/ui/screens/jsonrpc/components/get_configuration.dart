@@ -14,8 +14,7 @@ class GetConfiguration extends ConsumerWidget {
         final kodiAPI = ref.read(kodiAPIProvider);
         // TODO: Method not found
         final request = JSONRPC.getConfiguration();
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Configuration',
     );

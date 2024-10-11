@@ -14,8 +14,7 @@ class Introspect extends ConsumerWidget {
         final kodiAPI = ref.read(kodiAPIProvider);
         // TODO: this returns every API endpoint use it to double check everything
         final request = JSONRPC.introspect();
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Introspect',
     );

@@ -15,8 +15,7 @@ class GetTimers extends ConsumerWidget {
         final request = PVR.getTimers(
           properties: KodiPVRFieldsTimer.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Timers',
     );

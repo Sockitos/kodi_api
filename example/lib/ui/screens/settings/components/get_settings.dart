@@ -15,8 +15,7 @@ class GetSettings extends ConsumerWidget {
         final request = Settings.getSettings(
           level: KodiSettingLevel.expert,
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Settings',
     );

@@ -13,9 +13,8 @@ class Export extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = VideoLibrary.export(
-          options: const KodiVideoLibraryExportOptions.path(
-            r'E:\Users\tomas\Desktop\kodi_video_library_export',
-          ),
+          options:
+              const KodiVideoLibraryExportOptions.path('Path to directory'),
         );
         await kodiAPI.sendRequest<dynamic>(request);
       },

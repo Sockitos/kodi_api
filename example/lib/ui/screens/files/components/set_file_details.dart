@@ -13,7 +13,7 @@ class SetFileDetails extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Files.setFileDetails(
-          r'E:\Users\tomas\Desktop\kodi_audio_library\01-live-learn.mp3',
+          'Path to file',
           KodiFilesMedia.video,
           lastPlayed: DateTime.now(),
         );

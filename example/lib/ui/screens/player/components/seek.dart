@@ -26,8 +26,7 @@ class Seek extends ConsumerWidget {
           // const KodiPlayerSeekValue.seconds(25),
         );
 
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Seek',
     );

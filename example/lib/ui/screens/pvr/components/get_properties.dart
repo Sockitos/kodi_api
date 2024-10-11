@@ -15,8 +15,7 @@ class GetProperties extends ConsumerWidget {
         final request = PVR.getProperties(
           KodiPVRPropertyName.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Properties',
     );

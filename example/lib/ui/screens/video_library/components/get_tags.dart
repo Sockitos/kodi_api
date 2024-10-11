@@ -18,8 +18,7 @@ class GetTags extends ConsumerWidget {
           // KodiVideoLibraryGetTagsType.musicVideo,
           properties: KodiLibraryFieldsTag.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Tags',
     );

@@ -16,8 +16,7 @@ class GetArtistDetails extends ConsumerWidget {
           2,
           properties: KodiAudioFieldsArtist.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Artist Details',
     );

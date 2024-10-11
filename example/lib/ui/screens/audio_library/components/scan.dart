@@ -13,7 +13,7 @@ class Scan extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = AudioLibrary.scan(
-          directory: r'E:\Users\tomas\Desktop\kodi_audio_library',
+          directory: 'Path to directory',
         );
         await kodiAPI.sendRequest<dynamic>(request);
       },

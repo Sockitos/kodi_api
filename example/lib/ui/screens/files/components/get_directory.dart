@@ -12,13 +12,11 @@ class GetDirectory extends ConsumerWidget {
     return AppButton(
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
-        //TODO: clean this
         final request = Files.getDirectory(
-          r'E:\Users\tomas\Desktop\kodi_audio_library',
+          'Path to directory',
           properties: KodiListFieldsFiles.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Directory',
     );

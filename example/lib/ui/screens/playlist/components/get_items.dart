@@ -16,8 +16,7 @@ class GetItems extends ConsumerWidget {
           1,
           properties: KodiListFieldsAll.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Items',
     );

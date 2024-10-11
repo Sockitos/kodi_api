@@ -13,12 +13,9 @@ class GetProperties extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Application.getProperties(
-          // {},
-          // {KodiApplicationPropertyName.language},
           KodiApplicationPropertyName.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Properties',
     );

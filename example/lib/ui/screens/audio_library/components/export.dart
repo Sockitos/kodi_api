@@ -13,9 +13,8 @@ class Export extends ConsumerWidget {
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = AudioLibrary.export(
-          // TODO: clean this
           options: const KodiAudioLibraryExportOptions.path(
-            r'E:\Users\tomas\Desktop\kodi_audio_library_export',
+            'Path to directory',
           ),
         );
         await kodiAPI.sendRequest<dynamic>(request);

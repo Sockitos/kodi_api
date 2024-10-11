@@ -14,9 +14,7 @@ class Open extends ConsumerWidget {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Player.open(
           const KodiPlayerPlayerOpenItem.playlistItem(
-            KodiPlaylistItem.file(
-              'https://ruthlessgoat-sto.energycdn.com/dl/NHDqXFvRo_i3AeXXhmEcxA/1728816895/975034649/62f85844d2dc11.86471472/%5BSubsPlease%5D%20One%20Piece%20-%201029%20%281080p%29%20%5B083B5E54%5D.mkv',
-            ),
+            KodiPlaylistItem.file('Path to file'),
           ),
         );
         await kodiAPI.sendRequest<dynamic>(request);

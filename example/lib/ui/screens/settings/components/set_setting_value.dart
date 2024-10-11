@@ -16,8 +16,7 @@ class SetSettingValue extends ConsumerWidget {
           'gamesgeneral.enableautosave',
           const KodiSettingValueExtended.bool(false),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Set Setting Value',
     );

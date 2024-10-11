@@ -15,8 +15,7 @@ class GetChannels extends ConsumerWidget {
         final request = PVR.getChannels(
           const KodiPVRChannelGroupId.integer(id: 2),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Channels',
     );

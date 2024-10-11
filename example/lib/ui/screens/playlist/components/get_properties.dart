@@ -16,8 +16,7 @@ class GetProperties extends ConsumerWidget {
           1,
           KodiPlaylistPropertyName.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Properties',
     );

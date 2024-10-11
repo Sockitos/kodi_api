@@ -19,8 +19,7 @@ class SetAudioDelay extends ConsumerWidget {
           //   KodiGlobalIncrementDecrement.increment,
           // ),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Set Audio Delay',
     );

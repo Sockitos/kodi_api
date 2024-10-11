@@ -15,8 +15,7 @@ class GetAlbumDs extends ConsumerWidget {
         final request = AudioLibrary.getAlbums(
           properties: KodiAudioFieldsAlbum.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Albums',
     );

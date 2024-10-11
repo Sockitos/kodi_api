@@ -15,8 +15,7 @@ class GetRecentlyPlayedSongs extends ConsumerWidget {
         final request = AudioLibrary.getRecentlyPlayedSongs(
           properties: KodiAudioFieldsSong.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Recently Played Songs',
     );

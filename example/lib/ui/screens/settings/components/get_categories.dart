@@ -16,8 +16,7 @@ class GetCategories extends ConsumerWidget {
           level: KodiSettingLevel.expert,
           properties: KodiSettingsGetCategoriesProperties.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Categories',
     );

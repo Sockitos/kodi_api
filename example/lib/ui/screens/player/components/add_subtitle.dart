@@ -14,7 +14,7 @@ class AddSubtitle extends ConsumerWidget {
         final kodiAPI = ref.read(kodiAPIProvider);
         final request = Player.addSubtitle(
           1,
-          r'E:\Users\tomas\Desktop\Uzumaki.S01E02.1080p.DUAL.MAX.WEB-DL.DDP2.0.H.264-VARYG.srt',
+          'Path to file',
         );
         await kodiAPI.sendRequest<dynamic>(request);
       },

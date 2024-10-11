@@ -15,8 +15,7 @@ class GetSongs extends ConsumerWidget {
         final request = AudioLibrary.getSongs(
           properties: KodiAudioFieldsSong.values.toSet(),
         );
-        final result = await kodiAPI.sendRequest<dynamic>(request);
-        final abc = 3;
+        await kodiAPI.sendRequest<dynamic>(request);
       },
       label: 'Get Songs',
     );

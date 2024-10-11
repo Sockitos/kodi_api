@@ -12,11 +12,10 @@ class AddFavourite extends ConsumerWidget {
     return AppButton(
       onPressed: () async {
         final kodiAPI = ref.read(kodiAPIProvider);
-        //TODO: clean this
         final request = Favourites.addFavourite(
           'Test',
           KodiFavouriteType.media,
-          path: r'E:\Users\tomas\Desktop\kodi_audio_library/01-live-learn.mp3',
+          path: 'Path to file',
         );
         await kodiAPI.sendRequest<dynamic>(request);
       },
